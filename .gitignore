@@ -66,6 +66,8 @@ logs/
 *.temp
 *.bak
 *.backup
+!dotfiles.backup/
+!dotfiles.backup/**
 *.orig
 
 # Archives

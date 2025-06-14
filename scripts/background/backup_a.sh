@@ -7,12 +7,38 @@
 # Define paths
 SOURCE_DIR="$HOME/a"
 BACKUP_DIR="$HOME/Dropbox/backups"
-TIMESTAMP=$(date +"%Y_%m_%d_%H%M_%S")_$(printf "%03d" $((RANDOM % 1000)))
-BACKUP_FILENAME="users_dorkitude_a_${TIMESTAMP}.zip"
+# Get timestamp with milliseconds (using perl for cross-platform compatibility)
+TIMESTAMP=$(perl -MTime::HiRes=time -e 'my $t = time; my @tm = localtime($t); printf "%04d_%02d_%02d_%02d%02d_%02d.%02d", $tm[5]+1900, $tm[4]+1, $tm[3], $tm[2], $tm[1], $tm[0], ($t-int($t))*100')
+BACKUP_FILENAME="${TIMESTAMP}_users_dorkitude_a.zip"
 BACKUP_PATH="${BACKUP_DIR}/${BACKUP_FILENAME}"
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
+
+# Create uncompressed dotfiles backup folder
+echo "Creating uncompressed dotfiles backup..."
+DOTFILES_BACKUP_DIR="${SOURCE_DIR}/dotfiles.backup"
+mkdir -p "$DOTFILES_BACKUP_DIR"
+
+# Copy dotfiles to backup folder
+cd "$HOME" || exit 1
+for f in .[^.]*; do
+    if [ -f "$f" ] && [ "$f" != ".DS_Store" ] && [ "$f" != ".CFUserTextEncoding" ] && [ "$f" != ".localized" ]; then
+        cp "$f" "$DOTFILES_BACKUP_DIR/" 2>/dev/null && echo "Copied: $f"
+    fi
+done
+
+# Copy specific .claude files if they exist
+if [ -d ".claude" ]; then
+    mkdir -p "$DOTFILES_BACKUP_DIR/.claude"
+    [ -f ".claude/settings.json" ] && cp ".claude/settings.json" "$DOTFILES_BACKUP_DIR/.claude/" && echo "Copied: .claude/settings.json"
+    [ -f ".claude/settings.local.json" ] && cp ".claude/settings.local.json" "$DOTFILES_BACKUP_DIR/.claude/" && echo "Copied: .claude/settings.local.json"
+    [ -f ".claude/CLAUDE.md" ] && cp ".claude/CLAUDE.md" "$DOTFILES_BACKUP_DIR/.claude/" && echo "Copied: .claude/CLAUDE.md"
+    [ -f ".claude/claude.md" ] && cp ".claude/claude.md" "$DOTFILES_BACKUP_DIR/.claude/" && echo "Copied: .claude/claude.md"
+fi
+
+echo "Uncompressed dotfiles backup completed: ${DOTFILES_BACKUP_DIR}"
+echo ""
 
 # Create zip file, excluding /a/dev directory
 echo "Creating backup: ${BACKUP_PATH}"
@@ -44,7 +70,7 @@ echo "Backup size: ${SIZE} MB"
 cd "$BACKUP_DIR" || exit 1
 
 # Get all backup files sorted by modification time (newest first)
-BACKUP_FILES=($(ls -t users_dorkitude_a_*.zip 2>/dev/null))
+BACKUP_FILES=($(ls -t *_users_dorkitude_a.zip 2>/dev/null))
 TOTAL_FILES=${#BACKUP_FILES[@]}
 
 if [ $TOTAL_FILES -gt 20 ]; then
@@ -52,50 +78,5 @@ if [ $TOTAL_FILES -gt 20 ]; then
     for ((i=20; i<$TOTAL_FILES; i++)); do
         echo "Removing old backup: ${BACKUP_FILES[$i]}"
         rm "${BACKUP_FILES[$i]}"
-    done
-fi
-
-# Now backup dotfiles
-echo ""
-echo "Creating dotfiles backup..."
-
-# Create dotfiles backup
-DOTFILES_BACKUP="users_dorkitude_dotfiles_${TIMESTAMP}.zip"
-DOTFILES_PATH="${BACKUP_DIR}/${DOTFILES_BACKUP}"
-
-cd "$HOME" || exit 1
-
-# Create list of dotfiles (files only, not directories)
-DOTFILES_LIST=""
-for f in .[^.]*; do
-    if [ -f "$f" ] && [ "$f" != ".DS_Store" ] && [ "$f" != ".CFUserTextEncoding" ] && [ "$f" != ".localized" ]; then
-        DOTFILES_LIST="$DOTFILES_LIST $f"
-    fi
-done
-
-# Create zip with only top-level dotfiles (no subdirectories)
-if [ -n "$DOTFILES_LIST" ]; then
-    zip -9 "$DOTFILES_PATH" $DOTFILES_LIST 2>/dev/null
-else
-    echo "No dotfiles found to backup"
-    touch "$DOTFILES_PATH"  # Create empty zip
-fi
-
-if [ $? -eq 0 ]; then
-    echo "Dotfiles backup completed: ${DOTFILES_PATH}"
-    SIZE=$(du -m "$DOTFILES_PATH" | cut -f1)
-    echo "Dotfiles backup size: ${SIZE} MB"
-else
-    echo "Warning: Some dotfiles may not have been backed up"
-fi
-
-# Clean up old dotfiles backups - keep only newest 20
-DOTFILES_BACKUPS=($(ls -t users_dorkitude_dotfiles_*.zip 2>/dev/null))
-TOTAL_DOTFILES=${#DOTFILES_BACKUPS[@]}
-
-if [ $TOTAL_DOTFILES -gt 20 ]; then
-    for ((i=20; i<$TOTAL_DOTFILES; i++)); do
-        echo "Removing old dotfiles backup: ${DOTFILES_BACKUPS[$i]}"
-        rm "${DOTFILES_BACKUPS[$i]}"
     done
 fi

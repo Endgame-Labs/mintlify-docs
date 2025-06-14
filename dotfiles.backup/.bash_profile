@@ -1,0 +1,2 @@
+export LSCOLORS="EHfxcxdxBxegecabagacad" 
+
