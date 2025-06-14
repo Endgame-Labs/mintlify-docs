@@ -1,9 +1,9 @@
 {
-  "numStartups": 684,
+  "numStartups": 692,
   "autoUpdaterStatus": "enabled",
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 669,
+    "shift-enter": 691,
     "memory-command": 676,
     "theme-command": 677,
     "prompt-queue": 218,
@@ -14,11 +14,11 @@
     "# for memory": 682,
     "install-github-app": 553,
     "permissions": 684,
-    "drag-and-drop-images": 664,
-    "double-esc": 667,
-    "continue": 670,
-    "custom-commands": 658,
-    "shift-tab": 668
+    "drag-and-drop-images": 685,
+    "double-esc": 688,
+    "continue": 692,
+    "custom-commands": 689,
+    "shift-tab": 690
   },
   "promptQueueUseCount": 15,
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
@@ -3191,6 +3191,38 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "!git status",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "are you sure you checked all the thursday classes?  because your list only goes to 11am.",
+          "pastedContents": {}
+        },
+        {
+          "display": "How about Thursday?",
+          "pastedContents": {}
+        },
+        {
+          "display": "I think you may need to use python -c and playwright to render the page because it has some lazy-loading.  Then you can skim the DOM or playwright.screenshot so your eyeball-brain can tell me the answers.",
+          "pastedContents": {}
+        },
+        {
+          "display": "This one https://www.funkydoor.com/berkeley",
+          "pastedContents": {}
+        },
+        {
+          "display": "https://www.funkydoor.com tell me when the next Yoga & Mixtapes classes are, be specific with your dates",
+          "pastedContents": {}
+        },
+        {
+          "display": "update gitignore so i can add dotfiles.backups and all its contents to github repo",
+          "pastedContents": {}
+        },
+        {
           "display": "don't copy the entire .cluade directory it's too big\n\nJust grab the stuff that would be annoying to reproduce from scratch\n\nsettings.json, settings.local.json, claude.md;  others?",
           "pastedContents": {}
         },
@@ -3294,7 +3326,17 @@
       "hasTrustDialogAccepted": true,
       "projectOnboardingSeenCount": 4,
       "hasClaudeMdExternalIncludesApproved": false,
-      "hasClaudeMdExternalIncludesWarningShown": false
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 0.34470105000000006,
+      "lastAPIDuration": 71424,
+      "lastDuration": 163626,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 13105,
+      "lastTotalOutputTokens": 1809,
+      "lastTotalCacheCreationInputTokens": 7295,
+      "lastTotalCacheReadInputTokens": 92256,
+      "lastSessionId": "cdc4642b-7517-4920-9509-edd75ece7442"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -3587,6 +3629,38 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Add a mermaid style diagram and post the whole thing to GH.  Put a README in the PR.  Update linear ticket to explain my thinking here, in under 10 bullet points.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Okay stop editing the plan and talk to me:   I'm afraid we'll get the intent wrong sometimes.",
+          "pastedContents": {}
+        },
+        {
+          "display": "We need to capture emergent intents.  How can we do that without slowing down every chat request significantly?",
+          "pastedContents": {}
+        },
+        {
+          "display": "!open plan.md",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Skip to content\nChat history\n\nThis is a copy of a conversation between ChatGPT & Anonymous.\n\nReport content\nYou said:\nhow to turn user questions into canonical intent\nChatGPT said:\nYes, Chef.\n\nTo turn user questions into canonical intents, you're essentially translating free-form natural language into structured representations of what the user wants. Here's a tight approach to doing it, blending NLU principles with practical LLM workflows:\n\n🔁 General Process\nNormalize the Input\nLowercase, strip punctuation, remove stopwords (only if you're matching via embeddings or rules).\n\nExtract the Core Verb/Noun Pair\nMost intents are of the form:\n→ get_weather, book_flight, reset_password, check_order_status\n\nMap to Canonical Form\nUse rules or LLMs to reduce semantically similar questions to the same intent:\n\n“What’s the forecast?” → get_weather\n\n“Will it rain today?” → get_weather\n\n“Is my order shipped?” → check_order_status\n\nSlot Filling (if needed)\nIdentify entities like location, time, product name, etc., and associate them as parameters:\n\nget_weather(location=“Seattle”, date=“tomorrow”)\n\n🧠 LLM Approach\nIf you're building with an LLM (like GPT or Claude), you can prompt it to output something like this:\n\nUser: Is my order on the way?\n→ Intent: check_order_status\n→ Slots: {}\nor\n\nUser: Can you tell me the weather in Berkeley this weekend?\n→ Intent: get_weather\n→ Slots: { location: \"Berkeley\", date_range: \"this weekend\" }\nLLMs are great for fuzzy paraphrase matching and can even generate the canonical form directly.\n\n🧰 Tools and Techniques\nEmbeddings: Represent both user queries and intent templates as vectors, use cosine similarity to find best intent match.\n\nRegex & Rules: Quick wins for high-volume repetitive queries (e.g., “forgot password” → reset_password)\n\nClustering: Use unsupervised clustering of historical user questions to discover emergent intents.\n\n🧪 Testing and Evaluation\nBuild a canonical intent registry, e.g.:\n\n{\n  \"get_weather\": [\"what’s the weather\", \"will it rain\", \"forecast for [city]\"],\n  \"reset_password\": [\"forgot my password\", \"can’t log in\", \"need a new password\"]\n}\nContinuously monitor for novel user queries that don’t map to known intents (intent drift).\n\nWant some canonical intents designed for a specific domain? Sales CRM, cooking, travel, game UX?\n\nYou said:\nPython libraries for this?\nChatGPT said:\nYes, Chef. Here's the canon of Python libraries you can call upon to forge canonical intents from user utterances:\n\n🔍 Intent Classification & NLU Frameworks\n🧠 Rasa\nOpen-source conversational NLU and dialogue manager.\n\nHas built-in intent classification, entity extraction, and custom training pipelines.\n\nPros: Mature, extensible, supports slot filling, supports Duckling for date/time parsing.\n\nInstall: pip install rasa\n\n🧱 Haystack\nNLP/RAG framework, but can be used for embedding-based semantic intent matching.\n\nPlug in sentence-transformers for dense vector similarity between queries and intents.\n\nInstall: pip install farm-haystack\n\n🗃 Snips NLU (archived but useful)\nLightweight NLU engine for on-device use.\n\nGreat for structured intent recognition on known domains.\n\nInstall: pip install snips-nlu\n\n🧬 Embeddings + Similarity Matching\n✨ Sentence-Transformers\nProvides pre-trained models like all-MiniLM-L6-v2 for embedding user questions and canonical intents.\n\nThen use cosine similarity to find the closest intent.\n\nInstall: pip install sentence-transformers\n\nfrom sentence_transformers import SentenceTransformer, util\n\nmodel = SentenceTransformer(\"all-MiniLM-L6-v2\")\nuser_query = \"will it rain today?\"\nintent_templates = [\"get_weather\", \"book_flight\", \"check_order_status\"]\n\nembeddings = model.encode([user_query] + intent_templates, convert_to_tensor=True)\nscores = util.cos_sim(embeddings[0], embeddings[1:])\n🔠 Entity & Slot Extraction\n🏷️ SpaCy\nGreat for named entity recognition (NER), tokenization, dependency parsing.\n\nUseful for slot-filling after intent is matched.\n\nCan fine-tune or add custom components for domain-specific slots.\n\nInstall: pip install spacy + python -m spacy download en_core_web_sm\n\n🧙 Duckling (via HTTP)\nFrom Facebook. Handles date/time/duration/number/money parsing with natural language.\n\nUse with Rasa or standalone.\n\nRequires running as a service (Haskell-based).\n\n🤖 LLM Wrappers for Intent Extraction\n🔧 Guidance / Instructor / Dspy\nThese let you steer LLMs (OpenAI, Claude, Mistral, etc.) to extract structured fields like:\n\n{\n  \"intent\": \"get_weather\",\n  \"slots\": {\n    \"location\": \"Berkeley\",\n    \"date\": \"this weekend\"\n  }\n}\nEspecially useful if your domain is dynamic or long-tail.\n\n🧵 LangChain / LlamaIndex\nOverkill if you're just mapping questions to intents, but handy if you’re RAGging canonical definitions.\n\nWant a full working example of:\n\nSentence-transformer-based intent classifier?\n\nOr a zero-shot LLM version that extracts intent and slots via OpenAI or Claude?\n\nYour wish, my intent.\n\nYou said:\nagno support this?\nChatGPT said:\nYes, Chef. Agno supports this workflow well — in fact, turning user input into canonical intents and extracting slots is one of its core affordances. Here’s how to think about doing it with Agno:\n\n⚙️ Agno’s Support for Canonical Intents\nAgno agents are built around structured prompt definitions, which you can configure to:\n\ninterpret user input,\n\nextract intent (as a classification task),\n\nextract slots (as structured fields),\n\nand route behavior based on the result.\n\n🛠️ Two Agno Approaches to Intent Canonicalization\n1. Using a Structured Prompt with output_schema\nfrom agno import StructuredPrompt, Agent\nfrom pydantic import BaseModel\n\nclass Intent(BaseModel):\n    intent: str\n    slots: dict\n\nprompt = StructuredPrompt(\n    system=\"You are an NLU engine. Classify the user's intent and extract structured slots.\",\n    output_schema=Intent\n)\n\nagent = Agent(prompt=prompt)\nresult = agent(\"Is it going to rain tomorrow in Oakland?\")\n\n# result.intent => 'get_weather'\n# result.slots => {'location': 'Oakland', 'date': 'tomorrow'}\nYou can hardcode intent options in the Intent model via enum or use a more generative approach.\n\n2. Using ChoicePrompt for Intent Classification\nIf you have a closed set of canonical intents, Agno’s ChoicePrompt gives you fast, structured classification:\n\nfrom agno import ChoicePrompt\n\nintent_prompt = ChoicePrompt(\n    choices=[\n        \"get_weather\",\n        \"book_flight\",\n        \"reset_password\",\n        \"check_order_status\",\n        \"talk_to_human\"\n    ],\n    description=\"Choose the canonical intent that best matches the user question.\"\n)\n\nintent = intent_prompt(\"Is my Amazon order on the way?\")\n# returns: 'check_order_status'\nYou can then pass this through a second StructuredPrompt for slot extraction.\n\n🧠 LLM Chaining for Multi-Step NLU (if needed)\nintent = intent_prompt(user_query)\nslot_prompt = StructuredPrompt(\n    system=f\"Extract slots for the intent: {intent}\",\n    output_schema=SlotModel\n)\nslots = slot_prompt(user_query)\n🧩 Integration Ideas\nCouple Agno with sentence-transformers to pre-filter or cluster queries.\n\nStore canonical intent & slot examples in a Turbopuffer collection for RAG-style fine disambiguation.\n\nDynamically load intent-specific prompts via Agno routing when ambiguity arises.\n\nWant an Agno mini-framework for building an intent router with slot extractors per intent? Say the word and I’ll script it out.\n\ns\n\n\nNo file chosenNo file chosen\nChatGPT can make mistakes. OpenAI doesn't use Endgame workspace data to train its models.\n"
+            }
+          }
+        },
+        {
+          "display": "│ > grab the linear NLU / canonical intent ticket.  make a new branch forking from main.                                                                                                                                  \nbuild a plan.md to capture how i wanna do this, based on the agno stuff here:\n\n\n[Pasted text #1 +230 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Skip to content\nChat history\n\nThis is a copy of a conversation between ChatGPT & Anonymous.\n\nReport content\nYou said:\nhow to turn user questions into canonical intent\nChatGPT said:\nYes, Chef.\n\nTo turn user questions into canonical intents, you're essentially translating free-form natural language into structured representations of what the user wants. Here's a tight approach to doing it, blending NLU principles with practical LLM workflows:\n\n🔁 General Process\nNormalize the Input\nLowercase, strip punctuation, remove stopwords (only if you're matching via embeddings or rules).\n\nExtract the Core Verb/Noun Pair\nMost intents are of the form:\n→ get_weather, book_flight, reset_password, check_order_status\n\nMap to Canonical Form\nUse rules or LLMs to reduce semantically similar questions to the same intent:\n\n“What’s the forecast?” → get_weather\n\n“Will it rain today?” → get_weather\n\n“Is my order shipped?” → check_order_status\n\nSlot Filling (if needed)\nIdentify entities like location, time, product name, etc., and associate them as parameters:\n\nget_weather(location=“Seattle”, date=“tomorrow”)\n\n🧠 LLM Approach\nIf you're building with an LLM (like GPT or Claude), you can prompt it to output something like this:\n\nUser: Is my order on the way?\n→ Intent: check_order_status\n→ Slots: {}\nor\n\nUser: Can you tell me the weather in Berkeley this weekend?\n→ Intent: get_weather\n→ Slots: { location: \"Berkeley\", date_range: \"this weekend\" }\nLLMs are great for fuzzy paraphrase matching and can even generate the canonical form directly.\n\n🧰 Tools and Techniques\nEmbeddings: Represent both user queries and intent templates as vectors, use cosine similarity to find best intent match.\n\nRegex & Rules: Quick wins for high-volume repetitive queries (e.g., “forgot password” → reset_password)\n\nClustering: Use unsupervised clustering of historical user questions to discover emergent intents.\n\n🧪 Testing and Evaluation\nBuild a canonical intent registry, e.g.:\n\n{\n  \"get_weather\": [\"what’s the weather\", \"will it rain\", \"forecast for [city]\"],\n  \"reset_password\": [\"forgot my password\", \"can’t log in\", \"need a new password\"]\n}\nContinuously monitor for novel user queries that don’t map to known intents (intent drift).\n\nWant some canonical intents designed for a specific domain? Sales CRM, cooking, travel, game UX?\n\nYou said:\nPython libraries for this?\nChatGPT said:\nYes, Chef. Here's the canon of Python libraries you can call upon to forge canonical intents from user utterances:\n\n🔍 Intent Classification & NLU Frameworks\n🧠 Rasa\nOpen-source conversational NLU and dialogue manager.\n\nHas built-in intent classification, entity extraction, and custom training pipelines.\n\nPros: Mature, extensible, supports slot filling, supports Duckling for date/time parsing.\n\nInstall: pip install rasa\n\n🧱 Haystack\nNLP/RAG framework, but can be used for embedding-based semantic intent matching.\n\nPlug in sentence-transformers for dense vector similarity between queries and intents.\n\nInstall: pip install farm-haystack\n\n🗃 Snips NLU (archived but useful)\nLightweight NLU engine for on-device use.\n\nGreat for structured intent recognition on known domains.\n\nInstall: pip install snips-nlu\n\n🧬 Embeddings + Similarity Matching\n✨ Sentence-Transformers\nProvides pre-trained models like all-MiniLM-L6-v2 for embedding user questions and canonical intents.\n\nThen use cosine similarity to find the closest intent.\n\nInstall: pip install sentence-transformers\n\nfrom sentence_transformers import SentenceTransformer, util\n\nmodel = SentenceTransformer(\"all-MiniLM-L6-v2\")\nuser_query = \"will it rain today?\"\nintent_templates = [\"get_weather\", \"book_flight\", \"check_order_status\"]\n\nembeddings = model.encode([user_query] + intent_templates, convert_to_tensor=True)\nscores = util.cos_sim(embeddings[0], embeddings[1:])\n🔠 Entity & Slot Extraction\n🏷️ SpaCy\nGreat for named entity recognition (NER), tokenization, dependency parsing.\n\nUseful for slot-filling after intent is matched.\n\nCan fine-tune or add custom components for domain-specific slots.\n\nInstall: pip install spacy + python -m spacy download en_core_web_sm\n\n🧙 Duckling (via HTTP)\nFrom Facebook. Handles date/time/duration/number/money parsing with natural language.\n\nUse with Rasa or standalone.\n\nRequires running as a service (Haskell-based).\n\n🤖 LLM Wrappers for Intent Extraction\n🔧 Guidance / Instructor / Dspy\nThese let you steer LLMs (OpenAI, Claude, Mistral, etc.) to extract structured fields like:\n\n{\n  \"intent\": \"get_weather\",\n  \"slots\": {\n    \"location\": \"Berkeley\",\n    \"date\": \"this weekend\"\n  }\n}\nEspecially useful if your domain is dynamic or long-tail.\n\n🧵 LangChain / LlamaIndex\nOverkill if you're just mapping questions to intents, but handy if you’re RAGging canonical definitions.\n\nWant a full working example of:\n\nSentence-transformer-based intent classifier?\n\nOr a zero-shot LLM version that extracts intent and slots via OpenAI or Claude?\n\nYour wish, my intent.\n\nYou said:\nagno support this?\nChatGPT said:\nYes, Chef. Agno supports this workflow well — in fact, turning user input into canonical intents and extracting slots is one of its core affordances. Here’s how to think about doing it with Agno:\n\n⚙️ Agno’s Support for Canonical Intents\nAgno agents are built around structured prompt definitions, which you can configure to:\n\ninterpret user input,\n\nextract intent (as a classification task),\n\nextract slots (as structured fields),\n\nand route behavior based on the result.\n\n🛠️ Two Agno Approaches to Intent Canonicalization\n1. Using a Structured Prompt with output_schema\nfrom agno import StructuredPrompt, Agent\nfrom pydantic import BaseModel\n\nclass Intent(BaseModel):\n    intent: str\n    slots: dict\n\nprompt = StructuredPrompt(\n    system=\"You are an NLU engine. Classify the user's intent and extract structured slots.\",\n    output_schema=Intent\n)\n\nagent = Agent(prompt=prompt)\nresult = agent(\"Is it going to rain tomorrow in Oakland?\")\n\n# result.intent => 'get_weather'\n# result.slots => {'location': 'Oakland', 'date': 'tomorrow'}\nYou can hardcode intent options in the Intent model via enum or use a more generative approach.\n\n2. Using ChoicePrompt for Intent Classification\nIf you have a closed set of canonical intents, Agno’s ChoicePrompt gives you fast, structured classification:\n\nfrom agno import ChoicePrompt\n\nintent_prompt = ChoicePrompt(\n    choices=[\n        \"get_weather\",\n        \"book_flight\",\n        \"reset_password\",\n        \"check_order_status\",\n        \"talk_to_human\"\n    ],\n    description=\"Choose the canonical intent that best matches the user question.\"\n)\n\nintent = intent_prompt(\"Is my Amazon order on the way?\")\n# returns: 'check_order_status'\nYou can then pass this through a second StructuredPrompt for slot extraction.\n\n🧠 LLM Chaining for Multi-Step NLU (if needed)\nintent = intent_prompt(user_query)\nslot_prompt = StructuredPrompt(\n    system=f\"Extract slots for the intent: {intent}\",\n    output_schema=SlotModel\n)\nslots = slot_prompt(user_query)\n🧩 Integration Ideas\nCouple Agno with sentence-transformers to pre-filter or cluster queries.\n\nStore canonical intent & slot examples in a Turbopuffer collection for RAG-style fine disambiguation.\n\nDynamically load intent-specific prompts via Agno routing when ambiguity arises.\n\nWant an Agno mini-framework for building an intent router with slot extractors per intent? Say the word and I’ll script it out.\n\ns\n\n\nNo file chosenNo file chosen\nChatGPT can make mistakes. OpenAI doesn't use Endgame workspace data to train its models.\n"
+            }
+          }
+        },
+        {
           "display": "tell me about the templates system & how it works, what goes where, from frontend to API to backend to storage layer\n\nand then tell me how templates are used in the threads UI",
           "pastedContents": {}
         },
@@ -3731,17 +3805,7 @@
         "service.ts"
       ],
       "exampleFilesGeneratedAt": 1749833774711,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 0,
-      "lastAPIDuration": 0,
-      "lastDuration": 1908,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 0,
-      "lastTotalCacheCreationInputTokens": 0,
-      "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "839ad7f9-6b57-44b6-b11d-acf1c41d7b73"
+      "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -3935,10 +3999,35 @@
       "lastTotalCacheCreationInputTokens": 20077,
       "lastTotalCacheReadInputTokens": 19883,
       "lastSessionId": "ff630250-88e5-41de-b392-e04cc2118b53"
+    },
+    "/Users/dorkitude/a/dev": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "honestly I think i'd rather have a Flask server so I can still do dynamic stuff and access backend services.",
+          "pastedContents": {}
+        },
+        {
+          "display": "I haven't made a site yet.  I'm just trying to understand the render-compatible tech stacks are.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Help me figure out my options for deploying a static site to dorkitude.com, via Render.",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 2,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1749920237543,
+  "changelogLastFetched": 1749923585124,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
