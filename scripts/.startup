@@ -1,0 +1,85 @@
+# THIS SCRIPT
+alias vs="vim ~/a/scripts/.startup"
+alias cs="code ~/a/scripts/.startup"
+alias ss="source ~/.zshrc"
+
+
+# PROMPT
+PS1="%{%F{033}%}%n%{%f%}@%{%F{green}%}%m:%{%F{yellow}%}%~%{$%f%}%  "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+
+# ALIASES
+
+alias ll="ls -lah"
+alias gs="git status"
+alias gd="git diff"
+alias gcm="git commit -m "
+alias gau="git add -u"
+alias ga="git add"
+alias gb="git branch"
+alias gc="git checkout"
+alias gl="git log"
+alias gp="git pull"
+alias gcam="git commit -am" # commit all changes and message
+
+
+alias pg="ping google.com"
+
+
+# dev directory shortcuts
+alias cda="cd ~/a"
+alias cdd="cd ~/a/dev"
+alias cdb="cd ~/a/dev/cerebro/src/briefs"
+alias cdc="cd ~/a/dev/cerebro/"
+alias cdaf="cd ~/a/dev/cerebro/src/app-frontend"
+
+
+
+
+# CLAUDE CODE
+alias cc="claude --dangerously-skip-permissions"
+# Source Claude wrapper with dynamic terminal title
+[ -f ~/a/scripts/daemon-wrappers.zsh ] && source ~/a/scripts/daemon-wrappers.zsh
+
+
+alias v="nvim"
+alias vim="nvim"
+alias vi="nvim"
+
+
+eval "$(pyenv init --path)"
+
+
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+
+COLOR_DEF=$'%f'
+COLOR_USR=$'%F{243}'
+COLOR_DIR=$'%F{197}'
+COLOR_GIT=$'%F{39}'
+setopt PROMPT_SUBST
+export PROMPT='${COLOR_USR}%n ${COLOR_DIR}%~ ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF} $ '
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT="/Users/dorkitude/a/dev/cocos2d-x-4.0/tools/cocos2d-console/bin"
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/Users/dorkitude/a/dev"
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT="/Users/dorkitude/a/dev/cocos2d-x-4.0/templates"
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+
+export PATH='/Applications/CMake.app/Contents/bin/':$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dorkitude/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dorkitude/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dorkitude/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dorkitude/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
