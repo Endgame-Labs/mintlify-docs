@@ -14,7 +14,8 @@ This directory (`~/a`) serves as a personal workspace containing development pro
 ├── scripts/           # Utility scripts and configurations
 │   ├── .startup       # Shell startup configuration (sourced from ~/.zshrc)
 │   ├── background/    # Background/automated scripts
-│   │   └── backup_a.sh  # Automated backup script
+│   │   ├── backup_a.sh  # Automated backup script for ~/a directory
+│   │   └── backup_scrappy_head_screenshots.sh  # Screenshot backup script
 │   └── daemon-wrappers.zsh  # Terminal title management for daemons
 └── .gitignore         # Git ignore configuration
 ```
@@ -43,6 +44,15 @@ This directory (`~/a`) serves as a personal workspace containing development pro
   - Maintains only the 20 most recent backups of each type
   - Excludes common temporary files (.DS_Store, __pycache__, .git, etc.)
 
+#### `/scripts/background/backup_scrappy_head_screenshots.sh`
+- **Purpose**: Automated backup script for scrappy-head project screenshots
+- **Integration**: Scheduled via crontab to run daily at 9 AM
+- **Features**:
+  - Creates a zip backup of the entire `~/a/dev/scrappy-head/screenshots` directory
+  - Saves to `~/Dropbox/backups/scrappy_head_screenshots.zip`
+  - Overwrites the previous backup (no versioning)
+  - Ensures backup directory exists before creating backup
+
 #### `/scripts/daemon-wrappers.zsh`
 - **Purpose**: Terminal title management wrappers for daemon processes
 - **Integration**: Sourced from `.startup` file
@@ -67,12 +77,16 @@ This directory (`~/a`) serves as a personal workspace containing development pro
 
 ## System Integration
 
-### Crontab Entry
+### Crontab Entries
 ```bash
+# Hourly backup of ~/a directory and dotfiles
 0 * * * * /Users/dorkitude/a/scripts/background/backup_a.sh >> /tmp/backup_a.log 2>&1
+
+# Daily backup of scrappy-head screenshots at 9 AM
+0 9 * * * /Users/dorkitude/a/scripts/background/backup_scrappy_head_screenshots.sh >> /tmp/backup_scrappy_head_screenshots.log 2>&1
 ```
-- Runs backup script hourly
-- Logs output to `/tmp/backup_a.log`
+- `backup_a.sh`: Runs hourly, logs to `/tmp/backup_a.log`
+- `backup_scrappy_head_screenshots.sh`: Runs daily at 9 AM, logs to `/tmp/backup_scrappy_head_screenshots.log`
 
 ### Shell Integration
 The `.startup` file should be sourced from `~/.zshrc`:
@@ -114,4 +128,6 @@ source ~/a/scripts/.startup
 
 - The `dev/` directory contains development projects but is excluded from git tracking
 - Backup retention is set to 20 most recent backups for both directory and dotfiles
+- Screenshot backups are overwritten daily (no versioning) to save space
 - Terminal title management prevents certain commands from changing the terminal title during execution
+- Both backup scripts create their destination directories if they don't exist
