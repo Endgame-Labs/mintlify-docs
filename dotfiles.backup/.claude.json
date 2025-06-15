@@ -1,5 +1,5 @@
 {
-  "numStartups": 692,
+  "numStartups": 705,
   "autoUpdaterStatus": "enabled",
   "tipsHistory": {
     "terminal-setup": 1,
@@ -8,19 +8,19 @@
     "theme-command": 677,
     "prompt-queue": 218,
     "git-worktrees": 675,
-    "todo-list": 659,
+    "todo-list": 700,
     "enter-to-steer-in-relatime": 683,
     "claude-opus-welcome": 214,
-    "# for memory": 682,
+    "# for memory": 703,
     "install-github-app": 553,
-    "permissions": 684,
+    "permissions": 705,
     "drag-and-drop-images": 685,
     "double-esc": 688,
     "continue": 692,
     "custom-commands": 689,
     "shift-tab": 690
   },
-  "promptQueueUseCount": 15,
+  "promptQueueUseCount": 26,
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
   "hasCompletedOnboarding": true,
   "lastOnboardingVersion": "1.0.22",
@@ -3629,6 +3629,58 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "make sure the pr summary links to the linear ticket at the top",
+          "pastedContents": {}
+        },
+        {
+          "display": "I don't see the mermaid diagrams on Linear or on the Plan.md reflecting this.",
+          "pastedContents": {}
+        },
+        {
+          "display": "We need to think more about this Mermaid diagram.\n\nIt's not clear what happens from a cold start, i.e. if there are no intents stored in the system yet.",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the PR summary to simply link to the Linear ticket & mirror what it says.",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the PR description to mirror what we currently have in the Linear ticket.",
+          "pastedContents": {}
+        },
+        {
+          "display": "open this PR url",
+          "pastedContents": {}
+        },
+        {
+          "display": "!git status",
+          "pastedContents": {}
+        },
+        {
+          "display": "install it",
+          "pastedContents": {}
+        },
+        {
+          "display": "!gs",
+          "pastedContents": {}
+        },
+        {
+          "display": "does Render.co have a CLI",
+          "pastedContents": {}
+        },
+        {
+          "display": "get rid of your timeline / development time estimates.",
+          "pastedContents": {}
+        },
+        {
+          "display": "replace the Context section at the top with a little (1 paragraph) preamble on what Canonical Intent is for, why we're doing it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "We have 3 personas.  Seller, front-line sales manager, and sales executive (think CRO).  Each will have maybe 25 to 100 common questions.  Include this preamble in the linear ticket at the top.  Give some examples.",
+          "pastedContents": {}
+        },
+        {
           "display": "Add a mermaid style diagram and post the whole thing to GH.  Put a README in the PR.  Update linear ticket to explain my thinking here, in under 10 bullet points.",
           "pastedContents": {}
         },
@@ -3805,7 +3857,17 @@
         "service.ts"
       ],
       "exampleFilesGeneratedAt": 1749833774711,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.7350978,
+      "lastAPIDuration": 164476,
+      "lastDuration": 10256206,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 14351,
+      "lastTotalOutputTokens": 1492,
+      "lastTotalCacheCreationInputTokens": 23598,
+      "lastTotalCacheReadInputTokens": 132101,
+      "lastSessionId": "23fa7712-b792-45b2-b657-a3160587c044"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -3870,6 +3932,38 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "[Pasted text #1 +49 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "dorkitude ~/a/dev/scrappy-head [main] $ uv run playwright install\ndorkitude ~/a/dev/scrappy-head [main] $ uv run scrappy --mode=crawl --username=kyle@kylewild.com\nConnecting to MongoDB at localhost:27017/scrappy_head\nSuccessfully connected to MongoDB\nINFO     [telemetry] Anonymized telemetry enabled. See https://docs.browser-use.com/development/telemetry for more information.\nConfiguration:\n  Mode: crawl\n  Username: kyle@kylewild.com\n  Headless Mode: False\n  Debug: False\nFound existing user with email: kyle@kylewild.com\n[2025-06-14 20:46:20] kyle@kylewild.com has used 0 of 500 quota in the last 24 hours.   Will crawl 500 profiles.\n[2025-06-14 20:46:20] Initializing browser...\nTraceback (most recent call last):\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/bin/scrappy\", line 10, in <module>\n    sys.exit(cli_main())\n             ^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/main.py\", line 14, in cli_main\n    run()\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 275, in run\n    run_crawl(scraper)\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 72, in run_crawl\n    scraper.run_crawl()\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/scraper/linkedin_scraper.py\", line 120, in run_crawl\n    self.initialize_browser()\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/scraper/linkedin_scraper.py\", line 272, in initialize_browser\n    browser = playwright.chromium.launch(headless=self.headless)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/lib/python3.11/site-packages/playwright/sync_api/_generated.py\", line 14493, in launch\n    self._sync(\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/lib/python3.11/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/lib/python3.11/site-packages/playwright/_impl/_browser_type.py\", line 96, in launch\n    Browser, from_channel(await self._channel.send(\"launch\", params))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py\", line 61, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/lib/python3.11/site-packages/playwright/_impl/_connection.py\", line 528, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: BrowserType.launch: Executable doesn't exist at /Users/dorkitude/Library/Caches/ms-playwright/chromium-1161/chrome-mac/Chromium.app/Contents/MacOS/Chromium\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
+            }
+          }
+        },
+        {
+          "display": "uv run scrappy --mode=crawl --user=kyle@kylewild.com",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +23 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "dorkitude ~/a/dev/scrappy-head [main] $ uv run scrappy --mode=crawl\nConnecting to MongoDB at localhost:27017/scrappy_head\nSuccessfully connected to MongoDB\nINFO     [telemetry] Anonymized telemetry enabled. See https://docs.browser-use.com/development/telemetry for more information.\nINFO     [scrappy_head.main] Starting Scrappy Head - LinkedIn Sales Navigator Scraper\nINFO     [scrappy_head.main] Initializing browser...\nERROR    [scrappy_head.main] Unhandled exception: 'credentials'\nTraceback (most recent call last):\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/main.py\", line 55, in cli_main\n    return asyncio.run(main())\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/.pyenv/versions/3.11.0/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/.pyenv/versions/3.11.0/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/.pyenv/versions/3.11.0/lib/python3.11/asyncio/base_events.py\", line 650, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/main.py\", line 40, in main\n    logger.info(f\"Logging in as {config['credentials']['username']}...\")\n                                 ~~~~~~^^^^^^^^^^^^^^^\nKeyError: 'credentials'"
+            }
+          }
+        },
+        {
+          "display": "doesn't work",
+          "pastedContents": {}
+        },
+        {
+          "display": "load the CLI into pyproject so i can just run \"uv run scrappy\"",
+          "pastedContents": {}
+        },
+        {
           "display": "tell me how large each of these folders is",
           "pastedContents": {}
         }
@@ -3879,7 +3973,7 @@
       "enabledMcpjsonServers": [],
       "disabledMcpjsonServers": [],
       "hasTrustDialogAccepted": false,
-      "projectOnboardingSeenCount": 2,
+      "projectOnboardingSeenCount": 5,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
@@ -3890,16 +3984,16 @@
         "screenshot_parser.py"
       ],
       "exampleFilesGeneratedAt": 1749837805220,
-      "lastCost": 0.03102195,
-      "lastAPIDuration": 37872,
-      "lastDuration": 2729940,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 5367,
-      "lastTotalOutputTokens": 351,
-      "lastTotalCacheCreationInputTokens": 3769,
-      "lastTotalCacheReadInputTokens": 32198,
-      "lastSessionId": "a36997d2-c331-4a9f-92d2-02c4cb3ccd29"
+      "lastCost": 2.9264628999999998,
+      "lastAPIDuration": 332820,
+      "lastDuration": 454839,
+      "lastLinesAdded": 16,
+      "lastLinesRemoved": 62,
+      "lastTotalInputTokens": 19950,
+      "lastTotalOutputTokens": 7035,
+      "lastTotalCacheCreationInputTokens": 37416,
+      "lastTotalCacheReadInputTokens": 1161573,
+      "lastSessionId": "9d417ee8-661a-4b25-a807-62ce66e04537"
     },
     "/Users/dorkitude/Dropbox/backups": {
       "allowedTools": [],
@@ -4004,6 +4098,74 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "i dont' see www anywhere in the list tho",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't want the www, i'd rather it just forward to non-www",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do i make it so this shows up on dorkitude.com?  I own the domain and it's registered via Dreamhost.",
+          "pastedContents": {}
+        },
+        {
+          "display": "get rid of powered by flask",
+          "pastedContents": {}
+        },
+        {
+          "display": "!gl",
+          "pastedContents": {}
+        },
+        {
+          "display": "!gd",
+          "pastedContents": {}
+        },
+        {
+          "display": "why did you write established 2024?",
+          "pastedContents": {}
+        },
+        {
+          "display": "go ahead and update Flask to serve an index page\n\n\njust say it's the homepage of kyle wild, maybe add an under construction GIF like in the old days of the web.   add link to my linkedin (kylewild) and x/twitter (dorkitude).\n\nthe theme for all stuff should be based on catppuccin-macchiato.",
+          "pastedContents": {}
+        },
+        {
+          "display": "I'm setting up some Advanced properties in my Render setup.\n\nHealth Check Path\nProvide an HTTP endpoint path that Render messages periodically to monitor your service. /healthz\n\nmake sure README knows that path needs to return a health check",
+          "pastedContents": {}
+        },
+        {
+          "display": "UPdate @dorkitude.com/README.md with what you currently know about the project.  This will serve as long-term memory for both of us.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Root DirectoryOptional\nIf set, Render runs commands from this directory instead of the repository root. Additionally, code changes outside of this directory do not trigger an auto-deploy. Most commonly used with a monorepo.\n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "done",
+          "pastedContents": {}
+        },
+        {
+          "display": "render CLI is already installed.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Can all of this be done via Claude Code and the Render CLI?",
+          "pastedContents": {}
+        },
+        {
+          "display": "add hello world, with a simple template, commit and push.  then switch to helping me deploy on Render",
+          "pastedContents": {}
+        },
+        {
+          "display": "Set this project up to use uv for everything.  Then use it to install flask and jinja.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Make me a new private github repo, in my personal dorkitude org (not a work org), called dorkitude.com\n\nIt will be a Flask app servicing my personal website and essays, at least at first.",
+          "pastedContents": {}
+        },
+        {
           "display": "honestly I think i'd rather have a Flask server so I can still do dynamic stuff and access backend services.",
           "pastedContents": {}
         },
@@ -4021,13 +4183,580 @@
       "enabledMcpjsonServers": [],
       "disabledMcpjsonServers": [],
       "hasTrustDialogAccepted": false,
-      "projectOnboardingSeenCount": 2,
+      "projectOnboardingSeenCount": 5,
       "hasClaudeMdExternalIncludesApproved": false,
-      "hasClaudeMdExternalIncludesWarningShown": false
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 4.944882200000001,
+      "lastAPIDuration": 1359423,
+      "lastDuration": 2632404,
+      "lastLinesAdded": 287,
+      "lastLinesRemoved": 21,
+      "lastTotalInputTokens": 137334,
+      "lastTotalOutputTokens": 18365,
+      "lastTotalCacheCreationInputTokens": 64726,
+      "lastTotalCacheReadInputTokens": 1744755,
+      "lastSessionId": "521dec98-ada6-48e0-ba68-76f41527ee67"
+    },
+    "/Users/dorkitude/a/dev/dorkitude.com": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "When you hover near a H2/H3/H4 in a given essay, I'd like a little effect that shows the paragraph symbol to the right and makes the thing clickable.  Once it's clickable, it'll link you to the page you're currently on, but with an anchor tag to that specific location in the document.",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't want the link there;  put it as a SVG in the far top right\n\nalso visit it on local host and see the error?\n\nhttp://127.0.0.1:5001/feed.xml\n\n\n\n[Pasted text #1 +43 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "TypeError\nTypeError: can't compare offset-naive and offset-aware datetimes\n\nTraceback (most recent call last)\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 1536, in __call__\nreturn self.wsgi_app(environ, start_response)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 1514, in wsgi_app\n            try:\n                ctx.push()\n                response = self.full_dispatch_request()\n            except Exception as e:\n                error = e\n                response = self.handle_exception(e)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^\n            except:  # noqa: B001\n                error = sys.exc_info()[1]\n                raise\n            return response(environ, start_response)\n        finally:\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 1511, in wsgi_app\nresponse = self.full_dispatch_request()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 919, in full_dispatch_request\nrv = self.handle_user_exception(e)\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 917, in full_dispatch_request\nrv = self.dispatch_request()\n     ^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 902, in dispatch_request\nreturn self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/app.py\", line 274, in rss_feed\nall_items.sort(key=lambda x: x['date'], reverse=True)\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: can't compare offset-naive and offset-aware datetimes\nThe debugger caught an exception in your WSGI application. You can now look at the traceback which led to the error.\nTo switch between the interactive traceback and the plaintext one, you can click on the \"Traceback\" headline. From the text traceback you can also create a paste of it. For code execution mouse-over the frame you want to debug and click on the console icon on the right side.\n\nYou can execute arbitrary Python code in the stack frames and there are some extra helpers available for introspection:\n\ndump() shows all variables in the frame\ndump(obj) dumps all that's known about the object\nBrought to you by DON'T PANIC, your friendly Werkzeug powered traceback interpreter."
+            }
+          }
+        },
+        {
+          "display": "how do I add RSS feed that includes my bookmarks and my blog?",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "update comment on My AI Skeptic Friends Are All Nuts to say:\n\n\"The best take I've seen on agentic programming.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "update it to \"We are a fleet of `strange loops`, and maybe we can even be jazz.",
+          "pastedContents": {}
+        },
+        {
+          "display": "change comment to \"We are a fleet of strange loops.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "/bookmark https://simonwillison.net/2025/Jun/14/multi-agent-research-system/",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "get rid of the thing that makes it honor whitespaces in markdown.  get rid of the paragraph indentation thing too.  don't deploy it, i jus twanna see these changes locally",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix broken links to /new\n\nnothing should link to that",
+          "pastedContents": {}
+        },
+        {
+          "display": "time to go live!   move index to be index.old.html and the route to be old\n\nmove new to be new.html and the route to be just /\n\n\nthen deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "which ones have pure pixel available?",
+          "pastedContents": {}
+        },
+        {
+          "display": "this site is deployed on Render, which option works best",
+          "pastedContents": {}
+        },
+        {
+          "display": "wouldn't file storage lead to race conditions with lots of traffic",
+          "pastedContents": {}
+        },
+        {
+          "display": "what would the endpoint do?",
+          "pastedContents": {}
+        },
+        {
+          "display": "what is some super basic analytics i can put on this site before i launch it?",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "make the signature block a bit smaller",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "add a signature block to the bottom of each essay that says like\n\nKyle Wild\nBerkeley, CA\nJune 14, 2025\n\n\nexcept instead of hard coded, it's in the metadata on each essay",
+          "pastedContents": {}
+        },
+        {
+          "display": "I'd like my bookmark comments to go through a markdown interpreter as well, so I can use code and emphasis blocks and such",
+          "pastedContents": {}
+        },
+        {
+          "display": "make the `added-date` class in bokomark partial render as much smaller.  and get rid of some of the padding after author.",
+          "pastedContents": {}
+        },
+        {
+          "display": "please sort them by date bookmarked, descending.",
+          "pastedContents": {}
+        },
+        {
+          "display": "add Reading as a link to the header, after Writing and before Ab out",
+          "pastedContents": {}
+        },
+        {
+          "display": "by chat logic are the articles listed under Reading sorted?",
+          "pastedContents": {}
+        },
+        {
+          "display": "actaully make the body links blue too, all can be blue",
+          "pastedContents": {}
+        },
+        {
+          "display": "swap those links colors.  make my typical default link into this sky, and make the footer links blue",
+          "pastedContents": {}
+        },
+        {
+          "display": "make these links at the bottom of the writing/article page match the color of the nav links and the SVGs",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix the stackoverflow SVG to look less janky.",
+          "pastedContents": {}
+        },
+        {
+          "display": "why is this part of the artcle page the links are greyed out, but i want them green like nav",
+          "pastedContents": {}
+        },
+        {
+          "display": "H1, h2, h3 should be --ctp-blue \n\nnav links and icons should be --ctp-sky          ",
+          "pastedContents": {}
+        },
+        {
+          "display": "too much color.  let's make them mostly muted again",
+          "pastedContents": {}
+        },
+        {
+          "display": "my comment on The Night Watch in bookmarks should say:\n\n`Code written by \"a drunken child or a sober goldfish\" vs. \"mean people, stoic people, people who have seen things die.\"  This latter group is the night watch.  IYKYK.`",
+          "pastedContents": {}
+        },
+        {
+          "display": "update my headings and nav styles to have a little more color, still from the theme.",
+          "pastedContents": {}
+        },
+        {
+          "display": "update teh Readings metadata to have both published date and a bookmarked-date\n\nupdate Readings section of homepage, plus the reading page itself, so they both use the same partial.   update that partial to include both dates.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit everything",
+          "pastedContents": {}
+        },
+        {
+          "display": "you should be able to publish it in statics, then use python -c with playwright to read it off localhost:5001",
+          "pastedContents": {}
+        },
+        {
+          "display": "move @the-illusion-of-thinking.pdf to my statics, add to bookmarks with the comment \"By the time Apple published this paper, the 'cutting-edge' models they were discrediting were already outdated.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and deploy",
+          "pastedContents": {}
+        },
+        {
+          "display": "get rid of the old urls",
+          "pastedContents": {}
+        },
+        {
+          "display": "update my URL scheme so essays all fall under \"/writing/\" and bookmarks under \"/reading/\"\n\ndo the same with my folder structure",
+          "pastedContents": {}
+        },
+        {
+          "display": "!code .",
+          "pastedContents": {}
+        },
+        {
+          "display": "looks better but i still want it to link to the full size image",
+          "pastedContents": {}
+        },
+        {
+          "display": "butn ow both are gone",
+          "pastedContents": {}
+        },
+        {
+          "display": "maybe just remove the part from preprocess html since figcaption is pretty good",
+          "pastedContents": {}
+        },
+        {
+          "display": "why does my housing maps link in my vibe coding essay show the link twice?   see what i mean?\n\nuse python -c playwright to fetch and read http://localhost:5001/essay/the-rise-and-fall-of-vibe-coding",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the about page so it doesn't do the indentation/spacing thing to start paragraphs",
+          "pastedContents": {}
+        },
+        {
+          "display": "update teh bookmark metadata link to just use a relative URL, that way it works locally too",
+          "pastedContents": {}
+        },
+        {
+          "display": "dunno what Webfetch is, but you can use playwright via python -c",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit everything and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "once it's in statics, you can probably read it via playwright at localhost, no?",
+          "pastedContents": {}
+        },
+        {
+          "display": "move @1311_05-08_mickens.pdf into statics as 'james_mickens_the_night_watch.pdf' and then add it to my website's bookmarks (using the dorkitude.com url)\n\nyou'll need to read it yourself to extract the date and summary",
+          "pastedContents": {}
+        },
+        {
+          "display": "sounds great.  let's also do some custom magic to make it so the alt text gets added just below the image, also clickable",
+          "pastedContents": {}
+        },
+        {
+          "display": "I've put it in @essays/2025-06-14-the-rise-and-fall-of-vibe-coding.md but it's breaking the layout.  How can we make it so that it renders in a way that fits in the column, but lets the user click to get to the full-size image?",
+          "pastedContents": {}
+        },
+        {
+          "display": "move @housingmaps.png into statics and tell me how I can IMG SRC it in markdown",
+          "pastedContents": {}
+        },
+        {
+          "display": "At the bottom of each essay being viewed, below the HR, I'd like a section that says:\n\nContinue the conversation on HN by clicking [here] and constructs the proper HN submission URL.",
+          "pastedContents": {}
+        },
+        {
+          "display": "also you forgot to download it, store it as markdown, and produce a comment.",
+          "pastedContents": {}
+        },
+        {
+          "display": "that bookmark should be farther down the list since it's from 2024",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit everything",
+          "pastedContents": {}
+        },
+        {
+          "display": "!gs",
+          "pastedContents": {}
+        },
+        {
+          "display": "/bookmark https://www.anthropic.com/news/contextual-retrieval",
+          "pastedContents": {}
+        },
+        {
+          "display": "no I don't need it to be a python script;  I prefer just to have Claude do it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "set up site to use @favicon.ico which i assume you may need to move somewhere",
+          "pastedContents": {}
+        },
+        {
+          "display": "update your CLAUDE.md to describe how to take a bookmark, scrape it, and add it to metadata\n\nhelp me make a /bookmark command so you can do it quickly with just a URL",
+          "pastedContents": {}
+        },
+        {
+          "display": "/bookmark",
+          "pastedContents": {}
+        },
+        {
+          "display": "make the writing section take up the left side, reading section take up the right side\n\nwiden the default a bit\n\nmake it responsive though in case someone's on a phone",
+          "pastedContents": {}
+        },
+        {
+          "display": "rename homepage_content to about_content, move to the about route\n\nhomepage will just be \"writing\" and \"reading\" with links",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's make it to UL and OL contents indent properly",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's make it so my essays render more narrowly than they currently are.  I'd like it to flow like a newspaper.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Let's update @app.py so that every time there's a <p> tag it inserts five spaces right after that.",
+          "pastedContents": {}
+        },
+        {
+          "display": "help me figure out why my view-essay page is still indenting paragraphs.",
+          "pastedContents": {}
+        },
+        {
+          "display": "what's the difference between retro.css and terminal.css",
+          "pastedContents": {}
+        },
+        {
+          "display": "go to the eessay page, look at one of my essays, and look how HUGE the indentation is.",
+          "pastedContents": {}
+        },
+        {
+          "display": "use playwright to go to /new and take screenshots",
+          "pastedContents": {}
+        },
+        {
+          "display": "go to the page and take a screenshot so you can see how bad the padding is.",
+          "pastedContents": {}
+        },
+        {
+          "display": "remove all of this indentation stuff",
+          "pastedContents": {}
+        },
+        {
+          "display": "load the page, it looks crazy",
+          "pastedContents": {}
+        },
+        {
+          "display": "this essay needs some narrative help.\n\ni need a brainstorming partner in outline mode.",
+          "pastedContents": {}
+        },
+        {
+          "display": "│ > my paragraph indentations are way too large.   navigate to page and see what i mean (it's running on port 5001)                                                                                                        │",
+          "pastedContents": {}
+        },
+        {
+          "display": "move core nav to top left.  should just say \n\ndorkitude.com - Home | Essays | About\n\nand make the links underlined",
+          "pastedContents": {}
+        },
+        {
+          "display": "my paragraph indentations are way too extreme right now in the md content stuff.  i just want it to be 5 spaces but it's like 15",
+          "pastedContents": {}
+        },
+        {
+          "display": "move Recent Writings and Recent Writings to the top of homepage.\n\nmake all my headers a bit smaller (h1, h2, etc)\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "Help me replace the Hello World essay.  I want my first essay to actually be called\n\n\"The Rise and Fall of Vibe-Coding\"\n\nit will be an essay about the rise of agentic coding.  but about how it's been so swift that the term is becoming outdated in advanced groups, just as laggard groups are hearing about it for the first time.  it's a bit of an essay about the proliferation of language, cycles of prescriptivism-descriptivism, and how language has begun to break for us due to the sheer cycle speed of AI in terms of number of cycles per year (and recenty, with o3 + veo + claude 4 opus + claude code GA + cursor GA, turbopuffer GA, etc, it's more like cycles per week even).  this isn't meant to be an ad for san francisco, if you ain't here in 2025, you risk not even learning about concepts until we've already made them irrelevant.   \n\nsome concepts:   terms come and go quickly.  cloud computing, mashup, social app, \"local\" app, noSQL, big data, etc.   plain-ol' RAG sucked so we needed graph-RAG.  graph-RAG itself is quickly becoming irrelevant as context windows increase and things like Turbopuffer come online.  larger embedding models like Voyage, fast search like turbopuffer hybrid + cohere rerank, and excellent searchbots like o3 and Opus 4.\n\nRemember the term \"Mashup\"?  In the early 2010s there was a term for web applications that, instead of being \"real\" applications where the backend engineers built everything themselves.  But suddenly you could use a bunch of cloud APIs and simply \"mash them up\" (think of examples, but like Sendgrid, Twilio, Stripe, AWS, Heroku, google maps, etc) into a functioning web application.  We need terms like this to describe new, minority phenomena.  If those phenomena \n\nIn the past year, the term \"vibe-coding\" went from being brand new (some usages of the term even briefly emerging as pejorative).  to in a few months being so ubiquitous that it's already borderline embarrassing even to say the term.\n\nas if chatGPT or Perplexity were called \"vibe searching\" for a few months, and then we all realized it was simply searching.   but better.   etc.   \n\n\nhelp me orgnaize these thoughts a bit in this session",
+          "pastedContents": {}
+        },
+        {
+          "display": "add a new section near there for Recently Reading:   make me a bookmarks folder that has timestamped markdown downloads of various content, and a metadata json so we can link to the original.\n\nscrape these two and add them as bookmarks:\nhttps://fly.io/blog/youre-all-nuts/\nhttps://steipete.me/posts/2025/claude-code-is-my-computer\n\nmake sure you get their public dates right.\n\nI'd like the most recent 5 things I've been reading to be listed in the Recently Reading section, perhaps with a little comment from me.  let's try it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Get rid of the essays section at the bottom of the homepage.\n\nat the top, replace \"Current\" with \"Quick Facts\"\n\nabove that section, make a small section called \"Recent Writings\" that links to the most recent 2 essays.\n\nin the top-right links section, add a stackoverflow link that goes to https://stackoverflow.com/users/499756/kyle-wild",
+          "pastedContents": {}
+        },
+        {
+          "display": "I didn't want you to change my actual rendering output for users.\n\nI just want the HTML itself to be properly indented in the source code.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Great.\n\nNow the view-source stuff is defintiely _better_ but it's just blindly indenting the entire markdown section.  I'd love for it to also be properly indented within itself.",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "            <h2>Current:</h2>\n            <ul>\n            <li>Berkeley-based hacker, musician, and father of two.</li>\n            <li>Professionally, I specialize in knowledge systems.</li>\n            <li>CTO at <a href=\"https://endgame.io\">Endgame</a> building the future of CRM.</li>\n            <li>Founder <a href=\"http://musicluck.org\">Musicluck</a> and <a href=\"http://rootsystem.com\">Root System</a>.</li>\n            </ul>\n            <h2>Biography:</h2>\n            <p>I was born in the Mid-South in 1984 in the Mid-South.  Cairo, IL <a href=\"/static/bible_belt.jpg\">(poem)</a>.  I got in trouble a lot here -- thanks, <a href=\"https://en.wikipedia.org/wiki/The_Anarchist_Cookbook\">Jolly Roger</a>!</p>\n            <p>I was raised raised by:</p>\n            <ul>\n            <li>John Wild (RIP) a geek-mechanic</li>\n            <li>Annie Wild, nurse (my mom came from the Philippines to join the hospital, where I would eventually be born).</li>\n            </ul>\n            <p>Education &amp; Work history:</p>\n            <ul>\n            <li>1999:  Moved upstate for boarding school @ <a href=\"http://imsa.edu\">IMSA</a> where I got in trouble less, but still some (thanks NetBus and Back Orifice!)</li>\n            <li>2002:  Moved to Urbana-Champaign for <a href=\"https://grainger.illinois.edu/\">UIUC Engineering</a> where I fell in love and definitely did not get in real trouble.</li>\n            <li>2006:  Moved to San Francisco to join Google, where my founder DNA got me in trouble sometimes. Left in under than a year (that was an expensive decision).</li>\n            <li>2007-present:  Founding engineer at a lot of startups since then. I get to make trouble for a living now :)</li>\n            <li>2012-2017:  Founded and ran <a href=\"http://keen.io\">Keen</a>.  It should've been much more successful that it was.  I blame the CEO 😭.</li>\n            </ul>\n"
+            }
+          }
+        },
+        {
+          "display": "I'm writing two spaces in my markdown after periods, but the rendering is only 1 space.  What gives?",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy",
+          "pastedContents": {}
+        },
+        {
+          "display": "move @bible_belt.jpg to statics and link to it from my homepage_content essay, the word \"poem\" remove instagram link",
+          "pastedContents": {}
+        },
+        {
+          "display": "!cp ~/Downloads/bible_belt.png ./",
+          "pastedContents": {}
+        },
+        {
+          "display": "update theme so bulleted lists are indented from the left, 4 spaces",
+          "pastedContents": {}
+        },
+        {
+          "display": "please update my theme so that links are underlined by default.",
+          "pastedContents": {}
+        },
+        {
+          "display": "get rid of the Work and Life sections.\n\nreplace the \"This is a clean, minimal site focused on content and readability. Everything here is designed to be semantic, accessible, and beautiful—even when you view the source.\" stuff\n\nwith a small bullet-form bio of me, which we should store in a markdown file called homepage_content.\n\nCurrent:\n- Berkeley-based hacker and father of two.\n- Profesionally, I specialize in knowledge systems.\n- CTO at [Endgame](https://endgame.io) building the future of CRM.\n- Founder [Musicluck](http://musicluck.org) and [Root System](http://rootsystem.com).\n\nHistory:\n- Born in the Berenstein Bears timeline, in 1984, in the Mid-South.  Cairo, IL (poem)[https://www.instagram.com/p/Cc6qZUnJTB0/?img_index=2].  I got in trouble a lot here (thanks Jollyroger's anarchist cookbook)\n- Raised by a geek-mechanic (my dad owned an auto garage) and a nurse (my mom came from the Philippines to join the hospital, where I would eventaully be born).\n- High school @ [IMSA](http://imsa.edu) where I got in trouble less, but still some (thanks NetBus and Back Orifice!)\n- Undergrad @ [UIUC Engineering](https://grainger.illinois.edu/) where I fell in love and definitely did not get in real trouble.\n- Went to Google, where my founder DNA got me in trouble sometimes.  Left in less than a year (that was an expensive decision).\n- Founding engineer at a lot of startups since then.  I get to make trouble for a living now :)",
+          "pastedContents": {}
+        },
+        {
+          "display": "right now the H1 is rendered twice, once above the meta stuff, and once below because you're rendering the full markdown.\n\nby convention let's remove the second one from the rendering.\n\nalso get rid of all the tags stuff, i don't have enough content for that to be useful.",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's make sure the markdown's first H1 tag is the real source of truth for the title.  before you deploy, you should go through any updated markdown files and extract this metadata from them.  perhaps that should be a script so it can be done with consistency and reliability, as one of your pre-commit hooks.\n\nfigure this out and them update claude.md with this",
+          "pastedContents": {}
+        },
+        {
+          "display": "fixed!\n\nback to essays.\n\nLet's create a filename convention so the essays are nicely sortable.   yyyy-mm-dd at the start should suffice.",
+          "pastedContents": {}
+        },
+        {
+          "display": "but when i click those routes i get:\n\nAccess to localhost was denied\nYou don't have authorization to view this page.\nHTTP ERROR 403",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 15,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "index.html",
+        "app.py",
+        "README.md",
+        "new.html",
+        "templates/index.html"
+      ],
+      "exampleFilesGeneratedAt": 1749929227226,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 9.940493349999999,
+      "lastAPIDuration": 1289076,
+      "lastDuration": 10935432,
+      "lastLinesAdded": 296,
+      "lastLinesRemoved": 65,
+      "lastTotalInputTokens": 123069,
+      "lastTotalOutputTokens": 27648,
+      "lastTotalCacheCreationInputTokens": 202669,
+      "lastTotalCacheReadInputTokens": 2805280,
+      "lastSessionId": "6cb18529-569a-4b73-8895-d6309ffd68b4"
+    },
+    "/Users/dorkitude/a/dev/dorkitude.com/static": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "deploy everything",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy",
+          "pastedContents": {}
+        },
+        {
+          "display": "gs",
+          "pastedContents": {}
+        },
+        {
+          "display": "the HRs inside my essay should be as thin as the one under the header and above the footer",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy",
+          "pastedContents": {}
+        },
+        {
+          "display": "I like it.  But can you make the colors fit my theme?",
+          "pastedContents": {}
+        },
+        {
+          "display": "where does the cat /etc/mod thing come from that's cute",
+          "pastedContents": {}
+        },
+        {
+          "display": "tell me what the auto-expand stuff will look like in iMessage when i link someone to a post",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the comment on the Appple paper to put cutting-edge in quotes, not backticks",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all ",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "\nhttps://dorkitude.com/writing/the-rise-and-fall-of-vibe-coding\n\n\n\n\n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "when I paste a link like this into Slack, I don't see anything auto-rendering into the page.\n\nthis probably means my SEO sucks too.\n\nhelp me fix that.",
+          "pastedContents": {}
+        },
+        {
+          "display": "move repetitive stuff from various pages all into a header partial\n\nput this in there too:\n\n<script defer data-domain=\"dorkitude.com\" src=\"https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js\"></script>\n<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy all",
+          "pastedContents": {}
+        },
+        {
+          "display": "!git diff",
+          "pastedContents": {}
+        },
+        {
+          "display": "git diff!",
+          "pastedContents": {}
+        },
+        {
+          "display": "use wget",
+          "pastedContents": {}
+        },
+        {
+          "display": "yes i always want you to do that, and store it as a markdown, and put that in metadata as a filename.  doesn't have to be exposed on the site, i just want the content.",
+          "pastedContents": {}
+        },
+        {
+          "display": "why can't i find the markdown file for this last essay?  did you not retrieve and store it?",
+          "pastedContents": {}
+        },
+        {
+          "display": "actaully it was published on january 13th, please update the published date.  and make january 13th the bookmarked date too.",
+          "pastedContents": {}
+        },
+        {
+          "display": "add this to my Readings list, with a bookmarked date of February 3rd:  https://paulgraham.com/woke.html\n\nand a comment  of   \"Don't cancel me for finding this essay compelling.\"",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 3,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "app.py",
+        "index.html",
+        "essay.html",
+        "nav.html",
+        "metadata.json"
+      ],
+      "exampleFilesGeneratedAt": 1749952494589
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1749923585124,
+  "changelogLastFetched": 1749958764233,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
