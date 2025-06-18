@@ -15,7 +15,7 @@
 
 # Command Line History (newest to oldest):
 :x
-|2,0,1749918262,,"x"
+|2,0,1750193777,,"x"
 :'<,'>x
 |2,0,1749918256,,"'<,'>x"
 :q
@@ -125,34 +125,82 @@
 |3,0,36,0,1,0,1749831739,"life"
 
 # File marks:
-'0  1  0  /private/tmp/crontab.UBRm6sZYD9
-|4,48,1,0,1749918262,"/private/tmp/crontab.UBRm6sZYD9"
-'1  1  0  /private/tmp/crontab.bXuQmJvFwL
-|4,49,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
-'2  1  93  /private/tmp/crontab.85LU1DlXK7
-|4,50,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
-'3  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
-|4,51,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
-'4  1  0  ~/a/scripts/.startup
-|4,52,1,0,1749833738,"~/a/scripts/.startup"
-'5  36  14  ~/a/scripts/.startup
-|4,53,36,14,1749833736,"~/a/scripts/.startup"
-'6  36  14  ~/a/scripts/.startup
-|4,54,36,14,1749833736,"~/a/scripts/.startup"
-'7  1  0  ~/.startup
-|4,55,1,0,1749833712,"~/.startup"
-'8  24  8  ~/a/scripts/.startup
-|4,56,24,8,1749833205,"~/a/scripts/.startup"
-'9  24  8  ~/a/scripts/.startup
-|4,57,24,8,1749833205,"~/a/scripts/.startup"
+'0  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,48,1,0,1750193777,"~/a/dev/cerebro/.git/MERGE_MSG"
+'1  1  42  ~/a/dev/cerebro/.git/COMMIT_EDITMSG
+|4,49,1,42,1750141797,"~/a/dev/cerebro/.git/COMMIT_EDITMSG"
+'2  1  0  /private/tmp/crontab.UBRm6sZYD9
+|4,50,1,0,1749918262,"/private/tmp/crontab.UBRm6sZYD9"
+'3  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,51,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+'4  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,52,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+'5  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,53,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+'6  1  0  ~/a/scripts/.startup
+|4,54,1,0,1749833738,"~/a/scripts/.startup"
+'7  36  14  ~/a/scripts/.startup
+|4,55,36,14,1749833736,"~/a/scripts/.startup"
+'8  36  14  ~/a/scripts/.startup
+|4,56,36,14,1749833736,"~/a/scripts/.startup"
+'9  1  0  ~/.startup
+|4,57,1,0,1749833712,"~/.startup"
 
 # Jumplist (newest first):
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1750193777,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  42  ~/a/dev/cerebro/.git/COMMIT_EDITMSG
+|4,39,1,42,1750141797,"~/a/dev/cerebro/.git/COMMIT_EDITMSG"
+-'  1  42  ~/a/dev/cerebro/.git/COMMIT_EDITMSG
+|4,39,1,42,1750141797,"~/a/dev/cerebro/.git/COMMIT_EDITMSG"
+-'  1  0  /private/tmp/crontab.UBRm6sZYD9
+|4,39,1,0,1749918262,"/private/tmp/crontab.UBRm6sZYD9"
+-'  1  0  /private/tmp/crontab.UBRm6sZYD9
+|4,39,1,0,1749918262,"/private/tmp/crontab.UBRm6sZYD9"
+-'  1  0  /private/tmp/crontab.UBRm6sZYD9
+|4,39,1,0,1749918262,"/private/tmp/crontab.UBRm6sZYD9"
 -'  1  0  /private/tmp/crontab.UBRm6sZYD9
 |4,39,1,0,1749918262,"/private/tmp/crontab.UBRm6sZYD9"
 -'  1  0  /private/tmp/crontab.bXuQmJvFwL
 |4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
 -'  1  0  /private/tmp/crontab.bXuQmJvFwL
 |4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  0  /private/tmp/crontab.bXuQmJvFwL
+|4,39,1,0,1749918257,"/private/tmp/crontab.bXuQmJvFwL"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
+-'  1  93  /private/tmp/crontab.85LU1DlXK7
+|4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
 -'  1  93  /private/tmp/crontab.85LU1DlXK7
 |4,39,1,93,1749918249,"/private/tmp/crontab.85LU1DlXK7"
 -'  1  93  /private/tmp/crontab.85LU1DlXK7
@@ -177,6 +225,22 @@
 |4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
 -'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
 |4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
+-'  1  0  ~/a/dev/cerebro/.git/MERGE_MSG
+|4,39,1,0,1749867495,"~/a/dev/cerebro/.git/MERGE_MSG"
 -'  1  0  ~/a/scripts/.startup
 |4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
@@ -209,146 +273,93 @@
 |4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
 |4,39,1,0,1749833738,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
--'  36  14  ~/a/scripts/.startup
-|4,39,36,14,1749833736,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 -'  1  0  ~/a/scripts/.startup
-|4,39,1,0,1749833719,"~/a/scripts/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
--'  1  0  ~/.startup
-|4,39,1,0,1749833712,"~/.startup"
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
+-'  1  0  ~/a/scripts/.startup
+|4,39,1,0,1749833738,"~/a/scripts/.startup"
 
 # History of marks within files (newest to oldest):
+
+> ~/a/dev/cerebro/.git/MERGE_MSG
+	*	1750193776	0
+	"	1	0
+
+> ~/a/dev/cerebro/.git/COMMIT_EDITMSG
+	*	1750141797	0
+	"	1	42
+	^	1	43
+	.	1	42
+	+	1	42
 
 > /private/tmp/crontab.UBRm6sZYD9
 	*	1749918259	0
@@ -361,10 +372,6 @@
 > /private/tmp/crontab.85LU1DlXK7
 	*	1749918248	0
 	"	1	93
-
-> ~/a/dev/cerebro/.git/MERGE_MSG
-	*	1749867493	0
-	"	1	0
 
 > ~/a/scripts/.startup
 	*	1749833737	0

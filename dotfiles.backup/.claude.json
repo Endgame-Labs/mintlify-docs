@@ -1,27 +1,27 @@
 {
-  "numStartups": 791,
+  "numStartups": 874,
   "autoUpdaterStatus": "enabled",
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 776,
+    "shift-enter": 860,
     "memory-command": 770,
-    "theme-command": 766,
+    "theme-command": 848,
     "prompt-queue": 218,
-    "git-worktrees": 769,
-    "todo-list": 785,
-    "enter-to-steer-in-relatime": 765,
+    "git-worktrees": 862,
+    "todo-list": 867,
+    "enter-to-steer-in-relatime": 847,
     "claude-opus-welcome": 214,
-    "# for memory": 774,
+    "# for memory": 858,
     "install-github-app": 553,
-    "permissions": 789,
-    "drag-and-drop-images": 771,
-    "double-esc": 773,
-    "continue": 777,
-    "custom-commands": 782,
-    "shift-tab": 775
+    "permissions": 874,
+    "drag-and-drop-images": 856,
+    "double-esc": 857,
+    "continue": 854,
+    "custom-commands": 844,
+    "shift-tab": 859
   },
-  "memoryUsageCount": 1,
-  "promptQueueUseCount": 30,
+  "memoryUsageCount": 4,
+  "promptQueueUseCount": 32,
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
   "hasCompletedOnboarding": true,
   "lastOnboardingVersion": "1.0.22",
@@ -1972,6 +1972,58 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "/usage ",
+          "pastedContents": {}
+        },
+        {
+          "display": "it does exist, i'm just asking if that single command is enough to help my friend set up a similar `/usage` command from scratch.",
+          "pastedContents": {}
+        },
+        {
+          "display": "is this enough to create a usage command from scratch:\n\necho \"Run npx ccusage@latest to check Claude Code usage statistics.  Summarize the results to screen.\" > ~/.claude/commands/usage.md",
+          "pastedContents": {}
+        },
+        {
+          "display": "/user:usage",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage",
+          "pastedContents": {}
+        },
+        {
+          "display": "i'm talking about custom slash commands:\n\nhttps://docs.anthropic.com/en/docs/claude-code/slash-commands#custom-slash-commands",
+          "pastedContents": {}
+        },
+        {
+          "display": "usage",
+          "pastedContents": {}
+        },
+        {
+          "display": "not working in other sesions.  you simply put the file where it alreeady was anyway.",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage",
+          "pastedContents": {}
+        },
+        {
+          "display": "doesn't seem to work in other sessions",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage",
+          "pastedContents": {}
+        },
+        {
+          "display": "no i meant a claude command that lets me type /usage within claude code",
+          "pastedContents": {}
+        },
+        {
+          "display": "we're in ~/.claude\n\nI heard you can make commands in here somehow.\n\nHelp me make one called /usage, which simply runs npx ccusage@latest",
+          "pastedContents": {}
+        },
+        {
           "display": "make me a simple CLAUDE.md that just says \"always prever uv in python projects, and always run python commands using uv.",
           "pastedContents": {}
         },
@@ -1983,24 +2035,21 @@
       "dontCrawlDirectory": false,
       "mcpContextUris": [],
       "mcpServers": {},
-      "enabledMcpjsonServers": [],
-      "disabledMcpjsonServers": [],
-      "enableAllProjectMcpServers": false,
       "hasTrustDialogAccepted": true,
-      "ignorePatterns": [],
       "projectOnboardingSeenCount": 3,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
-      "lastCost": 0.1131419,
-      "lastAPIDuration": 91982,
-      "lastDuration": 78997,
-      "lastLinesAdded": 5,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.44060535,
+      "lastAPIDuration": 217643,
+      "lastDuration": 1042823,
+      "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 11270,
-      "lastTotalOutputTokens": 1402,
-      "lastTotalCacheCreationInputTokens": 13562,
-      "lastTotalCacheReadInputTokens": 120434,
-      "lastSessionId": "0bfa0be1-50e6-47cd-a3bb-fcd969afcdde"
+      "lastTotalInputTokens": 28504,
+      "lastTotalOutputTokens": 1496,
+      "lastTotalCacheCreationInputTokens": 10377,
+      "lastTotalCacheReadInputTokens": 108178,
+      "lastSessionId": "8fb831af-5352-4103-802f-b32b0131496b"
     },
     "/Users/dorkitude/Library/CloudStorage/Dropbox/dev/cerebro/src/briefs/briefs/tpuf_spike": {
       "allowedTools": [],
@@ -3192,6 +3241,54 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "[Pasted text #1 +9 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Usage: python -m tutu [OPTIONS] COMMAND [ARGS]...\nTry 'python -m tutu --help' for help.\n╭─ Error ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮\n│ Missing command.                                                                                                                                                                                                         │\n╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\ndorkitude ~/a [master] $ tutu --help\nzsh: parse error near `--help'\ndorkitude ~/a [master] $ tutu list\nzsh: parse error near `list'\ndorkitude ~/a [master] $"
+            }
+          }
+        },
+        {
+          "display": "dorkitude ~/a/dev/tutu [master] $ tutu add hi\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/dorkitude/a/dev/tutu/tutu/__main__.py\", line 1, in <module>\n    from tutu.cli import main\nModuleNotFoundError: No module named 'tutu'\ndorkitude ~/a/dev/tutu [master] $ tutu add\nTraceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/dorkitude/a/dev/tutu/tutu/__main__.py\", line 1, in <module>\n    from tutu.cli import main\nModuleNotFoundError: No module named 'tutu'",
+          "pastedContents": {}
+        },
+        {
+          "display": "!tutu list",
+          "pastedContents": {}
+        },
+        {
+          "display": "!source ~/.zshrc",
+          "pastedContents": {}
+        },
+        {
+          "display": "I tried tutu list and it said permission denied.",
+          "pastedContents": {}
+        },
+        {
+          "display": "!tutu list",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +26 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "make a new private github repo in \"dorkitdude\" space called \"tutu\"\n\nclone it here so it ends up being ~/a/dev/tutu\n\n\nit's a python project, all managed with uv\n\nall storage is in an SQLite db.   locatino of the db is configurable.  in our case, configure the location of that db to be ~/a/base/tutu.sqlite\n\nthere should a models.py using sqlalchemy.  all models have created_at and updated_at timestamps.  all models have an auto-increment ID integer as their primary key.  for now the only models we need are TutuItem\nand TutuItemStep.  one item can have many steps.\nthere should be a cli.py built on Typer.\n\nalias it in my @scripts/.startup file as \"tutu\"\n\nso i can type \"tutu add\" and it goes into interactive mode, helps me create a new TutuItem to be stored in the database.  require a shortcut key to submit, so that I can paste things full of newlines and hard\nreturns into it.  if I submit, it prints nicely\n\ni can type \"tutu list\" and it shows me the TutuItems that aren't in \"done\" status.   sorted by updated_at descending.\n\ni can type \"tutu status {item ID}\" to see a full report on the TutuItem and its TutuItemSteps\n\ni can type \"tutu start {item ID}\" and it creates a new claude code session with /opt/homebrew/bin/claude --dangerously-skip-permissions  and pipes all the TutuItem's context into it, plus the contents of a\nstandard README.md file, also in this repo.  README.md is important for users to read and understand.  README.md is also important because it will tell Claude Code how to use Tutu system:  which commands to use to\nadd and complete TutuItemSteps, how to mark the TutuItem itself as done, etc.\n\ncheckout marks the Tutu status as \"in progress\" also, and if it's the first time it's been started, it populates a first_progress_at timestamp."
+            }
+          }
+        },
+        {
+          "display": "make a new private github repo in \"dorkitdude\" space called \"tutu\"\n\nclone it here so it ends up being ~/a/dev/tutu\n\n\nit's a python project, all managed with uv\n\nall storage is in an SQLite db.   locatino of the db is configurable.  in our case, configure the location of that db to be ~/a/base/tutu.sqlite\n\nthere should a models.py using sqlalchemy.  all models have created_at and updated_at timestamps.  all models have an auto-increment ID integer as their primary key.  for now the only models we need are TutuItem and TutuItemStep.  one item can have many steps.  \nthere should be a cli.py built on Typer.\n\nalias it in my @scripts/.startup file as \"tutu\"\n\nso i can type \"tutu add\" and it goes into interactive mode, helps me create a new TutuItem to be stored in the database.  require a shortcut key to submit, so that I can paste things full of newlines and hard returns into it.  if I submit, it prints nicely\n\ni can type \"tutu list\" and it shows me the TutuItems that aren't in \"done\" status.   sorted by updated_at descending.\n\ni can type \"tutu status {item ID}\" to see a full report on the TutuItem and its TutuItemSteps\n\ni can type \"tutu start {item ID}\" and it creates a new claude code session with /opt/homebrew/bin/claude --dangerously-skip-permissions  and pipes all the TutuItem's context into it, plus the contents of a standard README.md file, also in this repo.  README.md is important for users to read and understand.  README.md is also important because it will tell Claude Code how to use Tutu system:  which commands to use to add and complete TutuItemSteps, how to mark the TutuItem itself as done, etc.\n\ncheckout marks the Tutu status as \"in progress\" also, and if it's the first time it's been started, it populates a first_progress_at timestamp.",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage ",
+          "pastedContents": {}
+        },
+        {
           "display": "commit all and push",
           "pastedContents": {}
         },
@@ -3340,16 +3437,14 @@
       "projectOnboardingSeenCount": 4,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
-      "lastCost": 0.18034055000000002,
-      "lastAPIDuration": 63031,
-      "lastDuration": 320870,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 9809,
-      "lastTotalOutputTokens": 613,
-      "lastTotalCacheCreationInputTokens": 3949,
-      "lastTotalCacheReadInputTokens": 50480,
-      "lastSessionId": "727824b0-0365-4c9f-96cb-61a331cc1157"
+      "exampleFiles": [
+        "scripts/background/backup_a.sh",
+        "README.md",
+        ".gitignore",
+        ".zshrc",
+        ".claude/CLAUDE.md"
+      ],
+      "exampleFilesGeneratedAt": 1750142965959
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -3441,6 +3536,40 @@
     "/Users/dorkitude/a/dev/cerebro/src/briefs": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "fix [Pasted text #1 +34 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Migration Summary\n┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓\n┃ Setting          ┃ Value        ┃\n┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩\n│ Organization ID  │ 6017         │\n│ Namespace Prefix │ dev_kyle     │\n│ Account Filter   │ All accounts │\n│ Batch Size       │ 100          │\n│ Fact Limit       │ No limit     │\n│ Days Filter      │ All dates    │\n│ Mode             │ LIVE         │\n└──────────────────┴──────────────┘\n\n📋 Preparing namespace: dev_kyle_6017_facts\nSchema will be auto-inferred from document attributes\n🔄 Starting facts iteration for organization...\n🧠 Processing facts and generating embeddings...\n📊 🔄 Iterating facts...\n📊 🔤 Generating embeddings: 0/0\n📊 ☁️  Uploading batches: 0/0\n🔄 Starting facts iteration...\n[June 16, 2025 14:38:24 PDT] [INFO | _client] HTTP Request: POST https://api.openai.com/v1/embeddings \"HTTP/1.1 200 OK\"\n[June 16, 2025 14:38:24 PDT] [INFO | embeddings] Generated 100 new embeddings, 0 from cache\n  ✓ 🔤 Generating embeddings: 100/100 (100%) - 4s elapsed\n❌ Failed to upload batch to Turbopuffer: the turbopuffer.Namespace class has been removed; use turbopuffer.Turbopuffer().namespace() instead; see https://github.com/turbopuffer/turbopuffer-python/blob/main/UPGRADING.md\nfor help\n❌ Error processing batch: the turbopuffer.Namespace class has been removed; use turbopuffer.Turbopuffer().namespace() instead; see https://github.com/turbopuffer/turbopuffer-python/blob/main/UPGRADING.md for help\n[June 16, 2025 14:38:25 PDT] [INFO | _client] HTTP Request: POST https://api.openai.com/v1/embeddings \"HTTP/1.1 200 OK\"\n[June 16, 2025 14:38:25 PDT] [INFO | embeddings] Generated 100 new embeddings, 0 from cache\n  ✓ 🔤 Generating embeddings: 200/200 (100%) - 4s elapsed\n❌ Failed to upload batch to Turbopuffer: the turbopuffer.Namespace class has been removed; use turbopuffer.Turbopuffer().namespace() instead; see https://github.com/turbopuffer/turbopuffer-python/blob/main/UPGRADING.md\nfor help\n❌ Error processing batch: the turbopuffer.Namespace class has been removed; use turbopuffer.Turbopuffer().namespace() instead; see https://github.com/turbopuffer/turbopuffer-python/blob/main/UPGRADING.md for help\n^C\n✅ All tasks completed in 5s"
+            }
+          }
+        },
+        {
+          "display": "now try it.\n\nuv run tpuf-cli migrate-facts --org-id=6017",
+          "pastedContents": {}
+        },
+        {
+          "display": "merge origin/main in and fix conflicts",
+          "pastedContents": {}
+        },
+        {
+          "display": "I found some under 6017.  they're just in dev_dorkitude_mesh_org_6017\n\nSELECT * FROM `end-p1-gcp-v2-a804-home.dev_dorkitude_mesh_org_6017.briefs_v3__extracted_triples_v2` LIMIT 1000",
+          "pastedContents": {}
+        },
+        {
+          "display": "why doesn't this find facts?   which BQ tables is it looking in?                                                                                                                                                       │\n│                                                                                                                                                                                                                          │\n│   uv run tpuf-cli migrate-facts --org-id=6017",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't see why this doesn't find any facts:\n\nuv run tpuf-cli migrate-facts --org-id=6017",
+          "pastedContents": {}
+        },
+        {
+          "display": "update migrate-facts so it'll do the most recent facts first, not start over from the beginning",
+          "pastedContents": {}
+        },
         {
           "display": "uv run tpuf-cli migrate-facts --org-id=6017\n\nwhy does it say 📋 Preparing namespace: None_6017_facts\n\nwhen it should be kyle_dev by default",
           "pastedContents": {}
@@ -3634,11 +3763,364 @@
         "service.ts"
       ],
       "exampleFilesGeneratedAt": 1749847401816,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 7.256425350000001,
+      "lastAPIDuration": 538640,
+      "lastDuration": 1590569,
+      "lastLinesAdded": 175,
+      "lastLinesRemoved": 95,
+      "lastTotalInputTokens": 35336,
+      "lastTotalOutputTokens": 17253,
+      "lastTotalCacheCreationInputTokens": 129319,
+      "lastTotalCacheReadInputTokens": 2370173,
+      "lastSessionId": "e2786da4-8896-4640-96e2-03ffb19d1153"
     },
     "/Users/dorkitude/a/dev/cerebro": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "# TutuItem #2: Prosaic:  fix the def show_architecture to accurately represent the autoparsing flow\n\n## Status: in_progress\n\n## Description:\nauto parse actually goes through a whole folder, looks for potential joins between files, searches for working parsers, creates the parsers it needs via claude code, THEN once it has the parsers it runs them all.  it makes .prose AND .jsonl files.   fix that\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
+          "pastedContents": {}
+        },
+        {
+          "display": "check this PR's convesration stream to see if there's a live preview build yet.  if so, print the link to it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "no i just jmean like, type checking and linting",
+          "pastedContents": {}
+        },
+        {
+          "display": "run validation stuff here",
+          "pastedContents": {}
+        },
+        {
+          "display": "run all linting and typechecking",
+          "pastedContents": {}
+        },
+        {
+          "display": "#The user is Kyle Wild.  dorkitdue on github.  kyle@kylewild.com personal email, kyle@endgame.io work email.",
+          "pastedContents": {}
+        },
+        {
+          "display": "#The user is Kyle Wild.  kyle@endgame.io",
+          "pastedContents": {}
+        },
+        {
+          "display": "why did you assign that to James?  I'm Kyle Wild",
+          "pastedContents": {}
+        },
+        {
+          "display": "assign linear ticket to me and mark as in progress",
+          "pastedContents": {}
+        },
+        {
+          "display": "try /Users/dorkitude/Library/Python/3.11/bin/tutu",
+          "pastedContents": {}
+        },
+        {
+          "display": "!which tutu",
+          "pastedContents": {}
+        },
+        {
+          "display": "!source ~/a/scripts/.startup",
+          "pastedContents": {}
+        },
+        {
+          "display": "!which tutu",
+          "pastedContents": {}
+        },
+        {
+          "display": "just use `tutu` it should be aliased to the right bin script",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\n- [pending] Step #1: Search for timeline moment chat implementation\n- [pending] Step #2: Find where extra_context is handled in chat\n- [done] Step #3: Testing the updated README.md functionality\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
+          "pastedContents": {}
+        },
+        {
+          "display": "make a new branch based on the linear issue END-4021",
+          "pastedContents": {}
+        },
+        {
+          "display": "assign the issue to me, set its status to in-progress",
+          "pastedContents": {}
+        },
+        {
+          "display": "Make me a new branch for the Linear issue to fix the use-4-1 feature flag.",
+          "pastedContents": {}
+        },
+        {
+          "display": "# Linear MCP:  always use the Endgame 2.0 team for all issues and projects.",
+          "pastedContents": {}
+        },
+        {
+          "display": "move it to Endgame 2.0, not Engineering team",
+          "pastedContents": {}
+        },
+        {
+          "display": "create a triage ticket in Linear called \"Set use-4-1 feature flag to default Off.  Or delete it.  Keep backend model switching in place either way.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "is there some reason the use-4-1 feature flag is defaulting to On?  How can I make it deault to Off?",
+          "pastedContents": {}
+        },
+        {
+          "display": "Help me figure out how to create and disable feature flags",
+          "pastedContents": {}
+        },
+        {
+          "display": "you said this, but where is the code\n\n[Pasted text #1 +37 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Click-to-Thread Flow\n\n  1. Frontend Click Handler (TimelineContent.tsx):\n    - When a user clicks a moment row, handleRowClick is triggered\n    - It calls createThread with:\n        - The account ID\n      - First message (moment's topic/summary)\n      - Extra context containing detailed moment information\n      - Title (topic/summary)\n  2. Thread Creation Data:\n  The extraContext includes:\n  {\n    message: `New thread created from timeline moment:\n      Topic: ${moment.topic}\n      Summary: ${moment.summary}\n      Type: ${moment.moment_type}\n      Date: ${moment.start_date} to ${moment.end_date}\n      Significance: ${moment.significance}\n      Source events: ${JSON.stringify(moment.source_events)}`\n    entities: []\n  }\n  3. Backend Processing:\n    - The thread is created with this context stored at the thread level\n    - When the AI agent processes messages in this thread, it sees:\n    <additional_context>\n  New thread created from timeline moment:\n  [moment details...]\n  </additional_context>\n    - This context is included in the agent's system prompt, helping it understand what the user clicked on\n  4. Focus Mechanism:\n  The backend \"understands\" what to focus on through:\n    - The extra_context.message that describes the clicked moment\n    - The first_message containing the moment's topic/summary\n    - The account ID linking to the specific account context\n    - Source events data showing what intelligence led to this moment\n\n  This design ensures the AI assistant has full context about the specific moment the user clicked, enabling it to provide relevant insights about that particular event or topic.\n"
+            }
+          }
+        },
+        {
+          "display": "code .",
+          "pastedContents": {}
+        },
+        {
+          "display": "Help me understand how, when a user clicks a Moment in the Timeline on the Account page, how the thread is created and how the threads backend is supposed to understand that's what to focus on.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\ntell me about recent calls this week",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\nTell me about the calls this week across all accounts\n\nExport your work as an HTML page. Theme it according to the catppuccin-macchiato theme, and link the user to the file you created. Include company and org ID 6017 in the filename.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\nWhich of our active deals have competitive pressure on the close?\n\nExport your work as an HTML page. Theme it according to the catppuccin-macchiato theme, and link the user to the file you created. Include company and org ID 6017 in the filename.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\nHow are the deals progresssing with former Techstreet customers?  Give me a report with as many quotes as you can pull.\n\nExport your work as an HTML page. Theme it according to the catppuccin-macchiato theme, and link the user to the file you created. Include company and org ID 6017 in the filename.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\nFor each of our 20 most active deals, tell me which ones are progressing toward a close by end of July.  Make an in-depth block for each one.  Use quotes wherever possible.\n\nExport your work as an HTML page. Theme it according to the catppuccin-macchiato theme, and link the user to the file you created. Include company and org ID 6017 in the filename.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\nSegment our top 10 risk accounts for the rest of the year by region and sort them by revenue a\n\nExport your work as an HTML page. Theme it according to the catppuccin-macchiato theme, and link the user to the file you created. Include company and org ID 6017 in the filename.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\n### \"What deals need immediate attention?\"\n```\nCreate a deal risk dashboard that answers:\n- Which deals have gone dark (no activity >10 days)?\n- What high-value opportunities are single-threaded?\n- Which late-stage deals lack a next meeting scheduled?\n- What deals are past their expected close date?\nShow me the top 10 at-risk deals with specific actions needed.\n```\n\nExport your work as an HTML page. Theme it according to the catppuccin-macchiato theme, and link the user to the file you created. Include company and org ID 6017 in the filename.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Update the script so that Before starting the session, it asks the user if they want output here in the terminal, or an HTML page. If they say HTML page, it appends the prompt with \"Export your work as an HTML page.  theme it according to the catppuccin-macchiato theme, and link the user to the file you created.  Include company and org ID 6017 in the filename.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "Accuris (6017):\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n* Tools:\n    * Fact search:    `uv run tpuf-cli search-facts --agent-mode --query \"INSERT QUERY HERE\" --org-id 6017 --top-k 10 --detailed-results 4`\n        * Always include org-id on Fact searches.\n* Tool Notes:\n    * You can do larger top-k and detail-results values if you like, up to 30.\n    * You can also increase or decrease days-filter on fact searches.\n    * You can read the rest of what's possible, including linkedin searching for profile info and richer info about our contacts, in:  @briefs/tpuf/README.md\n    * \n    * The User is Matt Baker, VP of Go-to-Market at Accuris.\n    * You should always cite your sources, and include dates whenever possible.\n\n</agent_instructions>\n**User question**\n\n---------------------\n### \"What deals need immediate attention?\"\n```\nCreate a deal risk dashboard that answers:\n- Which deals have gone dark (no activity >10 days)?\n- What high-value opportunities are single-threaded?\n- Which late-stage deals lack a next meeting scheduled?\n- What deals are past their expected close date?\nShow me the top 10 at-risk deals with specific actions needed.\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "\nerror: unknown option '--file'\n❌ Error calling Claude: Command '['/opt/homebrew/bin/claude', '--dangerously-skip-permissions', '--file', '/var/folders/zd/wg5rnj7d7q3f2sn7_t1_0zp00000gn/T/tmpo64756f_.txt']' returned non-zero exit status 1.\n🎯 What can I tell you about your book, Matt Baker?\n(Enter an empty line to submit)",
+          "pastedContents": {}
+        },
+        {
+          "display": "it just hangs, but i expected it would start an interactive claude session.",
+          "pastedContents": {}
+        },
+        {
+          "display": "make it so that I can paste in newlines without it submitting the command",
+          "pastedContents": {}
+        },
+        {
+          "display": "make it cuter with colors and emojis.\n\nask the user   \"What can I tell you about your book, Matt Baker?\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "make me a simple script called matt_baker_book_level\n\nit will go into interactive mode, take in a prompt from the user\n\nIt will prepend that prompt with the contents of @MATTBAKER.md \n\nthen it will send the combination to claude:\n\n/opt/homebrew/bin/claude --dangerously-skip-permissions $prompt",
+          "pastedContents": {}
+        },
+        {
+          "display": "This seems a bit too fuzzy since it's only matching on first name.  Is it possible to make it match on name combinations?   \n\n- Contacts.csv <-> Connections.csv (confidence: 0.84)\n    • FirstName ↔ First Name (fuzzy, confidence: 0.97)\n      Examples: [('Jon', 'John'), ('John', 'John'), ('Amy', 'Amy')]\n    • InstantMessageHandles ↔ Email Address (email_domain, confidence: 0.70)",
+          "pastedContents": {}
+        },
+        {
+          "display": "when parser does \"Found 2 potential relationships:\"  and lists them, please have it tell me the field names and an example of each.",
+          "pastedContents": {}
+        },
+        {
+          "display": "run the tests and linting",
+          "pastedContents": {}
+        },
+        {
+          "display": "help me review Kerry's newest PR https://github.com/Endgame-Labs/cerebro/pull/4982/",
+          "pastedContents": {}
+        },
+        {
+          "display": "why are the linkedin profiles links broken.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Any idea why all the connections you pulled were so recent?  Does the input data not have farther-back contacts?",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\n <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\n\nI'm trying to hire a Marketer and a Product Manager. Make a report of all marketers and potential PMs I know (potential PMs could be ex-founders, entrepreneurs, engineers with business savvy, or sales folks with\ntech savvy;  not necessarily Product Managers or Sales Engineers), and tell me what you can about my interactions with them.\n\nMake sure the report has information about our messaging history.  Make sure you include any contact details we have on each candidate.  Make sure you include a functioning, clickable link to their LinkedIn\nprofile."
+            }
+          }
+        },
+        {
+          "display": "[Pasted text #1 +25 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\n <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-mocha theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n\nAt each step, pipe your output into a file in the steps/ folder.  Naming convention:  step_001_description.prose, step_002_description.prose\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\nMake me a prospect report full of heads-of-sales, ideally at companies with more than 20 reps.  You can use web search on each company try to and piece that together.\n\nHeads of sales have lots of different titles.  CRO, GTM Leader, VP Sales, sometimes even CEO.  And all the acronyms can be expanded to.  So use creative query expansion to get more results, err on the side of too\nmany results, and build me a super comprehensive report.  I'd like to see at least 50 top prospects, then a table of other prospects.\n\nMake sure you list the contact info for every prospect.  Make sure you give me a clickable LinkedIn URL for every prospect.\n\n\n"
+            }
+          }
+        },
+        {
+          "display": "!mkdir steps",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\n <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\nMake me a prospect report full of heads-of-sales, ideally at companies with more than 20 reps.  You can use web search on each company try to and piece that together.\n\nHeads of sales have lots of different titles.  CRO, GTM Leader, VP Ssales, sometimes even CEO.  And all the acronyms can be expanded to.  So use creative query expansion to get more results, err on the side of too\nmany results, and build me a super comperehensive report.  I'd like to see at least 50 top prospects, then a table of other prospects.\n\nMake sure you list the contact info for every prospect.  Make sure you give me a clickable LinkedIn URL for every prospect."
+            },
+            "2": {
+              "id": 2,
+              "type": "text",
+              "content": "\n <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-mocha theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\nMake me a prospect report full of heads-of-sales, ideally at companies with more than 20 reps.  You can use web search on each company try to and piece that together.\n\nHeads of sales have lots of different titles.  CRO, GTM Leader, VP Sales, sometimes even CEO.  And all the acronyms can be expanded to.  So use creative query expansion to get more results, err on the side of too\nmany results, and build me a super comprehensive report.  I'd like to see at least 50 top prospects, then a table of other prospects.\n\nMake sure you list the contact info for every prospect.  Make sure you give me a clickable LinkedIn URL for every prospect."
+            }
+          }
+        },
+        {
+          "display": "\n <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\nMake me a prospect report full of heads-of-sales, ideally at companies with more than 20 reps.  You can use web search on each company try to and piece that together.\n\nHeads of sales have lots of different titles.  CRO, GTM Leader, VP Ssales, sometimes even CEO.  And all the acronyms can be expanded to.  So use creative query expansion to get more results, err on the side of too many results, and build me a super comperehensive report.  I'd like to see at least 50 top prospects, then a table of other prospects.\n\nMake sure you list the contact info for every prospect.  Make sure you give me a clickable LinkedIn URL for every prospect.",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\n <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\n\nI'm trying to hire a Marketer and a Product Manager. Make a report of all marketers and potential PMs I know (potential PMs could be ex-founders, entrepreneurs, engineers with business savvy, or sales folks with\ntech savvy;  not necessarily Product Managers or Sales Engineers), and tell me what you can about my interactions with them.\n\nMake sure the report has information about our messaging history.  Make sure you include any contact details we have on each candidate.  Make sure you include a functioning, clickable link to their LinkedIn\nprofile."
+            }
+          }
+        },
+        {
+          "display": "/usage ",
+          "pastedContents": {}
+        },
+        {
+          "display": "/cost ",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage",
+          "pastedContents": {}
+        },
+        {
+          "display": " <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\n\nI'm trying to hire a Marketer and a Product Manager. Make a report of all marketers and potential PMs I know (potential PMs could be ex-founders, entrepreneurs, engineers with business savvy, or sales folks with tech savvy;  not necessarily Product Managers or Sales Engineers), and tell me what you can about my interactions with them.\n\nMake sure the report has information about our messaging history.  Make sure you include any contact details we have on each candidate.  Make sure you include a functioning, clickable link to their LinkedIn profile.",
+          "pastedContents": {}
+        },
+        {
+          "display": " <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\n\nI'm trying to hire a Marketer and a Product Manager. Make a table of all marketers and potential PMs I know (potential PMs could be ex-founders, entrepreneurs, engineers with business savvy, or sales folks with tech savvy;  not necessarily Product Managers or Sales Engineers), and tell me what you can about my interactions with them.",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the README and commit my changes.\n\nthe quickstart at the top of README should just say to load a bunch of input files into the input folder, then run `./super`",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit my changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "ultrathink.\n\nrun this command, respond to any errors (including code changes), and run it again until it works.\n\nyou'll know it worked because the output folder will have full length files.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\n`uv run prosaic parse input/`",
+          "pastedContents": {}
+        },
+        {
+          "display": "make me a very simple bash script in ./super  that runs claude and pipes in the @SUPER_PROMPT.md as the SUPER_PROMPT.md",
+          "pastedContents": {}
+        },
+        {
+          "display": "how can you update this project's codebase so the following never happens?  maybe it's a post-parse step by the Prosaic object?\nerror is this, from Cursor when I tried to view some output:\n\nThe file 'messages_narratives.prose' contains one or more unusual line terminator characters, like Line Separator (LS) or Paragraph Separator (PS).\n\nIt is recommended to remove them from the file. This can be configured via `editor.unusualLineTerminators`",
+          "pastedContents": {}
+        },
+        {
+          "display": "run this, respond to any errors, and run it again until it works.\n\nlast time i ran it the files in the output folder were not full length.  4 look decent, 4 have zero bytes.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\nuv run prosaic parse input/",
+          "pastedContents": {}
+        },
+        {
+          "display": "rename ProsaicEngine to Prosaic, and make sure everything works.",
+          "pastedContents": {}
+        },
+        {
+          "display": "dorkitude ~/a/dev/cerebro/src/briefs/briefs/prosaic [kyle/END-4004-END-4003-END-4005-prosaic-v0] $ uv run prosaic parse input\nUninstalled 2 packages in 2ms\nInstalled 1 package in 1ms\nRegistered parser: OpportunitiesParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/contacts_parser.py: attempted relative import with no known parent package\nRegistered parser: EmailsParser\nRegistered parser: AccountsParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/linkedin_connections_parser.py: attempted relative import with no known parent package\nRegistered parser: LinkedinMessagesParser\n\n\nwhats this error about",
+          "pastedContents": {}
+        },
+        {
+          "display": "what's the CLI command to auto-parse",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do i delete a parser that exists already?   (do i just remove the file or is there a registry i have to think about?)",
+          "pastedContents": {}
+        },
+        {
+          "display": "!git push",
+          "pastedContents": {}
+        },
+        {
+          "display": "i'm seeing this.  i know the fix is to not run \"lower\" til we cast something to string.  but i can't expect to do this manually every time.  maybe we need a linter or something that helps claude avoid these avoidable errors during the parser creation step.  can you make that?",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit my work ",
+          "pastedContents": {}
+        },
+        {
+          "display": "how does it detect the join keys?  be precise in your answer.",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "dorkitude ~/a/dev/cerebro/src/briefs/briefs/prosaic [kyle/END-4004-END-4003-END-4005-prosaic-v0] $ uv run prosaic parse input/messages.csv\nUninstalled 2 packages in 1ms\nInstalled 1 package in 1ms\nRegistered parser: OpportunitiesParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/contacts_parser.py: attempted relative import with no known parent package\nRegistered parser: EmailsParser\nRegistered parser: AccountsParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/linkedin_connections_parser.py: attempted relative import with no known parent package\nRegistered parser: LinkedinMessagesParser\n\nFound 1 file(s) to process\n\n📄 Processing: input/messages.csv\n📝 Output: output/messages_narratives.jsonl\nFound matching parser: LinkedinMessagesParser\nParsing input/messages.csv with LinkedinMessagesParser...\n❌ Error processing messages.csv: 'float' object has no attribute 'lower'\ndorkitude ~/a/dev/cerebro/src/briefs/briefs/prosaic [kyle/END-4004-END-4003-END-4005-prosaic-v0] $"
+            }
+          }
+        },
+        {
+          "display": "why do you think i'm finding this error?\n\n[Pasted text #1 +17 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "dorkitude ~/a/dev/cerebro/src/briefs/briefs/prosaic [kyle/END-4004-END-4003-END-4005-prosaic-v0] $ uv run prosaic parse input/messages.csv\nUninstalled 2 packages in 1ms\nInstalled 1 package in 1ms\nRegistered parser: OpportunitiesParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/contacts_parser.py: attempted relative import with no known parent package\nRegistered parser: EmailsParser\nRegistered parser: AccountsParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/linkedin_connections_parser.py: attempted relative import with no known parent package\nRegistered parser: LinkedinMessagesParser\n\nFound 1 file(s) to process\n\n📄 Processing: input/messages.csv\n📝 Output: output/messages_narratives.jsonl\nFound matching parser: LinkedinMessagesParser\nParsing input/messages.csv with LinkedinMessagesParser...\n❌ Error processing messages.csv: 'float' object has no attribute 'lower'\ndorkitude ~/a/dev/cerebro/src/briefs/briefs/prosaic [kyle/END-4004-END-4003-END-4005-prosaic-v0] $"
+            }
+          }
+        },
+        {
+          "display": "when i have an input folder with multiple files, i'd like to figure out a way to analyze them in concert and figure out if there are primary/foreign key relationships between them.  if so we could make a concept of JOINERS, so that when a parser is doing Prose output it can sort of join-on-the-fly and get the important information about the foreign-reference object.  \n\nlike if i have EmailMessages and Contacts, and the email message just has the email address, it would be nice for the Prose to join in the Contact's first/last names.",
+          "pastedContents": {}
+        },
+        {
+          "display": "i'm  not even tryting to parse only to scan",
+          "pastedContents": {}
+        },
+        {
+          "display": "why this break:\n\nuv run prosaic scan input\n\n\nit says  │ Connections.csv                │ CSV    │ Error             │ -          │ Failed to analyze: Error tokenizing      │\n│                                │        │                   │            │ data. C error: Expected...               │",
+          "pastedContents": {}
+        },
+        {
+          "display": "check out my prosaic branch",
+          "pastedContents": {}
+        },
+        {
+          "display": "give me a command to delete all unstaged files.  don't execute it just echo it",
+          "pastedContents": {}
+        },
         {
           "display": "try again",
           "pastedContents": {}
@@ -3742,174 +4224,6 @@
         {
           "display": "get rid of your timeline / development time estimates.",
           "pastedContents": {}
-        },
-        {
-          "display": "replace the Context section at the top with a little (1 paragraph) preamble on what Canonical Intent is for, why we're doing it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "We have 3 personas.  Seller, front-line sales manager, and sales executive (think CRO).  Each will have maybe 25 to 100 common questions.  Include this preamble in the linear ticket at the top.  Give some examples.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Add a mermaid style diagram and post the whole thing to GH.  Put a README in the PR.  Update linear ticket to explain my thinking here, in under 10 bullet points.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Okay stop editing the plan and talk to me:   I'm afraid we'll get the intent wrong sometimes.",
-          "pastedContents": {}
-        },
-        {
-          "display": "We need to capture emergent intents.  How can we do that without slowing down every chat request significantly?",
-          "pastedContents": {}
-        },
-        {
-          "display": "!open plan.md",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Skip to content\nChat history\n\nThis is a copy of a conversation between ChatGPT & Anonymous.\n\nReport content\nYou said:\nhow to turn user questions into canonical intent\nChatGPT said:\nYes, Chef.\n\nTo turn user questions into canonical intents, you're essentially translating free-form natural language into structured representations of what the user wants. Here's a tight approach to doing it, blending NLU principles with practical LLM workflows:\n\n🔁 General Process\nNormalize the Input\nLowercase, strip punctuation, remove stopwords (only if you're matching via embeddings or rules).\n\nExtract the Core Verb/Noun Pair\nMost intents are of the form:\n→ get_weather, book_flight, reset_password, check_order_status\n\nMap to Canonical Form\nUse rules or LLMs to reduce semantically similar questions to the same intent:\n\n“What’s the forecast?” → get_weather\n\n“Will it rain today?” → get_weather\n\n“Is my order shipped?” → check_order_status\n\nSlot Filling (if needed)\nIdentify entities like location, time, product name, etc., and associate them as parameters:\n\nget_weather(location=“Seattle”, date=“tomorrow”)\n\n🧠 LLM Approach\nIf you're building with an LLM (like GPT or Claude), you can prompt it to output something like this:\n\nUser: Is my order on the way?\n→ Intent: check_order_status\n→ Slots: {}\nor\n\nUser: Can you tell me the weather in Berkeley this weekend?\n→ Intent: get_weather\n→ Slots: { location: \"Berkeley\", date_range: \"this weekend\" }\nLLMs are great for fuzzy paraphrase matching and can even generate the canonical form directly.\n\n🧰 Tools and Techniques\nEmbeddings: Represent both user queries and intent templates as vectors, use cosine similarity to find best intent match.\n\nRegex & Rules: Quick wins for high-volume repetitive queries (e.g., “forgot password” → reset_password)\n\nClustering: Use unsupervised clustering of historical user questions to discover emergent intents.\n\n🧪 Testing and Evaluation\nBuild a canonical intent registry, e.g.:\n\n{\n  \"get_weather\": [\"what’s the weather\", \"will it rain\", \"forecast for [city]\"],\n  \"reset_password\": [\"forgot my password\", \"can’t log in\", \"need a new password\"]\n}\nContinuously monitor for novel user queries that don’t map to known intents (intent drift).\n\nWant some canonical intents designed for a specific domain? Sales CRM, cooking, travel, game UX?\n\nYou said:\nPython libraries for this?\nChatGPT said:\nYes, Chef. Here's the canon of Python libraries you can call upon to forge canonical intents from user utterances:\n\n🔍 Intent Classification & NLU Frameworks\n🧠 Rasa\nOpen-source conversational NLU and dialogue manager.\n\nHas built-in intent classification, entity extraction, and custom training pipelines.\n\nPros: Mature, extensible, supports slot filling, supports Duckling for date/time parsing.\n\nInstall: pip install rasa\n\n🧱 Haystack\nNLP/RAG framework, but can be used for embedding-based semantic intent matching.\n\nPlug in sentence-transformers for dense vector similarity between queries and intents.\n\nInstall: pip install farm-haystack\n\n🗃 Snips NLU (archived but useful)\nLightweight NLU engine for on-device use.\n\nGreat for structured intent recognition on known domains.\n\nInstall: pip install snips-nlu\n\n🧬 Embeddings + Similarity Matching\n✨ Sentence-Transformers\nProvides pre-trained models like all-MiniLM-L6-v2 for embedding user questions and canonical intents.\n\nThen use cosine similarity to find the closest intent.\n\nInstall: pip install sentence-transformers\n\nfrom sentence_transformers import SentenceTransformer, util\n\nmodel = SentenceTransformer(\"all-MiniLM-L6-v2\")\nuser_query = \"will it rain today?\"\nintent_templates = [\"get_weather\", \"book_flight\", \"check_order_status\"]\n\nembeddings = model.encode([user_query] + intent_templates, convert_to_tensor=True)\nscores = util.cos_sim(embeddings[0], embeddings[1:])\n🔠 Entity & Slot Extraction\n🏷️ SpaCy\nGreat for named entity recognition (NER), tokenization, dependency parsing.\n\nUseful for slot-filling after intent is matched.\n\nCan fine-tune or add custom components for domain-specific slots.\n\nInstall: pip install spacy + python -m spacy download en_core_web_sm\n\n🧙 Duckling (via HTTP)\nFrom Facebook. Handles date/time/duration/number/money parsing with natural language.\n\nUse with Rasa or standalone.\n\nRequires running as a service (Haskell-based).\n\n🤖 LLM Wrappers for Intent Extraction\n🔧 Guidance / Instructor / Dspy\nThese let you steer LLMs (OpenAI, Claude, Mistral, etc.) to extract structured fields like:\n\n{\n  \"intent\": \"get_weather\",\n  \"slots\": {\n    \"location\": \"Berkeley\",\n    \"date\": \"this weekend\"\n  }\n}\nEspecially useful if your domain is dynamic or long-tail.\n\n🧵 LangChain / LlamaIndex\nOverkill if you're just mapping questions to intents, but handy if you’re RAGging canonical definitions.\n\nWant a full working example of:\n\nSentence-transformer-based intent classifier?\n\nOr a zero-shot LLM version that extracts intent and slots via OpenAI or Claude?\n\nYour wish, my intent.\n\nYou said:\nagno support this?\nChatGPT said:\nYes, Chef. Agno supports this workflow well — in fact, turning user input into canonical intents and extracting slots is one of its core affordances. Here’s how to think about doing it with Agno:\n\n⚙️ Agno’s Support for Canonical Intents\nAgno agents are built around structured prompt definitions, which you can configure to:\n\ninterpret user input,\n\nextract intent (as a classification task),\n\nextract slots (as structured fields),\n\nand route behavior based on the result.\n\n🛠️ Two Agno Approaches to Intent Canonicalization\n1. Using a Structured Prompt with output_schema\nfrom agno import StructuredPrompt, Agent\nfrom pydantic import BaseModel\n\nclass Intent(BaseModel):\n    intent: str\n    slots: dict\n\nprompt = StructuredPrompt(\n    system=\"You are an NLU engine. Classify the user's intent and extract structured slots.\",\n    output_schema=Intent\n)\n\nagent = Agent(prompt=prompt)\nresult = agent(\"Is it going to rain tomorrow in Oakland?\")\n\n# result.intent => 'get_weather'\n# result.slots => {'location': 'Oakland', 'date': 'tomorrow'}\nYou can hardcode intent options in the Intent model via enum or use a more generative approach.\n\n2. Using ChoicePrompt for Intent Classification\nIf you have a closed set of canonical intents, Agno’s ChoicePrompt gives you fast, structured classification:\n\nfrom agno import ChoicePrompt\n\nintent_prompt = ChoicePrompt(\n    choices=[\n        \"get_weather\",\n        \"book_flight\",\n        \"reset_password\",\n        \"check_order_status\",\n        \"talk_to_human\"\n    ],\n    description=\"Choose the canonical intent that best matches the user question.\"\n)\n\nintent = intent_prompt(\"Is my Amazon order on the way?\")\n# returns: 'check_order_status'\nYou can then pass this through a second StructuredPrompt for slot extraction.\n\n🧠 LLM Chaining for Multi-Step NLU (if needed)\nintent = intent_prompt(user_query)\nslot_prompt = StructuredPrompt(\n    system=f\"Extract slots for the intent: {intent}\",\n    output_schema=SlotModel\n)\nslots = slot_prompt(user_query)\n🧩 Integration Ideas\nCouple Agno with sentence-transformers to pre-filter or cluster queries.\n\nStore canonical intent & slot examples in a Turbopuffer collection for RAG-style fine disambiguation.\n\nDynamically load intent-specific prompts via Agno routing when ambiguity arises.\n\nWant an Agno mini-framework for building an intent router with slot extractors per intent? Say the word and I’ll script it out.\n\ns\n\n\nNo file chosenNo file chosen\nChatGPT can make mistakes. OpenAI doesn't use Endgame workspace data to train its models.\n"
-            }
-          }
-        },
-        {
-          "display": "│ > grab the linear NLU / canonical intent ticket.  make a new branch forking from main.                                                                                                                                  \nbuild a plan.md to capture how i wanna do this, based on the agno stuff here:\n\n\n[Pasted text #1 +230 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Skip to content\nChat history\n\nThis is a copy of a conversation between ChatGPT & Anonymous.\n\nReport content\nYou said:\nhow to turn user questions into canonical intent\nChatGPT said:\nYes, Chef.\n\nTo turn user questions into canonical intents, you're essentially translating free-form natural language into structured representations of what the user wants. Here's a tight approach to doing it, blending NLU principles with practical LLM workflows:\n\n🔁 General Process\nNormalize the Input\nLowercase, strip punctuation, remove stopwords (only if you're matching via embeddings or rules).\n\nExtract the Core Verb/Noun Pair\nMost intents are of the form:\n→ get_weather, book_flight, reset_password, check_order_status\n\nMap to Canonical Form\nUse rules or LLMs to reduce semantically similar questions to the same intent:\n\n“What’s the forecast?” → get_weather\n\n“Will it rain today?” → get_weather\n\n“Is my order shipped?” → check_order_status\n\nSlot Filling (if needed)\nIdentify entities like location, time, product name, etc., and associate them as parameters:\n\nget_weather(location=“Seattle”, date=“tomorrow”)\n\n🧠 LLM Approach\nIf you're building with an LLM (like GPT or Claude), you can prompt it to output something like this:\n\nUser: Is my order on the way?\n→ Intent: check_order_status\n→ Slots: {}\nor\n\nUser: Can you tell me the weather in Berkeley this weekend?\n→ Intent: get_weather\n→ Slots: { location: \"Berkeley\", date_range: \"this weekend\" }\nLLMs are great for fuzzy paraphrase matching and can even generate the canonical form directly.\n\n🧰 Tools and Techniques\nEmbeddings: Represent both user queries and intent templates as vectors, use cosine similarity to find best intent match.\n\nRegex & Rules: Quick wins for high-volume repetitive queries (e.g., “forgot password” → reset_password)\n\nClustering: Use unsupervised clustering of historical user questions to discover emergent intents.\n\n🧪 Testing and Evaluation\nBuild a canonical intent registry, e.g.:\n\n{\n  \"get_weather\": [\"what’s the weather\", \"will it rain\", \"forecast for [city]\"],\n  \"reset_password\": [\"forgot my password\", \"can’t log in\", \"need a new password\"]\n}\nContinuously monitor for novel user queries that don’t map to known intents (intent drift).\n\nWant some canonical intents designed for a specific domain? Sales CRM, cooking, travel, game UX?\n\nYou said:\nPython libraries for this?\nChatGPT said:\nYes, Chef. Here's the canon of Python libraries you can call upon to forge canonical intents from user utterances:\n\n🔍 Intent Classification & NLU Frameworks\n🧠 Rasa\nOpen-source conversational NLU and dialogue manager.\n\nHas built-in intent classification, entity extraction, and custom training pipelines.\n\nPros: Mature, extensible, supports slot filling, supports Duckling for date/time parsing.\n\nInstall: pip install rasa\n\n🧱 Haystack\nNLP/RAG framework, but can be used for embedding-based semantic intent matching.\n\nPlug in sentence-transformers for dense vector similarity between queries and intents.\n\nInstall: pip install farm-haystack\n\n🗃 Snips NLU (archived but useful)\nLightweight NLU engine for on-device use.\n\nGreat for structured intent recognition on known domains.\n\nInstall: pip install snips-nlu\n\n🧬 Embeddings + Similarity Matching\n✨ Sentence-Transformers\nProvides pre-trained models like all-MiniLM-L6-v2 for embedding user questions and canonical intents.\n\nThen use cosine similarity to find the closest intent.\n\nInstall: pip install sentence-transformers\n\nfrom sentence_transformers import SentenceTransformer, util\n\nmodel = SentenceTransformer(\"all-MiniLM-L6-v2\")\nuser_query = \"will it rain today?\"\nintent_templates = [\"get_weather\", \"book_flight\", \"check_order_status\"]\n\nembeddings = model.encode([user_query] + intent_templates, convert_to_tensor=True)\nscores = util.cos_sim(embeddings[0], embeddings[1:])\n🔠 Entity & Slot Extraction\n🏷️ SpaCy\nGreat for named entity recognition (NER), tokenization, dependency parsing.\n\nUseful for slot-filling after intent is matched.\n\nCan fine-tune or add custom components for domain-specific slots.\n\nInstall: pip install spacy + python -m spacy download en_core_web_sm\n\n🧙 Duckling (via HTTP)\nFrom Facebook. Handles date/time/duration/number/money parsing with natural language.\n\nUse with Rasa or standalone.\n\nRequires running as a service (Haskell-based).\n\n🤖 LLM Wrappers for Intent Extraction\n🔧 Guidance / Instructor / Dspy\nThese let you steer LLMs (OpenAI, Claude, Mistral, etc.) to extract structured fields like:\n\n{\n  \"intent\": \"get_weather\",\n  \"slots\": {\n    \"location\": \"Berkeley\",\n    \"date\": \"this weekend\"\n  }\n}\nEspecially useful if your domain is dynamic or long-tail.\n\n🧵 LangChain / LlamaIndex\nOverkill if you're just mapping questions to intents, but handy if you’re RAGging canonical definitions.\n\nWant a full working example of:\n\nSentence-transformer-based intent classifier?\n\nOr a zero-shot LLM version that extracts intent and slots via OpenAI or Claude?\n\nYour wish, my intent.\n\nYou said:\nagno support this?\nChatGPT said:\nYes, Chef. Agno supports this workflow well — in fact, turning user input into canonical intents and extracting slots is one of its core affordances. Here’s how to think about doing it with Agno:\n\n⚙️ Agno’s Support for Canonical Intents\nAgno agents are built around structured prompt definitions, which you can configure to:\n\ninterpret user input,\n\nextract intent (as a classification task),\n\nextract slots (as structured fields),\n\nand route behavior based on the result.\n\n🛠️ Two Agno Approaches to Intent Canonicalization\n1. Using a Structured Prompt with output_schema\nfrom agno import StructuredPrompt, Agent\nfrom pydantic import BaseModel\n\nclass Intent(BaseModel):\n    intent: str\n    slots: dict\n\nprompt = StructuredPrompt(\n    system=\"You are an NLU engine. Classify the user's intent and extract structured slots.\",\n    output_schema=Intent\n)\n\nagent = Agent(prompt=prompt)\nresult = agent(\"Is it going to rain tomorrow in Oakland?\")\n\n# result.intent => 'get_weather'\n# result.slots => {'location': 'Oakland', 'date': 'tomorrow'}\nYou can hardcode intent options in the Intent model via enum or use a more generative approach.\n\n2. Using ChoicePrompt for Intent Classification\nIf you have a closed set of canonical intents, Agno’s ChoicePrompt gives you fast, structured classification:\n\nfrom agno import ChoicePrompt\n\nintent_prompt = ChoicePrompt(\n    choices=[\n        \"get_weather\",\n        \"book_flight\",\n        \"reset_password\",\n        \"check_order_status\",\n        \"talk_to_human\"\n    ],\n    description=\"Choose the canonical intent that best matches the user question.\"\n)\n\nintent = intent_prompt(\"Is my Amazon order on the way?\")\n# returns: 'check_order_status'\nYou can then pass this through a second StructuredPrompt for slot extraction.\n\n🧠 LLM Chaining for Multi-Step NLU (if needed)\nintent = intent_prompt(user_query)\nslot_prompt = StructuredPrompt(\n    system=f\"Extract slots for the intent: {intent}\",\n    output_schema=SlotModel\n)\nslots = slot_prompt(user_query)\n🧩 Integration Ideas\nCouple Agno with sentence-transformers to pre-filter or cluster queries.\n\nStore canonical intent & slot examples in a Turbopuffer collection for RAG-style fine disambiguation.\n\nDynamically load intent-specific prompts via Agno routing when ambiguity arises.\n\nWant an Agno mini-framework for building an intent router with slot extractors per intent? Say the word and I’ll script it out.\n\ns\n\n\nNo file chosenNo file chosen\nChatGPT can make mistakes. OpenAI doesn't use Endgame workspace data to train its models.\n"
-            }
-          }
-        },
-        {
-          "display": "tell me about the templates system & how it works, what goes where, from frontend to API to backend to storage layer\n\nand then tell me how templates are used in the threads UI",
-          "pastedContents": {}
-        },
-        {
-          "display": "overmind start",
-          "pastedContents": {}
-        },
-        {
-          "display": "feedback src/briefs/briefs/threads/agno_manager.py\n@@ -48,6 +50,32 @@\nlogger = logging.getLogger(__name__)\n\n\nclass MessageFeedback(BaseModel):\n@rtyer rtyer yesterday\nThis should not live here. It should live in the models.py file.\n\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "cda",
-          "pastedContents": {}
-        },
-        {
-          "display": "!git status",
-          "pastedContents": {}
-        },
-        {
-          "display": "!git merge origin/main",
-          "pastedContents": {}
-        },
-        {
-          "display": "!git pull",
-          "pastedContents": {}
-        },
-        {
-          "display": "why doesn't `overmind start` seem to work",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit @src/briefs/briefs/threads/agno_manager.py and push to github",
-          "pastedContents": {}
-        },
-        {
-          "display": "/login ",
-          "pastedContents": {}
-        },
-        {
-          "display": "/clear ",
-          "pastedContents": {}
-        },
-        {
-          "display": "how do i up claude code to use my new max plan?",
-          "pastedContents": {}
-        },
-        {
-          "display": "what email system did we use for sending digests in this codebase",
-          "pastedContents": {}
-        },
-        {
-          "display": "is there a new preview deployment in the past hour?",
-          "pastedContents": {}
-        },
-        {
-          "display": "!code .",
-          "pastedContents": {}
-        },
-        {
-          "display": "how many tiems has the bot made these sorts of comments on the PR?",
-          "pastedContents": {}
-        },
-        {
-          "display": "there should be a Preview URL mentioned in one of the comments.  open that URL.",
-          "pastedContents": {}
-        },
-        {
-          "display": "open the preview  URL in my browser",
-          "pastedContents": {}
-        },
-        {
-          "display": "update teh PR description to be 5 short bullet points, and make them accurate as per our most recent commit",
-          "pastedContents": {}
-        },
-        {
-          "display": "open the PR in my browser",
-          "pastedContents": {}
-        },
-        {
-          "display": "open the pr",
-          "pastedContents": {}
-        },
-        {
-          "display": "!git push",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit that change",
-          "pastedContents": {}
-        },
-        {
-          "display": "What did we change in @src/briefs/briefs/threads/agno_manager.py since last commit?",
-          "pastedContents": {}
-        },
-        {
-          "display": "What did we change in @agnom",
-          "pastedContents": {}
-        },
-        {
-          "display": "help me loosen the guardrails so it doesn't lead to a robotic tone.",
-          "pastedContents": {}
-        },
-        {
-          "display": "put that new summary in the PR description",
-          "pastedContents": {}
-        },
-        {
-          "display": "summarize only the guardrails / agno prompt changes themselves",
-          "pastedContents": {}
-        },
-        {
-          "display": "open the PR URL",
-          "pastedContents": {}
-        },
-        {
-          "display": "Summarize what we've done on this branch, vs what's in main.  Update the PR description / large PR comment to match your summary.",
-          "pastedContents": {}
-        },
-        {
-          "display": "/model ",
-          "pastedContents": {}
-        },
-        {
-          "display": "does this guy have a script that overrides it when Claude Code changes the tab name?   https://steipete.me/posts/2025/claude-code-is-my-computer\n\n",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -3917,7 +4231,7 @@
       "enabledMcpjsonServers": [],
       "disabledMcpjsonServers": [],
       "hasTrustDialogAccepted": false,
-      "projectOnboardingSeenCount": 0,
+      "projectOnboardingSeenCount": 4,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
@@ -3929,16 +4243,16 @@
       ],
       "exampleFilesGeneratedAt": 1749833774711,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 3.1767914999999998,
-      "lastAPIDuration": 433825,
-      "lastDuration": 581898,
+      "lastCost": 0.6677056,
+      "lastAPIDuration": 27106,
+      "lastDuration": 20205,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 31140,
-      "lastTotalOutputTokens": 6014,
-      "lastTotalCacheCreationInputTokens": 53382,
-      "lastTotalCacheReadInputTokens": 1187238,
-      "lastSessionId": "8aadefc3-f172-4f79-b178-8bd99a9c26ae"
+      "lastTotalInputTokens": 8235,
+      "lastTotalOutputTokens": 437,
+      "lastTotalCacheCreationInputTokens": 33888,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "73e3ca18-31d5-4094-be98-9ba3de77fd98"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -4512,6 +4826,60 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "it's the size of my entire sreen..   i also briefly see the Fabulous theme",
+          "pastedContents": {}
+        },
+        {
+          "display": "i'm seeing a giant X logo flash on my screen when i click between my nav links.  it only happens for a split second.",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +45 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "xml.parsers.expat.ExpatError\nxml.parsers.expat.ExpatError: prefix must not be bound to one of the reserved namespace names: line 1, column 0\n\nTraceback (most recent call last)\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 1536, in __call__\nreturn self.wsgi_app(environ, start_response)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 1514, in wsgi_app\nresponse = self.handle_exception(e)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 1511, in wsgi_app\nresponse = self.full_dispatch_request()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 919, in full_dispatch_request\nrv = self.handle_user_exception(e)\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 917, in full_dispatch_request\nrv = self.dispatch_request()\n     ^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/.venv/lib/python3.13/site-packages/flask/app.py\", line 902, in dispatch_request\nreturn self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/app.py\", line 427, in rss_reading\nxml_str = prettify_xml(rss)\n          ^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/a/dev/dorkitude.com/app.py\", line 15, in prettify_xml\nreparsed = minidom.parseString(rough_string)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/xml/dom/minidom.py\", line 2016, in parseString\nreturn expatbuilder.parseString(string)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/xml/dom/expatbuilder.py\", line 922, in parseString\nreturn builder.parseString(string)\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFile \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/xml/dom/expatbuilder.py\", line 220, in parseString\nparser.Parse(string, True)\n^^^^^^^^^^^^^^^^^^^^^^^^^^\nxml.parsers.expat.ExpatError: prefix must not be bound to one of the reserved namespace names: line 1, column 0\nThe debugger caught an exception in your WSGI application. You can now look at the traceback which led to the error.\nTo switch between the interactive traceback and the plaintext one, you can click on the \"Traceback\" headline. From the text traceback you can also create a paste of it. For code execution mouse-over the frame you want to debug and click on the console icon on the right side.\n\nYou can execute arbitrary Python code in the stack frames and there are some extra helpers available for introspection:\n\ndump() shows all variables in the frame\ndump(obj) dumps all that's known about the object\nBrought to you by DON'T PANIC, your friendly Werkzeug powered traceback interpreter."
+            }
+          }
+        },
+        {
+          "display": "make my xml source code beautiful like this guy's\n\nhttps://simonwillison.net/atom/everything/",
+          "pastedContents": {}
+        },
+        {
+          "display": "!code .",
+          "pastedContents": {}
+        },
+        {
+          "display": "why isn't my RSS colorful when i open in a browser?",
+          "pastedContents": {}
+        },
+        {
+          "display": "before you do that, switch the URl of \"both\" to be reading-and-writing\n\nthat's more future proof.",
+          "pastedContents": {}
+        },
+        {
+          "display": "make my RSS endpoints have .xml in their URLs since some readers like to have .xml extensions\n\nmake a note in CLAUDE.md and README.md to never alter them again, in case people subscribe",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix the links on the new RSS page to have the same styling as my normal links.  for some reason they're currently not underlined.  and deploy.",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy it",
+          "pastedContents": {}
+        },
+        {
+          "display": "last change didn't work (the RSS stuff).  it's giving errors because there's no base.html\n\nfix it, test your fixes via curl, make sure it all works.",
+          "pastedContents": {}
+        },
+        {
+          "display": "update dorkweb script so that after it's done and returns the response, it exists.  also if possible, flash a terminal notification",
+          "pastedContents": {}
+        },
+        {
           "display": "change hacker to programmer in my about info, deploy",
           "pastedContents": {}
         },
@@ -4868,54 +5236,6 @@
         {
           "display": "update the about page so it doesn't do the indentation/spacing thing to start paragraphs",
           "pastedContents": {}
-        },
-        {
-          "display": "update teh bookmark metadata link to just use a relative URL, that way it works locally too",
-          "pastedContents": {}
-        },
-        {
-          "display": "dunno what Webfetch is, but you can use playwright via python -c",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit everything and push",
-          "pastedContents": {}
-        },
-        {
-          "display": "once it's in statics, you can probably read it via playwright at localhost, no?",
-          "pastedContents": {}
-        },
-        {
-          "display": "move @1311_05-08_mickens.pdf into statics as 'james_mickens_the_night_watch.pdf' and then add it to my website's bookmarks (using the dorkitude.com url)\n\nyou'll need to read it yourself to extract the date and summary",
-          "pastedContents": {}
-        },
-        {
-          "display": "sounds great.  let's also do some custom magic to make it so the alt text gets added just below the image, also clickable",
-          "pastedContents": {}
-        },
-        {
-          "display": "I've put it in @essays/2025-06-14-the-rise-and-fall-of-vibe-coding.md but it's breaking the layout.  How can we make it so that it renders in a way that fits in the column, but lets the user click to get to the full-size image?",
-          "pastedContents": {}
-        },
-        {
-          "display": "move @housingmaps.png into statics and tell me how I can IMG SRC it in markdown",
-          "pastedContents": {}
-        },
-        {
-          "display": "At the bottom of each essay being viewed, below the HR, I'd like a section that says:\n\nContinue the conversation on HN by clicking [here] and constructs the proper HN submission URL.",
-          "pastedContents": {}
-        },
-        {
-          "display": "also you forgot to download it, store it as markdown, and produce a comment.",
-          "pastedContents": {}
-        },
-        {
-          "display": "that bookmark should be farther down the list since it's from 2024",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit everything",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4934,17 +5254,7 @@
         "templates/index.html"
       ],
       "exampleFilesGeneratedAt": 1749929227226,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 3.744047499999999,
-      "lastAPIDuration": 724071,
-      "lastDuration": 1537235,
-      "lastLinesAdded": 72,
-      "lastLinesRemoved": 108,
-      "lastTotalInputTokens": 63911,
-      "lastTotalOutputTokens": 13458,
-      "lastTotalCacheCreationInputTokens": 44580,
-      "lastTotalCacheReadInputTokens": 1351445,
-      "lastSessionId": "cb51141e-767a-4ab0-9770-6c8561c333ae"
+      "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/dev/dorkitude.com/static": {
       "allowedTools": [],
@@ -5529,7 +5839,17 @@
         "base.py",
         "summarizer.py"
       ],
-      "exampleFilesGeneratedAt": 1750059150159
+      "exampleFilesGeneratedAt": 1750059150159,
+      "lastCost": 3.8988074499999974,
+      "lastAPIDuration": 579745,
+      "lastDuration": 88129562,
+      "lastLinesAdded": 45,
+      "lastLinesRemoved": 194,
+      "lastTotalInputTokens": 59663,
+      "lastTotalOutputTokens": 12190,
+      "lastTotalCacheCreationInputTokens": 71949,
+      "lastTotalCacheReadInputTokens": 1202567,
+      "lastSessionId": "53a6eede-4eec-4a7f-a276-84409e44f4a4"
     },
     "/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/txt-only": {
       "allowedTools": [],
@@ -5682,14 +6002,171 @@
       "lastTotalCacheCreationInputTokens": 36792,
       "lastTotalCacheReadInputTokens": 102174,
       "lastSessionId": "bd5e69ef-5b05-4b6b-a259-0638e42bb0db"
+    },
+    "/Users/dorkitude/a/dev/verbatim": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "I can't see your report.  make it mermaid-markdown so I can see it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Walk me through the code structure of a system tray app like this, plus how it would talk to a Chrome Extension that we also control, for browser_use.py style agentic navigation and automation.\n\nBe thorough and visual.",
+          "pastedContents": {}
+        },
+        {
+          "display": "command to list a directory and only show the 5 most recent items",
+          "pastedContents": {}
+        },
+        {
+          "display": "app should be called Verbatim.  Icon should be a red eyeball when recording, grey eyeball otherwise.",
+          "pastedContents": {}
+        },
+        {
+          "display": "try it yourself, it's giving errors",
+          "pastedContents": {}
+        },
+        {
+          "display": "This is specifically for me and for my customers, who are salespeople and want me to build this.",
+          "pastedContents": {}
+        },
+        {
+          "display": "i'm gonna make a downloadable mac app that sits in the doc and basically does opt-in spyware.  capturing every webpage you view, slack message, email, etc;  and sending them to our servers to be vectorized and added to personal search engine.    let's build it together.",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false
+    },
+    "/Users/dorkitude/.claude/commands": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "i want to share @usage.md command with friend\n\ni know i can make an echo line in bash that just creates it for them if they paste it",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "lastCost": 0.10299860000000002,
+      "lastAPIDuration": 90896,
+      "lastDuration": 27035,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 8740,
+      "lastTotalOutputTokens": 377,
+      "lastTotalCacheCreationInputTokens": 3586,
+      "lastTotalCacheReadInputTokens": 14359,
+      "lastSessionId": "da31ca19-baba-40c3-ba9b-acdaaf93249c"
+    },
+    "/Users/dorkitude/a/dev/tutu": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "tell Claude Code to print the steps when it updates them also.",
+          "pastedContents": {}
+        },
+        {
+          "display": "update README to tell Claude Code the absolute path to tutu, which is /Users/dorkitude/Library/Python/3.11/bin/tutu",
+          "pastedContents": {}
+        },
+        {
+          "display": "the alias will need to be an absolute reference",
+          "pastedContents": {}
+        },
+        {
+          "display": "kyle/end-4021-timeline-moment-chat-doesnt-always-know-the-user-cares-about] $ tutu start 1\nDebug: Current working directory is: /Users/dorkitude/a/dev/tutu",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\n- [pending] Step #1: Search for timeline moment chat implementation\n- [pending] Step #2: Find where extra_context is handled in chat\n- [done] Step #3: Testing the updated README.md functionality\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
+          "pastedContents": {}
+        },
+        {
+          "display": "Nope it's still moving me to the tutu folder before claude code starts.",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\n- [pending] Step #1: Search for timeline moment chat implementation\n- [pending] Step #2: Find where extra_context is handled in chat\n- [done] Step #3: Testing the updated README.md functionality\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
+          "pastedContents": {}
+        },
+        {
+          "display": "it isn't working.  when I run tutu start from an arbitrary directory, it always starts claude code in the tutu CWD instead of where I ran it from.",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\n- [pending] Step #1: Search for timeline moment chat implementation\n- [pending] Step #2: Find where extra_context is handled in chat\n- [done] Step #3: Testing the updated README.md functionality\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\n- [pending] Step #1: Search for timeline moment chat implementation\n- [pending] Step #2: Find where extra_context is handled in chat\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\n- [pending] Step #1: Search for timeline moment chat implementation\n- [pending] Step #2: Find where extra_context is handled in chat\n\n---\n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "move README.md into project root.\n\nupdate references to it so it gets properly piped in during `tutu start`\n\nadd cli commands for tutu item steps, not just tutu items.\n\nadd this to our README.md:  \"Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep\"\n\ntest everything",
+          "pastedContents": {}
+        },
+        {
+          "display": "make sure your internal Todo list steps also update TutuItem and TutuItemStep",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nsee linear ticket END-4021 for description\n\n## Context:\nsee END-4021\n\n## Steps:\nNo steps defined yet.\n\n---\n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "why does pycache show up in my git status even though that's in my gitignore",
+          "pastedContents": {}
+        },
+        {
+          "display": "make a standard python-on-mac gitignore file",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 4,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "cli.py",
+        "__main__.py",
+        "uv.lock",
+        "README.md",
+        "pyproject.toml"
+      ],
+      "exampleFilesGeneratedAt": 1750270926823
     }
   },
-  "cachedChangelog": "# Changelog\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1750107432544,
+  "cachedChangelog": "# Changelog\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
+  "changelogLastFetched": 1750273791474,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
-  "lastReleaseNotesSeen": "1.0.22",
+  "lastReleaseNotesSeen": "1.0.25",
   "statsigModel": {
     "firstParty": "claude-sonnet-4-20250514",
     "bedrock": "us.anthropic.claude-sonnet-4-20250514-v1:0",
