@@ -1,5 +1,5 @@
 {
-  "numStartups": 906,
+  "numStartups": 921,
   "autoUpdaterStatus": "enabled",
   "editorMode": "vim",
   "tipsHistory": {
@@ -9,15 +9,15 @@
     "theme-command": 889,
     "prompt-queue": 218,
     "git-worktrees": 893,
-    "todo-list": 867,
+    "todo-list": 910,
     "enter-to-steer-in-relatime": 888,
     "claude-opus-welcome": 214,
     "# for memory": 902,
     "install-github-app": 553,
-    "permissions": 895,
-    "drag-and-drop-images": 898,
-    "double-esc": 899,
-    "continue": 897,
+    "permissions": 916,
+    "drag-and-drop-images": 919,
+    "double-esc": 920,
+    "continue": 918,
     "custom-commands": 906,
     "shift-tab": 901
   },
@@ -3792,6 +3792,66 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "\"Tell me the status of all team in-progress projects and their associated PRs.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "\"Tell me the status of all in-progress projects and their associated PRs.\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage ",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #4: write all threads to an analytics table.  see END-4027 for details.\n\n## Status: in_progress\n\n## Description:\nmake sure you create a new branch off main to start the work.  tie the branch to that linear ticket.   \n\n## Context:\n\n\n## Steps:\n- [done] Step #15: Examine the message_feedback table structure in PR #4883\n- [done] Step #16: Create analytics table definition in mesh for thread messages\n- [done] Step #17: Run make bq-reclone in mesh directory\n- [done] Step #18: Implement write logic in agno manager\n- [done] Step #19: Test the implementation\n- [pending] Step #20: pull main merge it in, try again on make bq-reclone;  abort if it works\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "!open .",
+          "pastedContents": {}
+        },
+        {
+          "display": "Using only `grep` and `rg` to search the *.prose files in this folder:\n\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n</agent_instructions>\n**User question**\n\n\nWho do I know who knows Jon Frisby?",
+          "pastedContents": {}
+        },
+        {
+          "display": "!pwd",
+          "pastedContents": {}
+        },
+        {
+          "display": "Using only `grep` and `rg` to search the files in this folder:\n\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n</agent_instructions>\n**User question**\n\n\nWho do I know who knows Jon Frisby?",
+          "pastedContents": {}
+        },
+        {
+          "display": "ultrathink.\n\nrun this command, respond to any errors (including code changes), and run it again until it works.\n\nyou'll know it worked because the output folder will have full length files.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\n`uv run prosaic parse input/`\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix merge conflicts and whatever",
+          "pastedContents": {}
+        },
+        {
+          "display": "where should i start if i wanted to verify your solution is complete?",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #5: solve the problem described in END-3862 on Linear\n\n## Status: in_progress\n\n## Description:\nmake sure you check the comments on the Linear item before you make a plan.   make sure you use the TutuItemStem cli stuff while you work\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "there is an open ticket owned by Kerry that has somethinga bout all_fields or AllFields or whatever\n\nfind it and report back yo",
+          "pastedContents": {}
+        },
+        {
+          "display": "tell me about linear issues or projects that mention allFields",
+          "pastedContents": {}
+        },
+        {
           "display": "Any idea why `@src/data-mesh/ make bq reclone` would fail in this branch, but works fine in main?",
           "pastedContents": {}
         },
@@ -4189,66 +4249,6 @@
         {
           "display": "/cost ",
           "pastedContents": {}
-        },
-        {
-          "display": "/usage",
-          "pastedContents": {}
-        },
-        {
-          "display": " <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\n\nI'm trying to hire a Marketer and a Product Manager. Make a report of all marketers and potential PMs I know (potential PMs could be ex-founders, entrepreneurs, engineers with business savvy, or sales folks with tech savvy;  not necessarily Product Managers or Sales Engineers), and tell me what you can about my interactions with them.\n\nMake sure the report has information about our messaging history.  Make sure you include any contact details we have on each candidate.  Make sure you include a functioning, clickable link to their LinkedIn profile.",
-          "pastedContents": {}
-        },
-        {
-          "display": " <agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n    * The User is Alex Bilmes, CEO of Endgame.\n    * You should always cite your sources, and include dates whenever possible.\n\nExport a full HTML report in the reports directory, including my company name and org ID in the filename, plus a simple descriptor of the report.\nThe style and color scheme should be similar to the catppuccin-macchiato theme.\nAfter you generate the HTML report, use `uv python -c` to render this as a PNG via playwright, and put that PNG in the reports directory.\n\nUltrathink.\n</agent_instructions>\n\nUsing Grep, RG, and other file-search and string-related Unix tools, only using the current folder, answer the user question:\n\n\nI'm trying to hire a Marketer and a Product Manager. Make a table of all marketers and potential PMs I know (potential PMs could be ex-founders, entrepreneurs, engineers with business savvy, or sales folks with tech savvy;  not necessarily Product Managers or Sales Engineers), and tell me what you can about my interactions with them.",
-          "pastedContents": {}
-        },
-        {
-          "display": "update the README and commit my changes.\n\nthe quickstart at the top of README should just say to load a bunch of input files into the input folder, then run `./super`",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit my changes",
-          "pastedContents": {}
-        },
-        {
-          "display": "ultrathink.\n\nrun this command, respond to any errors (including code changes), and run it again until it works.\n\nyou'll know it worked because the output folder will have full length files.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\n`uv run prosaic parse input/`",
-          "pastedContents": {}
-        },
-        {
-          "display": "make me a very simple bash script in ./super  that runs claude and pipes in the @SUPER_PROMPT.md as the SUPER_PROMPT.md",
-          "pastedContents": {}
-        },
-        {
-          "display": "how can you update this project's codebase so the following never happens?  maybe it's a post-parse step by the Prosaic object?\nerror is this, from Cursor when I tried to view some output:\n\nThe file 'messages_narratives.prose' contains one or more unusual line terminator characters, like Line Separator (LS) or Paragraph Separator (PS).\n\nIt is recommended to remove them from the file. This can be configured via `editor.unusualLineTerminators`",
-          "pastedContents": {}
-        },
-        {
-          "display": "run this, respond to any errors, and run it again until it works.\n\nlast time i ran it the files in the output folder were not full length.  4 look decent, 4 have zero bytes.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\nuv run prosaic parse input/",
-          "pastedContents": {}
-        },
-        {
-          "display": "rename ProsaicEngine to Prosaic, and make sure everything works.",
-          "pastedContents": {}
-        },
-        {
-          "display": "dorkitude ~/a/dev/cerebro/src/briefs/briefs/prosaic [kyle/END-4004-END-4003-END-4005-prosaic-v0] $ uv run prosaic parse input\nUninstalled 2 packages in 2ms\nInstalled 1 package in 1ms\nRegistered parser: OpportunitiesParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/contacts_parser.py: attempted relative import with no known parent package\nRegistered parser: EmailsParser\nRegistered parser: AccountsParser\nError loading parser /Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/parsers/linkedin_connections_parser.py: attempted relative import with no known parent package\nRegistered parser: LinkedinMessagesParser\n\n\nwhats this error about",
-          "pastedContents": {}
-        },
-        {
-          "display": "what's the CLI command to auto-parse",
-          "pastedContents": {}
-        },
-        {
-          "display": "how do i delete a parser that exists already?   (do i just remove the file or is there a registry i have to think about?)",
-          "pastedContents": {}
-        },
-        {
-          "display": "!git push",
-          "pastedContents": {}
-        },
-        {
-          "display": "i'm seeing this.  i know the fix is to not run \"lower\" til we cast something to string.  but i can't expect to do this manually every time.  maybe we need a linter or something that helps claude avoid these avoidable errors during the parser creation step.  can you make that?",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4268,16 +4268,16 @@
       ],
       "exampleFilesGeneratedAt": 1749833774711,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.41425080000000003,
-      "lastAPIDuration": 145516,
-      "lastDuration": 218408,
+      "lastCost": 0.43141540000000006,
+      "lastAPIDuration": 72292,
+      "lastDuration": 142592,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 33123,
-      "lastTotalOutputTokens": 4112,
-      "lastTotalCacheCreationInputTokens": 61748,
-      "lastTotalCacheReadInputTokens": 344956,
-      "lastSessionId": "b7d7a29f-2815-46d5-9c61-fc2918aa073d"
+      "lastTotalInputTokens": 19274,
+      "lastTotalOutputTokens": 1827,
+      "lastTotalCacheCreationInputTokens": 91396,
+      "lastTotalCacheReadInputTokens": 162578,
+      "lastSessionId": "a1244c09-f41a-42c4-8c12-2d6e8c5912b6"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -4851,6 +4851,90 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "how do i give new user \"dorkitude\" the highest level of permission that claude code will still accept for skip-permissions",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do i get around this:\n\n\"--dangerously-skip-permissions cannot be used with root/sudo privileges for security reasons\"\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "okay tell me how to do that for 3 repos.  a, tutu, and dorkitude.com",
+          "pastedContents": {}
+        },
+        {
+          "display": "how does it know which key to use for which clone command",
+          "pastedContents": {}
+        },
+        {
+          "display": "but i want to do this for several repos on the same user;  how do i make sure it uses the right key for the right repo?",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do i make it so it's easy to clone a remo and automatically use that key",
+          "pastedContents": {}
+        },
+        {
+          "display": "okay i'm logged into my remote server.  how do I make a deploy key that I can paste into github.",
+          "pastedContents": {}
+        },
+        {
+          "display": "command to install claude code",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do I ssh into this and point to a specific keyfile ",
+          "pastedContents": {}
+        },
+        {
+          "display": "i got a droplet with a reserved IP 209.38.116.215\n\nhow do i map it to cloudbrain.dorkitude.com",
+          "pastedContents": {}
+        },
+        {
+          "display": "help me set up 3",
+          "pastedContents": {}
+        },
+        {
+          "display": "can i make a credential that only has access to my private orgs, not my work orgs?",
+          "pastedContents": {}
+        },
+        {
+          "display": "is a digitalocean droplet a fully functional linux machine?",
+          "pastedContents": {}
+        },
+        {
+          "display": "but my mac isn't always on, and i don't always know its IP",
+          "pastedContents": {}
+        },
+        {
+          "display": "Could I SSH from my phone and talk to claude code that way?",
+          "pastedContents": {}
+        },
+        {
+          "display": "but i need real linux if i'm going to run Claude Code in the same way, no?",
+          "pastedContents": {}
+        },
+        {
+          "display": "ideas for how to implement 3",
+          "pastedContents": {}
+        },
+        {
+          "display": "but can the render app even commit to github?",
+          "pastedContents": {}
+        },
+        {
+          "display": "I'd like a secure way to invoke @dorkweb when i'm on the go on my iphone\n\nideas?",
+          "pastedContents": {}
+        },
+        {
+          "display": "deploy",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #6: add a funny GIF under the Writing section on the home page\n\n## Status: in_progress\n\n## Description:\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
+          "pastedContents": {}
+        },
+        {
           "display": "it's the size of my entire sreen..   i also briefly see the Fabulous theme",
           "pastedContents": {}
         },
@@ -5176,90 +5260,6 @@
         },
         {
           "display": "swap those links colors.  make my typical default link into this sky, and make the footer links blue",
-          "pastedContents": {}
-        },
-        {
-          "display": "make these links at the bottom of the writing/article page match the color of the nav links and the SVGs",
-          "pastedContents": {}
-        },
-        {
-          "display": "fix the stackoverflow SVG to look less janky.",
-          "pastedContents": {}
-        },
-        {
-          "display": "why is this part of the artcle page the links are greyed out, but i want them green like nav",
-          "pastedContents": {}
-        },
-        {
-          "display": "H1, h2, h3 should be --ctp-blue \n\nnav links and icons should be --ctp-sky          ",
-          "pastedContents": {}
-        },
-        {
-          "display": "too much color.  let's make them mostly muted again",
-          "pastedContents": {}
-        },
-        {
-          "display": "my comment on The Night Watch in bookmarks should say:\n\n`Code written by \"a drunken child or a sober goldfish\" vs. \"mean people, stoic people, people who have seen things die.\"  This latter group is the night watch.  IYKYK.`",
-          "pastedContents": {}
-        },
-        {
-          "display": "update my headings and nav styles to have a little more color, still from the theme.",
-          "pastedContents": {}
-        },
-        {
-          "display": "update teh Readings metadata to have both published date and a bookmarked-date\n\nupdate Readings section of homepage, plus the reading page itself, so they both use the same partial.   update that partial to include both dates.",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit everything",
-          "pastedContents": {}
-        },
-        {
-          "display": "you should be able to publish it in statics, then use python -c with playwright to read it off localhost:5001",
-          "pastedContents": {}
-        },
-        {
-          "display": "move @the-illusion-of-thinking.pdf to my statics, add to bookmarks with the comment \"By the time Apple published this paper, the 'cutting-edge' models they were discrediting were already outdated.\"",
-          "pastedContents": {}
-        },
-        {
-          "display": "deploy all",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and deploy",
-          "pastedContents": {}
-        },
-        {
-          "display": "get rid of the old urls",
-          "pastedContents": {}
-        },
-        {
-          "display": "update my URL scheme so essays all fall under \"/writing/\" and bookmarks under \"/reading/\"\n\ndo the same with my folder structure",
-          "pastedContents": {}
-        },
-        {
-          "display": "!code .",
-          "pastedContents": {}
-        },
-        {
-          "display": "looks better but i still want it to link to the full size image",
-          "pastedContents": {}
-        },
-        {
-          "display": "butn ow both are gone",
-          "pastedContents": {}
-        },
-        {
-          "display": "maybe just remove the part from preprocess html since figcaption is pretty good",
-          "pastedContents": {}
-        },
-        {
-          "display": "why does my housing maps link in my vibe coding essay show the link twice?   see what i mean?\n\nuse python -c playwright to fetch and read http://localhost:5001/essay/the-rise-and-fall-of-vibe-coding",
-          "pastedContents": {}
-        },
-        {
-          "display": "update the about page so it doesn't do the indentation/spacing thing to start paragraphs",
           "pastedContents": {}
         }
       ],
@@ -6100,6 +6100,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "update my `tutu start` prompt to make sure it concats the TUTU_START_PROMPT.md contents into every claude code session before it runs `cly`",
+          "pastedContents": {}
+        },
+        {
+          "display": "what is using @TUTU_START_PROMPT.md and where, show line numbers",
+          "pastedContents": {}
+        },
+        {
           "display": "# TutuItem #4: write all threads to an analytics table.  see END-4027 for details.\n\n## Status: in_progress\n\n## Description:\nsee END-4027\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n",
           "pastedContents": {}
         },
@@ -6236,20 +6244,20 @@
         "pyproject.toml"
       ],
       "exampleFilesGeneratedAt": 1750270926823,
-      "lastCost": 0.0008984000000000002,
-      "lastAPIDuration": 972,
-      "lastDuration": 2649,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 1033,
-      "lastTotalOutputTokens": 18,
-      "lastTotalCacheCreationInputTokens": 0,
-      "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "0247f623-e77c-4f62-8d5a-4024cffb284d"
+      "lastCost": 0.43282959999999987,
+      "lastAPIDuration": 196358,
+      "lastDuration": 717082,
+      "lastLinesAdded": 7,
+      "lastLinesRemoved": 1,
+      "lastTotalInputTokens": 18930,
+      "lastTotalOutputTokens": 4774,
+      "lastTotalCacheCreationInputTokens": 55034,
+      "lastTotalCacheReadInputTokens": 498059,
+      "lastSessionId": "5e2cf64c-0fdf-4c2d-a67e-014c55f8dac9"
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1750289394007,
+  "changelogLastFetched": 1750343020153,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,

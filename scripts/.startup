@@ -56,6 +56,9 @@ alias vim="nvim"
 alias vi="nvim"
 
 
+alias cloudbrain="ssh root@cloudbrain.dorkitude.com -i ~/.ssh/id_ed25519id_rsa"
+
+
 eval "$(pyenv init --path)"
 
 
