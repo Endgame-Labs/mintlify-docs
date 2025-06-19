@@ -25,6 +25,11 @@ alias gp="git pull"
 alias gcam="git commit -am" # commit all changes and message
 
 
+# TUTU aliases
+alias tl="tutu list"
+alias ts="tutu status"
+
+
 alias pg="ping google.com"
 
 
