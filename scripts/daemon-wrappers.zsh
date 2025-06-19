@@ -56,7 +56,7 @@ cly() {
     local title_pid=$!
     
     # Run Claude with dangerous permissions
-    "/opt/homebrew/bin/claude" --dangerously-skip-permissions "$@"
+    "claude" --dangerously-skip-permissions "$@"
     local exit_code=$?
     
     # Kill the background title setter
@@ -93,7 +93,7 @@ cla() {
     local title_pid=$!
     
     # Run Claude without dangerous permissions
-    "/opt/homebrew/bin/claude" "$@"
+    "claude" "$@"
     local exit_code=$?
     
     # Kill the background title setter
