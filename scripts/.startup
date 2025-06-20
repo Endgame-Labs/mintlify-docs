@@ -93,3 +93,6 @@ if [ -f '/Users/dorkitude/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/U
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/dorkitude/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dorkitude/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Source .startup.local if it exists
+if [ -f ~/.startup.local ]; then . ~/.startup.local; fi
