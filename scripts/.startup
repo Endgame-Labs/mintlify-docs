@@ -28,6 +28,7 @@ alias gcam="git commit -am" # commit all changes and message
 
 # TUTU aliases
 alias tl="tutu list"
+alias tla="tutu list --all"
 alias ts="tutu status"
 
 
