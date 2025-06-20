@@ -1,28 +1,28 @@
 {
-  "numStartups": 957,
+  "numStartups": 978,
   "autoUpdaterStatus": "enabled",
   "editorMode": "vim",
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 944,
+    "shift-enter": 965,
     "memory-command": 770,
-    "theme-command": 930,
+    "theme-command": 971,
     "prompt-queue": 218,
     "git-worktrees": 955,
     "todo-list": 951,
-    "enter-to-steer-in-relatime": 929,
+    "enter-to-steer-in-relatime": 970,
     "claude-opus-welcome": 214,
-    "# for memory": 946,
+    "# for memory": 967,
     "install-github-app": 553,
-    "permissions": 938,
-    "drag-and-drop-images": 940,
-    "double-esc": 941,
-    "continue": 939,
-    "custom-commands": 937,
-    "shift-tab": 943
+    "permissions": 959,
+    "drag-and-drop-images": 961,
+    "double-esc": 962,
+    "continue": 960,
+    "custom-commands": 968,
+    "shift-tab": 964
   },
   "memoryUsageCount": 4,
-  "promptQueueUseCount": 33,
+  "promptQueueUseCount": 34,
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
   "hasCompletedOnboarding": true,
   "lastOnboardingVersion": "1.0.22",
@@ -3242,6 +3242,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "my autocommit crontab item doesn't seem to work.  how else can i achieve this?",
+          "pastedContents": {}
+        },
+        {
+          "display": "edit crontab.  every minute, do \"cd ~/a && \"git add -u\" && \"git push\"",
+          "pastedContents": {}
+        },
+        {
           "display": "fix merge conflicts and commit/push",
           "pastedContents": {}
         },
@@ -3466,16 +3474,16 @@
         ".claude/CLAUDE.md"
       ],
       "exampleFilesGeneratedAt": 1750142965959,
-      "lastCost": 0.1622444,
-      "lastAPIDuration": 88748,
-      "lastDuration": 71865,
+      "lastCost": 0.054787600000000006,
+      "lastAPIDuration": 31409,
+      "lastDuration": 15840,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 8578,
-      "lastTotalOutputTokens": 2032,
-      "lastTotalCacheCreationInputTokens": 20806,
-      "lastTotalCacheReadInputTokens": 173051,
-      "lastSessionId": "b5fbaf4c-1b38-44df-aa67-58e2ba962f7a"
+      "lastTotalInputTokens": 6696,
+      "lastTotalOutputTokens": 389,
+      "lastTotalCacheCreationInputTokens": 560,
+      "lastTotalCacheReadInputTokens": 17542,
+      "lastSessionId": "ce5a9302-9b55-42ea-93e8-06b1e512ef5b"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -3809,6 +3817,72 @@
     "/Users/dorkitude/a/dev/cerebro": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "# TutuItem #13: make sure thread_message_analytics.yaml has a column for \"model\" and the we start to instrument that.\n\n## Status: in_progress\n\n## Description:\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit my changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "when I run `make bq-reclone` i expect the \"agent_instructions_full\" field to be added to the thread_message_analytics table but it isn't showing up in BQ",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +14 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "briefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 376, in iter\nbriefs-api    |     result = action(retry_state)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 398, in <lambda>\nbriefs-api    |     self._add_action_func(lambda rs: rs.outcome.result())\nbriefs-api    |                                      ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 449, in result\nbriefs-api    |     return self.__get_result()\nbriefs-api    |            ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 401, in __get_result\nbriefs-api    |     raise self._exception\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 478, in __call__\nbriefs-api    |     result = fn(*args, **kwargs)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 198, in _send_batch\nbriefs-api    |     raise DataMeshError(f\"Non-retryable response {response.status_code}: {response.text}\")\nbriefs-api    | common_mesh.exceptions.DataMeshError: Non-retryable response 400: {\"errors\":[{\"status\":\"Bad Request\",\"error\":\"invalid format: unknown field agent_instructions_full\",\"statusCode\":400,\"offset\":0}]}"
+            }
+          }
+        },
+        {
+          "display": "fix this:\n\n\n[Pasted text #1 +53 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "briefs-api    | [June 19, 2025 16:37:40 PDT] [INFO | mesh_writer] Initializing MeshSession for org_id=6027, module=briefs_v3, model=thread_message_analytics at URL=http://localhost:8092/stream/6027/briefs_v3/thread_message_analytics\nbriefs-api    | [June 19, 2025 16:37:40 PDT] [INFO | mesh_writer] Starting a new batch.\nbriefs-api    | [June 19, 2025 16:37:40 PDT] [INFO | mesh_writer] Buffer size limit not reached, sending batch with remaining records. Writing 1\nbriefs-api    | [June 19, 2025 16:37:40 PDT] [INFO | mesh_writer] Sending batch of 1 records to http://localhost:8092/stream/6027/briefs_v3/thread_message_analytics\nbriefs-api    | [June 19, 2025 16:37:40 PDT] [WARNING | mesh_writer] Non-retryable response 400: {\"errors\":[{\"status\":\"Bad Request\",\"error\":\"invalid format: field id is required\",\"statusCode\":400,\"offset\":0}]}\nbriefs-api    |\nbriefs-api    | [June 19, 2025 16:37:40 PDT] [ERROR | agno_manager] Failed to write user message analytics\nbriefs-api    | Traceback (most recent call last):\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/threads/agno_manager.py\", line 1141, in _write_message_analytics\nbriefs-api    |     await to_thread.run_sync(\nbriefs-api    |     ...<3 lines>...\nbriefs-api    |     )\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/anyio/to_thread.py\", line 56, in run_sync\nbriefs-api    |     return await get_async_backend().run_sync_in_worker_thread(\nbriefs-api    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |         func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter\nbriefs-api    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |     )\nbriefs-api    |     ^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 2470, in run_sync_in_worker_thread\nbriefs-api    |     return await future\nbriefs-api    |            ^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 967, in run\nbriefs-api    |     result = context.run(func, *args)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/threads/agno_manager.py\", line 1160, in _write_analytics_sync\nbriefs-api    |     mesh_session.send_all_models([analytics])\nbriefs-api    |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/contextlib.py\", line 85, in inner\nbriefs-api    |     return func(*args, **kwds)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 253, in send_all_models\nbriefs-api    |     send_current_batch(batch_buffer, gzip_file, num_records)\nbriefs-api    |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 236, in send_current_batch\nbriefs-api    |     self._send_batch_retryable(cur_batch_buffer.getvalue(), records)\nbriefs-api    |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 336, in wrapped_f\nbriefs-api    |     return copy(f, *args, **kw)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 475, in __call__\nbriefs-api    |     do = self.iter(retry_state=retry_state)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 376, in iter\nbriefs-api    |     result = action(retry_state)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 398, in <lambda>\nbriefs-api    |     self._add_action_func(lambda rs: rs.outcome.result())\nbriefs-api    |                                      ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 449, in result\nbriefs-api    |     return self.__get_result()\nbriefs-api    |            ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 401, in __get_result\nbriefs-api    |     raise self._exception\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 478, in __call__\nbriefs-api    |     result = fn(*args, **kwargs)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 198, in _send_batch\nbriefs-api    |     raise DataMeshError(f\"Non-retryable response {response.status_code}: {response.text}\")\nbriefs-api    | common_mesh.exceptions.DataMeshError: Non-retryable response 400: {\"errors\":[{\"status\":\"Bad Request\",\"error\":\"invalid format: field id is required\",\"statusCode\":400,\"offset\":0}]}"
+            }
+          }
+        },
+        {
+          "display": "neither field appears in my bigquery ",
+          "pastedContents": {}
+        },
+        {
+          "display": "thread_message_analytics table should have agent instructions column, but when I run make bq-reclone I don't see that column",
+          "pastedContents": {}
+        },
+        {
+          "display": "No I need those features, I am telling you fix the table.  Put those features back in!",
+          "pastedContents": {}
+        },
+        {
+          "display": "/model ",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +48 lines]\n\n\n\n\nFix it.",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "briefs-api    |\nbriefs-api    | [June 19, 2025 16:24:37 PDT] [ERROR | agno_manager] Failed to write assistant message analytics\nbriefs-api    | Traceback (most recent call last):\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/threads/agno_manager.py\", line 1141, in _write_message_analytics\nbriefs-api    |     await to_thread.run_sync(\nbriefs-api    |     ...<3 lines>...\nbriefs-api    |     )\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/anyio/to_thread.py\", line 56, in run_sync\nbriefs-api    |     return await get_async_backend().run_sync_in_worker_thread(\nbriefs-api    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |         func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter\nbriefs-api    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |     )\nbriefs-api    |     ^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 2470, in run_sync_in_worker_thread\nbriefs-api    |     return await future\nbriefs-api    |            ^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/anyio/_backends/_asyncio.py\", line 967, in run\nbriefs-api    |     result = context.run(func, *args)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/threads/agno_manager.py\", line 1160, in _write_analytics_sync\nbriefs-api    |     mesh_session.send_all_models([analytics])\nbriefs-api    |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/contextlib.py\", line 85, in inner\nbriefs-api    |     return func(*args, **kwds)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 253, in send_all_models\nbriefs-api    |     send_current_batch(batch_buffer, gzip_file, num_records)\nbriefs-api    |     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 236, in send_current_batch\nbriefs-api    |     self._send_batch_retryable(cur_batch_buffer.getvalue(), records)\nbriefs-api    |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 336, in wrapped_f\nbriefs-api    |     return copy(f, *args, **kw)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 475, in __call__\nbriefs-api    |     do = self.iter(retry_state=retry_state)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 376, in iter\nbriefs-api    |     result = action(retry_state)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 398, in <lambda>\nbriefs-api    |     self._add_action_func(lambda rs: rs.outcome.result())\nbriefs-api    |                                      ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 449, in result\nbriefs-api    |     return self.__get_result()\nbriefs-api    |            ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |   File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 401, in __get_result\nbriefs-api    |     raise self._exception\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/tenacity/__init__.py\", line 478, in __call__\nbriefs-api    |     result = fn(*args, **kwargs)\nbriefs-api    |   File \"/Users/dorkitude/a/dev/cerebro/src/common-py/mesh/src/common_mesh/mesh_writer.py\", line 198, in _send_batch\nbriefs-api    |     raise DataMeshError(f\"Non-retryable response {response.status_code}: {response.text}\")\nbriefs-api    | common_mesh.exceptions.DataMeshError: Non-retryable response 400: {\"errors\":[{\"status\":\"Bad Request\",\"error\":\"invalid format: unknown field agent_instructions_full\",\"statusCode\":400,\"offset\":0}]}"
+            }
+          }
+        },
+        {
+          "display": "panic: error loading catalog: failed to load models and templates: failed to load module briefs_v3: failed to load model thread_message_analytics.yaml: failed to read model: invalid format: 'id' is reserved",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #11: add a column \"agent_instructions_full\" string type to data-mesh/catalogs/mesh/modules/briefs_v3/thread_message_analytics.yaml and fill it out\n\n## Status: in_progress\n\n## Description:\nWhen a message is sent, I'd like to start tracking the _entire_ context as best we can in the analytics table.  The biggest piece of this is agent_instructions, since it has core prompt, vendor rules, guardrails, and eventually more.  Please set up tracking so we don't miss this information.\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
+          "pastedContents": {}
+        },
         {
           "display": "yes fix it",
           "pastedContents": {}
@@ -4238,54 +4312,6 @@
         {
           "display": "check this PR's convesration stream to see if there's a live preview build yet.  if so, print the link to it.",
           "pastedContents": {}
-        },
-        {
-          "display": "no i just jmean like, type checking and linting",
-          "pastedContents": {}
-        },
-        {
-          "display": "run validation stuff here",
-          "pastedContents": {}
-        },
-        {
-          "display": "run all linting and typechecking",
-          "pastedContents": {}
-        },
-        {
-          "display": "#The user is Kyle Wild.  dorkitdue on github.  kyle@kylewild.com personal email, kyle@endgame.io work email.",
-          "pastedContents": {}
-        },
-        {
-          "display": "#The user is Kyle Wild.  kyle@endgame.io",
-          "pastedContents": {}
-        },
-        {
-          "display": "why did you assign that to James?  I'm Kyle Wild",
-          "pastedContents": {}
-        },
-        {
-          "display": "assign linear ticket to me and mark as in progress",
-          "pastedContents": {}
-        },
-        {
-          "display": "try /Users/dorkitude/Library/Python/3.11/bin/tutu",
-          "pastedContents": {}
-        },
-        {
-          "display": "!which tutu",
-          "pastedContents": {}
-        },
-        {
-          "display": "!source ~/a/scripts/.startup",
-          "pastedContents": {}
-        },
-        {
-          "display": "!which tutu",
-          "pastedContents": {}
-        },
-        {
-          "display": "just use `tutu` it should be aliased to the right bin script",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4304,7 +4330,17 @@
         "service.ts"
       ],
       "exampleFilesGeneratedAt": 1749833774711,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 5.0211584500000015,
+      "lastAPIDuration": 410312,
+      "lastDuration": 504929,
+      "lastLinesAdded": 19,
+      "lastLinesRemoved": 3,
+      "lastTotalInputTokens": 31686,
+      "lastTotalOutputTokens": 12131,
+      "lastTotalCacheCreationInputTokens": 70607,
+      "lastTotalCacheReadInputTokens": 1903532,
+      "lastSessionId": "303ab777-3206-4d6e-a38c-d6364e51741c"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -6137,6 +6173,34 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "in tutu status, put this stuff in a table:📋 Status:            done\n  🕐 Created:           46 minutes ago • 2025-06-19 16:04:03\n  🕑 Updated:           44 minutes ago • 2025-06-19 16:05:49\n  🏁 First Progress:    46 minutes ago • 2025-06-19 16:04:08\n\n\nalso rename \"Steps:\"   to   \"TutuItemSteps\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "make the created and updated columns wider in tutu list",
+          "pastedContents": {}
+        },
+        {
+          "display": "update tutu status section to be a table.  Also update all datetimes to show, just before the datetime itself,  \"x seconds ago\" or \"y minutes ago\" or \"z hours ago\" or \"j days ago\" depending on what's a reasonable summary.  That should probably be abstracted into a utility method since other command sare gonna want to use it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Why does the top of tutu status report have the \"IMPORTANT\" flag thing at the top?",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #12: Make the output of \"tutu status\" cuter with tables and visual elements to offset the tophalf.  the steps table is fine don't change it.\n\n## Status: in_progress\n\n## Description:\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "when i do `tutu list --all` the table is wonky, why",
+          "pastedContents": {}
+        },
+        {
+          "display": "# TutuItem #10: allow `tutu list --all` to show all items, even the done ones.\n\n## Status: in_progress\n\n## Description:\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
+          "pastedContents": {}
+        },
+        {
           "display": "# TutuItem #9: fix the tutu context docs to actually follow the implenetation so claude doesn't trip up.   the commands don't all work.\n\n## Status: in_progress\n\n## Description:\n⏺ Bash(/Users/dorkitude/Library/Python/3.11/bin/tutu add-step 8 --description \"Identify implementation inconsistencies\")\n\n⎿  Error: Usage: tutu add-step [OPTIONS] ITEM_ID\n\netc\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
           "pastedContents": {}
         },
@@ -6284,11 +6348,21 @@
         "README.md",
         "pyproject.toml"
       ],
-      "exampleFilesGeneratedAt": 1750270926823
+      "exampleFilesGeneratedAt": 1750270926823,
+      "lastCost": 1.4319440000000003,
+      "lastAPIDuration": 170991,
+      "lastDuration": 194209,
+      "lastLinesAdded": 9,
+      "lastLinesRemoved": 8,
+      "lastTotalInputTokens": 13916,
+      "lastTotalOutputTokens": 4657,
+      "lastTotalCacheCreationInputTokens": 19690,
+      "lastTotalCacheReadInputTokens": 488103,
+      "lastSessionId": "d307e6d6-51a4-4c72-97b7-2c0e864f6b18"
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1750373937041,
+  "changelogLastFetched": 1750377417305,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
