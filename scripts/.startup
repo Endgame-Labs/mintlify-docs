@@ -39,6 +39,7 @@ alias cda="cd ~/a"
 alias cdd="cd ~/a/dev"
 alias cdb="cd ~/a/dev/cerebro/src/briefs"
 alias cdc="cd ~/a/dev/cerebro/"
+alias cddm="cd ~/a/dev/cerebro/src/data-mesh"
 alias cdaf="cd ~/a/dev/cerebro/src/app-frontend"
 
 
