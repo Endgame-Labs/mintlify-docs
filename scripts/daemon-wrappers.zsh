@@ -26,7 +26,7 @@ os() {
     ) &
     local title_pid=$!
 
-    overmind start
+    overmind start --any-can-die
 
     # Kill the background title setter
     kill $title_pid 2>/dev/null
