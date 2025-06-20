@@ -1,5 +1,5 @@
 {
-  "numStartups": 988,
+  "numStartups": 993,
   "autoUpdaterStatus": "enabled",
   "editorMode": "vim",
   "tipsHistory": {
@@ -9,7 +9,7 @@
     "theme-command": 971,
     "prompt-queue": 218,
     "git-worktrees": 986,
-    "todo-list": 951,
+    "todo-list": 992,
     "enter-to-steer-in-relatime": 970,
     "claude-opus-welcome": 214,
     "# for memory": 988,
@@ -3242,6 +3242,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "./mongo_backup.sh: line 39: syntax error near unexpected token `else'\n./mongo_backup.sh: line 39: `else'",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix divergent branches",
+          "pastedContents": {}
+        },
+        {
           "display": "my autocommit crontab item doesn't seem to work.  how else can i achieve this?",
           "pastedContents": {}
         },
@@ -3474,16 +3482,16 @@
         ".claude/CLAUDE.md"
       ],
       "exampleFilesGeneratedAt": 1750142965959,
-      "lastCost": 0.054787600000000006,
-      "lastAPIDuration": 31409,
-      "lastDuration": 15840,
+      "lastCost": 0.42238309999999996,
+      "lastAPIDuration": 40408,
+      "lastDuration": 35322,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 6696,
-      "lastTotalOutputTokens": 389,
-      "lastTotalCacheCreationInputTokens": 560,
-      "lastTotalCacheReadInputTokens": 17542,
-      "lastSessionId": "ce5a9302-9b55-42ea-93e8-06b1e512ef5b"
+      "lastTotalInputTokens": 6503,
+      "lastTotalOutputTokens": 875,
+      "lastTotalCacheCreationInputTokens": 15618,
+      "lastTotalCacheReadInputTokens": 43680,
+      "lastSessionId": "a4a91631-830e-4d3b-9867-a49684f5bd32"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -3817,6 +3825,18 @@
     "/Users/dorkitude/a/dev/cerebro": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "fix divergent branches",
+          "pastedContents": {}
+        },
+        {
+          "display": "I only meant to change the analytics stuff, NOT the actual processing of the thread.  Please revert the changes you've made to the user content stuff.",
+          "pastedContents": {}
+        },
+        {
+          "display": "why did you get rid of this stuff from agno_manager vs main:\n\n\n            # Format the prompt with template instructions\n            user_content = f\"\"\"<prompt>\n<user_content>\n{stored_user_message.message.content}\n</user_content>\n<template_instructions>\nDo your best to conform to the template provided, looking up information where necessary.\nInstead of the word VENDOR, use the organization name.\nInstead of the word CLIENT, use account name.\n<template>{template_string}</template>\n</template_instructions>\n</prompt>\"\"\"\n\n\n",
+          "pastedContents": {}
+        },
         {
           "display": "I don't think we should use extra_context for this kind of tracking.  Let's remove the backend tracking of these fields entirely, but put some TODOs in place.",
           "pastedContents": {}
@@ -4294,18 +4314,6 @@
               "content": "\n\n==================================== ERRORS ====================================\n____________ ERROR collecting briefs/prosaic/test_relationships.py _____________\nImportError while importing test module '/home/runner/work/cerebro/cerebro/src/briefs/briefs/prosaic/test_relationships.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n/home/runner/.local/share/uv/python/cpython-3.13.1-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs/prosaic/test_relationships.py:7: in <module>\n    from .prosaic_engine import Prosaic\nE   ImportError: attempted relative import with no known parent package\n=============================== warnings summary ===============================\n.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:323\n.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:323\n  /home/runner/work/cerebro/cerebro/src/briefs/.venv/lib/python3.13/site-packages/pydantic/_internal/_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)\n\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293\n  /home/runner/work/cerebro/cerebro/src/briefs/.venv/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:293: PydanticDeprecatedSince20: `json_encoders` is deprecated. See https://docs.pydantic.dev/2.11/concepts/serialization/#custom-serializers for alternatives. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nERROR briefs/prosaic/test_relationships.py\n!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n======================== 10 warnings, 1 error in 7.39s =========================\nmake: *** [../../python.mk:55: test] Error 2"
             }
           }
-        },
-        {
-          "display": "Has this PR passed github action checks yet?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Has this PR passed checks yet?",
-          "pastedContents": {}
-        },
-        {
-          "display": "i don't wanna do it unless it's folder-wide.  per-file won't work, can't maintain that as files emerge.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4325,16 +4333,16 @@
       ],
       "exampleFilesGeneratedAt": 1750441361804,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 6.49144675,
-      "lastAPIDuration": 589842,
-      "lastDuration": 4013244,
-      "lastLinesAdded": 26,
-      "lastLinesRemoved": 147,
-      "lastTotalInputTokens": 42863,
-      "lastTotalOutputTokens": 14960,
-      "lastTotalCacheCreationInputTokens": 98775,
-      "lastTotalCacheReadInputTokens": 2367353,
-      "lastSessionId": "7fb1abb5-356f-4bcb-b675-c612b450d2ed"
+      "lastCost": 1.3061089999999997,
+      "lastAPIDuration": 169420,
+      "lastDuration": 147493,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 11427,
+      "lastTotalOutputTokens": 4616,
+      "lastTotalCacheCreationInputTokens": 14422,
+      "lastTotalCacheReadInputTokens": 497003,
+      "lastSessionId": "830c2918-d8da-4282-b916-7e027ded6113"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -4444,6 +4452,18 @@
     "/Users/dorkitude/a/dev/scrappy-head": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "move the script into ~/a/scripts/background, and update contrab accordingly",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the cron so this runs every morning at 8:54 AM",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix the backup's filename convention to match how the dates work on the other backups in the backups directory.",
+          "pastedContents": {}
+        },
         {
           "display": "can you just update the procfile so it knows they can die?",
           "pastedContents": {}
@@ -4679,16 +4699,16 @@
         "src/main.py"
       ],
       "exampleFilesGeneratedAt": 1750445762848,
-      "lastCost": 0.8430437,
-      "lastAPIDuration": 182126,
-      "lastDuration": 214325,
-      "lastLinesAdded": 24,
-      "lastLinesRemoved": 6,
-      "lastTotalInputTokens": 22468,
-      "lastTotalOutputTokens": 2639,
-      "lastTotalCacheCreationInputTokens": 12482,
-      "lastTotalCacheReadInputTokens": 300610,
-      "lastSessionId": "e5dfa1e2-553d-419e-910c-5c07e2861ed2"
+      "lastCost": 2.3582274999999973,
+      "lastAPIDuration": 451096,
+      "lastDuration": 1501776,
+      "lastLinesAdded": 43,
+      "lastLinesRemoved": 4,
+      "lastTotalInputTokens": 45832,
+      "lastTotalOutputTokens": 8945,
+      "lastTotalCacheCreationInputTokens": 16778,
+      "lastTotalCacheReadInputTokens": 1006160,
+      "lastSessionId": "076f359e-29d9-418e-a103-8d451d1b0368"
     },
     "/Users/dorkitude/Dropbox/backups": {
       "allowedTools": [],
@@ -6377,10 +6397,46 @@
       "lastTotalCacheCreationInputTokens": 19880,
       "lastTotalCacheReadInputTokens": 38861,
       "lastSessionId": "117bbbd2-fd79-477c-8538-f57619a79f0e"
+    },
+    "/Users/dorkitude/a/dev/c2": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "tell me how thread templates & extracontext work together",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 0,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "models.py",
+        "app.py",
+        "agno_manager.py",
+        "base.py",
+        "cli.py"
+      ],
+      "exampleFilesGeneratedAt": 1750447355601,
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 1.8990970000000005,
+      "lastAPIDuration": 182019,
+      "lastDuration": 219923,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 4095,
+      "lastTotalOutputTokens": 3588,
+      "lastTotalCacheCreationInputTokens": 37968,
+      "lastTotalCacheReadInputTokens": 615466,
+      "lastSessionId": "ff32755b-d489-4cbd-bc3f-e4bd59ba9fdf"
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1750445846699,
+  "changelogLastFetched": 1750447513534,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
