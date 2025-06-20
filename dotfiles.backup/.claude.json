@@ -3818,6 +3818,30 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "get rid of answer_started_latency and all references to it.\n\nadd first_token_streamed_at as a timestamp, and add it to what we track.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Rename latency_ms to be latency_to_complete_message",
+          "pastedContents": {}
+        },
+        {
+          "display": "perfect, but call it latency_to_first_token",
+          "pastedContents": {}
+        },
+        {
+          "display": "PLANNING MODE:   give me options for how to do that, including code samples.",
+          "pastedContents": {}
+        },
+        {
+          "display": "assistant message created_at seems to be too early, i.e. way before the first token streams to the user. \n\ninvestigate.",
+          "pastedContents": {}
+        },
+        {
+          "display": "what is difference between answer_started_latency and latency_ms",
+          "pastedContents": {}
+        },
+        {
           "display": "# TutuItem #17: canonical_intent field on thread_message_analytics table.  string.  empty for now.\n\n## Status: in_progress\n\n## Working Directory: /Users/dorkitude/a/dev/cerebro\n\n## Description:\nadd the field.  \n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
           "pastedContents": {}
         },
@@ -4288,30 +4312,6 @@
         {
           "display": "fix merge conflicts",
           "pastedContents": {}
-        },
-        {
-          "display": "@briefs/prosaic/ gitignore needs to includle /input folder's contents.   we should also git rm that folder's contents from the repo.",
-          "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #1: Add more context to timeline moment chat END-4021\n\n## Status: in_progress\n\n## Description:\nWe need to make sure we also get the PR approved.   If it isn't approved, we can't mark this as done yet.\n\n## Context:\nsee END-4021\n\n## Steps:\n- [done] Step #1: Search for timeline moment chat implementation\n- [done] Step #2: Find where extra_context is handled in chat\n- [done] Step #3: Testing the updated README.md functionality\n- [done] Step #4: Updated extraContext message to emphasize user focus on clicked moment\n\n---\n<README>\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them.  Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n</README>\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #3: fix linting and type checkign in briefs stack\n\n## Status: in_progress\n\n## Description:\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
-          "pastedContents": {}
-        },
-        {
-          "display": "Can you read the @src/briefs/briefs/prosaic/ code to confirm this is what happens?",
-          "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #2: Prosaic:  fix the def show_architecture to accurately represent the autoparsing flow\n\n## Status: in_progress\n\n## Description:\nauto parse actually goes through a whole folder, looks for potential joins between files, searches for working parsers, creates the parsers it needs via claude code, THEN once it has the parsers it runs them all.  it makes .prose AND .jsonl files.   fix that\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n\n# Tutu - Task Management System <�\n\nWelcome to Tutu! This is a task management system designed to work seamlessly with Claude Code.\n\n## For Claude Code Users >\u0016\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Notes for Claude Code =�\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow =�\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\nRemember: Good task tracking helps everyone understand the progress! =�",
-          "pastedContents": {}
-        },
-        {
-          "display": "fix merge conflicts",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4330,7 +4330,17 @@
         "service.ts"
       ],
       "exampleFilesGeneratedAt": 1749833774711,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 4.425425399999999,
+      "lastAPIDuration": 441467,
+      "lastDuration": 52225840,
+      "lastLinesAdded": 84,
+      "lastLinesRemoved": 2,
+      "lastTotalInputTokens": 27358,
+      "lastTotalOutputTokens": 10683,
+      "lastTotalCacheCreationInputTokens": 69156,
+      "lastTotalCacheReadInputTokens": 1587408,
+      "lastSessionId": "f71ac0b8-c45d-435f-91be-9f682333c4cf"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
