@@ -1,5 +1,5 @@
 {
-  "numStartups": 999,
+  "numStartups": 1000,
   "autoUpdaterStatus": "enabled",
   "editorMode": "vim",
   "tipsHistory": {
@@ -6416,6 +6416,152 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Maybe a simple \"Apply\" button?",
+          "pastedContents": {}
+        },
+        {
+          "display": "When I mess with the Debug Controls, I need a way to click out of it / unfocus it, so my keyboard goes back to the game.",
+          "pastedContents": {}
+        },
+        {
+          "display": "The actual collision hitbox of a grenade should be pretty small, maybe even 1px, so it doesn't smack into walls weirdly (but can if you want it to)\n\nPlayer hitbox should be at their feet.",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't seem to be able to edit them.",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +72 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 39:69-75\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(39,70)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 39:103-109\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(39,104)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 40:71-77\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(40,72)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 40:106-112\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(40,107)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 41:78-84\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(41,79)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 41:116-122\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(41,117)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 44:71-77\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(44,72)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 44:112-118\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(44,113)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 145:6-37\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(145,7)\n      TS2532: Object is possibly 'undefined'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 145:57-63\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(145,58)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 148:6-37\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(148,7)\n      TS2532: Object is possibly 'undefined'.\n\n\nERROR in ./src/scripts/objects/debugPanel.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts) 148:57-63\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(148,58)\n      TS2339: Property 'player' does not exist on type 'Scene'.\n"
+            }
+          }
+        },
+        {
+          "display": "/model ",
+          "pastedContents": {}
+        },
+        {
+          "display": "turn on debug mode, on the right-hand side, so I can see a dump of the variables.  give me handles let me edit those values in the client.",
+          "pastedContents": {}
+        },
+        {
+          "display": "grenade should always be able to go over/through crates.",
+          "pastedContents": {}
+        },
+        {
+          "display": "its first jump should be about 3/4 of its total distance before bouncing, then it should bounce twice more very short (inelastically)",
+          "pastedContents": {}
+        },
+        {
+          "display": "Imagine we're in a 80% top-down view.  When I turn to the side, it should appear to be traveling in an arc above the ground.  Its shadow should follow along perfectly \"below\" i.e. its true trajectory, but the visual effect will be that it's going \"off\" the 2-D map.  ",
+          "pastedContents": {}
+        },
+        {
+          "display": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/grenade.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts) 45:4-15\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts(45,5)\n      TS2531: Object is possibly 'null'.\n\n\nERROR in ./src/scripts/objects/grenade.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts) 46:4-15\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts(46,5)\n      TS2531: Object is possibly 'null'.\n\n\nERROR in ./src/scripts/objects/grenade.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts) 47:4-15\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts(47,5)\n      TS2531: Object is possibly 'null'.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/grenade.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts) 121:6-17\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/grenade.ts(121,7)\n      TS2322: Type 'null' is not assignable to type 'Image'.",
+          "pastedContents": {}
+        },
+        {
+          "display": "MAke the grenade \"boucne\" more obvious by having it travel higher in the Z-direction and have a shadow as it travels, and bounces a couple times.  It should feel like it's going about 10 \"Feet\" in the air, so it can go over crates but not walls.\n\nAlso make it look like a red-and-white frag grenade.",
+          "pastedContents": {}
+        },
+        {
+          "display": "upgrade bullet damage to be 15 instead of 10",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's scale that down to 45%.",
+          "pastedContents": {}
+        },
+        {
+          "display": "change the art so the crates are wood colored",
+          "pastedContents": {}
+        },
+        {
+          "display": "Grenades should have an inheritance factor that's elss than 100%.  Maybe 70%",
+          "pastedContents": {}
+        },
+        {
+          "display": "Turn this setting off for rifle bullets.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Get rid of all the creates on the map except one.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Add a setting that, if true, makes it so projectile velocity is modified by the player velocity at the time it was fired or thrown.  Set it to true so I can test it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "All but the left-most, bottomest crate in our map.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Why does turret fire seem to go through the crates, but player fire does not?  Are turret bullets not kinetic?",
+          "pastedContents": {}
+        },
+        {
+          "display": "grenade damage (and all explosive damage) should be stopped by Walls because Walls are \"full coverage\".  Later there will be partial-coverage obstacles that bounce projectiles but don't stop explosive damage (also Grenades will lob over those), but right now we just have walls, which are full coverage.\n\nImplement these two modes of obstacles.\n\nAdd a couple crates (partial-coverage) to our map, so the player can hide behind them and lob grenades over",
+          "pastedContents": {}
+        },
+        {
+          "display": "Move all the logging stuff to the right so it doesn't conflict with Map.  Get rid of \"turret health\" and \"player health\" from that list.  Turn on-screen metrics OFF by default.\n\nUnder that, list the controls.\n\nInclude \"LShift\" for Grenade.   Include back-tick (\"`\") for \"debug mode\" and that should turn on the on-screen metrics.\n\nThen make me a Grenade feature.  Player has 2 grenades in inventory to start.  When they throw it, it \"lobs\" and then after a couple seconds, explodes with radius.  It does 90 damage.",
+          "pastedContents": {}
+        },
+        {
+          "display": "The soldier needs to be closer to top-down, but not totally top-down.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Arrow looks great, now make it a chevron and make it semi-transparent red",
+          "pastedContents": {}
+        },
+        {
+          "display": "Player looks weird, I want it at a 3/4 view.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Draw the arrow with vectors so it alwyas looks right, and is configurable.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Update the player to look more like @player_example.png ",
+          "pastedContents": {}
+        },
+        {
+          "display": "Playre should be slightly less top-town, so you can actually see its shape as it's running.",
+          "pastedContents": {}
+        },
+        {
+          "display": "the crosshair is a greater-than sign that's pointing in one direction always.  I want it to rotate around the player, and always point AWAY from the player.  also rename it to Aiming Reticle.",
+          "pastedContents": {}
+        },
+        {
+          "display": "top-left turret is too close to the wall.\n\nalso make the player look more like an Infantry unit with a helmet and a muzzle flare.\n\nalso make it so that it has a few animation frames, so when it's moving it'll animate a run-in-place motion.",
+          "pastedContents": {}
+        },
+        {
+          "display": "what does this.speed mean",
+          "pastedContents": {}
+        },
+        {
+          "display": "make the player more visible and larger.  make the crosshair more of a V or greater-than shape.   make the bullets about 100% larger.   make the floor tile a grey, not as dark as walls, to give us some contrast.",
+          "pastedContents": {}
+        },
+        {
+          "display": "My turret, bullet, and player assets are no longer working.  Nake me some new ones.",
+          "pastedContents": {}
+        },
+        {
           "display": "walls seem invisible:   also this:  Compiled with problems:X\n\nERROR\n\nunable to locate '/Users/dorkitude/a/dev/flagger/src/assets' glob",
           "pastedContents": {}
         },
@@ -6515,20 +6661,20 @@
       ],
       "exampleFilesGeneratedAt": 1750710327887,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.19116315,
-      "lastAPIDuration": 43988,
-      "lastDuration": 27490,
-      "lastLinesAdded": 4,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 6486,
-      "lastTotalOutputTokens": 539,
-      "lastTotalCacheCreationInputTokens": 4401,
-      "lastTotalCacheReadInputTokens": 51080,
-      "lastSessionId": "5afc0b02-fc8c-41bf-a309-858d9be9f34e"
+      "lastCost": 7.446874349999998,
+      "lastAPIDuration": 887063,
+      "lastDuration": 3597719,
+      "lastLinesAdded": 314,
+      "lastLinesRemoved": 21,
+      "lastTotalInputTokens": 68039,
+      "lastTotalOutputTokens": 18372,
+      "lastTotalCacheCreationInputTokens": 174807,
+      "lastTotalCacheReadInputTokens": 1926687,
+      "lastSessionId": "6125a16d-dfbf-4fc6-b4fb-5583a62386bf"
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1750711075567,
+  "changelogLastFetched": 1750715820140,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
