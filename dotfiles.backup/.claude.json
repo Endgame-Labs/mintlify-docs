@@ -5349,24 +5349,14 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
-        "index.html",
         "app.py",
-        "README.md",
         "new.html",
-        "templates/index.html"
+        "essay.html",
+        "metadata.json",
+        "terminal.css"
       ],
-      "exampleFilesGeneratedAt": 1749929227226,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.10888305000000001,
-      "lastAPIDuration": 87231,
-      "lastDuration": 43673,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 20621,
-      "lastTotalOutputTokens": 855,
-      "lastTotalCacheCreationInputTokens": 19647,
-      "lastTotalCacheReadInputTokens": 38830,
-      "lastSessionId": "67be23d6-21ea-46f6-a1a8-73babb60931d"
+      "exampleFilesGeneratedAt": 1750788409472,
+      "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/dev/dorkitude.com/static": {
       "allowedTools": [],
