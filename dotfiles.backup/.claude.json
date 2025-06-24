@@ -1,5 +1,5 @@
 {
-  "numStartups": 1024,
+  "numStartups": 1025,
   "installMethod": "global",
   "autoUpdates": true,
   "editorMode": "vim",
@@ -3828,6 +3828,18 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "But we do ingest and fact-extract them?",
+          "pastedContents": {}
+        },
+        {
+          "display": "Is it true that we only look at Gong transcripts for companies who are an Account in the Org's Salesforce?",
+          "pastedContents": {}
+        },
+        {
+          "display": "/usage ",
+          "pastedContents": {}
+        },
+        {
           "display": "difference between kill -9 and kill -QUIT",
           "pastedContents": {}
         },
@@ -4286,18 +4298,6 @@
         {
           "display": "/model ",
           "pastedContents": {}
-        },
-        {
-          "display": "make sure you're using tutu steps.\n\nalso you're going to have to run `make bq-reclone` in mesh directory after you define the new table.",
-          "pastedContents": {}
-        },
-        {
-          "display": "the file i'm thinking of is from a different branch, which i believe i mentioned in the Linear ticket.",
-          "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #4: write all threads to an analytics table.  see END-4027 for details.\n\n## Status: in_progress\n\n## Description:\nmake sure you create a new branch off main to start the work.  tie the branch to that linear ticket.   \n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4316,7 +4316,17 @@
         "thread_message_analytics.yaml"
       ],
       "exampleFilesGeneratedAt": 1750441361804,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 1.02021155,
+      "lastAPIDuration": 60686,
+      "lastDuration": 2690583,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 14365,
+      "lastTotalOutputTokens": 725,
+      "lastTotalCacheCreationInputTokens": 49991,
+      "lastTotalCacheReadInputTokens": 20487,
+      "lastSessionId": "23c5dda3-4f4d-42b5-8987-b619bab1d015"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
