@@ -1,19 +1,19 @@
 {
-  "numStartups": 1007,
+  "numStartups": 1014,
   "installMethod": "global",
   "autoUpdates": true,
   "editorMode": "vim",
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 987,
+    "shift-enter": 1008,
     "memory-command": 770,
-    "theme-command": 971,
+    "theme-command": 1012,
     "prompt-queue": 218,
     "git-worktrees": 986,
     "todo-list": 992,
-    "enter-to-steer-in-relatime": 970,
+    "enter-to-steer-in-relatime": 1011,
     "claude-opus-welcome": 214,
-    "# for memory": 988,
+    "# for memory": 1009,
     "install-github-app": 553,
     "permissions": 1001,
     "drag-and-drop-images": 1003,
@@ -6418,6 +6418,102 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "I don't see that happening.  Turret bullets still simply disappear when they damage me.  They have a nice effect when they hit the wall, though.\n\nAlso Please get rid of the green box with red border around my player.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push all changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "when standard turret bullets hit me, they currently just disappear.  I'd rather get a clear indication that I've been hit, like the way my own bullets do when they hit something.",
+          "pastedContents": {}
+        },
+        {
+          "display": "when two turrets near each other are low on life, and I throw a grenade between them, only one of them takes any damage / dies.\n\nwhy?",
+          "pastedContents": {}
+        },
+        {
+          "display": "killing a Tesla coil while it's charging up:\n\nUncaught TypeError: Cannot read properties of undefined (reading 'tweens')\n    at TeslaCoilTurret.createLightningBolt (teslaCoilTurret.ts:369:20)\n    at TeslaCoilTurret.fireAtPosition (teslaCoilTurret.ts:284:14)\n    at Tween.onComplete (teslaCoilTurret.ts:179:22)\n    at Tween.dispatchTweenEvent (phaser.js:68668:31)\n    at Tween.nextState (phaser.js:68091:18)\n    at Tween.update (phaser.js:68578:26)\n    at TweenManager.update (phaser.js:211933:23)\n    at EventEmitter.emit (phaser.js:1923:33)\n    at Systems.step (phaser.js:49061:16)\n    at SceneManager.update (phaser.js:100284:21)\n\n\ncrash.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Re-do this work by using a single consistent speed scalar for all of the in-game physics speeds.",
+          "pastedContents": {}
+        },
+        {
+          "display": "The whole game is a little fast.  Let's dial the speed of everything down by 20%",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push all my changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "my player bullet sprites are also being rendered slightly to the southeast, maybe 1 hitbox diameter or so.",
+          "pastedContents": {}
+        },
+        {
+          "display": "grenade physics is too offset.  sprite is about 1 diameter to the south-east of where it should be.",
+          "pastedContents": {}
+        },
+        {
+          "display": "clicking the box freezes game:\n\n\nplayer.ts:68   - Frame UV: 0 0 0.25 1\nplayer.ts:86 🎮 Debug rectangle created at: 96 576\nphaser.js:125610 Uncaught TypeError: Cannot read properties of undefined (reading 'clear')\n    at World.postUpdate (phaser.js:125610:22)\n    at EventEmitter.emit (phaser.js:1902:35)\n    at Systems.step (phaser.js:49065:16)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)",
+          "pastedContents": {}
+        },
+        {
+          "display": "Nope, he still only animates when I'm rotating.",
+          "pastedContents": {}
+        },
+        {
+          "display": "He only animates when rotating, not when walking with just WASD.",
+          "pastedContents": {}
+        },
+        {
+          "display": "- and fix this:\n\n\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 229:23-30\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(229,24)\n      TS2304: Cannot find name 'Grenade'.",
+          "pastedContents": {}
+        },
+        {
+          "display": "All the physics stuff you added is pretty good, but:\n\n- get rid of the projectile and player-movement physics (the green lines) as they're too distracting.\n- put all these physics things behind the same flag, \"showphysics\", which is represented by the checkbox in the DEBUG area.\n- use localstorage so that setting becomes sticky between refreshes.",
+          "pastedContents": {}
+        },
+        {
+          "display": "That worked for rotation, but it doesn't work for normal walking (without rotating)\n\nAlso, slow the animation speed down by about 50%",
+          "pastedContents": {}
+        },
+        {
+          "display": "When the player is actively running or rotating, their sprite should animate.  Right now we're doing a good job switching between northwest, north, southeast, etc.  But when we have one of those directions, it seems only to show the first frame of the animation strip, instead of moving between them.",
+          "pastedContents": {}
+        },
+        {
+          "display": "when my player died, the grenade stopped acting normal.  it kept moving which is good, but then it just sort of flew through walls, and seemed not to do damage.\n\n\nmeanwhile, let's set showphyics to true by default.\n\nafter that, we have an offset issue where the showphysics circle / hitbox is a little off center.  it's right by his feet, which is good, but it's a little too far to the left (west) and thus the player sprite needs to move (relative to the hitbox circle) about one-radius to the west.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push all my changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "sometimes when i kill a tesla coil, the game freezes and i see this:\n\nUncaught TypeError: Cannot read properties of undefined (reading 'wallLayer')\n    at TeslaCoilTurret.hasLineOfSight (teslaCoilTurret.ts:265:37)\n    at TeslaCoilTurret.tryFireAtPlayer (teslaCoilTurret.ts:138:29)\n    at Function.eval (teslaCoilTurret.ts:151:26)\n    at Clock.update (phaser.js:210733:36)\n    at EventEmitter.emit (phaser.js:1923:33)\n    at Systems.step (phaser.js:49061:16)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)",
+          "pastedContents": {}
+        },
+        {
+          "display": "When a turret dies, its bullets should live on until they collide withs something.  Same goes for a player's grenades if the player dies, or the player's bullets if the player dies.",
+          "pastedContents": {}
+        },
+        {
+          "display": "is that math based on the nearest point of the enemy hitbox, or the center?  should be nearest point to the explosion's center.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Grenade should do 100 damage if it's a direct hit, should fall off to 75 for medium hit, and as low as 25 for more remote hits.  Expand its total blast radius so this can happen.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "seems off by 90 degrees, becuase when I face west, I see him facing north.  when I face north, I see him aiming east.",
+          "pastedContents": {}
+        },
+        {
           "display": "the sprite changes are great.  now i think there's no reason to rotate the image at all, just the aiming reticle plus swapping out the sprites should work.",
           "pastedContents": {}
         },
@@ -6761,102 +6857,6 @@
         },
         {
           "display": "MAke the grenade \"boucne\" more obvious by having it travel higher in the Z-direction and have a shadow as it travels, and bounces a couple times.  It should feel like it's going about 10 \"Feet\" in the air, so it can go over crates but not walls.\n\nAlso make it look like a red-and-white frag grenade.",
-          "pastedContents": {}
-        },
-        {
-          "display": "upgrade bullet damage to be 15 instead of 10",
-          "pastedContents": {}
-        },
-        {
-          "display": "let's scale that down to 45%.",
-          "pastedContents": {}
-        },
-        {
-          "display": "change the art so the crates are wood colored",
-          "pastedContents": {}
-        },
-        {
-          "display": "Grenades should have an inheritance factor that's elss than 100%.  Maybe 70%",
-          "pastedContents": {}
-        },
-        {
-          "display": "Turn this setting off for rifle bullets.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Get rid of all the creates on the map except one.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Add a setting that, if true, makes it so projectile velocity is modified by the player velocity at the time it was fired or thrown.  Set it to true so I can test it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "All but the left-most, bottomest crate in our map.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Why does turret fire seem to go through the crates, but player fire does not?  Are turret bullets not kinetic?",
-          "pastedContents": {}
-        },
-        {
-          "display": "grenade damage (and all explosive damage) should be stopped by Walls because Walls are \"full coverage\".  Later there will be partial-coverage obstacles that bounce projectiles but don't stop explosive damage (also Grenades will lob over those), but right now we just have walls, which are full coverage.\n\nImplement these two modes of obstacles.\n\nAdd a couple crates (partial-coverage) to our map, so the player can hide behind them and lob grenades over",
-          "pastedContents": {}
-        },
-        {
-          "display": "Move all the logging stuff to the right so it doesn't conflict with Map.  Get rid of \"turret health\" and \"player health\" from that list.  Turn on-screen metrics OFF by default.\n\nUnder that, list the controls.\n\nInclude \"LShift\" for Grenade.   Include back-tick (\"`\") for \"debug mode\" and that should turn on the on-screen metrics.\n\nThen make me a Grenade feature.  Player has 2 grenades in inventory to start.  When they throw it, it \"lobs\" and then after a couple seconds, explodes with radius.  It does 90 damage.",
-          "pastedContents": {}
-        },
-        {
-          "display": "The soldier needs to be closer to top-down, but not totally top-down.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Arrow looks great, now make it a chevron and make it semi-transparent red",
-          "pastedContents": {}
-        },
-        {
-          "display": "Player looks weird, I want it at a 3/4 view.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Draw the arrow with vectors so it alwyas looks right, and is configurable.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Update the player to look more like @player_example.png ",
-          "pastedContents": {}
-        },
-        {
-          "display": "Playre should be slightly less top-town, so you can actually see its shape as it's running.",
-          "pastedContents": {}
-        },
-        {
-          "display": "the crosshair is a greater-than sign that's pointing in one direction always.  I want it to rotate around the player, and always point AWAY from the player.  also rename it to Aiming Reticle.",
-          "pastedContents": {}
-        },
-        {
-          "display": "top-left turret is too close to the wall.\n\nalso make the player look more like an Infantry unit with a helmet and a muzzle flare.\n\nalso make it so that it has a few animation frames, so when it's moving it'll animate a run-in-place motion.",
-          "pastedContents": {}
-        },
-        {
-          "display": "what does this.speed mean",
-          "pastedContents": {}
-        },
-        {
-          "display": "make the player more visible and larger.  make the crosshair more of a V or greater-than shape.   make the bullets about 100% larger.   make the floor tile a grey, not as dark as walls, to give us some contrast.",
-          "pastedContents": {}
-        },
-        {
-          "display": "My turret, bullet, and player assets are no longer working.  Nake me some new ones.",
-          "pastedContents": {}
-        },
-        {
-          "display": "walls seem invisible:   also this:  Compiled with problems:X\n\nERROR\n\nunable to locate '/Users/dorkitude/a/dev/flagger/src/assets' glob",
-          "pastedContents": {}
-        },
-        {
-          "display": "Bring Tiled into this game and make me a simple map using their format.  It should have 3 turrets and a couple of turns.  Walls around the outside.",
           "pastedContents": {}
         }
       ],
