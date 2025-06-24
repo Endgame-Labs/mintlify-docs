@@ -1,5 +1,5 @@
 {
-  "numStartups": 1020,
+  "numStartups": 1024,
   "installMethod": "global",
   "autoUpdates": true,
   "editorMode": "vim",
@@ -15,10 +15,10 @@
     "claude-opus-welcome": 214,
     "# for memory": 1009,
     "install-github-app": 553,
-    "permissions": 1001,
-    "drag-and-drop-images": 1003,
+    "permissions": 1022,
+    "drag-and-drop-images": 1024,
     "double-esc": 1005,
-    "continue": 1002,
+    "continue": 1023,
     "custom-commands": 999,
     "shift-tab": 1006
   },
@@ -3828,6 +3828,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "difference between kill -9 and kill -QUIT",
+          "pastedContents": {}
+        },
+        {
           "display": "show me that code.",
           "pastedContents": {}
         },
@@ -4294,16 +4298,6 @@
         {
           "display": "# TutuItem #4: write all threads to an analytics table.  see END-4027 for details.\n\n## Status: in_progress\n\n## Description:\nmake sure you create a new branch off main to start the work.  tie the branch to that linear ticket.   \n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n",
           "pastedContents": {}
-        },
-        {
-          "display": "git rid of these dependencies on old linter which is gone\n\n[Pasted text #1 +24 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "__________________________________________________________________________________ ERROR collecting briefs/prosaic/test_relationships.py ___________________________________________________________________________________\nImportError while importing test module '/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/prosaic/test_relationships.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../../.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs/prosaic/test_relationships.py:9: in <module>\n    from briefs.prosaic.prosaic_engine import Prosaic\nbriefs/prosaic/prosaic_engine.py:22: in <module>\n    from .parser_linter import ParserLinter, create_parser_linting_prompt\nE   ModuleNotFoundError: No module named 'briefs.prosaic.parser_linter'\n_____________________________________________________________________________________ ERROR collecting tests/test_line_terminators.py ______________________________________________________________________________________\nImportError while importing test module '/Users/dorkitude/a/dev/cerebro/src/briefs/tests/test_line_terminators.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../../.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests/test_line_terminators.py:8: in <module>\n    from briefs.prosaic.prosaic_engine import Prosaic\nbriefs/prosaic/prosaic_engine.py:22: in <module>\n    from .parser_linter import ParserLinter, create_parser_linting_prompt\nE   ModuleNotFoundError: No module named 'briefs.prosaic.parser_linter'\n===================================================================================================== warnings summary ====================================================================================================="
-            }
-          }
         }
       ],
       "mcpContextUris": [],
@@ -4322,17 +4316,7 @@
         "thread_message_analytics.yaml"
       ],
       "exampleFilesGeneratedAt": 1750441361804,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 2.0948785500000007,
-      "lastAPIDuration": 182592,
-      "lastDuration": 72976551,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 7008,
-      "lastTotalOutputTokens": 3563,
-      "lastTotalCacheCreationInputTokens": 72629,
-      "lastTotalCacheReadInputTokens": 317514,
-      "lastSessionId": "2e94ba1b-722d-432e-b22c-c8e155d720cb"
+      "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
