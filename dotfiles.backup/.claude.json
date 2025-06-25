@@ -1,5 +1,5 @@
 {
-  "numStartups": 1029,
+  "numStartups": 1031,
   "installMethod": "global",
   "autoUpdates": true,
   "editorMode": "vim",
@@ -13,13 +13,13 @@
     "todo-list": 992,
     "enter-to-steer-in-relatime": 1011,
     "claude-opus-welcome": 214,
-    "# for memory": 1009,
+    "# for memory": 1031,
     "install-github-app": 553,
     "permissions": 1022,
     "drag-and-drop-images": 1024,
     "double-esc": 1026,
     "continue": 1023,
-    "custom-commands": 999,
+    "custom-commands": 1030,
     "shift-tab": 1027
   },
   "memoryUsageCount": 4,
@@ -3828,6 +3828,44 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Update the threads CLI README to explain the ways to use the new message-export API.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "Can you add this style stuff to the HTML?   Save it as a local file in the proper threads-level directory so it can be referenced in the python code:\n\n\n[Pasted text #1 +294 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "<style>\n/* PDF Export Styles - Light Theme */\n/* Converted from Chakra UI dark theme components to light theme for PDFs */\n\n/* Base Typography */\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.625;\n  color: #1a202c; /* Dark gray for main text */\n  background-color: #ffffff;\n  margin: 0;\n  padding: 20px;\n}\n\n/* Headings */\nh1 {\n  font-size: 2.75rem;\n  font-weight: 600;\n  letter-spacing: -0.025em;\n  line-height: 1.2;\n  margin-bottom: 3.5rem;\n  margin-top: 3rem;\n  color: #1a202c;\n}\n\nh1:first-of-type {\n  margin-top: 0;\n}\n\nh2 {\n  font-size: 1.5rem;\n  font-weight: 600;\n  letter-spacing: -0.025em;\n  line-height: 1.625;\n  margin-bottom: 1rem;\n  margin-top: 2rem;\n  color: #1a202c;\n}\n\nh3 {\n  font-size: 1.25rem;\n  font-weight: 600;\n  line-height: 1.625;\n  margin-bottom: 1rem;\n  margin-top: 2rem;\n  color: #1a202c;\n}\n\nh4 {\n  font-size: 1.125rem;\n  font-weight: 600;\n  line-height: 1.625;\n  margin-bottom: 1rem;\n  margin-top: 2rem;\n  color: #1a202c;\n}\n\nh5 {\n  font-size: 1rem;\n  font-weight: 600;\n  line-height: 1.625;\n  margin-bottom: 1rem;\n  margin-top: 2rem;\n  color: #1a202c;\n}\n\nh6 {\n  font-size: 1rem;\n  font-weight: 500;\n  line-height: 1.625;\n  margin-bottom: 1rem;\n  margin-top: 2rem;\n  color: #1a202c;\n}\n\n/* Paragraphs */\np {\n  font-size: 1rem;\n  line-height: 1.625;\n  margin-top: 0.75rem;\n  margin-bottom: 0.75rem;\n  color: #2d3748;\n}\n\n/* Links */\na {\n  color: #2b6cb0;\n  text-decoration: underline;\n  text-decoration-color: #cbd5e0;\n  text-underline-offset: 4px;\n}\n\na:hover {\n  text-decoration-color: #718096;\n}\n\n/* Strong/Bold */\nstrong, b {\n  font-weight: 700;\n}\n\n/* Blockquotes */\nblockquote {\n  border-left: 6px solid #e2e8f0;\n  font-size: 1.25rem;\n  font-weight: 500;\n  line-height: 1.75rem;\n  margin-left: 0.375rem;\n  margin-top: 0.75rem;\n  margin-bottom: 0.75rem;\n  padding-left: 1.25rem;\n  padding-right: 1.25rem;\n  padding-top: 0.375rem;\n  padding-bottom: 0.375rem;\n  position: relative;\n  color: #4a5568;\n}\n\nblockquote > p {\n  margin-top: 0;\n  margin-bottom: 0;\n}\n\n/* Horizontal Rules */\nhr {\n  border: none;\n  border-top: 1px solid #e2e8f0;\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n}\n\n/* Lists */\nul, ol {\n  font-size: 1rem;\n  line-height: 1.625;\n  margin-bottom: 1.5rem;\n  margin-left: 0.75rem;\n  margin-top: 0.75rem;\n  padding-left: 0.5rem;\n}\n\nli {\n  line-height: 1.625;\n  margin-left: 1rem;\n  padding-left: 0.5rem;\n  margin-bottom: 0.5rem;\n}\n\n/* Task List Items (GitHub Flavored Markdown) */\nli.task-list-item {\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  gap: 1rem;\n  list-style-type: none;\n  margin-left: 0;\n  padding-left: 0;\n}\n\ninput[type=\"checkbox\"] {\n  margin-right: 0.5rem;\n}\n\n/* Tables */\ntable {\n  color: #2d3748;\n  font-size: 0.875rem;\n  line-height: 1.75rem;\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n  border-collapse: separate;\n  border-spacing: 0;\n  width: 100%;\n}\n\nth {\n  background-color: #f7fafc;\n  border-bottom: 1px solid #e2e8f0;\n  border-right: 1px solid #e2e8f0;\n  border-top: 1px solid #e2e8f0;\n  color: #1a202c;\n  font-size: 0.875rem;\n  font-weight: 600;\n  padding-left: 1rem;\n  padding-right: 2rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  text-align: left;\n}\n\nth:first-child {\n  border-left: 1px solid #e2e8f0;\n  border-top-left-radius: 0.375rem;\n}\n\nth:last-child {\n  border-top-right-radius: 0.375rem;\n}\n\ntd {\n  background-color: #fafafa;\n  border-bottom: 1px solid #e2e8f0;\n  border-right: 1px solid #e2e8f0;\n  color: #2d3748;\n  font-size: 0.875rem;\n  font-weight: normal;\n  line-height: 1.5rem;\n  padding-left: 1rem;\n  padding-right: 2rem;\n  padding-top: 0.5rem;\n  padding-bottom: 0.5rem;\n  text-align: left;\n  vertical-align: top;\n}\n\ntd:first-child {\n  border-left: 1px solid #e2e8f0;\n}\n\ntr:last-child td:first-child {\n  border-bottom-left-radius: 0.375rem;\n}\n\ntr:last-child td:last-child {\n  border-bottom-right-radius: 0.375rem;\n}\n\n/* Code blocks */\ncode {\n  background-color: #f7fafc;\n  border-radius: 0.25rem;\n  color: #2d3748;\n  font-family: Consolas, Monaco, \"Andale Mono\", \"Ubuntu Mono\", monospace;\n  font-size: 0.875em;\n  padding: 0.125rem 0.25rem;\n}\n\npre {\n  background-color: #f7fafc;\n  border-radius: 0.375rem;\n  color: #2d3748;\n  font-family: Consolas, Monaco, \"Andale Mono\", \"Ubuntu Mono\", monospace;\n  font-size: 0.875rem;\n  line-height: 1.5;\n  margin: 1rem 0;\n  overflow-x: auto;\n  padding: 1rem;\n}\n\npre code {\n  background-color: transparent;\n  border-radius: 0;\n  padding: 0;\n}\n\n/* Inline styles */\nem {\n  font-style: italic;\n}\n\n/* Images */\nimg {\n  max-width: 100%;\n  height: auto;\n  display: block;\n  margin: 1rem 0;\n}\n\n/* Print-specific optimizations */\n@media print {\n  body {\n    padding: 0;\n  }\n  \n  /* Avoid page breaks inside these elements */\n  h1, h2, h3, h4, h5, h6 {\n    page-break-after: avoid;\n  }\n  \n  p, blockquote, table, pre {\n    page-break-inside: avoid;\n  }\n  \n  /* Ensure tables don't break across pages if possible */\n  table {\n    page-break-inside: auto;\n  }\n  \n  tr {\n    page-break-inside: avoid;\n    page-break-after: auto;\n  }\n}\n</style>"
+            }
+          }
+        },
+        {
+          "display": "Get rid of \"Content\" and the header above \"Content\" in all document exports.   I don't want metadata or the \"Message Export header\"\n\nJust drop into the content, with the title of the thread being an H1.",
+          "pastedContents": {}
+        },
+        {
+          "display": "There has to be a way to do this using libraries to convert from raw markdown into properly-formatted docx or PDF.  If not, then translate to HTML first as an intermediate step.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Get rid of \"Content\" and the header above \"Content\" in all document exports.\n\nTranslate from Markdown script language to rich text before DOCX or PDF export.  People reading PDFs don't want to see **starstar** or #heading, but rather just the rich interpreted versions of those things.",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do I make it go into interactive?\n\nuv run threads-cli --org-id=6027 --account-id=0015G00001u4MzpQAE --message \"capital of England\" --gpt4-1\n\n\njust gives me an answer and then exits",
+          "pastedContents": {}
+        },
+        {
+          "display": "Update threads CLI so I can test this manually.",
+          "pastedContents": {}
+        },
+        {
           "display": "Show me how those articles flow to actual production.",
           "pastedContents": {}
         },
@@ -4265,38 +4303,6 @@
         },
         {
           "display": "# TutuItem #4: write all threads to an analytics table.  see END-4027 for details.\n\n## Status: in_progress\n\n## Description:\nmake sure you create a new branch off main to start the work.  tie the branch to that linear ticket.   \n\n## Context:\n\n\n## Steps:\n- [done] Step #15: Examine the message_feedback table structure in PR #4883\n- [done] Step #16: Create analytics table definition in mesh for thread messages\n- [done] Step #17: Run make bq-reclone in mesh directory\n- [done] Step #18: Implement write logic in agno manager\n- [done] Step #19: Test the implementation\n- [pending] Step #20: pull main merge it in, try again on make bq-reclone;  abort if it works\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add \"Description of the task\"\n```\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\ntutu add-step <item_id> \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "!open .",
-          "pastedContents": {}
-        },
-        {
-          "display": "Using only `grep` and `rg` to search the *.prose files in this folder:\n\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n</agent_instructions>\n**User question**\n\n\nWho do I know who knows Jon Frisby?",
-          "pastedContents": {}
-        },
-        {
-          "display": "!pwd",
-          "pastedContents": {}
-        },
-        {
-          "display": "Using only `grep` and `rg` to search the files in this folder:\n\n-------------------\n<agent_instructions>\n* Pretend you are an AI CRM chat.  The user will ask you questions about their customers and deals they're working\n</agent_instructions>\n**User question**\n\n\nWho do I know who knows Jon Frisby?",
-          "pastedContents": {}
-        },
-        {
-          "display": "ultrathink.\n\nrun this command, respond to any errors (including code changes), and run it again until it works.\n\nyou'll know it worked because the output folder will have full length files.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\n`uv run prosaic parse input/`\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "fix merge conflicts and whatever",
-          "pastedContents": {}
-        },
-        {
-          "display": "where should i start if i wanted to verify your solution is complete?",
-          "pastedContents": {}
-        },
-        {
-          "display": "continue",
           "pastedContents": {}
         }
       ],
