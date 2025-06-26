@@ -20,10 +20,10 @@
     "double-esc": 1068,
     "continue": 1065,
     "custom-commands": 1061,
-    "shift-tab": 1070
+    "shift-tab": 1071
   },
   "memoryUsageCount": 4,
-  "promptQueueUseCount": 40,
+  "promptQueueUseCount": 54,
   "autoUpdaterStatus": "enabled",
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
   "hasCompletedOnboarding": true,
@@ -6425,6 +6425,58 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "make it so the shield absorbs 100% of damage if it's at 100% full, and goes down linearly from there.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "when the boss is let out and the crates explode, give him a speech bubble that says  \"NOW YOU DIE!!\"  for about 3 seconds before he becomes aggressive",
+          "pastedContents": {}
+        },
+        {
+          "display": "on level 2 Open Field, don't allow miniboss to do anything until the boxes are destroyed.",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix:  Compiled with problems:X\n\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 757:4-20\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(757,5)\n      TS2349: This expression is not callable.\n  Type 'Arc' has no call signatures.\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "make it so after MiniBoss heals he goes into super mode.\n\nin super mode, his sky bullets happen twice as often, and he moves 25% faster.",
+          "pastedContents": {}
+        },
+        {
+          "display": "during the potion-drinking, surround him with a white shield that flashes white-and-green and give him a speech bubble that says \"I COULD DO THIS ALL DAY, LITTLE THEM!!!\"    and make the potion sequence last 3s longer, and make the health bar slowly fill up during the drinking.\n\nthen adjust your tests to be headless (Just load the app, click a few nav items, look for console errors)\n\nthen run tests and fix what breaks",
+          "pastedContents": {}
+        },
+        {
+          "display": "make boss hitbox about 10% smaller and move it to the right about one half-radius",
+          "pastedContents": {}
+        },
+        {
+          "display": "don't let him start shooting until the countdown is over",
+          "pastedContents": {}
+        },
+        {
+          "display": "also his hitbox is too far to the southeast.  needs to be moved about 1 radius up and to the left, because his sprite is up there.",
+          "pastedContents": {}
+        },
+        {
+          "display": "he should do the rain attack more often.\n\nhe should also, if he gets close enough, shoot a flamethrower.",
+          "pastedContents": {}
+        },
+        {
+          "display": "he should keep runnig toward me.  move his speed up to 50.  also the warnings work but there are no missiles coming down.  when they do, it should be at about 800ms, not 2000ms.",
+          "pastedContents": {}
+        },
+        {
+          "display": "rather than him shooting guns, have him rain down a torrent of bullets.  but 2s before they land, the map is marked with their eventual landing spot, so the player has a bit of time to dodge the shots.\n\nalso make him rotate and move more slowly than he currently does.\n\nfinally, give me a MiniBoss-only map so I can debug his gameplay.",
+          "pastedContents": {}
+        },
+        {
           "display": "grenades don't hurt MiniBoss even after crates are gone.  also he doesn't ever rotate or shoot anything.",
           "pastedContents": {}
         },
@@ -6812,58 +6864,6 @@
         },
         {
           "display": "The whole game is a little fast.  Let's dial the speed of everything down by 20%",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and push all my changes",
-          "pastedContents": {}
-        },
-        {
-          "display": "my player bullet sprites are also being rendered slightly to the southeast, maybe 1 hitbox diameter or so.",
-          "pastedContents": {}
-        },
-        {
-          "display": "grenade physics is too offset.  sprite is about 1 diameter to the south-east of where it should be.",
-          "pastedContents": {}
-        },
-        {
-          "display": "clicking the box freezes game:\n\n\nplayer.ts:68   - Frame UV: 0 0 0.25 1\nplayer.ts:86 🎮 Debug rectangle created at: 96 576\nphaser.js:125610 Uncaught TypeError: Cannot read properties of undefined (reading 'clear')\n    at World.postUpdate (phaser.js:125610:22)\n    at EventEmitter.emit (phaser.js:1902:35)\n    at Systems.step (phaser.js:49065:16)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)",
-          "pastedContents": {}
-        },
-        {
-          "display": "Nope, he still only animates when I'm rotating.",
-          "pastedContents": {}
-        },
-        {
-          "display": "He only animates when rotating, not when walking with just WASD.",
-          "pastedContents": {}
-        },
-        {
-          "display": "- and fix this:\n\n\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 229:23-30\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(229,24)\n      TS2304: Cannot find name 'Grenade'.",
-          "pastedContents": {}
-        },
-        {
-          "display": "All the physics stuff you added is pretty good, but:\n\n- get rid of the projectile and player-movement physics (the green lines) as they're too distracting.\n- put all these physics things behind the same flag, \"showphysics\", which is represented by the checkbox in the DEBUG area.\n- use localstorage so that setting becomes sticky between refreshes.",
-          "pastedContents": {}
-        },
-        {
-          "display": "That worked for rotation, but it doesn't work for normal walking (without rotating)\n\nAlso, slow the animation speed down by about 50%",
-          "pastedContents": {}
-        },
-        {
-          "display": "When the player is actively running or rotating, their sprite should animate.  Right now we're doing a good job switching between northwest, north, southeast, etc.  But when we have one of those directions, it seems only to show the first frame of the animation strip, instead of moving between them.",
-          "pastedContents": {}
-        },
-        {
-          "display": "when my player died, the grenade stopped acting normal.  it kept moving which is good, but then it just sort of flew through walls, and seemed not to do damage.\n\n\nmeanwhile, let's set showphyics to true by default.\n\nafter that, we have an offset issue where the showphysics circle / hitbox is a little off center.  it's right by his feet, which is good, but it's a little too far to the left (west) and thus the player sprite needs to move (relative to the hitbox circle) about one-radius to the west.",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and push all my changes",
-          "pastedContents": {}
-        },
-        {
-          "display": "sometimes when i kill a tesla coil, the game freezes and i see this:\n\nUncaught TypeError: Cannot read properties of undefined (reading 'wallLayer')\n    at TeslaCoilTurret.hasLineOfSight (teslaCoilTurret.ts:265:37)\n    at TeslaCoilTurret.tryFireAtPlayer (teslaCoilTurret.ts:138:29)\n    at Function.eval (teslaCoilTurret.ts:151:26)\n    at Clock.update (phaser.js:210733:36)\n    at EventEmitter.emit (phaser.js:1923:33)\n    at Systems.step (phaser.js:49061:16)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)",
           "pastedContents": {}
         }
       ],
