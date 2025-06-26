@@ -38,7 +38,7 @@ os() {
     return $exit_code
 }
 
-# Claude wrapper with custom terminal title
+# Claude YOLO wrapper with custom terminal title
 cly() {
     local folder=${PWD:t}  # Just the current folder name
     
@@ -75,7 +75,7 @@ _claude_precmd() {
     _set_title "%~"
 }
 
-# Claude wrapper without dangerous permissions
+# Claude wrapper without dangerous permissions  (i.e. non-YOLO)
 cla() {
     local folder=${PWD:t}  # Just the current folder name
     
