@@ -25,6 +25,8 @@ alias gp="git pull"
 alias gpp="git pull && git push"
 alias gcam="git commit -am" # commit all changes and message
 
+alias me="make everything"
+
 
 # TUTU aliases
 alias tl="tutu list"
