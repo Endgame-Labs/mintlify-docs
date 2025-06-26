@@ -1,5 +1,5 @@
 {
-  "numStartups": 1063,
+  "numStartups": 1064,
   "installMethod": "global",
   "autoUpdates": true,
   "editorMode": "vim",
@@ -15,7 +15,7 @@
     "claude-opus-welcome": 214,
     "# for memory": 1054,
     "install-github-app": 553,
-    "permissions": 1043,
+    "permissions": 1064,
     "drag-and-drop-images": 1045,
     "double-esc": 1047,
     "continue": 1044,
@@ -3828,6 +3828,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Make me a new Linear issue, set to in-progress, call it \"Tiny Guardrails\", description \"Additional sgent instructions that specifically aim to stop hallucinations of Names, URLs, contact details, or metrics.\"\n\nmake a new branch and name it after this new issue.",
+          "pastedContents": {}
+        },
+        {
           "display": "Let's not make the mesh engine optional.",
           "pastedContents": {}
         },
@@ -4305,10 +4309,6 @@
         {
           "display": "Is it true that we only look at Gong transcripts for companies who are an Account in the Org's Salesforce?",
           "pastedContents": {}
-        },
-        {
-          "display": "/usage ",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4328,16 +4328,16 @@
       ],
       "exampleFilesGeneratedAt": 1750441361804,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.0037288000000000004,
-      "lastAPIDuration": 21579,
-      "lastDuration": 1035312,
+      "lastCost": 0.016879199999999997,
+      "lastAPIDuration": 711127,
+      "lastDuration": 514834,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 3971,
-      "lastTotalOutputTokens": 138,
+      "lastTotalInputTokens": 17974,
+      "lastTotalOutputTokens": 625,
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "0230956d-69d2-45c5-b28d-14a111f5d6f6"
+      "lastSessionId": "fb0ab3f8-1e91-4b10-86d3-1a590f502e9c"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
