@@ -1,5 +1,5 @@
 {
-  "numStartups": 1081,
+  "numStartups": 1083,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -6446,6 +6446,56 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "soldiers in pursuit mode should do smart pathfinding to get to player, not just smash their faces into a wall.",
+          "pastedContents": {}
+        },
+        {
+          "display": "why fail \nFlagger Game Tests › Phaser framework loads correctly\n1.4s\ngame.spec.ts:32",
+          "pastedContents": {}
+        },
+        {
+          "display": "why does it say he's taking damage frmo \"StandardTurret\" instead of from the player's AR?",
+          "pastedContents": {}
+        },
+        {
+          "display": "super mode speed increase should be halved",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +37 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (105 -> 90 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (90 -> 75 HP)\nminiBoss.ts:254 💊 MiniBoss starting potion drink at 75/300 HP\nplayer.ts:396 Player took 33 damage (25 shield, 8 health) from MiniBoss\n5mainScene.ts:308 🛡️ MiniBoss deflected bullet during healing\n3mainScene.ts:308 🛡️ MiniBoss deflected bullet during healing\nminiBoss.ts:350 ⚡ MiniBoss entering SUPER MODE! Health: 255/300, New speed: 60, Healing every 250ms\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nminiBoss.ts:497 💥 MiniBoss took 75 damage from Grenade (255 -> 180 HP)\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nplayer.ts:396 Player took 33 damage (33 shield, 0 health) from MiniBoss\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nplayer.ts:396 Player took 33 damage (22 shield, 11 health) from MiniBoss\nplayer.ts:396 Player took 33 damage (15 shield, 18 health) from MiniBoss\n2RainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nplayer.ts:396 Player took 33 damage (10 shield, 23 health) from MiniBoss\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nFlamethrower.ts:30 🔥 Flamethrower attack starting\n6player.ts:396 Player took 3 damage (1 shield, 2 health) from MiniBoss_Flamethrower\n6RainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nplayer.ts:396 Player took 33 damage (30 shield, 3 health) from MiniBoss\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (180 -> 165 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (165 -> 150 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (150 -> 135 HP)\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (135 -> 120 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (120 -> 105 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (105 -> 90 HP)\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (90 -> 75 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (75 -> 60 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (60 -> 45 HP)\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (50 bullets - SUPER MODE!)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (45 -> 30 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage from StandardTurret (30 -> 15 HP)\nminiBoss.ts:497 💥 MiniBoss took 15 damage f"
+            }
+          }
+        },
+        {
+          "display": "I'm playing it right now and I see no healing happening.",
+          "pastedContents": {}
+        },
+        {
+          "display": "in MiniBoss second phase he should be self-healing like we discussed",
+          "pastedContents": {}
+        },
+        {
+          "display": "Rain of Bullets should have an additional 150ms firingd elay",
+          "pastedContents": {}
+        },
+        {
+          "display": "player should be able to strafe WHILE moving forward or backward",
+          "pastedContents": {}
+        },
+        {
+          "display": "when MiniBoss is in his second phase (post potion), give him 1hp healing every 250ms, including the little healing text",
+          "pastedContents": {}
+        },
+        {
           "display": "EnemySoldiers are gettting stuck on walls.  You'll know they're stuck because their X changes but not their Y, or their Y changes and not their X.\n\nLet's add that kind of stuckness to the stuckness detection.",
           "pastedContents": {}
         },
@@ -6847,50 +6897,6 @@
         },
         {
           "display": "push all changes",
-          "pastedContents": {}
-        },
-        {
-          "display": "that seems to have worked, but rather than _not_ spawn the grenade, i'd rather if it launched from near the player's feet and bounced off the wall",
-          "pastedContents": {}
-        },
-        {
-          "display": ", it happens with grenades too and they aren't that fast.  it's simply allowing them to cliip through walls\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "I can still shoot straight through the wall if it's directly north from my player.",
-          "pastedContents": {}
-        },
-        {
-          "display": "\nERROR in ./src/scripts/objects/player.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts) 475:34-43\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts(475,35)\n      TS2339: Property 'wallLayer' does not exist on type 'Scene'.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "CLAUDE md says never to do that yourself.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "this seems only to happen when the wall is to the north \n",
-          "pastedContents": {}
-        },
-        {
-          "display": "If I run directly into a wall and face it, I'm able to shoot through it and throw grenades through it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "When I'm very close to the wall, and facing the wall, my bullets and grenades seem to go through it and launch to the other side.  Why?",
-          "pastedContents": {}
-        },
-        {
-          "display": "put the player's health and shield bars under the player, and make them about 20% thinner and 20% less wide.",
-          "pastedContents": {}
-        },
-        {
-          "display": "for Player, Add a second kind of health bar that's blue and is called Shield.\n\nIt should go from 0 to 100.  It should auto-refill itself after not taking damage for 1 second.  If Shield is totally empty, it should take 5 seconds to refill.\n\nIf Shield is at 100 when the damage first occurs, it absorbs 80% of incoming damage as Shield Damage (the remaining 20% damage hits the player's health).\nIf Shield is at 50, it only absorbs 40% of the incoming damage.\n\nImplement this, and set the Player's default health to be 100 instead of 200.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Change that variance to be 20% not 10%\n\npush all my changes",
           "pastedContents": {}
         }
       ],
