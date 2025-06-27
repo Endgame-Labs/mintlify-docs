@@ -1,5 +1,5 @@
 {
-  "numStartups": 1074,
+  "numStartups": 1077,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -9,10 +9,10 @@
     "theme-command": 1053,
     "prompt-queue": 218,
     "git-worktrees": 1048,
-    "todo-list": 1034,
+    "todo-list": 1075,
     "enter-to-steer-in-relatime": 1052,
     "claude-opus-welcome": 214,
-    "# for memory": 1054,
+    "# for memory": 1076,
     "install-github-app": 553,
     "permissions": 1064,
     "drag-and-drop-images": 1066,
@@ -3827,6 +3827,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "no mention of outreach, gong, salesloft?",
+          "pastedContents": {}
+        },
+        {
+          "display": "Which formats of email-to-Salesforce activity/task syncing do we currently seem to support first-class?",
+          "pastedContents": {}
+        },
+        {
           "display": "Make me a new Linear issue, set to in-progress, call it \"Tiny Guardrails\", description \"Additional sgent instructions that specifically aim to stop hallucinations of Names, URLs, contact details, or metrics.\"\n\nmake a new branch and name it after this new issue.",
           "pastedContents": {}
         },
@@ -4300,14 +4308,6 @@
         {
           "display": "compare my branch to main to see what I've done.\n\nMAke sure I'm doing Async properly in all the new stuff.\n\nAlso inspect the rest of our python stack (the briefs folder) to see if I'm conforming to the way we do the other mesh stuff, RE sync vs async",
           "pastedContents": {}
-        },
-        {
-          "display": "But we do ingest and fact-extract them?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Is it true that we only look at Gong transcripts for companies who are an Account in the Org's Salesforce?",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4326,17 +4326,7 @@
         "thread_message_analytics.yaml"
       ],
       "exampleFilesGeneratedAt": 1750441361804,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.016879199999999997,
-      "lastAPIDuration": 711127,
-      "lastDuration": 514834,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 17974,
-      "lastTotalOutputTokens": 625,
-      "lastTotalCacheCreationInputTokens": 0,
-      "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "fb0ab3f8-1e91-4b10-86d3-1a590f502e9c"
+      "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -6186,6 +6176,14 @@
     "/Users/dorkitude/a/dev/tutu": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "I still need a way to list _all_ across all directories, and to start all as well.  Perhaps add a `--everywhere` flag that does this.",
+          "pastedContents": {}
+        },
+        {
+          "display": "By default, \"tutu list\" and \"tutu start all commands should only operate within the context of the current working directorya nd its subdirectories.  Meaning it should filter down the world of all TutuItems into just the ones that fit in the folder hierarchy.",
+          "pastedContents": {}
+        },
         {
           "display": "update tutu status table view to have the full path to working directory;  also make sure the description field can wrap and not truncate.",
           "pastedContents": {}
