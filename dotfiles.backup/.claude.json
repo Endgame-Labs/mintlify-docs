@@ -1,5 +1,5 @@
 {
-  "numStartups": 1073,
+  "numStartups": 1074,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -22,7 +22,7 @@
     "shift-tab": 1071
   },
   "memoryUsageCount": 4,
-  "promptQueueUseCount": 55,
+  "promptQueueUseCount": 56,
   "autoUpdaterStatus": "enabled",
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
   "hasCompletedOnboarding": true,
@@ -6187,6 +6187,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "update tutu status table view to have the full path to working directory;  also make sure the description field can wrap and not truncate.",
+          "pastedContents": {}
+        },
+        {
           "display": "# TutuItem #23: Improvements to tutu list table\n\n## Status: in_progress\n\n## Working Directory: /Users/dorkitude/a/dev/tutu\n\n## Description:\nMake the \"title\" field wrap so we can see the entire title of each item.\n\nAdd a column for the originating directory.\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
           "pastedContents": {}
         },
@@ -6382,17 +6386,7 @@
         "README.md",
         "pyproject.toml"
       ],
-      "exampleFilesGeneratedAt": 1750973326947,
-      "lastCost": 2.7114217499999995,
-      "lastAPIDuration": 261954,
-      "lastDuration": 6275149,
-      "lastLinesAdded": 20,
-      "lastLinesRemoved": 14,
-      "lastTotalInputTokens": 15145,
-      "lastTotalOutputTokens": 7356,
-      "lastTotalCacheCreationInputTokens": 47107,
-      "lastTotalCacheReadInputTokens": 867371,
-      "lastSessionId": "35593f79-0169-42de-a3a5-53e60efb31e8"
+      "exampleFilesGeneratedAt": 1750973326947
     },
     "/Users/dorkitude/a/dev/c2": {
       "allowedTools": [],
@@ -6433,6 +6427,18 @@
     "/Users/dorkitude/a/dev/flagger": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "the EnemySoldier's weapon is a shotgun.  Update the names accordingly in the code, and reduce its range to 8 crates width.",
+          "pastedContents": {}
+        },
+        {
+          "display": "reduce shotgun range to about 8 crates width",
+          "pastedContents": {}
+        },
+        {
+          "display": "during countdown, show the map name above the countdown number\n\nalso \"Hold on to your butts...\"",
+          "pastedContents": {}
+        },
         {
           "display": "don't show physics by default either",
           "pastedContents": {}
@@ -6861,18 +6867,6 @@
         },
         {
           "display": "The amount of blood should be less if I was harmed at full health, and more if I was harmed at low health.  Create 4 categories of blood volume based on my health level at the time of damage.",
-          "pastedContents": {}
-        },
-        {
-          "display": "all blood should be moved slightly farther north, so it's closer to where my hitbox was at the time of damage.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Blood should happen regardless the damage type.  Electric and explosive should all create blood.",
-          "pastedContents": {}
-        },
-        {
-          "display": "The blood should stay on the ground near where I got hit, then fade.",
           "pastedContents": {}
         }
       ],
