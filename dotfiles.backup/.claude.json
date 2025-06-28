@@ -1,12 +1,12 @@
 {
-  "numStartups": 1093,
+  "numStartups": 1095,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 1071,
+    "shift-enter": 1095,
     "memory-command": 770,
-    "theme-command": 1053,
+    "theme-command": 1094,
     "prompt-queue": 218,
     "git-worktrees": 1079,
     "todo-list": 1075,
@@ -3522,7 +3522,17 @@
         "backup_a.sh",
         ".zshrc"
       ],
-      "exampleFilesGeneratedAt": 1751080276965
+      "exampleFilesGeneratedAt": 1751080276965,
+      "lastCost": 25.01256344999999,
+      "lastAPIDuration": 2414870,
+      "lastDuration": 45174006,
+      "lastLinesAdded": 1873,
+      "lastLinesRemoved": 227,
+      "lastTotalInputTokens": 185987,
+      "lastTotalOutputTokens": 64903,
+      "lastTotalCacheCreationInputTokens": 169163,
+      "lastTotalCacheReadInputTokens": 11552626,
+      "lastSessionId": "726c6cd5-2196-4642-b0ec-3b8a65498b4e"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -6484,6 +6494,48 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "When an Enemy has been in engage mode for 2s without firing, put them back into pathfinder mode so they don't smash into walls.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Makle the floors look more like dirt floor or desert sand, and less like a grey tiled grid.  I don't want tiling on basic floors.",
+          "pastedContents": {}
+        },
+        {
+          "display": "the new physics boxes look good, but they shouldn't be filled in color.  i just want the borders.  also I want them to be smaller squares that fill out the large wall or crate object like a mesh.. with no fill. \n\nalso:  what's a good format for drop tables?",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit my code",
+          "pastedContents": {}
+        },
+        {
+          "display": "/init ",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +19 lines]\n\n\nalso:   When I navigate between Maps in the settings box, it all works fine, except that if I navigate to Pork Tower, I can then no longer navigate anywhere else.",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "MapLibrary created, camera width: 1280\nmainScene.ts:251 Error in MainScene create: TypeError: Cannot read properties of undefined (reading 'setVisible')\n    at MainScene.togglePhysicsDebug (mainScene.ts:884:36)\n    at MapLibrary.loadSettings (mapLibrary.ts:414:20)\n    at new MapLibrary (mapLibrary.ts:83:14)\n    at MainScene.create (mainScene.ts:215:31)\nmainScene.ts:253 Stack trace: TypeError: Cannot read properties of undefined (reading 'setVisible')\n    at MainScene.togglePhysicsDebug (webpack://phaser-project-template/./src/scripts/scenes/mainScene.ts?:884:36)\n    at MapLibrary.loadSettings (webpack://phaser-project-template/./src/scripts/objects/mapLibrary.ts?:414:20)\n    at new MapLibrary (webpack://phaser-project-template/./src/scripts/objects/mapLibrary.ts?:83:14)\n    at MainScene.create (webpack://phaser-project-template/./src/scripts/scenes/mainScene.ts?:215:31)\n    at SceneManager.create (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100333:26)\n    at SceneManager.bootScene (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100228:18)\n    at SceneManager.start (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100921:18)\n    at SceneManager.processQueue (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100019:27)\n    at SceneManager.update (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100273:14)\n    at Game.step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:162800:20)\nmainScene.ts:269 Uncaught TypeError: Cannot read properties of undefined (reading 'update')\n    at MainScene.update (mainScene.ts:269:25)\n"
+            }
+          }
+        },
+        {
+          "display": "show physics mode should also have gridded squares of RED for walls, and Yellow for lobbable objects like crates (i.e. things you can throw grenades over), but not shoot bullets or run through.\n\nAlso once an enemy goes into strafe-fighting mode (i.e. not pathfinding) please erase the waypoints so they don't distract the player who has showphysics on",
+          "pastedContents": {}
+        },
+        {
+          "display": "The macaron that spawns near player shouldn't be hardcoded, but should rather be in the map files.\n\nAlso the random drops from enemies don't seem to be dropping when I kill them.",
+          "pastedContents": {}
+        },
+        {
+          "display": "rename the filenames of the maps to match the map names, but prepend each with \"001\" or \"002\" etc to signify its order in the game levels.",
+          "pastedContents": {}
+        },
+        {
           "display": "EnemySoldier has a 8% chance to drop a Macaron.  TeslaCoil same chance.",
           "pastedContents": {}
         },
@@ -6870,42 +6922,6 @@
         {
           "display": "the crates trapping the minibooss should all disappear as soon as I kill all the other 4",
           "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #22: create MiniBoss on Hotdog Hallway.\n\n## Status: in_progress\n\n## Working Directory: /Users/dorkitude/a/dev/flagger\n\n## Description:\nplayer starts on the outer edge and can make their way toward the center.\n\ncenter has new MiniBoss enemy type.  Make it like the enemy soldier, but about 50% bigger.\n\nIt alternates between shotgun and a rifle that works more like player's rifle.\ninstead of aiming directly at the player, it staggers its aim by up to 20 degrees in either direction.\n\nboss moves about 1/2 the speed of traditional enemies.\n\nboss doesn't patrol, but also never stops chasing the player.\n\nwe call this motion package \"relentless mode\".  it is triggered as soon as the boss sees the player.\n\nonce per life, Boss can drink a potion that fills its health bar back to 75%.  it drinks this potion once its life total reaches 25%.\n\nboss's total life is 300.\n\nwhen boss drinks potion, the text \"*drinks potion*\" appears above its head.  the potion takes 3 seconds to drink.\ngreen plus-animations appear above the boss's head during drinking.\nat the end of the drinking potion animation, remove all text indicators, then make a single \"+200hp\" or \"+164hp\" or however much it is.\n\t\t\t\t\tthis will look like a damage number effect, but will be green and will be a healing number effect.\n\nstore the healing number effect somewhere we can re-use it later for other characters (Player, EnemySoldier, Turrets, etc).\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "do not change the bullet physics, just fix the map.  the map doesn't know it should have walls.  compare to level where walls are prefect.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #22: create MiniBoss on Hotdog Hallway.\n\n## Status: in_progress\n\n## Working Directory: /Users/dorkitude/a/dev/flagger\n\n## Description:\nplayer starts on the outer edge and can make their way toward the center.\n\ncenter has new MiniBoss enemy type.  Make it like the enemy soldier, but about 50% bigger.\n\nIt alternates between shotgun and a rifle that works more like player's rifle.\ninstead of aiming directly at the player, it staggers its aim by up to 20 degrees in either direction.\n\nboss moves about 1/2 the speed of traditional enemies.\n\nboss doesn't patrol, but also never stops chasing the player.\n\nwe call this motion package \"relentless mode\".  it is triggered as soon as the boss sees the player.\n\nonce per life, Boss can drink a potion that fills its health bar back to 75%.  it drinks this potion once its life total reaches 25%.\n\nboss's total life is 300.\n\nwhen boss drinks potion, the text \"*drinks potion*\" appears above its head.  the potion takes 3 seconds to drink.\ngreen plus-animations appear above the boss's head during drinking.\nat the end of the drinking potion animation, remove all text indicators, then make a single \"+200hp\" or \"+164hp\" or however much it is.\n\t\t\t\t\tthis will look like a damage number effect, but will be green and will be a healing number effect.\n\nstore the healing number effect somewhere we can re-use it later for other characters (Player, EnemySoldier, Turrets, etc).\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "# TutuItem #21: Fix the walls on map 2 (open area map) so they actually stop the bullets.\n\n## Status: in_progress\n\n## Working Directory: /Users/dorkitude/a/dev/flagger\n\n## Description:\n\n\n## Context:\n\n\n## Steps:\nNo steps defined yet.\n\n---\n<README>\n# Tutu - Task Management System\n\nTutu is a task management system designed to help track work items and their associated steps. It integrates seamlessly with Claude Code to provide persistent task tracking across sessions.\n\n## Installation\n\n```bash\n# Install using pip or uv\nuv pip install -e .\n```\n\n## Basic Usage\n\n### Managing Items\n\nCreate a new item:\n```bash\ntutu add\n```\nThis will start an interactive session prompting for title, description, and context.\n\nList all items:\n```bash\ntutu list\n```\n\nView item details:\n```bash\ntutu status <item_id>\n```\n\nMark an item as complete:\n```bash\ntutu done <item_id>\n```\n\nEdit an existing item:\n```bash\ntutu edit <item_id>\n```\nThis will start an interactive session to update the title, description, and context.\n\nStart a Claude Code session with item context:\n```bash\ntutu start <item_id>\n```\n\n### Managing Steps\n\nAdd a step to an item:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nComplete a step:\n```bash\ntutu complete-step <step_id>\n```\n\n## Claude Code Integration\n\nTutu is designed to work with Claude Code. When starting a Claude session with `tutu start`, it will:\n\n1. Prompt you to select an active TutuItem to work on\n2. Inject context about the item and its steps into the Claude session\n3. Provide Claude with instructions on how to track progress using Tutu commands\n\n## Database\n\nTutu uses SQLite to store items and steps locally. The database is created automatically on first use.\n</README>\n\n---\n# Tutu Context for Claude Code\n\nThis file contains the context that gets injected when starting a Claude Code session via `tutu start`.\n\n## Working with TutuItems\n\nWhen you're working on a TutuItem through Claude Code, here are the commands you can use:\n\n### Managing Steps\n\nTo add a new step to the current TutuItem:\n```bash\n# Interactive mode (prompts for multi-line description)\ntutu add-step <item_id>\n\n# Or with --description option\ntutu add-step <item_id> --description \"Description of the step\"\n```\n\nTo mark a step as complete:\n```bash\ntutu complete-step <step_id>\n```\n\n### Completing the Task\n\nWhen you've finished working on the TutuItem:\n```bash\ntutu done <item_id>\n```\n\n### Checking Status\n\nTo see the current status of the TutuItem:\n```bash\ntutu status <item_id>\n```\n\n### Other Useful Commands\n\nList all pending items:\n```bash\ntutu list\n```\n\nEdit the current TutuItem (title, description, context):\n```bash\ntutu edit <item_id>\n```\n\n## Important Instructions for Claude Code\n\n1. **Always track your progress** by adding steps as you work\n2. **Mark steps as complete** when you finish them. Print the name of the step you completed, plus a checkmark emoji.\n3. **Use `tutu done`** only when the entire task is complete\n4. The item ID and step IDs are shown in the initial context when the session starts\n5. **Make sure all of your internal Todo list steps also update TutuItem and TutuItemStep**\n6. **Tutu location**: The absolute path to tutu is `/Users/dorkitude/Library/Python/3.11/bin/tutu`\n7. **Print steps after updates**: Always run `tutu status <item_id>` after adding or completing steps to show the current progress\n\n## Example Workflow\n\n1. You'll see the TutuItem details when the session starts\n2. As you work, add steps: `tutu add-step 1 --description \"Implemented user authentication\"`\n3. Complete steps as you go: `tutu complete-step 1`\n4. When everything is done: `tutu done 1`\n\n## Integration with Claude's Todo System\n\nRemember that when using Claude Code's built-in Todo system, you should mirror those todos as TutuItem steps. This ensures that progress is tracked both in Claude's session and in the persistent Tutu database.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "make it so it's always in debug mode for now",
-          "pastedContents": {}
-        },
-        {
-          "display": "get rid of settings box, just expand the MapLibrary box to also have settings before the maps",
-          "pastedContents": {}
-        },
-        {
-          "display": "make debug mode the default.\n\nmove settings box to be to the right, under map library, so players don't have to press tab to pull it up.\n\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "/model ",
-          "pastedContents": {}
-        },
-        {
-          "display": "expand enemny soldier vision range.\n\npatrol range should go up to 400px.\n\nenemy soldiers should have a 4-shot clip and only a 1.5s reload time.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -6924,17 +6940,7 @@
         "game.ts"
       ],
       "exampleFilesGeneratedAt": 1750710327887,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 52.10523539999999,
-      "lastAPIDuration": 3469411,
-      "lastDuration": 12831138,
-      "lastLinesAdded": 2885,
-      "lastLinesRemoved": 303,
-      "lastTotalInputTokens": 169694,
-      "lastTotalOutputTokens": 110202,
-      "lastTotalCacheCreationInputTokens": 1025668,
-      "lastTotalCacheReadInputTokens": 16601112,
-      "lastSessionId": "3517cccf-4f67-4c28-87f6-66bad068ed63"
+      "hasCompletedProjectOnboarding": true
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
@@ -6957,6 +6963,36 @@
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
       "lastSessionId": "46eeb6e7-17c1-4747-995b-89bcc6a51b2d"
+    },
+    "/Users/dorkitude/a/dev/cootie": {
+      "allowedTools": [],
+      "history": [
+        {
+          "display": "investigate git log and describe the style of the commit messages thus far.  put those in CLAUDE.md as well.",
+          "pastedContents": {}
+        },
+        {
+          "display": "/init ",
+          "pastedContents": {}
+        }
+      ],
+      "mcpContextUris": [],
+      "mcpServers": {},
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 1,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "GameScene.ts",
+        "level1.json",
+        "Map.ts",
+        "ResourceManager.ts",
+        "main.ts"
+      ],
+      "exampleFilesGeneratedAt": 1751129460196,
+      "hasCompletedProjectOnboarding": true
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.35\n\n- Added support for MCP OAuth Authorization Server discovery\n\n## 1.0.34\n\n- Fixed a memory leak causing a MaxListenersExceededWarning message to appear\n\n## 1.0.33\n\n- Improved logging functionality with session ID support\n- Added undo functionality (Ctrl+Z and vim 'u' command)\n- Improvements to plan mode\n\n## 1.0.32\n\n- Updated loopback config for litellm\n- Added forceLoginMethod setting to bypass login selection screen\n\n## 1.0.31\n\n- Fixed a bug where ~/.claude.json would get reset when file contained invalid JSON\n\n## 1.0.30\n\n- Custom slash commands: Run bash output, @-mention files, enable thinking with thinking keywords\n- Improved file path autocomplete with filename matching\n- Added timestamps in Ctrl-r mode and fixed Ctrl-c handling\n- Enhanced jq regex support for complex filters with pipes and select\n\n## 1.0.29\n\n- Improved CJK character support in cursor navigation and rendering\n\n## 1.0.28\n\n- Slash commands: Fix selector display during history navigation\n- Resizes images before upload to prevent API size limit errors\n- Added XDG_CONFIG_HOME support to configuration directory\n- Performance optimizations for memory usage\n- New attributes (terminal.type, language) in OpenTelemetry logging\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n- /resume slash command to switch conversations within Claude Code\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
