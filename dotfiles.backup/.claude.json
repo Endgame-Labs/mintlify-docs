@@ -1,5 +1,5 @@
 {
-  "numStartups": 1092,
+  "numStartups": 1093,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -10,7 +10,7 @@
     "prompt-queue": 218,
     "git-worktrees": 1079,
     "todo-list": 1075,
-    "enter-to-steer-in-relatime": 1052,
+    "enter-to-steer-in-relatime": 1093,
     "claude-opus-welcome": 214,
     "# for memory": 1076,
     "install-github-app": 553,
@@ -6484,6 +6484,78 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "AssaultSoldier gun should have about 4 degrees of spread, but bullets should do about 30% less damage.\n\nDebug Window shouldn't be shown by default.  It should only pop up when you press tab for settings.",
+          "pastedContents": {}
+        },
+        {
+          "display": "move Boss Test Arena to be last on the list\n\nexpand the list to be taller so there's room for buttons",
+          "pastedContents": {}
+        },
+        {
+          "display": "Compiled with problems:X\n\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 214:51-58\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(214,52)\n      TS18048: 'playerX' is possibly 'undefined'.\n\n\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 214:65-72\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(214,66)\n      TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.\n  Type 'undefined' is not assignable to type 'number'.",
+          "pastedContents": {}
+        },
+        {
+          "display": "MiniBoss needs unstuck / unsticking logic similar to EnemySoldier\n\nMiniBoss should pursue player immediately and relentlessly after it is done healing and going Super mode",
+          "pastedContents": {}
+        },
+        {
+          "display": "froze after OUI CHEF message:\n\n[Pasted text #1 +16 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "1 HP (185 -> 186 HP)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (186 -> 187 HP)\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (33 bullets - SUPER MODE!)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (187 -> 188 HP)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (188 -> 189 HP)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (189 -> 190 HP)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (190 -> 191 HP)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (191 -> 192 HP)\nRainOfBullets.ts:32 🌧️ RainOfBullets attack (33 bullets - SUPER MODE!)\nplayer.ts:399 🛡️ Player invincible for 20ms\nplayer.ts:420 Player took 33 damage (14 shield, 19 health) from MiniBoss\nplayer.ts:373 🛡️ Damage blocked - player is invincible!\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (192 -> 193 HP)\nminiBoss.ts:195 💚 MiniBoss healed 1 HP (193 -> 194 HP)\nhealthPack.ts:185 Uncaught TypeError: Cannot read properties of undefined (reading 'events')\n    at Function.eval (healthPack.ts:185:24)\n"
+            }
+          }
+        },
+        {
+          "display": "Put a HealthPack near the player's original spawn point as well.\n\nWhenever a player eats a macaron HealthPack, the Player gets a speech bubble for 3 seconds that says \"OUI CHEF LES MACARONS\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +40 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Compiled with problems:X\n\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 210:9-33\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(210,10)\n      TS2352: Conversion of type 'GameObjectWithBody' to type 'HealthPack' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.\n  Type 'GameObject & { body: Body | StaticBody; }' is missing the following properties from type 'HealthPack': macaron, highlight, collected, collect, and 109 more.\n\n\nERROR in ./src/scripts/objects/assaultSoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts) 659:30-40\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts(659,31)\n      TS2345: Argument of type 'HealthPack' is not assignable to parameter of type 'GameObject'.\n  Property 'scene' is private in type 'HealthPack' but not in type 'GameObject'.\n\n\nERROR in ./src/scripts/objects/healthPack.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/healthPack.ts) 4:21-31\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/healthPack.ts(4,22)\n      TS2415: Class 'HealthPack' incorrectly extends base class 'Container'.\n  Property 'scene' is private in type 'HealthPack' but not in type 'Container'.\n\n\nERROR in ./src/scripts/objects/healthPack.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/healthPack.ts) 42:31-35\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/healthPack.ts(42,32)\n      TS2345: Argument of type 'this' is not assignable to parameter of type 'GameObject'.\n  Type 'HealthPack' is not assignable to type 'GameObject'.\n    Property 'scene' is private in type 'HealthPack' but not in type 'GameObject'.\n\n\nERROR in ./src/scripts/objects/healthPack.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/healthPack.ts) 70:23-27\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/healthPack.ts(70,24)\n      TS2345: Argument of type 'this' is not assignable to parameter of type 'Group | GameObject | Layer'.\n  Type 'HealthPack' is not assignable to type 'Group | GameObject | Layer'.\n    Type 'HealthPack' is not assignable to type 'Layer'.\n      Type 'this' is not assignable to type 'Layer'.\n        Type 'HealthPack' is missing the following properties from type 'Layer': systems, events, sortChildrenFlag, queueDepthSort, and 7 more.\n\n"
+            }
+          }
+        },
+        {
+          "display": "50% more range to Tesla Coils.\n50% more range to MiniBoss.",
+          "pastedContents": {}
+        },
+        {
+          "display": "When AssaultSoldier is killed, it drops a a health pack that gives player 80% of their maximum health back.  It animates with green plus signs over the player's head.  It looks like a cute little Lime-Pistachio macaron.",
+          "pastedContents": {}
+        },
+        {
+          "display": "AssaultSoldier shouldn't be so tiny and weird looking, they should look and act exactly like EnemySoldier except that they equip a different weapon.",
+          "pastedContents": {}
+        },
+        {
+          "display": "/clear ",
+          "pastedContents": {}
+        },
+        {
+          "display": "AssaultSoldier shouldn't be so tiny and weird looking, they should look and act exactly like EnemySoldier except that they equip a different weapon.",
+          "pastedContents": {}
+        },
+        {
+          "display": " successfully\nassaultSoldier.ts:122 Uncaught TypeError: this.healthBar.updatePosition is not a function\n    at AssaultSoldier.update (assaultSoldier.ts:122:24)\n    at eval (mainScene.ts:251:21)\n    at Array.forEach (<anonymous>)\n    at MainScene.update (mainScene.ts:249:45)\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "Make a new kind of EnemySoldier variant that uses an assault rifle, more like the player's weapon, and add a couple of them to the vertical climb map.",
+          "pastedContents": {}
+        },
+        {
+          "display": "triple the range of standard turret",
+          "pastedContents": {}
+        },
+        {
           "display": "fix this too:\n\n\nCompiled with problems:X\n\nERROR in ./src/scripts/objects/weapons/RainOfBullets.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/RainOfBullets.ts) 174:10-17\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/RainOfBullets.ts(174,11)\n      TS2339: Property 'destroy' does not exist on type 'BaseWeapon'.",
           "pastedContents": {}
         },
@@ -6834,102 +6906,6 @@
         {
           "display": "Make me a new map called \"Hotdog Hallway\"\n\nPlayer spawns at one end of a long wrap-around hallway.  Every once in a while, there's a small room, which has either 2 tesla coils, 3 turrets, or 2 soldiers in it.",
           "pastedContents": {}
-        },
-        {
-          "display": "What if we simply set up the game stuff itself with a new method called, say, \"die()\"\n\nwhich does all the effect stuff and THEN calls destroy()\n\nbut then the forced scene cleanup just calls destroy() directly\n\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "I think there has to be a better way to simply destroy everything in the map / scene and not worry about going part-by-part to fix symptoms.\n\nfor instance i see this now too:\n\n[Pasted text #1 +22 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": " Array(4)\nplayer.ts:76 🎮 Test frame 0: Frame\nplayer.ts:77   - Frame dimensions: 24 x 24\nplayer.ts:78   - Frame UV: 0 0 0.25 1\nplayer.ts:96 Player initialized: Object\nmainScene.ts:113 Player created successfully\nmainScene.ts:156 Creating UI elements...\nsettingsBox.ts:165 Loading settings - showPhysics: false\nsettingsBox.ts:166 Physics world exists: true\nmapLibrary.ts:16 MapLibrary created, camera width: 1280\nmainScene.ts:162 UI elements created\nmainScene.ts:179 MainScene create completed successfully\nstandardTurret.ts:92 Uncaught TypeError: Cannot read properties of undefined (reading 'add')\n    at StandardTurret.createFireExplosion (standardTurret.ts:92:37)\n    at StandardTurret.onDestroy (standardTurret.ts:83:14)\n    at StandardTurret.destroy (abstractBaseTurret.ts:51:14)\n    at UpdateList.shutdown (phaser.js:168686:29)\n    at EventEmitter.emit (phaser.js:1923:33)\n    at Systems.shutdown (phaser.js:49449:16)\n    at SceneManager.stop (phaser.js:100944:23)\n    at SceneManager.processQueue (phaser.js:100019:27)\n    at SceneManager.update (phaser.js:100273:14)\n    at Game.step (phaser.js:162800:20)"
-            }
-          }
-        },
-        {
-          "display": "when i click on map 2, i get error:\n\nUI elements created\nmainScene.ts:179 MainScene create completed successfully\nphaser.js:106292 The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio\nphaser.js:106292 The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio\nteslaCoilTurret.ts:437 Uncaught TypeError: Cannot read properties of undefined (reading 'add')\n    at TeslaCoilTurret.createElectricalExplosion (teslaCoilTurret.ts:437:40)\n    at TeslaCoilTurret.onDestroy (teslaCoilTurret.ts:412:14)\n    at TeslaCoilTurret.destroy (abstractBaseTurret.ts:51:14)\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "give me a debug flag, maybe just URL param, that lets me have all maps unlocked.",
-          "pastedContents": {}
-        },
-        {
-          "display": "finished map 1, then freeze:\n\n\n[Pasted text #1 +39 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "ts: true\nmapLibrary.ts:16 MapLibrary created, camera width: 1280\nmainScene.ts:162 UI elements created\nmainScene.ts:179 MainScene create completed successfully\nphaser.js:106292 The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio\nunlockHandler @ phaser.js:106292\nplayer.ts:345 Player took 20 damage (18 shield, 2 health) from StandardTurret\nplayer.ts:345 Player took 100 damage (90 shield, 10 health) from TeslaCoilTurret\nplayer.ts:345 Player took 70 damage (63 shield, 7 health) from TeslaCoilTurret\nplayer.ts:345 Player took 20 damage (10 shield, 10 health) from StandardTurret\nplayer.ts:345 Player took 20 damage (8 shield, 12 health) from StandardTurret\nplayer.ts:345 Player took 20 damage (6 shield, 14 health) from StandardTurret\nplayer.ts:345 Player took 20 damage (5 shield, 15 health) from StandardTurret\nmainScene.ts:41 MainScene create started\nphaser.js:135585 Invalid Tilemap Layer ID: walls\ncreateLayer @ phaser.js:135585\nphaser.js:135589 Valid tilelayer names:\n    \ncreateLayer @ phaser.js:135589\nmainScene.ts:182 Error in MainScene create: TypeError: Cannot read properties of null (reading 'setCollisionByProperty')\n    at MainScene.create (mainScene.ts:102:28)\n    at SceneManager.create (phaser.js:100333:26)\n    at SceneManager.bootScene (phaser.js:100228:18)\n    at SceneManager.start (phaser.js:100921:18)\n    at SceneManager.processQueue (phaser.js:100019:27)\n    at SceneManager.update (phaser.js:100273:14)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)\ncreate @ mainScene.ts:182\nmainScene.ts:184 Stack trace: TypeError: Cannot read properties of null (reading 'setCollisionByProperty')\n    at MainScene.create (webpack://phaser-project-template/./src/scripts/scenes/mainScene.ts?:102:28)\n    at SceneManager.create (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100333:26)\n    at SceneManager.bootScene (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100228:18)\n    at SceneManager.start (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100921:18)\n    at SceneManager.processQueue (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100019:27)\n    at SceneManager.update (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100273:14)\n    at Game.step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:162800:20)\n    at TimeStep.step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:89361:14)\n    at step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:89608:19)"
-            }
-          }
-        },
-        {
-          "display": "[Pasted text #1 +32 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "th) from Grenade\nplayer.ts:345 Player took 28 damage (25 shield, 3 health) from Grenade\nindex.js:551 [webpack-dev-server] App updated. Recompiling...\nindex.js:551 [webpack-dev-server] Nothing changed.\nmainScene.ts:41 MainScene create started\nphaser.js:67010 No map data found for key level2\nParseToTilemap @ phaser.js:67010\nphaser.js:135585 Invalid Tilemap Layer ID: walls\ncreateLayer @ phaser.js:135585\nphaser.js:135589 Valid tilelayer names:\n    \ncreateLayer @ phaser.js:135589\nmainScene.ts:182 Error in MainScene create: TypeError: Cannot read properties of null (reading 'setCollisionByProperty')\n    at MainScene.create (mainScene.ts:102:28)\n    at SceneManager.create (phaser.js:100333:26)\n    at SceneManager.bootScene (phaser.js:100228:18)\n    at SceneManager.start (phaser.js:100921:18)\n    at SceneManager.processQueue (phaser.js:100019:27)\n    at SceneManager.update (phaser.js:100273:14)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)\ncreate @ mainScene.ts:182\nmainScene.ts:184 Stack trace: TypeError: Cannot read properties of null (reading 'setCollisionByProperty')\n    at MainScene.create (webpack://phaser-project-template/./src/scripts/scenes/mainScene.ts?:102:28)\n    at SceneManager.create (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100333:26)\n    at SceneManager.bootScene (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100228:18)\n    at SceneManager.start (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100921:18)\n    at SceneManager.processQueue (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100019:27)\n    at SceneManager.update (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100273:14)\n    at Game.step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:162800:20)\n    at TimeStep.step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:89361:14)\n    at step (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:89608:19)"
-            }
-          }
-        },
-        {
-          "display": "why are my map files in different folders?",
-          "pastedContents": {}
-        },
-        {
-          "display": "game freezes as soon as i kill all turrets:\n\n[Pasted text #1 +30 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "  - depth: 0\nplayer.ts:63   - tint: undefined\nplayer.ts:64   - texture frame count: 5\nplayer.ts:70 🎮 Available frames in soldier-sprites:\nplayer.ts:72   - Frame names: \nArray(4)\nplayer.ts:76 🎮 Test frame 0: \nFrame\nplayer.ts:77   - Frame dimensions: 24 x 24\nplayer.ts:78   - Frame UV: 0 0 0.25 1\nplayer.ts:96 Player initialized: \nObject\nmainScene.ts:113 Player created successfully\nmainScene.ts:156 Creating UI elements...\nsettingsBox.ts:165 Loading settings - showPhysics: false\nsettingsBox.ts:166 Physics world exists: true\nmapLibrary.ts:16 MapLibrary created, camera width: 1280\nmainScene.ts:162 UI elements created\nmainScene.ts:179 MainScene create completed successfully\nplayer.ts:345 Player took 30 damage (27 shield, 3 health) from Grenade\nplayer.ts:345 Player took 34 damage (22 shield, 12 health) from Grenade\nplayer.ts:345 Player took 37 damage (17 shield, 20 health) from Grenade\n2\nplayer.ts:345 Player took 100 damage (90 shield, 10 health) from TeslaCoilTurret\nplayer.ts:345 Player took 20 damage (18 shield, 2 health) from StandardTurret\nphaser.js:3784 Uncaught TypeError: Cannot read properties of undefined (reading 'sys')\n    at MapLibrary.completeCurrentMap (mapLibrary.ts:181:14)\n    at MapLibrary.updateMapStatus (mapLibrary.ts:137:18)\n    at MapLibrary.update (mapLibrary.ts:115:14)\n    at MainScene.update (mainScene.ts:201:25)\n"
-            }
-          }
-        },
-        {
-          "display": "[Pasted text #1 +90 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Creating player at position: 96 576\nplayer.ts:24 Player constructor started\nplayer.ts:58 🎮 Player sprite properties:\nplayer.ts:59   - width: 24 height: 24\nplayer.ts:60   - displayWidth: 48 displayHeight: 48\nplayer.ts:61   - scaleX: 2 scaleY: 2\nplayer.ts:62   - depth: 0\nplayer.ts:63   - tint: undefined\nplayer.ts:64   - texture frame count: 5\nplayer.ts:70 🎮 Available frames in soldier-sprites:\nplayer.ts:72   - Frame names: (4) ['0', '1', '2', '3']\nplayer.ts:76 🎮 Test frame 0: Frame {texture: Texture, name: 0, source: TextureSource, sourceIndex: 0, glTexture: WebGLTexture, …}\nplayer.ts:77   - Frame dimensions: 24 x 24\nplayer.ts:78   - Frame UV: 0 0 0.25 1\nplayer.ts:96 Player initialized: {position: {…}, health: 100, maxHealth: 100, shield: 100, maxShield: 100, …}\nmainScene.ts:113 Player created successfully\nmainScene.ts:156 Creating UI elements...\nsettingsBox.ts:165 Loading settings - showPhysics: false\nsettingsBox.ts:166 Physics world exists: true\nmapLibrary.ts:19 MapLibrary created, camera width: 1280\nmainScene.ts:162 UI elements created\nmainScene.ts:184 Error in MainScene create: TypeError: Cannot read properties of undefined (reading 'sys')\n    at Rectangle.removeFromDisplayList (phaser.js:3784:58)\n    at MapLibrary.addHandler (phaser.js:51487:24)\n    at Object.Add (phaser.js:167461:26)\n    at MapLibrary.add (phaser.js:51580:20)\n    at MapLibrary.setCurrentMap (mapLibrary.ts:191:18)\n    at MainScene.create (mainScene.ts:180:29)\n    at SceneManager.create (phaser.js:100333:26)\n    at SceneManager.bootScene (phaser.js:100228:18)\n    at SceneManager.start (phaser.js:100921:18)\n    at SceneManager.processQueue (phaser.js:100019:27)\ncreate @ mainScene.ts:184\ncreate @ phaser.js:100333\nbootScene @ phaser.js:100228\nstart @ phaser.js:100921\nprocessQueue @ phaser.js:100019\nupdate @ phaser.js:100273\nstep @ phaser.js:162800\nstep @ phaser.js:89361\nstep @ phaser.js:89608\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstart @ phaser.js:89662\nstart @ phaser.js:89231\nstart @ phaser.js:162745\ntexturesReady @ phaser.js:162725\nemit @ phaser.js:1921\nupdatePending @ phaser.js:102047\nemit @ phaser.js:1902\nimage.onload @ phaser.js:102177\nmainScene.ts:186 Stack trace: TypeError: Cannot read properties of undefined (reading 'sys')\n    at Rectangle.removeFromDisplayList (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:3784:58)\n    at MapLibrary.addHandler (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:51487:24)\n    at Object.Add (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:167461:26)\n    at MapLibrary.add (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:51580:20)\n    at MapLibrary.setCurrentMap (webpack://phaser-project-template/./src/scripts/objects/mapLibrary.ts?:191:18)\n    at MainScene.create (webpack://phaser-project-template/./src/scripts/scenes/mainScene.ts?:180:29)\n    at SceneManager.create (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100333:26)\n    at SceneManager.bootScene (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100228:18)\n    at SceneManager.start (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100921:18)\n    at SceneManager.processQueue (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100019:27)\ncreate @ mainScene.ts:186\ncreate @ phaser.js:100333\nbootScene @ phaser.js:100228\nstart @ phaser.js:100921\nprocessQueue @ phaser.js:100019\nupdate @ phaser.js:100273\nstep @ phaser.js:162800\nstep @ phaser.js:89361\nstep @ phaser.js:89608\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstart @ phaser.js:89662\nstart @ phaser.js:89231\nstart @ phaser.js:162745\ntexturesReady @ phaser.js:162725\nemit @ phaser.js:1921\nupdatePending @ phaser.js:102047\nemit @ phaser.js:1902\nimage.onload @ phaser.js:102177"
-            }
-          }
-        },
-        {
-          "display": "I can't see the map library.",
-          "pastedContents": {}
-        },
-        {
-          "display": "[Pasted text #1 +46 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "player.ts:63   - tint: undefined\nplayer.ts:64   - texture frame count: 5\nplayer.ts:70 🎮 Available frames in soldier-sprites:\nplayer.ts:72   - Frame names: Array(4)\nplayer.ts:76 🎮 Test frame 0: Frame\nplayer.ts:77   - Frame dimensions: 24 x 24\nplayer.ts:78   - Frame UV: 0 0 0.25 1\nplayer.ts:96 Player initialized: Object\nmainScene.ts:113 Player created successfully\nmainScene.ts:156 Creating UI elements...\nsettingsBox.ts:165 Loading settings - showPhysics: false\nsettingsBox.ts:166 Physics world exists: true\nmainScene.ts:162 UI elements created\nmainScene.ts:184 Error in MainScene create: TypeError: Cannot read properties of undefined (reading 'sys')\n    at Rectangle.removeFromDisplayList (phaser.js:3784:58)\n    at MapLibrary.addHandler (phaser.js:51487:24)\n    at Object.Add (phaser.js:167461:26)\n    at MapLibrary.add (phaser.js:51580:20)\n    at MapLibrary.setCurrentMap (mapLibrary.ts:172:14)\n    at MainScene.create (mainScene.ts:180:29)\n    at SceneManager.create (phaser.js:100333:26)\n    at SceneManager.bootScene (phaser.js:100228:18)\n    at SceneManager.start (phaser.js:100921:18)\n    at SceneManager.processQueue (phaser.js:100019:27)\ncreate @ mainScene.ts:184\nmainScene.ts:186 Stack trace: TypeError: Cannot read properties of undefined (reading 'sys')\n    at Rectangle.removeFromDisplayList (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:3784:58)\n    at MapLibrary.addHandler (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:51487:24)\n    at Object.Add (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:167461:26)\n    at MapLibrary.add (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:51580:20)\n    at MapLibrary.setCurrentMap (webpack://phaser-project-template/./src/scripts/objects/mapLibrary.ts?:172:14)\n    at MainScene.create (webpack://phaser-project-template/./src/scripts/scenes/mainScene.ts?:180:29)\n    at SceneManager.create (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100333:26)\n    at SceneManager.bootScene (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100228:18)\n    at SceneManager.start (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100921:18)\n    at SceneManager.processQueue (webpack://phaser-project-template/./node_modules/phaser/dist/phaser.js?:100019:27)\ncreate @ mainScene.ts:186\nmapLibrary.ts:110 Uncaught TypeError: Cannot read properties of undefined (reading 'getAt')\n    at MapLibrary.updateMapStatus (mapLibrary.ts:110:63)\n    at MapLibrary.update (mapLibrary.ts:100:14)\n    at MainScene.update (mainScene.ts:203:25)\n    at Systems.step (phaser.js:49063:26)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)\n"
-            }
-          }
-        },
-        {
-          "display": "Create a map progression, showing progress on the right-hand side.  When all enemies and turrets are dead on map 1, transition the player to map 2.\n\nReset their health and shields to max.\n\nAll map starts should have a 3-2-1 countdown upon first loading.\n\nGenerate a second map that is more of an open space, with just a few walls and creates, and 4 shotgun enemies.\n\n\nAllow the user to click between maps on the right-hand side in the Map Library.",
-          "pastedContents": {}
-        },
-        {
-          "display": "if AI hasn't changed its position for more than 2 seconds straight, run in a random pattern for a second and then re-enter patrol mode.",
-          "pastedContents": {}
-        },
-        {
-          "display": "If the Enemy Soldier hasn't had direct line-of-sight on the player for more than 2 seconds straight, return him to a patrol pattern again.",
-          "pastedContents": {}
-        },
-        {
-          "display": "reverse the default controls so arrows and ZX are the default",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -6949,16 +6925,16 @@
       ],
       "exampleFilesGeneratedAt": 1750710327887,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 3.001481949999999,
-      "lastAPIDuration": 377670,
-      "lastDuration": 3592915,
-      "lastLinesAdded": 7,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 33782,
-      "lastTotalOutputTokens": 9367,
-      "lastTotalCacheCreationInputTokens": 38251,
-      "lastTotalCacheReadInputTokens": 1111431,
-      "lastSessionId": "651ee975-6b92-4324-bcd8-03d84da80876"
+      "lastCost": 52.10523539999999,
+      "lastAPIDuration": 3469411,
+      "lastDuration": 12831138,
+      "lastLinesAdded": 2885,
+      "lastLinesRemoved": 303,
+      "lastTotalInputTokens": 169694,
+      "lastTotalOutputTokens": 110202,
+      "lastTotalCacheCreationInputTokens": 1025668,
+      "lastTotalCacheReadInputTokens": 16601112,
+      "lastSessionId": "3517cccf-4f67-4c28-87f6-66bad068ed63"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
