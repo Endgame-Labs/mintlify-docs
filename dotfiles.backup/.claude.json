@@ -1,5 +1,5 @@
 {
-  "numStartups": 1089,
+  "numStartups": 1092,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -18,7 +18,7 @@
     "drag-and-drop-images": 1088,
     "double-esc": 1089,
     "continue": 1086,
-    "custom-commands": 1061,
+    "custom-commands": 1092,
     "shift-tab": 1071
   },
   "memoryUsageCount": 4,
@@ -3486,17 +3486,7 @@
         "backup_a.sh",
         ".zshrc"
       ],
-      "exampleFilesGeneratedAt": 1751080276965,
-      "lastCost": 0.5480453,
-      "lastAPIDuration": 117541,
-      "lastDuration": 325450,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 14395,
-      "lastTotalOutputTokens": 2795,
-      "lastTotalCacheCreationInputTokens": 7398,
-      "lastTotalCacheReadInputTokens": 159456,
-      "lastSessionId": "22035d5a-7427-4c1c-a3f2-36ea8d3225b7"
+      "exampleFilesGeneratedAt": 1751080276965
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -6458,6 +6448,22 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Error opening '/Users/dorkitude/a/dev/flagger/public/assets/maps/vertical_climb.json':\nCorrupt layer data for layer 'walls'",
+          "pastedContents": {}
+        },
+        {
+          "display": "I can load the map now, thanks.\n\nProblem is the camera seems stuck at the top of the map, so I can't even see my player!",
+          "pastedContents": {}
+        },
+        {
+          "display": "Why isn't this map listed on the right hand side of the game so i can pick it?",
+          "pastedContents": {}
+        },
+        {
+          "display": "I want a very large map that's very tall, like 5 screens tall.  You spawn at the bottom and work your way up.  That means we'll need the viewport to intelligently move along with the player, up and down (and eventually sideways).\n\nPlease make me such a map for experimentation, plus figure out the viewport stuff.\n\nResearch how other Phaser games are doing this, and see if there's a built-in way to achieve this.  Hyperthink.  Search the web if you need to.",
+          "pastedContents": {}
+        },
+        {
           "display": "The MiniBoss's Rain of Bullets shouldn't be able to insta-kill me, but it still seems like it can.  Is this because the bullets all have identical damage-dealing times?  are there race conditions?",
           "pastedContents": {}
         },
@@ -6894,22 +6900,6 @@
         {
           "display": "Remove debug console and replace with a simple settings box with two options:\n\n1:  showphysics checkbox\n2:  control mode  (WASD vs Arrow Keys)\n\nin Arrow Keys mode, the arrows move forward, back, turn-right, and turn-left.  The strafe left button becomes Z.  Strafe right becomes X.",
           "pastedContents": {}
-        },
-        {
-          "display": "ammo indicator at bottom stays empty when between shots, but really it should go back to full once the gun is ready to fire.\n\nIt _appears_ as though ammo state isn't read/updated until hitting SHOOT.\n\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "I did that, look at my map and see why it doesn't workgs",
-          "pastedContents": {}
-        },
-        {
-          "display": "How do I add a new Object in Tiled editor?",
-          "pastedContents": {}
-        },
-        {
-          "display": "!code .",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -6929,16 +6919,16 @@
       ],
       "exampleFilesGeneratedAt": 1750710327887,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 4.677236799999999,
-      "lastAPIDuration": 423827,
-      "lastDuration": 811874,
-      "lastLinesAdded": 33,
+      "lastCost": 3.001481949999999,
+      "lastAPIDuration": 377670,
+      "lastDuration": 3592915,
+      "lastLinesAdded": 7,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 31386,
-      "lastTotalOutputTokens": 10394,
-      "lastTotalCacheCreationInputTokens": 97332,
-      "lastTotalCacheReadInputTokens": 1413680,
-      "lastSessionId": "f87f9cd9-53a0-444f-a8c8-8fdb7ba1e353"
+      "lastTotalInputTokens": 33782,
+      "lastTotalOutputTokens": 9367,
+      "lastTotalCacheCreationInputTokens": 38251,
+      "lastTotalCacheReadInputTokens": 1111431,
+      "lastSessionId": "651ee975-6b92-4324-bcd8-03d84da80876"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
