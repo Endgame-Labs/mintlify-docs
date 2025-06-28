@@ -6484,6 +6484,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "EnemySoldier has a 8% chance to drop a Macaron.  TeslaCoil same chance.",
+          "pastedContents": {}
+        },
+        {
+          "display": "rename Vertical Climb to \"Pork Tower\" and move it up to level 3 (just after Tryhard Trellis)",
+          "pastedContents": {}
+        },
+        {
           "display": "AssaultSoldier gun should have about 4 degrees of spread, but bullets should do about 30% less damage.\n\nDebug Window shouldn't be shown by default.  It should only pop up when you press tab for settings.",
           "pastedContents": {}
         },
@@ -6897,14 +6905,6 @@
         },
         {
           "display": "expand enemny soldier vision range.\n\npatrol range should go up to 400px.\n\nenemy soldiers should have a 4-shot clip and only a 1.5s reload time.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Hotdog Hallway updates:   \nThe rooms should be attached TO the hallway.\n\nAI updates:\n\nChange the Unstuck stuff to trigger after only 350ms of not moving.\nUpdate the Patrol pattern so they have more broad range and are able to go farther from their spawn points.\n\nIf they lose sight of player, let them remember the exact location of the last time the player was visible, and have them pathfind toward that spot and then go back into control mode once they're close to it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make me a new map called \"Hotdog Hallway\"\n\nPlayer spawns at one end of a long wrap-around hallway.  Every once in a while, there's a small room, which has either 2 tesla coils, 3 turrets, or 2 soldiers in it.",
           "pastedContents": {}
         }
       ],
