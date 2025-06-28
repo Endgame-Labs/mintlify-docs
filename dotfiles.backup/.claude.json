@@ -1,5 +1,5 @@
 {
-  "numStartups": 1101,
+  "numStartups": 1102,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -6494,6 +6494,26 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "which soldier rifle sprite sheet(s) are being used by the app?",
+          "pastedContents": {}
+        },
+        {
+          "display": "expand the acceptable range and make it test 500 of each by default.",
+          "pastedContents": {}
+        },
+        {
+          "display": "consolidate both files into \"loot_table.yaml\"\n\ninclude a clear guide at the top in the comments that explains how to use it.\n\nultrathink, take your time.\n\nupdate README to do similar.\n\nwrite a test that runs 100 death-events per enemy just to determine what would've dropped, and confirms the outcome is within acceptable range.\n\nincorporate into our standard CLI-level testing.",
+          "pastedContents": {}
+        },
+        {
+          "display": "i this all just using lootpools.yaml?",
+          "pastedContents": {}
+        },
+        {
+          "display": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/grenadePickup.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/grenadePickup.ts) 57:29-42\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/grenadePickup.ts(57,30)\n      TS2339: Property 'updateDisplay' does not exist on type 'AmmoDisplay'.",
+          "pastedContents": {}
+        },
+        {
           "display": "the only actual items we have are the macarons.  Please update the YAML to just have drops for those, plus a new one called Grenades which looks like 3 grenades stacked up (smaller than the in-game ones).  it refills player grenade inventory back to full.",
           "pastedContents": {}
         },
@@ -6907,26 +6927,6 @@
         },
         {
           "display": "increase time between two waves of Rain of Bullets, during boss second phase, by about 150ms",
-          "pastedContents": {}
-        },
-        {
-          "display": "Rain of Bullets should give an extra 350ms warning before it shoots.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Bug:  miniboss got in range, then circle-strafed nicely with flamethrower.  then i got out of range and he started chasing me.  sadly, the flamethrower STAYED at its last location and fired randomly into the void while the boss left it behind.  fix.",
-          "pastedContents": {}
-        },
-        {
-          "display": "The miniboss should never come closer than 2 crates-widths from the player.  If it gets that close, it should start circle-strafing around the player while flame-throwing.  If the player moves out of range, it should go back into pursue mode.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Rain of Fire doesn't seem to work as well as it used to.  The MiniBoss doesn't fire it constantly, he just fires it occasionally.  Compare to old implementation and see what might be wrong.",
-          "pastedContents": {}
-        },
-        {
-          "display": "once they're hurt, they should never stop pursuing the player.  they should pathfind around impassable obstacles and keep trying to get within range of the player.  once within range, they should do the normal strafing engagement pattern.  but if they're out of range they should pursue again relentlessly.",
           "pastedContents": {}
         }
       ],
