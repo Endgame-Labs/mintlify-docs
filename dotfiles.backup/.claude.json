@@ -1,5 +1,5 @@
 {
-  "numStartups": 1109,
+  "numStartups": 1114,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -8,7 +8,7 @@
     "memory-command": 770,
     "theme-command": 1094,
     "prompt-queue": 218,
-    "git-worktrees": 1079,
+    "git-worktrees": 1110,
     "todo-list": 1075,
     "enter-to-steer-in-relatime": 1099,
     "claude-opus-welcome": 214,
@@ -16,7 +16,7 @@
     "install-github-app": 553,
     "permissions": 1106,
     "drag-and-drop-images": 1109,
-    "double-esc": 1089,
+    "double-esc": 1111,
     "continue": 1107,
     "custom-commands": 1092,
     "shift-tab": 1096
@@ -6494,6 +6494,88 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "no lint the whole directory",
+          "pastedContents": {}
+        },
+        {
+          "display": "do some basic linting",
+          "pastedContents": {}
+        },
+        {
+          "display": "how did i go from no errors to this:\n\n[Pasted text #1 +130 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Compiled with problems:\n×\nERROR in ./src/scripts/objects/assaultSoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts) 565:30-39\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts(565,31)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 227:6-31\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(227,7)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 237:8-33\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(237,9)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 286:6-31\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(286,7)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 290:6-31\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(290,7)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 297:8-33\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(297,9)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/enemySoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/enemySoldier.ts) 461:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/enemySoldier.ts(461,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 163:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(163,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 754:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(754,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 1017:47-55\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1017,48)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 1018:44-1027:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1018,45)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 1031:14-26\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1031,15)\n      TS2339: Property 'emitParticle' does not exist on type 'void'.\nERROR in ./src/scripts/objects/player.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts) 222:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts(222,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 43:47-55\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(43,48)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 44:4-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(44,5)\n      TS2322: Type 'void' is not assignable to type 'ParticleEmitter | null'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 44:50-55:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(44,51)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 103:33-83\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(103,34)\n      TS2345: Argument of type '{ min: number; max: number; }' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 132:30-37\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(132,31)\n      TS2339: Property 'manager' does not exist on type 'ParticleEmitter'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 122:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(122,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 127:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(127,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 134:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(134,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 175:6-20\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(175,7)\n      TS2322: Type 'TilemapLayer | null' is not assignable to type 'TilemapLayer'.\n  Type 'null' is not assignable to type 'TilemapLayer'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 184:6-21\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(184,7)\n      TS2322: Type 'TilemapLayer | null' is not assignable to type 'TilemapLayer'.\n  Type 'null' is not assignable to type 'TilemapLayer'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 216:6-19\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(216,7)\n      TS18047: 'turretObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 240:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(240,7)\n      TS18047: 'enemySoldierObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 273:6-21\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(273,7)\n      TS18047: 'miniBossObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 290:6-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(290,7)\n      TS18047: 'healthPackObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 300:6-26\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(300,7)\n      TS18047: 'grenadePickupObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 744:20-39\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(744,21)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 748:19-38\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(748,20)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 770:19-38\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(770,20)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 771:19-38\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(771,20)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 969:41-53\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(969,42)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 970:44-979:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(970,45)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1115:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1115,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1125:4-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1125,5)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1368:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1368,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1387:4-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1387,5)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1401:41-49\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1401,42)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1402:44-1411:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1402,45)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1412:12-27\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1412,13)\n      TS2339: Property 'setScrollFactor' does not exist on type 'void'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1417:14-18\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1417,15)\n      TS2339: Property 'stop' does not exist on type 'void'.\n"
+            }
+          }
+        },
+        {
+          "display": "server won't run without looping now:\n\n[Pasted text #1 +44 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/phaser-logo.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTH_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_EAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTH_strip4.png\nweb    | webpack compiled successfully\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /vendors.bundle.js\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /main.bundle.js\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | webpack compiled successfully\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/phaser-logo.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTH_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_EAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTH_strip4.png"
+            }
+          }
+        },
+        {
+          "display": "EnemySoldier is getting stuck in pathfinder mode even once it gets near me.  It _should_ go back to engage mode as soon as it can",
+          "pastedContents": {}
+        },
+        {
+          "display": "when i try to start server i get this:  [Pasted text #1 +74 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "hard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | webpack compiled successfully\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_EAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTH_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHWEST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_WEST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/phaser-logo.png\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | webpack compiled successfully\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | webpack compiled successfully\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/sound/single_shot_50cal.mp3\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/sound/soft_body_impact.mp3\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/sound/flamethrower.mp3\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /favicon.ico\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_EAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHEAST_strip4.png\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | webpack compiled successfully\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)"
+            }
+          }
+        },
+        {
+          "display": "getting an infinite reload bug now",
+          "pastedContents": {}
+        },
+        {
+          "display": "these guys never pursue me anymore.   we've ruined it.  reset their movement and chase logic so it matches AssaultSoldier again.",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix it so they only check if there's a real circular hit.",
+          "pastedContents": {}
+        },
+        {
+          "display": "now it never seems to go into pathfinding mode",
+          "pastedContents": {}
+        },
+        {
+          "display": "grenade seems to be exploding when it hasn't quite collided with enemies..  is that intentional or a bug?",
+          "pastedContents": {}
+        },
+        {
+          "display": "if EnemySoldier is tracking me, engages, then I run away so it goes back into pathfinding mode.  sometimes the next time it finds me, it stays in pathfinding mode and never fires.\n\n1:  it should probably go back into Engage mode when this happens.\n2:  it should ALWAYS fire when i'm in range and in front of it!",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "actually let's just always randomize it",
+          "pastedContents": {}
+        },
+        {
+          "display": "I'd like to be able to write a few different variations for what the Player's speech bubble says upon item pickups, then the game can just sort of loop through them as you pick up more of the same item type.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
           "display": "make it stop looping",
           "pastedContents": {}
         },
@@ -6852,70 +6934,6 @@
         {
           "display": "expand the acceptable range and make it test 500 of each by default.",
           "pastedContents": {}
-        },
-        {
-          "display": "consolidate both files into \"loot_table.yaml\"\n\ninclude a clear guide at the top in the comments that explains how to use it.\n\nultrathink, take your time.\n\nupdate README to do similar.\n\nwrite a test that runs 100 death-events per enemy just to determine what would've dropped, and confirms the outcome is within acceptable range.\n\nincorporate into our standard CLI-level testing.",
-          "pastedContents": {}
-        },
-        {
-          "display": "i this all just using lootpools.yaml?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/grenadePickup.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/grenadePickup.ts) 57:29-42\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/grenadePickup.ts(57,30)\n      TS2339: Property 'updateDisplay' does not exist on type 'AmmoDisplay'.",
-          "pastedContents": {}
-        },
-        {
-          "display": "the only actual items we have are the macarons.  Please update the YAML to just have drops for those, plus a new one called Grenades which looks like 3 grenades stacked up (smaller than the in-game ones).  it refills player grenade inventory back to full.",
-          "pastedContents": {}
-        },
-        {
-          "display": "!code .",
-          "pastedContents": {}
-        },
-        {
-          "display": "EnemySoldier shouldn't change colors when it changes states.  Keep its basic red always.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Yes let's do it.  Also each enemy needs an overall drop-rate too, since we don't want them dropping an item every time.",
-          "pastedContents": {}
-        },
-        {
-          "display": "What about a YAML?",
-          "pastedContents": {}
-        },
-        {
-          "display": "What about a CSV?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Let's figure out a system for loot drop tables that makes it easy for me to update the dropped items and rates for various enemies.\n\nWhat are some options for how to do this?",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and push",
-          "pastedContents": {}
-        },
-        {
-          "display": "update the Settings Dialog's map ordering to also reflect this order.",
-          "pastedContents": {}
-        },
-        {
-          "display": "you shouldn't hardcode MapSequence like this.\n\nInstead, create it dynamically based on the filenames.  That way I can simply move filenames around, and know that you'll fix the level ordering.",
-          "pastedContents": {}
-        },
-        {
-          "display": "When Level is completed, it should move to the next map in the sequence.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Maps no longer notice when I've slain all enemies.  Each map should have some win conditions that it checks and says Level Completed.  For now, all maps just want you to have destroyed all enemies.",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit all changes and push",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -6935,16 +6953,16 @@
       ],
       "exampleFilesGeneratedAt": 1750710327887,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.011785599999999999,
-      "lastAPIDuration": 52090,
-      "lastDuration": 262612,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastDuration": 3342,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 13202,
-      "lastTotalOutputTokens": 306,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "e1f83d0e-ccc1-47b3-8156-82bb8eab1cdd"
+      "lastSessionId": "d5ebeb7d-5062-4911-aace-79053202a496"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
@@ -6996,7 +7014,17 @@
         "main.ts"
       ],
       "exampleFilesGeneratedAt": 1751129460196,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 1.5359394499999999,
+      "lastAPIDuration": 249905,
+      "lastDuration": 38630104,
+      "lastLinesAdded": 71,
+      "lastLinesRemoved": 1,
+      "lastTotalInputTokens": 17983,
+      "lastTotalOutputTokens": 5300,
+      "lastTotalCacheCreationInputTokens": 27395,
+      "lastTotalCacheReadInputTokens": 437660,
+      "lastSessionId": "cab141c1-3cee-40c4-ab4b-2bd8ec69b6e2"
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.35\n\n- Added support for MCP OAuth Authorization Server discovery\n\n## 1.0.34\n\n- Fixed a memory leak causing a MaxListenersExceededWarning message to appear\n\n## 1.0.33\n\n- Improved logging functionality with session ID support\n- Added undo functionality (Ctrl+Z and vim 'u' command)\n- Improvements to plan mode\n\n## 1.0.32\n\n- Updated loopback config for litellm\n- Added forceLoginMethod setting to bypass login selection screen\n\n## 1.0.31\n\n- Fixed a bug where ~/.claude.json would get reset when file contained invalid JSON\n\n## 1.0.30\n\n- Custom slash commands: Run bash output, @-mention files, enable thinking with thinking keywords\n- Improved file path autocomplete with filename matching\n- Added timestamps in Ctrl-r mode and fixed Ctrl-c handling\n- Enhanced jq regex support for complex filters with pipes and select\n\n## 1.0.29\n\n- Improved CJK character support in cursor navigation and rendering\n\n## 1.0.28\n\n- Slash commands: Fix selector display during history navigation\n- Resizes images before upload to prevent API size limit errors\n- Added XDG_CONFIG_HOME support to configuration directory\n- Performance optimizations for memory usage\n- New attributes (terminal.type, language) in OpenTelemetry logging\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n- /resume slash command to switch conversations within Claude Code\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
