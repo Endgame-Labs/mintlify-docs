@@ -1,5 +1,5 @@
 {
-  "numStartups": 1107,
+  "numStartups": 1108,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -6494,6 +6494,58 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "increase all audio volume numbers by about 75%",
+          "pastedContents": {}
+        },
+        {
+          "display": "both Soldiers are doing some pretty crazy movements that make them look like they're stuck all the time, exiting patrol almost immediately upon entering patrol, and sprinting\n\nhelp",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's move that threshold to 40px",
+          "pastedContents": {}
+        },
+        {
+          "display": "is AssaultSoldier's stuckness function different than the enemysoldier and miniboss?",
+          "pastedContents": {}
+        },
+        {
+          "display": "what's the reload time for rifle",
+          "pastedContents": {}
+        },
+        {
+          "display": "reduce Player grenade damage by about 20%.  Increase player bullet damage by 20%.",
+          "pastedContents": {}
+        },
+        {
+          "display": "slow down super-MiniBoss' total foot speed by about 12%\n\nincrease Assault Soldier's health by 100",
+          "pastedContents": {}
+        },
+        {
+          "display": "unstuck stuff should only trigger if the character does not locomote more than 100px total during that time.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "miniboss needs to chase me harder and try to close the distance",
+          "pastedContents": {}
+        },
+        {
+          "display": "my grenade claims to be exploding \"on\" an enemy i.e. early,\nbut because the enemy is near a wall when it happens, the grenade somehow isn't damaging it.\nmaybe something to due with line-of-sight (center to center) vs. hitbox-to-hitbox collision detection.\nseems like a literal corner case.",
+          "pastedContents": {}
+        },
+        {
+          "display": "give Assault Soldier about double his current health",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
           "display": "direct hits are doing this:\n\ned - player is invincible!\nplayer.ts:405 🛡️ Player invincible for 20ms\nplayer.ts:426 Player took 8 damage (3 shield, 5 health) from EnemySoldier_Shotgun\n2\nplayer.ts:377 🛡️ Damage blocked - player is invincible!\ngrenade.ts:82 Uncaught TypeError: Cannot read properties of undefined (reading 'physics')\n    at Grenade.checkDirectHits (grenade.ts:82:20)\n    at Grenade.preUpdate (grenade.ts:73:18)\n",
           "pastedContents": {}
         },
@@ -6875,58 +6927,6 @@
         },
         {
           "display": "clicking show physics in the new settings box freezes app\n\n\nminiBoss.ts:780 🦖 MiniBoss is stuck! Entering unstuck mode...\nphaser.js:125610 Uncaught TypeError: Cannot read properties of undefined (reading 'clear')\n    at World.postUpdate (phaser.js:125610:22)\n    at EventEmitter.emit (phaser.js:1902:35)\n    at Systems.step (phaser.js:49065:16)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)\n\n\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "use @public/assets/tilesets/desert_tiles.png intstead of @public/assets/tilesets/simple_tiles.png ",
-          "pastedContents": {}
-        },
-        {
-          "display": "read both images",
-          "pastedContents": {}
-        },
-        {
-          "display": "try again",
-          "pastedContents": {}
-        },
-        {
-          "display": "Let's do a referesher of CLAUDE.md so it understands the design of the system, where things live, and the workflow for building, testing, and committing.  Commit messages should have helpful emojis.",
-          "pastedContents": {}
-        },
-        {
-          "display": "still all looks grey to me.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make it so pressing TAB and opening settings pauses game, and brings a large dialog to the center (not the right-hand side) that has a variety of settings areas.  It should look and feel more like the Game Over dialog.\n\nControls, ShowPhysics boolean, and Map Selection.",
-          "pastedContents": {}
-        },
-        {
-          "display": "It looks like you used the leftmost / grey section of desert_tiles but I wanted the second one from the left, which is brown.",
-          "pastedContents": {}
-        },
-        {
-          "display": "When the crates are destroyed in Family Porkums map, their ?showphysics mesh is still visible.",
-          "pastedContents": {}
-        },
-        {
-          "display": "/compact ",
-          "pastedContents": {}
-        },
-        {
-          "display": "use the @public/assets/tilesets/desert_tiles.png light brown for the default flooring.",
-          "pastedContents": {}
-        },
-        {
-          "display": "I put a tileset in @public/assets/tilesets/desert_tiles.png that you can use.  Grab the light brown one for default flooring.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Always keep the current Map ID in local storage.  When the app first loads, see if that map ID is still valid, and if so, put the player on that map instead of level 1.\n\nThis has to be future-proof for when we remove or alter map names in the future though, so only do it if you find a perfect match.  Otherwise punt them back to level 1.",
-          "pastedContents": {}
-        },
-        {
-          "display": "When an Enemy has been in engage mode for 2s without firing, put them back into pathfinder mode so they don't smash into walls.",
           "pastedContents": {}
         }
       ],
