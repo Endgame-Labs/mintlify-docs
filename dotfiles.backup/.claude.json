@@ -1,5 +1,5 @@
 {
-  "numStartups": 1120,
+  "numStartups": 1122,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -6484,6 +6484,90 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "When player takes inbound damage, but their shield fully blocks all the damage, play @public/assets/sound/shield_guard.mp3 instead of the normal public/assets/sound/",
+          "pastedContents": {}
+        },
+        {
+          "display": "Store all the contents for Changelog in JSON somewhere, that way I can edit it.  Make sure the JSON contains the commit ID for each one, that way we can surgically edit them or remove the ones that don't make sense.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Cannot GET /changelog",
+          "pastedContents": {}
+        },
+        {
+          "display": "When @src/scripts/objects/assaultSoldier.ts shoots, make the @public/assets/sound/laser.mp3 sound.",
+          "pastedContents": {}
+        },
+        {
+          "display": "\"Cannot GET /changelog\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "Make me a change log based on my git commit history, specifically calling out the things that could affect the player.  Serve it up at a new route called /changelog.  I want each item to have a timestamp and a summary.\n\nIt should be a cute HTML page, and use the theme, catppuccin-macchiato.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit all changes, don't deploy.",
+          "pastedContents": {}
+        },
+        {
+          "display": "all controls work except my spacebar / gun.  but the grenades do zero damage.  only a problme on Family Porkums.",
+          "pastedContents": {}
+        },
+        {
+          "display": "my gun doesn't owrk on this map now",
+          "pastedContents": {}
+        },
+        {
+          "display": "Update it so it has the same visual style as the previous maps.",
+          "pastedContents": {}
+        },
+        {
+          "display": "for some reason the floors in Porkums aren't brown desert flooring, and the wall/columns in the four quadrants are desert colored.",
+          "pastedContents": {}
+        },
+        {
+          "display": "why is family_porkums using a different tileset?",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "make it so the shield numbers in blue float downward instead of up.  and make them all last 2000ms",
+          "pastedContents": {}
+        },
+        {
+          "display": "make those numbers last about 50% longer before they fade.  for the shield, get rid of parentheses.",
+          "pastedContents": {}
+        },
+        {
+          "display": "when player takes damage, the health loss should be in red.   the shield loss stays blue, but make it smaller and put it in parentheses.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "i changed it to this:\n\n            actualDamage = Math.floor(actualDamage * (100 - gameConfig.physics.grenades.ownGoalDiscountPercent) / 100) // Half damage for friendly fire\n\n\nnow help me set that variable",
+          "pastedContents": {}
+        },
+        {
+          "display": "show me the code.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "What is the discount on grenade damage when someone hits themselves right now?",
+          "pastedContents": {}
+        },
+        {
           "display": "Compiled with problems:\n×\nERROR\nConflict: Multiple assets emit different content to the same filename assets/maps/manifest.json",
           "pastedContents": {}
         },
@@ -6833,96 +6917,6 @@
         },
         {
           "display": "explain how Stuck Detection works everywhere in my app.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make it so my standard turrets use @public/assets/sound/single_shot_50cal.mp3 whenever they fire a bullet",
-          "pastedContents": {}
-        },
-        {
-          "display": "[Pasted text #1 +207 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "phaser.js:77265 Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently\nyellow.onload @ phaser.js:77265\ngame.ts:33 Window loaded, initializing Phaser game...\ngame.ts:35      Phaser v3.55.2 (WebGL | Web Audio)  https://phaser.io\ngame.ts:36 Phaser game created successfully\npreloadScene.ts:12 PreloadScene constructor called\nmainScene.ts:49 MainScene constructor called\npreloadScene.ts:15 PreloadScene preload started\nmapSequence.ts:14 Map sequence set: (5) ['training_grounds', 'pork_tower', 'tryhard_trellis', 'the_family_porkums', 'boss_test_arena']\npreloadScene.ts:97 PreloadScene create started\npreloadScene.ts:194 PreloadScene create completed, starting MainScene...\npreloadScene.ts:201 Found valid saved map: boss_test_arena\nmainScene.ts:52 MainScene init called with data: {mapId: 'boss_test_arena'}\nmainScene.ts:57 Saved map ID to local storage: boss_test_arena\nmainScene.ts:59 Current map ID after init: boss_test_arena\nmainScene.ts:63 MainScene create started\nmainScene.ts:133 Creating tilemap for: boss_test_arena\nmainScene.ts:141 Adding tilesets...\nmainScene.ts:142 Map expects these tilesets: ['desert_tiles']\nmainScene.ts:145 No data found for Tileset: simple_tiles\naddTilesetImage @ phaser.js:135415\ncreate @ mainScene.ts:145\ncreate @ phaser.js:100333\nbootScene @ phaser.js:100228\nstart @ phaser.js:100921\nprocessQueue @ phaser.js:100019\nupdate @ phaser.js:100273\nstep @ phaser.js:162800\nstep @ phaser.js:89361\nstep @ phaser.js:89608\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstep @ phaser.js:89610\nrequestAnimationFrame\nstart @ phaser.js:89662\nstart @ phaser.js:89231\nstart @ phaser.js:162745\ntexturesReady @ phaser.js:162725\nemit @ phaser.js:1921\nupdatePending @ phaser.js:102047\nemit @ phaser.js:1902\nimage.onload @ phaser.js:102177\nmainScene.ts:149 Tileset result: Tileset {name: 'desert_tiles', firstgid: 1, tileWidth: 32, tileHeight: 32, tileMargin: 0, …}\nmainScene.ts:156 Creating wall layer...\nmainScene.ts:164 Creating crate layer...\nmainScene.ts:178 Creating player at position: 96 320\nplayer.ts:56 Player constructor started\nplayer.ts:85 🎮 Player sprite properties:\nplayer.ts:86   - width: 24 height: 24\nplayer.ts:87   - displayWidth: 48 displayHeight: 48\nplayer.ts:88   - scaleX: 2 scaleY: 2\nplayer.ts:89   - depth: 0\nplayer.ts:90   - tint: undefined\nplayer.ts:91   - texture frame count: 5\nplayer.ts:97 🎮 Available frames in soldier-sprites:\nplayer.ts:99   - Frame names: (4) ['0', '1', '2', '3']\nplayer.ts:103 🎮 Test frame 0: Frame {texture: Texture, name: 0, source: TextureSource, sourceIndex: 0, glTexture: WebGLTexture, …}\nplayer.ts:104   - Frame dimensions: 24 x 24\nplayer.ts:105   - Frame UV: 0 0 0.25 1\nplayer.ts:123 Player initialized: {position: {…}, health: 100, maxHealth: 100, shield: 100, maxShield: 100, …}\nmainScene.ts:180 Player created successfully\nmainScene.ts:281 Creating UI elements...\nmainScene.ts:287 UI elements created\nmainScene.ts:289 Initializing loot system...\nlootSystem.ts:39 🎮 Loot system loaded: 2 items, 6 enemy types\nmainScene.ts:326 MainScene create completed successfully\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nmainScene.ts:292 Loot system ready!\nminiBoss.ts:958 🔄 MiniBoss state transition: relentless → unstuck (stuck for 367ms)\nminiBoss.ts:988 🔄 MiniBoss state transition: unstuck → relentless (unstuck complete)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:160 🔄 MiniBoss state transition: relentless → relentless (player detected at distance 224)\nminiBoss.ts:248 🎯 MiniBoss pursuing - State: relentless, Distance: 224, Health: 300/300\nminiBoss.ts:293 🏃 MiniBoss actively pursuing - trying to close distance from 224 to flamethrower range (120)\nminiBoss.ts:958 🔄 MiniBoss state transition: relentless → unstuck (stuck for 354.2000000476837ms)"
-            }
-          }
-        },
-        {
-          "display": "he chased me briefly but then freaked out, like maybe he \"thought\" he was stuck?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Compress all my in-game WAV files into MP3s, then replace references to them so they have the right file extensions.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make sure that in Super and Relentless Mode, he tries to get close to the player.\n\nAnd yes, add logging.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Help me understand MiniBoss state machine so I can debug him.",
-          "pastedContents": {}
-        },
-        {
-          "display": "When grenades are picked up, play this sound:  @public/assets/sound/collect_ring.mp3 ",
-          "pastedContents": {}
-        },
-        {
-          "display": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/assaultSoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts) 602:2-12\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts(602,3)\n      TS2393: Duplicate function implementation.\n\n\nERROR in ./src/scripts/objects/assaultSoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts) 660:2-12\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts(660,3)\n      TS2393: Duplicate function implementation.",
-          "pastedContents": {}
-        },
-        {
-          "display": "When MiniBoss is hit by a bullet, he should make sounds much like Enemysoldier does (pig grunt)\n\nMake sure the Assault Soldier enemy also makes similar sound when hit",
-          "pastedContents": {}
-        },
-        {
-          "display": "when a regular standard turret dies, play @public/assets/sound/8_bit_explosion.wav three times, and show explosion animations around the dead turret",
-          "pastedContents": {}
-        },
-        {
-          "display": "when TeslaCoil dies, play @public/assets/sound/tesla_dying.mp3 ",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make the sound of TeslaCoil discharge about 40% quieter",
-          "pastedContents": {}
-        },
-        {
-          "display": "Macarons should fill the player's shield up to 100%",
-          "pastedContents": {}
-        },
-        {
-          "display": "still too loud, make it another 35% quieter",
-          "pastedContents": {}
-        },
-        {
-          "display": "reduce the volume of all teslacoil sounds by 35%",
-          "pastedContents": {}
-        },
-        {
-          "display": "when the tesla coil's about to fire and is winding up (filling the bar), play @public/assets/sound/tesla_windup.mp3 \n\nwhen it finally strikes, play @public/assets/sound/tesla_discharge.mp3 ",
-          "pastedContents": {}
-        },
-        {
-          "display": "When a tesla coil is charging itself up, play @public/assets/sound/electric_charging.mp3 ",
-          "pastedContents": {}
-        },
-        {
-          "display": "what about grenade pickups?",
-          "pastedContents": {}
-        },
-        {
-          "display": "how can I insert some text into the map editor?",
-          "pastedContents": {}
-        },
-        {
-          "display": "how do I insert a macaron into the map editor?",
-          "pastedContents": {}
-        },
-        {
-          "display": "when I eat a Macaron, play the @public/assets/sound/french_woman.wav sound",
           "pastedContents": {}
         }
       ],
