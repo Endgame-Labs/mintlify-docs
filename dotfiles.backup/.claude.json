@@ -1,10 +1,10 @@
 {
-  "numStartups": 1116,
+  "numStartups": 1120,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 1095,
+    "shift-enter": 1117,
     "memory-command": 770,
     "theme-command": 1094,
     "prompt-queue": 218,
@@ -12,16 +12,16 @@
     "todo-list": 1116,
     "enter-to-steer-in-relatime": 1099,
     "claude-opus-welcome": 214,
-    "# for memory": 1097,
+    "# for memory": 1119,
     "install-github-app": 553,
     "permissions": 1106,
     "drag-and-drop-images": 1109,
     "double-esc": 1111,
     "continue": 1107,
     "custom-commands": 1092,
-    "shift-tab": 1096
+    "shift-tab": 1118
   },
-  "memoryUsageCount": 4,
+  "memoryUsageCount": 5,
   "promptQueueUseCount": 58,
   "autoUpdaterStatus": "enabled",
   "userID": "7ee8dab157d4f8a02ca8d3c171475157a7294516c5051874968f07eed6029408",
@@ -3867,6 +3867,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "export this as docs/NOOB_GUIDE.md",
+          "pastedContents": {}
+        },
+        {
+          "display": "I am new to Typescript and Next, but I am an expert in Flask and Rails development.  Walk me through the control flow of this Next app in the current directory.",
+          "pastedContents": {}
+        },
+        {
           "display": "no mention of outreach, gong, salesloft?",
           "pastedContents": {}
         },
@@ -4340,14 +4348,6 @@
         {
           "display": "Make a new Linear issue in In Progress status, assign it to me\n\ntitle:   \"API to retrieve a certain message ID (which is already complete) and return a PDF, DOCX, or MD file\"",
           "pastedContents": {}
-        },
-        {
-          "display": "Do you see ways my chnges might block the GIL or event loop?",
-          "pastedContents": {}
-        },
-        {
-          "display": "compare my branch to main to see what I've done.\n\nMAke sure I'm doing Async properly in all the new stuff.\n\nAlso inspect the rest of our python stack (the briefs folder) to see if I'm conforming to the way we do the other mesh stuff, RE sync vs async",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4360,23 +4360,13 @@
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
         "agno_manager.py",
-        "analytics_models.py",
-        "prosaic_engine.py",
+        "models.py",
         "app.py",
-        "thread_message_analytics.yaml"
+        "cli.py",
+        "api.py"
       ],
-      "exampleFilesGeneratedAt": 1750441361804,
-      "hasCompletedProjectOnboarding": true,
-      "lastCost": 1.3375269,
-      "lastAPIDuration": 135674,
-      "lastDuration": 204958027,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 155096,
-      "lastTotalOutputTokens": 2625,
-      "lastTotalCacheCreationInputTokens": 40176,
-      "lastTotalCacheReadInputTokens": 184529,
-      "lastSessionId": "2c8b83ae-4779-48d5-981d-347823f19335"
+      "exampleFilesGeneratedAt": 1751209380330,
+      "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -6494,6 +6484,74 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Compiled with problems:\n×\nERROR\nConflict: Multiple assets emit different content to the same filename assets/maps/manifest.json",
+          "pastedContents": {}
+        },
+        {
+          "display": "no just update my overmind setup",
+          "pastedContents": {}
+        },
+        {
+          "display": "this is probably because I'm running 'overmind start'",
+          "pastedContents": {}
+        },
+        {
+          "display": "mainScene.ts:157 Failed to create wall layer\ncreate    @    mainScene.ts:157",
+          "pastedContents": {}
+        },
+        {
+          "display": "add \"make run\" command that simply runs the server.  if there's an `os` command handy, it runs it that way.  otherwise it runs `overmind start`.",
+          "pastedContents": {}
+        },
+        {
+          "display": "make a new folder in @plans/ called \"done\" and move our finished plan into it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "We need a way to distinguish between real maps and testing maps.  Right now only the first 4 maps are meant to be in the real flow.\n\nThe boss test map is just meant for testing.  Let's change it so instead of a numeric prefix, it just has \"test_\" as its prefix.  Then it won't be in the normal game flow.\n\nThe only way to show test maps is in the Settings->Debug menu.  Add a button that lets me navigate to one of the test maps intentionally.  But standard player flow will just go through the numbered maps.\n\nOnce it's done and it works, make me a new map called test_assault which is a simple arena that has nothing but an AssaultSoldier and a few crates in the middle.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit and deploy ",
+          "pastedContents": {}
+        },
+        {
+          "display": "why didn't i see an update to CLAUDE.md",
+          "pastedContents": {}
+        },
+        {
+          "display": "# always validate with make test before deploying",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't need a loot-only version of the tests",
+          "pastedContents": {}
+        },
+        {
+          "display": "give me a makefile that lets me type \"make test\" to run all this stuff",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "rename docs to planfiles\n\nthen, execute the plan, running tests periodically as you work on it",
+          "pastedContents": {}
+        },
+        {
+          "display": "move that file into cwd, not docs",
+          "pastedContents": {}
+        },
+        {
+          "display": "why does the test have a refactoring plan attached to it?  please moove that stuff to a plan.md",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't think we need objects named ExplosiveDamage or ElectricDamage\n\nthe grenade and flamethrower should implement the DamageDealer interface themselves directly, and we can get rid of these extra damage classes.\n\nbut before making that change, write some tests to confirm the behavior we have in place now;  we should only refactor if we have confidence in the behavior we expect.",
+          "pastedContents": {}
+        },
+        {
           "display": "who implements this interface?",
           "pastedContents": {}
         },
@@ -6865,80 +6923,6 @@
         },
         {
           "display": "when I eat a Macaron, play the @public/assets/sound/french_woman.wav sound",
-          "pastedContents": {}
-        },
-        {
-          "display": "I hear nothing when I hit the standard turrets just onw",
-          "pastedContents": {}
-        },
-        {
-          "display": "When player bullet hits a turret of any kind (implement in BaseTurret), make the @public/assets/sound/bullet_hit_metal.mp3 sound",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make sure when boss is in his dying animation, his weapons stop firing.\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "when miniboss dies, play @public/assets/sound/pig_dying.wav thrice, and in parallel play @public/assets/sound/pig_monster_open.wav\n\nlet him have a dying animation that takes 4 seconds, and don't pop the \"Level Complete\" til after the animation is complete.",
-          "pastedContents": {}
-        },
-        {
-          "display": "double the damage from Flamethrower",
-          "pastedContents": {}
-        },
-        {
-          "display": "if i pick up two items in rapid succession, and both have effect text / speech bubbles, they collide.  let's make sure the player speech bubble is a singleton.  wipe out old ones when new ones come up.",
-          "pastedContents": {}
-        },
-        {
-          "display": "when miniboss is let out of his trap, play @public/assets/sound/pig_monster_open.wav ",
-          "pastedContents": {}
-        },
-        {
-          "display": "when EnemySoldier get shit by a bullet, play @public/assets/sound/pig_grunt.wav ",
-          "pastedContents": {}
-        },
-        {
-          "display": "when EnemySoldier dies, play @public/assets/sound/pig_dying.wav ",
-          "pastedContents": {}
-        },
-        {
-          "display": "when grenade detonates, i'd like it to play @public/assets/sound/8-bit-explosion.wav ",
-          "pastedContents": {}
-        },
-        {
-          "display": "when i throw a grenade, i'd like it to play @public/assets/sound/gruntlady.wav ",
-          "pastedContents": {}
-        },
-        {
-          "display": "the OK BOOMER quote freezes in space instead of following me like the OUI MACARONS used to.\n\nalso the whole game freezes:  Uncaught TypeError: Cannot read properties of undefined (reading 'tweens')\n    at Function.eval (baseItemPickup.ts:130:24)\n    at Clock.update (phaser.js:210733:36)\n    at EventEmitter.emit (phaser.js:1923:33)\n    at Systems.step (phaser.js:49061:16)\n    at SceneManager.update (phaser.js:100284:21)\n    at Game.step (phaser.js:162800:20)\n    at TimeStep.step (phaser.js:89361:14)\n    at step (phaser.js:89608:19)",
-          "pastedContents": {}
-        },
-        {
-          "display": "[Pasted text #1 +14 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Compiled with problems:X\n\nERROR in ./src/scripts/objects/baseItemPickup.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/baseItemPickup.ts) 67:37-43\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/baseItemPickup.ts(67,38)\n      TS2339: Property 'exists' does not exist on type 'NoAudioSoundManager | HTML5AudioSoundManager | WebAudioSoundManager'.\n  Property 'exists' does not exist on type 'NoAudioSoundManager'.\n\n\nERROR in ./src/scripts/objects/baseItemPickup.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/baseItemPickup.ts) 178:40-51\n\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/baseItemPickup.ts(178,41)\n      TS2345: Argument of type 'EventEmitter' is not assignable to parameter of type 'Function'.\n  Type 'EventEmitter' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.\n"
-            }
-          }
-        },
-        {
-          "display": "when the player's assault rifle fires, i want to hear @public/assets/sound/effect_ar_shot.mp3 each time.",
-          "pastedContents": {}
-        },
-        {
-          "display": "continue, but when you're done, let's abstract this into a BaseItemPickup class so we don't have to implement it every time.  abstract anything re-usable between this pickup and the other pickups into BaseItemPickup.\n\nUltrathink.",
-          "pastedContents": {}
-        },
-        {
-          "display": "why doesn't my soldier say \"OK BOOMER\" when he picks up a grenade?",
-          "pastedContents": {}
-        },
-        {
-          "display": "okay thanks, delete that map",
           "pastedContents": {}
         }
       ],
