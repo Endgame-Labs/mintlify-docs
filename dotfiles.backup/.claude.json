@@ -1,5 +1,5 @@
 {
-  "numStartups": 1142,
+  "numStartups": 1147,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -6494,6 +6494,133 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "gs",
+          "pastedContents": {}
+        },
+        {
+          "display": "CustomControls is rendering in the wrong place when I click it.  If I'm 'n a big map, I can't even see it.  Please update it with some logging so you can help me fix it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "now TAB does nothing so I can't see the dialog at all.",
+          "pastedContents": {}
+        },
+        {
+          "display": "nope still can't see it.  please just add logging of its actual position so i can paste you the logs.",
+          "pastedContents": {}
+        },
+        {
+          "display": "nope it's appearing way up at the top of the map, not wherever I am.",
+          "pastedContents": {}
+        },
+        {
+          "display": "still no shotgun sound coming through.  maybe the file is malformed somehow?",
+          "pastedContents": {}
+        },
+        {
+          "display": "this didn't fix it.  Just copy its positioning and scrollfactor and the rest from the SettingsDialog itself.  don't redo anything.",
+          "pastedContents": {}
+        },
+        {
+          "display": "why can't i hear shotguns with EnemySoldier fires?",
+          "pastedContents": {}
+        },
+        {
+          "display": "continue",
+          "pastedContents": {}
+        },
+        {
+          "display": "still not visible.",
+          "pastedContents": {}
+        },
+        {
+          "display": "still not showing up lol",
+          "pastedContents": {}
+        },
+        {
+          "display": "this is only a problem on Pork Tower map, the only map with scrolling.    so it's related to scrolling.",
+          "pastedContents": {}
+        },
+        {
+          "display": "when I click CustomControls, i can't see the dialog even though it's being created.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Can't see the Custom Controls dialog on the Pork Tower map.  I think it's related to scrollFactor.  Please update my UI elements so the scrollFactor is always correct.",
+          "pastedContents": {}
+        },
+        {
+          "display": "wait now i see the dialog too!   must've been this last scrollfactor change?",
+          "pastedContents": {}
+        },
+        {
+          "display": "yes i see the test rectangle.",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +70 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "mainScene.ts:155 Tilemap has no tileset \"simple_tiles\". Its tilesets are [Tileset]\naddTilesetImage @ phaser.js:222217\ncreate @ mainScene.ts:155\ncreate @ phaser.js:198297\nbootScene @ phaser.js:198187\nstart @ phaser.js:198942\nprocessQueue @ phaser.js:197988\nupdate @ phaser.js:198232\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstart @ phaser.js:31401\nstart @ phaser.js:18044\nstart @ phaser.js:17139\ntexturesReady @ phaser.js:17119\nemit @ phaser.js:213\nupdatePending @ phaser.js:216447\nemit @ phaser.js:194\nimage.onload @ phaser.js:216593\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: false\nsettingsDialog.ts:632   - customControlsDialog exists: false\nsettingsDialog.ts:643   → Showing settings dialog\nsettingsDialog.ts:602 👁️ SettingsDialog.show() called\nsettingsDialog.ts:607   - Setting isVisible = true\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: true\nsettingsDialog.ts:632   - customControlsDialog exists: false\nsettingsDialog.ts:639   → Hiding settings dialog\nsettingsDialog.ts:617 🙈 SettingsDialog.hide() called\nsettingsDialog.ts:622   - Setting isVisible = false\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: false\nsettingsDialog.ts:632   - customControlsDialog exists: false\nsettingsDialog.ts:643   → Showing settings dialog\nsettingsDialog.ts:602 👁️ SettingsDialog.show() called\nsettingsDialog.ts:607   - Setting isVisible = true\nsettingsDialog.ts:199 🎮 Control mode button clicked: custom\nsettingsDialog.ts:200   - isVisible: true\nsettingsDialog.ts:201   - container visible: true\nsettingsDialog.ts:202   - customControlsDialog exists: false\nsettingsDialog.ts:206 🎯 Opening custom controls dialog...\nsettingsDialog.ts:649 📂 openCustomControls() called\nsettingsDialog.ts:650   - Before: isVisible = true\nsettingsDialog.ts:651   - Before: container.visible = true\nsettingsDialog.ts:654   - After hiding: container.visible = false\nsettingsDialog.ts:656   - Creating CustomControlsDialog...\nsettingsDialog.ts:657   - Scene reference: MainScene {sys: Systems, miniBossFreed: false, isCountdownActive: false, currentMapId: 'pork_tower', totalInitialEnemies: 30, …}\nsettingsDialog.ts:658   - Scene is active: true\nsettingsDialog.ts:659   - Scene is visible: true\nsettingsDialog.ts:660   - Scene children before: 178\ncustomControlsDialog.ts:19 🆕 CustomControlsDialog constructor called\ncustomControlsDialog.ts:25   - Current scheme: {moveForward: 'W', moveBackward: 'S', strafeLeft: 'A', strafeRight: 'D', rotateLeft: 'OPEN_BRACKET', …}\ncustomControlsDialog.ts:32   - Depth set to: 10001\ncustomControlsDialog.ts:33   - Visible: true\ncustomControlsDialog.ts:37   - Test rectangle created at depth 10002\nsettingsDialog.ts:663   - CustomControlsDialog created!\nsettingsDialog.ts:664   - Scene children after: 180\nsettingsDialog.ts:665   - Dialog reference: CustomControlsDialog {_events: Events, _eventsCount: 2, scene: MainScene, displayList: DisplayList, type: 'Container', …}\nsettingsDialog.ts:666   - Dialog parent: null"
+            }
+          }
+        },
+        {
+          "display": "     Phaser v3.90.0 (WebGL | Web Audio)  https://phaser.io/v390\nindex.js:561 [webpack-dev-server] Errors while compiling. Reload prevented.\nlogger @ index.js:561\neval @ index.js:730\nerror @ index.js:180\nerrors @ index.js:280\neval @ socket.js:68\nclient.onmessage @ WebSocketClient.js:55\nindex.js:561 [webpack-dev-server] ERROR in ./src/scripts/objects/settingsDialog.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/settingsDialog.ts) 797:40-45\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/settingsDialog.ts(797,41)\n      TS18046: 'error' is of type 'unknown'.",
+          "pastedContents": {}
+        },
+        {
+          "display": "still no dialog.\n\n[Pasted text #1 +20 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "lled\nsettingsDialog.ts:631   - isVisible: false\nsettingsDialog.ts:632   - customControlsDialog exists: false\nsettingsDialog.ts:643   → Showing settings dialog\nsettingsDialog.ts:602 👁️ SettingsDialog.show() called\nsettingsDialog.ts:607   - Setting isVisible = true\nsettingsDialog.ts:199 🎮 Control mode button clicked: custom\nsettingsDialog.ts:200   - isVisible: true\nsettingsDialog.ts:201   - container visible: true\nsettingsDialog.ts:202   - customControlsDialog exists: false\nsettingsDialog.ts:206 🎯 Opening custom controls dialog...\nsettingsDialog.ts:648 📂 openCustomControls() called\nsettingsDialog.ts:649   - Before: isVisible = true\nsettingsDialog.ts:650   - Before: container.visible = true\nsettingsDialog.ts:653   - After hiding: container.visible = false\nsettingsDialog.ts:655   - Creating CustomControlsDialog...\ncustomControlsDialog.ts:19 🆕 CustomControlsDialog constructor called\ncustomControlsDialog.ts:25   - Current scheme: {moveForward: 'W', moveBackward: 'S', strafeLeft: 'A', strafeRight: 'D', rotateLeft: 'OPEN_BRACKET', …}\ncustomControlsDialog.ts:32   - Depth set to: 10001\ncustomControlsDialog.ts:33   - Visible: true\nsettingsDialog.ts:658   - CustomControlsDialog created!"
+            }
+          }
+        },
+        {
+          "display": "[Pasted text #2 +50 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "e [Tileset]\naddTilesetImage @ phaser.js:222217\ncreate @ mainScene.ts:155\ncreate @ phaser.js:198297\nbootScene @ phaser.js:198187\nstart @ phaser.js:198942\nprocessQueue @ phaser.js:197988\nupdate @ phaser.js:198232\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstart @ phaser.js:31401\nstart @ phaser.js:18044\nstart @ phaser.js:17139\ntexturesReady @ phaser.js:17119\nemit @ phaser.js:213\nupdatePending @ phaser.js:216447\nemit @ phaser.js:194\nimage.onload @ phaser.js:216593\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: false\nsettingsDialog.ts:632   - customControlsDialog exists: false\nsettingsDialog.ts:643   → Showing settings dialog\nsettingsDialog.ts:602 👁️ SettingsDialog.show() called\nsettingsDialog.ts:607   - Setting isVisible = true\nsettingsDialog.ts:199 🎮 Control mode button clicked: custom\nsettingsDialog.ts:200   - isVisible: true\nsettingsDialog.ts:201   - container visible: true\nsettingsDialog.ts:202   - customControlsDialog exists: false\nsettingsDialog.ts:206 🎯 Opening custom controls dialog...\nsettingsDialog.ts:648 📂 openCustomControls() called\nsettingsDialog.ts:649   - Before: isVisible = true\nsettingsDialog.ts:650   - Before: container.visible = true\nsettingsDialog.ts:653   - After hiding: container.visible = false\nsettingsDialog.ts:655   - Creating CustomControlsDialog...\nsettingsDialog.ts:657   - CustomControlsDialog created!\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: true\nsettingsDialog.ts:632   - customControlsDialog exists: true\nsettingsDialog.ts:635   ❌ Blocking toggle - custom controls is open\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: true\nsettingsDialog.ts:632   - customControlsDialog exists: true\nsettingsDialog.ts:635   ❌ Blocking toggle - custom controls is open\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: true\nsettingsDialog.ts:632   - customControlsDialog exists: true\nsettingsDialog.ts:635   ❌ Blocking toggle - custom controls is open"
+            },
+            "2": {
+              "id": 2,
+              "type": "text",
+              "content": "ilesets are [Tileset]\naddTilesetImage @ phaser.js:222217\ncreate @ mainScene.ts:155\ncreate @ phaser.js:198297\nbootScene @ phaser.js:198187\nstart @ phaser.js:198942\nprocessQueue @ phaser.js:197988\nupdate @ phaser.js:198232\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstart @ phaser.js:31401\nstart @ phaser.js:18044\nstart @ phaser.js:17139\ntexturesReady @ phaser.js:17119\nemit @ phaser.js:213\nupdatePending @ phaser.js:216447\nemit @ phaser.js:194\nimage.onload @ phaser.js:216593\nsettingsDialog.ts:630 🔄 SettingsDialog.toggle() called\nsettingsDialog.ts:631   - isVisible: false\nsettingsDialog.ts:632   - customControlsDialog exists: false\nsettingsDialog.ts:643   → Showing settings dialog\nsettingsDialog.ts:602 👁️ SettingsDialog.show() called\nsettingsDialog.ts:607   - Setting isVisible = true\nsettingsDialog.ts:199 🎮 Control mode button clicked: custom\nsettingsDialog.ts:200   - isVisible: true\nsettingsDialog.ts:201   - container visible: true\nsettingsDialog.ts:202   - customControlsDialog exists: false\nsettingsDialog.ts:206 🎯 Opening custom controls dialog...\nsettingsDialog.ts:648 📂 openCustomControls() called\nsettingsDialog.ts:649   - Before: isVisible = true\nsettingsDialog.ts:650   - Before: container.visible = true\nsettingsDialog.ts:653   - After hiding: container.visible = false\nsettingsDialog.ts:655   - Creating CustomControlsDialog...\ncustomControlsDialog.ts:19 🆕 CustomControlsDialog constructor called\ncustomControlsDialog.ts:25   - Current scheme: {moveForward: 'W', moveBackward: 'S', strafeLeft: 'A', strafeRight: 'D', rotateLeft: 'OPEN_BRACKET', …}\ncustomControlsDialog.ts:32   - Depth set to: 10001\ncustomControlsDialog.ts:33   - Visible: true\nsettingsDialog.ts:658   - CustomControlsDialog created!"
+            }
+          }
+        },
+        {
+          "display": "I still can't click Custom Controls anymore.\n\nadd logging so we can actually fix htis.",
+          "pastedContents": {}
+        },
+        {
+          "display": "This bug was definitely introduced in the past two commits.  Compare there for clues.",
+          "pastedContents": {}
+        },
+        {
+          "display": "it's still happening",
+          "pastedContents": {}
+        },
+        {
+          "display": "I've gotten into a state where clicking Custom Controls just closes the settings dialog, and doens't let me actually map my controls",
+          "pastedContents": {}
+        },
+        {
+          "display": "oops accidentally checked out my @public/changelog.json file.   please revert it to what it was when you last looked at it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "nope, fix the change rendering script so the output styling matches what we had in the old changelog (see previous commit for styling)",
+          "pastedContents": {}
+        },
+        {
           "display": "give me a make render-changes that does this",
           "pastedContents": {}
         },
@@ -6806,128 +6933,6 @@
         {
           "display": "no just update my overmind setup",
           "pastedContents": {}
-        },
-        {
-          "display": "this is probably because I'm running 'overmind start'",
-          "pastedContents": {}
-        },
-        {
-          "display": "mainScene.ts:157 Failed to create wall layer\ncreate    @    mainScene.ts:157",
-          "pastedContents": {}
-        },
-        {
-          "display": "add \"make run\" command that simply runs the server.  if there's an `os` command handy, it runs it that way.  otherwise it runs `overmind start`.",
-          "pastedContents": {}
-        },
-        {
-          "display": "make a new folder in @plans/ called \"done\" and move our finished plan into it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "We need a way to distinguish between real maps and testing maps.  Right now only the first 4 maps are meant to be in the real flow.\n\nThe boss test map is just meant for testing.  Let's change it so instead of a numeric prefix, it just has \"test_\" as its prefix.  Then it won't be in the normal game flow.\n\nThe only way to show test maps is in the Settings->Debug menu.  Add a button that lets me navigate to one of the test maps intentionally.  But standard player flow will just go through the numbered maps.\n\nOnce it's done and it works, make me a new map called test_assault which is a simple arena that has nothing but an AssaultSoldier and a few crates in the middle.",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and deploy ",
-          "pastedContents": {}
-        },
-        {
-          "display": "why didn't i see an update to CLAUDE.md",
-          "pastedContents": {}
-        },
-        {
-          "display": "# always validate with make test before deploying",
-          "pastedContents": {}
-        },
-        {
-          "display": "i don't need a loot-only version of the tests",
-          "pastedContents": {}
-        },
-        {
-          "display": "give me a makefile that lets me type \"make test\" to run all this stuff",
-          "pastedContents": {}
-        },
-        {
-          "display": "continue",
-          "pastedContents": {}
-        },
-        {
-          "display": "rename docs to planfiles\n\nthen, execute the plan, running tests periodically as you work on it",
-          "pastedContents": {}
-        },
-        {
-          "display": "move that file into cwd, not docs",
-          "pastedContents": {}
-        },
-        {
-          "display": "why does the test have a refactoring plan attached to it?  please moove that stuff to a plan.md",
-          "pastedContents": {}
-        },
-        {
-          "display": "i don't think we need objects named ExplosiveDamage or ElectricDamage\n\nthe grenade and flamethrower should implement the DamageDealer interface themselves directly, and we can get rid of these extra damage classes.\n\nbut before making that change, write some tests to confirm the behavior we have in place now;  we should only refactor if we have confidence in the behavior we expect.",
-          "pastedContents": {}
-        },
-        {
-          "display": "who implements this interface?",
-          "pastedContents": {}
-        },
-        {
-          "display": "help me understand the point of the DamagerDealer interface\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and deploy",
-          "pastedContents": {}
-        },
-        {
-          "display": "Compiled with problems:\n×\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1206:40-48\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1206,41)\n      TS2339: Property 'setDepth' does not exist on type 'never'.",
-          "pastedContents": {}
-        },
-        {
-          "display": "don't let physics layer show up above dialog boxes;  tehy should be top layer",
-          "pastedContents": {}
-        },
-        {
-          "display": "What you’re experiencing now is a rebuild loop in your dev server, even though TypeScript errors are gone. The key clue is:\n\nRegenerating map manifest... happening over and over\n\nThis suggests there’s a watcher or script modifying files continuously, which triggers Webpack to rebuild, which then re-triggers the generator… resulting in an infinite loop.",
-          "pastedContents": {}
-        },
-        {
-          "display": "are these legit problems:  if so fix them\n\n[Pasted text #1 +202 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "ly_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts\nweb    | 227:6-31\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(227,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts\nweb    | 237:8-33\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(237,9)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts\nweb    | 286:6-31\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(286,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts\nweb    | 290:6-31\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(290,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts\nweb    | 297:8-33\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(297,9)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts\nweb    | ./src/scripts/objects/miniBoss.ts 163:21-30\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(163,22)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts\nweb    | ./src/scripts/objects/miniBoss.ts 731:21-30\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(731,22)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts\nweb    | ./src/scripts/objects/miniBoss.ts 994:47-55\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(994,48)\nweb    |       TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts\nweb    | ./src/scripts/objects/miniBoss.ts 995:44-1004:5\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(995,45)\nweb    |       TS2554: Expected 0 arguments, but got 1.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts\nweb    | ./src/scripts/objects/miniBoss.ts 1008:14-26\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1008,15)\nweb    |       TS2339: Property 'emitParticle' does not exist on type 'void'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts\nweb    | ./src/scripts/objects/player.ts 184:21-30\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts(184,22)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts\nweb    | ./src/scripts/objects/weapons/Flamethrower.ts 41:47-55\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(41,48)\nweb    |       TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts\nweb    | ./src/scripts/objects/weapons/Flamethrower.ts 42:4-23\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(42,5)\nweb    |       TS2322: Type 'void' is not assignable to type 'ParticleEmitter | null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts\nweb    | ./src/scripts/objects/weapons/Flamethrower.ts 42:50-53:5\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(42,51)\nweb    |       TS2554: Expected 0 arguments, but got 1.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts\nweb    | ./src/scripts/objects/weapons/Flamethrower.ts 101:33-83\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(101,34)\nweb    |       TS2345: Argument of type '{ min: number; max: number; }' is not assignable to parameter of type 'number'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts\nweb    | ./src/scripts/objects/weapons/Flamethrower.ts 129:30-37\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(129,31)\nweb    |       TS2339: Property 'manager' does not exist on type 'ParticleEmitter'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 115:6-25\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(115,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 120:6-25\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(120,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 127:6-25\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(127,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 159:6-20\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(159,7)\nweb    |       TS2322: Type 'TilemapLayer | null' is not assignable to type 'TilemapLayer'.\nweb    |   Type 'null' is not assignable to type 'TilemapLayer'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 167:6-21\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(167,7)\nweb    |       TS2322: Type 'TilemapLayer | null' is not assignable to type 'TilemapLayer'.\nweb    |   Type 'null' is not assignable to type 'TilemapLayer'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 197:6-19\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(197,7)\nweb    |       TS18047: 'turretObjects' is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 221:6-25\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(221,7)\nweb    |       TS18047: 'enemySoldierObjects' is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 254:6-21\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(254,7)\nweb    |       TS18047: 'miniBossObjects' is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 271:6-23\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(271,7)\nweb    |       TS18047: 'healthPackObjects' is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 281:6-26\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(281,7)\nweb    |       TS18047: 'grenadePickupObjects' is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 719:20-39\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(719,21)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 723:19-38\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(723,20)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 745:19-38\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(745,20)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 746:19-38\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(746,20)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 940:41-53\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(940,42)\nweb    |       TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 941:44-950:5\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(941,45)\nweb    |       TS2554: Expected 0 arguments, but got 1.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1079:6-25\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1079,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1089:4-23\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1089,5)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1331:6-25\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1331,7)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1348:4-23\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1348,5)\nweb    |       TS2531: Object is possibly 'null'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1362:41-49\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1362,42)\nweb    |       TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1363:44-1372:5\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1363,45)\nweb    |       TS2554: Expected 0 arguments, but got 1.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1373:12-27\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1373,13)\nweb    |       TS2339: Property 'setScrollFactor' does not exist on type 'void'.\nweb    |\nweb    | ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts\nweb    | ./src/scripts/scenes/mainScene.ts 1378:14-18\nweb    | [tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1378,15)\nweb    |       TS2339: Property 'stop' does not exist on type 'void'."
-            }
-          }
-        },
-        {
-          "display": "no lint the whole directory",
-          "pastedContents": {}
-        },
-        {
-          "display": "do some basic linting",
-          "pastedContents": {}
-        },
-        {
-          "display": "how did i go from no errors to this:\n\n[Pasted text #1 +130 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Compiled with problems:\n×\nERROR in ./src/scripts/objects/assaultSoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts) 565:30-39\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/assaultSoldier.ts(565,31)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 227:6-31\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(227,7)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 237:8-33\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(237,9)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 286:6-31\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(286,7)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 290:6-31\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(290,7)\n      TS2531: Object is possibly 'null'.\nERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts 297:8-33\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/debugPanel.ts(297,9)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/enemySoldier.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/enemySoldier.ts) 461:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/enemySoldier.ts(461,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 163:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(163,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 754:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(754,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 1017:47-55\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1017,48)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 1018:44-1027:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1018,45)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/objects/miniBoss.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts) 1031:14-26\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/miniBoss.ts(1031,15)\n      TS2339: Property 'emitParticle' does not exist on type 'void'.\nERROR in ./src/scripts/objects/player.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts) 222:21-30\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/player.ts(222,22)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 43:47-55\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(43,48)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 44:4-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(44,5)\n      TS2322: Type 'void' is not assignable to type 'ParticleEmitter | null'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 44:50-55:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(44,51)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 103:33-83\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(103,34)\n      TS2345: Argument of type '{ min: number; max: number; }' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/objects/weapons/Flamethrower.ts (/Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts) 132:30-37\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/objects/weapons/Flamethrower.ts(132,31)\n      TS2339: Property 'manager' does not exist on type 'ParticleEmitter'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 122:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(122,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 127:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(127,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 134:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(134,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 175:6-20\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(175,7)\n      TS2322: Type 'TilemapLayer | null' is not assignable to type 'TilemapLayer'.\n  Type 'null' is not assignable to type 'TilemapLayer'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 184:6-21\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(184,7)\n      TS2322: Type 'TilemapLayer | null' is not assignable to type 'TilemapLayer'.\n  Type 'null' is not assignable to type 'TilemapLayer'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 216:6-19\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(216,7)\n      TS18047: 'turretObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 240:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(240,7)\n      TS18047: 'enemySoldierObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 273:6-21\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(273,7)\n      TS18047: 'miniBossObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 290:6-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(290,7)\n      TS18047: 'healthPackObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 300:6-26\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(300,7)\n      TS18047: 'grenadePickupObjects' is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 744:20-39\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(744,21)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 748:19-38\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(748,20)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 770:19-38\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(770,20)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 771:19-38\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(771,20)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 969:41-53\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(969,42)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 970:44-979:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(970,45)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1115:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1115,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1125:4-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1125,5)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1368:6-25\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1368,7)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1387:4-23\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1387,5)\n      TS2531: Object is possibly 'null'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1401:41-49\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1401,42)\n      TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1402:44-1411:5\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1402,45)\n      TS2554: Expected 0 arguments, but got 1.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1412:12-27\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1412,13)\n      TS2339: Property 'setScrollFactor' does not exist on type 'void'.\nERROR in ./src/scripts/scenes/mainScene.ts (/Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts) 1417:14-18\n[tsl] ERROR in /Users/dorkitude/a/dev/flagger/src/scripts/scenes/mainScene.ts(1417,15)\n      TS2339: Property 'stop' does not exist on type 'void'.\n"
-            }
-          }
-        },
-        {
-          "display": "server won't run without looping now:\n\n[Pasted text #1 +44 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/phaser-logo.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTH_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_EAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTH_strip4.png\nweb    | webpack compiled successfully\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /vendors.bundle.js\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /main.bundle.js\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | webpack compiled successfully\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | Regenerating map manifest...\nweb    | Generated map manifest with 5 maps:\nweb    |   - training_grounds (001_training_grounds.json)\nweb    |   - pork_tower (002_pork_tower.json)\nweb    |   - tryhard_trellis (003_tryhard_trellis.json)\nweb    |   - the_family_porkums (004_the_family_porkums.json)\nweb    |   - boss_test_arena (005_boss_test_arena.json)\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/phaser-logo.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTH_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_NORTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_EAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTHEAST_strip4.png\nweb    | <i> [webpack-dev-middleware] wait until bundle finished: /assets/img/SMS_Soldier_RIFLERUN_SOUTH_strip4.png"
-            }
-          }
         }
       ],
       "mcpContextUris": [],
@@ -6946,7 +6951,17 @@
         "game.ts"
       ],
       "exampleFilesGeneratedAt": 1750710327887,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.004583200000000001,
+      "lastAPIDuration": 11735,
+      "lastDuration": 7706,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 5129,
+      "lastTotalOutputTokens": 120,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "24b00db5-0300-4001-a12f-4873c1626137"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
