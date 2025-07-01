@@ -1,5 +1,5 @@
 {
-  "numStartups": 1173,
+  "numStartups": 1174,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -16,7 +16,7 @@
     "install-github-app": 553,
     "permissions": 1170,
     "drag-and-drop-images": 1173,
-    "double-esc": 1153,
+    "double-esc": 1174,
     "continue": 1171,
     "custom-commands": 1154,
     "shift-tab": 1160
@@ -3872,6 +3872,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "anyone know where we store the thump up thumb down feedback?",
+          "pastedContents": {}
+        },
+        {
+          "display": "!export BRIEFS_FACTS_QUEUE_SEND_TO_TEMPORAL=false",
+          "pastedContents": {}
+        },
+        {
           "display": "[Pasted text #1 +4 lines]\n\nis this related to a recent update?  is there anything in the README that describes what's needed to get my env up to date",
           "pastedContents": {
             "1": {
@@ -4356,14 +4364,6 @@
         },
         {
           "display": "Show me how those articles flow to actual production.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Make me a new branch based on the linear ticket END-4058 and start implementing the @src/briefs/plan.md ",
-          "pastedContents": {}
-        },
-        {
-          "display": "Are we still using Perigon in production?  (not Paragon, but perigon)",
           "pastedContents": {}
         }
       ],
