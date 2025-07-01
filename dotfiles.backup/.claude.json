@@ -1,5 +1,5 @@
 {
-  "numStartups": 1174,
+  "numStartups": 1175,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -3872,6 +3872,18 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "is the prompt different for person scope threads?  is it hard coded?",
+          "pastedContents": {}
+        },
+        {
+          "display": "> Read this and give me some ideas for hooks:\n\n  https://docs.anthropic.com/en/docs/claude-code/hooks",
+          "pastedContents": {}
+        },
+        {
+          "display": "how do person-scoped thread work in python land?  (like a user clicks a Person card in a thread response)",
+          "pastedContents": {}
+        },
+        {
           "display": "anyone know where we store the thump up thumb down feedback?",
           "pastedContents": {}
         },
@@ -4352,18 +4364,6 @@
         },
         {
           "display": "Get rid of \"Content\" and the header above \"Content\" in all document exports.\n\nTranslate from Markdown script language to rich text before DOCX or PDF export.  People reading PDFs don't want to see **starstar** or #heading, but rather just the rich interpreted versions of those things.",
-          "pastedContents": {}
-        },
-        {
-          "display": "how do I make it go into interactive?\n\nuv run threads-cli --org-id=6027 --account-id=0015G00001u4MzpQAE --message \"capital of England\" --gpt4-1\n\n\njust gives me an answer and then exits",
-          "pastedContents": {}
-        },
-        {
-          "display": "Update threads CLI so I can test this manually.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Show me how those articles flow to actual production.",
           "pastedContents": {}
         }
       ],
