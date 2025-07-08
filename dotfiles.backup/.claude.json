@@ -1,5 +1,5 @@
 {
-  "numStartups": 1192,
+  "numStartups": 1194,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -15,7 +15,7 @@
     "# for memory": 1184,
     "install-github-app": 553,
     "permissions": 1191,
-    "drag-and-drop-images": 1173,
+    "drag-and-drop-images": 1194,
     "double-esc": 1174,
     "continue": 1192,
     "custom-commands": 1185,
@@ -3878,6 +3878,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "give me an assessment of how to fix END-4159 is happening, and make a plan2.md for how to fix it.\nput the plan.md into a secret gist and pipe the URL into my clipboard with pbcopy.",
+          "pastedContents": {}
+        },
+        {
+          "display": "give me an assessment of how to fix END-4163 is happening, and make a plan.md for how to fix it.\nput the plan.md into a secret gist and pipe the URL into my clipboard with pbcopy.",
+          "pastedContents": {}
+        },
+        {
           "display": "what other callers are there?",
           "pastedContents": {}
         },
@@ -4357,14 +4365,6 @@
         {
           "display": "commit and push",
           "pastedContents": {}
-        },
-        {
-          "display": "why doesn't my linear ticket know about the branch?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Update the threads CLI README to explain the ways to use the new message-export API.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4494,6 +4494,10 @@
     "/Users/dorkitude/a/dev/scrappy-head": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "sometimes the linkedin_scraper.py (CLI in crawl mode) freezes up with \"Failed to load profile after 3 attempts\"\n\n\nI think when that happens twice, we should just kill the process",
+          "pastedContents": {}
+        },
         {
           "display": "move the script into ~/a/scripts/background, and update contrab accordingly",
           "pastedContents": {}
@@ -4740,17 +4744,7 @@
         "src/utils.py",
         "src/main.py"
       ],
-      "exampleFilesGeneratedAt": 1750445762848,
-      "lastCost": 2.3582274999999973,
-      "lastAPIDuration": 451096,
-      "lastDuration": 1501776,
-      "lastLinesAdded": 43,
-      "lastLinesRemoved": 4,
-      "lastTotalInputTokens": 45832,
-      "lastTotalOutputTokens": 8945,
-      "lastTotalCacheCreationInputTokens": 16778,
-      "lastTotalCacheReadInputTokens": 1006160,
-      "lastSessionId": "076f359e-29d9-418e-a103-8d451d1b0368"
+      "exampleFilesGeneratedAt": 1752001131494
     },
     "/Users/dorkitude/Dropbox/backups": {
       "allowedTools": [],
