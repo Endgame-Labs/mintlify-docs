@@ -3,6 +3,9 @@ alias vs="vim ~/a/scripts/.startup"
 alias cs="code ~/a/scripts/.startup"
 alias ss="source ~/.zshrc"
 
+# UNIX UTILS
+alias clipboard="pbcopy"
+
 
 # PROMPT
 PS1="%{%F{033}%}%n%{%f%}@%{%F{green}%}%m:%{%F{yellow}%}%~%{$%f%}%  "
