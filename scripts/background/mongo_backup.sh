@@ -10,7 +10,7 @@ BACKUP_NAME="${TIMESTAMP}_mongodb"
 
 # Create backup
 echo "Starting MongoDB backup at $(date)"
-mongodump --out "$BACKUP_DIR/$BACKUP_NAME"
+/opt/homebrew/bin/mongodump --out "$BACKUP_DIR/$BACKUP_NAME"
 
 # Check if backup was successful
 if [ $? -eq 0 ]; then
