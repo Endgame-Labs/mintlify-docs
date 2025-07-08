@@ -1,5 +1,5 @@
 {
-  "numStartups": 1194,
+  "numStartups": 1197,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -16,7 +16,7 @@
     "install-github-app": 553,
     "permissions": 1191,
     "drag-and-drop-images": 1194,
-    "double-esc": 1174,
+    "double-esc": 1195,
     "continue": 1192,
     "custom-commands": 1185,
     "shift-tab": 1182
@@ -3243,6 +3243,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "i like how it's putting its logs into that backups dir.  update the other scripts to keep a log in same backups dir.",
+          "pastedContents": {}
+        },
+        {
+          "display": "mongo_backup.sh is saying \"mongodump\" command isn't found for some reason when it runs",
+          "pastedContents": {}
+        },
+        {
           "display": "now do the same with @Elephant Graveyard Radio Hour Ep. 9 (Midnight With the Stars and Me).mp4 ",
           "pastedContents": {}
         },
@@ -3538,12 +3546,22 @@
       "exampleFiles": [
         "tutu.sqlite",
         "daemon-wrappers.zsh",
-        ".startup",
+        "startup",
         "backup_a.sh",
-        ".zshrc"
+        "CLAUDE.md"
       ],
-      "exampleFilesGeneratedAt": 1751080276965,
-      "lastTotalWebSearchRequests": 0
+      "exampleFilesGeneratedAt": 1752002327367,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 1.10889365,
+      "lastAPIDuration": 306269,
+      "lastDuration": 685525,
+      "lastLinesAdded": 46,
+      "lastLinesRemoved": 31,
+      "lastTotalInputTokens": 18058,
+      "lastTotalOutputTokens": 5516,
+      "lastTotalCacheCreationInputTokens": 12315,
+      "lastTotalCacheReadInputTokens": 335962,
+      "lastSessionId": "4c06135f-23ed-4b9c-b9ef-6b96cb17099b"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -3877,6 +3895,14 @@
     "/Users/dorkitude/a/dev/cerebro": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "just edit the old gist",
+          "pastedContents": {}
+        },
+        {
+          "display": "but why would it be intermittent and only on some timeline moments?  the only thing that seems different is the extra content",
+          "pastedContents": {}
+        },
         {
           "display": "give me an assessment of how to fix END-4159 is happening, and make a plan2.md for how to fix it.\nput the plan.md into a secret gist and pipe the URL into my clipboard with pbcopy.",
           "pastedContents": {}
@@ -4357,14 +4383,6 @@
         {
           "display": "END-3748",
           "pastedContents": {}
-        },
-        {
-          "display": "check out Aurielle's PR branch with citation stuff",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit and push",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4494,6 +4512,48 @@
     "/Users/dorkitude/a/dev/scrappy-head": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "[Pasted text #1 +18 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "th screenshot (ACwAACK5U5UBI4L-wK60cmukJcC4N6tOPLUWOVw_20250708_125815.png) and HTML file (ACwAACK5U5UBI4L-wK60cmukJcC4N6tOPLUWOVw_20250708_125815.html)\nsean   | [2025-07-08 12:58:17] [seanocardenas@gmail.com] [2 of 33] Scraping profile (created: 2025-05-07 15:40, search terms: \"CRO\" OR \"Chief Revenue Officer\" OR \"Head of Sales\" OR \"VP Sales\"): https://www.linkedin.com/sales/lead/ACwAAAAoWxQBAcrrFFWzyDJ0VOjQRd5oGtfe61o\nparser | Traceback (most recent call last):\nparser |   File \"/Users/dorkitude/a/dev/scrappy-head/.venv/bin/scrappy\", line 10, in <module>\nparser |     sys.exit(run())\nparser |              ^^^^^\nparser |   File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 370, in run\nparser |     run_parse_screenshots(config)\nparser |   File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 341, in run_parse_screenshots\nparser |     total, successful = parser.process_all_profiles(force_reprocess, on_profile_parsed, succinct)\nparser |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nparser |   File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/scraper/screenshot_parser.py\", line 530, in process_all_profiles\nparser |     on_profile_parsed(updated_profile)\nparser |   File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 337, in on_profile_parsed\nparser |     company = profile.employer_name or \"No company\"\nparser |               ^^^^^^^^^^^^^^^^^^^^^\nparser | AttributeError: 'LinkedinProfile' object has no attribute 'employer_name'\nparser |\nparser | Exited with code 1"
+            }
+          }
+        },
+        {
+          "display": "I don't want it to print the already-processed ones, only the ones that we're actually processing...",
+          "pastedContents": {}
+        },
+        {
+          "display": "in succinct mode, add a print line when it starts processing a profile.  then when it's done, in the \"Parsed\" line it prints, have it also print me their title, company, and a link to the profile",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit all my changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's get rid of this stuff too in succinct mode:\n\nparser | Processing profile 1/6599: ACwAAA-3E8AB7B3doF6DBJvCj1B7xSbUlZho0mk\nparser | Profile ACwAAA-3E8AB7B3doF6DBJvCj1B7xSbUlZho0mk already parsed. Skipping.",
+          "pastedContents": {}
+        },
+        {
+          "display": "add a --succinct setting to parse-screenshots that doesn't fill the log with quite so much chatter, and update the procfile to use that.  also put it in the README.",
+          "pastedContents": {}
+        },
+        {
+          "display": "don't force them to reprocess",
+          "pastedContents": {}
+        },
+        {
+          "display": "add to overmind another process that does the parse-screenshots stuff",
+          "pastedContents": {}
+        },
+        {
+          "display": "I want it to fully stop all crawling if it hits the consecutive failure limit.  it seems to keep going.",
+          "pastedContents": {}
+        },
         {
           "display": "sometimes the linkedin_scraper.py (CLI in crawl mode) freezes up with \"Failed to load profile after 3 attempts\"\n\n\nI think when that happens twice, we should just kill the process",
           "pastedContents": {}
@@ -4744,7 +4804,18 @@
         "src/utils.py",
         "src/main.py"
       ],
-      "exampleFilesGeneratedAt": 1752001131494
+      "exampleFilesGeneratedAt": 1752001131494,
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 2.1650718999999996,
+      "lastAPIDuration": 365287,
+      "lastDuration": 3214468,
+      "lastLinesAdded": 38,
+      "lastLinesRemoved": 3,
+      "lastTotalInputTokens": 16198,
+      "lastTotalOutputTokens": 6601,
+      "lastTotalCacheCreationInputTokens": 52836,
+      "lastTotalCacheReadInputTokens": 478701,
+      "lastSessionId": "ed7f268e-05d9-4470-9113-e58cd739eddb"
     },
     "/Users/dorkitude/Dropbox/backups": {
       "allowedTools": [],
