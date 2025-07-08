@@ -4513,6 +4513,20 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "commit and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +28 lines]\n\nplease look at models and make sure you're calling the right stuff here...\n\n",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "Connecting to MongoDB at localhost:27017/scrappy_head\nSuccessfully connected to MongoDB\n\n[248/6741] Processing: ACwAAAA04-UBDUfL_-fpVKbiHejMgIq41IC6DaI...\nProcessing: ACwAAAA04-UBDUfL_-fpVKbiHejMgIq41IC6DaI...\n\n[304/6741] Processing: ACwAAAA6i-YBXive0KFvGZR3xadjuN4lPrPVCNQ...\nProcessing: ACwAAAA6i-YBXive0KFvGZR3xadjuN4lPrPVCNQ...\n\n[404/6741] Processing: ACwAAAADLsYBvZjSQU6ac9OMKFi0vlBYC7Q8iwM...\nProcessing: ACwAAAADLsYBvZjSQU6ac9OMKFi0vlBYC7Q8iwM...\n\n[450/6741] Processing: ACwAAAAFqkkBH4e7busXmNdqyZQmbC25hWvemoc...\nProcessing: ACwAAAAFqkkBH4e7busXmNdqyZQmbC25hWvemoc...\nTraceback (most recent call last):\n  File \"/Users/dorkitude/a/dev/scrappy-head/.venv/bin/scrappy\", line 10, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 370, in run\n    run_parse_screenshots(config)\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 341, in run_parse_screenshots\n    total, successful = parser.process_all_profiles(force_reprocess, on_profile_parsed, succinct)\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/scraper/screenshot_parser.py\", line 530, in process_all_profiles\n    on_profile_parsed(updated_profile)\n  File \"/Users/dorkitude/a/dev/scrappy-head/scrappy_head/cli.py\", line 338, in on_profile_parsed\n    linkedin_url = profile.public_linkedin_url or profile.sales_navigator_profile_url or \"No URL\"\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'LinkedinProfile' object has no attribute 'public_linkedin_url'"
+            }
+          }
+        },
+        {
           "display": "[Pasted text #1 +18 lines]",
           "pastedContents": {
             "1": {
@@ -4806,16 +4820,16 @@
       ],
       "exampleFilesGeneratedAt": 1752001131494,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 2.1650718999999996,
-      "lastAPIDuration": 365287,
-      "lastDuration": 3214468,
-      "lastLinesAdded": 38,
-      "lastLinesRemoved": 3,
-      "lastTotalInputTokens": 16198,
-      "lastTotalOutputTokens": 6601,
-      "lastTotalCacheCreationInputTokens": 52836,
-      "lastTotalCacheReadInputTokens": 478701,
-      "lastSessionId": "ed7f268e-05d9-4470-9113-e58cd739eddb"
+      "lastCost": 3.9032218499999987,
+      "lastAPIDuration": 717051,
+      "lastDuration": 3681624,
+      "lastLinesAdded": 30,
+      "lastLinesRemoved": 12,
+      "lastTotalInputTokens": 63202,
+      "lastTotalOutputTokens": 8998,
+      "lastTotalCacheCreationInputTokens": 96689,
+      "lastTotalCacheReadInputTokens": 1035361,
+      "lastSessionId": "4e1438bf-c9f6-4808-a992-28afef2b9276"
     },
     "/Users/dorkitude/Dropbox/backups": {
       "allowedTools": [],
