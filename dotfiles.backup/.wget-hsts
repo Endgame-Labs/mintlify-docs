@@ -1,7 +1,11 @@
 # HSTS 1.0 Known Hosts database for GNU Wget.
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
+trust.montecarlodata.com	0	1	1752096315	31536000
+www.w3.org	0	1	1752097594	15552000
 www.usenix.org	0	0	1749944015	63072000
-www.betterup.com	0	0	1752094732	31536000
+info.montecarlodata.com	0	0	1752097649	31536000
+www.betterup.com	0	0	1752095257	31536000
+navan.com	0	1	1752098368	31536000
 chatgpt.com	0	1	1751385064	31536000
-betterup.com	0	0	1752093188	31536000
+betterup.com	0	0	1752095027	31536000
