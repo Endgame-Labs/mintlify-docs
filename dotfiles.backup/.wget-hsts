@@ -1,11 +1,19 @@
 # HSTS 1.0 Known Hosts database for GNU Wget.
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
-trust.montecarlodata.com	0	1	1752096315	31536000
-www.w3.org	0	1	1752097594	15552000
+trust.betterup.com	0	1	1752098900	31536000
+hex.tech	0	1	1752099796	31536000
+try.retool.com	0	0	1752099264	31536000
+retool.com	0	0	1752099167	63072000
+brand.accuristech.com	0	0	1752099025	31536000
 www.usenix.org	0	0	1749944015	63072000
-info.montecarlodata.com	0	0	1752097649	31536000
-www.betterup.com	0	0	1752095257	31536000
-navan.com	0	1	1752098368	31536000
+learn.hex.tech	0	1	1752099811	31536000
 chatgpt.com	0	1	1751385064	31536000
-betterup.com	0	0	1752095027	31536000
+learn.retool.com	0	0	1752099265	31536000
+trust.montecarlodata.com	0	1	1752096315	31536000
+www.betterup.com	0	0	1752099020	31536000
+info.montecarlodata.com	0	0	1752097649	31536000
+grow.betterup.com	0	0	1752099021	31536000
+navan.com	0	1	1752099406	31536000
+betterup.com	0	0	1752098424	31536000
+www.w3.org	0	1	1752097594	15552000
