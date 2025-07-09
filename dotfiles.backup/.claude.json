@@ -3896,6 +3896,20 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "I don't think the get_valid_at_timestamp does this properly eitehr;   it's not cehcking for existence, only truthiness",
+          "pastedContents": {}
+        },
+        {
+          "display": "help me diagnose this issue, and put your findings in INVESTIGATION.md:\n\n\n[Pasted text #1 +47 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "briefs-api    | ERROR    'Row' object has no attribute 'valid_at'\nbriefs-api    |          Traceback (most recent call last):\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/pydantic/main.py\", line 983, in __getattr__\nbriefs-api    |              return pydantic_extra[item]\nbriefs-api    |                     ~~~~~~~~~~~~~~^^^^^^\nbriefs-api    |          KeyError: 'valid_at'\nbriefs-api    |\nbriefs-api    |          The above exception was the direct cause of the following exception:\nbriefs-api    |\nbriefs-api    |          Traceback (most recent call last):\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/agno/tools/function.py\", line 600, in execute\nbriefs-api    |              result = self.function.entrypoint(**arguments)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/threads/agno_manager.py\", line 1565, in _wrapper\nbriefs-api    |              result = tool.exec(*args, **kwargs)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 367, in exec\nbriefs-api    |              all_raw_rows.extend(f.result())\nbriefs-api    |                                  ~~~~~~~~^^\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 456, in result\nbriefs-api    |              return self.__get_result()\nbriefs-api    |                     ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 401, in __get_result\nbriefs-api    |              raise self._exception\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/thread.py\", line 59, in run\nbriefs-api    |              result = self.fn(*self.args, **self.kwargs)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/common-py/core/src/common_core/timing.py\", line 34, in wrapper\nbriefs-api    |              result = func(*args, **kwargs)\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/contextlib.py\", line 85, in inner\nbriefs-api    |              return func(*args, **kwds)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 481, in do_search_for_term\nbriefs-api    |              search_results = rank_results_by_minimum_distance(search_results)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 63, in rank_results_by_minimum_distance\nbriefs-api    |              filtered_results.sort(\nbriefs-api    |              ~~~~~~~~~~~~~~~~~~~~~^\nbriefs-api    |                  key=lambda x: (\nbriefs-api    |                  ^^^^^^^^^^^^^^^\nbriefs-api    |              ...<2 lines>...\nbriefs-api    |                  )\nbriefs-api    |                  ^\nbriefs-api    |              )\nbriefs-api    |              ^\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 66, in <lambda>\nbriefs-api    |              datetime.fromisoformat(x[\"valid_at\"].replace(\"Z\", \"+00:00\")).timestamp(),\nbriefs-api    |                                     ~^^^^^^^^^^^^\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/turbopuffer/types/row.py\", line 59, in __getitem__\nbriefs-api    |              return getattr(self, key)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/pydantic/main.py\", line 985, in __getattr__\nbriefs-api    |              raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}') from exc\nbriefs-api    |          AttributeError: 'Row' object has no attribute 'valid_at'. Did you mean: 'validate'?"
+            }
+          }
+        },
+        {
           "display": "tell me about the system prompt for the new book level chat stuff in threads",
           "pastedContents": {}
         },
@@ -4338,14 +4352,6 @@
         },
         {
           "display": "add it",
-          "pastedContents": {}
-        },
-        {
-          "display": "remind me which libraries we are using for the export on this branch",
-          "pastedContents": {}
-        },
-        {
-          "display": "this is via threads CLI",
           "pastedContents": {}
         }
       ],
