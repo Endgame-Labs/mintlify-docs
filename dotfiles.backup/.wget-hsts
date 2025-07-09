@@ -2,4 +2,6 @@
 # Edit at your own risk.
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 www.usenix.org	0	0	1749944015	63072000
+www.betterup.com	0	0	1752094732	31536000
 chatgpt.com	0	1	1751385064	31536000
+betterup.com	0	0	1752093188	31536000
