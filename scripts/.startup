@@ -55,6 +55,7 @@ alias cdaf="cd ~/a/dev/cerebro/src/app-frontend"
 alias cc="claude --dangerously-skip-permissions"
 alias dorkweb='cd ~/a/dev/dorkitude.com && ./dorkweb'
 alias tutu='/Users/dorkitude/Library/Python/3.11/bin/tutu'
+export MAX_MCP_OUTPUT_TOKENS=1000000
 # Source Claude wrapper with dynamic terminal title
 [ -f ~/a/scripts/daemon-wrappers.zsh ] && source ~/a/scripts/daemon-wrappers.zsh
 
