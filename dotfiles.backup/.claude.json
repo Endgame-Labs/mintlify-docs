@@ -1,10 +1,10 @@
 {
-  "numStartups": 1286,
+  "numStartups": 1288,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 1266,
+    "shift-enter": 1287,
     "memory-command": 770,
     "theme-command": 1258,
     "prompt-queue": 218,
@@ -4004,6 +4004,18 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "look at @plan-END-4156.md and the ticket END-4156 and tell me if it's a good plan.  Another agent made that plan.  I want you to help me verify and improve it.\n\ntake into account everything in that plan file, plus read the whole codebase.  take your time and ultrathink, step by step.\n\nthen write me a new-plan-END-4156.md with your updated suggestions.",
+          "pastedContents": {}
+        },
+        {
+          "display": "look at END-4156 and write a file `plan-END-4156.md` for how to implement it:\n\nI want a new GET endpoint like threads/id/message/id/suggested_followups\n\nwhen they hit that endpoint:\n\nfirst make sure it's an assistant message, not a user message.\n\nthen, if the message is not completed yet, respond with something   \"No, the message isn't complete.  Try again once it is.\"\n\nif it IS complete, I want to hit GPT 4.1, send it the user's question  (parent message content?  not sure what it's called in the code) and a prompt like \"The user asked this question: {question} and the assistant responded with this answer:  {answer}.  Suggest three followup questions.\"\n\nOnce we get the followup questions, API will return them in JSON to the caller.\n\nAlso update threads-cli so it can take in a parameter like \"--suggested_followups\"  and as soon as the message content is done streaming in, it'll GET from this new endpoint and render the followup questions in a simple interactive mode that numbers them and lets me type like \"1\" \"2\" or \"3\" to select and submit one of the followups.  Don't assume it's exactly 3 though.",
+          "pastedContents": {}
+        },
+        {
+          "display": "rename this branch so it has both that ticket ID and this one:  END-4156",
+          "pastedContents": {}
+        },
+        {
           "display": "Please make it log the actual error responses it's geting.",
           "pastedContents": {}
         },
@@ -4461,18 +4473,6 @@
         {
           "display": "fix @briefs/threads/export.py to not do all the conditional importing and typecheck stuff",
           "pastedContents": {}
-        },
-        {
-          "display": "fix merge conflicts",
-          "pastedContents": {}
-        },
-        {
-          "display": "ultrathink.\n\nrun this command, respond to any errors (including code changes), and run it again until it works.\n\nyou'll know it worked because the output folder will have full length files.\n\nthe command to run, fix problems, and re-run, until it truly works, is this:\n\n`uv run prosaic parse input/`\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "let's remove the defensive piece and assume completed_at will be set.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4492,17 +4492,7 @@
       ],
       "exampleFilesGeneratedAt": 1751993350658,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0,
-      "lastCost": 3.916116749999999,
-      "lastAPIDuration": 381722,
-      "lastDuration": 655508,
-      "lastLinesAdded": 51,
-      "lastLinesRemoved": 1,
-      "lastTotalInputTokens": 411869,
-      "lastTotalOutputTokens": 6381,
-      "lastTotalCacheCreationInputTokens": 61367,
-      "lastTotalCacheReadInputTokens": 1329519,
-      "lastSessionId": "09ee369f-41a5-4cb5-88d4-4597b13946f5"
+      "lastTotalWebSearchRequests": 0
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
