@@ -7652,6 +7652,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "walk me how the transcribe script works, and what data changes it intends to make.",
+          "pastedContents": {}
+        },
+        {
           "display": "at top of crud list where it says for example \"Document\" above the search bar, include a count (how many are we showing on this page, vs. what is the total)",
           "pastedContents": {}
         },
@@ -8057,10 +8061,6 @@
         },
         {
           "display": "What's the best way to turn an mp3 into a timestamped transcription of some kind?",
-          "pastedContents": {}
-        },
-        {
-          "display": "base it on the @scripts/s3_crawler.py script",
           "pastedContents": {}
         }
       ],
