@@ -1,5 +1,5 @@
 {
-  "numStartups": 1295,
+  "numStartups": 1296,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -8,7 +8,7 @@
     "memory-command": 770,
     "theme-command": 1258,
     "prompt-queue": 218,
-    "git-worktrees": 1265,
+    "git-worktrees": 1296,
     "todo-list": 1280,
     "enter-to-steer-in-relatime": 1263,
     "claude-opus-welcome": 214,
@@ -7403,6 +7403,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "/crawl retool.com",
+          "pastedContents": {}
+        },
+        {
           "display": "i messed up my dock and now command-backtick doesn't work",
           "pastedContents": {}
         },
@@ -7663,17 +7667,7 @@
         "README.md",
         ".gitignore"
       ],
-      "exampleFilesGeneratedAt": 1752098366535,
-      "lastCost": 0.3406677500000001,
-      "lastAPIDuration": 57443,
-      "lastDuration": 266996,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 9772,
-      "lastTotalOutputTokens": 1128,
-      "lastTotalCacheCreationInputTokens": 1603,
-      "lastTotalCacheReadInputTokens": 153443,
-      "lastSessionId": "92558be7-bd27-41ae-815a-1508c5d40438"
+      "exampleFilesGeneratedAt": 1752098366535
     },
     "/Users/dorkitude/a/dev/bourd.ai": {
       "allowedTools": [],

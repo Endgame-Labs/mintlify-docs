@@ -3,9 +3,11 @@
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 trust.betterup.com	0	1	1752098900	31536000
 hex.tech	0	1	1752099796	31536000
-try.retool.com	0	0	1752099264	31536000
-retool.com	0	0	1752099167	63072000
+trust.retool.com	0	1	1752269800	31536000
+try.retool.com	0	0	1752269900	31536000
+retool.com	0	1	1752269906	63072000
 brand.accuristech.com	0	0	1752099025	31536000
+docs.retool.com	0	0	1752269803	63072000
 www.usenix.org	0	0	1749944015	63072000
 learn.hex.tech	0	1	1752099811	31536000
 chatgpt.com	0	1	1751385064	31536000
