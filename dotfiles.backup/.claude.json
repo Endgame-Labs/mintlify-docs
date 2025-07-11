@@ -7653,6 +7653,22 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "put these instructions into CLAUDE.md and the README",
+          "pastedContents": {}
+        },
+        {
+          "display": "no i have a CLI here, show me how to use it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "show me how to use turbopuffer CLI to search chunks",
+          "pastedContents": {}
+        },
+        {
+          "display": "/clear ",
+          "pastedContents": {}
+        },
+        {
           "display": "right but if you look at S3 you'll see that we only have about 250 total TV episodes, plus a couple of audiobooks",
           "pastedContents": {}
         },
@@ -8058,22 +8074,6 @@
         },
         {
           "display": "what other formats can it create?",
-          "pastedContents": {}
-        },
-        {
-          "display": "I want the most accurate model",
-          "pastedContents": {}
-        },
-        {
-          "display": "how do i use openai-whisper to transcribe these mp3s?",
-          "pastedContents": {}
-        },
-        {
-          "display": "the crud URLs are wrong, they should be us-west-1",
-          "pastedContents": {}
-        },
-        {
-          "display": "actually it's working now, remove your logging stuff",
           "pastedContents": {}
         }
       ],
