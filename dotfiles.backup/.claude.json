@@ -1,5 +1,5 @@
 {
-  "numStartups": 1289,
+  "numStartups": 1292,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -12,7 +12,7 @@
     "todo-list": 1280,
     "enter-to-steer-in-relatime": 1263,
     "claude-opus-welcome": 214,
-    "# for memory": 1269,
+    "# for memory": 1290,
     "install-github-app": 553,
     "permissions": 1275,
     "drag-and-drop-images": 1279,
@@ -4004,6 +4004,16 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "why does this work locally, but fail on github CI:\n\n\n[Pasted text #1 +256 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "\nbriefs/prosaic/test_relationships.py ..                                  [  0%]\ntests/api/test_brief_definition_routes.py ......                         [  3%]\ntests/api/test_briefs_routes.py .......                                  [  7%]\ntests/api/test_fact_router.py ..                                         [  8%]\ntests/claim_corroborator/test_corroboration_util.py ..                   [  9%]\ntests/email_ai/test_email_thread_extraction_monthly.py ....              [ 11%]\ntests/email_ai/test_email_thread_reconcile.py .............              [ 17%]\ntests/email_ai/test_meeting_extraction.py ......                         [ 20%]\ntests/email_ai/test_meeting_reconcile.py ....                            [ 22%]\ntests/generators/test_generator.py ..                                    [ 23%]\ntests/prompt_templates/test_api.py ................                      [ 31%]\ntests/prompt_templates/test_models.py ...........                        [ 36%]\ntests/test_line_terminators.py ..                                        [ 37%]\ntests/test_util.py ........                                              [ 41%]\ntests/threads/test_agno_manager.py .....                                 [ 44%]\ntests/threads/test_agno_manager_user_context.py ..                       [ 45%]\ntests/threads/test_async_thread_creation.py ......                       [ 48%]\ntests/threads/test_feedback_api.py ......                                [ 50%]\ntests/threads/test_followup_generator.py .........                       [ 55%]\ntests/threads/test_message_editing_api.py ............                   [ 61%]\ntests/threads/test_models.py ............                                [ 67%]\ntests/threads/test_slack_callback.py ......                              [ 70%]\ntests/threads/test_suggested_followups_api.py F......F                   [ 74%]\ntests/threads/test_supplemental_instructions.py ........                 [ 77%]\ntests/tools/test_google_search.py ......                                 [ 80%]\ntests/tools/test_query_sfdc_tool.py .................................... [ 98%]\n...                                                                      [100%]Running teardown with pytest sessionfinish...\n\n\n=================================== FAILURES ===================================\n_______________________ test_suggested_followups_success _______________________\n\nclient = <starlette.testclient.TestClient object at 0x7f675a94d010>\nmock_thread_manager = <AsyncMock spec='ThreadManager' id='140081865695520'>\n\n    @pytest.mark.asyncio\n    async def test_suggested_followups_success(client, mock_thread_manager):\n        \"\"\"Test successful followup generation for completed assistant message.\"\"\"\n        # Mock the assistant message\n        assistant_message = MagicMock(spec=AssistantMessage)\n        assistant_message.role = \"assistant\"\n        assistant_message.status = \"completed\"\n        assistant_message.parent_id = \"parent-123\"\n        assistant_message.content = \"You can implement caching using Redis or Memcached...\"\n    \n        # Mock the parent user message\n        user_message = MagicMock(spec=UserMessage)\n        user_message.role = \"user\"\n        user_message.content = \"How do I implement caching in my application?\"\n    \n        mock_thread_manager.get_message.side_effect = [assistant_message, user_message]\n    \n        # Mock the AsyncOpenAI response and environment variable\n        with (\n            patch.dict(os.environ, {\"OPENAI_API_KEY\": \"test-key\"}),\n            patch(\"briefs.threads.followup_generator.AsyncOpenAI\") as mock_openai,\n        ):\n            mock_client = MagicMock()\n            mock_openai.return_value = mock_client\n            mock_response = MagicMock()\n            mock_response.choices = [\n                MagicMock(\n                    message=MagicMock(\n                        content=\"\"\"What are the differences between Redis and Memcached?\n    How do I handle cache invalidation?\n    Can you show me a Python example?\"\"\"\n                    )\n                )\n            ]\n            mock_client.chat.completions.create = AsyncMock(return_value=mock_response)\n    \n>           response = client.get(\"/v3/test-org/threads/thread-123/messages/msg-456/suggested_followups\")\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/threads/test_suggested_followups_api.py:77: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n.venv/lib/python3.13/site-packages/starlette/testclient.py:465: in get\n    return super().get(\n.venv/lib/python3.13/site-packages/httpx/_client.py:1053: in get\n    return self.request(\n.venv/lib/python3.13/site-packages/starlette/testclient.py:437: in request\n    return super().request(\n.venv/lib/python3.13/site-packages/httpx/_client.py:825: in request\n    return self.send(request, auth=auth, follow_redirects=follow_redirects)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/httpx/_client.py:914: in send\n    response = self._send_handling_auth(\n.venv/lib/python3.13/site-packages/httpx/_client.py:942: in _send_handling_auth\n    response = self._send_handling_redirects(\n.venv/lib/python3.13/site-packages/httpx/_client.py:979: in _send_handling_redirects\n    response = self._send_single_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/httpx/_client.py:1014: in _send_single_request\n    response = transport.handle_request(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/starlette/testclient.py:340: in handle_request\n    raise exc\n.venv/lib/python3.13/site-packages/starlette/testclient.py:337: in handle_request\n    portal.call(self.app, scope, receive, send)\n.venv/lib/python3.13/site-packages/anyio/from_thread.py:290: in call\n    return cast(T_Retval, self.start_task_soon(func, *args).result())\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/home/runner/.local/share/uv/python/cpython-3.13.1-linux-x86_64-gnu/lib/python3.13/concurrent/futures/_base.py:456: in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n/home/runner/.local/share/uv/python/cpython-3.13.1-linux-x86_64-gnu/lib/python3.13/concurrent/futures/_base.py:401: in __get_result\n    raise self._exception\n.venv/lib/python3.13/site-packages/anyio/from_thread.py:221: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/fastapi/applications.py:1054: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/applications.py:112: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/middleware/errors.py:187: in __call__\n    raise exc\n.venv/lib/python3.13/site-packages/starlette/middleware/errors.py:165: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py:62: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.13/site-packages/starlette/routing.py:714: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/routing.py:734: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/routing.py:288: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/routing.py:76: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.13/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.13/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.13/site-packages/starlette/routing.py:73: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.13/site-packages/fastapi/routing.py:301: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.13/site-packages/fastapi/routing.py:212: in run_endpoint_function\n    return await dependant.call(**values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nbriefs/threads/api.py:880: in get_suggested_followups\n    generator = FollowupGenerator()\n                ^^^^^^^^^^^^^^^^^^^\nbriefs/threads/followup_generator.py:21: in __init__\n    settings = Settings()  # type: ignore[call-arg]\n               ^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\n__pydantic_self__ = Settings(), _case_sensitive = None\n_nested_model_default_partial_update = None, _env_prefix = None\n_env_file = PosixPath('.'), _env_file_encoding = None, _env_ignore_empty = None\n_env_nested_delimiter = None, _env_nested_max_split = None\n_env_parse_none_str = None, _env_parse_enums = None, _cli_prog_name = None\n_cli_parse_args = None, _cli_settings_source = None, _cli_parse_none_str = None\n_cli_hide_none_type = None, _cli_avoid_json = None, _cli_enforce_required = None\n_cli_use_class_docs_for_groups = None, _cli_exit_on_error = None\n_cli_prefix = None, _cli_flag_prefix_char = None, _cli_implicit_flags = None\n_cli_ignore_unknown_args = None, _cli_kebab_case = None, _cli_shortcuts = None\n_secrets_dir = None, values = {}\n\n    def __init__(\n        __pydantic_self__,\n        _case_sensitive: bool | None = None,\n        _nested_model_default_partial_update: bool | None = None,\n        _env_prefix: str | None = None,\n        _env_file: DotenvType | None = ENV_FILE_SENTINEL,\n        _env_file_encoding: str | None = None,\n        _env_ignore_empty: bool | None = None,\n        _env_nested_delimiter: str | None = None,\n        _env_nested_max_split: int | None = None,\n        _env_parse_none_str: str | None = None,\n        _env_parse_enums: bool | None = None,\n        _cli_prog_name: str | None = None,\n        _cli_parse_args: bool | list[str] | tuple[str, ...] | None = None,\n        _cli_settings_source: CliSettingsSource[Any] | None = None,\n        _cli_parse_none_str: str | None = None,\n        _cli_hide_none_type: bool | None = None,\n        _cli_avoid_json: bool | None = None,\n        _cli_enforce_required: bool | None = None,\n        _cli_use_class_docs_for_groups: bool | None = None,\n        _cli_exit_on_error: bool | None = None,\n        _cli_prefix: str | None = None,\n        _cli_flag_prefix_char: str | None = None,\n        _cli_implicit_flags: bool | None = None,\n        _cli_ignore_unknown_args: bool | None = None,\n        _cli_kebab_case: bool | None = None,\n        _cli_shortcuts: Mapping[str, str | list[str]] | None = None,\n        _secrets_dir: PathType | None = None,\n        **values: Any,\n    ) -> None:\n>       super().__init__(\n            **__pydantic_self__._settings_build_values(\n                values,\n                _case_sensitive=_case_sensitive,\n                _nested_model_default_partial_update=_nested_model_default_partial_update,\n                _env_prefix=_env_prefix,\n                _env_file=_env_file,\n                _env_file_encoding=_env_file_encoding,\n                _env_ignore_empty=_env_ignore_empty,\n                _env_nested_delimiter=_env_nested_delimiter,\n                _env_nested_max_split=_env_nested_max_split,\n                _env_parse_none_str=_env_parse_none_str,\n                _env_parse_enums=_env_parse_enums,\n                _cli_prog_name=_cli_prog_name,\n                _cli_parse_args=_cli_parse_args,\n                _cli_settings_source=_cli_settings_source,\n                _cli_parse_none_str=_cli_parse_none_str,\n                _cli_hide_none_type=_cli_hide_none_type,\n                _cli_avoid_json=_cli_avoid_json,\n                _cli_enforce_required=_cli_enforce_required,\n                _cli_use_class_docs_for_groups=_cli_use_class_docs_for_groups,\n                _cli_exit_on_error=_cli_exit_on_error,\n                _cli_prefix=_cli_prefix,\n                _cli_flag_prefix_char=_cli_flag_prefix_char,\n                _cli_implicit_flags=_cli_implicit_flags,\n                _cli_ignore_unknown_args=_cli_ignore_unknown_args,\n                _cli_kebab_case=_cli_kebab_case,\n                _cli_shortcuts=_cli_shortcuts,\n                _secrets_dir=_secrets_dir,\n            )\n        )\nE       pydantic_core._pydantic_core.ValidationError: 9 validation errors for Settings\nE       langfuse_secret_key\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       langfuse_public_key\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       langfuse_host\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       openai_api_key\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       gcp_project_id\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       serpapi_key\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       perplexity_api_key\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       data_mesh_url\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\nE       gemini_api_key\nE         Field required [type=missing, input_value={}, input_type=dict]\nE           For further information visit https://errors.pydantic.dev/2.11/v/missing\n\n.venv/lib/python3.13/site-packages/pydantic_settings/main.py:188: ValidationError\n"
+            }
+          }
+        },
+        {
           "display": "[Pasted text #1 +17 lines]",
           "pastedContents": {
             "1": {
@@ -4479,10 +4489,6 @@
         },
         {
           "display": "but we didn't add any tests that depend on this, did we?  if so, show me",
-          "pastedContents": {}
-        },
-        {
-          "display": "vs. main, what changes did we make to src/briefs/briefs/threads/manager.py and why",
           "pastedContents": {}
         }
       ],
@@ -7397,6 +7403,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "/crawl tesla.com",
+          "pastedContents": {}
+        },
+        {
           "display": "/status ",
           "pastedContents": {}
         },
@@ -7629,7 +7639,7 @@
       "projectOnboardingSeenCount": 4,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
-      "lastTotalWebSearchRequests": 20,
+      "lastTotalWebSearchRequests": 0,
       "exampleFiles": [
         "PROMPT_CRAWL.md",
         "scrape.sh",
@@ -7638,20 +7648,28 @@
         ".gitignore"
       ],
       "exampleFilesGeneratedAt": 1752098366535,
-      "lastCost": 10.908622449999992,
-      "lastAPIDuration": 1327354,
-      "lastDuration": 10221284,
+      "lastCost": 0.2021265,
+      "lastAPIDuration": 23366,
+      "lastDuration": 26330,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 170236,
-      "lastTotalOutputTokens": 37807,
-      "lastTotalCacheCreationInputTokens": 186987,
-      "lastTotalCacheReadInputTokens": 3037464,
-      "lastSessionId": "ee4256b6-7e3f-465d-b179-4551c4816389"
+      "lastTotalInputTokens": 15,
+      "lastTotalOutputTokens": 1065,
+      "lastTotalCacheCreationInputTokens": 1516,
+      "lastTotalCacheReadInputTokens": 62401,
+      "lastSessionId": "979dc573-6fe8-4dbf-ba19-05238b8a0308"
     },
     "/Users/dorkitude/a/dev/bourd.ai": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "run it",
+          "pastedContents": {}
+        },
+        {
+          "display": "write a script to upload all the @to_upload/ files directly into my s3 bucket at the root",
+          "pastedContents": {}
+        },
         {
           "display": "I don't think it should ever insert to the DB.  I just want it to modify existing records.",
           "pastedContents": {}
@@ -8066,14 +8084,6 @@
         },
         {
           "display": "The way to know it's a TV episode audio is that the mp3 filename will start with \"extracted_audio\"\n\notherwise you can get the type from the Document record itself.",
-          "pastedContents": {}
-        },
-        {
-          "display": "does it also do the same with AudiobookChapters?",
-          "pastedContents": {}
-        },
-        {
-          "display": "make sure you also upsert TelevisionEpisode and AudiobookChapter records, and link to them polymorphically from the Document table",
           "pastedContents": {}
         }
       ],
