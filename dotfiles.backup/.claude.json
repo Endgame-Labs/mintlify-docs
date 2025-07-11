@@ -1,5 +1,5 @@
 {
-  "numStartups": 1292,
+  "numStartups": 1294,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -7407,6 +7407,18 @@
           "pastedContents": {}
         },
         {
+          "display": "command tab still missing",
+          "pastedContents": {}
+        },
+        {
+          "display": "oops I disabled my mac dock.  fix it.\n\ni did this:\n\nlaunchctl unload -w /System/Library/LaunchAgents/com.apple.Dock.plist",
+          "pastedContents": {}
+        },
+        {
+          "display": "/crawl tesla.com",
+          "pastedContents": {}
+        },
+        {
           "display": "/status ",
           "pastedContents": {}
         },
@@ -7647,17 +7659,7 @@
         "README.md",
         ".gitignore"
       ],
-      "exampleFilesGeneratedAt": 1752098366535,
-      "lastCost": 0.2021265,
-      "lastAPIDuration": 23366,
-      "lastDuration": 26330,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 15,
-      "lastTotalOutputTokens": 1065,
-      "lastTotalCacheCreationInputTokens": 1516,
-      "lastTotalCacheReadInputTokens": 62401,
-      "lastSessionId": "979dc573-6fe8-4dbf-ba19-05238b8a0308"
+      "exampleFilesGeneratedAt": 1752098366535
     },
     "/Users/dorkitude/a/dev/bourd.ai": {
       "allowedTools": [],
