@@ -1,5 +1,5 @@
 {
-  "numStartups": 1294,
+  "numStartups": 1295,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -7403,6 +7403,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "i messed up my dock and now command-backtick doesn't work",
+          "pastedContents": {}
+        },
+        {
           "display": "/crawl tesla.com",
           "pastedContents": {}
         },
@@ -7659,7 +7663,17 @@
         "README.md",
         ".gitignore"
       ],
-      "exampleFilesGeneratedAt": 1752098366535
+      "exampleFilesGeneratedAt": 1752098366535,
+      "lastCost": 0.3406677500000001,
+      "lastAPIDuration": 57443,
+      "lastDuration": 266996,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 9772,
+      "lastTotalOutputTokens": 1128,
+      "lastTotalCacheCreationInputTokens": 1603,
+      "lastTotalCacheReadInputTokens": 153443,
+      "lastSessionId": "92558be7-bd27-41ae-815a-1508c5d40438"
     },
     "/Users/dorkitude/a/dev/bourd.ai": {
       "allowedTools": [],
