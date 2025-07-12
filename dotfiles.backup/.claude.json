@@ -7659,7 +7659,7 @@
       "projectOnboardingSeenCount": 4,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
-      "lastTotalWebSearchRequests": 0,
+      "lastTotalWebSearchRequests": 14,
       "exampleFiles": [
         "PROMPT_CRAWL.md",
         "scrape.sh",
@@ -7667,7 +7667,17 @@
         "README.md",
         ".gitignore"
       ],
-      "exampleFilesGeneratedAt": 1752098366535
+      "exampleFilesGeneratedAt": 1752098366535,
+      "lastCost": 6.37366125,
+      "lastAPIDuration": 665998,
+      "lastDuration": 20026476,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 57423,
+      "lastTotalOutputTokens": 19754,
+      "lastTotalCacheCreationInputTokens": 177619,
+      "lastTotalCacheReadInputTokens": 1021884,
+      "lastSessionId": "2773a996-d9ad-4099-a6f6-80c309110dd1"
     },
     "/Users/dorkitude/a/dev/bourd.ai": {
       "allowedTools": [],
