@@ -1,24 +1,24 @@
 {
-  "numStartups": 1317,
+  "numStartups": 1327,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
     "shift-enter": 1287,
     "memory-command": 770,
-    "theme-command": 1258,
+    "theme-command": 1322,
     "prompt-queue": 218,
     "git-worktrees": 1296,
     "todo-list": 1280,
-    "enter-to-steer-in-relatime": 1263,
+    "enter-to-steer-in-relatime": 1324,
     "claude-opus-welcome": 214,
     "# for memory": 1290,
     "install-github-app": 553,
-    "permissions": 1275,
+    "permissions": 1325,
     "drag-and-drop-images": 1279,
     "double-esc": 1282,
-    "continue": 1277,
-    "custom-commands": 1278,
+    "continue": 1326,
+    "custom-commands": 1327,
     "shift-tab": 1289
   },
   "memoryUsageCount": 5,
@@ -1974,6 +1974,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "fix this:\n\n\n Claude CLI Diagnostic\n Currently running: npm-global (1.0.51)\n Path: /opt/homebrew/Cellar/node/23.11.0/bin/node\n Invoked: /opt/homebrew/bin/claude\n Config install method: global\n Auto-updates enabled: true\n Update permissions: Yes\n\n Invalid Settings\n settings.json\n  └ Unrecognized field: mcpServers\n\n Check for typos or refer to the documentation for valid fields\n Learn more: https://docs.anthropic.com/en/docs/claude-code/settings",
+          "pastedContents": {}
+        },
+        {
+          "display": "/doctor ",
+          "pastedContents": {}
+        },
+        {
           "display": "/usage ",
           "pastedContents": {}
         },
@@ -2042,16 +2050,17 @@
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.44060535,
-      "lastAPIDuration": 217643,
-      "lastDuration": 1042823,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 28504,
-      "lastTotalOutputTokens": 1496,
-      "lastTotalCacheCreationInputTokens": 10377,
-      "lastTotalCacheReadInputTokens": 108178,
-      "lastSessionId": "8fb831af-5352-4103-802f-b32b0131496b"
+      "lastCost": 0.08968805,
+      "lastAPIDuration": 10298,
+      "lastDuration": 33045,
+      "lastLinesAdded": 1,
+      "lastLinesRemoved": 1,
+      "lastTotalInputTokens": 246,
+      "lastTotalOutputTokens": 308,
+      "lastTotalCacheCreationInputTokens": 19619,
+      "lastTotalCacheReadInputTokens": 38510,
+      "lastTotalWebSearchRequests": 0,
+      "lastSessionId": "437013bb-5c47-4385-981a-8b5cf001197f"
     },
     "/Users/dorkitude/Library/CloudStorage/Dropbox/dev/cerebro/src/briefs/briefs/tpuf_spike": {
       "allowedTools": [],
@@ -3243,6 +3252,22 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "make it installable via homebrew so i can get the command globally.",
+          "pastedContents": {}
+        },
+        {
+          "display": "dorkitude ~/a/dev/linctl [master] $ linctl auth\nzsh: permission denied: linctl",
+          "pastedContents": {}
+        },
+        {
+          "display": "Make new a new public github repo in my personal dorkitude space called \"linctl\" and clone it here\n\nI am building a CLI that's built in Golang and based on cobra and fatih/color.  It will attempt to cover all of Linear's API features.  \n\nif possible, it should use auth the same way linear MCP does, where (if unauthed) it pops open the linear web auth endpoint and captures the token (unclear if that's possible though)\n\nfirst thing's first, you should crawl linear's API docs and create Markdown snapshots all of the online Linear docs pages in a folder called docs/snapshots\n\nthen make a list of endpoints and API features, what they do, and how to use them; all in a single markdown file called \"master_api_ref\"\n\n\nas for dev X, let's try to make the commands as minimal and clean as possible:\n- `brew install linctl` and `sudo apt install linctl`\n- `linctl issue list --assignee me --state \"In Progress\"`    is the same as        `linctl issue ls -a me -s \"In Progress\"`\n- `linctl auth` will pop\n\nfor outputs let's use table views where reasonable, perhaps via tablewriter, but also ALL commands should have a \"--plaintext\" or \"-p\" flag that is non-interactive and text online, which is especially useful for Agents like Claude Code to use.\n\nthe whole thing needs to be installable via \"brew install linctl\" and perhaps yum/aptitude equivalents.",
+          "pastedContents": {}
+        },
+        {
+          "display": "what is this \"lin\" command and how do i get rid of it",
+          "pastedContents": {}
+        },
+        {
           "display": "update the `os` command to run \"rm .overmind.sock\" before it runs overmind",
           "pastedContents": {}
         },
@@ -3637,18 +3662,6 @@
         {
           "display": "!ls",
           "pastedContents": {}
-        },
-        {
-          "display": "~ls",
-          "pastedContents": {}
-        },
-        {
-          "display": "/model ",
-          "pastedContents": {}
-        },
-        {
-          "display": ":x",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -3668,16 +3681,16 @@
       ],
       "exampleFilesGeneratedAt": 1752002327367,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.73900115,
-      "lastAPIDuration": 57714,
-      "lastDuration": 359464,
-      "lastLinesAdded": 3,
+      "lastCost": 0.09376690000000001,
+      "lastAPIDuration": 19234,
+      "lastDuration": 23926,
+      "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 156,
-      "lastTotalOutputTokens": 1857,
-      "lastTotalCacheCreationInputTokens": 22703,
-      "lastTotalCacheReadInputTokens": 116865,
-      "lastSessionId": "dcd60ac0-da5d-4355-a59f-f30bbd1c5767"
+      "lastTotalInputTokens": 2107,
+      "lastTotalOutputTokens": 612,
+      "lastTotalCacheCreationInputTokens": 19586,
+      "lastTotalCacheReadInputTokens": 38450,
+      "lastSessionId": "c3bc37ba-95fa-4de7-a38b-8dbacd4f4e03"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -4011,6 +4024,46 @@
     "/Users/dorkitude/a/dev/cerebro": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "/model ",
+          "pastedContents": {}
+        },
+        {
+          "display": "/doctor ",
+          "pastedContents": {}
+        },
+        {
+          "display": "⚠ Found invalid settings files. They will be ignored. Run /doctor for details.\n\n Claude CLI Diagnostic\n Currently running: npm-global (1.0.51)\n Path: /opt/homebrew/Cellar/node/23.11.0/bin/node\n Invoked: /opt/homebrew/bin/claude\n Config install method: global\n Auto-updates enabled: true\n Update permissions: Yes\n\n Invalid Settings\n .claude/settings.local.json\n  └ Unrecognized field: mcp\n\n Check for typos or refer to the documentation for valid fields\n Learn more: https://docs.anthropic.com/en/docs/claude-code/settings\n\n\n Press Enter to continue…",
+          "pastedContents": {}
+        },
+        {
+          "display": "/doctor ",
+          "pastedContents": {}
+        },
+        {
+          "display": "inspect this code for security issues:\n\nhttps://github.com/evangodon/linear-cli",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's switch it to use a project-level mcp.json\n\nand turn on \"Automatically approve all MCP servers defined in project .mcp.json files \"   ",
+          "pastedContents": {}
+        },
+        {
+          "display": "Claude CLI Diagnostic\n Currently running: npm-global (1.0.51)\n Path: /opt/homebrew/Cellar/node/23.11.0/bin/node\n Invoked: /opt/homebrew/bin/claude\n Config install method: global\n Auto-updates enabled: true\n Update permissions: Yes\n\n Invalid Settings\n .claude/settings.local.json\n  └ Unrecognized field: mcp\n\n Check for typos or refer to the documentation for valid fields\n Learn more: https://docs.anthropic.com/en/docs/claude-code/settings",
+          "pastedContents": {}
+        },
+        {
+          "display": "/doctor ",
+          "pastedContents": {}
+        },
+        {
+          "display": "fix:\n\nClaude CLI Diagnostic\n Currently running: npm-global (1.0.51)\n Path: /opt/homebrew/Cellar/node/23.11.0/bin/node\n Invoked: /opt/homebrew/bin/claude\n Config install method: global\n Auto-updates enabled: true\n Update permissions: Yes\n\n Invalid Settings\n .claude/settings.local.json\n  └ Unrecognized field: mcp\n\n Check for typos or refer to the documentation for valid fields\n Learn more: https://docs.anthropic.com/en/docs/claude-code/settings",
+          "pastedContents": {}
+        },
+        {
+          "display": "/doctor ",
+          "pastedContents": {}
+        },
         {
           "display": "why does the test pass rn.",
           "pastedContents": {}
@@ -4440,46 +4493,6 @@
         {
           "display": "just edit the old gist",
           "pastedContents": {}
-        },
-        {
-          "display": "but why would it be intermittent and only on some timeline moments?  the only thing that seems different is the extra content",
-          "pastedContents": {}
-        },
-        {
-          "display": "give me an assessment of how to fix END-4159 is happening, and make a plan2.md for how to fix it.\nput the plan.md into a secret gist and pipe the URL into my clipboard with pbcopy.",
-          "pastedContents": {}
-        },
-        {
-          "display": "give me an assessment of how to fix END-4163 is happening, and make a plan.md for how to fix it.\nput the plan.md into a secret gist and pipe the URL into my clipboard with pbcopy.",
-          "pastedContents": {}
-        },
-        {
-          "display": "what other callers are there?",
-          "pastedContents": {}
-        },
-        {
-          "display": "where speficically would we make the backend fix?  Change doc_ref.set(config) to doc_ref.set(config, merge=True) in Firestore\n",
-          "pastedContents": {}
-        },
-        {
-          "display": "put the plan.md into a secret gist and pipe the URL into my clipboard with pbcopy",
-          "pastedContents": {}
-        },
-        {
-          "display": "!open plan.md",
-          "pastedContents": {}
-        },
-        {
-          "display": "give me an assessment of why END-4136 bug is happening, and make a plan.md for how to fix it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "is the prompt different for person scope threads?  is it hard coded?",
-          "pastedContents": {}
-        },
-        {
-          "display": "> Read this and give me some ideas for hooks:\n\n  https://docs.anthropic.com/en/docs/claude-code/hooks",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4499,7 +4512,17 @@
       ],
       "exampleFilesGeneratedAt": 1751993350658,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastDuration": 153488,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "61b7993e-c731-486b-8c7d-0491b61ad453"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -4609,6 +4632,10 @@
     "/Users/dorkitude/a/dev/scrappy-head": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "the scrape job in Procfile sometimes hangs and has to terminate due to anti-scraping measures LI is taking\n\nit seems to work if I simply restart the process.  is there a way to update the Procfile to just run of the crawls, say, 20 times?  (it's okay to run it after completion since it'll simply abort)",
+          "pastedContents": {}
+        },
         {
           "display": "i'm getting this when i try to crawl:\n\naditya | [2025-07-09 17:41:37] aditya.khargonekar@gmail.com has used 400 of 400 quota in the last 24 hours.   Exiting...\n\ncan you perform some mongo queries to confirm this?",
           "pastedContents": {}
@@ -4921,16 +4948,16 @@
       ],
       "exampleFilesGeneratedAt": 1752001131494,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 1.3138014000000005,
-      "lastAPIDuration": 130245,
-      "lastDuration": 154648,
-      "lastLinesAdded": 86,
-      "lastLinesRemoved": 4,
-      "lastTotalInputTokens": 6810,
-      "lastTotalOutputTokens": 4280,
-      "lastTotalCacheCreationInputTokens": 14252,
-      "lastTotalCacheReadInputTokens": 499142,
-      "lastSessionId": "1bce0a28-3625-4c0f-b94a-6df04d7af7cc"
+      "lastCost": 0.043325800000000005,
+      "lastAPIDuration": 17354,
+      "lastDuration": 232907,
+      "lastLinesAdded": 3,
+      "lastLinesRemoved": 3,
+      "lastTotalInputTokens": 183,
+      "lastTotalOutputTokens": 651,
+      "lastTotalCacheCreationInputTokens": 4690,
+      "lastTotalCacheReadInputTokens": 53651,
+      "lastSessionId": "f88e4155-de6a-4997-acbd-16a46adc3f21"
     },
     "/Users/dorkitude/Dropbox/backups": {
       "allowedTools": [],
@@ -6682,6 +6709,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "default rotation speed is too fast.  make it 17, then commit and push",
+          "pastedContents": {}
+        },
+        {
           "display": "# Update Changelog Command\n\nYou are tasked with updating the changelog files for the Flagger game project. Follow these instructions precisely.\n\n## Files to Update\n\n1. **JSON file**: `/Users/dorkitude/a/dev/flagger/public/changelog.json`\n2. **HTML file**: `/Users/dorkitude/a/dev/flagger/public/changelog.html`\n\n## Process\n\n1. First, check the current state of the changelog.json to see the last recorded commit\n2. Use `git log` to find all new commits since the last entry in the changelog\n3. Update both files with the new commits\n\n## JSON Format\n\nThe changelog.json file has this structure:\n```json\n{\n  \"entries\": [\n    {\n      \"commitId\": \"dd96050b3833eaa38545360f12a72c1884540a17\",\n      \"timestamp\": \"2025-07-02 07:32\",\n      \"category\": \"improvement\",\n      \"title\": \"Refactor enemy AI to use shared BaseEnemyAI class\",\n      \"emoji\": \"♻️\",\n      \"visible\": false,\n      \"details\": [\n        \"Consolidated enemy AI logic into a reusable BaseEnemyAI class\",\n        \"Reduced code duplication across enemy soldier types\",\n        \"Fixed one bug with enemy AI pathfinding;  more to fix though.\"\n      ]\n    }\n  ],\n  \"categories\": {\n    \"feature\": {\n      \"name\": \"New Feature\",\n      \"color\": \"var(--green)\"\n    },\n    \"fix\": {\n      \"name\": \"Bug Fix\",\n      \"color\": \"var(--red)\"\n    },\n    \"improvement\": {\n      \"name\": \"Gameplay\",\n      \"color\": \"var(--blue)\"\n    },\n    \"visual\": {\n      \"name\": \"Visual Update\",\n      \"color\": \"var(--pink)\"\n    },\n    \"audio\": {\n      \"name\": \"Audio\",\n      \"color\": \"var(--peach)\"\n    },\n    \"balance\": {\n      \"name\": \"Balance\",\n      \"color\": \"var(--yellow)\"\n    }\n  }\n}\n```\n\nEach entry must have:\n- `commitId`: Full commit hash\n- `timestamp`: Date and time in YYYY-MM-DD HH:MM format\n- `category`: One of: feature, fix, improvement, visual, audio, balance\n- `title`: Commit message without emoji (extract main message)\n- `emoji`: The emoji from the commit message (if any)\n- `visible`: true if affects gameplay, false if internal/development change\n- `details`: Array of 2-3 bullet points describing the change\n\n## Category Guidelines\n\nChoose the appropriate category based on the commit:\n- `feature`: New gameplay features, weapons, enemies, mechanics\n- `fix`: Bug fixes, crash fixes, error corrections\n- `improvement`: Code refactoring, optimizations, internal improvements\n- `visual`: UI changes, visual effects, graphics updates\n- `audio`: Sound effects, music, audio system changes\n- `balance`: Gameplay balance, difficulty adjustments, stat tweaks\n\n## HTML Format\n\nThe changelog.html displays entries from the JSON file dynamically. No manual HTML editing is required - the HTML file reads and renders the JSON data.\n\n## Steps to Execute\n\n1. Read the current changelog.json to find the most recent commit ID\n2. Run `git log --date=format:'%Y-%m-%d %H:%M' --pretty=format:\"%H|%s|%ad\" [last_commit]..HEAD` to get new commits\n3. For each new commit:\n   - Extract the emoji (if present) from the message\n   - Determine the appropriate category\n   - Create a title by removing the emoji from the message\n   - Generate 2-3 detail bullet points based on the commit message\n   - Set `visible: true` if it affects gameplay, `false` if it's internal/development\n4. Add new entries to the beginning of the entries array (newest first)\n5. Save the updated JSON file\n\n## Important Notes\n\n- Preserve all emojis in the emoji field\n- Maintain chronological order (newest first)\n- Only include commits that are NOT already in the changelog\n- Our audience is game players, so set `visible: false` for:\n  - Changelog updates\n  - Documentation changes\n  - Build/config changes\n  - Internal refactoring that doesn't affect gameplay\n- Do not modify existing entries or categories\n- The details array should explain the change in player-friendly terms",
           "pastedContents": {}
         },
@@ -7082,10 +7113,6 @@
         },
         {
           "display": "commit these changes",
-          "pastedContents": {}
-        },
-        {
-          "display": "When the shield blocks 100% of damage, use a shield emoji in the float-text.",
           "pastedContents": {}
         }
       ],
