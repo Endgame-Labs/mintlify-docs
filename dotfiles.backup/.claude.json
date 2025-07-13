@@ -1,5 +1,5 @@
 {
-  "numStartups": 1306,
+  "numStartups": 1311,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -4008,6 +4008,30 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "make vscode my default editor for all appropriate file types, not Cursor",
+          "pastedContents": {}
+        },
+        {
+          "display": "Check out my overmind logs and figure out why the servers aren't running properly.  attempt to fix it and keep tailing/searching the logs until you fix it.",
+          "pastedContents": {}
+        },
+        {
+          "display": "for some reason, assistant messages aren't being stored in thread analytics.  first, write a test to prove that it isn't working.",
+          "pastedContents": {}
+        },
+        {
+          "display": "how is cerebro.code-workspace actually being used by vscode?  os is it?",
+          "pastedContents": {}
+        },
+        {
+          "display": "how can i open it from command line to ensure it has this stuff",
+          "pastedContents": {}
+        },
+        {
+          "display": "I notice that when I open this project in vscode, certain things are underlined, especially in the briefs subproject.\n\ni think it's because we use uv to manage things. \n\nhow to fix?\n\n\n",
+          "pastedContents": {}
+        },
+        {
           "display": "add *.local to gitignore",
           "pastedContents": {}
         },
@@ -4464,30 +4488,6 @@
         {
           "display": "Which formats of email-to-Salesforce activity/task syncing do we currently seem to support first-class?",
           "pastedContents": {}
-        },
-        {
-          "display": "Make me a new Linear issue, set to in-progress, call it \"Tiny Guardrails\", description \"Additional sgent instructions that specifically aim to stop hallucinations of Names, URLs, contact details, or metrics.\"\n\nmake a new branch and name it after this new issue.",
-          "pastedContents": {}
-        },
-        {
-          "display": "Let's not make the mesh engine optional.",
-          "pastedContents": {}
-        },
-        {
-          "display": "I'm pretty sure we didn't change those tests in this branch since main.  Did we?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Wait, but is there actually any code that needs this to be optional?",
-          "pastedContents": {}
-        },
-        {
-          "display": "Can you look at the PR comments in github for this from dreverri and others, and help me address them one-by-one?",
-          "pastedContents": {}
-        },
-        {
-          "display": "you didn't change the code, just the comment?",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4507,17 +4507,7 @@
       ],
       "exampleFilesGeneratedAt": 1751993350658,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.57478445,
-      "lastAPIDuration": 40464,
-      "lastDuration": 1441661,
-      "lastLinesAdded": 3,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 2290,
-      "lastTotalOutputTokens": 678,
-      "lastTotalCacheCreationInputTokens": 20395,
-      "lastTotalCacheReadInputTokens": 98896,
-      "lastSessionId": "a56a2133-5eb3-4c43-a15c-c7c100dd215b"
+      "lastTotalWebSearchRequests": 0
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -6700,6 +6690,30 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "it appears I swapped the `code` shortcut to point to Cursor instead of VScode.  please fix.",
+          "pastedContents": {}
+        },
+        {
+          "display": "move rotation speed to the top under custom controls, and add some padding between the list items.  especially extra top-padding on the first item.",
+          "pastedContents": {}
+        },
+        {
+          "display": "I'd like it to be mouse-scrollable too, and show a scrollbar on the widget.",
+          "pastedContents": {}
+        },
+        {
+          "display": "/changes ",
+          "pastedContents": {}
+        },
+        {
+          "display": "make it so it appears alongside the other settings under Custom Controls.  also the list of Custom Controls is too long so it needs to beocme scrollable.",
+          "pastedContents": {}
+        },
+        {
+          "display": "I'd like the /changes command to STOP doing what it's doine, and instead just run \"make changes\" via shell",
+          "pastedContents": {}
+        },
+        {
           "display": "the way you're rendering rotation speed on the built-in control modes should look identical to the others.  refactor thee so you can just add it to the same data structure, but instead of being a KeyMap field type, make it an integer type.  make it go from 1 to 100.",
           "pastedContents": {}
         },
@@ -7081,36 +7095,6 @@
         {
           "display": "This works great, except that when you FIRST click the Custom Controls button, it goes straight into \"Press Any Key\" mode, as if you had clicked twice.",
           "pastedContents": {}
-        },
-        {
-          "display": "[Pasted text #1 +284 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "mainScene.ts:155 Tilemap has no tileset \"simple_tiles\". Its tilesets are [Tileset]\naddTilesetImage @ phaser.js:222217\ncreate @ mainScene.ts:155\ncreate @ phaser.js:198297\nbootScene @ phaser.js:198187\nstart @ phaser.js:198942\nprocessQueue @ phaser.js:197988\nupdate @ phaser.js:198232\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstart @ phaser.js:31401\nstart @ phaser.js:18044\nstart @ phaser.js:17139\ntexturesReady @ phaser.js:17119\nemit @ phaser.js:213\nupdatePending @ phaser.js:216447\nemit @ phaser.js:194\nimage.onload @ phaser.js:216593\naudioUtils.ts:19 The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio\ncreateAndStartBufferSource @ phaser.js:207357\nplay @ phaser.js:207246\nplay @ phaser.js:203255\nplaySound @ audioUtils.ts:19\nfire @ TurretMachineGun.ts:55\nshoot @ standardTurret.ts:61\nupdate @ standardTurret.ts:34\neval @ mainScene.ts:370\nupdate @ mainScene.ts:368\nstep @ phaser.js:201006\nupdate @ phaser.js:198243\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\naudioUtils.ts:19 The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio\ncreateAndStartBufferSource @ phaser.js:207357\nplay @ phaser.js:207246\nplay @ phaser.js:203255\nplaySound @ audioUtils.ts:19\nfire @ TurretMachineGun.ts:55\nshoot @ standardTurret.ts:61\nupdate @ standardTurret.ts:34\neval @ mainScene.ts:370\nupdate @ mainScene.ts:368\nstep @ phaser.js:201006\nupdate @ phaser.js:198243\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\naudioUtils.ts:19 The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page. https://developer.chrome.com/blog/autoplay/#web_audio\ncreateAndStartBufferSource @ phaser.js:207357\nplay @ phaser.js:207246\nplay @ phaser.js:203255\nplaySound @ audioUtils.ts:19\nfire @ TurretMachineGun.ts:55\nshoot @ standardTurret.ts:61\nupdate @ standardTurret.ts:34\neval @ mainScene.ts:370\nupdate @ mainScene.ts:368\nstep @ phaser.js:201006\nupdate @ phaser.js:198243\nstep @ phaser.js:17199\nstep @ phaser.js:18235\nstep @ phaser.js:31347\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\nrequestAnimationFrame\nstep @ phaser.js:31351\ncustomControlsDialog.ts:248 CustomControlsDialog shown: {containerPos: {…}, containerScrollFactor: 0, overlayBounds: Rectangle, panelBounds: Rectangle, actionRowCount: 10}\ncustomControlsDialog.ts:257 ActionRow moveForward: {x: 640, y: 210, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow moveBackward: {x: 640, y: 245, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow strafeLeft: {x: 640, y: 280, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow strafeRight: {x: 640, y: 315, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow rotateLeft: {x: 640, y: 350, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow rotateRight: {x: 640, y: 385, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow primaryFire: {x: 640, y: 420, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow primaryThrowable: {x: 640, y: 455, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow openSettings: {x: 640, y: 490, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:257 ActionRow closeDialogs: {x: 640, y: 525, scrollFactor: 0, bounds: Rectangle}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 849.9704433497537, y: 245.9113300492611, worldX: 849.9704433497537, worldY: 3109.911330049261, camera: {…}}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 614.1477832512315, y: 529.6551724137931, worldX: 614.1477832512315, worldY: 3393.655172413793, camera: {…}}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 625.4975369458128, y: 452.72906403940885, worldX: 625.4975369458128, worldY: 3316.729064039409, camera: {…}}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 610.3645320197045, y: 253.47783251231527, worldX: 610.3645320197045, worldY: 3117.477832512315, camera: {…}}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 546.0492610837439, y: 611.6256157635468, worldX: 546.0492610837439, worldY: 3475.6256157635466, camera: {…}}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 547.3103448275862, y: 567.4876847290641, worldX: 547.3103448275862, worldY: 3431.4876847290643, camera: {…}}\ncustomControlsDialog.ts:32 Global pointer down in CustomControlsDialog: {x: 769.2610837438424, y: 556.1379310344828, worldX: 769.2610837438424, worldY: 3420.137931034483, camera: {…}}"
-            }
-          }
-        },
-        {
-          "display": "commit this change",
-          "pastedContents": {}
-        },
-        {
-          "display": "not working.   add some logging so you can see what I'm clicking and where the buttons/rows are expecting clicks.",
-          "pastedContents": {}
-        },
-        {
-          "display": "update shield logic so that if shield is over 50%, it attempts to absorb ALL the damage.  then if it's below 50%, it only absorbs half the damage.",
-          "pastedContents": {}
-        },
-        {
-          "display": "looks okay now, on to click fix",
-          "pastedContents": {}
-        },
-        {
-          "display": "[Image #1] still weird",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -7130,7 +7114,17 @@
       ],
       "exampleFilesGeneratedAt": 1751989877653,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0.8795306999999998,
+      "lastAPIDuration": 70820,
+      "lastDuration": 3191756,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 7532,
+      "lastTotalOutputTokens": 2046,
+      "lastTotalCacheCreationInputTokens": 23724,
+      "lastTotalCacheReadInputTokens": 217917,
+      "lastSessionId": "5547dd03-9539-407e-9d7d-0214ceeaf878"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
