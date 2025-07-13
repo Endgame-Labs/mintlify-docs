@@ -15,6 +15,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # ALIASES
 
+
+# git
 alias ll="ls -lah"
 alias gs="git status"
 alias gd="git diff"
@@ -29,7 +31,11 @@ alias gp="git pull"
 alias gpp="git pull && git push"
 alias gcam="git commit -am" # commit all changes and message
 
+
+# make
 alias me="make everything"
+alias mb="make build"
+alias mt="make test"
 
 
 # TUTU aliases
