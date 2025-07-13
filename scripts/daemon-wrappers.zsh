@@ -13,6 +13,9 @@ _set_title() {
 os() {
     local folder=${PWD:t}  # Just the current folder name
     
+    # Remove any existing overmind socket
+    rm -f .overmind.sock
+    
     # Set title to show we're running Claude
     _set_title "$folder — 🧠 Overmind 🧠"
     
