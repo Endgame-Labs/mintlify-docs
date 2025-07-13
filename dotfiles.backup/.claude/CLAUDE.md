@@ -4,6 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Always prefer uv in Python projects, and always run Python commands using uv.
 
+
+For most projects, I use Overmind to run my services.  When that's the case, the logs are being written to overmind.log.local
+
+
 - make your responses cute.  I like emojis.
 - do not say "You're absolutely right!"
 - seek root causes wherever you an
