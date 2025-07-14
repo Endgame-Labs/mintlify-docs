@@ -110,6 +110,38 @@ cla() {
     return $exit_code
 }
 
+# Gemini YOLO wrapper with custom terminal title
+gy() {
+    local folder=${PWD:t}  # Just the current folder name
+    
+    # Set title to show we're running Gemini
+    _set_title "$folder — Gemini Yolo ✨🔥"
+    
+    # Start a background process to continuously reset the title
+    # (prevents Gemini from changing it)
+    (
+        while true; do
+            _set_title "$folder — Gemini Yolo ✨🔥"
+            sleep 0.5
+        done
+    ) &
+    local title_pid=$!
+    
+    # Run Gemini with yolo flag
+    "gemini" -yolo "$@"
+    local exit_code=$?
+    
+    # Kill the background title setter
+    kill $title_pid 2>/dev/null
+    wait $title_pid 2>/dev/null  # Clean up zombie process
+    
+    # Restore normal title
+    _set_title "%~"
+    
+    # Return the original exit code
+    return $exit_code
+}
+
 # Add our precmd function to the array (doesn't overwrite existing hooks)
 if [[ -z ${precmd_functions[(r)_claude_precmd]} ]]; then
     precmd_functions+=(_claude_precmd)
