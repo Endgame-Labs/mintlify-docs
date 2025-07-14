@@ -20,6 +20,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ll="ls -lah"
 alias gs="git status"
 alias gd="git diff"
+alias gdc="git difftool -y -t vscode HEAD " # diff with vscode
 alias gcm="git commit -m "
 alias gmom="git merge origin main"
 alias gau="git add -u"
