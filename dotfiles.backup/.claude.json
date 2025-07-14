@@ -3681,7 +3681,17 @@
       ],
       "exampleFilesGeneratedAt": 1752002327367,
       "lastTotalWebSearchRequests": 0,
-      "hasCompletedProjectOnboarding": true
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 0.46004825000000005,
+      "lastAPIDuration": 35767,
+      "lastDuration": 4006603,
+      "lastLinesAdded": 33,
+      "lastLinesRemoved": 1,
+      "lastTotalInputTokens": 1077,
+      "lastTotalOutputTokens": 901,
+      "lastTotalCacheCreationInputTokens": 17259,
+      "lastTotalCacheReadInputTokens": 49578,
+      "lastSessionId": "b1d83f1c-f109-4caa-9d92-293b6dd659f9"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
