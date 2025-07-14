@@ -128,7 +128,7 @@ gy() {
     local title_pid=$!
     
     # Run Gemini with yolo flag
-    "gemini" -yolo "$@"
+    "gemini" -y "$@"
     local exit_code=$?
     
     # Kill the background title setter
