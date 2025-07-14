@@ -1,10 +1,10 @@
 {
-  "numStartups": 1347,
+  "numStartups": 1362,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 1331,
+    "shift-enter": 1352,
     "memory-command": 770,
     "theme-command": 1322,
     "prompt-queue": 218,
@@ -12,14 +12,14 @@
     "todo-list": 1329,
     "enter-to-steer-in-relatime": 1324,
     "claude-opus-welcome": 214,
-    "# for memory": 1333,
+    "# for memory": 1354,
     "install-github-app": 553,
-    "permissions": 1325,
-    "drag-and-drop-images": 1341,
-    "double-esc": 1330,
-    "continue": 1326,
-    "custom-commands": 1327,
-    "shift-tab": 1332
+    "permissions": 1349,
+    "drag-and-drop-images": 1352,
+    "double-esc": 1351,
+    "continue": 1351,
+    "custom-commands": 1358,
+    "shift-tab": 1353
   },
   "memoryUsageCount": 5,
   "promptQueueUseCount": 62,
@@ -4025,6 +4025,46 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "show me my linear issues",
+          "pastedContents": {}
+        },
+        {
+          "display": "/mcp ",
+          "pastedContents": {}
+        },
+        {
+          "display": "mcp",
+          "pastedContents": {}
+        },
+        {
+          "display": "remove the linear MCP from my claude please",
+          "pastedContents": {}
+        },
+        {
+          "display": "why are you using this instead of my CLI?  my claude local tells you",
+          "pastedContents": {}
+        },
+        {
+          "display": "show me my linear issues",
+          "pastedContents": {}
+        },
+        {
+          "display": "dorkitude ~/a/dev/cerebro [kyle/fix-analytics] $ linctl project list --team \"Endgame 2.0\"\n❌ Failed to find team 'Endgame 2.0': GraphQL errors: [{Entity not found: Team [{3 4}] [team]}]",
+          "pastedContents": {}
+        },
+        {
+          "display": "I have a new CLI for linear called linctl.  run `linctl docs` to see what it can do.",
+          "pastedContents": {}
+        },
+        {
+          "display": "look for mcp server setup anywhere in this project",
+          "pastedContents": {}
+        },
+        {
+          "display": "why doesn't overmind start work?  port conflicts.  something hung?",
+          "pastedContents": {}
+        },
+        {
           "display": "can you see a claude.md here?",
           "pastedContents": {}
         },
@@ -4447,52 +4487,6 @@
         {
           "display": "where can I see chat thumbs up/down feedback that has been gathered in the app? (edited) ",
           "pastedContents": {}
-        },
-        {
-          "display": "I don't think the get_valid_at_timestamp does this properly eitehr;   it's not cehcking for existence, only truthiness",
-          "pastedContents": {}
-        },
-        {
-          "display": "help me diagnose this issue, and put your findings in INVESTIGATION.md:\n\n\n[Pasted text #1 +47 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "briefs-api    | ERROR    'Row' object has no attribute 'valid_at'\nbriefs-api    |          Traceback (most recent call last):\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/pydantic/main.py\", line 983, in __getattr__\nbriefs-api    |              return pydantic_extra[item]\nbriefs-api    |                     ~~~~~~~~~~~~~~^^^^^^\nbriefs-api    |          KeyError: 'valid_at'\nbriefs-api    |\nbriefs-api    |          The above exception was the direct cause of the following exception:\nbriefs-api    |\nbriefs-api    |          Traceback (most recent call last):\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/agno/tools/function.py\", line 600, in execute\nbriefs-api    |              result = self.function.entrypoint(**arguments)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/threads/agno_manager.py\", line 1565, in _wrapper\nbriefs-api    |              result = tool.exec(*args, **kwargs)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 367, in exec\nbriefs-api    |              all_raw_rows.extend(f.result())\nbriefs-api    |                                  ~~~~~~~~^^\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 456, in result\nbriefs-api    |              return self.__get_result()\nbriefs-api    |                     ~~~~~~~~~~~~~~~~~^^\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/_base.py\", line 401, in __get_result\nbriefs-api    |              raise self._exception\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/concurrent/futures/thread.py\", line 59, in run\nbriefs-api    |              result = self.fn(*self.args, **self.kwargs)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/common-py/core/src/common_core/timing.py\", line 34, in wrapper\nbriefs-api    |              result = func(*args, **kwargs)\nbriefs-api    |            File \"/Users/dorkitude/.local/share/uv/python/cpython-3.13.3-macos-aarch64-none/lib/python3.13/contextlib.py\", line 85, in inner\nbriefs-api    |              return func(*args, **kwds)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 481, in do_search_for_term\nbriefs-api    |              search_results = rank_results_by_minimum_distance(search_results)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 63, in rank_results_by_minimum_distance\nbriefs-api    |              filtered_results.sort(\nbriefs-api    |              ~~~~~~~~~~~~~~~~~~~~~^\nbriefs-api    |                  key=lambda x: (\nbriefs-api    |                  ^^^^^^^^^^^^^^^\nbriefs-api    |              ...<2 lines>...\nbriefs-api    |                  )\nbriefs-api    |                  ^\nbriefs-api    |              )\nbriefs-api    |              ^\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/briefs/tools/facts/triples/turbopuffer_search_tool.py\", line 66, in <lambda>\nbriefs-api    |              datetime.fromisoformat(x[\"valid_at\"].replace(\"Z\", \"+00:00\")).timestamp(),\nbriefs-api    |                                     ~^^^^^^^^^^^^\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/turbopuffer/types/row.py\", line 59, in __getitem__\nbriefs-api    |              return getattr(self, key)\nbriefs-api    |            File \"/Users/dorkitude/a/dev/cerebro/src/briefs/.venv/lib/python3.13/site-packages/pydantic/main.py\", line 985, in __getattr__\nbriefs-api    |              raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}') from exc\nbriefs-api    |          AttributeError: 'Row' object has no attribute 'valid_at'. Did you mean: 'validate'?"
-            }
-          }
-        },
-        {
-          "display": "tell me about the system prompt for the new book level chat stuff in threads",
-          "pastedContents": {}
-        },
-        {
-          "display": "revert my last commit's changes to @app-frontend\n\ni only wanted the briefs changes",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit my staged changes and note that it fixes the issue 4169",
-          "pastedContents": {}
-        },
-        {
-          "display": "Try making that change",
-          "pastedContents": {}
-        },
-        {
-          "display": "Could we have done this by changing how we prompt the LLM for its steps, instead of doing this hacky language stuff?",
-          "pastedContents": {}
-        },
-        {
-          "display": "execute the plan simple",
-          "pastedContents": {}
-        },
-        {
-          "display": "!code plan_simple.md",
-          "pastedContents": {}
-        },
-        {
-          "display": "review plan.md and make me a plan_simple.md -- Is there a version of the world where we don't touch the frontend code, just return more substeps & in the present-progressive tense on the backend?",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4512,17 +4506,7 @@
       ],
       "exampleFilesGeneratedAt": 1751993350658,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.16388095,
-      "lastAPIDuration": 13668,
-      "lastDuration": 90425,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 105,
-      "lastTotalOutputTokens": 274,
-      "lastTotalCacheCreationInputTokens": 4951,
-      "lastTotalCacheReadInputTokens": 34737,
-      "lastSessionId": "0e103eae-49bd-47f4-8f66-8378f7428241"
+      "lastTotalWebSearchRequests": 0
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -6699,6 +6683,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "/mcp ",
+          "pastedContents": {}
+        },
+        {
           "display": "default rotation speed is too fast.  make it 17, then commit and push",
           "pastedContents": {}
         },
@@ -7100,10 +7088,6 @@
         {
           "display": "commit all changes",
           "pastedContents": {}
-        },
-        {
-          "display": "commit these changes",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -7123,7 +7107,17 @@
       ],
       "exampleFilesGeneratedAt": 1751989877653,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastDuration": 8850923,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "3e8ac186-e746-43cb-9e92-0f8dfb6b12d4"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
@@ -8114,6 +8108,84 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "review my changes, update README, make build, and commit my changes",
+          "pastedContents": {}
+        },
+        {
+          "display": "why doesnt this work\n\ndorkitude ~/a/dev/linctl [master] $ linctl issue create -m -d=\"test issue d\" --team=\"Endgame 2.0\" --title \"test issue\"\n❌ Failed to find team 'Endgame 2.0': GraphQL errors: [{Entity not found: Team [{3 4}] [team]}]",
+          "pastedContents": {}
+        },
+        {
+          "display": "great, now do i have to build before i push every time or will it auto-build?",
+          "pastedContents": {}
+        },
+        {
+          "display": "make sure the other commands don't have similar mistakes",
+          "pastedContents": {}
+        },
+        {
+          "display": "[Pasted text #1 +33 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "dorkitude ~/a/dev/linctl [master] $ linctl issue create -h\npanic: unable to redefine 'p' shorthand in \"create\" flagset: it's already used for \"priority\" flag\n\ngoroutine 1 [running]:\ngithub.com/spf13/pflag.(*FlagSet).AddFlag(0x1400020c400, 0x140002146e0)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/pflag@v1.0.5/flag.go:874 +0x378\ngithub.com/spf13/cobra.(*Command).mergePersistentFlags.(*FlagSet).AddFlagSet.func2(0x140002146e0)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/pflag@v1.0.5/flag.go:887 +0x44\ngithub.com/spf13/pflag.(*FlagSet).VisitAll(0x1036f6520?, 0x140000edb28)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/pflag@v1.0.5/flag.go:290 +0xdc\ngithub.com/spf13/pflag.(*FlagSet).AddFlagSet(...)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/pflag@v1.0.5/flag.go:885\ngithub.com/spf13/cobra.(*Command).mergePersistentFlags(0x1036f6520)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:1852 +0x84\ngithub.com/spf13/cobra.stripFlags({0x14000032ab0, 0x1, 0x1}, 0x1036f6520)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:647 +0x3c\ngithub.com/spf13/cobra.(*Command).Find.func1(0x1036f6520, {0x14000032ab0, 0x1, 0x1})\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:730 +0x48\ngithub.com/spf13/cobra.(*Command).Find.func1(0x1036f59a0, {0x14000088ce0, 0x2, 0x2})\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:738 +0xa8\ngithub.com/spf13/cobra.(*Command).Find.func1(0x1036f70a0, {0x1400001e090, 0x3, 0x3})\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:738 +0xa8\ngithub.com/spf13/cobra.(*Command).Find(0x1036f70a0?, {0x1400001e090?, 0x1?, 0x2?})\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:743 +0x48\ngithub.com/spf13/cobra.(*Command).initCompleteCmd(0x1036f70a0, {0x1400001e090, 0x3, 0x3})\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/completions.go:255 +0x218\ngithub.com/spf13/cobra.(*Command).ExecuteC(0x1036f70a0)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:1084 +0x184\ngithub.com/spf13/cobra.(*Command).Execute(...)\n        /Users/dorkitude/go/pkg/mod/github.com/spf13/cobra@v1.8.0/command.go:1039\ngithub.com/dorkitude/linctl/cmd.Execute()\n        /Users/dorkitude/a/dev/linctl/cmd/root.go:73 +0x24\nmain.main()\n        /Users/dorkitude/a/dev/linctl/main.go:14 +0x5c"
+            }
+          }
+        },
+        {
+          "display": "do option 2.",
+          "pastedContents": {}
+        },
+        {
+          "display": "does it only do read operations?",
+          "pastedContents": {}
+        },
+        {
+          "display": "^[[AError: Failure while executing; `git clone https://github.com/dorkitude/homebrew-linctl /opt/homebrew/Library/Taps/dorkitude/homebrew-linctl --origin=origin --template= --config core.fsmonitor=false` exited with 128.\n\nthis is after doing:\n\nbrew tap dorkitude/linctl\n\n\ndoes this mean i need a second repo?",
+          "pastedContents": {}
+        },
+        {
+          "display": "this is giving me the same output:\n\nlinctl project list --sort=created\n\nas \n\nlinctl project list --sort=updated\n\n",
+          "pastedContents": {}
+        },
+        {
+          "display": "/compact ",
+          "pastedContents": {}
+        },
+        {
+          "display": "Help me start a basic test system for this.  First, some end-to-end integration tests that require auth and only use read commands, NO writing since it's often gonna be a real token.\n\nSecond, some unit tests that make sure all the commands \"work\" and do roughly what I expect even if the sever is being mocked.",
+          "pastedContents": {}
+        },
+        {
+          "display": "get rid of the what's new section, just make sure that stuff is actually documented in the proper evergreen places.",
+          "pastedContents": {}
+        },
+        {
+          "display": "commit the README changes and push",
+          "pastedContents": {}
+        },
+        {
+          "display": "add a new command \"linctl docs\" that outputs the entire contents of our README.md file, in markdown.\n\nthis will probably require a compiled-time embed like this:\n\n```package main\n\nimport _ \"embed\"\n\n//go:embed README.md\nvar readmeContents string\n```",
+          "pastedContents": {}
+        },
+        {
+          "display": "Update the README.md to make sure this feature is well-documented",
+          "pastedContents": {}
+        },
+        {
+          "display": "go through all of my changes and package them up into a series of meaningful, self-contained commits with their own useful commit messages.",
+          "pastedContents": {}
+        },
+        {
+          "display": "the ID is being truncated in th eproject list",
+          "pastedContents": {}
+        },
+        {
+          "display": "update project and issue lists to have the ID in them, since the user will need those IDs for followup requests",
+          "pastedContents": {}
+        },
+        {
           "display": "for list commands, add the ability to provide newer-than as a parameter.  it should filter the list items by their creation time.  input values will be string, and we'll accept some simple syntactic sugar like \"3_weeks_ago\" and \"7_months_ago\"    with a special param \"all_time\" that includes all items.  the default should be \"6_months_ago\"\n\nmake sure the --help and the README.md both reflect this power, AND reminds the user of the default value if they don't provide one.",
           "pastedContents": {}
         },
@@ -8243,7 +8315,7 @@
       "enabledMcpjsonServers": [],
       "disabledMcpjsonServers": [],
       "hasTrustDialogAccepted": false,
-      "projectOnboardingSeenCount": 5,
+      "projectOnboardingSeenCount": 6,
       "hasClaudeMdExternalIncludesApproved": false,
       "hasClaudeMdExternalIncludesWarningShown": false,
       "lastTotalWebSearchRequests": 0,
@@ -8279,18 +8351,7 @@
   "subscriptionNoticeCount": 0,
   "hasAvailableSubscription": false,
   "recommendedSubscription": "",
-  "mcpServers": {
-    "linear-cloud": {
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://mcp.linear.app/sse"
-      ],
-      "env": {}
-    }
-  },
+  "mcpServers": {},
   "githubActionSetupCount": 1,
   "bypassPermissionsModeAccepted": true,
   "oauthAccount": {
