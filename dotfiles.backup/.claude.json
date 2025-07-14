@@ -1,5 +1,5 @@
 {
-  "numStartups": 1382,
+  "numStartups": 1383,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -4026,6 +4026,40 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "how is it possible that we have a few hours of good thread analytics on the 26th though?  then it stops again.",
+          "pastedContents": {}
+        },
+        {
+          "display": "no that's just a partial select:\nSELECT event_time, parent_message_content, latency_to_first_token, role\nFROM `briefs_v3__thread_message_analytics`\nWHERE latency_to_first_token IS NOT NULL\nORDER BY event_time DESC LIMIT 100",
+          "pastedContents": {}
+        },
+        {
+          "display": "but i have lots of writes into the mesh prior to that date too:\n\nsee assistant messages:\n\n[Pasted text #1 +110 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "[{\n  \"event_time\": \"2025-07-14 22:18:03.183445 UTC\",\n  \"parent_message_content\": \"what order content should they be interested in?\",\n  \"latency_to_first_token\": \"25447\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 22:14:42.793846 UTC\",\n  \"parent_message_content\": \"What defense companies does BlueHalo work with?\",\n  \"latency_to_first_token\": \"294342\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 22:13:30.645916 UTC\",\n  \"parent_message_content\": \"any new govement contracts \",\n  \"latency_to_first_token\": \"182076\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 22:09:15.495166 UTC\",\n  \"parent_message_content\": \"new prodject\",\n  \"latency_to_first_token\": \"12776\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 22:00:44.470403 UTC\",\n  \"parent_message_content\": \"Flexpipe wants to cancel because they think accuris is too expensive and doesn\\u0027t include historical standards.  What are some tactics to retain them.   \",\n  \"latency_to_first_token\": \"45703\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:56:47.623383 UTC\",\n  \"parent_message_content\": \"do a presure test\",\n  \"latency_to_first_token\": \"78689\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:36:19.143498 UTC\",\n  \"parent_message_content\": \"Provide an overview of Air Products and Chemicals Inc.-Renewal-00148245-25-NOV-2025\",\n  \"latency_to_first_token\": \"50959\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:36:09.229606 UTC\",\n  \"parent_message_content\": \"create a mututal engagement plan\",\n  \"latency_to_first_token\": \"168214\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:35:07.481306 UTC\",\n  \"parent_message_content\": \"create a mutual engagement plan to ensure this renewal closes on time\",\n  \"latency_to_first_token\": \"259990\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:34:26.874164 UTC\",\n  \"parent_message_content\": \"create mutual engagemant plan to ensure the renewal closes on time.\",\n  \"latency_to_first_token\": \"63993\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:34:02.760931 UTC\",\n  \"parent_message_content\": \"create a mutual engagement plan to close renewal on time\",\n  \"latency_to_first_token\": \"72325\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-07-14 21:33:56.916800 UTC\",\n  \"parent_message_content\": \"What accounts of mine are prime to upgrade and why? \",\n  \"latency_to_first_token\": \"31954\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 19:20:08.662740 UTC\",\n  \"parent_message_content\": \"Sum up the project froma customer why and requrements point of view and flavor it as a Billy Mayes pitch\",\n  \"latency_to_first_token\": \"12198\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:59:53.185691 UTC\",\n  \"parent_message_content\": \"what are the use cases for using EWB pro in Tesla\\u0027s giga factory business\",\n  \"latency_to_first_token\": \"41977\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:51:22.501145 UTC\",\n  \"parent_message_content\": \"Sum up the project to date, include scope for phase one and items to complete in the next 30 days\",\n  \"latency_to_first_token\": \"26009\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:49:34.234750 UTC\",\n  \"parent_message_content\": \"refocus against Intertek and Nimonik\",\n  \"latency_to_first_token\": \"73269\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:49:02.170746 UTC\",\n  \"parent_message_content\": \"why would tesla want EWB pro and Thread in their Giga factory business\",\n  \"latency_to_first_token\": \"10694\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:45:12.147470 UTC\",\n  \"parent_message_content\": \"Focusing on the EWB Market segment under $300,000 same quesitons in review of our last 12month performance against estimates and projecting to year three, if not much is changed what are the risks to the Accuris owned market segment as it relates to codes and standards for this study. Additional services or product not included. Where are the gaps as compared to the to ten current compettitors and where can we be more focused as a team to avoid being a seccond comettitor call on a list. Lets go Win!\",\n  \"latency_to_first_token\": \"16006\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:40:00.699368 UTC\",\n  \"parent_message_content\": \"Where could our internal process improve using the current client as a playback example. Focus on internal Project information as it travels from the Client to Lead to Opp to Win to Post Sales Implementation where we are today. Continual Improvement style report. Include training style questions to include as if we were building an internal audit process for our Sales process.\",\n  \"latency_to_first_token\": \"14050\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:36:25.329629 UTC\",\n  \"parent_message_content\": \"What are the phase one deliverables and what are any currrently identified risks to the client or for Accuris? Simple risk report.\",\n  \"latency_to_first_token\": \"16986\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 18:34:13.866363 UTC\",\n  \"parent_message_content\": \"What are the ISS and Thread requirements from all we know about the client from then to now. Put together a site visit report style playback listing each opportunity or solution element to follow up on within scope or beyond.\",\n  \"latency_to_first_token\": \"116346\",\n  \"role\": \"assistant\"\n}, {\n  \"event_time\": \"2025-06-26 17:32:56.547082 UTC\",\n  \"parent_message_content\": \"How can I collect evidences of this long-term partnership. Are there sources for things that could illustrate it? \",\n  \"latency_to_first_token\": \"29912\",\n  \"role\": \"assistant\"\n}]"
+            }
+          }
+        },
+        {
+          "display": "See the linear issue END-4211\n\nWriting analytics for completed messages originally broke around 7PM UTC on june 26th.  Examine git history and tell me, what merges to main would've done that?",
+          "pastedContents": {}
+        },
+        {
+          "display": "/model ",
+          "pastedContents": {}
+        },
+        {
+          "display": "See the linear issue END-4211\n\nWriting analytics for completed messages originally broke around 7PM UTC on june 26th.  Examine git history and tell me, what merges to main would've done that?",
+          "pastedContents": {}
+        },
+        {
+          "display": "this originally broke around 7PM UTC on june 26th.  what merges to main would've done that?",
+          "pastedContents": {}
+        },
+        {
           "display": "do we have any references or tests that actually confirm it returns anything, or is it always None in our usage today?",
           "pastedContents": {}
         },
@@ -4431,34 +4465,6 @@
         {
           "display": "/compact ",
           "pastedContents": {}
-        },
-        {
-          "display": "no I'd like the CLI to do this on new messages",
-          "pastedContents": {}
-        },
-        {
-          "display": "give me the cli command to test it.",
-          "pastedContents": {}
-        },
-        {
-          "display": "execute the plan.",
-          "pastedContents": {}
-        },
-        {
-          "display": "put that plan into a gist and put the URL in my clipboard",
-          "pastedContents": {}
-        },
-        {
-          "display": "I want it to be a separate API endpoint though, because I don't want to delay the initial message response at all.",
-          "pastedContents": {}
-        },
-        {
-          "display": "look at @plan-END-4156.md and the ticket END-4156 and tell me if it's a good plan.  Another agent made that plan.  I want you to help me verify and improve it.\n\ntake into account everything in that plan file, plus read the whole codebase.  take your time and ultrathink, step by step.\n\nthen write me a new-plan-END-4156.md with your updated suggestions.",
-          "pastedContents": {}
-        },
-        {
-          "display": "look at END-4156 and write a file `plan-END-4156.md` for how to implement it:\n\nI want a new GET endpoint like threads/id/message/id/suggested_followups\n\nwhen they hit that endpoint:\n\nfirst make sure it's an assistant message, not a user message.\n\nthen, if the message is not completed yet, respond with something   \"No, the message isn't complete.  Try again once it is.\"\n\nif it IS complete, I want to hit GPT 4.1, send it the user's question  (parent message content?  not sure what it's called in the code) and a prompt like \"The user asked this question: {question} and the assistant responded with this answer:  {answer}.  Suggest three followup questions.\"\n\nOnce we get the followup questions, API will return them in JSON to the caller.\n\nAlso update threads-cli so it can take in a parameter like \"--suggested_followups\"  and as soon as the message content is done streaming in, it'll GET from this new endpoint and render the followup questions in a simple interactive mode that numbers them and lets me type like \"1\" \"2\" or \"3\" to select and submit one of the followups.  Don't assume it's exactly 3 though.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4478,17 +4484,7 @@
       ],
       "exampleFilesGeneratedAt": 1751993350658,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0,
-      "lastCost": 0.13904880000000003,
-      "lastAPIDuration": 84086,
-      "lastDuration": 404264,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 38019,
-      "lastTotalOutputTokens": 2019,
-      "lastTotalCacheCreationInputTokens": 9408,
-      "lastTotalCacheReadInputTokens": 175044,
-      "lastSessionId": "f160addf-7b25-43e0-be0e-67e51c0b520d"
+      "lastTotalWebSearchRequests": 0
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
