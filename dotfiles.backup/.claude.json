@@ -4026,6 +4026,26 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "Update AGENTS.md so you don't mess this up again",
+          "pastedContents": {}
+        },
+        {
+          "display": "Are you sure that comment will make linearbot pick up the PR?  Dobule-check their docs",
+          "pastedContents": {}
+        },
+        {
+          "display": "open the linear ticket",
+          "pastedContents": {}
+        },
+        {
+          "display": "add a comment to the GH PR so the Linearbot picks it up and ties it to the right issue.",
+          "pastedContents": {}
+        },
+        {
+          "display": "Commit my changes in the src directory",
+          "pastedContents": {}
+        },
+        {
           "display": "execute the plan and give me a link to test it",
           "pastedContents": {}
         },
@@ -4422,26 +4442,6 @@
               "content": "=========================================================================================================== FAILURES ===========================================================================================================\n______________________________________________________________________________________________ test_generate_followups_no_api_key ______________________________________________________________________________________________\n\n    @pytest.mark.asyncio\n    async def test_generate_followups_no_api_key():\n        \"\"\"Test that no followups are generated when no API key is provided.\"\"\"\n        generator = FollowupGenerator(api_key=None, model=\"gpt-4.1-mini\", enabled=True)\n\n        followups = await generator.generate_followups(user_question=\"Any question\", assistant_answer=\"Any answer\")\n\n>       assert followups == []\nE       AssertionError: assert ['Can you pro...ore further?'] == []\nE\nE         Left contains 3 more items, first extra item: 'Can you provide examples of questions that yield the most insightful answers?'\nE         Use -v to get more diff\n\ntests/threads/test_followup_generator.py:61: AssertionError\n------------------------------------------------------------------------------------------------------ Captured log call -------------------------------------------------------------------------------------------------------"
             }
           }
-        },
-        {
-          "display": "remove all the extra logging you added",
-          "pastedContents": {}
-        },
-        {
-          "display": "okay then the new followup_generator should just import settings and use the key in there, right?",
-          "pastedContents": {}
-        },
-        {
-          "display": "how do other parts of our briefs codebase get the API key?",
-          "pastedContents": {}
-        },
-        {
-          "display": "briefs-api    | [July 10, 2025 17:50:41 PDT] [WARNING | followup_generator] No OpenAI API key provided or found in environment",
-          "pastedContents": {}
-        },
-        {
-          "display": "update the CLI to show me the thread ID and assitant Message IDs at the top of a response.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
