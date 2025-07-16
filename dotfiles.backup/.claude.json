@@ -1,25 +1,25 @@
 {
-  "numStartups": 1390,
+  "numStartups": 1402,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 1374,
+    "shift-enter": 1395,
     "memory-command": 770,
     "theme-command": 1363,
     "prompt-queue": 218,
-    "git-worktrees": 1366,
+    "git-worktrees": 1397,
     "todo-list": 1370,
     "enter-to-steer-in-relatime": 1365,
     "claude-opus-welcome": 214,
-    "# for memory": 1377,
+    "# for memory": 1399,
     "install-github-app": 553,
-    "permissions": 1371,
-    "drag-and-drop-images": 1375,
-    "double-esc": 1372,
-    "continue": 1380,
+    "permissions": 1392,
+    "drag-and-drop-images": 1396,
+    "double-esc": 1393,
+    "continue": 1401,
     "custom-commands": 1389,
-    "shift-tab": 1376
+    "shift-tab": 1398
   },
   "memoryUsageCount": 5,
   "promptQueueUseCount": 63,
@@ -3252,6 +3252,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "gs",
+          "pastedContents": {}
+        },
+        {
+          "display": "the wrappers living in daemon-wrappers are conflicting with each other when I have multiple ghostty Splits running different wrapper commands\n\nhow can we fix this?  I'd like the title bar to be consistent based on whatever the current in-focus Split is.",
+          "pastedContents": {}
+        },
+        {
           "display": "show me open tickets from the past week, in a table, and tell me the owner if there is one",
           "pastedContents": {}
         },
@@ -3654,14 +3662,6 @@
         {
           "display": "!code /tmp/backup_a.log",
           "pastedContents": {}
-        },
-        {
-          "display": "is my backup script @scripts/background/backup_a.py properly cronned",
-          "pastedContents": {}
-        },
-        {
-          "display": "tie this directory to git@github.com:dorkitude/a.git\n\nmake sure dev folder is in the gitignore",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -3675,23 +3675,23 @@
       "exampleFiles": [
         "tutu.sqlite",
         "daemon-wrappers.zsh",
-        "startup",
-        "backup_a.sh",
-        "CLAUDE.md"
+        ".startup",
+        "mongo_backup.sh",
+        "backup_a.sh"
       ],
-      "exampleFilesGeneratedAt": 1752002327367,
+      "exampleFilesGeneratedAt": 1752623439305,
       "lastTotalWebSearchRequests": 0,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.46004825000000005,
-      "lastAPIDuration": 35767,
-      "lastDuration": 4006603,
-      "lastLinesAdded": 33,
-      "lastLinesRemoved": 1,
-      "lastTotalInputTokens": 1077,
-      "lastTotalOutputTokens": 901,
-      "lastTotalCacheCreationInputTokens": 17259,
-      "lastTotalCacheReadInputTokens": 49578,
-      "lastSessionId": "b1d83f1c-f109-4caa-9d92-293b6dd659f9"
+      "lastCost": 0.0007576,
+      "lastAPIDuration": 1213,
+      "lastDuration": 1717,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 847,
+      "lastTotalOutputTokens": 20,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "b2d51882-965d-464b-b63d-26f2aef3d9d4"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -4026,6 +4026,100 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "yes",
+          "pastedContents": {}
+        },
+        {
+          "display": "yet my /usage command does in fact appear in autocomplete.  why?",
+          "pastedContents": {}
+        },
+        {
+          "display": "/autocode END-4235",
+          "pastedContents": {}
+        },
+        {
+          "display": "I can't see my custom autocode slash-command when I type a frontslash\n\nfix it",
+          "pastedContents": {}
+        },
+        {
+          "display": "move it into this project's slash commands, not my global commands",
+          "pastedContents": {}
+        },
+        {
+          "display": "you made it for me earlier today.\n\n[Pasted text #1 +25 lines]",
+          "pastedContents": {
+            "1": {
+              "id": 1,
+              "type": "text",
+              "content": "⏺ Update Todos\n  ⎿  ☒ Research the structure of existing slash commands in the codebase\n     ☒ Create the /autocode slash command file\n     ☒ Implement Linear issue fetching using linctl\n     ☒ Implement git branch creation with Linear naming convention\n     ☒ Implement feature/bugfix based on issue description\n     ☒ Implement commit and push functionality\n     ☒ Implement draft PR creation with proper linking\n     ☒ Test the complete /autocode workflow\n\n⏺ ✨ Done, Chef! I've created your /autocode slash command at\n  ~/.claude/slash_commands/autocode.md.\n\n  Now you can use it like this: /autocode END-1234\n\n  It will:\n  1. 🔍 Fetch the Linear issue details using linctl\n  2. 🌿 Create a properly named branch (kyle/end-1234-issue-title)\n  3. 💻 Implement the feature/bugfix based on the issue description\n  4. 📝 Commit with proper message linking to the Linear issue\n  5. 🚀 Push to GitHub\n  6. 🔗 Create a draft PR with \"Fixes END-1234\" for auto-linking\n  7. 🌐 Open the PR in your browser\n\n  The command handles all the Linear conventions and ensures proper PR linking for\n  automatic issue closure when merged! 🎉"
+            }
+          }
+        },
+        {
+          "display": "the /autocode command isnt' showing up in your autocomplete when i type frontslash.",
+          "pastedContents": {}
+        },
+        {
+          "display": "I want a new custom clash command called /autocode that takes in a linear issue ID, and:\n\n- makes a new git branch named properly with the linear branch naming convention\n- implements the feature or bugfix described in the issue body (being mindful of comments and everything else in the issue)\n- commits and pushes this new branch to github\n- creates a draft PR\n- opens the github.com draft PR in my browser.",
+          "pastedContents": {}
+        },
+        {
+          "display": "does Redis have a notion of a collection or table or something so we can keep these separate from the Agno stuff?",
+          "pastedContents": {}
+        },
+        {
+          "display": "show me the Redis vs. SQLite code that agno uses for convo storage",
+          "pastedContents": {}
+        },
+        {
+          "display": "in the plan, let's rename our module to be `app_cache` and same for the API endpoints",
+          "pastedContents": {}
+        },
+        {
+          "display": "actually he says to just use the same keys.  let's update it to just use the env vars that are already there",
+          "pastedContents": {}
+        },
+        {
+          "display": "chat with ryan who built the agno stuff:\n\n  4:32 PM\ni wanna piggyback on your sqlite/redis stuff for this app cache i'm building\n4:32\nshould I make new environment keys or just use BRIEFS_AGNO_STORAGE_REDIS_HOST, BRIEFS_AGNO_STORAGE_BACKEND, etc?\n4:32\n(or perhaps rename those to be briefs-wide, not agno-specific)\n4:32\nthe plan is to prepend all keys with app-cache-  so we shouldn't collide\n\n\nRyan Tyer\n  4:33 PM\nI’d use the same redis instance but make sure they’re a different collection or whatever redis calls them\n\n\n\nwhat do we need to change in our plan?",
+          "pastedContents": {}
+        },
+        {
+          "display": "!open deploy/stacks/gcp-v2/kubernetes/briefs-api.yaml",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the plan thus:\n\nlet's add something called BRIEFS_APP_CACHE_STORE_BACKEND that works like BRIEFS_AGNO_STORAGE_BACKEND.  i.e. we want Memorystore Redis in prod, but sqlite in dev.\n\nalso let's update the plan to specify that the API route code will prepend all keys with \"app-cache-\"",
+          "pastedContents": {}
+        },
+        {
+          "display": "update the linear issue description to describe the redis cache implementation, including update the title",
+          "pastedContents": {}
+        },
+        {
+          "display": "!open src/briefs/briefs/cache/firestore.py",
+          "pastedContents": {}
+        },
+        {
+          "display": "SQLite by default sure, but what does it use in production?",
+          "pastedContents": {}
+        },
+        {
+          "display": "do we use memcached or redis anywhere in the briefs service",
+          "pastedContents": {}
+        },
+        {
+          "display": "Do we already use Redis in this codebase?",
+          "pastedContents": {}
+        },
+        {
+          "display": "let's use firestore for the storage layer.  does it have built in TTL?",
+          "pastedContents": {}
+        },
+        {
+          "display": "Let's rethink our implementation entirely\n\nI want instead to make a simple key-value caching API in the briefs API tier\n\nget, put with a key\nvalue is a JSON blob\nTTL is seconds to live",
+          "pastedContents": {}
+        },
+        {
           "display": "does app frontend talk to firestore directly?",
           "pastedContents": {}
         },
@@ -4348,94 +4442,6 @@
         {
           "display": "why are you using this instead of my CLI?  my claude local tells you",
           "pastedContents": {}
-        },
-        {
-          "display": "show me my linear issues",
-          "pastedContents": {}
-        },
-        {
-          "display": "dorkitude ~/a/dev/cerebro [kyle/fix-analytics] $ linctl project list --team \"Endgame 2.0\"\n❌ Failed to find team 'Endgame 2.0': GraphQL errors: [{Entity not found: Team [{3 4}] [team]}]",
-          "pastedContents": {}
-        },
-        {
-          "display": "I have a new CLI for linear called linctl.  run `linctl docs` to see what it can do.",
-          "pastedContents": {}
-        },
-        {
-          "display": "look for mcp server setup anywhere in this project",
-          "pastedContents": {}
-        },
-        {
-          "display": "why doesn't overmind start work?  port conflicts.  something hung?",
-          "pastedContents": {}
-        },
-        {
-          "display": "can you see a claude.md here?",
-          "pastedContents": {}
-        },
-        {
-          "display": "can symlinks be commited to git?",
-          "pastedContents": {}
-        },
-        {
-          "display": "run this test file tests/threads/test_thread_message_analytics.py",
-          "pastedContents": {}
-        },
-        {
-          "display": "auth with the gcloud vli and tell me where it put my credentials",
-          "pastedContents": {}
-        },
-        {
-          "display": "actually put my gitignore changes in that other branch too, then push it and come back",
-          "pastedContents": {}
-        },
-        {
-          "display": "go back to other branch and grab stuff from stash",
-          "pastedContents": {}
-        },
-        {
-          "display": "commit this mcp file only, to the branch kyle/better-logging-for-agents",
-          "pastedContents": {}
-        },
-        {
-          "display": "which config are you using for linear mcp",
-          "pastedContents": {}
-        },
-        {
-          "display": "test linear mcp",
-          "pastedContents": {}
-        },
-        {
-          "display": "/model ",
-          "pastedContents": {}
-        },
-        {
-          "display": "/doctor ",
-          "pastedContents": {}
-        },
-        {
-          "display": "⚠ Found invalid settings files. They will be ignored. Run /doctor for details.\n\n Claude CLI Diagnostic\n Currently running: npm-global (1.0.51)\n Path: /opt/homebrew/Cellar/node/23.11.0/bin/node\n Invoked: /opt/homebrew/bin/claude\n Config install method: global\n Auto-updates enabled: true\n Update permissions: Yes\n\n Invalid Settings\n .claude/settings.local.json\n  └ Unrecognized field: mcp\n\n Check for typos or refer to the documentation for valid fields\n Learn more: https://docs.anthropic.com/en/docs/claude-code/settings\n\n\n Press Enter to continue…",
-          "pastedContents": {}
-        },
-        {
-          "display": "/doctor ",
-          "pastedContents": {}
-        },
-        {
-          "display": "inspect this code for security issues:\n\nhttps://github.com/evangodon/linear-cli",
-          "pastedContents": {}
-        },
-        {
-          "display": "let's switch it to use a project-level mcp.json\n\nand turn on \"Automatically approve all MCP servers defined in project .mcp.json files \"   ",
-          "pastedContents": {}
-        },
-        {
-          "display": "Claude CLI Diagnostic\n Currently running: npm-global (1.0.51)\n Path: /opt/homebrew/Cellar/node/23.11.0/bin/node\n Invoked: /opt/homebrew/bin/claude\n Config install method: global\n Auto-updates enabled: true\n Update permissions: Yes\n\n Invalid Settings\n .claude/settings.local.json\n  └ Unrecognized field: mcp\n\n Check for typos or refer to the documentation for valid fields\n Learn more: https://docs.anthropic.com/en/docs/claude-code/settings",
-          "pastedContents": {}
-        },
-        {
-          "display": "/doctor ",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4455,7 +4461,17 @@
       ],
       "exampleFilesGeneratedAt": 1752614588549,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 0,
+      "lastAPIDuration": 0,
+      "lastDuration": 4959,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 0,
+      "lastTotalOutputTokens": 0,
+      "lastTotalCacheCreationInputTokens": 0,
+      "lastTotalCacheReadInputTokens": 0,
+      "lastSessionId": "15f07c16-eb70-4224-9e77-d3bee2438c15"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -5538,12 +5554,12 @@
       "hasClaudeMdExternalIncludesWarningShown": false,
       "exampleFiles": [
         "app.py",
+        "metadata.json",
         "new.html",
         "essay.html",
-        "metadata.json",
-        "terminal.css"
+        "nav.html"
       ],
-      "exampleFilesGeneratedAt": 1750788409472,
+      "exampleFilesGeneratedAt": 1752623973640,
       "hasCompletedProjectOnboarding": true
     },
     "/Users/dorkitude/a/dev/dorkitude.com/static": {
@@ -7054,19 +7070,19 @@
         "teslaCoilTurret.ts",
         "enemySoldier.ts"
       ],
-      "exampleFilesGeneratedAt": 1751989877653,
+      "exampleFilesGeneratedAt": 1752623714119,
       "hasCompletedProjectOnboarding": true,
       "lastTotalWebSearchRequests": 0,
-      "lastCost": 0,
-      "lastAPIDuration": 0,
-      "lastDuration": 8850923,
+      "lastCost": 0.000624,
+      "lastAPIDuration": 2142,
+      "lastDuration": 25344,
       "lastLinesAdded": 0,
       "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 0,
+      "lastTotalInputTokens": 540,
+      "lastTotalOutputTokens": 48,
       "lastTotalCacheCreationInputTokens": 0,
       "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "3e8ac186-e746-43cb-9e92-0f8dfb6b12d4"
+      "lastSessionId": "344908d3-6346-4958-82a5-98f1ce20059a"
     },
     "/System/Volumes/Data/home": {
       "allowedTools": [],
@@ -8440,7 +8456,7 @@
     }
   },
   "cachedChangelog": "# Changelog\n\n## 1.0.51\n\n- Added support for native Windows (requires Git for Windows)\n- Added support for Bedrock API keys through environment variable AWS_BEARER_TOKEN_BEDROCK\n- Settings: /doctor can now help you identify and fix invalid setting files\n- `--append-system-prompt` can now be used in interactive mode, not just --print/-p.\n- Increased auto-compact warning threshold from 60% to 80%\n- Fixed an issue with handling user directories with spaces for shell snapshots\n- OTEL resource now includes os.type, os.version, host.arch, and wsl.version (if running on Windows Subsystem for Linux)\n- Custom slash commands: Fixed user-level commands in subdirectories\n- Plan mode: Fixed issue where rejected plan from sub-task would get discarded\n\n## 1.0.48\n\n- Fixed a bug in v1.0.45 where the app would sometimes freeze on launch\n- Added progress messages to Bash tool based on the last 5 lines of command output\n- Added expanding variables support for MCP server configuration\n- Moved shell snapshots from /tmp to ~/.claude for more reliable Bash tool calls\n- Improved IDE extension path handling when Claude Code runs in WSL\n- Hooks: Added a PreCompact hook\n- Vim mode: Added c, f/F, t/T\n\n## 1.0.45\n\n- Redesigned Search (Grep) tool with new tool input parameters and features\n- Disabled IDE diffs for notebook files, fixing \"Timeout waiting after 1000ms\" error\n- Fixed config file corruption issue by enforcing atomic writes\n- Updated prompt input undo to Ctrl+\\_ to avoid breaking existing Ctrl+U behavior, matching zsh's undo shortcut\n- Stop Hooks: Fixed transcript path after /clear and fixed triggering when loop ends with tool call\n- Custom slash commands: Restored namespacing in command names based on subdirectories. For example, .claude/commands/frontend/component.md is now /frontend:component, not /component.\n\n## 1.0.44\n\n- New /export command lets you quickly export a conversation for sharing\n- MCP: resource_link tool results are now supported\n- MCP: tool annotations and tool titles now display in /mcp view\n- Changed Ctrl+Z to suspend Claude Code. Resume by running `fg`. Prompt input undo is now Ctrl+U.\n\n## 1.0.43\n\n- Fixed a bug where the theme selector was saving excessively\n- Hooks: Added EPIPE system error handling\n\n## 1.0.42\n\n- Added tilde (`~`) expansion support to `/add-dir` command\n\n## 1.0.41\n\n- Hooks: Split Stop hook triggering into Stop and SubagentStop\n- Hooks: Enabled optional timeout configuration for each command\n- Hooks: Added \"hook_event_name\" to hook input\n- Fixed a bug where MCP tools would display twice in tool list\n- New tool parameters JSON for Bash tool in `tool_decision` event\n\n## 1.0.40\n\n- Fixed a bug causing API connection errors with UNABLE_TO_GET_ISSUER_CERT_LOCALLY if `NODE_EXTRA_CA_CERTS` was set\n\n## 1.0.39\n\n- New Active Time metric in OpenTelemetry logging\n\n## 1.0.38\n\n- Released hooks. Special thanks to community input in https://github.com/anthropics/claude-code/issues/712. Docs: https://docs.anthropic.com/en/docs/claude-code/hooks\n\n## 1.0.37\n\n- Remove ability to set `Proxy-Authorization` header via ANTHROPIC_AUTH_TOKEN or apiKeyHelper\n\n## 1.0.36\n\n- Web search now takes today's date into context\n- Fixed a bug where stdio MCP servers were not terminating properly on exit\n\n## 1.0.35\n\n- Added support for MCP OAuth Authorization Server discovery\n\n## 1.0.34\n\n- Fixed a memory leak causing a MaxListenersExceededWarning message to appear\n\n## 1.0.33\n\n- Improved logging functionality with session ID support\n- Added prompt input undo functionality (Ctrl+Z and vim 'u' command)\n- Improvements to plan mode\n\n## 1.0.32\n\n- Updated loopback config for litellm\n- Added forceLoginMethod setting to bypass login selection screen\n\n## 1.0.31\n\n- Fixed a bug where ~/.claude.json would get reset when file contained invalid JSON\n\n## 1.0.30\n\n- Custom slash commands: Run bash output, @-mention files, enable thinking with thinking keywords\n- Improved file path autocomplete with filename matching\n- Added timestamps in Ctrl-r mode and fixed Ctrl-c handling\n- Enhanced jq regex support for complex filters with pipes and select\n\n## 1.0.29\n\n- Improved CJK character support in cursor navigation and rendering\n\n## 1.0.28\n\n- Slash commands: Fix selector display during history navigation\n- Resizes images before upload to prevent API size limit errors\n- Added XDG_CONFIG_HOME support to configuration directory\n- Performance optimizations for memory usage\n- New attributes (terminal.type, language) in OpenTelemetry logging\n\n## 1.0.27\n\n- Streamable HTTP MCP servers are now supported\n- Remote MCP servers (SSE and HTTP) now support OAuth\n- MCP resources can now be @-mentioned\n- /resume slash command to switch conversations within Claude Code\n\n## 1.0.25\n\n- Slash commands: moved \"project\" and \"user\" prefixes to descriptions\n- Slash commands: improved reliability for command discovery\n- Improved support for Ghostty\n- Improved web search reliability\n\n## 1.0.24\n\n- Improved /mcp output\n- Fixed a bug where settings arrays got overwritten instead of merged\n\n## 1.0.23\n\n- Released TypeScript SDK: import @anthropic-ai/claude-code to get started\n- Released Python SDK: pip install claude-code-sdk to get started\n\n## 1.0.22\n\n- SDK: Renamed `total_cost` to `total_cost_usd`\n\n## 1.0.21\n\n- Improved editing of files with tab-based indentation\n- Fix for tool_use without matching tool_result errors\n- Fixed a bug where stdio MCP server processes would linger after quitting Claude Code\n\n## 1.0.18\n\n- Added --add-dir CLI argument for specifying additional working directories\n- Added streaming input support without require -p flag\n- Improved startup performance and session storage performance\n- Added CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR environment variable to freeze working directory for bash commands\n- Added detailed MCP server tools display (/mcp)\n- MCP authentication and permission improvements\n- Added auto-reconnection for MCP SSE connections on disconnect\n- Fixed issue where pasted content was lost when dialogs appeared\n\n## 1.0.17\n\n- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)\n- Fixed crashes when the VS Code diff tool is invoked multiple times quickly\n- MCP server list UI improvements\n- Update Claude Code process title to display \"claude\" instead of \"node\"\n\n## 1.0.11\n\n- Claude Code can now also be used with a Claude Pro subscription\n- Added /upgrade for smoother switching to Claude Max plans\n- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens\n- Improved shell configuration error handling\n- Improved todo list handling during compaction\n\n## 1.0.10\n\n- Added markdown table support\n- Improved streaming performance\n\n## 1.0.8\n\n- Fixed Vertex AI region fallback when using CLOUD_ML_REGION\n- Increased default otel interval from 1s -> 5s\n- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected\n- Fixed a regression where search tools unnecessarily asked for permissions\n- Added support for triggering thinking non-English languages\n- Improved compacting UI\n\n## 1.0.7\n\n- Renamed /allowed-tools -> /permissions\n- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json\n- Deprecated claude config commands in favor of editing settings.json\n- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode\n- Improved error handling for /install-github-app\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.6\n\n- Improved edit reliability for tab-indented files\n- Respect CLAUDE_CONFIG_DIR everywhere\n- Reduced unnecessary tool permission prompts\n- Added support for symlinks in @file typeahead\n- Bugfixes, UI polish, and tool reliability improvements\n\n## 1.0.4\n\n- Fixed a bug where MCP tool errors weren't being parsed correctly\n\n## 1.0.1\n\n- Added `DISABLE_INTERLEAVED_THINKING` to give users the option to opt out of interleaved thinking.\n- Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)\n- Updated documentation links and OAuth process descriptions\n\n## 1.0.0\n\n- Claude Code is now generally available\n- Introducing Sonnet 4 and Opus 4 models\n\n## 0.2.125\n\n- Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)\n- Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests\n\n## 0.2.117\n\n- Breaking change: --print JSON output now returns nested message objects, for forwards-compatibility as we introduce new metadata fields\n- Introduced settings.cleanupPeriodDays\n- Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var\n- Introduced --debug mode\n\n## 0.2.108\n\n- You can now send messages to Claude while it works to steer Claude in real-time\n- Introduced BASH_DEFAULT_TIMEOUT_MS and BASH_MAX_TIMEOUT_MS env vars\n- Fixed a bug where thinking was not working in -p mode\n- Fixed a regression in /cost reporting\n- Deprecated MCP wizard interface in favor of other MCP commands\n- Lots of other bugfixes and improvements\n\n## 0.2.107\n\n- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch\n\n## 0.2.106\n\n- MCP SSE server configs can now specify custom headers\n- Fixed a bug where MCP permission prompt didn't always show correctly\n\n## 0.2.105\n\n- Claude can now search the web\n- Moved system & account status to /status\n- Added word movement keybindings for Vim\n- Improved latency for startup, todo tool, and file edits\n\n## 0.2.102\n\n- Improved thinking triggering reliability\n- Improved @mention reliability for images and folders\n- You can now paste multiple large chunks into one prompt\n\n## 0.2.100\n\n- Fixed a crash caused by a stack overflow error\n- Made db storage optional; missing db support disables --continue and --resume\n\n## 0.2.98\n\n- Fixed an issue where auto-compact was running twice\n\n## 0.2.96\n\n- Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)\n\n## 0.2.93\n\n- Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"\n- Claude now has access to a Todo list that helps it stay on track and be more organized\n\n## 0.2.82\n\n- Added support for --disallowedTools\n- Renamed tools for consistency: LSTool -> LS, View -> Read, etc.\n\n## 0.2.75\n\n- Hit Enter to queue up additional messages while Claude is working\n- Drag in or copy/paste image files directly into the prompt\n- @-mention files to directly add them to context\n- Run one-off MCP servers with `claude --mcp-config <path-to-file>`\n- Improved performance for filename auto-complete\n\n## 0.2.74\n\n- Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL\n- Task tool can now perform writes and run bash commands\n\n## 0.2.72\n\n- Updated spinner to indicate tokens loaded and tool usage\n\n## 0.2.70\n\n- Network commands like curl are now available for Claude to use\n- Claude can now run multiple web queries in parallel\n- Pressing ESC once immediately interrupts Claude in Auto-accept mode\n\n## 0.2.69\n\n- Fixed UI glitches with improved Select component behavior\n- Enhanced terminal output display with better text truncation logic\n\n## 0.2.67\n\n- Shared project permission rules can be saved in .claude/settings.json\n\n## 0.2.66\n\n- Print mode (-p) now supports streaming output via --output-format=stream-json\n- Fixed issue where pasting could trigger memory or bash mode unexpectedly\n\n## 0.2.63\n\n- Fixed an issue where MCP tools were loaded twice, which caused tool call errors\n\n## 0.2.61\n\n- Navigate menus with vim-style keys (j/k) or bash/emacs shortcuts (Ctrl+n/p) for faster interaction\n- Enhanced image detection for more reliable clipboard paste functionality\n- Fixed an issue where ESC key could crash the conversation history selector\n\n## 0.2.59\n\n- Copy+paste images directly into your prompt\n- Improved progress indicators for bash and fetch tools\n- Bugfixes for non-interactive mode (-p)\n\n## 0.2.54\n\n- Quickly add to Memory by starting your message with '#'\n- Press ctrl+r to see full output for long tool results\n- Added support for MCP SSE transport\n\n## 0.2.53\n\n- New web fetch tool lets Claude view URLs that you paste in\n- Fixed a bug with JPEG detection\n\n## 0.2.50\n\n- New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository\n\n## 0.2.49\n\n- Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\"\n\n## 0.2.47\n\n- Press Tab to auto-complete file and folder names\n- Press Shift + Tab to toggle auto-accept for file edits\n- Automatic conversation compaction for infinite conversation length (toggle with /config)\n\n## 0.2.44\n\n- Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'\n\n## 0.2.41\n\n- MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable\n- MCP server startup no longer blocks the app from starting up\n\n## 0.2.37\n\n- New /release-notes command lets you view release notes at any time\n- `claude config add/remove` commands now accept multiple values separated by commas or spaces\n\n## 0.2.36\n\n- Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`\n- Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`\n\n## 0.2.34\n\n- Vim bindings for text input - enable with /vim or /config\n\n## 0.2.32\n\n- Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface\n- Fix for some PersistentShell issues\n\n## 0.2.31\n\n- Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation\n- MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors\n\n## 0.2.30\n\n- Added ANSI color theme for better terminal compatibility\n- Fixed issue where slash command arguments weren't being sent properly\n- (Mac-only) API keys are now stored in macOS Keychain\n\n## 0.2.26\n\n- New /approved-tools command for managing tool permissions\n- Word-level diff display for improved code readability\n- Fuzzy matching for slash commands\n\n## 0.2.21\n\n- Fuzzy matching for /commands\n",
-  "changelogLastFetched": 1752618063766,
+  "changelogLastFetched": 1752623845105,
   "iterm2SetupInProgress": false,
   "iterm2BackupPath": "/Users/dorkitude/Library/Preferences/com.googlecode.iterm2.plist.bak",
   "shiftEnterKeyBindingInstalled": true,
