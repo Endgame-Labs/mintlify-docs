@@ -105,6 +105,9 @@ _run_daemon() {
 
 # Overmind wrapper
 os() {
+    # Clear the log file
+    echo '' > overmind.log.local
+    
     # Remove any existing overmind socket
     rm -f .overmind.sock
     
