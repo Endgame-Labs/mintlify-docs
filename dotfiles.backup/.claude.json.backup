@@ -4026,6 +4026,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "show me all comments on my pr",
+          "pastedContents": {}
+        },
+        {
           "display": "why do we have ` # type: ignore[call-arg]` in b/src/briefs/briefs/api/app_cache_router.py",
           "pastedContents": {}
         },
@@ -4461,10 +4465,6 @@
         },
         {
           "display": "i reverted it, please commit and push",
-          "pastedContents": {}
-        },
-        {
-          "display": "why did you remove the eslint-disable line in @src/app-frontend/src/app/_trpc/router/search.ts ",
           "pastedContents": {}
         }
       ],

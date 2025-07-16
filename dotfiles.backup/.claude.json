@@ -4026,6 +4026,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "let's temporarily add some verbose logging to the app-cache API endpoint @briefs/app_cache/ and @briefs/api/app_cache_router.py  so I can deploy into a preview branch.  note which backend is being used, where it's stored, etc, in the log messages.\n\nmake sure it still passes `make everything` in briefs project",
+          "pastedContents": {}
+        },
+        {
           "display": "show me all comments on my pr",
           "pastedContents": {}
         },
@@ -4461,10 +4465,6 @@
         },
         {
           "display": "gs",
-          "pastedContents": {}
-        },
-        {
-          "display": "i reverted it, please commit and push",
           "pastedContents": {}
         }
       ],
