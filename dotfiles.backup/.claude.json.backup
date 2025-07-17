@@ -4026,6 +4026,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "i didn't want you to commit these changes:\n\nmodified:   .cursor/app-frontend.json\n        modified:   .eslintrc.js\n        modified:   .storybook/main.ts\n        modified:   .storybook/preview.tsx\n        modified:   .storybook/providers/trpc-provider.tsx\n        modified:   docs/llm-markdown-components.md\n        modified:   docs/storybook.md\n        modified:   lint-staged.config.js\n        modified:   package.json\n        modified:   public/mockServiceWorker.js\n\nthose aren't part of this project.",
+          "pastedContents": {}
+        },
+        {
           "display": "[Pasted text #1 +103 lines]",
           "pastedContents": {
             "1": {
@@ -4515,10 +4519,6 @@
         },
         {
           "display": "kill whatever is hogging those ports. tip   Running in development mode, for production use: fastapi run\n\n             Logs:\n\n      INFO   Will watch for changes in these directories: ['/Users/dorkitude/a/dev/cerebro/src/briefs']\n[July 16, 2025 21:26:06 CDT] [INFO | config] Will watch for changes in these directories: ['/Users/dorkitude/a/dev/cerebro/src/briefs']\n     ERROR   [Errno 48] Address already in use\n[July 16, 2025 21:26:06 CDT] [ERROR | config] [Errno 48] Address already in use",
-          "pastedContents": {}
-        },
-        {
-          "display": "JUST PROFILE THE TIMING ON THE STUFF",
           "pastedContents": {}
         }
       ],
