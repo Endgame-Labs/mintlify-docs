@@ -20,7 +20,7 @@ _create_daemon_state() {
     cat > "$state_file" <<EOF
 DAEMON_TYPE=$daemon_type
 DAEMON_PID=$pid
-DAEMON_FOLDER=${PWD:t}
+DAEMON_FOLDER=${PWD}
 DAEMON_START_TIME=$(date +%s)
 EOF
 }
@@ -36,25 +36,28 @@ _get_daemon_title() {
     local daemon_type="$1"
     local folder="$2"
     
+    # Convert to path with ~ for home
+    local display_path="${folder/#$HOME/~}"
+    
     # Get git branch if in a git repo
     local git_branch=$(git branch --show-current 2>/dev/null)
-    local branch_suffix=""
+    local branch_info=""
     if [[ -n "$git_branch" ]]; then
-        branch_suffix=" [$git_branch]"
+        branch_info=" [$git_branch]"
     fi
     
     case "$daemon_type" in
         overmind)
-            echo "🧠 🧠 Overmind @ $folder 🧠 🧠${branch_suffix}"
+            echo "🧠 🧠 Overmind @ ${display_path}${branch_info} 🧠 🧠"
             ;;
         claude-yolo)
-            echo "$folder — Claude Yolo 🤖🔥${branch_suffix}"
+            echo "${display_path}${branch_info} — Claude Yolo 🤖🔥"
             ;;
         claude)
-            echo "$folder — Claude 🤖${branch_suffix}"
+            echo "${display_path}${branch_info} — Claude 🤖"
             ;;
         gemini-yolo)
-            echo "$folder — Gemini Yolo ✨🔥${branch_suffix}"
+            echo "${display_path}${branch_info} — Gemini Yolo ✨🔥"
             ;;
         *)
             echo "%~"
@@ -67,7 +70,7 @@ _run_daemon() {
     local daemon_type="$1"
     shift  # Remove daemon_type from args
     
-    local folder=${PWD:t}
+    local folder=${PWD}
     local title=$(_get_daemon_title "$daemon_type" "$folder")
     
     # Create state file
