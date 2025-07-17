@@ -1,5 +1,5 @@
 {
-  "numStartups": 1449,
+  "numStartups": 1451,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -18,7 +18,7 @@
     "drag-and-drop-images": 1438,
     "double-esc": 1435,
     "continue": 1449,
-    "custom-commands": 1420,
+    "custom-commands": 1451,
     "shift-tab": 1440
   },
   "memoryUsageCount": 5,
@@ -4026,6 +4026,10 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "$ next lint\nAttention: Next.js now collects completely anonymous telemetry regarding usage.\nThis information is used to shape Next.js' roadmap and prioritize features.\nYou can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:\nhttps://nextjs.org/telemetry\n\n\n./src/app/(authed)/admin/usage-analytics/UsageAnalyticsClient.tsx\n119:44  Error: Replace `·(First·full·day·of·data·was·July` with `(First·full·day·of·data·was·July⏎·········`  prettier/prettier\n",
+          "pastedContents": {}
+        },
+        {
           "display": "i didn't want you to commit these changes:\n\nmodified:   .cursor/app-frontend.json\n        modified:   .eslintrc.js\n        modified:   .storybook/main.ts\n        modified:   .storybook/preview.tsx\n        modified:   .storybook/providers/trpc-provider.tsx\n        modified:   docs/llm-markdown-components.md\n        modified:   docs/storybook.md\n        modified:   lint-staged.config.js\n        modified:   package.json\n        modified:   public/mockServiceWorker.js\n\nthose aren't part of this project.",
           "pastedContents": {}
         },
@@ -4516,10 +4520,6 @@
         {
           "display": "now",
           "pastedContents": {}
-        },
-        {
-          "display": "kill whatever is hogging those ports. tip   Running in development mode, for production use: fastapi run\n\n             Logs:\n\n      INFO   Will watch for changes in these directories: ['/Users/dorkitude/a/dev/cerebro/src/briefs']\n[July 16, 2025 21:26:06 CDT] [INFO | config] Will watch for changes in these directories: ['/Users/dorkitude/a/dev/cerebro/src/briefs']\n     ERROR   [Errno 48] Address already in use\n[July 16, 2025 21:26:06 CDT] [ERROR | config] [Errno 48] Address already in use",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4539,17 +4539,7 @@
       ],
       "exampleFilesGeneratedAt": 1752614588549,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 3,
-      "lastCost": 43.93395399999999,
-      "lastAPIDuration": 3718493,
-      "lastDuration": 8955316,
-      "lastLinesAdded": 3809,
-      "lastLinesRemoved": 470,
-      "lastTotalInputTokens": 136650,
-      "lastTotalOutputTokens": 122155,
-      "lastTotalCacheCreationInputTokens": 946626,
-      "lastTotalCacheReadInputTokens": 26134213,
-      "lastSessionId": "99ee6b9d-8899-48a7-ac21-907c87e7d913"
+      "lastTotalWebSearchRequests": 0
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
