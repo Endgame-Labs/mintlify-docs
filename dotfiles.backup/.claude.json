@@ -1,25 +1,25 @@
 {
-  "numStartups": 1439,
+  "numStartups": 1447,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
     "terminal-setup": 1,
-    "shift-enter": 1423,
+    "shift-enter": 1444,
     "memory-command": 770,
-    "theme-command": 1404,
+    "theme-command": 1445,
     "prompt-queue": 218,
     "git-worktrees": 1428,
     "todo-list": 1411,
-    "enter-to-steer-in-relatime": 1406,
+    "enter-to-steer-in-relatime": 1447,
     "claude-opus-welcome": 214,
-    "# for memory": 1421,
+    "# for memory": 1442,
     "install-github-app": 553,
     "permissions": 1434,
     "drag-and-drop-images": 1438,
     "double-esc": 1435,
-    "continue": 1422,
+    "continue": 1443,
     "custom-commands": 1420,
-    "shift-tab": 1419
+    "shift-tab": 1440
   },
   "memoryUsageCount": 5,
   "promptQueueUseCount": 65,
@@ -3252,6 +3252,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "you did this for me:  update @daemon-wrappers.zsh so that it says the name of the current git branch, if any, after the emojis\n\nnow I want you to put the branch name right after the folder name.  also instead of just using the folder name, show me the full path (using `~` where appropriate as shorthand for my homedir). ",
+          "pastedContents": {}
+        },
+        {
+          "display": "update @daemon-wrappers.zsh so that it says the name of the current git branch, if any, after the emojis",
+          "pastedContents": {}
+        },
+        {
           "display": "update @daemon-wrappers.zsh for `os` command to FIRST do \"echo '' > overmind.log.local\"",
           "pastedContents": {}
         },
@@ -3654,14 +3662,6 @@
         {
           "display": "whateverr you're doing, ignore dev directory (which was already in gitignore)",
           "pastedContents": {}
-        },
-        {
-          "display": "enhance my gitignore",
-          "pastedContents": {}
-        },
-        {
-          "display": "fix",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -3682,16 +3682,16 @@
       "exampleFilesGeneratedAt": 1752623439305,
       "lastTotalWebSearchRequests": 0,
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 0.18858855,
-      "lastAPIDuration": 13286,
-      "lastDuration": 63972,
-      "lastLinesAdded": 3,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 127,
-      "lastTotalOutputTokens": 376,
-      "lastTotalCacheCreationInputTokens": 6497,
-      "lastTotalCacheReadInputTokens": 26914,
-      "lastSessionId": "0e6ad5c9-60ad-4f8e-9785-e396c9354350"
+      "lastCost": 0.24886485,
+      "lastAPIDuration": 29734,
+      "lastDuration": 89990,
+      "lastLinesAdded": 11,
+      "lastLinesRemoved": 8,
+      "lastTotalInputTokens": 433,
+      "lastTotalOutputTokens": 1006,
+      "lastTotalCacheCreationInputTokens": 7207,
+      "lastTotalCacheReadInputTokens": 27128,
+      "lastSessionId": "ee2ed2d7-166d-482e-b511-e32e0a35d43b"
     },
     "/Users/dorkitude/a/scripts": {
       "allowedTools": [],
@@ -4025,6 +4025,50 @@
     "/Users/dorkitude/a/dev/cerebro": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "i'd like to make a chrome extension under src/endgame_chrome\n\nit'll give them a toolbar button that require an endgame session (use the endgame favicon;  use the red one if it's disconnected, the blue one if it's connected)\n\nwhen the user is looking at gmail and is composing an email, it will update the \"schedule a message\" based on the recipient email address.  we'll send that email address to a new endpoint via endgame web @src/app-frontend/ which is why they need an active endgame session to do anything (this will be an authed endpoint).  the webapp will respond with some JSON about that email address.  it'll first make a TRPC request to briefs service (python API).",
+          "pastedContents": {}
+        },
+        {
+          "display": "print response again",
+          "pastedContents": {}
+        },
+        {
+          "display": "how does Endgame Slack bot talk to Endgames servers?  is the callback exposed via app_frontend or is the firewall pierced somewhere to let it talk to our python services?",
+          "pastedContents": {}
+        },
+        {
+          "display": "i don't want to be a head of main, undo my stuff",
+          "pastedContents": {}
+        },
+        {
+          "display": "now",
+          "pastedContents": {}
+        },
+        {
+          "display": "kill whatever is hogging those ports. tip   Running in development mode, for production use: fastapi run\n\n             Logs:\n\n      INFO   Will watch for changes in these directories: ['/Users/dorkitude/a/dev/cerebro/src/briefs']\n[July 16, 2025 21:26:06 CDT] [INFO | config] Will watch for changes in these directories: ['/Users/dorkitude/a/dev/cerebro/src/briefs']\n     ERROR   [Errno 48] Address already in use\n[July 16, 2025 21:26:06 CDT] [ERROR | config] [Errno 48] Address already in use",
+          "pastedContents": {}
+        },
+        {
+          "display": "JUST PROFILE THE TIMING ON THE STUFF",
+          "pastedContents": {}
+        },
+        {
+          "display": "i am not asking you to fix anything",
+          "pastedContents": {}
+        },
+        {
+          "display": "you tail them and help me build a timing profile for why threads take so long.x",
+          "pastedContents": {}
+        },
+        {
+          "display": "I've added a bunch of log lines to the threads system, so you can help me profile thread generation performance by tailing the logs\n\nbut first add more log lines so new thread requests actually trigger real log  lines (with timestamps of course)",
+          "pastedContents": {}
+        },
+        {
+          "display": "i did that but now it's got the changes that i don't want.  revert THIS branch back to the state of 1f9ff9996a6fa260400e5d86046b2fec310a2070, but with the stashed stuff on top",
+          "pastedContents": {}
+        },
         {
           "display": "reset my branch to the state of 1f9ff9996a6fa260400e5d86046b2fec310a2070\n\nand then pop from stash",
           "pastedContents": {}
@@ -4410,56 +4454,6 @@
         {
           "display": "yes",
           "pastedContents": {}
-        },
-        {
-          "display": "yet my /usage command does in fact appear in autocomplete.  why?",
-          "pastedContents": {}
-        },
-        {
-          "display": "/autocode END-4235",
-          "pastedContents": {}
-        },
-        {
-          "display": "I can't see my custom autocode slash-command when I type a frontslash\n\nfix it",
-          "pastedContents": {}
-        },
-        {
-          "display": "move it into this project's slash commands, not my global commands",
-          "pastedContents": {}
-        },
-        {
-          "display": "you made it for me earlier today.\n\n[Pasted text #1 +25 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "⏺ Update Todos\n  ⎿  ☒ Research the structure of existing slash commands in the codebase\n     ☒ Create the /autocode slash command file\n     ☒ Implement Linear issue fetching using linctl\n     ☒ Implement git branch creation with Linear naming convention\n     ☒ Implement feature/bugfix based on issue description\n     ☒ Implement commit and push functionality\n     ☒ Implement draft PR creation with proper linking\n     ☒ Test the complete /autocode workflow\n\n⏺ ✨ Done, Chef! I've created your /autocode slash command at\n  ~/.claude/slash_commands/autocode.md.\n\n  Now you can use it like this: /autocode END-1234\n\n  It will:\n  1. 🔍 Fetch the Linear issue details using linctl\n  2. 🌿 Create a properly named branch (kyle/end-1234-issue-title)\n  3. 💻 Implement the feature/bugfix based on the issue description\n  4. 📝 Commit with proper message linking to the Linear issue\n  5. 🚀 Push to GitHub\n  6. 🔗 Create a draft PR with \"Fixes END-1234\" for auto-linking\n  7. 🌐 Open the PR in your browser\n\n  The command handles all the Linear conventions and ensures proper PR linking for\n  automatic issue closure when merged! 🎉"
-            }
-          }
-        },
-        {
-          "display": "the /autocode command isnt' showing up in your autocomplete when i type frontslash.",
-          "pastedContents": {}
-        },
-        {
-          "display": "I want a new custom clash command called /autocode that takes in a linear issue ID, and:\n\n- makes a new git branch named properly with the linear branch naming convention\n- implements the feature or bugfix described in the issue body (being mindful of comments and everything else in the issue)\n- commits and pushes this new branch to github\n- creates a draft PR\n- opens the github.com draft PR in my browser.",
-          "pastedContents": {}
-        },
-        {
-          "display": "does Redis have a notion of a collection or table or something so we can keep these separate from the Agno stuff?",
-          "pastedContents": {}
-        },
-        {
-          "display": "show me the Redis vs. SQLite code that agno uses for convo storage",
-          "pastedContents": {}
-        },
-        {
-          "display": "in the plan, let's rename our module to be `app_cache` and same for the API endpoints",
-          "pastedContents": {}
-        },
-        {
-          "display": "actually he says to just use the same keys.  let's update it to just use the env vars that are already there",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4479,7 +4473,17 @@
       ],
       "exampleFilesGeneratedAt": 1752614588549,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0
+      "lastTotalWebSearchRequests": 0,
+      "lastCost": 2.8122164,
+      "lastAPIDuration": 201914,
+      "lastDuration": 989686,
+      "lastLinesAdded": 0,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 7766,
+      "lastTotalOutputTokens": 4883,
+      "lastTotalCacheCreationInputTokens": 82504,
+      "lastTotalCacheReadInputTokens": 605888,
+      "lastSessionId": "37947389-415b-456b-9e11-d5bd0572b4f9"
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
