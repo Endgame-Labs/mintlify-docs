@@ -36,18 +36,25 @@ _get_daemon_title() {
     local daemon_type="$1"
     local folder="$2"
     
+    # Get git branch if in a git repo
+    local git_branch=$(git branch --show-current 2>/dev/null)
+    local branch_suffix=""
+    if [[ -n "$git_branch" ]]; then
+        branch_suffix=" [$git_branch]"
+    fi
+    
     case "$daemon_type" in
         overmind)
-            echo "🧠 🧠 Overmind @ $folder 🧠 🧠"
+            echo "🧠 🧠 Overmind @ $folder 🧠 🧠${branch_suffix}"
             ;;
         claude-yolo)
-            echo "$folder — Claude Yolo 🤖🔥"
+            echo "$folder — Claude Yolo 🤖🔥${branch_suffix}"
             ;;
         claude)
-            echo "$folder — Claude 🤖"
+            echo "$folder — Claude 🤖${branch_suffix}"
             ;;
         gemini-yolo)
-            echo "$folder — Gemini Yolo ✨🔥"
+            echo "$folder — Gemini Yolo ✨🔥${branch_suffix}"
             ;;
         *)
             echo "%~"
