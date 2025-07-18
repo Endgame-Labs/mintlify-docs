@@ -92,8 +92,8 @@
     }
   ],
   "logo": {
-    "light": "/logo/logo_icon.avif",
-    "dark": "/logo/logo_icon.avif",
+    "light": "/logo/logo-with-text-dark.svg",
+    "dark": "/logo/logo-with-text.svg",
     "href": "/"
   },
   "topbar": {
