@@ -1,1 +1,1 @@
-web: ./start.sh
+web: rm -f /tmp/mintlify-docs.overmind.sock && ./start.sh
