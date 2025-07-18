@@ -1,5 +1,5 @@
 {
-  "numStartups": 1468,
+  "numStartups": 1469,
   "installMethod": "global",
   "autoUpdates": true,
   "tipsHistory": {
@@ -4027,6 +4027,30 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "the dropdowns need it too",
+          "pastedContents": {}
+        },
+        {
+          "display": "add new time ranges for 24h and 48h",
+          "pastedContents": {}
+        },
+        {
+          "display": "no it's PR 5363 now",
+          "pastedContents": {}
+        },
+        {
+          "display": "look at the new feedback for this PR and address it\n\nthen run `bun lint` and make sure your fixes work",
+          "pastedContents": {}
+        },
+        {
+          "display": "the image under \nInternal Visibility is broken on the \"Publishing & Artifacts\" page",
+          "pastedContents": {}
+        },
+        {
+          "display": "/compact ",
+          "pastedContents": {}
+        },
+        {
           "display": "fix errors\n\n[Pasted text #1 +23 lines]",
           "pastedContents": {
             "1": {
@@ -4491,36 +4515,6 @@
         {
           "display": "Make the URLs sticky as I'm navigating through this, so if I hit reload it'll still be on that org for instance",
           "pastedContents": {}
-        },
-        {
-          "display": "frontend      | Failed to fetch usage analytics: Error: Unrecognized name: input_tokens at [7:15]\nfrontend      |     at <unknown> (../../src/index.ts:333:10) {\nfrontend      |   code: 400,\nfrontend      |   errors: [Array],\nfrontend      |   response: [Gunzip]",
-          "pastedContents": {}
-        },
-        {
-          "display": "[Pasted text #1 +21 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Hello background! Object\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Domain cookies: Array(0)\nbackground.js:1 URL cookies: Array(0)\nbackground.js:1 All unique cookies: Array(0)\nbackground.js:1 No auth-related cookies found at all\nbackground.js:1 Available cookie names: Array(0)\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Domain cookies: []\nbackground.js:1 URL cookies: []\nbackground.js:1 All unique cookies: []\nbackground.js:1 No auth-related cookies found at all\nbackground.js:1 Available cookie names: []\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Domain cookies: []\nbackground.js:1 URL cookies: []\nbackground.js:1 All unique cookies: []\nbackground.js:1 No auth-related cookies found at all\nbackground.js:1 Available cookie names: []\nbackground.js:1 "
-            }
-          }
-        },
-        {
-          "display": "I think the Org Picker dropdown is broken.  Please update it to be alphabetical by org name, and include the org ID in paraentheses after for each org name",
-          "pastedContents": {}
-        },
-        {
-          "display": "the table is actually dev_dorkitude_mesh_org_5280.briefs_v3__thread_message_analytics",
-          "pastedContents": {}
-        },
-        {
-          "display": "there is data in the table for org 6030, but the page is blank.",
-          "pastedContents": {}
-        },
-        {
-          "display": "it works!  but it says \"Not connected to Endgame\" even after I login.",
-          "pastedContents": {}
         }
       ],
       "mcpContextUris": [],
@@ -4540,17 +4534,7 @@
       ],
       "exampleFilesGeneratedAt": 1752614588549,
       "hasCompletedProjectOnboarding": true,
-      "lastTotalWebSearchRequests": 0,
-      "lastCost": 0,
-      "lastAPIDuration": 0,
-      "lastDuration": 1997869,
-      "lastLinesAdded": 0,
-      "lastLinesRemoved": 0,
-      "lastTotalInputTokens": 0,
-      "lastTotalOutputTokens": 0,
-      "lastTotalCacheCreationInputTokens": 0,
-      "lastTotalCacheReadInputTokens": 0,
-      "lastSessionId": "4732633d-0951-4892-93d8-e59c0b470d0f"
+      "lastTotalWebSearchRequests": 0
     },
     "/Users/dorkitude/a/scripts/background": {
       "allowedTools": [],
@@ -8562,6 +8546,26 @@
     "/Users/dorkitude/a/dev/mintlify-docs": {
       "allowedTools": [],
       "history": [
+        {
+          "display": "actually just make me an overmind Procfile that does this",
+          "pastedContents": {}
+        },
+        {
+          "display": "i want it to be the default port though so i don't have to remember the command",
+          "pastedContents": {}
+        },
+        {
+          "display": "change my local dev port to use 3333",
+          "pastedContents": {}
+        },
+        {
+          "display": "double check all my other image tags",
+          "pastedContents": {}
+        },
+        {
+          "display": "│ > the image under                                                                            │\n│   Internal Visibility is broken on the \"Publishing & Artifacts\" page                         │",
+          "pastedContents": {}
+        },
         {
           "display": "how does the mintlify chatbot work",
           "pastedContents": {}
