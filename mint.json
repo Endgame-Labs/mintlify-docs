@@ -111,13 +111,6 @@
       "target": "_blank"
     }
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/endgame_io",
-      "github": "https://github.com/endgame-ai",
-      "linkedin": "https://linkedin.com/company/endgame-ai"
-    }
-  },
   "metadata": {
     "og:site_name": "Endgame Documentation",
     "og:type": "website",
