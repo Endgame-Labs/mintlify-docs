@@ -8547,6 +8547,22 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "is .mintignore in the docs?",
+          "pastedContents": {}
+        },
+        {
+          "display": "it's still doing it though:  error Cannot copy a socket file: /Users/dorkitude/a/dev/mintlify-docs/.overmind.sock",
+          "pastedContents": {}
+        },
+        {
+          "display": "that file isn't there",
+          "pastedContents": {}
+        },
+        {
+          "display": "why does overmind say error Cannot copy a socket file: /Users/dorkitude/a/dev/mintlify-docs/.overmind.sock",
+          "pastedContents": {}
+        },
+        {
           "display": "actually just make me an overmind Procfile that does this",
           "pastedContents": {}
         },
