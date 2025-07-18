@@ -29,7 +29,7 @@
   "layout": "sidenav",
   "backgroundImage": "/images/background-gradient.svg",
   "rounded": "default",
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/favicon.png",
   "navigation": [
     {
       "group": "Getting Started",
@@ -75,6 +75,11 @@
     }
   ],
   "anchors": [
+    {
+      "name": "Documentation",
+      "url": "https://docs.endgame.io",
+      "icon": "book"
+    },
     {
       "name": "Platform",
       "url": "https://end-p1.endgame.io/",
