@@ -1,0 +1,126 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Endgame Documentation",
+  "colors": {
+    "primary": "#008BF9",
+    "light": "#33A2FA",
+    "dark": "#004D8F",
+    "background": {
+      "dark": "#000F1D",
+      "light": "#FFFFFF"
+    }
+  },
+  "theme": "prism",
+  "appearance": "dark",
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
+  },
+  "font": {
+    "headings": {
+      "family": "Inter",
+      "weight": 600
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
+  },
+  "layout": "sidenav",
+  "backgroundImage": "/images/background-gradient.svg",
+  "rounded": "default",
+  "favicon": "/favicon.svg",
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "index",
+        "getting-started",
+        "core-concepts"
+      ]
+    },
+    {
+      "group": "Using Endgame",
+      "pages": [
+        "navigating-endgame",
+        "endgame-chat-101",
+        "endgame-chat-201"
+      ]
+    },
+    {
+      "group": "Features",
+      "pages": [
+        "features/templates",
+        "features/publishing-artifacts"
+      ]
+    },
+    {
+      "group": "Integrations",
+      "pages": [
+        "integrations/salesforce",
+        "integrations/gong",
+        "integrations/slack",
+        "integrations/zoom",
+        "integrations/google-logins"
+      ]
+    },
+    {
+      "group": "Trust & Support",
+      "pages": [
+        "trust/security",
+        "trust/privacy",
+        "status",
+        "contact"
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Platform",
+      "url": "https://end-p1.endgame.io/",
+      "icon": "browser"
+    },
+    {
+      "name": "Support",
+      "url": "mailto:support@endgame.io",
+      "icon": "envelope"
+    },
+    {
+      "name": "Status",
+      "url": "https://status.endgame.io",
+      "icon": "signal"
+    }
+  ],
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "topbar": {
+    "style": "default",
+    "links": [
+      {
+        "name": "Support",
+        "url": "mailto:support@endgame.io"
+      }
+    ],
+    "cta": {
+      "type": "button",
+      "label": "Platform",
+      "url": "https://endgame.io",
+      "arrow": true,
+      "target": "_blank"
+    }
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/endgame_io",
+      "github": "https://github.com/endgame-ai",
+      "linkedin": "https://linkedin.com/company/endgame-ai"
+    }
+  },
+  "metadata": {
+    "og:site_name": "Endgame Documentation",
+    "og:type": "website",
+    "twitter:site": "@endgame_io"
+  }
+}

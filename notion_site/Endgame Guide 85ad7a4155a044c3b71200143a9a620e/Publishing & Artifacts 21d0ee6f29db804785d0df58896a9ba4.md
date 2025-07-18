@@ -1,0 +1,44 @@
+# Publishing & Artifacts
+
+As you ask Endgame questions in Threads, you may sometimes want to share the answers you’re getting with your colleagues while continuing to work in Endgame. We enable this by allowing you to publish a Thread as an Artifact. 
+
+As an Artifact, your Thread will now be able shareable as a link to non-Endgame users as well as be visible to other Endgame users in the Account Library
+
+## Publishing a Thread
+
+To publish your Thread, open up a thread and click “Publish” at the top right corner. Doing so will present you with a modal, asking you to confirm whether you’d like to proceed.
+
+![Screenshot 2025-06-24 at 1.17.31 PM.png](Publishing%20&%20Artifacts%2021d0ee6f29db804785d0df58896a9ba4/Screenshot_2025-06-24_at_1.17.31_PM.png)
+
+Once you have clicked Publish in the modal, you’ll see the status changed to Published in the top right corner. Upon clicking on the Published button at the top right of the thread, you’ll see both the link to the Artifact as well as a button that takes you directly to it. 
+
+The Published button on the Thread is also where you can Unpublish, which causes the original share link to stop working, thus removing access for anyone to see that snapshot of the Thread as well as from being visible by other Endgame users in the Account Library.
+
+<aside>
+💡
+
+Any changes, such as additional questions, made to a Published Thread will be reflected in the Artifact upon a refresh, and thus visible to external viewers
+
+</aside>
+
+![Screenshot 2025-06-24 at 1.18.56 PM.png](Publishing%20&%20Artifacts%2021d0ee6f29db804785d0df58896a9ba4/Screenshot_2025-06-24_at_1.18.56_PM.png)
+
+## Collaborating with Artifacts
+
+Artifacts enable enhanced collaboration in two primary ways. 
+
+First, a Thread that has been published as an Artifact enables you to share it externally with anyone with a link. Artifacts are not editable and only show the generated title summary for each prompt within the Thread and it’s contents (not the initial prompts).
+
+The Thread owner can continue to chat with the original Thread in Endgame, and additional prompts and outputs will similarly be available in the published Artifact. 
+
+![image.png](Publishing%20&%20Artifacts%2021d0ee6f29db804785d0df58896a9ba4/35961a84-d9fe-42a2-8d01-98bc11595150.png)
+
+Second, while Threads are by default private to the user that created the Thread, once a Thread has been published as an Artifact, the Thread will now be visible in the Account Library to all Endgame users. 
+
+This allows any Endgame user to identify important Threads that are intended to be consumed by other internal stakeholders, whether it be to inform, coordinate or collaborate with one another.
+
+![image.png](Publishing%20&%20Artifacts%2021d0ee6f29db804785d0df58896a9ba4/image.png)
+
+## **💁‍♀️ Need help or have feedback?**
+
+We’d love to hear from you! You can reach us at [**support@endgame.io**](mailto:support@endgame.io).
