@@ -72,30 +72,18 @@
         "status",
         "contact"
       ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "external-links/documentation",
+        "external-links/platform",
+        "external-links/support",
+        "external-links/status"
+      ]
     }
   ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "url": "https://docs.endgame.io",
-      "icon": "book"
-    },
-    {
-      "name": "Platform",
-      "url": "https://end-p1.endgame.io/",
-      "icon": "browser"
-    },
-    {
-      "name": "Support",
-      "url": "mailto:support@endgame.io",
-      "icon": "envelope"
-    },
-    {
-      "name": "Status",
-      "url": "https://status.endgame.io",
-      "icon": "signal"
-    }
-  ],
+  "anchors": [],
   "logo": {
     "light": "/logo/logo-with-text-dark.svg",
     "dark": "/logo/logo-with-text.svg",
