@@ -1,0 +1,8 @@
+<svg width="200" height="40" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo icon placeholder - blue circle with 'E' -->
+  <circle cx="20" cy="20" r="18" fill="#008BF9"/>
+  <text x="20" y="26" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">E</text>
+  
+  <!-- Endgame text -->
+  <text x="50" y="26" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="22" font-weight="600" fill="#FFFFFF">Endgame</text>
+</svg>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Endgame Documentation",
+  "name": "Endgame",
   "colors": {
     "primary": "#008BF9",
     "light": "#33A2FA",
@@ -92,8 +92,9 @@
     }
   ],
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo_icon.avif",
+    "dark": "/logo/logo_icon.avif",
+    "href": "/"
   },
   "topbar": {
     "style": "default",

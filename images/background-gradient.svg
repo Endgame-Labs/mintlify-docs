@@ -1,42 +1,42 @@
 <svg width="2560" height="1600" viewBox="0 0 2560 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1440" height="1024" fill="#000F1D"/>
+  <rect width="2560" height="1600" fill="#000F1D"/>
   <g filter="url(#filter0_f)">
-    <ellipse cx="720" cy="512" rx="600" ry="400" fill="url(#gradient1)" opacity="0.3"/>
+    <ellipse cx="1280" cy="800" rx="900" ry="600" fill="url(#gradient1)" opacity="0.3"/>
   </g>
   <g filter="url(#filter1_f)">
-    <ellipse cx="200" cy="200" rx="350" ry="350" fill="#008BF9" opacity="0.15"/>
+    <ellipse cx="300" cy="300" rx="500" ry="500" fill="#008BF9" opacity="0.15"/>
   </g>
   <g filter="url(#filter2_f)">
-    <ellipse cx="1240" cy="824" rx="400" ry="400" fill="#33A2FA" opacity="0.1"/>
+    <ellipse cx="2200" cy="1200" rx="600" ry="600" fill="#33A2FA" opacity="0.1"/>
   </g>
   <g filter="url(#filter3_f)">
-    <ellipse cx="1000" cy="300" rx="250" ry="250" fill="#004D8F" opacity="0.2"/>
+    <ellipse cx="1800" cy="400" rx="400" ry="400" fill="#004D8F" opacity="0.2"/>
   </g>
   <defs>
-    <linearGradient id="gradient1" x1="120" y1="112" x2="1320" y2="912" gradientUnits="userSpaceOnUse">
+    <linearGradient id="gradient1" x1="380" y1="200" x2="2180" y2="1400" gradientUnits="userSpaceOnUse">
       <stop stop-color="#00182D"/>
       <stop offset="0.5" stop-color="#002748"/>
       <stop offset="1" stop-color="#000F1D"/>
     </linearGradient>
-    <filter id="filter0_f" x="-80" y="-88" width="1600" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="filter0_f" x="180" y="-100" width="2200" height="1800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="120" result="effect1_foregroundBlur"/>
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur"/>
     </filter>
-    <filter id="filter1_f" x="-250" y="-250" width="900" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="filter1_f" x="-400" y="-400" width="1400" height="1400" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur"/>
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur"/>
     </filter>
-    <filter id="filter2_f" x="640" y="224" width="1200" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="filter2_f" x="1400" y="400" width="1600" height="1600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur"/>
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur"/>
     </filter>
-    <filter id="filter3_f" x="550" y="-150" width="900" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="filter3_f" x="1200" y="-200" width="1200" height="1200" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-      <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur"/>
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur"/>
     </filter>
   </defs>
 </svg>
