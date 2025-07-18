@@ -4027,6 +4027,14 @@
       "allowedTools": [],
       "history": [
         {
+          "display": "no i am looking for the one where i was trying to tighten the guard rails in the agent instructions\n\nread the diffs to find the one where i made big changes to agnomanager's instructions method",
+          "pastedContents": {}
+        },
+        {
+          "display": "I have an old PR that's closed and not merged, but it had some useful guardrails stuff in it\n\ncan you try to find it for me and open in my browser?",
+          "pastedContents": {}
+        },
+        {
           "display": "commit my staged changes",
           "pastedContents": {}
         },
@@ -4499,20 +4507,6 @@
               "id": 1,
               "type": "text",
               "content": "Hello background! Object\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 4\nbackground.js:1 Total cookies found: 4\nbackground.js:1 Cookie details: Array(4)\nbackground.js:1 Found potential auth cookie: __session__0\nbackground.js:1 Health check response: 200 OK\nbackground.js:1 Auth check response: 404\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 4\nbackground.js:1 Total cookies found: 4\nbackground.js:1 Cookie details: Array(4)\nbackground.js:1 Found potential auth cookie: __session__0\nbackground.js:1 Health check response: 200 OK\nbackground.js:1 Auth check response: 404\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 4\nbackground.js:1 Total cookies found: 4\nbackground.js:1 Cookie details: Array(4)\nbackground.js:1 Found potential auth cookie: __session__0\nbackground.js:1 Health check response: 200 OK\nbackground.js:1 Auth check response: 404\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 4\nbackground.js:1 Total cookies found: 4\nbackground.js:1 Cookie details: Array(4)\nbackground.js:1 Found potential auth cookie: __session__0\nbackground.js:1 Health check response: 200 OK\nbackground.js:1 Auth check response: 404\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 4\nbackground.js:1 Total cookies found: 4\nbackground.js:1 Cookie details: Array(4)\nbackground.js:1 Found potential auth cookie: __session__0\nbackground.js:1 Health check response: 200 OK\nbackground.js:1 Auth check response: 404\nbackground.js:1 Final connection status: false"
-            }
-          }
-        },
-        {
-          "display": "the URLs look sticky, but browser back/forward don't change anything",
-          "pastedContents": {}
-        },
-        {
-          "display": "[Pasted text #1 +38 lines]",
-          "pastedContents": {
-            "1": {
-              "id": 1,
-              "type": "text",
-              "content": "Sample of ALL domains found: Array(0)\nbackground.js:1 127.0.0.1 cookies: 0\nbackground.js:1 URL-based cookies: 0\nbackground.js:1 Total cookies found: 0\nbackground.js:1 Cookie details: Array(0)\nbackground.js:1 No auth-related cookies found at all\nbackground.js:1 Available cookie names: Array(0)\nbackground.js:1 Attempting direct auth check without cookies...\nbackground.js:1 Direct auth check response: 404\nbackground.js:1 Direct auth check failed with status: 404\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 0\nbackground.js:1 Filtered localhost cookies from all cookies: 0\nbackground.js:1 Sample of ALL domains found: Array(0)\nbackground.js:1 127.0.0.1 cookies: 0\nbackground.js:1 URL-based cookies: 0\nbackground.js:1 Total cookies found: 0\nbackground.js:1 Cookie details: Array(0)\nbackground.js:1 No auth-related cookies found at all\nbackground.js:1 Available cookie names: Array(0)\nbackground.js:1 Attempting direct auth check without cookies...\nbackground.js:1 Direct auth check response: 404\nbackground.js:1 Direct auth check failed with status: 404\nbackground.js:1 Final connection status: false\nbackground.js:1 Checking Endgame session at: http://localhost:3000\nbackground.js:1 Localhost domain cookies: 0\nbackground.js:1 Filtered localhost cookies from all cookies: 0\nbackground.js:1 Sample of ALL domains found: Array(0)\nbackground.js:1 127.0.0.1 cookies: 0\nbackground.js:1 URL-based cookies: 0\nbackground.js:1 Total cookies found: 0\nbackground.js:1 Cookie details: Array(0)\nbackground.js:1 No auth-related cookies found at all\nbackground.js:1 Available cookie names: Array(0)\nbackground.js:1 Attempting direct auth check without cookies...\nbackground.js:1 Direct auth check response: 404\nbackground.js:1 Direct auth check failed with status: 404\nbackground.js:1 Final connection status: false"
             }
           }
         }
