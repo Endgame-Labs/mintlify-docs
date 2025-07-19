@@ -210,13 +210,18 @@ def main():
         if "INTERNAL" in full_content:
             continue
         
+        # Extract date from filename for display
+        try:
+            date = extract_date_from_filename(file_path.name)
+        except ValueError:
+            # If we can't extract date, skip this file
+            continue
+        
         # Prompt user
-        accepted, edited_title, edited_content = prompt_for_entry(title, content)
+        accepted, edited_title, edited_content = prompt_for_entry(title, content, date)
         
         if accepted:
             try:
-                date = extract_date_from_filename(file_path.name)
-                
                 # Save edited entry to changelog_entries
                 edited_entry_path = output_entries_dir / file_path.name
                 edited_full_content = f"# {edited_title}\n\n{edited_content}\n\n{links}".strip() + "\n"
