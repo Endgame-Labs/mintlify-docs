@@ -6,7 +6,7 @@
     "light": "#99D1FD",
     "dark": "#004D8F"
   },
-  "theme": "mint",
+  "theme": "willow",
   "appearance": {
     "default": "dark"
   },
@@ -109,6 +109,5 @@
     "og:site_name": "Endgame Documentation",
     "og:type": "website",
     "twitter:site": "@endgame_io"
-  },
-  "css": "/styles/custom.css"
+  }
 }
