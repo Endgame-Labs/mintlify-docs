@@ -1,1 +1,1 @@
-web: rm -f /tmp/mintlify-docs.overmind.sock && ./start.sh
+mint: cd mintlify && mint dev --port 3333
