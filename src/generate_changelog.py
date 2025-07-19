@@ -167,10 +167,10 @@ def prompt_for_entry(title: str, content: str, date: datetime) -> Tuple[bool, Op
 
 @app.command()
 def main():
-    """Generate changelog.mdx from changelog entries in internal/changelog/claude/"""
+    """Generate changelog.mdx from changelog entries in internal/changelog/candidates/"""
     
     # Setup paths
-    changelog_dir = Path("internal/changelog/claude")
+    changelog_dir = Path("internal/changelog/candidates")
     output_file = Path("mintlify/changelog.mdx")
     output_entries_dir = Path("mintlify/changelog_entries")
     rejected_dir = Path("internal/changelog/rejected")
