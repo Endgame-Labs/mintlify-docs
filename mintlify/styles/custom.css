@@ -1,0 +1,101 @@
+/* Endgame Custom Styles - Updated with correct Mintlify selectors */
+
+/* === Base Dark Theme === */
+.dark {
+  --bg-color: #000F1D;
+}
+
+.dark body {
+  background-color: var(--bg-color) !important;
+}
+
+/* === Navigation/Sidebar Styling === */
+/* Give entire sidebar the blue tint background */
+.dark #sidebar,
+.dark #sidebar-content {
+  background-color: rgba(0, 139, 249, 0.08) !important;
+}
+
+/* Remove default backgrounds from nav items */
+.dark #sidebar-group a {
+  background-color: transparent !important;
+}
+
+/* Style the currently selected nav item */
+.dark #sidebar-group a.bg-primary\/10,
+.dark #sidebar-group a[class*="bg-primary-light/10"] {
+  background-color: rgba(0, 15, 29, 0.7) !important;
+  border-left: 3px solid #99D1FD !important;
+  margin-left: -3px !important;
+  color: #99D1FD !important;
+}
+
+/* Hover state for nav items */
+.dark #sidebar-group a:hover:not(.bg-primary\/10):not([class*="bg-primary-light/10"]) {
+  background-color: rgba(0, 15, 29, 0.4) !important;
+}
+
+/* Group headers styling */
+.dark .sidebar-group-header {
+  color: #008BF9 !important;
+  opacity: 0.8;
+}
+
+/* === Background Gradient === */
+.dark body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../images/background-gradient.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* === Typography === */
+/* Test styling - remove this later */
+h1 {
+  color: #ff0000 !important;
+}
+
+/* === Icon Fixes === */
+/* Nav icons default state */
+.dark #sidebar svg {
+  color: #99D1FD !important;
+  opacity: 0.7;
+}
+
+/* Active/selected icon styling */
+.dark #sidebar a.bg-primary\/10 svg,
+.dark #sidebar a[class*="bg-primary-light/10"] svg {
+  color: #99D1FD !important;
+  opacity: 1;
+}
+
+/* Hover state for icons */
+.dark #sidebar a:hover svg {
+  color: #008BF9 !important;
+  opacity: 1;
+}
+
+/* === Main Content Area === */
+/* Ensure main content has proper background */
+.dark main {
+  background-color: transparent !important;
+}
+
+/* === Fix Search Bar === */
+.dark #search-button {
+  background-color: rgba(0, 15, 29, 0.5) !important;
+  border-color: rgba(153, 209, 253, 0.2) !important;
+}
+
+.dark #search-button:hover {
+  background-color: rgba(0, 15, 29, 0.7) !important;
+  border-color: rgba(153, 209, 253, 0.3) !important;
+}
