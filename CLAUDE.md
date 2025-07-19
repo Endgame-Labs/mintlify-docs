@@ -31,6 +31,9 @@ mint dev --port 3333
 mint update
 ```
 
+### IMPORTANT: Development Server
+**DO NOT run `mint dev` or start the development server.** The user has it running in another terminal and it auto-refreshes when files change. Simply edit files and the changes will be reflected automatically.
+
 ### Content Validation
 ```bash
 # Check for broken links in documentation
