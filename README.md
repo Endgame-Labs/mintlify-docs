@@ -1,44 +1,112 @@
-# Mintlify Starter Kit
+# Endgame Mintlify Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+This repository contains the documentation for Endgame, built using the Mintlify platform. The documentation is deployed as a "monorepo" on Mintlify, meaning all Mintlify-specific files are contained within the `/mintlify` subdirectory rather than the project root.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Project Structure
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+```
+mintlify-docs/
+├── mintlify/                 # Main documentation directory (deployed)
+│   ├── mint.json            # Mintlify configuration
+│   ├── index.mdx            # Homepage
+│   ├── *.mdx                # Documentation pages
+│   ├── features/            # Feature documentation
+│   ├── integrations/        # Integration guides
+│   ├── trust/               # Security & privacy docs
+│   ├── images/              # Image assets
+│   ├── logo/                # Logo assets
+│   └── snippets/            # Reusable content blocks
+├── internal/                 # Gitignored directory (not deployed)
+│   ├── notion_site/         # One-time snapshot of old Notion docs
+│   └── changelog/           # Auto-generated changelog data
+│       ├── input/           # Raw changelog from GitHub/Linear
+│       └── claude/          # Processed changelog entries
+├── src/                      # Python tools for changelog generation
+├── README.md                 # This file
+├── CLAUDE.md                # AI assistant instructions
+├── Makefile                 # Build automation
+├── Procfile                 # Process definitions
+└── pyproject.toml           # Python project configuration
+```
 
 ## Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+### Prerequisites
 
-```
+- Node.js version 19 or higher
+- Mintlify CLI installed globally
+
+### Installation
+
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview documentation changes locally:
+
+```bash
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+### Local Development
 
-```
+Navigate to the `/mintlify` directory and start the development server:
+
+```bash
+cd mintlify
 mint dev
 ```
 
 View your local preview at `http://localhost:3000`.
 
-## Publishing changes
+To use a custom port:
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+```bash
+mint dev --port 3333
+```
 
-## Need help?
+### Content Validation
 
-### Troubleshooting
+Check for broken links in your documentation:
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+```bash
+mint broken-links
+```
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+This command scans all documentation files for internal and external links, reporting any that are broken or unreachable.
+
+### Updating the CLI
+
+Keep the Mintlify CLI up to date:
+
+```bash
+mint update
+```
+
+## Monorepo Structure
+
+This project is deployed as a Mintlify "monorepo", which means:
+- All Mintlify documentation files are contained in the `/mintlify` subdirectory
+- The `mint.json` configuration file is located at `/mintlify/mint.json`
+- When running commands like `mint dev`, you must be in the `/mintlify` directory
+- The deployment process knows to look in this subdirectory for the documentation
+
+## Key Files
+
+- **`/mintlify/mint.json`**: Central configuration file defining site structure, navigation, theming, and metadata
+- **`/mintlify/*.mdx`**: Documentation content written in MDX (Markdown + JSX components)
+- **`/internal/`**: This directory is gitignored and not meant for deployment. Contains:
+  - Historical documentation snapshots
+  - Auto-generated changelog data from GitHub and Linear
+
+## Deployment
+
+Changes are automatically deployed to production when pushed to the main branch via the Mintlify GitHub app integration. No manual build or deployment commands are needed.
+
+## Troubleshooting
+
+- **Dev environment won't start**: Run `mint update` to ensure you have the latest CLI version
+- **404 errors**: Make sure you're running commands from the `/mintlify` directory where `mint.json` is located
+- **Broken links**: Use `mint broken-links` to identify and fix broken internal/external links
+
+## Resources
+
+- [Mintlify Documentation](https://mintlify.com/docs)
+- [Mintlify Community](https://mintlify.com/community)
+- [Endgame Platform](https://endgame.io)
