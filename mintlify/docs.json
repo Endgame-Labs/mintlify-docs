@@ -3,15 +3,13 @@
   "name": "Endgame",
   "colors": {
     "primary": "#008BF9",
-    "light": "#33A2FA",
-    "dark": "#004D8F",
-    "background": {
-      "dark": "#000F1D",
-      "light": "#FFFFFF"
-    }
+    "light": "#99D1FD",
+    "dark": "#004D8F"
   },
-  "theme": "prism",
-  "appearance": "dark",
+  "theme": "mint",
+  "appearance": {
+    "default": "dark"
+  },
   "modeToggle": {
     "default": "dark",
     "isHidden": true
@@ -30,7 +28,8 @@
   "backgroundImage": "/images/background-gradient.svg",
   "rounded": "default",
   "favicon": "/logo/favicon.png",
-  "navigation": [
+  "navigation": {
+    "pages": [
     {
       "group": "Getting Started",
       "pages": [
@@ -76,18 +75,19 @@
     {
       "group": "Resources",
       "pages": [
-        "external-links/documentation",
-        "external-links/platform",
-        "external-links/support",
-        "external-links/status"
+        "changelog",
+        "documentation",
+        "platform",
+        "support"
       ]
     }
-  ],
+    ]
+  },
   "anchors": [],
   "logo": {
     "light": "/logo/logo-with-text-dark.svg",
     "dark": "/logo/logo-with-text.svg",
-    "href": "/"
+    "href": "https://endgame.io"
   },
   "topbar": {
     "style": "default",
@@ -109,5 +109,6 @@
     "og:site_name": "Endgame Documentation",
     "og:type": "website",
     "twitter:site": "@endgame_io"
-  }
+  },
+  "css": "/styles/custom.css"
 }
