@@ -134,13 +134,14 @@ rss: true
     return frontmatter, updates_by_date
 
 
-def prompt_for_entry(title: str, content: str) -> Tuple[bool, Optional[str], Optional[str]]:
+def prompt_for_entry(title: str, content: str, date: datetime) -> Tuple[bool, Optional[str], Optional[str]]:
     """Prompt user to accept, reject, or edit an entry.
     
     Returns:
         (accepted, edited_title, edited_content)
     """
     typer.echo("\n" + "="*60)
+    typer.echo(f"Date: {date.strftime('%B %-d, %Y')}")
     typer.echo(f"Title: {title}")
     typer.echo(f"Content:\n{content}")
     typer.echo("="*60)
@@ -194,9 +195,14 @@ def main():
         if (output_entries_dir / file_path.name).exists():
             continue
             
-        # Skip if already rejected
-        if (rejected_dir / file_path.name).exists():
-            continue
+        # Skip if already rejected (but delete if 0 bytes)
+        rejected_path = rejected_dir / file_path.name
+        if rejected_path.exists():
+            if rejected_path.stat().st_size == 0:
+                rejected_path.unlink()
+                typer.echo(f"🗑️  Deleted 0-byte rejected file: {file_path.name}")
+            else:
+                continue
             
         title, content, links, full_content = read_changelog_entry(file_path)
         
