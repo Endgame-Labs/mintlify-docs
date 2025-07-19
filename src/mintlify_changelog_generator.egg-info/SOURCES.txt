@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/mintlify_changelog_generator.egg-info/PKG-INFO
+src/mintlify_changelog_generator.egg-info/SOURCES.txt
+src/mintlify_changelog_generator.egg-info/dependency_links.txt
+src/mintlify_changelog_generator.egg-info/requires.txt
+src/mintlify_changelog_generator.egg-info/top_level.txt

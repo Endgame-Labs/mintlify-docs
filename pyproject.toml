@@ -1,0 +1,7 @@
+[project]
+name = "mintlify-changelog-generator"
+version = "0.1.0"
+dependencies = [
+    "typer[all]>=0.9.0",
+    "python-dateutil>=2.8.0",
+]
