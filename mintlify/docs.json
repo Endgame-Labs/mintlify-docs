@@ -25,7 +25,6 @@
     }
   },
   "layout": "sidenav",
-  "backgroundImage": "/images/background-gradient.svg",
   "rounded": "default",
   "favicon": "/logo/favicon.png",
   "navigation": {
