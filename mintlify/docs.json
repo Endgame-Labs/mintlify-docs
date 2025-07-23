@@ -33,7 +33,6 @@
       "group": "Getting Started",
       "pages": [
         "index",
-        "getting-started",
         "core-concepts"
       ]
     },
@@ -55,6 +54,7 @@
     {
       "group": "Integrations",
       "pages": [
+        "integrations/getting-started",
         "integrations/salesforce",
         "integrations/gong",
         "integrations/slack",
