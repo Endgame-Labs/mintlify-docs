@@ -30,15 +30,15 @@
   "navigation": {
     "pages": [
     {
-      "group": "Getting Started",
+      "group": "Index",
       "pages": [
-        "index",
-        "core-concepts"
+        "index"
       ]
     },
     {
       "group": "Using Endgame",
       "pages": [
+        "core-concepts",
         "navigating-endgame",
         "endgame-chat-101",
         "endgame-chat-201"
