@@ -54,7 +54,7 @@
     {
       "group": "Integrations",
       "pages": [
-        "integrations/getting-started",
+        "integrations/initial-connection-to-endgame",
         "integrations/salesforce",
         "integrations/gong",
         "integrations/slack",
