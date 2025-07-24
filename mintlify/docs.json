@@ -74,10 +74,7 @@
     {
       "group": "Resources",
       "pages": [
-        "changelog",
-        "changelog-consolidated",
         "platform",
-        "support",
         "homepage"
       ]
     }
