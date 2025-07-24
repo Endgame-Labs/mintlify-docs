@@ -67,6 +67,7 @@
       "pages": [
         "trust/security",
         "trust/privacy",
+        "trust/supported-logins",
         "status",
         "contact"
       ]
