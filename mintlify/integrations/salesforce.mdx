@@ -1,7 +1,7 @@
 ---
-title: Salesforce Integration
-description: Seamless integration with Salesforce for real-time account data
-icon: salesforce
+title: "Salesforce Integration"
+description: "Seamless integration with Salesforce for real-time account data"
+icon: "salesforce"
 ---
 
 ## Authentication
@@ -16,7 +16,7 @@ Endgame polls for the query job to complete with incremental backoffs starting a
 
 Endgame also downloads the results using a page size of 25,000, downloading those pages in parallel.
 
-Data from Salesforce is fetched using the credentials of the first user to log into Endgame. If needed, these credentials can be updated to a different user by sending a request to support@endgame.io.
+Data from Salesforce is fetched using the credentials of the first user to log into Endgame. If needed, these credentials can be updated to a different user by sending a request to [support@endgame.io](mailto:support@endgame.io).
 
 <Note>
   Only accounts the integration user has permission to in Salesforce will be run through any AI systems. The integration user is the one you first log in with after consultation with Endgame.
@@ -36,7 +36,6 @@ Endgame ingests a number of Salesforce objects by default, but please note that 
     - Task
     - Event
   </Card>
-  
   <Card>
     - RecordType
     - OpportunityLineItem
@@ -47,3 +46,35 @@ Endgame ingests a number of Salesforce objects by default, but please note that 
     - OpportunityHistory
   </Card>
 </CardGroup>
+
+## Important fields
+
+Endgame allows administrators to tell Endgame specific fields to focus on, as Salesforce instances often have hundreds of fields and only a handful truly matter to help your colleagues deeply understand their accounts.
+
+<Steps>
+  <Step title="Go to the configuration page">
+    Navigate to https://end-p1.endgame.io/configuration
+  </Step>
+  <Step title="Focus on Salesforce">
+    Click "Manage" in the Salesforce Integration within the General tab.
+
+    ![Screenshot 2025-07-23 at 8.38.05 PM.png](/mintlify/images/Screenshot2025-07-23at8.38.05PM.png)
+  </Step>
+  <Step title="Select an object">
+    Select the object that contains fields you deem important from an Endgame perspective.
+
+    ![Screenshot 2025-07-23 at 8.40.37 PM.png](/mintlify/images/Screenshot2025-07-23at8.40.37PM.png)
+  </Step>
+  <Step title="Mark select fields as important">
+    Search for and mark "Important" the fields you want Endgame to focus on. Then, click "Submit Changes". It will take a few minutes for your changes to percolate.
+
+    <Warning>
+      You can only select up to 50 fields per object.
+    </Warning>
+    ![Screenshot 2025-07-23 at 8.42.36 PM.png](/mintlify/images/Screenshot2025-07-23at8.42.36PM.png)
+
+    <Warning>
+      
+    </Warning>
+  </Step>
+</Steps>
