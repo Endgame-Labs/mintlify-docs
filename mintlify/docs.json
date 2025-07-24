@@ -106,5 +106,11 @@
     "og:site_name": "Endgame Documentation",
     "og:type": "website",
     "twitter:site": "@endgame_io"
+  },
+  "redirects": [
+  {
+    "source": "/1a70ee6f29db802582b7dc368826abdd",
+    "destination": "/integrations/zoom"
   }
+]
 }
