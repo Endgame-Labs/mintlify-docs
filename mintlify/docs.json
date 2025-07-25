@@ -117,6 +117,10 @@
   {
     "source": "/1a70ee6f29db802582b7dc368826abdd",
     "destination": "/integrations/zoom"
+  },
+  {
+    "source": "/c2c50d44b416483f9b46e7b038559965",
+    "destination": "/contact"
   }
 ]
 }
