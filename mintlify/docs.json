@@ -59,6 +59,7 @@
         "integrations/gong",
         "integrations/slack",
         "integrations/zoom",
+        "integrations/supported-logins",
         "integrations/google-logins"
       ]
     },
@@ -67,7 +68,6 @@
       "pages": [
         "trust/security",
         "trust/privacy",
-        "trust/supported-logins",
         "status",
         "contact"
       ]
