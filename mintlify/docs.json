@@ -59,9 +59,14 @@
         "integrations/gong",
         "integrations/slack",
         "integrations/zoom",
-        "integrations/supported-logins",
-        "integrations/google-logins"
       ]
+    },
+    {
+      "group": "Accessing Endgame",
+      "pages": [
+        "login-methods",
+        "google-logins"
+       ]
     },
     {
       "group": "Trust & Support",
