@@ -58,7 +58,7 @@
         "integrations/salesforce",
         "integrations/gong",
         "integrations/slack",
-        "integrations/zoom",
+        "integrations/zoom"
       ]
     },
     {
