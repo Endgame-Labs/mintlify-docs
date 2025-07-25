@@ -65,7 +65,7 @@
       "group": "Accessing Endgame",
       "pages": [
         "login-methods",
-        "trust/google-logins"
+        "integrations/google-logins"
       ]
     },
     {
