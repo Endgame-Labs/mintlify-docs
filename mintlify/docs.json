@@ -52,6 +52,13 @@
       ]
     },
     {
+      "group": "Accessing Endgame",
+      "pages": [
+        "login-methods",
+        "integrations/google-logins"
+      ]
+    },
+    {
       "group": "Integrations",
       "pages": [
         "integrations/initial-connection-to-endgame",
@@ -59,13 +66,6 @@
         "integrations/gong",
         "integrations/slack",
         "integrations/zoom"
-      ]
-    },
-    {
-      "group": "Accessing Endgame",
-      "pages": [
-        "login-methods",
-        "integrations/google-logins"
       ]
     },
     {
@@ -103,7 +103,7 @@
     "cta": {
       "type": "button",
       "label": "Platform",
-      "url": "https://endgame.io",
+      "url": "https://www.endgame.io",
       "arrow": true,
       "target": "_blank"
     }
@@ -117,10 +117,6 @@
   {
     "source": "/1a70ee6f29db802582b7dc368826abdd",
     "destination": "/integrations/zoom"
-  },
-  {
-    "source": "/c2c50d44b416483f9b46e7b038559965",
-    "destination": "/contact"
   }
 ]
 }
