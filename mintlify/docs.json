@@ -71,6 +71,7 @@
     {
       "group": "Trust & Support",
       "pages": [
+        "vdp",
         "trust/security",
         "trust/privacy",
         "status",
