@@ -59,13 +59,24 @@
       ]
     },
     {
-      "group": "Integrations",
+      "group": "Admin Guides",
       "pages": [
-        "integrations/initial-connection-to-endgame",
-        "integrations/salesforce",
-        "integrations/gong",
-        "integrations/slack",
-        "integrations/zoom"
+        {
+          "group": "Integrations",
+          "pages": [
+          "integrations/initial-connection-to-endgame",
+          "integrations/salesforce",
+          "integrations/gong",
+          "integrations/slack",
+          "integrations/zoom"
+          ]
+        }
+        {
+          "group": "Templates",
+          "pages": [
+            "templates/create-manage-templates"
+          ]
+        }
       ]
     },
     {
