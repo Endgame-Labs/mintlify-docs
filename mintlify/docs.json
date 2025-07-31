@@ -70,7 +70,7 @@
           "integrations/slack",
           "integrations/zoom"
           ]
-        }
+        },
         {
           "group": "Templates",
           "pages": [
