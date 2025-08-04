@@ -74,7 +74,9 @@
         {
           "group": "Templates",
           "pages": [
-            "templates/create-manage-templates"
+            "templates/create-manage-templates",
+            "templates/templates-101",
+            "templates/templates-201"
           ]
         }
       ]

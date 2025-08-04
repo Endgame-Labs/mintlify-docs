@@ -1,6 +1,7 @@
 ---
-title: "Templates 101: The Admin's Guide to Getting Started"
-description: "tbd"
+title: "Templates 101: the admin's guide to getting started"
+description: "Use this guide to help you start writing templates for your team"
+icon: "text"
 ---
 
 Endgame unifies your sales data and makes it instantly accessible through AI-powered chat. But when every rep asks questions differently, you get different answers—risking inconsistent execution when it matters most. Templates solve this by turning your best practices into repeatable, AI-enhanced workflows.
@@ -15,33 +16,33 @@ Think of templates as codifying your team's processes, similar to existing templ
 
 **Pre-call research brief**
 
-```
+```markdown expandable
 Give me a comprehensive briefing for my upcoming call with [Company Name]. Include their recent business initiatives, key stakeholders I've engaged with, competitive landscape, and any risks or opportunities from our past interactions. Pull from Salesforce, Gong, and LinkedIn.
 ```
 
 **Deal inspection**
 
-```
+```markdown expandable
 Analyze [Opportunity Name] and provide a comprehensive health check including: current stage vs. time in stage, engagement level of all stakeholders, completeness of MEDDIC criteria, recent activity from Gong and email, competitive threats, and red flags. Compare against similar won deals and highlight any gaps.
 ```
 
 **Customer health check**
 
-```
+```markdown expandable
 Analyze [Customer Name]'s health by reviewing: recent email and call patterns from our CRM, internal Slack discussions about this account, executive engagement level, external news or announcements about their company, and contract renewal date. Flag any concerning trends and suggest proactive outreach strategies.
 ```
 
-Notice how these templates are just prompts—but they're _consistent_ prompts that ensure everyone gets comprehensive, actionable information.
+Notice how these templates are just prompts—but they're consistent prompts that ensure everyone gets comprehensive, actionable information.
 
 ### Add structure when format matters
 
 While simple prompts work for many use cases, structured templates ensure consistency for important or more complex outputs.
 
-**Basic markdown structure: headers and bullets: he**
+**Basic markdown structure: headers and bullets**
 
 Use simple markdown to organize information with headers and bullet lists:
 
-```
+```markdown expandable
 Template: Quarterly Business Review Prep
 
 # Q4 Business Review: [Customer Name]
@@ -65,7 +66,7 @@ Based on the above analysis, what are 3-5 strategic recommendations for next qua
 
 When comparing data or showing multiple items, tables help:
 
-```
+```markdown expandable
 Template: Competitive Deal Analysis
 
 # Competitive Analysis: [Opportunity Name] vs [Competitor]
@@ -80,28 +81,6 @@ Template: Competitive Deal Analysis
 ## Win Strategy
 Based on similar competitive wins, focus on: [List key differentiators]
 ```
-
-### Formatting Best Practices
-
-**Keep it simple**
-
-- Use headers to create clear sections
-- Bold important terms or metrics
-- Use bullet points for lists
-- Add line breaks for readability
-
-**Be consistent**
-
-- If you use 🟢🟡🔴 for status, use it everywhere
-- Stick to one date format throughout
-- Use the same header hierarchy across templates
-
-**Design for scanning**
-
-- Put most critical info at the top
-- Use short, clear section titles
-- Include white space between sections
-- Highlight calls-to-action
 
 ### When to use simple vs. structured templates
 
@@ -119,73 +98,6 @@ Based on similar competitive wins, focus on: [List key differentiators]
 - You're creating customer-facing deliverables
 - Visual consistency improves comprehension and trust
 
-## Planning the templates you need for your org: a framework
-
-### Planning framework
-
-It can be easy to get overwhelmed with templates. Before creating your first template, map out where templates can have the most impact. We recommend thinking along two dimensions:
-
-**Sales process stage** (Horizontal Axis)
-
-1. **Research & preparation**: Pre-call research, account planning, initial prospecting
-2. **Active opportunity**: Discovery calls, proposal development, negotiation prep
-3. **Post-sale & learning**: Implementation planning, QBRs, churn reviews, handoffs
-
-**Audience** (Vertical Axis)
-
-- **Internal**: team meetings, 1:1s between managers and reps
-- **External**: business cases, emails, presentations for your customers
-
-This framework helps you identify needs systematically. For example, if deals stall during negotiation, you might need an "Internal Negotiation Strategy" template (Active Opportunity \+ Internal).
-
-![Template Framework Visual Sv](/mintlify/images/template-framework-visual.svg)
-
-### Minimalism: 5-10 templates might be all you need
-
-Most successful teams need just 5-10 templates to transform their sales execution. More than that can become overwhelming and reduces adoption. Focus on templates that:
-
-- Address your most frequent, time-consuming tasks
-- Ensure consistency in critical customer interactions
-- Capture institutional knowledge that typically lives in top performers' heads
-- Support key moments in your sales process
-
-## Creating your first templates
-
-### Your first 5 templates: a starter pack
-
-Based on dozens of customer implementations, these five templates deliver immediate impact:
-
-1. **Deal inspection**
-
-   ```
-   
-   
-   ```
-2. **Call prep**
-
-   ```
-   
-   
-   ```
-3. **Handoff**
-
-   ```
-   xxx
-   
-   ```
-4. **xxx**
-
-   ```
-   yyy
-   
-   ```
-5. **zzz**
-
-   ```
-   aaa
-   
-   ```
-
 ## Best practices for template success
 
 ### Writing effective templates
@@ -195,6 +107,7 @@ Based on dozens of customer implementations, these five templates deliver immedi
 - What decision are they trying to make?
 - What information do they need to be successful?
 - How can you save them time while improving quality?
+- What tone and style will they prefer?
 
 **Be specific but flexible**
 
@@ -202,31 +115,12 @@ Based on dozens of customer implementations, these five templates deliver immedi
 - Reference your company's methodologies and Rules
 - Allow for contextual variations
 
-**Test with real scenarios**
+**Design for scanning**
 
-- Run templates against 3-5 different accounts
-- Check if outputs are actionable
-- Verify data accuracy and completeness
-- Ask a handful of colleagues for feedback
-
-### Common pitfalls to avoid
-
-1. **Over-engineering from the start**
-   - Begin with simple prompts
-   - Add structure only when needed
-   - Let usage patterns guide evolution
-2. **Creating too many templates**
-   - Stick to 5-10 high-impact templates
-   - Resist the urge to template everything
-   - Quality over quantity always wins
-3. **Ignoring feedback**
-   - Force usage through meetings and rituals
-   - Observe/ask for what's missing
-   - Iterate based on actual needs
-4. **Inconsistent formatting**
-   - Pick a style and stick to it
-   - Use the same status indicators throughout
-   - Keep section names consistent
+- Put most critical info at the top
+- Use short, clear section titles
+- Include white space between sections
+- Use headers to create clear sections
 
 ## Conclusion: small changes, big impact
 
