@@ -8,11 +8,11 @@ icon: "compass"
 
 Endgame enables you and anyone at your company to deeply understand your customers and prospects. Consider Endgame a single sheet of music for the entire team to use for sales and account management use cases such as company research, meeting prep, account planning, deal review, handoffs, and more.
 
-At its heart, Endgame is about going deep on a given account. After you [login](https://end-p1.endgame.io/login) with your Salesforce credentials, you'll be presented with Endgame's [home page](https://end-p1.endgame.io/). This page is intended to get you to the account you want to dig into as quickly as possible.
+After you [login](https://end-p1.endgame.io/login) with your Salesforce credentials, you'll be presented with Endgame's [home page](https://end-p1.endgame.io/). On the home page you can query across multiple accounts. Here you can explore prompts that cover the entire breadth of the accounts in your organization. Ask questions that target your book of accounts, explore organizational trends, provide insights about your team’s sales strategies, and more.
 
 <Frame>
   <img
-    src="/images/Screenshot_2025-05-16_at_8.52.38_AM.png"
+    src="/mintlify/images/home-page-8-27-25.png"
     alt="Endgame Home Page"
     className="rounded-lg"
   />
@@ -20,7 +20,7 @@ At its heart, Endgame is about going deep on a given account. After you [login](
 
 ## Getting to an account: Direct search
 
-Type in the name of the company or person you want to research in the home page search box. Doing so will pull up accounts and people to select from — simply click the appropriate account and you'll be taken to the Account Detail page (or Person Thread).
+Open search by clicking on the search button in the home page or the search option in the left-hand navigation. Type in the name of the company or person you want to research. Doing so will pull up accounts and people to select from — simply click the appropriate account and you'll be taken to the Account Detail page (or open a Person Thread).
 
 <Frame>
   <img
@@ -44,67 +44,36 @@ Alternatively, navigate to the [Account List](https://end-p1.endgame.io/accounts
 
 <Frame caption="Example: direct search">
   <img
-    src="/images/Screenshot_2025-05-16_at_8.54.20_AM.png"
+    src="/mintlify/images/account-list-8-27-25.png"
     alt="Account List View"
-    className="rounded-lg"
-  />
-</Frame>
-
-### Filtering by ownership
-
-Clicking the people icon at the top right of the list will provide a menu with a few mechanisms for filtering with ownership in mind.
-
-You can combine ownership filters with quick filters:
-
-- Filter to "my accounts", which looks for accounts in which you are the Account Owner in the default Salesforce "Account Owner" field in related Salesforce Account records.
-- Filter to accounts owned by any user in Salesforce by searching for their name.
-- Filter to accounts where you, or the selected user, has "any role"—this will take into account custom ownership fields, typically used for Sales Engineers, Customer Success Managers, Account Managers, SDRs, BDRs, etc.
-- Filter to accounts owned by your team, which relies on the [manager field for users](https://help.salesforce.com/s/articleView?id=ind.tpm_admin_task_manager_for_payments.htm&type=5) in Salesforce.
-
-<Frame caption="Example: filtering accounts by ownership">
-  <img
-    src="/images/Screenshot_2025-05-16_at_8.58.41_AM.png"
-    alt="Ownership filters"
-    width="400"
-    className="rounded-lg"
-  />
-</Frame>
-
-<br />
-
-<Frame caption="Example: filtering accounts by user involvement">
-  <img
-    src="/images/Screenshot_2025-05-16_at_9.02.41_AM.png"
-    alt="Filter options"
-    width="400"
     className="rounded-lg"
   />
 </Frame>
 
 ### Quick filters
 
-The top left Accounts dropdown allows you to look at All Accounts, Lost Deals, and Open Opportunities. You can also quickly filter down to your Favorite accounts or sort by recency of interaction.
+You can quickly filter down your accounts by clicking on the filter options in the top left-hand side of the account grid.
 
-Accounts can be designated as Favorites directly from the Account List by using the star icon next to the logo, or from any Account detail page using the star icon at the top right corner.
+### Filtering by ownership
 
-You can combine these filters with ownership filters.
+Clicking on the second filter option, you will see a list of the salesforce users associated with your organization. You can filter your accounts by ownership by selecting a user from this list. 
 
-<Frame>
+<Frame caption="Example: filtering accounts by ownership">
   <img
-    src="/images/Screenshot_2025-05-16_at_9.03.31_AM.png"
-    alt="Quick filters dropdown"
-    width="450"
+    src="/mintlify/images/owner-filter-8-27-25.png"
+    alt="Ownership filter"
+    width="400"
     className="rounded-lg"
   />
 </Frame>
 
 ### Sorting
 
-There are a few pre-built ways to sort the list: by Account Name, Opportunity Size, Opportunity Close Date, Opportunity Stage, and Opportunity Type. This dropdown menu can be found at the top right of the Account List.
+There are a few pre-built ways to sort the list: by Last Viewed, Last Interaction, Account Name, Opportunity Size, Opportunity Close Date, Opportunity Stage, and Opportunity Type. This dropdown menu can be found at the top right of the Account List.
 
 <Frame>
   <img
-    src="/images/db6e5cde-a06f-49a7-bdfd-3781efe06af2.png"
+    src="/mintlify/images/account-list-sort-8-27-25.png"
     alt="Sorting options"
     width="450"
     className="rounded-lg"
@@ -119,7 +88,7 @@ Once you get to an account, you'll be presented with the Account Detail page. Th
 
 <Frame>
   <img
-    src="/images/Screenshot_2025-05-16_at_9.12.01_AM.png"
+    src="/mintlify/images/account-detail-8-27-25.png"
     alt="Account Detail Page"
     className="rounded-lg"
   />
@@ -129,16 +98,16 @@ Once you get to an account, you'll be presented with the Account Detail page. Th
 
 <Frame>
   <img
-    src="/images/Screenshot_2025-05-16_at_9.13.24_AM.png"
+    src="/mintlify/images/account-chat-8-27-25.png"
     alt="Chat interface"
     className="rounded-lg"
   />
 </Frame>
 
-Think of this as a ChatGPT that's deeply tuned to your business model and sales strategy with access to your internal CRM & call data. The questions you can ask can thus be quite detailed and specific. Here's a [quick guide on prompts](/endgame-chat-101) to help you get started.
+Think of this as a ChatGPT that's deeply tuned to your business model and sales strategy with access to your internal CRM & call data. The questions you can ask can thus be quite detailed and specific. Here's a [quick guide on prompts](/endgame-chat-101) and [templates](/features/templates) to help you get started.
 
 <Tip>
-  Explore different angles of questions and account exploration by clicking from the rotating set of questions we've provided to help get you started
+  Explore different angles of questions and account inspection by clicking from the rotating set templates from your organization's template libary that appear below the chat input. 
 </Tip>
 
 When you ask a question, you'll be taken to a new page that represents the Thread of your chat conversation. You can ask multiple questions in that Thread, and you can always get back to it from the Library.
@@ -149,7 +118,7 @@ The timeline captures news, people changes, financial highlights such as earning
 
 <Frame>
   <img
-    src="/images/Screenshot_2025-05-16_at_11.06.18_AM.png"
+    src="/mintlify/images/timeline-8-27-25.png"
     alt="Timeline view"
     className="rounded-lg"
   />
