@@ -29,75 +29,62 @@
   "favicon": "/logo/favicon.png",
   "navigation": {
     "pages": [
-    {
-      "group": "Index",
-      "pages": [
-        "index"
-      ]
-    },
-    {
-      "group": "Using Endgame",
-      "pages": [
-        "core-concepts",
-        "navigating-endgame",
-        "endgame-chat-101",
-        "endgame-chat-201"
-      ]
-    },
-    {
-      "group": "Features",
-      "pages": [
-        "features/templates",
-        "features/publishing-artifacts"
-      ]
-    },
-    {
-      "group": "Accessing Endgame",
-      "pages": [
-        "login-methods",
-        "integrations/google-logins"
-      ]
-    },
-    {
-      "group": "Admin Guides",
-      "pages": [
-        {
-          "group": "Integrations",
-          "pages": [
-          "integrations/initial-connection-to-endgame",
-          "integrations/salesforce",
-          "integrations/gong",
-          "integrations/slack",
-          "integrations/zoom"
-          ]
-        },
-        {
-          "group": "Templates",
-          "pages": [
-            "templates/create-manage-templates",
-            "templates/templates-101",
-            "templates/templates-201"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Trust & Support",
-      "pages": [
-        "vdp",
-        "trust/security",
-        "trust/privacy",
-        "status",
-        "contact"
-      ]
-    },
-    {
-      "group": "Resources",
-      "pages": [
-        "platform",
-        "homepage"
-      ]
-    }
+      {
+        "group": "Index",
+        "pages": ["index"]
+      },
+      {
+        "group": "Using Endgame",
+        "pages": [
+          "core-concepts",
+          "navigating-endgame",
+          "endgame-chat-101",
+          "endgame-chat-201"
+        ]
+      },
+      {
+        "group": "Features",
+        "pages": ["features/templates", "features/publishing-artifacts"]
+      },
+      {
+        "group": "Accessing Endgame",
+        "pages": ["login-methods", "integrations/google-logins"]
+      },
+      {
+        "group": "Admin Guides",
+        "pages": [
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/initial-connection-to-endgame",
+              "integrations/salesforce",
+              "integrations/gong",
+              "integrations/slack",
+              "integrations/zoom"
+            ]
+          },
+          {
+            "group": "Templates",
+            "pages": [
+              "templates/create-manage-templates",
+              "templates/templates-101",
+              "templates/templates-201"
+            ]
+          },
+          {
+            "group": "Knowledge",
+            "pages": ["knowledge/file-upload"]
+          }
+        ]
+      },
+      {
+        "group": "Trust & Support",
+        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
+      },
+      {
+        "group": "Resources",
+        "pages": ["platform", "homepage"]
+      }
     ]
   },
   "anchors": [],
@@ -128,9 +115,9 @@
     "twitter:site": "@endgame_io"
   },
   "redirects": [
-  {
-    "source": "/1a70ee6f29db802582b7dc368826abdd",
-    "destination": "/integrations/zoom"
-  }
-]
+    {
+      "source": "/1a70ee6f29db802582b7dc368826abdd",
+      "destination": "/integrations/zoom"
+    }
+  ]
 }
