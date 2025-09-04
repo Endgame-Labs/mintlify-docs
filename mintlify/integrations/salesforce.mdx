@@ -8,6 +8,14 @@ icon: "salesforce"
 
 Endgame authenticates users via Salesforce OAuth. This allows for a seamless and secure user experience by leveraging Salesforce's robust authentication framework.
 
+## Connected App Approval
+
+<Warning>
+  Approving a Connected App in Salesforce requires the [Customize Application AND either the Modify All Data OR Manage Connected Apps](https://help.salesforce.com/s/articleView?id=005132365&type=1) permissions.
+</Warning>
+
+Salesforce requires an approval process for Connected Apps, which needs to be completed before Endgame can receive data. After going through the initial OAuth handshake, navigate to Setup -\> Connected Apps -\> Connected Apps OAuth Usage and click "Install" next to the "EndgameLabs2" app.
+
 ## Data ingestion
 
 Endgame leverages the Bulk API 2.0 fetch data from Salesforce on an hourly basis—which means integration is generally immaterial when it comes to API limits. We ingest the objects outlined below by default—but it's also possible to explicitly define additional objects as needed. After the initial sync, we constrain subsequent requests to records that have been updated (as determined by SystemModStamp).
