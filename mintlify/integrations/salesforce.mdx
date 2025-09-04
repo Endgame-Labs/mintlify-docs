@@ -16,6 +16,15 @@ Endgame authenticates users via Salesforce OAuth. This allows for a seamless and
 
 Salesforce requires an approval process for Connected Apps, which needs to be completed before Endgame can receive data. After going through the initial OAuth handshake, navigate to Setup -\> Connected Apps -\> Connected Apps OAuth Usage and click "Install" next to the "EndgameLabs2" app.
 
+## (Optional) API Integration User
+
+Endgame accesses data using the Bulk API 2.0 APIs, so the initial connection can be done with a dedicated API Integration user.  In salesforce user creation, select:
+
+- **User License**: Salesforce Integration
+- **Profile**: Minimum Access - API Only Integrations
+
+Use the integration user for the initial connection to Endgame.
+
 ## Data ingestion
 
 Endgame leverages the Bulk API 2.0 fetch data from Salesforce on an hourly basis—which means integration is generally immaterial when it comes to API limits. We ingest the objects outlined below by default—but it's also possible to explicitly define additional objects as needed. After the initial sync, we constrain subsequent requests to records that have been updated (as determined by SystemModStamp).
