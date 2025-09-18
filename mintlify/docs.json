@@ -53,6 +53,7 @@
       {
         "group": "Admin Guides",
         "pages": [
+          "admin-getting-started"
           {
             "group": "Integrations",
             "pages": [
@@ -60,7 +61,8 @@
               "integrations/salesforce",
               "integrations/gong",
               "integrations/slack",
-              "integrations/zoom"
+              "integrations/zoom",
+              "integrations/salesforce-essentials-for-admins"
             ]
           },
           {
@@ -68,12 +70,13 @@
             "pages": [
               "templates/create-manage-templates",
               "templates/templates-101",
-              "templates/templates-201"
+              "templates/templates-201",
+              "templates/templates-301"
             ]
           },
           {
             "group": "Knowledge",
-            "pages": ["knowledge/file-upload"]
+            "pages": ["knowledge/file-upload","knowledge/knowledge-basics-for-admins"]
           }
         ]
       },
