@@ -53,7 +53,7 @@
       {
         "group": "Admin Guides",
         "pages": [
-          "admin-getting-started"
+          "admin-getting-started",
           {
             "group": "Integrations",
             "pages": [
