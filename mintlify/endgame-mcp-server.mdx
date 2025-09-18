@@ -1,0 +1,99 @@
+---
+title: 'Endgame MCP Server'
+description: 'Connect Endgame to AI coding assistants like Claude Desktop using the Model Context Protocol'
+---
+
+## What is the Endgame MCP Server?
+
+The Endgame MCP (Model Context Protocol) Server allows AI coding assistants like Claude Desktop to directly communicate with Endgame. Once connected, you can prompt Endgame to get insights, search conversations, and access customer information without leaving your AI assistant.
+
+Think of it as giving your AI assistant the ability to "Ask Endgame" questions, just like starting a new thread in the Endgame platform.
+
+## What You Can Do
+
+With the Endgame MCP Server connected to Claude Desktop, you can:
+
+- **Ask about accounts**: "Ask Endgame what the big accounts are"
+- **Get customer insights**: "Ask Endgame about recent customer feedback on pricing"
+- **Search conversations**: "Ask Endgame for enterprise deal insights"
+- **Query any information**: "Ask Endgame what challenges customers are facing"
+
+The MCP server essentially gives your AI assistant a direct line to Endgame's knowledge base.
+
+## Getting Started
+
+### Step 1: Get Your API Key
+
+1. Log in to Endgame
+2. Navigate to **Settings** → **API Keys**
+3. Create a new API key
+4. Copy and save your token securely (you won't be able to see it again!)
+
+> **Note**: You need admin access to create API keys.
+
+### Step 2: Configure Claude Desktop
+
+1. Open Claude Desktop
+2. Click your name (bottom left) → **Settings** → **Developer** → **Edit Config**
+3. Add this configuration, replacing `<YOUR_API_TOKEN_HERE>` with your actual token:
+
+```json
+{
+  "mcpServers": {
+    "endgame": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://your-org.endgame.io/api/bridges/{orgId}/mcp",
+        "--header",
+        "Authorization: Bearer ${AUTH_TOKEN}"
+      ],
+      "env": {
+        "AUTH_TOKEN": "<YOUR_API_TOKEN_HERE>"
+      }
+    }
+  }
+}
+```
+
+4. Replace `your-org` and `{orgId}` with your actual organization details
+5. Restart Claude Desktop
+
+Once configured, you'll see "endgame" appear in your Claude Desktop settings, confirming the connection is active.
+
+## How to Use It
+
+Simply ask Claude to "Ask Endgame" followed by your question:
+
+- "Ask Endgame what our top enterprise accounts are focused on"
+- "Ask Endgame about recent pricing objections"
+- "Ask Endgame for customer feedback from the last quarter"
+- "Ask Endgame what competitors are being mentioned"
+
+Claude will use the `prompt-endgame` tool to create a thread in Endgame and return the response directly in your conversation.
+
+## Important Notes
+
+- **Response Time**: Complex queries can take 4-6 minutes to complete
+- **Rate Limits**: Each API token has a daily usage limit
+- **Security**: Keep your API token secure - anyone with the token can access your Endgame data
+
+## Troubleshooting
+
+**MCP server not appearing in Claude Desktop?**
+- Verify your API token is correct
+- Check the endpoint URL matches your organization
+- Make sure you restarted Claude Desktop
+
+**Getting authentication errors?**
+- Your API token may be invalid or expired
+- Create a new token in Settings → API Keys
+
+**Hitting rate limits?**
+- You've exceeded your daily limit
+- Wait until tomorrow or contact your administrator
+
+## Need Help?
+
+For issues or questions about the Endgame MCP Server, contact your Endgame administrator or reach out to support@endgame.io.
