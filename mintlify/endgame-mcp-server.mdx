@@ -28,6 +28,7 @@ The MCP server essentially gives your AI assistant a direct line to Endgame's kn
 2. Navigate to **Settings** → **API Keys**
 3. Create a new API key
 4. Copy and save your token securely (you won't be able to see it again!)
+5. Take note of your org ID (a number starting with '6' at the top of the **API Keys** page)
 
 > **Note**: You need admin access to create API keys.
 
@@ -45,7 +46,7 @@ The MCP server essentially gives your AI assistant a direct line to Endgame's kn
       "args": [
         "-y",
         "mcp-remote",
-        "https://app.endgame.io/api/bridges/{orgId}/mcp",
+        "https://app.endgame.io/api/bridges/<YOUR_ENDGAME_ORG_ID_HERE>/mcp",
         "--header",
         "Authorization: Bearer ${AUTH_TOKEN}"
       ],
@@ -56,8 +57,7 @@ The MCP server essentially gives your AI assistant a direct line to Endgame's kn
   }
 }
 ```
-
-4. Replace `your-org` and `{orgId}` with your actual organization details
+4. Also replace `<YOUR_ENDGAME_ORG_ID_HERE>` with your actual organization ID.
 5. Restart Claude Desktop
 
 Once configured, you'll see "endgame" appear in your Claude Desktop settings, confirming the connection is active.
