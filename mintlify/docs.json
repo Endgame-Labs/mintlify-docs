@@ -86,7 +86,7 @@
       },
       {
         "group": "Resources",
-        "pages": ["platform", "homepage"]
+        "pages": ["platform", "homepage", "changelog"]
       }
     ]
   },
