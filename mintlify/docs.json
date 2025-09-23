@@ -44,7 +44,7 @@
       },
       {
         "group": "Features",
-        "pages": ["features/templates", "features/publishing-artifacts", "features/tasks", "features/file-upload", "features/export-content-from-endgame"]
+        "pages": ["features/templates", "features/publishing-artifacts", "features/tasks", "features/file-upload", "features/export-endgame-content"]
       },
       {
         "group": "Accessing Endgame",
