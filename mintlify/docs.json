@@ -76,7 +76,7 @@
           },
           {
             "group": "Knowledge",
-            "pages": ["knowledge/file-upload","knowledge/knowledge-basics-for-admins"]
+            "pages": ["knowledge/file-upload","knowledge/knowledge-basics-for-admins", "knowledge/google-drive-troubleshooting"]
           }
         ]
       },
