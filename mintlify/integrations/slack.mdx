@@ -4,7 +4,7 @@ description: "Connect Slack channels to accounts for seamless conversation track
 icon: "slack"
 ---
 
-Use the instructions below to enable Slack integration in Endgame. Once enabled, Endgame will ingest your Slack messages from a specific channel and associate it with a specific Account.
+Use the instructions below to enable Slack integration in Endgame. Once enabled, Endgame will ingest your Slack messages from a specific channels and associate it with a specific Accounts as well as enable Endgame threads within Slack for both account specific and multi-account Endgame chats. 
 
 ## Step 1: Enable the integration
 
@@ -14,25 +14,26 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
 
 <Steps>
   <Step title="Navigate to Configuration">
-    Navigate to https://end-p1.endgame.io/settings
+    Navigate to the [integrations page](https://end-p1.endgame.io/settings/integrations). Only Endgame Admins can configure organization integrations 
 
     If needed, login to your Endgame account via Salesforce
   </Step>
   <Step title="Start Setup">
-    From the configuration page, click "Setup" to kick off the Slack authentication process
+    From the integrations page, click "Connect" to kick off the Slack authentication process.
 
     <Frame>
       <img
-        src="/images/slack-setup-button.png"
-        alt="Slack setup button"
+        src="/images/integrations-view-9-26-25.png"
+        alt="Integrations view"
         className="rounded-lg"
       />
     </Frame>
+    
   </Step>
   <Step title="Request Approval (if needed)">
-    On the next page, first time users who are not a Slack admin will see a page to "request approval." If you do this, Slackbot will send a DM to the admin(s) of your Slack organization. The user that submitted it will then get a Slackbot DM when it is approved or denied by an admin.
+Upon proceeding to the next page, first-time users without administrative privileges will be directed to a request approval interface. Submitting this request will prompt Slackbot to send a direct message notification to your organization's designated administrators. The requesting user will subsequently receive a Slackbot direct message confirming whether their request has been approved or denied by an administrator.
 
-    If you don't see this page, then your account is already approved for usage.
+Note: If this approval page does not appear, your account has already been authorized for system access.
   </Step>
   <Step title="Grant Permissions">
     On this next page, click "Allow" to give us permissions.
@@ -46,30 +47,35 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
     </Frame>
   </Step>
   <Step title="Configure Channel Mapping">
-    You will then be taken to a page where you can configure which public Slack channels will be ingested into which individual Endgame Accounts.
+You will be directed to a configuration page where you can designate which public Slack channel content will be associated with specific Endgame Accounts. Establishing these channel connections also enables you to initiate Endgame threads directly within the corresponding Slack channels. For comprehensive guidance on utilizing Endgame within Slack, check out our [Slack](/features/slack) documentation.
+    
+Additionally, you have the option to configure Organization-Wide Channels. While these channels do not contribute data for analytical purposes, they facilitate multi-account Endgame conversations within those specific channels.
 
     <Frame>
       <img
-        src="/images/slack-channel-mapping.png"
+        src="/images/slack-mapping-9-25-26.png"
         alt="Channel mapping configuration"
         className="rounded-lg"
       />
     </Frame>
-    For instance, if you have an account for a company named CompanyCo, you would select that from the Account dropdown. Then underneath Channels, select the channels that are associated with that Account, such as one called #deal-companyco, or however your organization names channels.
+    
+    For instance, if you have an account for a company named CompanyCo, you would select that from the Account dropdown. Then in Channels, select the channels that are associated with that Account, such as one called #deal-companyco.
+    
+    You can add multiple channels to a single Account, but only one at a time. So using the previous example, you could then also add a #companyco-help channel. Both channels would then have their messages ingested to Endgame and be associated with that single Account.
 
-    You can add multiple channels to a single Account, but only one at a time. So using the previous example, you could then also add a #companyco-help channel. Both channels would then have their messages get ingested and be associated with that single Account.
+    To connect a non-account specific channel, "Select channels to ingest" and Submit. 
   </Step>
 </Steps>
 
 <Note>
-  If you have one Slack channel where you discuss deals about multiple Accounts, do not connect that channel. Endgame currently can't distinguish between different Account conversations in one Slack channel. Instead, use a Slack channel that is dedicated to that Account only.
+ Endgame currently cannot distinguish between different account conversations in a single Slack channel. Instead, use a Slack channels that are dedicated to sigular account conversations to enhance your Endgame data. 
+<br/>
+We will _only_ ingest channels that you have selected and associated with an Account or at the Organization level. Other than the names of public channels, no other data is ingested without your permission.
 </Note>
-
-We will _only_ ingest channels that you have selected and associated with an Account. Other than the names of public channels, no other data gets ingested without your permission.
 
 ## What's next?
 
-That's it\! Now that you've connected Slack to Endgame, we'll automatically ingest your data into our systems every 15 minutes and present our insights in Endgame.
+That's it\! Now that you've connected Slack to Endgame, we'll automatically ingest your data into our systems every 15 minutes and present our insights in Endgame. For comprehensive guidance on utilizing Endgame within Slack, check out our [Slack](/features/slack) documentation.
 
 ## Need help or have feedback?
 
