@@ -44,11 +44,22 @@
       },
       {
         "group": "Features",
-        "pages": ["features/templates", "features/publishing-artifacts", "features/tasks", "features/file-upload", "features/export-endgame-content"]
+        "pages": [
+          "features/templates",
+          "features/publishing-artifacts",
+          "features/tasks",
+          "features/file-upload",
+          "features/export-endgame-content",
+          "features/slack"
+        ]
       },
       {
         "group": "Accessing Endgame",
-        "pages": ["login-methods", "integrations/google-logins", "endgame-mcp-server"]
+        "pages": [
+          "login-methods",
+          "integrations/google-logins",
+          "endgame-mcp-server"
+        ]
       },
       {
         "group": "Admin Guides",
@@ -76,7 +87,11 @@
           },
           {
             "group": "Knowledge",
-            "pages": ["knowledge/file-upload","knowledge/knowledge-basics-for-admins", "knowledge/google-drive-troubleshooting"]
+            "pages": [
+              "knowledge/file-upload",
+              "knowledge/knowledge-basics-for-admins",
+              "knowledge/google-drive-troubleshooting"
+            ]
           }
         ]
       },
