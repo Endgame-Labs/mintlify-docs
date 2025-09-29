@@ -6,6 +6,10 @@ icon: "slack"
 
 Use the instructions below to enable Slack integration in Endgame. Once enabled, Endgame will ingest your Slack messages from a specific channels and associate it with a specific Accounts as well as enable Endgame threads within Slack for both account specific and multi-account Endgame chats. 
 
+<Note>
+  Endgame threads within Slack are still in Beta - contact [support@endgame.io](mailto:support@endgame.io) to inquire about access
+</Note>
+
 ## Step 1: Enable the integration
 
 <Warning>
@@ -23,7 +27,7 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
 
     <Frame>
       <img
-        src="/images/integrations-view-9-26-25.png"
+        src="../images/integrations-view-9-26-25.png"
         alt="Integrations view"
         className="rounded-lg"
       />
@@ -40,7 +44,7 @@ Note: If this approval page does not appear, your account has already been autho
 
     <Frame>
       <img
-        src="/images/slack-permissions.png"
+        src="../images/slack-permissions.png"
         alt="Slack permissions page"
         className="rounded-lg"
       />
@@ -48,12 +52,12 @@ Note: If this approval page does not appear, your account has already been autho
   </Step>
   <Step title="Configure Channel Mapping">
 You will be directed to a configuration page where you can designate which public Slack channel content will be associated with specific Endgame Accounts. Establishing these channel connections also enables you to initiate Endgame threads directly within the corresponding Slack channels. For comprehensive guidance on utilizing Endgame within Slack, check out our [Slack](/features/slack) documentation.
-    
+
 Additionally, you have the option to configure Organization-Wide Channels. While these channels do not contribute data for analytical purposes, they facilitate multi-account Endgame conversations within those specific channels.
 
     <Frame>
       <img
-        src="/images/slack-mapping-9-25-26.png"
+        src="../images/slack-mapping-9-26-25.png"
         alt="Channel mapping configuration"
         className="rounded-lg"
       />
@@ -64,6 +68,7 @@ Additionally, you have the option to configure Organization-Wide Channels. While
     You can add multiple channels to a single Account, but only one at a time. So using the previous example, you could then also add a #companyco-help channel. Both channels would then have their messages ingested to Endgame and be associated with that single Account.
 
     To connect a non-account specific channel, "Select channels to ingest" and Submit. 
+    
   </Step>
 </Steps>
 
