@@ -30,7 +30,7 @@
   "navigation": {
     "pages": [
       {
-        "group": "Index",
+        "group": "Welcome",
         "pages": ["index"]
       },
       {
