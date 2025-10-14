@@ -32,7 +32,7 @@ You can view your non-account specific thread history in the Thread List view ac
 
 ## Getting to an account: Direct search
 
-Open search by clicking on the search button in the home page or the search option in the left-hand navigation. Type in the name of the company or thread title you want to research. Doing so will pull up accounts and threads to select from — simply click the appropriate account and you'll be taken to the Account Detail page or the corresponding thread. 
+Open search by clicking on the search button in the home page or the search option in the left-hand navigation. Type in the name of the company or thread title you want to research. Doing so will pull up accounts and threads to select from — simply click the appropriate account and you'll be taken to the Account Detail page or the corresponding thread.
 
 <Frame caption="Search modal">
   <img
@@ -181,6 +181,30 @@ Files is where you can add additional contextual documents to be used to formula
 </Frame>
 
 ---
+
+## Quick External Navigation Methods
+
+### Linking directly to Endgame Accounts
+
+You can create direct links into specific accounts in Endgame using the account's Salesforce ID. Some organizations find this particularly helpful for linking from Salesforce accounts into Endgame.
+
+Linking directly to an account in Endgame will open Endgame to the specified account, ready to start a conversation:
+
+`https://app.endgame.io/accounts/[SALESFORCE ACCOUNT ID]`- Replace [SALESFORCE ACCOUNT ID] with the actual Salesforce account ID.
+
+Example: `https://app.endgame.io/accounts/0011234567890ABC`
+
+### Link to Endgame with Pre-Configured Queries
+
+You can automatically launch a specific prompt associated with an account when the link is clicked by adding the firstMessage parameter:
+
+`https://app.endgame.io/threads/new?accountId=[SALESFORCE_ACCOUNT_ID]&firstMessage=[YOUR_ENCODED_QUERY]` - Replace [YOUR_ENCODED_QUERY] with the actual encoded prompt.
+
+<Info>
+  Important: The query text must be URL-encoded (i.e. spaces become + signs). For example: Spaces → + or %20.
+</Info>
+
+Example: `https://app.endgame.io/threads/new?accountId=0011234567890ABC&firstMessage=Generate+a+MEDDPICC+and+risk+mitigation+analysis+on+this+account`
 
 ## Need help or have feedback?
 
