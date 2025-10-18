@@ -31,37 +31,23 @@ The MCP server essentially gives your AI assistant a direct line to Endgame's kn
 4. Copy and save your token securely (you won't be able to see it again!)
 5. Take note of your org ID (a number starting with a '5' or '6' at the top of the **API Keys** page)
 
-> **Note**: You need admin access to create API keys.
+<Note> You must bean admin to create API keys. </Note>
 
 ### Step 2: Configure Claude Desktop
 
-1. Open Claude Desktop
-2. Click your name (bottom left) → **Settings** → **Developer** → **Edit Config** - you can edit this configuration file in any text editor. 
-3. Add this configuration, replacing `<YOUR_API_TOKEN_HERE>` with your actual token:
+Open the Claude Desktop instructions below your api keys. Click on Download to start the installation process. 
 
-```json
-{
-  "mcpServers": {
-    "endgame": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://app.endgame.io/api/bridges/<YOUR_ENDGAME_ORG_ID_HERE>/mcp",
-        "--header",
-        "Authorization: Bearer ${AUTH_TOKEN}"
-      ],
-      "env": {
-        "AUTH_TOKEN": "<YOUR_API_TOKEN_HERE>"
-      }
-    }
-  }
-}
-```
-4. Also replace `<YOUR_ENDGAME_ORG_ID_HERE>` with your actual organization ID.
-5. Restart Claude Desktop
+<Frame caption="Claude Desktop Instructions">
+  <img
+    src="./images/claude-desktop-instructions-10-18-25.png"
+    alt="claude desktop intructions"
+    className="rounded-lg"
+  />
+</Frame>
 
-Once configured, you'll see "endgame" appear in your Claude Desktop settings, confirming the connection is active.
+- In Claude Desktop, follow the desktop extension installation instructions.
+- When prompted for your organization ID, locate the number starting with a '5' or '6' at the top of the **API Keys** page.
+- When asked for your API key, provide the API key you created.
 
 ## How to Use It
 
