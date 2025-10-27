@@ -2,9 +2,9 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Endgame",
   "colors": {
-    "primary": "#008BF9",
-    "light": "#99D1FD",
-    "dark": "#004D8F"
+    "primary": "#2B7FFF",
+    "light": "#51A2FF",
+    "dark": "#1447E6"
   },
   "theme": "aspen",
   "appearance": {
@@ -14,8 +14,8 @@
     "default": "dark",
     "isHidden": true
   },
-  "font": {
-    "headings": {
+  "fonts": {
+    "heading": {
       "family": "Inter",
       "weight": 600
     },
@@ -24,9 +24,41 @@
       "weight": 400
     }
   },
+  "icons": {
+    "library": "lucide"
+  },
   "layout": "sidenav",
-  "rounded": "default",
+  "metadata": {
+    "og:site_name": "Endgame Documentation",
+    "og:type": "website",
+    "twitter:site": "@endgame_io"
+  },
   "favicon": "/logo/favicon.png",
+  "logo": {
+    "light": "/logo/logo-with-text-dark.svg",
+    "dark": "/logo/logo-with-text.svg",
+    "href": "https://endgame.io"
+  },
+  "navbar": {
+    "style": "default",
+    "links": [
+      {
+        "label": "Support",
+        "icon": "life-buoy",
+        "href": "mailto:support@endgame.io"
+      },
+      {
+        "label": "Status",
+        "icon": "activity",
+        "href": "https://status.endgame.io"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Sign in",
+      "href": "https://app.endgame.io"
+    }
+  },
   "navigation": {
     "pages": [
       {
@@ -34,7 +66,7 @@
         "pages": ["index"]
       },
       {
-        "group": "Using Endgame",
+        "group": "Getting Started",
         "pages": [
           "core-concepts",
           "navigating-endgame",
@@ -50,34 +82,39 @@
           "features/tasks",
           "features/file-upload",
           "features/export-endgame-content",
-          "features/slack"
+          "features/slack",
+          "features/mcp-server"
         ]
       },
       {
-        "group": "Accessing Endgame",
+        "group": "Integrations",
         "pages": [
-          "login-methods",
-          "integrations/google-logins",
-          "endgame-mcp-server"
+          "integrations/salesforce",
+          "integrations/gong",
+          "integrations/slack",
+          "integrations/zoom"
+        ]
+      },
+      {
+        "group": "Access",
+        "pages": [
+          "authentication/index",
+          "authentication/google"
         ]
       },
       {
         "group": "Admin Guides",
         "pages": [
           "admin-getting-started",
+          "integrations/initial-connection-to-endgame",
           {
-            "group": "Integrations",
+            "group": "Integration Guides",
             "pages": [
-              "integrations/initial-connection-to-endgame",
-              "integrations/salesforce",
-              "integrations/gong",
-              "integrations/slack",
-              "integrations/zoom",
               "integrations/salesforce-essentials-for-admins"
             ]
           },
           {
-            "group": "Templates",
+            "group": "Template Management",
             "pages": [
               "templates/create-manage-templates",
               "templates/templates-101",
@@ -86,7 +123,7 @@
             ]
           },
           {
-            "group": "Knowledge",
+            "group": "Knowledge Management",
             "pages": [
               "knowledge/file-upload",
               "knowledge/knowledge-basics-for-admins",
@@ -103,39 +140,25 @@
         "group": "Resources",
         "pages": ["platform", "homepage", "changelog"]
       }
-    ]
-  },
-  "anchors": [],
-  "logo": {
-    "light": "/logo/logo-with-text-dark.svg",
-    "dark": "/logo/logo-with-text.svg",
-    "href": "https://endgame.io"
-  },
-  "topbar": {
-    "style": "default",
-    "links": [
-      {
-        "name": "Support",
-        "url": "mailto:support@endgame.io"
-      }
     ],
-    "cta": {
-      "type": "button",
-      "label": "Platform",
-      "url": "https://www.endgame.io",
-      "arrow": true,
-      "target": "_blank"
-    }
-  },
-  "metadata": {
-    "og:site_name": "Endgame Documentation",
-    "og:type": "website",
-    "twitter:site": "@endgame_io"
+    "anchors": []
   },
   "redirects": [
     {
       "source": "/1a70ee6f29db802582b7dc368826abdd",
       "destination": "/integrations/zoom"
+    },
+    {
+      "source": "/login-methods",
+      "destination": "/authentication"
+    },
+    {
+      "source": "/integrations/google-logins",
+      "destination": "/authentication/google"
+    },
+    {
+      "source": "/endgame-mcp-server",
+      "destination": "/features/mcp-server"
     }
   ]
 }
