@@ -1,6 +1,7 @@
 ---
-title: "Endgame Changelog"
+title: "Changelog"
 description: "Product updates and announcements"
+icon: "package"
 ---
 
 ## October 27, 2025
@@ -56,20 +57,18 @@ This feature uses sensible defaults under the hood, but it may not work for ever
 
 Choose Search Mode for rapid responses to straightforward queries, or Research Mode for comprehensive, thoroughly researched answers to complex questions. This performance enhancement gives you greater control over your research workflow. We look forward to your feedback on this new capability!
 
-<Frame>
+<Frame caption="Chat mode selection">
   <img
     src="./images/search-mode-home-10-22-25.png"
-    alt="Template Management"
+    alt="Chat mode selection"
     className="rounded-lg"
   />
 </Frame>
 
-<br />
-
-<Frame>
+<Frame caption="Chat mode selection">
   <img
     src="./images/multi-mode-10-22-25.png"
-    alt="Template Management"
+    alt="Chat mode selection"
     className="rounded-lg"
   />
 </Frame>
@@ -78,10 +77,10 @@ Choose Search Mode for rapid responses to straightforward queries, or Research M
 
 We've completely rebuilt our thread citations and sources infrastructure, delivering significantly improved quality and quantity of references. You'll notice enhanced depth and richness in sourcing, including multiple relevant quotations from emails, calls, and Slack conversations that provide fuller context for your research.
 
-<Frame>
+<Frame caption="Call transcript sources">
   <img
     src="./images/call-source-10-16-25.png"
-    alt="Template Management"
+    alt="Call transcript sources"
     className="rounded-lg"
   />
 </Frame>
@@ -90,10 +89,10 @@ We've completely rebuilt our thread citations and sources infrastructure, delive
 
 Most account names within threads now feature direct navigation links to their corresponding detail pages, streamlining your research workflow. Simply hover over these links to access key account information including owner details, account type, and current opportunities.
 
-<Frame>
+<Frame caption="Account links in thread responses">
   <img
     src="./images/account-link-10-17-25.png"
-    alt="Template Management"
+    alt="Account links in thread responses"
     className="rounded-lg"
   />
 </Frame>
@@ -104,10 +103,10 @@ Most account names within threads now feature direct navigation links to their c
 
 We're excited to announce that you can now connect Claude Desktop to Endgame via our MCP server. This integration allows you to query Endgame directly through Claude and receive the same high-quality responses you're accustomed to getting in Endgame. Simply [set up the MCP server connection](https://docs.endgame.io/endgame-mcp-server) in Claude Desktop to start leveraging Endgame's capabilities right from your Claude conversations, without leaving your workflow.
 
-<Frame>
+<Frame caption="MCP responses in Claud Desktop">
   <img
     src="./images/claude-desktop-mcp-10-20-25.png"
-    alt="claude desktop chat response"
+    alt="MCP responses in Claud Desktop"
     className="rounded-lg"
   />
 </Frame>
@@ -118,10 +117,10 @@ We're excited to announce that you can now connect Claude Desktop to Endgame via
 
 Admin users now have access to improved template management capabilities. The enhanced interface includes search functionality, filtering options, and sorting capabilities. Admins can efficiently filter templates by scope or tag classification, and organize content chronologically by last updated date. These enhancements improve the Admin user experience by enabling them to quickly locate and manage their team's templates.
 
-<Frame>
+<Frame caption="Template management">
   <img
     src="./images/template-management-10-7-25.png"
-    alt="Template Management"
+    alt="Template management"
     className="rounded-lg"
   />
 </Frame>
@@ -132,10 +131,10 @@ Admin users now have access to improved template management capabilities. The en
 
 Users can now include additional recipients when sending task emails. Choose from users within your organization or add any valid email address to the recipient list. All recipients will receive the email as BCC recipients, so each person receives identical email content.
 
-<Frame>
+<Frame caption="BCC recipients for Tasks">
   <img
     src="./images/tasks-bcc-10-3-25.png"
-    alt="Tasks bcc recipients"
+    alt="BCC recipients for Tasks"
     className="rounded-lg"
   />
 </Frame>
@@ -144,17 +143,15 @@ Users can now include additional recipients when sending task emails. Choose fro
 
 The user who uploaded a knowledge document is now displayed on files at both the account level and organization level. This enhancement improves accountability and streamlines document management by allowing administrators to quickly identify the source of uploaded content.
 
-<Frame>
+<Frame caption="Document upload visibility">
   <img
     src="./images/uploaded-by-account-10-3-25.png"
-    alt="Uploaded by at the account level"
+    alt="Document upload visibility"
     className="rounded-lg"
   />
 </Frame>
 
-<br />
-
-<Frame>
+<Frame caption="Document upload visibility">
   <img
     src="./images/uploaded-by-knowledge-org-10-3-25.png"
     alt="Uploaded by at the org level"
@@ -172,10 +169,10 @@ Knowledge document uploads are now processed immediately upon file upload. Docum
 
 The tasks feature now includes pre-configured templates to streamline your task creation process. You will find three additional suggested task options that can be enabled and customized to facilitate your initial task implementation. More information on using tasks [here](/features/tasks).
 
-<Frame>
+<Frame caption="Task templates">
   <img
     src="./images/task-defaults-9-26-25.png"
-    alt="Task Defaults"
+    alt="Task templates"
     className="rounded-lg"
   />
 </Frame>
@@ -192,9 +189,9 @@ We've updated our URL—Endgame now lives at [app.endgame.io](https://app.endgam
 
 ### User Settings Enhancements
 
-Users now have access to a dedicated user settings view accessible through the user menu. This view currently includes the ability to connect or disconnect your Google account, which is used for linking [knowledge documents](/features/file-upload) and exporting [directly to Drive](/features/export-endgame-content). We'll continue to expand this section with new features in the coming months, so stay tuned for updates.
+Users now have access to a dedicated user settings view accessible through the user menu. This view currently includes the ability to connect or disconnect your Google account, which is used for linking [knowledge documents](/features/file-upload) and exporting [directly to Drive](/features/export-thread-content). We'll continue to expand this section with new features in the coming months, so stay tuned for updates.
 
-<Frame>
+<Frame caption="General settings view">
   <img
     src="./images/general-settings-view-9-24-25.png"
     alt="General settings view"
@@ -204,7 +201,7 @@ Users now have access to a dedicated user settings view accessible through the u
 
 Users can now access our Help Center and documentation directly through the user menu, providing comprehensive resources to enhance your Endgame experience.
 
-<Frame>
+<Frame caption="User menu">
   <img
     src="./images/user-menu-9-24-25.png"
     alt="user menu"
@@ -218,7 +215,7 @@ Users can now access our Help Center and documentation directly through the user
 
 You can now schedule daily, weekly, or monthly email digests that act in the same way as firing a prompt off in the app. Curate your tasks to keep you up to date at the start of your day or week with whatever cross account information is most helpful to you. You can generate a task preview and tune before scheduling the email. More information on using tasks [here](/features/tasks).
 
-<Frame>
+<Frame caption="Tasks view">
   <img
     src="./images/tasks-8-27-25.png"
     alt="Tasks View"
@@ -230,7 +227,7 @@ You can now schedule daily, weekly, or monthly email digests that act in the sam
 
 Users can now export thread content and thread tables directly to Google Drive. Once a user has authenticated to Google via Endgame, this action can be done with a single click.
 
-<Frame>
+<Frame caption="Export as Doc">
   <img
     src="./images/export-doc-9-17-25.png"
     alt="Export as Doc"
@@ -238,9 +235,7 @@ Users can now export thread content and thread tables directly to Google Drive. 
   />
 </Frame>
 
-<br />
-
-<Frame>
+<Frame caption="Export as Sheet">
   <img
     src="./images/export-sheets-9-17-25.png"
     alt="Export as Sheet"
@@ -254,7 +249,7 @@ Users can now export thread content and thread tables directly to Google Drive. 
 
 In addition to asking singular account questions in the account detail pages, you can now ask questions that span multiple accounts from the Endgame homepage. This feature allows you to explore prompts that cover the entire breadth of the accounts in your organization. Ask questions that target your book of accounts, explore organizational trends, provide insights about your team’s sales strategies, and more! More information on using chat [here](/endgame-chat-101).
 
-<Frame>
+<Frame caption="Endgame app homepage">
   <img
     src="./images/home-page-8-27-25.png"
     alt="Endgame Home Page"
@@ -266,7 +261,7 @@ In addition to asking singular account questions in the account detail pages, yo
 
 Admins can now add tags and scopes (single or multi-account) to global templates, and all users can create their own templates to add to their library. Users can search and filter by tag capabilities to more easily navigate their template library. More information on using templates [here](/features/templates).
 
-<Frame>
+<Frame caption="Templates modal">
   <img
     src="./images/template-modal-8-24-25.png"
     alt="Templates Modal"
@@ -285,7 +280,7 @@ Upload files from your computer, sync with google drive, or link to public urls 
 
 More information on using knowledge [here](/features/file-upload).
 
-<Frame>
+<Frame caption="Knowledge view for admins">
   <img
     src="./images/knowledge-admin-9-23-25.png"
     alt="Knowledge Admin View"
@@ -297,7 +292,7 @@ More information on using knowledge [here](/features/file-upload).
 
 We’ve given our account list view an overhaul to make it easier to navigate and find the accounts you need. You’ll now see accounts in a more accessible grid format with clearer options for filtering and sorting.
 
-<Frame>
+<Frame caption="Accounts page">
   <img
     src="./images/account-list-8-28-25.png"
     alt="Account List View"
