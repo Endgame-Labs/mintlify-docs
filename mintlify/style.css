@@ -49,6 +49,7 @@
 }
 
 .topbar-right-container button[aria-label="Toggle dark mode"] {
+  border-radius: var(--rounded-xl);
   height: 36px;
   width: 36px;
 }
@@ -66,6 +67,10 @@
 .card {
   border-radius: var(--rounded-3xl);
   transition: all 0.2s ease-in-out;
+}
+a.card:hover, a.card:focus {
+  border-color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 #pagination > a {
@@ -129,9 +134,16 @@ html.dark .toc-item > a.border-gray-950\/5 {
 html.light .card {
   border-color: var(--light-border-color);
 }
-html.light .card:hover, html.light .card:focus {
-  border-color: var(--primary);
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+html.dark .card {
+  background-color: var(--color-slate-900);
+  border-color: var(--dark-border-color);
+}
+
+html.light .frame {
+  background-color: var(--color-slate-200);
+}
+html.dark .frame {
+  background-color: var(--color-slate-700);
 }
 
 html.light .step > div.w-px {
