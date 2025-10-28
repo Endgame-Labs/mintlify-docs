@@ -48,6 +48,17 @@
   --light-border-color: color-mix(in oklch, var(--color-slate-400) 75%, transparent);
 }
 
+.prose :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)) {
+  font-size: 1.625rem;
+  margin-top: 4rem;
+}
+
+.prose :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)) {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .topbar-right-container button[aria-label="Toggle dark mode"] {
   border-radius: var(--rounded-xl);
   height: 36px;
@@ -71,6 +82,11 @@
 a.card:hover, a.card:focus {
   border-color: var(--primary);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.frame {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #pagination > a {
