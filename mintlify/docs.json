@@ -10,6 +10,12 @@
   "appearance": {
     "default": "dark"
   },
+  "background": {
+    "color": {
+      "light": "#CAD5E2",
+      "dark": "#000F1D"
+    }
+  },
   "modeToggle": {
     "default": "dark",
     "isHidden": true
@@ -160,5 +166,11 @@
       "source": "/endgame-mcp-server",
       "destination": "/features/mcp-server"
     }
-  ]
+  ],
+  "footer": {
+    "socials": {
+      "linkedin": "https://www.linkedin.com/company/endgamelabs/",
+      "x": "https://twitter.com/endgamelabs"
+    }
+  }
 }

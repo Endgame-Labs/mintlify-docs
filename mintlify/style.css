@@ -1,0 +1,80 @@
+:root {
+  --color-slate-50: oklch(0.984 0.003 247.858);
+  --color-slate-100: oklch(0.968 0.007 247.896);
+  --color-slate-200: oklch(0.929 0.013 255.508);
+  --color-slate-300: oklch(0.869 0.022 252.894);
+  --color-slate-400: oklch(0.704 0.04 256.788);
+  --color-slate-500: oklch(0.554 0.046 257.417);
+  --color-slate-600: oklch(0.446 0.043 257.281);
+  --color-slate-700: oklch(0.372 0.044 257.287);
+  --color-slate-800: oklch(0.279 0.041 260.031);
+  --color-slate-900: oklch(0.208 0.042 265.755);
+  --color-slate-950: oklch(0.129 0.042 264.695);
+  
+  /* Override Mintlify Grays with Slate Grays */
+  --gray-50: 248, 250, 252;
+  --gray-100: 241, 245, 249;
+  --gray-200: 226, 232, 240;
+  --gray-300: 203, 213, 225;
+  --gray-400: 148, 163, 184;
+  --gray-500: 100, 116, 139;
+  --gray-600: 71, 85, 105;
+  --gray-700: 51, 65, 85;
+  --gray-800: 30, 41, 59;
+  --gray-900: 15, 23, 42;
+  --gray-950: 2, 6, 23;
+
+  /* Border Colors */
+  --dark-border-color: color-mix(in oklch, var(--color-slate-800) 75%, transparent);
+  --light-border-color: color-mix(in oklch, var(--color-slate-400) 75%, transparent);
+}
+
+#topbar-cta-button > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.sidebar-group-header {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/*
+  Color mode overrides
+*/
+
+.text-gray-400 {
+  color: var(--color-slate-400);  
+}
+
+html.light .sidebar-nav-group-divider {
+  border-bottom: 1px solid var(--light-border-color);
+}
+html.dark .sidebar-nav-group-divider {
+  border-bottom: 1px solid var(--dark-border-color);
+}
+
+html.light #navbar > .border-gray-100 {
+  border-bottom: 1px solid var(--light-border-color);
+}
+html.dark #navbar > .border-gray-100 {
+  border-bottom: 1px solid var(--dark-border-color);
+}
+
+html.light #sidebar-content {
+  border-right: 1px solid var(--light-border-color);
+}
+html.dark #sidebar-content {
+  border-right: 1px solid var(--dark-border-color);
+}
+
+.card {
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+html.light .card {
+  border-color: var(--light-border-color);
+}
+html.light .card:hover, html.light .card:focus {
+  border-color: var(--primary);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
