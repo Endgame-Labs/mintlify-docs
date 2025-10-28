@@ -167,7 +167,7 @@
       "destination": "/features/mcp-server"
     },
     {
-      "source": "/features/export-thread-content",
+      "source": "/features/export-endgame-content",
       "destination": "/features/export-thread-content"
     }
   ],
