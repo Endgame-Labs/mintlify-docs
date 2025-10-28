@@ -44,7 +44,7 @@
   --rounded-search: 0.75rem;
 
   /* Border Colors */
-  --dark-border-color: color-mix(in oklch, var(--color-slate-800) 75%, transparent);
+  --dark-border-color: color-mix(in oklch, var(--color-slate-700) 75%, transparent);
   --light-border-color: color-mix(in oklch, var(--color-slate-400) 75%, transparent);
 }
 
@@ -71,6 +71,11 @@
 #pagination > a {
   border-radius: var(--rounded-3xl);
 }
+#pagination > a:hover,
+#pagination > a:focus {
+  background-color: color-mix(in oklch, var(--color-primary-500) 15%, transparent) !important;
+  border-color: var(--color-primary-500) !important;
+}
 
 /*
   Color mode overrides
@@ -81,7 +86,6 @@
 }
 
 html.light #search-bar-entry {
-  /* background-color: color-mix(in oklch, var(--color-slate-400) 25%, transparent); */
   background-color: var(--color-slate-100);
 }
 
@@ -113,6 +117,15 @@ html.dark #sidebar-content {
   border-right: 1px solid var(--dark-border-color);
 }
 
+html.light .toc-item.border-gray-950\/5,
+html.light .toc-item > a.border-gray-950\/5 {
+  border-left-color: var(--light-border-color);
+}
+html.dark .toc-item.border-gray-950\/5,
+html.dark .toc-item > a.border-gray-950\/5 {
+  border-left-color: var(--dark-border-color);
+}
+
 html.light .card {
   border-color: var(--light-border-color);
 }
@@ -130,10 +143,10 @@ html.light .step > div.w-px.to-transparent {
 }
 
 html.light #pagination > a {
-  background-color: color-mix(in oklch, var(--color-slate-400) 10%, transparent);
+  background-color: color-mix(in oklch, var(--color-slate-400) 15%, transparent);
   border-color: var(--light-border-color);
 }
-html.light #pagination > a:hover, html.light #pagination > a:focus {
-  background-color: color-mix(in oklch, var(--color-primary-500) 10%, transparent) !important;
-  border-color: var(--color-primary-500) !important;
+html.dark #pagination > a {
+  background-color: color-mix(in oklch, var(--color-slate-700) 15%, transparent);
+  border-color: var(--dark-border-color);
 }
