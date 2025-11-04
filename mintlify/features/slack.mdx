@@ -6,9 +6,6 @@ icon: "slack"
 
 With the [Slack integration](/integrations/slack) configured in Endgame, you can  associate channels with accounts or your organization and launch Endgame threads directly from your Slack workspace.
 
-<Note>
-  Endgame threads within Slack are still in Beta - contact [support@endgame.io](mailto:support@endgame.io) to inquire about access
-</Note>
 
 ### Associate channels for Endgame use
 
@@ -66,10 +63,10 @@ Organization-wide associations will also ingest channel data, but this data will
 
 Now that you have made the needed channel associations, you can start chatting with Endgame in Slack.
 
-Within any channel that you have added the Endgame app and made an account or organization-wide association, simply type "@Endgame \<your prompt\>" and Endgame will spin up a thread to answer your question.
+Within any non-external channel that you have added the Endgame app and made an account or organization-wide association, simply type "@Endgame \<your prompt\>" and Endgame will spin up a thread to answer your question. 
 
 <Info>
-  Organization-wide channels are intended for multi-account inquiries, while account-specific channels are intended for questions related to individual accounts.
+External channels intentionally prevent bot chat functionality to avoid exposing internal organization data to outside users via chat.<br/>Organization-wide channels are intended for multi-account inquiries, while account-specific channels are intended for questions related to individual accounts.
 </Info>
 
 <Frame caption="Endgame prompt in Slack">
@@ -88,4 +85,4 @@ Within any channel that you have added the Endgame app and made an account or or
   />
 </Frame>
 
-You can continue to interact with the thread, just submit a new question or response once the thread has resolved.
+You can continue to interact with the thread, just submit a new question or response  by typing "@Endgame \<your follow-up prompt\>" once the thread has resolved.
