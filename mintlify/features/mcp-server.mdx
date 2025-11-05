@@ -31,7 +31,9 @@ The MCP server essentially gives your AI assistant a direct line to Endgame's kn
 4. Copy and save your token securely (you won't be able to see it again!)
 5. Take note of your org ID (a number starting with a '5' or '6' at the top of the **API Keys** page)
 
-<Note> You must bean admin to create API keys. </Note>
+Admins can create API keys for members of their organization at their discretion. We recommend using descriptive names like "sarah-endgame-key" to make it easy to identify and revoke keys when needed. Admins will need to copy the key and share it manually with the end user. Keys are tied to the creator, so queries that reference "me" or "my" will return results specific to the key creator. For example, "What is new on my accounts this week?" would reflect the admin's accounts, not the end user's.
+
+<Note> You must be an admin to create API keys. </Note>
 
 ### Step 2: Configure Claude Desktop
 
