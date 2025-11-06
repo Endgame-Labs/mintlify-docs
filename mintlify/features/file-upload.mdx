@@ -50,17 +50,16 @@ Go through the Google authentication process. Select all permissions requested (
   />
 </Frame>
 
-<br/>
+<br />
+
 <Accordion title="Google Drive Security FAQs">
-- **What permissions does Endgame request?** Endgame requests [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [https://developers.google.com/workspace/drive/api/guides/api-specific-auth) permissions.
-- **Why do individual users need to authenticate to Google?** Individual user authentication is required to sync files to accounts. It's also necessary if a user wants to download content directly to [Google Sheets](https://docs.endgame.io/features/export-thread-content#export-table-to-google-sheets) or [Goolge Docs](https://docs.endgame.io/features/export-thread-content#export-to-google-docs). Users who don't need these features are not required to authenticate to Google.
-- **Does Endgame sync my entire Drive once I've connected?** No, Endgame only syncs folders or files that you explicitly select.
-- **Does Endgame keep a copy of the files it syncs from Drive?** Yes, we create a copy of the file to process it for use in your chat responses. When you unsync a file, we delete the source content from our database.
-- **Can Endgame Admins delete the files linked on behalf of users or does the originating user have to delete it?** Admins can delete or unlink any files that any user has added.
-- **If a person leaves the company, how does this impact any files being referenced in their personal Drives?**
-If a person leaves the company and their Google credentials are invalidated, Endgame will no longer be able to keep their linked files up to date.
-- **How are Drive files used in chat responses, are files uploaded by an individual only available to them, in their chats?**
-Any files associated with the organization or accounts are available to all users via chat. We cannot restrict data surfaced in chat based on Drive permissions of the source content. Context is shared across all users.
+  - **What permissions does Endgame request?** Endgame requests [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [drive.readonly](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) permissions.
+  - **Why do individual users need to authenticate to Google?** Individual user authentication is required to sync files to accounts. It's also necessary if a user wants to download content directly to [Google Sheets](https://docs.endgame.io/features/export-thread-content#export-table-to-google-sheets) or [Goolge Docs](https://docs.endgame.io/features/export-thread-content#export-to-google-docs). Users who don't need these features are not required to authenticate to Google.
+  - **Does Endgame sync my entire Drive once I've connected?** No, Endgame only syncs folders or files that you explicitly select.
+  - **Does Endgame keep a copy of the files it syncs from Drive?** Yes, we create a copy of the file to process it for use in your chat responses. When you unsync a file, we delete the source content from our database.
+  - **Can Endgame Admins delete the files linked on behalf of users or does the originating user have to delete it?** Admins can delete or unlink any files that any user has added.
+  - **If a person leaves the company, how does this impact any files being referenced in their personal Drives?** If a person leaves the company and their Google credentials are invalidated, Endgame will no longer be able to keep their linked files up to date.
+  - **How are Drive files used in chat responses, are files uploaded by an individual only available to them, in their chats?** Any files associated with the organization or accounts are available to all users via chat. We cannot restrict data surfaced in chat based on Drive permissions of the source content. Context is shared across all users.
 </Accordion>
 
 ### Updating linked files
@@ -101,7 +100,9 @@ Copy and paste a link to a public document or webpage. After you click Add Link,
 
 Once your files are uploaded or linked, you can delete or unlink them anytime by hovering over the item and then clicking Delete or Unlink. By deleting or unlinking the file you ensure that information associated with that file will no longer be present in new chat responses.
 
-<Info>Application Admins have the ability to delete or unlink *any* folder or file regarless of ownership</Info>
+<Info>
+  Application Admins have the ability to delete or unlink _any_ folder or file regarless of ownership
+</Info>
 
 <Frame caption="Delete or Unlink Files">
   <img
