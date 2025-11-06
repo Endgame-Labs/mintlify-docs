@@ -40,7 +40,7 @@ In a account detail page, open the Files tab toward the bottom of the page. Clic
   />
 </Frame>
 
-Go through the Google authentication process. Select all permissions requested (we only requst [drive.file](https://www.googleapis.com/auth/drive.file) and [drive.readonly](https://www.googleapis.com/auth/drive.readonly)) for the best Endgame experience. Once authenticated, select up to 100 files at a time to sync with Endgame. You can edit the description for the files before clicking to Select Files.
+Go through the Google authentication process. Select all permissions requested (we only requst [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [drive.readonly](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)) for the best Endgame experience. Once authenticated, select up to 100 files at a time to sync with Endgame. You can edit the description for the files before clicking to Select Files.
 
 <Frame caption="Google File Select">
   <img
@@ -52,7 +52,7 @@ Go through the Google authentication process. Select all permissions requested (
 
 <br/>
 <Accordion title="Google Drive Security FAQs">
-- **What permissions does Endgame request?** Endgame requests [drive.file](https://www.googleapis.com/auth/drive.file) and [drive.readonly](https://www.googleapis.com/auth/drive.readonly) permissions.
+- **What permissions does Endgame request?** Endgame requests [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [https://developers.google.com/workspace/drive/api/guides/api-specific-auth) permissions.
 - **Why do individual users need to authenticate to Google?** Individual user authentication is required to sync files to accounts. It's also necessary if a user wants to download content directly to [Google Sheets](https://docs.endgame.io/features/export-thread-content#export-table-to-google-sheets) or [Goolge Docs](https://docs.endgame.io/features/export-thread-content#export-to-google-docs). Users who don't need these features are not required to authenticate to Google.
 - **Does Endgame sync my entire Drive once I've connected?** No, Endgame only syncs folders or files that you explicitly select.
 - **Does Endgame keep a copy of the files it syncs from Drive?** Yes, we create a copy of the file to process it for use in your chat responses. When you unsync a file, we delete the source content from our database.
