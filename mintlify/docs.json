@@ -98,7 +98,8 @@
           "integrations/salesforce",
           "integrations/gong",
           "integrations/slack",
-          "integrations/zoom"
+          "integrations/zoom",
+          "integrations/google-drive"
         ]
       },
       {
