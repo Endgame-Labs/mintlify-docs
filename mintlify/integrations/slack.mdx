@@ -6,7 +6,7 @@ icon: "slack"
 
 Use the instructions below to enable Slack integration in Endgame. Once enabled, Endgame will ingest your Slack messages from a specific channels and associate it with a specific Accounts as well as enable Endgame threads within Slack for both account specific and multi-account Endgame chats.
 
-## Step 1: Enable the integration
+## Enable the integration
 
 <Warning>
   Connecting to the Slack API requires that the connecting user is either a Slack Administrator or gets permission from one. Be sure to check with your organization admin before trying to connect Slack.
@@ -21,7 +21,7 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
   <Step title="Start Setup">
     From the integrations page, click "Connect" to kick off the Slack authentication process.
 
-    <Frame content="Integrations view">
+    <Frame>
       <img
         src="../images/integrations-view-9-26-25.png"
         alt="Integrations view"
@@ -37,7 +37,7 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
   <Step title="Grant Permissions">
     On the next page, click "Allow" to give us permissions.
 
-    <Frame content="Slack permissions page">
+    <Frame>
       <img
         src="../images/slack-permissions.png"
         alt="Slack permissions page"
@@ -50,7 +50,7 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
 
     Additionally, you have the option to configure Organization-Wide Channels. While these channels do not contribute data for analytical purposes, they facilitate multi-account Endgame conversations within those specific channels.
 
-    <Frame content="Channel mapping configuration">
+    <Frame>
       <img
         src="../images/slack-mapping-9-26-25.png"
         alt="Channel mapping configuration"
@@ -78,38 +78,37 @@ Use the instructions below to enable Slack integration in Endgame. Once enabled,
 That's it! Now that you've connected Slack to Endgame, we'll automatically ingest your data into our systems every 15 minutes and present our insights in Endgame. For comprehensive guidance on utilizing Endgame threads within Slack, check out our [Slack](/features/slack) documentation.
 
 <Accordion title="Updating an existing connection to the new Endgame Slack app">
-  If you connected Endgame to your slack workspace before Oct 10, 2025 you need to update your Slack connection in Endgame in order to upgrade to the latest verison of the Endgame Slack app. 
+  If you connected Endgame to your slack workspace before Oct 10, 2025 you need to update your Slack connection in Endgame in order to upgrade to the latest verison of the Endgame Slack app.
 
-  To do this, someone with both Endgame Admin status and Slack Admin status (if a person does not have Slack Admin status they will need to request approval, see Step 3 above) should go to the Slack [integration page](https://app.endgame.io/settings/integrations/slack) and hover over the "Connected" button in the top right corner. When is shows "Reconnect?" click the button and you will be taken through the Slack authentication flow. Going through this flow automatically connects you to the new Slack app and adds the new Endgame app to all your existing channel connections. 
+  To do this, someone with both Endgame Admin status and Slack Admin status (if a person does not have Slack Admin status they will need to request approval, see Step 3 above) should go to the Slack [integration page](https://app.endgame.io/settings/integrations/slack) and hover over the "Connected" button in the top right corner. When is shows "Reconnect?" click the button and you will be taken through the Slack authentication flow. Going through this flow automatically connects you to the new Slack app and adds the new Endgame app to all your existing channel connections.
 
-    <Frame content="Reconnect Slack">
-      <img
-        src="../images/reconnect-slack-10-10-25.png"
-        alt="Reconnect Slack"
-        className="rounded-lg"
-      />
-    </Frame>
-
-  Once you have added the new app, it is helpful to delete the old app from your Slack workspace to make it clear to users which Endgame app to use. A Slack administrator can do this in the "Manage Apps" section by finding the old app (the lighter blue logo) and uninstalling it. 
-  
-  <Frame caption="Endgame bot in Slack">
-      <img
-        src="../images/endgame-bot-v1-10-10-25.png"
-        alt="Endgame bot in Slack"
-        className="rounded-lg"
-      />
+  <Frame>
+    <img
+      src="../images/reconnect-slack-10-10-25.png"
+      alt="Reconnect Slack"
+      className="rounded-lg"
+    />
   </Frame>
-    <br/>
+  Once you have added the new app, it is helpful to delete the old app from your Slack workspace to make it clear to users which Endgame app to use. A Slack administrator can do this in the "Manage Apps" section by finding the old app (the lighter blue logo) and uninstalling it.
+
+  <Frame caption="Endgame bot in Slack">
+    <img
+      src="../images/endgame-bot-v1-10-10-25.png"
+      alt="Endgame bot in Slack"
+      className="rounded-lg"
+    />
+  </Frame>
+  <br />
+
   <Frame caption="Uninstall app">
-      <img
-        src="../images/uninstall-endgame-app-slack-10-10-25.png"
-        alt="Uninstall app"
-        className="rounded-lg"
-      />
-    </Frame>
-    
+    <img
+      src="../images/uninstall-endgame-app-slack-10-10-25.png"
+      alt="Uninstall app"
+      className="rounded-lg"
+    />
+  </Frame>
 </Accordion>
-  
+
 ## Need help or have feedback?
 
 We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).
