@@ -89,7 +89,8 @@
           "features/file-upload",
           "features/export-thread-content",
           "features/slack",
-          "features/mcp-server"
+          "features/mcp-server",
+          "features/user-memory"
         ]
       },
       {
