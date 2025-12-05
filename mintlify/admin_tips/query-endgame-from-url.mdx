@@ -3,40 +3,39 @@ title: "Querying Endgame via URL"
 description: "You can launch Endgame queries directly from a URL—useful for bookmarks, Salesforce and Slack workflows, or embedding links in dashboards and documentation."
 ---
 
-### Basic Query
+### Base URL
 
-`https://app.endgame.io/threads/new?firstMessage=<your prompt>`
+```
+https://app.endgame.io/threads/new
+```
 
-URL-encode your prompt (spaces become `+` or `%20`).
+### Query Parameters
 
-**Example:**
+| Parameter      | Description                                                                    | Example                                     |
+| -------------- | ------------------------------------------------------------------------------ | ------------------------------------------- |
+| `firstMessage` | The prompt you want Endgame to answer (URL-encoded)                            | `firstMessage=what's+the+latest+in+my+book` |
+| `template_id`  | The ID of a saved Endgame template to run—use this _instead of_ `firstMessage` | `template_id=abc123`                        |
+| `accountId`    | The Salesforce Account ID you want the thread scoped to                        | `accountId=0015f00000ABC123`                |
+| `mode`         | Force Search or Research mode                                                  | `mode=research`                             |
 
-`https://app.endgame.io/threads/new?firstMessage=summarize+risk+in+my+accounts`
+To find template IDs, Admins can navigate to https://app.endgame.io/settings/templates, click the dropdown menu on any template, and select **Copy ID**.
 
-### Using a Template
+![Screenshot2025 12 05at1 05 49PM Pn](/mintlify/images/Screenshot2025-12-05at1.05.49PM.png)
 
-Replace `firstMessage` with `template_id` to run a saved template:
+### Examples
 
-`https://app.endgame.io/threads/new?template_id=<template ID>`
+**Free-form prompt:**
 
-To find template IDs: Admins can navigate to `https://app.endgame.io/settings/templates`, click the dropdown menu on any template, and select **Copy ID**.
+```
+https://app.endgame.io/threads/new?firstMessage=summarize+my+recent+action+items
+```
 
-### Scoping to a Specific Account
+**Using a template:**
 
-Append `&accountId=` with the Salesforce Account ID to run a query or template against a specific account:
+```
+https://app.endgame.io/threads/new?template_id=abc123&accountId=0015f00000ABC123&mode=research
+```
 
-`https://app.endgame.io/threads/new?firstMessage=summarize+recent+activity&accountId=0015f00000ABC123`
+### A note on URL encoding
 
-### Specifying Response Mode
-
-Force Endgame to use Search or Research mode by appending `&mode=`:
-
-**Example:**
-
-`https://app.endgame.io/threads/new?firstMessage=competitive+landscape&mode=research`
-
-### Combining Parameters
-
-You can chain parameters together:
-
-`https://app.endgame.io/threads/new?template_id=abc123&accountId=0015f00000XYZ&mode=research`
+Prompts need to be URL-encoded (e.g., spaces become `+` or `%20`). This is standard web behavior, not Endgame-specific. See [MDN's guide to URL encoding](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) for more detail.
