@@ -116,9 +116,10 @@
           "admin-getting-started",
           "integrations/initial-connection-to-endgame",
           {
-            "group": "Integration Guides",
+            "group": "Tips & Tricks",
             "pages": [
-              "integrations/salesforce-essentials-for-admins"
+              "integrations/salesforce-essentials-for-admins",
+              "admin_tips/query-endgame-from-url"
             ]
           },
           {
