@@ -90,7 +90,7 @@
           "features/export-thread-content",
           "features/slack",
           "features/mcp-server",
-          "features/user-memory"
+          "features/user-preferences"
         ]
       },
       {
