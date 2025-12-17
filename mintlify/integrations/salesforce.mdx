@@ -8,6 +8,10 @@ icon: "salesforce"
 
 Endgame authenticates users via Salesforce OAuth. This allows for a seamless and secure user experience by leveraging Salesforce's robust authentication framework.
 
+The API Integration User should sign in to Endgame first if you are using one.  Endgame pulls data using the first user who connects - subsequent logins are only used for SSO.
+
+An admin can change the integration user on the [integration settings page](https://app.endgame.io/settings/integrations).
+
 ## Connected App Approval
 
 <Warning>
@@ -18,12 +22,26 @@ Salesforce requires an approval process for Connected Apps, which needs to be co
 
 After going through the initial OAuth handshake, navigate to `Setup` -\> `Connected Apps` -\> `Connected Apps OAuth Usage` and click `Install` next to the EndgameLabs2 app.
 
+## User Permissions
+
+If you encounter an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to Endgame, check the following:
+
+**Connected App Approval** - The `EndgameLabs2` Salesforce Connected App must be approved in Salesforce before users can log in.
+
+**Users** - Check the `Permitted Users` setting under `Apps -> Connected Apps -> Manage Connected Apps -> EndgameLabs2` in Salesforce.  `Permitted Users` has two options:
+
+- `All users may self-authorize`- all users will be able to access Endgame without pre-approval in Salesforce
+- `Admin approved users are pre-authorized`- individual users will need to be assigned a profile or permission set that grants them access to the app.
+
+**Integration User** - The integration user must have the `Approve Uninstalled Connected Apps` permission to connect and for the `EndgameLabs2` app to show up in Salesforce.
+
 ## (Optional) API Integration User
 
 Endgame accesses data using the Bulk API 2.0 APIs, so the initial connection can be done with a dedicated API Integration user.  In salesforce user creation, select:
 
 - **User License**: Salesforce Integration
 - **Profile**: Minimum Access - API Only Integrations
+- **Additional Permissions**: `Approve Uninstalled Connected Apps`
 
 Use the integration user for the initial connection to Endgame.
 
@@ -43,7 +61,7 @@ Data from Salesforce is fetched using the credentials of the first user to log i
 
 ## Default objects
 
-Endgame ingests a number of Salesforce objects by default, many of these are accessible via chat including Account, Opportunity, and Contact. We will continue to make more object accessible in the future. 
+Endgame ingests a number of Salesforce objects by default, many of these are accessible via chat including Account, Opportunity, and Contact. We will continue to make more object accessible in the future.
 
 ## Important fields
 
@@ -55,18 +73,18 @@ To configure your Important fields:
 
 <Steps>
   <Step title="Go to Salesforce configuration page">
-    Navigate to [https://app.endgame.io/settings/integrations/salesforce](https://app.endgame.io/settings/integrations/salesforce) (only available to admins)
+    Navigate to https://app.endgame.io/settings/integrations/salesforce (only available to admins)
   </Step>
   <Step title="Select an object">
     Select the object that contains fields you deem important from an Endgame perspective.
 
-<Frame caption="Salesforce object selection">
-  <img
-    src="../images/salesforce-object-selection-9-29-25.png"
-    alt="Salesforce object selection"
-    className="rounded-lg"
-  />
-</Frame>
+    <Frame caption="Salesforce object selection">
+      <img
+        src="../images/salesforce-object-selection-9-29-25.png"
+        alt="Salesforce object selection"
+        className="rounded-lg"
+      />
+    </Frame>
   </Step>
   <Step title="Mark select fields as important">
     Search for and mark "Important" the fields you want Endgame to focus on. Then, click "Submit Changes". It will take a few minutes for your changes to be reflected.
