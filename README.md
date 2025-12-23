@@ -43,9 +43,9 @@ mintlify-docs/
 
 Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview documentation changes locally:
 
-```bash
-npm i -g mint
-```
+````bash
+
+```npm i -g mint
 
 ### Local Development
 
@@ -54,7 +54,7 @@ Navigate to the `/mintlify` directory and start the development server:
 ```bash
 cd mintlify
 mint dev
-```
+````
 
 View your local preview at `http://localhost:3000`.
 
@@ -85,6 +85,7 @@ mint update
 ## Monorepo Structure
 
 This project is deployed as a Mintlify "monorepo", which means:
+
 - All Mintlify documentation files are contained in the `/mintlify` subdirectory
 - The `mint.json` configuration file is located at `/mintlify/mint.json`
 - When running commands like `mint dev`, you must be in the `/mintlify` directory
@@ -105,11 +106,13 @@ The project includes an automated changelog generation system that processes ind
 ### Changelog Entry Format
 
 Individual changelog entries are stored in `/mintlify/changelog_entries/` with the naming convention:
+
 ```
 YYYY_MM_DD_prXXXX.change.md
 ```
 
 Each entry file contains:
+
 - A title heading (# Title)
 - Bullet points describing the changes
 - Links section with references to:
@@ -117,6 +120,7 @@ Each entry file contains:
   - Linear issues (e.g., https://linear.app/endgame/issue/END-XXXX)
 
 Example entry:
+
 ```markdown
 # New User Management Page
 
@@ -138,6 +142,7 @@ make changes
 ```
 
 This command:
+
 1. Activates the Python virtual environment
 2. Runs the `src/generate_changelog.py` script
 3. Processes all `.change.md` files in `/mintlify/changelog_entries/`
