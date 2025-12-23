@@ -59,21 +59,9 @@ Data from Salesforce is fetched using the credentials of the first user to log i
   Only accounts the integration user has permission to in Salesforce will be run through any AI systems. The integration user is the one you first log in with after consultation with Endgame. The user can be updated by going to the [integration page](https://app.endgame.io/settings/integrations/salesforce), hovering over the Connect button in the top right corner and clicking Reconnect.
 </Note>
 
-## Additional objects
-
-Endgame utilizes a set of Salesforce objects by default in your chat responses. You can add addtional objects to be referenced for chat responses in the [Salesforce admin configuration](https://app.endgame.io/settings/integrations/salesforce) under the Additional Objects section. Simply toggle the additional objects on for them to be processed.  
-
-<Frame caption="Additonal Salesforce objects">
-  <img
-    src="../images/additional-salesforce-objects-12-18-25.png"
-    alt="Additonal Salesforce objects"
-    className="rounded-lg"
-  />
-</Frame>
-
 ## Important fields
 
-Endgame references all standard fields in the above objects by default, and while custom fields are also ingested as part of the integration, Endgame does not automatically reference all custom fields as Salesforce instances often have hundreds of fields and only a handful that truly matter to help users deeply understand their accounts.
+Endgame references all standard fields in the Required Objects section by default, and while custom fields are also ingested as part of the integration, Endgame does not automatically reference all custom fields as Salesforce instances often have hundreds of fields and only a handful that truly matter to help users deeply understand their accounts.
 
 Instead, Endgame provides two mechanisms to reference information from custom fields: 1) by explicitly instructing Endgame to reference certain custom fields ("Important fields") within a chat prompt; and 2) by allowing administrators to designate specific custom fields for Endgame to reference by default.
 
@@ -111,3 +99,15 @@ To configure your Important fields:
     </Warning>
   </Step>
 </Steps>
+
+## Additional objects
+
+Endgame utilizes a set of Salesforce objects by default in your chat responses. You can add addtional objects to be referenced for chat responses in the [Salesforce admin configuration](https://app.endgame.io/settings/integrations/salesforce) under the Additional Objects section. Simply toggle the additional objects on for them to be processed.   
+
+<Frame caption="Additonal Salesforce objects">
+  <img
+    src="../images/additional-salesforce-objects-12-18-25.png"
+    alt="Additonal Salesforce objects"
+    className="rounded-lg"
+  />
+</Frame>
