@@ -8,6 +8,10 @@ icon: "salesforce"
 
 Endgame authenticates users via Salesforce OAuth. This allows for a seamless and secure user experience by leveraging Salesforce's robust authentication framework.
 
+The API Integration User should sign in to Endgame first if you are using one.  Endgame pulls data using the first user who connects - subsequent logins are only used for SSO.
+
+An admin can change the integration user on the [integration settings page](https://app.endgame.io/settings/integrations).
+
 ## Connected App Approval
 
 <Warning>
@@ -18,12 +22,26 @@ Salesforce requires an approval process for Connected Apps, which needs to be co
 
 After going through the initial OAuth handshake, navigate to `Setup` -\> `Connected Apps` -\> `Connected Apps OAuth Usage` and click `Install` next to the EndgameLabs2 app.
 
+## User Permissions
+
+If you encounter an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to Endgame, check the following:
+
+**Connected App Approval** - The `EndgameLabs2` Salesforce Connected App must be approved in Salesforce before users can log in.
+
+**Users** - Check the `Permitted Users` setting under `Apps -> Connected Apps -> Manage Connected Apps -> EndgameLabs2` in Salesforce.  `Permitted Users` has two options:
+
+- `All users may self-authorize`- all users will be able to access Endgame without pre-approval in Salesforce
+- `Admin approved users are pre-authorized`- individual users will need to be assigned a profile or permission set that grants them access to the app.
+
+**Integration User** - The integration user must have the `Approve Uninstalled Connected Apps` permission to connect and for the `EndgameLabs2` app to show up in Salesforce.
+
 ## (Optional) API Integration User
 
 Endgame accesses data using the Bulk API 2.0 APIs, so the initial connection can be done with a dedicated API Integration user.  In salesforce user creation, select:
 
 - **User License**: Salesforce Integration
 - **Profile**: Minimum Access - API Only Integrations
+- **Additional Permissions**: `Approve Uninstalled Connected Apps`
 
 Use the integration user for the initial connection to Endgame.
 
@@ -41,13 +59,9 @@ Data from Salesforce is fetched using the credentials of the first user to log i
   Only accounts the integration user has permission to in Salesforce will be run through any AI systems. The integration user is the one you first log in with after consultation with Endgame. The user can be updated by going to the [integration page](https://app.endgame.io/settings/integrations/salesforce), hovering over the Connect button in the top right corner and clicking Reconnect.
 </Note>
 
-## Default objects
-
-Endgame ingests a number of Salesforce objects by default, many of these are accessible via chat including Account, Opportunity, and Contact. We will continue to make more object accessible in the future. 
-
 ## Important fields
 
-Endgame references all standard fields in the above objects by default, and while custom fields are also ingested as part of the integration, Endgame does not automatically reference all custom fields as Salesforce instances often have hundreds of fields and only a handful that truly matter to help users deeply understand their accounts.
+Endgame references all standard fields in the Required Objects section by default, and while custom fields are also ingested as part of the integration, Endgame does not automatically reference all custom fields as Salesforce instances often have hundreds of fields and only a handful that truly matter to help users deeply understand their accounts.
 
 Instead, Endgame provides two mechanisms to reference information from custom fields: 1) by explicitly instructing Endgame to reference certain custom fields ("Important fields") within a chat prompt; and 2) by allowing administrators to designate specific custom fields for Endgame to reference by default.
 
@@ -55,29 +69,45 @@ To configure your Important fields:
 
 <Steps>
   <Step title="Go to Salesforce configuration page">
-    Navigate to [https://app.endgame.io/settings/integrations/salesforce](https://app.endgame.io/settings/integrations/salesforce) (only available to admins)
+    Navigate to the [Salesforce configuration page]( https://app.endgame.io/settings/integrations/salesforce) (only available to admins)
   </Step>
-  <Step title="Select an object">
-    Select the object that contains fields you deem important from an Endgame perspective.
+  <Step title="Configure important fields on required objects">
+   From the Required Objects list, click on an object with the Configure tag. 
 
-<Frame caption="Salesforce object selection">
+   <Frame caption="Required object configuration">
   <img
-    src="../images/salesforce-object-selection-9-29-25.png"
-    alt="Salesforce object selection"
+    src="../images/salesforce-integration-required-objects-12-18-25.png"
+    alt="Required object configuration"
     className="rounded-lg"
   />
 </Frame>
+
   </Step>
   <Step title="Mark select fields as important">
-    Search for and mark "Important" the fields you want Endgame to focus on. Then, click "Submit Changes". It will take a few minutes for your changes to be reflected.
+    Search for the fields you want Endgame to include in responses, use the checkbox to select them, then click Save Changes. It will take a few minutes for your changes to be reflected.
+    
+  <Frame caption="Configure object fields modal">
+  <img
+    src="../images/configure-object-field-modal-12-18-25.png"
+    alt="Configure object fields modal"
+    className="rounded-lg"
+  />
+</Frame>
 
     <Warning>
-      You can select up to 50 fields per object.
-    </Warning>
-    ![Screenshot 2025-07-23 at 8.42.36 PM.png](/images/Screenshot2025-07-23at8.42.36PM.png)
-
-    <Warning>
-      Standard fields along with custom fields that are populated on 1 or fewer records are omitted from the list.
+      You can select up to 50 fields per object. Standard fields along with custom fields that are populated on 1 or fewer records are omitted from the list.
     </Warning>
   </Step>
 </Steps>
+
+## Additional objects
+
+Endgame utilizes a set of Salesforce objects by default in your chat responses. You can add addtional objects to be referenced for chat responses in the [Salesforce admin configuration](https://app.endgame.io/settings/integrations/salesforce) under the Additional Objects section. Simply toggle the additional objects on for them to be processed.   
+
+<Frame caption="Additonal Salesforce objects">
+  <img
+    src="../images/additional-salesforce-objects-12-18-25.png"
+    alt="Additonal Salesforce objects"
+    className="rounded-lg"
+  />
+</Frame>
