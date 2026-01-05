@@ -100,7 +100,8 @@
           "integrations/gong",
           "integrations/slack",
           "integrations/zoom",
-          "integrations/google-drive"
+          "integrations/google-drive",
+          "integrations/confluence"
         ]
       },
       {
