@@ -101,7 +101,8 @@
           "integrations/slack",
           "integrations/zoom",
           "integrations/google-drive",
-          "integrations/confluence"
+          "integrations/confluence",
+          "integrations/chorus"
         ]
       },
       {
