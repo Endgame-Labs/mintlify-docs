@@ -6,7 +6,6 @@ icon: "slack"
 
 With the [Slack integration](/integrations/slack) configured in Endgame, you can  associate channels with accounts or your organization and launch Endgame threads directly from your Slack workspace.
 
-
 ### Associate channels for Endgame use
 
 If an administrator from you organization has already connected specific channels with accounts via the Endgame integration page, the Endgame app has already been automatically added to those channels. You can check if the app has been added by typing "@Endgame" into a public channel, if they app has not been added you will see "Not in Channel".
@@ -63,10 +62,12 @@ Organization-wide associations will also ingest channel data, but this data will
 
 Now that you have made the needed channel associations, you can start chatting with Endgame in Slack.
 
-Within any non-external channel that you have added the Endgame app and made an account or organization-wide association, simply type "@Endgame \<your prompt\>" and Endgame will spin up a thread to answer your question. 
+In general, organization-wide channels, EX #marketing, are intended for multi-account inquiries, while account-specific channels, EX #customer-acme, are intended for questions related to individual accounts.
+
+Within any non-external channel that you have added the Endgame app and made an account or organization-wide association, simply type "@Endgame \<your prompt\>" and Endgame will spin up a thread to answer your question.
 
 <Info>
-External channels intentionally prevent bot chat functionality to avoid exposing internal organization data to outside users via chat.<br/>Organization-wide channels are intended for multi-account inquiries, while account-specific channels are intended for questions related to individual accounts.
+  Connected external Slack channels are read-only for fact generation. Bot chat is disabled to protect internal organization data from external exposure.
 </Info>
 
 <Frame caption="Endgame prompt in Slack">
