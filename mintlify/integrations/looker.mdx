@@ -9,7 +9,7 @@ Use the instructions below to enable the Looker integration in Endgame. Once ena
 ## Adding the App
 
 <Warning>
-  Connecting to Looker requires that the connecting user can access the Looker admin interface.
+  Connecting to Looker requires that the connecting user is a Looker admin.
 </Warning>
 
 <Steps>
@@ -25,7 +25,20 @@ Use the instructions below to enable the Looker integration in Endgame. Once ena
     </Frame>
   </Step>
   <Step title="Add Looker client details">
-    On the integrations page, click Connect for Looker. From the Looker admin interface copy the Client ID, Client Secret, and Tenant URL into the connection modal fields and click Connect.
+    On the integrations page, click Connect for Looker. This will open the Looker connection modal in Endgame.
+
+    Within Looker:
+
+    1. Click **Admin** in the left side menu
+    2. Click **Users**
+    3. Click your own name
+    4. Scroll down to the API Keys section and click **Edit Keys**
+    5. Click **New API Key**
+
+      - **Client ID**: Copy and save this value
+      - **Client Secret**: Copy and save this immediately - it will only be shown once
+
+    6. Your **Tenant URL** is your Looker instance URL (the domain you use to access Looker), such as: `https://your-company.looker.com`
 
     <Frame caption="Connection modal">
       <img
@@ -36,9 +49,11 @@ Use the instructions below to enable the Looker integration in Endgame. Once ena
     </Frame>
   </Step>
   <Step title="Add Looker queries">
-    Once your client details have been added, you'll be routed to the Looker management page where you can see existing queries. Click on the Add Query button in the top right corner and copy in the Query ID for the data you would like Endgame to ingest. It is helpful to add a Title and Description for not only data analysis, but also for managing your queries. Once you enter a valid Query ID, you will see a preview of the first 10 rows of the query. Once saved, a initial ingest of the query data will be initiated.
-
-    Users can delete a saved query at anytime by hovering over the query and clicking on the trash icon.
+    Once your client details have been added, you'll be routed to the Looker management page where you can see existing queries. 
+    
+    Click on the Add Query button in the top right corner. You can access the Query ID (qid) for your query by looking for the `qid=` value in the Looker url. Navigate to the Looker data view you wish for Endgame to ingest and then copy the value from the url into Endgame. Once you enter a valid Query ID, you will see a preview of the first 10 rows of the query. Once saved, a initial ingest of the query data will be initiated.
+    
+    It is helpful to add a Title and Description for not only data analysis, but also for managing your queries. Users can delete a saved query at anytime by hovering over the query and clicking on the trash icon.
 
     <Frame caption="Looker query list">
       <img
@@ -56,4 +71,7 @@ Use the instructions below to enable the Looker integration in Endgame. Once ena
     </Frame>
   </Step>
 </Steps>
- <Info>Because of their nature, Looker queries are assumed to be applicable at an organization level applying to many accounts. They are not account specific.</Info>
+
+<Info>
+  Because of their nature, Looker queries are assumed to be applicable at an organization level, relevant to many accounts. They are not account specific.
+</Info>
