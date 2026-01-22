@@ -97,12 +97,13 @@
         "group": "Integrations",
         "pages": [
           "integrations/salesforce",
-          "integrations/gong",
-          "integrations/slack",
-          "integrations/zoom",
-          "integrations/google-drive",
+          "integrations/chorus",
           "integrations/confluence",
-          "integrations/chorus"
+          "integrations/gong",
+          "integrations/google-drive",
+          "integrations/looker",
+          "integrations/slack",
+          "integrations/zoom"     
         ]
       },
       {

@@ -1,0 +1,77 @@
+---
+title: "Looker Integration"
+description: "Grant Endgame access to execute select Looker queries"
+icon: "chart-bar"
+---
+
+Use the instructions below to enable the Looker integration in Endgame. Once enabled, Endgame will query your Looker data once per day and include Looker insights in your Endagme chats.
+
+## Adding the App
+
+<Warning>
+  Connecting to Looker requires that the connecting user is a Looker admin.
+</Warning>
+
+<Steps>
+  <Step title="Access integrations">
+    Log into Endgame and navigate to the [integrations](https://app.endgame.io/settings/integrations) page.
+
+    <Frame caption="Integrations page">
+      <img
+        src="../images/integrations-view-01-20-26.png"
+        alt="Integrations page"
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+  <Step title="Add Looker client details">
+    On the integrations page, click Connect for Looker. This will open the Looker connection modal in Endgame.
+
+    Within Looker:
+
+    1. Click **Admin** in the left side menu
+    2. Click **Users**
+    3. Click your own name
+    4. Scroll down to the API Keys section and click **Edit Keys**
+    5. Click **New API Key**
+
+    - **Client ID**: Copy and save this value
+    - **Client Secret**: Copy and save this immediately - it will only be shown once
+
+    6. Your **Tenant URL** is your Looker instance URL (the domain you use to access Looker), such as: `https://your-company.looker.com`
+
+    <Frame caption="Connection modal">
+      <img
+        src="../images/connect-looker-modal-01-20-26.png"
+        alt="Connection modal"
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+  <Step title="Add Looker queries">
+    Once your client details have been added, you'll be routed to the Looker management page where you can see existing queries.
+
+    Click on the Add Query button in the top right corner.  Navigate to the explorer view for the  Looker data you wish for Endgame to ingest. Click on the gear icon in the top right of the screen, then Share.  Copy everything after the last "/" in the url from the Short URL and paste it into Endgame. Once you enter a valid Query ID, you will see a preview of the first 10 rows of the query. Once saved, a initial ingest of the query data will be initiated.
+
+    It is helpful to add a Title and Description for not only data analysis, but also for managing your queries. Users can delete a saved query at anytime by hovering over the query and clicking on the trash icon.
+
+    <Frame caption="Looker query list">
+      <img
+        src="../images/looker-query-list-01-20-26.png"
+        alt="Looker query list"
+        className="rounded-lg"
+      />
+    </Frame>
+    <Frame caption="Looker query connection">
+      <img
+        src="../images/looker-query-modal-01-20-26.png"
+        alt="Looker query connection"
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+<Info>
+  Because of their nature, Looker queries are assumed to be applicable at an organization level, relevant to many accounts. They are not account specific.
+</Info>
