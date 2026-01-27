@@ -66,16 +66,20 @@
     }
   },
   "navigation": {
-    "pages": [
+    "groups": [
       {
         "group": "Welcome",
-        "pages": ["index", "changelog"]
+        "pages": [
+          "index",
+          "changelog"
+        ]
       },
       {
         "group": "Getting Started",
         "pages": [
           "core-concepts",
           "navigating-endgame",
+          "getting-started/your-first-10-minutes",
           "endgame-chat-101",
           "endgame-chat-201"
         ]
@@ -103,7 +107,7 @@
           "integrations/google-drive",
           "integrations/looker",
           "integrations/slack",
-          "integrations/zoom"     
+          "integrations/zoom"
         ]
       },
       {
@@ -146,14 +150,22 @@
       },
       {
         "group": "Trust & Support",
-        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
+        "pages": [
+          "vdp",
+          "trust/security",
+          "trust/privacy",
+          "status",
+          "contact"
+        ]
       },
       {
         "group": "Resources",
-        "pages": ["platform", "homepage"]
+        "pages": [
+          "platform",
+          "homepage"
+        ]
       }
-    ],
-    "anchors": []
+    ]
   },
   "redirects": [
     {
