@@ -79,8 +79,7 @@
         "pages": [
           "core-concepts",
           "navigating-endgame",
-          "getting-started/your-first-10-minutes",
-          "endgame-chat-101",
+          "your-first-10-minutes",
           "endgame-chat-201"
         ]
       },
@@ -100,12 +99,12 @@
       {
         "group": "Integrations",
         "pages": [
-          "integrations/salesforce",
           "integrations/chorus",
           "integrations/confluence",
           "integrations/gong",
           "integrations/google-drive",
           "integrations/looker",
+          "integrations/salesforce",
           "integrations/slack",
           "integrations/zoom"
         ]
