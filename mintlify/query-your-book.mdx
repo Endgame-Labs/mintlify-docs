@@ -1,0 +1,219 @@
+---
+title: "Query Your Book"
+description: "Ask questions across all your accounts from the homepage"
+icon: "globe"
+---
+
+## Introduction
+
+In [Your First 10 Minutes](/your-first-10-minutes), you asked questions about a single account. But Endgame can also answer questions across your entire book of business or the entire organization.
+
+That's what the homepage is for.
+
+---
+
+<Columns cols={2}>
+  <Card title="When to use book-level queries" icon="globe">
+    - Find patterns across multiple accounts
+    - Prioritize where to spend your time
+    - Prep for pipeline reviews or forecast calls
+    - Spot risks or opportunities you might be missing
+    - Get a digest of what's happening across your book
+  </Card>
+  <Card title="When to use account-level queries" icon="building">
+    - Deep-dive on a specific account
+    - Prep for a meeting with one customer
+    - Research stakeholders at one company
+    - Draft outreach for a specific deal
+    - Prospect or identify whitespace to expand a customer
+  </Card>
+</Columns>
+
+---
+
+## How it works
+
+From the [homepage](https://app.endgame.io/), you'll see the same chat interface as on account pages. The difference is that Endgame will search across all accounts you have access to, not just one.
+
+<Frame caption="Endgame home page">
+  ![Image](/images/image-4.png)
+</Frame>
+
+Type your question and hit enter. Endgame will:
+
+1. Identify which accounts are relevant to your question
+2. Pull data from those accounts
+3. Synthesize insights across them
+
+---
+
+## Sample prompts by use case
+
+### Pipeline review & prioritization
+
+```
+Which of my deals closing this month need the most attention? 
+For each, tell me the current status, biggest risk, and what I should do this week.
+```
+
+```
+Look at my open opportunities. Which ones have gone quiet in the last 2 weeks? 
+Include last activity date and suggested re-engagement approach.
+```
+
+```
+Rank my top 10 opportunities by likelihood to close. 
+Explain your reasoning for each.
+```
+
+### Account prioritization
+
+```
+Which accounts in my book are being underworked relative to their potential? 
+Consider fit, recent engagement, and any buying signals.
+```
+
+```
+I have time for 5 prospecting calls this week. 
+Which accounts should I prioritize and why?
+```
+
+```
+Which of my accounts have had leadership changes in the last 90 days? 
+Include who changed, their new role, and whether we have a relationship with them.
+```
+
+### Weekly planning
+
+```
+Give me a weekly brief for my book. 
+Include: deals that need action, accounts with recent news, and any meetings coming up.
+```
+
+```
+What happened across my accounts last week? 
+Summarize key emails, calls, and any notable events.
+```
+
+```
+What are the most important things I should do this week across my accounts?
+```
+
+### Forecast & pipeline health
+
+```
+How healthy is my pipeline for this quarter? 
+Break it down by stage and flag any deals that are at risk.
+```
+
+```
+Which of my commit deals have risk factors I should be aware of?
+```
+
+```
+Compare my pipeline now vs. 30 days ago. 
+What's improved, what's gotten worse?
+```
+
+### Competitive & win/loss analysis
+
+```
+Which competitors are showing up in my deals? 
+How are we positioned against each?
+```
+
+```
+Summarize my closed-lost deals from the last quarter. 
+What were the main reasons we lost? Any patterns?
+```
+
+```
+In deals where [Competitor] came up, what objections or concerns did prospects raise? 
+How did we respond?
+```
+
+```
+What objections have come up most frequently across my deals in the last 3 months? 
+Include examples from specific calls.
+```
+
+---
+
+## Tips for better book-level queries
+
+<CardGroup cols={2}>
+  <Card title="Be specific about scope" icon="list-filter">
+    "My accounts" vs "all accounts" vs "accounts closing this quarter" will give you different results. Say what you mean.
+  </Card>
+  <Card title="Set time boundaries" icon="calendar">
+    "Last 30 days" or "this quarter" helps Endgame focus on relevant data.
+  </Card>
+  <Card title="Ask for rankings" icon="list-ordered">
+    "Top 5" or "rank by priority" forces Endgame to synthesize rather than just list.
+  </Card>
+  <Card title="Request specific outputs" icon="table">
+    "Put this in a table" or "give me bullet points" makes results easier to scan and act on.
+  </Card>
+</CardGroup>
+
+---
+
+## Working with results
+
+Book-level queries often return tables with multiple accounts. Here's what you can do with them:
+
+**Drill into an account:** Click any account name in the results to open that account's detail page and continue the conversation there.
+
+**Export the data:** Hover over tables to copy as CSV, download, or export to Google Sheets.
+
+**Save as a template:** If you find yourself running the same query weekly, [save it as a template](/templates/templates-101) so you can rerun it with one click.
+
+**Schedule it:** Use [Tasks](/features/tasks) to get book-level insights delivered to your inbox on a schedule.
+
+---
+
+## Book-level vs. account-level: a quick guide
+
+| I want to...                                     | Where to ask |
+| ------------------------------------------------ | ------------ |
+| Research one specific company                    | Account page |
+| Find which accounts need attention               | Homepage     |
+| Prep for a meeting with Acme Inc                 | Account page |
+| Prep for my weekly pipeline review               | Homepage     |
+| Write an email to a specific contact             | Account page |
+| See what competitors are showing up across deals | Homepage     |
+| Analyze why we're losing deals                   | Homepage     |
+| Deep-dive on a single deal                       | Account page |
+| Prioritize my week                               | Homepage     |
+
+---
+
+## Common questions
+
+<AccordionGroup>
+  <Accordion title="Which accounts does Endgame search?">
+    By default, Endgame searches accounts you have access to based on your Salesforce permissions and ownership. If you want to narrow or expand the scope, say so in your prompt (e.g., "across all enterprise accounts" or "just my named accounts").
+  </Accordion>
+  <Accordion title="Why is this slower than account-level queries?">
+    Book-level queries search across more data. The more accounts involved, the longer it takes. You can speed things up by narrowing your scope or time range.
+  </Accordion>
+  <Accordion title="Can I save book-level queries?">
+    Yes. Save them as templates from the [templates menu](/templates/create-manage-templates), or schedule them as Tasks to run automatically.
+  </Accordion>
+  <Accordion title="Where do I find my past book-level threads?">
+    Click **Threads** in the left navigation to see all your non-account-specific conversations.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Schedule a weekly digest" icon="calendar-clock" href="/features/tasks">
+    Get book-level insights delivered automatically
+  </Card>
+  <Card title="Save prompts as templates" icon="bookmark" href="/features/templates">
+    Rerun your best queries with one click
+  </Card>
+</CardGroup>
