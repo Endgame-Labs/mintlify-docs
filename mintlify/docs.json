@@ -69,10 +69,7 @@
     "groups": [
       {
         "group": "Welcome",
-        "pages": [
-          "index",
-          "changelog"
-        ]
+        "pages": ["index", "changelog"]
       },
       {
         "group": "Getting Started",
@@ -107,15 +104,13 @@
           "integrations/looker",
           "integrations/salesforce",
           "integrations/slack",
+          "integrations/snowflake",
           "integrations/zoom"
         ]
       },
       {
         "group": "Access",
-        "pages": [
-          "authentication/index",
-          "authentication/google"
-        ]
+        "pages": ["authentication/index", "authentication/google"]
       },
       {
         "group": "Admin Guides",
@@ -150,20 +145,11 @@
       },
       {
         "group": "Trust & Support",
-        "pages": [
-          "vdp",
-          "trust/security",
-          "trust/privacy",
-          "status",
-          "contact"
-        ]
+        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
       },
       {
         "group": "Resources",
-        "pages": [
-          "platform",
-          "homepage"
-        ]
+        "pages": ["platform", "homepage"]
       }
     ]
   },
