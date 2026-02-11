@@ -69,10 +69,7 @@
     "groups": [
       {
         "group": "Welcome",
-        "pages": [
-          "index",
-          "changelog"
-        ]
+        "pages": ["index", "changelog"]
       },
       {
         "group": "Getting Started",
@@ -87,7 +84,7 @@
       {
         "group": "Features",
         "pages": [
-          "features/templates",
+          "features/skills",
           "features/publishing-artifacts",
           "features/tasks",
           "features/file-upload",
@@ -112,10 +109,7 @@
       },
       {
         "group": "Access",
-        "pages": [
-          "authentication/index",
-          "authentication/google"
-        ]
+        "pages": ["authentication/index", "authentication/google"]
       },
       {
         "group": "Admin Guides",
@@ -130,12 +124,9 @@
             ]
           },
           {
-            "group": "Template Management",
+            "group": "Skills",
             "pages": [
-              "templates/create-manage-templates",
-              "templates/templates-101",
-              "templates/templates-201",
-              "templates/templates-301"
+              "skills/skills-101"
             ]
           },
           {
@@ -150,20 +141,11 @@
       },
       {
         "group": "Trust & Support",
-        "pages": [
-          "vdp",
-          "trust/security",
-          "trust/privacy",
-          "status",
-          "contact"
-        ]
+        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
       },
       {
         "group": "Resources",
-        "pages": [
-          "platform",
-          "homepage"
-        ]
+        "pages": ["platform", "homepage"]
       }
     ]
   },
