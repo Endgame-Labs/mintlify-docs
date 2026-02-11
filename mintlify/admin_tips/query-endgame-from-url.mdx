@@ -14,10 +14,7 @@ https://app.endgame.io/threads/new
 | Parameter      | Description                                                                    | Example                                     |
 | -------------- | ------------------------------------------------------------------------------ | ------------------------------------------- |
 | `firstMessage` | The prompt you want Endgame to answer (URL-encoded)                            | `firstMessage=what's+the+latest+in+my+book` |
-| `template_id`  | The ID of a saved Endgame template to run—use this _instead of_ `firstMessage` | `template_id=abc123`                        |
 | `accountId`    | The Salesforce Account ID you want the thread scoped to                        | `accountId=0015f00000ABC123`                |
-
-To find template IDs, Admins can navigate to https://app.endgame.io/settings/templates, click the dropdown menu on any template, and select **Copy ID**.
 
 ![Screenshot2025 12 05at1 05 49PM Pn](/mintlify/images/Screenshot2025-12-05at1.05.49PM.png)
 
@@ -27,12 +24,6 @@ To find template IDs, Admins can navigate to https://app.endgame.io/settings/tem
 
 ```
 https://app.endgame.io/threads/new?firstMessage=summarize+my+recent+action+items
-```
-
-**Using a template:**
-
-```
-https://app.endgame.io/threads/new?template_id=abc123&accountId=0015f00000ABC123&mode=research
 ```
 
 ### A note on URL encoding
