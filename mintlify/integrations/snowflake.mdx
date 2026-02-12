@@ -43,7 +43,7 @@ Open a SQL worksheet in Snowflake (click + Create → SQL File) and run the foll
 1.  Create a read-only role:
 
 ```
-CREATE ROLE endgame_connector_readonly;
+CREATE ROLE ENDGAME_CONNECTOR_READONLY;
 ```
 
 This creates a new role with no permissions. You'll grant specific permissions in the next steps.
@@ -51,7 +51,7 @@ This creates a new role with no permissions. You'll grant specific permissions i
 2.  Grant warehouse access:
 
 ```
-GRANT USAGE ON WAREHOUSE <your_warehouse> TO ROLE endgame_connector_readonly;
+GRANT USAGE ON WAREHOUSE <your_warehouse> TO ROLE ENDGAME_CONNECTOR_READONLY;
 ```
 
 Replace `<your_warehouse>` with your warehouse name (e.g., COMPUTE_WH). This allows the role to run queries.
@@ -62,21 +62,21 @@ Replace `<your_warehouse>` with your warehouse name (e.g., COMPUTE_WH). This all
 **For standard databases:**
 
 ```
-GRANT USAGE ON DATABASE <database_name> TO ROLE endgame_connector_readonly;
-GRANT USAGE ON ALL SCHEMAS IN DATABASE <database_name> TO ROLE endgame_connector_readonly;
-GRANT SELECT ON ALL TABLES IN DATABASE <database_name> TO ROLE endgame_connector_readonly;
-GRANT SELECT ON ALL VIEWS IN DATABASE <database_name> TO ROLE endgame_connector_readonly;
+GRANT USAGE ON DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
+GRANT USAGE ON ALL SCHEMAS IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
+GRANT SELECT ON ALL TABLES IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
+GRANT SELECT ON ALL VIEWS IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
 
 -- For future objects (so new tables are automatically accessible)
-GRANT USAGE ON FUTURE SCHEMAS IN DATABASE <database_name> TO ROLE endgame_connector_readonly;
-GRANT SELECT ON FUTURE TABLES IN DATABASE <database_name> TO ROLE endgame_connector_readonly;
-GRANT SELECT ON FUTURE VIEWS IN DATABASE <database_name> TO ROLE endgame_connector_readonly;
+GRANT USAGE ON FUTURE SCHEMAS IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
+GRANT SELECT ON FUTURE TABLES IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
+GRANT SELECT ON FUTURE VIEWS IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
 ```
 
 **For shared/imported databases:**
 
 ```
-GRANT IMPORTED PRIVILEGES ON DATABASE <database_name> TO ROLE endgame_connector_readonly;
+GRANT IMPORTED PRIVILEGES ON DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
 ```
 
 4.  Create the service user:
@@ -87,7 +87,7 @@ Remove any newlines so it's a single continuous string.
 Then create the user:
 
 ```
-CREATE USER endgame_service
+CREATE USER ENDGAME_SERVICE_USER
 TYPE = SERVICE
 RSA_PUBLIC_KEY = '<your_public_key_content>';
 ```
@@ -95,10 +95,10 @@ RSA_PUBLIC_KEY = '<your_public_key_content>';
 5.  Assign the role to the service user:
 
 ```
-GRANT ROLE endgame_connector_readonly TO USER endgame_service;
+GRANT ROLE ENDGAME_CONNECTOR_READONLY TO USER ENDGAME_SERVICE_USER;
 
-ALTER USER endgame_service SET DEFAULT_WAREHOUSE = <your_warehouse>;
-ALTER USER endgame_service SET DEFAULT_ROLE = endgame_connector_readonly;
+ALTER USER ENDGAME_SERVICE_USER SET DEFAULT_WAREHOUSE = <your_warehouse>;
+ALTER USER ENDGAME_SERVICE_USER SET DEFAULT_ROLE = ENDGAME_CONNECTOR_READONLY;
 ```
 
 </Step>
