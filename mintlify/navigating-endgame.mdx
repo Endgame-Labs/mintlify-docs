@@ -43,7 +43,8 @@ Open search by clicking on the search button in the middle of the home page, the
 </Frame>
 
 <Note>
-  **Important:** The only companies you will see are those with Account records in Salesforce that Endgame has been given access to.
+  **Important:** The only companies you will see are those with Account records
+  in Salesforce that Endgame has been given access to.
 </Note>
 
 ## Accounts page
@@ -92,7 +93,7 @@ There are a few pre-built ways to sort the list: by Last Viewed, Last Interactio
 
 ## Account detail page
 
-Once you get to an account, you'll be presented with the Account Detail page. The core concepts within this page: Ask AI (chat), Timeline, Threads, Artifacts, and Files.
+Once you get to an account, you'll be presented with the Account Detail page. The core concepts within this page: Ask AI (chat), Timeline, Threads, Shared Threads, and Files.
 
 <Frame caption="Account detail page">
   <img
@@ -115,7 +116,9 @@ Once you get to an account, you'll be presented with the Account Detail page. Th
 Think of this as a ChatGPT that's deeply tuned to your business model and sales strategy with access to your internal CRM & call data. The questions you can ask can thus be quite detailed and specific. Here's a [quick guide on prompts](/your-first-10-minutes) and [templates](/features/templates) to help you get started.
 
 <Tip>
-  Explore different angles of questions and account inspection by clicking from the rotating set templates from your organization's template library that appear below the chat input.
+  Explore different angles of questions and account inspection by clicking from
+  the rotating set templates from your organization's template library that
+  appear below the chat input.
 </Tip>
 
 When you ask a question, you'll be taken to a new page that represents the Thread of your chat conversation. You can ask multiple questions in that Thread, and you can always get back to it from the Library.
@@ -154,14 +157,14 @@ Threads that have not been published are available in this tab and will persist 
   />
 </Frame>
 
-### Artifacts
+### Shared Threads
 
-Artifacts are Threads that have been published, which enables external sharing of a Thread via a link with non-Endgame users. Publishing a Thread will also make the thread public and viewable by other Endgame users in the Account Library.
+Users can share threads which enables external sharing of a Thread via a link with non-Endgame users. Sharing a Thread will also make the thread public and viewable by other Endgame users in the Account Library.
 
-<Frame caption="Account artifacts tab">
+<Frame caption="Shared Threads tab">
   <img
-    src="./images/artifacts-9-16-25.png"
-    alt="Account artifacts tab"
+    src="./images/shared-threads-tab-02-17-26.png"
+    alt="Shared Threads tab"
     className="rounded-lg"
   />
 </Frame>
@@ -199,7 +202,8 @@ You can automatically launch a specific prompt associated with an account when t
 `https://app.endgame.io/threads/new?accountId=[SALESFORCE_ACCOUNT_ID]&firstMessage=[YOUR_ENCODED_QUERY]` - Replace [YOUR_ENCODED_QUERY] with the actual encoded prompt.
 
 <Info>
-  Important: The query text must be URL-encoded (i.e. spaces become + signs). For example: Spaces → + or %20.
+  Important: The query text must be URL-encoded (i.e. spaces become + signs).
+  For example: Spaces → + or %20.
 </Info>
 
 Example: `https://app.endgame.io/threads/new?accountId=0011234567890ABC&firstMessage=Generate+a+MEDDPICC+and+risk+mitigation+analysis+on+this+account`
