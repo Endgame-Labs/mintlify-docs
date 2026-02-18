@@ -85,7 +85,7 @@
         "group": "Features",
         "pages": [
           "features/skills",
-          "features/publishing-artifacts",
+          "features/publishing-and-sharing",
           "features/tasks",
           "features/file-upload",
           "features/export-thread-content",
@@ -104,6 +104,7 @@
           "integrations/looker",
           "integrations/salesforce",
           "integrations/slack",
+          "integrations/snowflake",
           "integrations/zoom"
         ]
       },
