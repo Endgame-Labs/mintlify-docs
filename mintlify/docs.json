@@ -85,7 +85,7 @@
         "group": "Features",
         "pages": [
           "features/templates",
-          "features/publishing-artifacts",
+          "features/publishing-and-sharing",
           "features/tasks",
           "features/file-upload",
           "features/export-thread-content",
