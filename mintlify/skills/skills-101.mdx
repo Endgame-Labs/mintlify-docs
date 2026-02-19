@@ -1,1 +1,115 @@
-Skills 101
+---
+title: "Skills:"
+description: "Creating & Composing Skills"
+---
+
+## How to Compose a skill
+
+Skill content is a plain-text instruction set that tells the AI exactly how to approach a task. Think of it as writing a playbook for a new hire, the more context and structure you provide, the better the output.
+
+Every skill should answer three questions: _What is the goal? What information is needed? What should the output look like?_
+
+### The Basics: Simple Skill Example
+
+Generating a follow-up email after a discovery call:
+
+```
+# Follow-Up Email After Discovery Call
+
+## Goal
+Draft a personalized follow-up email to a prospect after an initial discovery call.
+
+## Inputs needed
+- Prospect name and company
+- Key pain points discussed
+- Next steps agreed upon
+- Rep name and title
+
+## Instructions
+1. Open with a brief, warm reference to the call
+2. Summarize the prospect's top 2-3 challenges in their own words
+3. Connect each challenge to a relevant capability
+4. Restate the agreed next steps clearly
+5. Close with a low-friction CTA
+
+## Output format
+Plain text email, under 200 words, no bullet points in the body.
+Subject line included.
+```
+
+Simple skills work best when the task is repeatable, the inputs are predictable, and the output has a clear format.
+
+### Going Deeper: Complex Skill Example
+
+Some tasks require more orchestration. Here's an outline for a more complex skill — building a pipeline health dashboard summary for a sales leader:
+
+```
+# Pipeline Health Dashboard Summary
+
+## Goal
+Generate a narrative summary of pipeline health for a sales leader's weekly review.
+Use the Deal Risk Scoring skill and the Coverage Ratio Calculator skill to compose the dashboard content.
+
+## Inputs needed
+- Current pipeline by stage (deal name, value, close date, owner)
+- Pipeline from same period last quarter
+- Any deals marked at-risk or stalled
+- Top 3 deals by value
+
+## Instructions
+1. Calculate total pipeline value and compare to last quarter
+2. Identify coverage ratio against quota
+3. Flag deals with no activity in 14+ days
+4. Highlight the top 3 deals — status, next step, confidence level
+5. Surface patterns: are deals stalling at a particular stage?
+6. Write an executive summary (3-4 sentences) a VP could read in 30 seconds
+
+## Output format
+Create an html dashboard that includes the following:
+Start with the executive summary.
+Follow with a structured table for each pipeline stage.
+End with a flagged list of at-risk deals and recommended actions.
+
+
+
+```
+
+### Skills Can Use Other Skills
+
+Just like a sales manager pulls in different playbooks depending on the situation, skills can reference and build on other skills.
+
+In the pipeline example above, instead of rewriting the logic for scoring deal risk or calculating coverage ratios, you simply reference those existing skills. The AI knows to apply them as part of the larger workflow.
+
+This keeps individual skills focused and reusable. A deal risk scoring skill used in a pipeline summary can be the same one used in a QBR prep skill or an account health review.
+
+To reference another skill, reference the skill by name in your current skill. The more clearly you name and describe those referenced skills, the better the results.
+
+### Tips for better results
+
+A few things that consistently improve output quality:
+
+**Be explicit about the output format.** Don't just say "write a summary" — specify length, structure, tone, and what to exclude. Sales leaders and reps consume information differently; a field rep wants a short email, a VP wants a crisp table.
+
+**Define your inputs clearly.** If the AI doesn't know what data to expect, it will make assumptions. List every field it should look for, and note what to do if something is missing ("if close date is blank, flag the deal as incomplete").
+
+**Include an example when the task is nuanced.** For something like a cold outreach email or a competitive battlecard, showing one good example inside the skill dramatically anchors the output.
+
+**Add edge case handling.** What should the skill do if a deal has no next step logged? If a prospect's industry isn't recognized? Anticipating gaps in the data leads to much cleaner results.
+
+**Keep one skill to one job.** If you find yourself writing a skill that does five different things, split it up. Focused skills are easier to maintain, easier to reuse, and tend to produce sharper outputs.
+
+## Writing a Great Skill Description
+
+The description is how people find and understand your skill — it lives in the skill library and shows up in search. A good description does three things: explains what the skill does, signals when to use it, and sets expectations on output.
+
+Here's what to include:
+
+**Lead with the outcome, not the process.** "Generates a personalized follow-up email after a discovery call" is more useful than "Takes call notes and writes an email."
+
+**Mention the trigger.** When should someone reach for this skill? Include phrases that match how people naturally describe the task — "after a discovery call," "before a QBR," "when a deal goes stale."
+
+**Note any key inputs or dependencies.** If the skill requires specific data (a CRM export, a call transcript, a competitor name), say so upfront so people aren't surprised.
+
+**Flag what it doesn't do.** If your pipeline summary skill covers new business but not renewals, say that. It saves confusion and builds trust in the tool.
+
+**Keep it under 500 characters for the short description.** You can add more detail in the full skill file, but the card-level description should be scannable in seconds.
