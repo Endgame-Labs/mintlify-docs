@@ -126,7 +126,7 @@
           },
           {
             "group": "Skill Management",
-            "pages": ["skills/skills-101"]
+            "pages": ["skills/quickstart", "skills/skills-101"]
           },
           {
             "group": "Knowledge Management",
