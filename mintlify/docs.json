@@ -84,7 +84,7 @@
       {
         "group": "Features",
         "pages": [
-          "features/templates",
+          "features/skills",
           "features/publishing-and-sharing",
           "features/tasks",
           "features/file-upload",
@@ -125,13 +125,8 @@
             ]
           },
           {
-            "group": "Template Management",
-            "pages": [
-              "templates/create-manage-templates",
-              "templates/templates-101",
-              "templates/templates-201",
-              "templates/templates-301"
-            ]
+            "group": "Skill Management",
+            "pages": ["skills/quickstart", "skills/skills-101"]
           },
           {
             "group": "Knowledge Management",
