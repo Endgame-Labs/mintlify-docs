@@ -1,0 +1,184 @@
+---
+title: "Rules 101: Codify how Endgame works for your org"
+description: "Use rules to give Endgame specific instructions for how to behave in your organization's context"
+icon: "scale-balanced"
+---
+
+Rules are specific instructions that tell Endgame how to behave in your organization's context. They're not general knowledge or reference material -- they're directives. "When a user asks about X, always do Y."
+
+Every organization has its own CRM schema, terminology, and conventions. Rules bridge the gap between how your team talks about things and how your data is actually structured, so Endgame consistently does the right thing without users needing to know the underlying details.
+
+## How rules work
+
+Every time a user asks Endgame a question, the system evaluates which rules are relevant and applies them. A rule about Salesforce field mappings won't be pulled in for a question about meeting prep -- but it will be applied any time someone asks about revenue, pipeline, or deal data.
+
+This means you can create as many rules as you need without worrying about noise. Endgame only applies the ones that matter for each question.
+
+## Two types of rules
+
+### System rules
+
+System rules are always active, regardless of what's being asked. There are two:
+
+**Key Titles** -- List the titles your team sells to, separated by commas. Include power users, champions, and buyers. This helps Endgame identify the right stakeholders and prioritize relevant contacts.
+
+**Value Proposition** -- Your core value props and why customers choose you. This is always included in Endgame's context so responses consistently reflect your positioning.
+
+<Tip>
+  System rules are always applied. Custom rules are only applied when Endgame determines they're relevant to the specific question. Use system rules for foundational context that should influence every interaction.
+</Tip>
+
+### Custom rules
+
+Custom rules are where you encode the specific behaviors Endgame should follow. You can create as many as you need, and Endgame will automatically determine which ones apply to each question.
+
+## What makes a good rule
+
+Rules work best when they're **specific behavioral instructions** -- telling Endgame exactly what to do in a particular situation. They follow a pattern: _when this context comes up, always do this._
+
+Common categories:
+
+- **Field mappings** -- Which CRM fields to query when users ask about specific concepts
+- **Terminology disambiguation** -- How your org's vocabulary maps to your underlying data
+- **Data presentation preferences** -- How certain information should be displayed or paired together
+- **Calculation definitions** -- How specific metrics should be computed from your data
+
+<Note>
+  Rules are not the place for longer reference material like competitive battlecards, sales methodology guides, or product positioning docs. That content belongs in [Knowledge](/knowledge/knowledge-basics-for-admins), where Endgame can reference it as needed. Rules are short, precise directives.
+</Note>
+
+## Example rules
+
+Here are examples that illustrate common patterns:
+
+### Map terminology to the right CRM field
+
+**Rule name:** Product Line Terminology
+
+```text
+When users ask about Salesforce opportunities associated with a "product line" or
+"product," always query the Product_Family__c field on the Opportunity object. Our team
+uses "product line" and "product family" interchangeably to refer to the same concept.
+
+If a user asks questions like:
+"What opportunities do we have for [X] product line?"
+"Show me deals tagged with [Y] product"
+"How many opportunities are there for each product line?"
+"Which product lines have the most pipeline value?"
+
+You should interpret these as requests to search, filter, or group by the Product_Family__c
+field in Salesforce Opportunities. Do not look for a "Product Line" field -- use
+Product_Family__c instead.
+```
+
+### Point to the correct revenue field
+
+**Rule name:** ARR Field Mapping
+
+```text
+When users ask about ARR (Annual Recurring Revenue) on deals or opportunities, always
+query the "ARR__c" field on the Opportunity object. Do not use the standard "Amount"
+field -- that represents Total Contract Value (TCV), not ARR.
+
+If a user asks questions like:
+"What's the ARR for this deal?"
+"Show me the ARR on [X] opportunity"
+"What's the total ARR across all open deals?"
+"Which opportunities have the highest recurring revenue?"
+"What's our ARR forecast for this quarter?"
+
+You should interpret these as requests to access the "ARR__c" field in Salesforce
+Opportunities. Only use "Amount" if the user specifically asks about TCV or total
+contract value.
+```
+
+### Control how data is presented
+
+**Rule name:** Always Show Close Date Alongside Stage
+
+```text
+When displaying the current stage of an opportunity, always include the close date
+alongside it. This gives users immediate context on whether the deal timeline aligns
+with the stage -- for example, a Stage 2 deal closing next week is a very different
+situation than a Stage 2 deal closing next quarter.
+
+If the information is provided in table format, add Close Date as a column directly
+next to Stage.
+
+If the information is provided in paragraph form, ensure the close date appears
+immediately after the stage is mentioned.
+```
+
+## Writing effective rules
+
+### Follow the "when X, do Y" pattern
+
+The best rules have a clear trigger and a clear action. State the context that activates the rule, then state exactly what Endgame should do.
+
+<Warning>
+  **Vague:** "We track MRR in Salesforce."
+
+  **Clear:** "When users ask about MRR or GMRR, always query the 'GMRR Gross 2025' field on the Opportunity object."
+</Warning>
+
+### Include example questions
+
+Listing the kinds of questions that should trigger a rule helps Endgame match it accurately. You don't need to cover every possible phrasing -- just a few representative examples that illustrate the intent.
+
+### Be explicit about what _not_ to do
+
+If there's a common mistake or a field that looks right but isn't, call it out. "Do not look for a 'Solution' field -- use the Use Case field instead" prevents Endgame from making reasonable but wrong assumptions about your CRM schema.
+
+### One behavior per rule
+
+Keep each rule focused on a single instruction. A rule about revenue fields shouldn't also cover how to format pipeline tables. Separate rules let Endgame apply exactly the right guidance for each question.
+
+### Keep rules current
+
+If your CRM schema changes, a field gets renamed, or your conventions evolve, update your rules. A rule pointing to a deprecated field will quietly steer Endgame toward wrong answers.
+
+A good cadence: review your rules whenever your CRM schema changes or your ops team makes process updates, and do a general audit once a quarter.
+
+## Managing rules
+
+Rules are managed in **Settings > Rules**, accessible to admins only.
+
+**Creating a rule:**
+1. Navigate to Settings > Rules
+2. Click **Add Rule** in the Custom Rules section
+3. Give it a clear, descriptive name (e.g., "Salesforce MRR/GMRR Field Rule")
+4. Write your instructions
+5. Save
+
+**Editing a rule:** Click the edit button on any rule card, make your changes, and save.
+
+**Deleting a rule:** Click delete on any custom rule card and confirm. System rules cannot be deleted, but you can clear their content.
+
+## Rules vs. knowledge
+
+This is the most important distinction to get right:
+
+- **Rules** are short behavioral directives. "When someone asks about MRR, use this field." They tell Endgame _what to do_.
+- **[Knowledge](/knowledge/knowledge-basics-for-admins)** is reference material -- competitive battlecards, methodology guides, product positioning docs, persona playbooks. They give Endgame _information to draw from_.
+
+If you're writing more than a few paragraphs, it's probably knowledge, not a rule. If it's a specific instruction for a specific situation, it's a rule.
+
+## Rules vs. templates
+
+[Templates](/templates/templates-101) define what to ask. Rules define how to behave when answering. They're complementary:
+
+- A **template** might prompt: "Give me a pipeline summary for my open deals"
+- **Rules** ensure that summary pulls revenue from the right CRM field, uses your org's terminology, and presents the data the way your team expects
+
+You don't need to repeat rule content in templates. Endgame automatically applies relevant rules when generating template responses.
+
+## Getting started
+
+1. **Identify your org's quirks.** Where does your terminology differ from your CRM schema? Which fields do people ask about using the wrong name? Where do you need data presented in a specific way?
+2. **Write 3-5 rules** covering the most common sources of confusion or inconsistency.
+3. **Test each rule.** Ask Endgame a question that should trigger it. Did the response follow your instructions? If not, refine the wording.
+4. **Collect feedback.** Your team will surface new cases where Endgame needs guidance. Each one is a potential new rule.
+
+<Tip>
+  Start with the questions your team asks most often. If reps are constantly asking about pipeline or revenue, make sure Endgame knows exactly which fields and definitions to use. You can always add more rules as patterns emerge.
+</Tip>
