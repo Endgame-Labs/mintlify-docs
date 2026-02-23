@@ -134,6 +134,12 @@
             ]
           },
           {
+            "group": "Rules",
+            "pages": [
+              "rules/rules-101"
+            ]
+          },
+          {
             "group": "Knowledge Management",
             "pages": [
               "knowledge/file-upload",
