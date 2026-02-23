@@ -1,0 +1,78 @@
+---
+title: "Connect Slack"
+description: "Map Slack channels to accounts so internal context powers Endgame responses"
+icon: "hashtag"
+---
+
+<Info>
+  **Learning path:** [Launch Admin](/academy/launch-admin) · Module 3 of 8 · ~10 minutes
+</Info>
+
+## Why this matters
+
+Your team's Slack channels hold context that doesn't exist anywhere else: internal strategy discussions, quick updates after calls, requests for help on tricky deals. When you map Slack channels to accounts, Endgame can reference these conversations when answering questions. A rep asking "What's the latest on Acme?" gets answers informed by what the team has been saying internally, not just what's in the CRM.
+
+<Note>
+  If your team doesn't use Slack, or uses a different messaging platform, skip this module and move to [Upload Knowledge](/academy/upload-knowledge).
+</Note>
+
+## What you'll do
+
+- Connect Slack to Endgame
+- Map account-specific channels to the right accounts
+- Optionally configure organization-wide channels
+
+## Before you start
+
+Connecting Slack requires that you're either a Slack Administrator or have approval from one. Check with your IT team if you're not sure about your permissions.
+
+## Walkthrough
+
+<Steps>
+  <Step title="Start the connection">
+    Navigate to [Settings > Integrations](https://app.endgame.io/settings/integrations) and click "Connect" next to Slack. This kicks off the Slack OAuth process.
+
+    If you're not a Slack admin, you'll see a request approval screen. Submitting this sends a notification to your Slack admins via Slackbot.
+  </Step>
+  <Step title="Grant permissions">
+    Click "Allow" on the Slack permissions page to give Endgame access.
+  </Step>
+  <Step title="Map channels to accounts">
+    You'll land on a configuration page where you map public Slack channels to Endgame accounts.
+
+    **How to think about mapping:** For each major account, select the Slack channels where your team discusses that account. Common patterns include:
+
+    - Deal channels: `#deal-acme`, `#opp-bigcorp`
+    - Account channels: `#acme-internal`, `#bigcorp-support`
+    - Customer channels: `#ext-acme` (shared channels with customers)
+
+    You can map multiple channels to a single account. Add them one at a time.
+  </Step>
+  <Step title="(Optional) Add organization-wide channels">
+    Organization-wide channels don't map to specific accounts but enable multi-account Endgame conversations within Slack. Good candidates: `#sales-team`, `#pipeline-review`, `#competitive-intel`.
+
+    Select the channels under "Organization-Wide Channels" and submit.
+  </Step>
+</Steps>
+
+## Channel mapping strategy
+
+Start with your top 10-15 accounts by revenue or strategic importance. You don't need to map every channel on day one. A focused initial set gives you something to validate in Module 7 (Test Drive), and you can expand from there.
+
+<Warning>
+  Endgame can't distinguish between different account conversations in a single shared channel. Use channels that are dedicated to a single account for best results. A `#general-deals` channel with mixed account discussions won't produce clean account-level intelligence.
+</Warning>
+
+## Checkpoint
+
+You've completed this module when you've mapped at least one Slack channel to an account. Endgame will begin ingesting messages from mapped channels every 15 minutes.
+
+## Go deeper
+
+- [Slack Integration reference](/integrations/slack) for technical details
+- [Using Endgame in Slack](/features/slack) for guidance on running Endgame threads directly in Slack channels
+
+<div style={{ display: "flex", justifyContent: "space-between", marginTop: "2rem" }}>
+  <Card title="← Previous: Connect Conversations" icon="microphone" href="/academy/connect-conversations" horizontal />
+  <Card title="Next: Upload Knowledge →" icon="book-open" href="/academy/upload-knowledge" horizontal />
+</div>

@@ -1,0 +1,82 @@
+---
+title: "Test Drive"
+description: "Validate your configuration by chatting with Endgame across a few accounts"
+icon: "car"
+---
+
+<Info>
+  **Learning path:** [Launch Admin](/academy/launch-admin) · Module 7 of 8 · ~15 minutes
+</Info>
+
+## Why this matters
+
+You've connected data sources, uploaded knowledge, created rules, and built a skill. Now it's time to validate that everything works together. This module is about using Endgame the way your team will: asking real questions and checking that the responses reflect your configuration.
+
+This is also where you develop intuition for how Endgame works, which makes you better at tuning it over time. The more you interact with it, the faster you'll spot gaps and know exactly what to adjust.
+
+## What you'll do
+
+- Run your custom skill against a few accounts
+- Ask ad hoc questions that test your rules and knowledge
+- Identify any gaps or issues to address
+- Submit at least one chat (a success metric for admin enablement)
+
+## Walkthrough
+
+<Steps>
+  <Step title="Pick 2-3 accounts you know well">
+    Choose accounts where you already know what the "right" answer looks like. This way you can evaluate whether Endgame's responses are accurate and complete. Mix it up: pick one active deal, one established customer, and one new prospect if possible.
+  </Step>
+  <Step title="Run your skill">
+    Navigate to an account detail page and run the skill you created in Module 6. Review the output:
+
+    - Does it reference the custom Salesforce fields you marked as important in Module 1?
+    - Does it include context from call transcripts (Module 2)?
+    - Does it reference Slack conversations if you mapped channels (Module 3)?
+    - Does it reflect your sales methodology or competitive positioning from knowledge (Module 4)?
+  </Step>
+  <Step title="Test your rules">
+    Ask questions that should trigger the rules you created in Module 5. If you created an ARR field mapping rule, ask: "What's the ARR on this deal?" Check that Endgame pulls from the right field.
+
+    If you configured system rules (Key Titles, Value Proposition), ask something like "Who are the key stakeholders on this account?" and check that the response prioritizes the title types you listed.
+  </Step>
+  <Step title="Try cross-account queries">
+    Go to the Home page and ask a question that spans multiple accounts:
+
+    - "Which of my deals need attention this week?"
+    - "Summarize activity across my top 5 accounts"
+    - "Where am I at risk of missing close dates this quarter?"
+
+    These broader queries exercise more of your configuration at once.
+  </Step>
+  <Step title="Note what's missing">
+    As you test, keep a list of gaps you notice:
+
+    - Endgame didn't reference a field you expected? You may need to mark it as important or create a rule.
+    - Responses don't reflect your methodology? You may need to upload additional knowledge.
+    - Terminology is being misinterpreted? That's a new rule.
+    - A workflow would benefit from consistency? That's a new skill.
+
+    You don't need to fix everything now. This list becomes your tuning backlog for weeks 2-3.
+  </Step>
+</Steps>
+
+## What good looks like
+
+A well-configured Endgame instance produces responses that feel like they came from someone who deeply understands your business. The responses should reference your specific CRM fields, reflect your sales methodology, use your terminology correctly, and include context from multiple data sources (CRM + calls + Slack + knowledge).
+
+If responses feel generic or miss obvious context, that's a signal that one of your earlier modules needs attention. The most common fixes: marking more Salesforce fields as important, uploading additional knowledge, or creating rules for terminology your team uses that differs from your CRM schema.
+
+## Checkpoint
+
+You've completed this module when you've submitted at least one chat and reviewed the output against your expectations. Ideally you've tested across 2-3 accounts and noted any gaps for future tuning.
+
+## Go deeper
+
+- [Your First 10 Minutes](/your-first-10-minutes) for the user-facing onboarding guide (useful for understanding what your team will experience)
+- [Endgame Chat 201](/endgame-chat-201) for advanced chat techniques like iterating on responses
+
+<div style={{ display: "flex", justifyContent: "space-between", marginTop: "2rem" }}>
+  <Card title="← Previous: Build Your First Skill" icon="wand-magic-sparkles" href="/academy/build-first-skill" horizontal />
+  <Card title="Next: Invite Your Team →" icon="users" href="/academy/invite-team" horizontal />
+</div>

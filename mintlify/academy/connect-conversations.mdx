@@ -1,0 +1,62 @@
+---
+title: "Connect Conversations"
+description: "Verify your call recording integration and understand what flows into Endgame"
+icon: "microphone"
+---
+
+<Info>
+  **Learning path:** [Launch Admin](/academy/launch-admin) · Module 2 of 8 · ~5 minutes
+</Info>
+
+## Why this matters
+
+Call recordings and transcripts are one of Endgame's most valuable data sources. They capture what's actually happening in deals: the objections raised, the competitors mentioned, the commitments made. When connected, Endgame can reference specific conversations when answering questions about accounts and opportunities, giving your team insight that goes far beyond what lives in CRM fields.
+
+Your Endgame rep typically connects your call recording platform during initial deployment. This module is about verifying that connection and understanding what data flows in.
+
+## What you'll do
+
+- Confirm your call recording integration is active
+- Understand what data Endgame ingests and how often
+- Know the permission requirements in case you need to reconnect
+
+## Walkthrough
+
+<Steps>
+  <Step title="Check integration status">
+    Navigate to [Settings > Integrations](https://app.endgame.io/settings/integrations). You should see your call recording platform (Gong, Zoom, or Chorus) listed with a connected status. If it shows as disconnected, follow the steps below for your platform.
+  </Step>
+  <Step title="Understand ingestion timing">
+    Once connected, Endgame processes transcripts on a recurring basis. Initial ingestion can take a day or two depending on your volume of historical calls. After that, new transcripts are processed regularly and available in Endgame responses.
+
+    <Note>
+      Endgame only processes transcripts for accounts your integration user has access to in Salesforce. If a rep's calls with an account aren't showing up, it's likely a Salesforce access issue, not a call recording issue.
+    </Note>
+  </Step>
+</Steps>
+
+## Platform-specific details
+
+### Gong
+The connecting user must be a [Gong Technical Admin](https://help.gong.io/hc/en-us/articles/360028568911-About-permission-profiles). Connection is a simple OAuth flow from the integrations page. Endgame uses Gong purely for transcripts and only processes accounts you've granted access to in Salesforce.
+
+### Zoom
+The connecting user must be a Zoom Administrator. Connection is OAuth-based. Endgame accesses meetings, participants, and recordings to build a picture of your team's interactions with customers.
+
+### Chorus
+Requires a Chorus Administrator to generate an API key. Navigate to Settings > API Access > Generate API token within Chorus, then enter it on the Endgame integrations page. Endgame can only ingest data the API token creator has access to.
+
+## Checkpoint
+
+You've completed this module when you've confirmed your call recording platform shows as connected on the integrations page. If it wasn't connected, you've either completed the connection yourself or identified who on your team needs to do it.
+
+## Go deeper
+
+- [Gong Integration](/integrations/gong)
+- [Zoom Integration](/integrations/zoom)
+- [Chorus Integration](/integrations/chorus)
+
+<div style={{ display: "flex", justifyContent: "space-between", marginTop: "2rem" }}>
+  <Card title="← Previous: Configure Salesforce" icon="database" href="/academy/configure-salesforce" horizontal />
+  <Card title="Next: Connect Slack →" icon="hashtag" href="/academy/connect-slack" horizontal />
+</div>

@@ -145,6 +145,25 @@
         ]
       },
       {
+        "group": "Endgame Academy",
+        "pages": [
+          {
+            "group": "Launch Admin",
+            "pages": [
+              "academy/launch-admin",
+              "academy/configure-salesforce",
+              "academy/connect-conversations",
+              "academy/connect-slack",
+              "academy/upload-knowledge",
+              "academy/create-first-rule",
+              "academy/build-first-skill",
+              "academy/test-drive",
+              "academy/invite-team"
+            ]
+          }
+        ]
+      },
+      {
         "group": "Trust & Support",
         "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
       },

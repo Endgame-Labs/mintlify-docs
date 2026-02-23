@@ -1,0 +1,120 @@
+---
+title: "Build Your First Skill"
+description: "Turn a repeatable workflow into a reusable skill your team can run"
+icon: "wand-magic-sparkles"
+---
+
+<Info>
+  **Learning path:** [Launch Admin](/academy/launch-admin) · Module 6 of 8 · ~15 minutes
+</Info>
+
+## Why this matters
+
+When every rep asks Endgame questions differently, they get different answers. That's fine for ad hoc research, but for repeatable workflows like deal inspections, meeting prep, or pipeline reviews, you want consistency. Skills solve this by encoding your best practices into reusable prompts that anyone on the team can run.
+
+Think of skills as the codified version of what your best rep does before every customer call, or what your manager checks during every deal review. Instead of hoping everyone remembers the right questions to ask, skills ensure they get comprehensive, consistent intelligence every time.
+
+## What you'll do
+
+- Pick a high-value workflow to turn into your first skill
+- Write the skill prompt
+- Configure tags and scope
+- Test it against a few accounts
+
+## Pick your first skill
+
+Choose a workflow that your team does repeatedly and where consistency matters. Good candidates for a first skill:
+
+**Pre-call research brief** (single account) - What should a rep know before any customer conversation? This is the most common first skill because it has immediate, obvious value.
+
+**Deal inspection** (single account) - A structured health check on an opportunity. Great for managers who want consistent deal review quality.
+
+**Pipeline review** (cross-account) - A summary of all deals closing this month/quarter with key risks highlighted. Useful for weekly team meetings.
+
+<Tip>
+  Start with the workflow that wastes the most time or produces the most inconsistent results today. One well-crafted skill that saves each rep 30 minutes per week adds up fast.
+</Tip>
+
+## Walkthrough
+
+<Steps>
+  <Step title="Navigate to Skills settings">
+    Go to [Settings > Skills](https://app.endgame.io/settings/templates) and click **Add** in the top right to create a new skill.
+  </Step>
+  <Step title="Write the skill prompt">
+    A skill can be as simple as a single, well-crafted prompt. Start simple and add structure later if needed.
+
+    **Example: Pre-call research brief**
+
+    ```text
+    Give me a comprehensive briefing for my upcoming call
+    with this account. Include:
+
+    - Recent business initiatives and company news
+    - Key stakeholders I've engaged with and their roles
+    - Current opportunity status and recent activity
+    - Competitive landscape based on our conversations
+    - Risks or opportunities from past interactions
+    - Suggested talking points for the call
+
+    Pull from Salesforce, call transcripts, emails, and
+    any relevant external news.
+    ```
+
+    **Example: Deal inspection**
+
+    ```text
+    Analyze this opportunity and provide a health check:
+
+    - Current stage vs. time in stage
+    - Engagement level of all known stakeholders
+    - Recent activity from calls and emails
+    - Competitive threats mentioned in conversations
+    - Red flags or gaps in qualification
+    - Recommended next steps
+
+    Compare against what good deals at this stage
+    typically look like.
+    ```
+  </Step>
+  <Step title="Add tags and set scope">
+    **Tags** help your team find skills quickly. Common tag strategies: by stage (`prospect`, `discovery`, `active`, `customer`), by purpose (`prep`, `review`, `strategy`), or by role (`ae`, `csm`, `manager`). Start with one category. We recommend no more than two tags per skill.
+
+    **Scope** indicates whether this skill targets a single account or works across multiple accounts. Set it to "Account" for pre-call briefs and deal inspections. Set it to "Organization" for pipeline reviews and cross-account analysis.
+  </Step>
+  <Step title="Test against 3-5 accounts">
+    Run your new skill against a few different accounts or opportunities. Check:
+
+    - Does the output cover what you expected?
+    - Is the information accurate based on what you know about these accounts?
+    - Would a rep find this useful before a call or review?
+
+    Iterate on the prompt wording based on what you see. Small changes in phrasing can meaningfully improve output quality.
+  </Step>
+</Steps>
+
+## Simple vs. structured skills
+
+Start simple. A single well-written prompt covers most use cases. Consider adding more structure only when:
+
+- You need consistent formatting for executive reviews
+- Multiple people need to interpret the same information in the same way
+- You're creating customer-facing deliverables
+
+You can learn about structured skills in the [Templates 301](/templates/templates-301) guide, but that's for later. Your first skill should be straightforward.
+
+## Checkpoint
+
+You've completed this module when you've created at least one custom skill visible to your team in Settings > Skills. Bonus points if you've tested it against a few accounts and iterated on the prompt.
+
+## Go deeper
+
+- [Templates 101](/templates/templates-101) for best practices on writing and structuring skills
+- [Templates 201](/templates/templates-201) for organizing skills with tags
+- [Templates 301](/templates/templates-301) for advanced structured workflows
+- [Quickstart: Create & Manage Templates](/templates/create-manage-templates) for the step-by-step mechanics
+
+<div style={{ display: "flex", justifyContent: "space-between", marginTop: "2rem" }}>
+  <Card title="← Previous: Create Your First Rule" icon="scale-balanced" href="/academy/create-first-rule" horizontal />
+  <Card title="Next: Test Drive →" icon="car" href="/academy/test-drive" horizontal />
+</div>

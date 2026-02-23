@@ -1,0 +1,102 @@
+---
+title: "Create Your First Rule"
+description: "Teach Endgame your org's terminology and CRM conventions"
+icon: "scale-balanced"
+---
+
+<Info>
+  **Learning path:** [Launch Admin](/academy/launch-admin) · Module 5 of 8 · ~15 minutes
+</Info>
+
+## Why this matters
+
+Every organization has its own vocabulary. Your team says "ARR" but the Salesforce field is called `Annual_Recurring_Revenue__c`. You say "product line" but the field is `Product_Family__c`. You want close dates shown alongside deal stages because one without the other is misleading.
+
+Rules bridge this gap. They're short, specific directives that tell Endgame: "When someone asks about X, do Y." Without rules, Endgame may not find the right fields, may misinterpret your terminology, or may present data in ways that don't match how your team thinks.
+
+## What you'll do
+
+- Set up your two system rules (Key Titles and Value Proposition)
+- Create one custom rule based on your org's most common terminology mismatch
+- Understand the "when X, do Y" pattern for writing effective rules
+
+## Walkthrough
+
+<Steps>
+  <Step title="Navigate to Rules settings">
+    Go to [Settings > Rules](https://app.endgame.io/settings/rules). You'll see two sections: System Rules and Custom Rules.
+  </Step>
+  <Step title="Configure system rules">
+    System rules are always active on every question. Start with these:
+
+    **Key Titles** - List the titles your team sells to, separated by commas. Include power users, champions, and economic buyers. For example: `VP of Sales, Director of Revenue Operations, CRO, Head of Sales Enablement, VP of Customer Success`.
+
+    **Value Proposition** - Write your core value props and why customers choose you. This gets included in every response so Endgame consistently reflects your positioning. Keep it to a few sentences.
+  </Step>
+  <Step title="Identify your first custom rule">
+    Think about the most common source of confusion between what your team says and what your CRM contains. Common first rules:
+
+    - **Revenue field mapping**: "When users ask about ARR, use the `ARR__c` field, not the standard Amount field."
+    - **Terminology translation**: "When users ask about 'product line,' query the `Product_Family__c` field."
+    - **Data presentation**: "When showing deal stage, always include close date alongside it."
+    - **Metric definition**: "When users ask about pipeline, only include opportunities in stages 2-5."
+  </Step>
+  <Step title="Write the rule">
+    Click **Add Rule** in the Custom Rules section. Give it a clear name (e.g., "ARR Field Mapping") and write the instruction.
+
+    Follow this pattern:
+
+    ```text
+    When users ask about [CONCEPT], always [ACTION].
+
+    Example questions that should trigger this:
+    - "[Example question 1]"
+    - "[Example question 2]"
+
+    Do not [COMMON MISTAKE TO AVOID].
+    ```
+
+    Here's a concrete example:
+
+    ```text
+    When users ask about ARR (Annual Recurring Revenue) on deals
+    or opportunities, always query the "ARR__c" field on the
+    Opportunity object. Do not use the standard "Amount" field,
+    as that represents Total Contract Value (TCV).
+
+    Example questions:
+    - "What's the ARR for this deal?"
+    - "What's our total ARR across open pipeline?"
+    - "Which deals have the highest recurring revenue?"
+
+    Only use "Amount" if the user specifically asks about TCV
+    or total contract value.
+    ```
+  </Step>
+  <Step title="Save and test">
+    Save the rule. Then open a chat and ask a question that should trigger it. Did Endgame reference the right field? If not, refine the wording.
+  </Step>
+</Steps>
+
+## Rules vs. Knowledge vs. Skills
+
+This is the most important distinction to get right:
+
+- **Rules** are short behavioral directives. They tell Endgame *what to do* in a specific situation. Keep each rule focused on a single instruction.
+- **Knowledge** is reference material (battlecards, methodology guides, playbooks). It gives Endgame *information to draw from*.
+- **Skills** define *what to ask*. They're structured prompts that ensure consistent outputs for repeatable workflows.
+
+If you're writing more than a few paragraphs, it's probably knowledge, not a rule. If it's a specific instruction for a specific situation, it's a rule.
+
+## Checkpoint
+
+You've completed this module when you've configured your system rules (Key Titles and Value Proposition) and created at least one custom rule. You'll see all three in your Rules settings page.
+
+## Go deeper
+
+- [Rules 101](/rules/rules-101) for the complete guide on writing effective rules, including more examples and the full "when X, do Y" pattern
+
+<div style={{ display: "flex", justifyContent: "space-between", marginTop: "2rem" }}>
+  <Card title="← Previous: Upload Knowledge" icon="book-open" href="/academy/upload-knowledge" horizontal />
+  <Card title="Next: Build Your First Skill →" icon="wand-magic-sparkles" href="/academy/build-first-skill" horizontal />
+</div>
