@@ -1,0 +1,62 @@
+---
+title: "Initial Setup Guide"
+description: "Get up and running with Endgame in minutes"
+---
+
+Getting started with Endgame is simple -- and only requires that you authenticate via Salesforce. Before you begin, confirm the items below are in place.
+
+## Pre-flight checklist
+
+<Tip>
+  **Best practice:** Connect with a dedicated [API Integration User](/integrations/salesforce#optional-api-integration-user) instead of a personal account.
+</Tip>
+
+The connecting user (or API Integration User) needs read access to **all fields** on the following Salesforce objects:
+
+<CardGroup cols={2}>
+  <Card>
+    - Account
+    - User
+    - Lead
+    - Contact
+    - Opportunity
+    - Task
+    - Event
+  </Card>
+  <Card>
+    - RecordType
+    - OpportunityLineItem
+    - OpportunityContactRole
+    - Campaign
+    - CampaignMember
+    - Note
+    - OpportunityHistory
+  </Card>
+</CardGroup>
+
+## Quick Setup
+
+<Steps>
+  <Step title="Navigate to Endgame">
+    Go to https://app.endgame.io/
+  </Step>
+  <Step title="Authenticate with Salesforce">
+    Click "Continue with Salesforce"
+  </Step>
+  <Step title="Grant API permissions">
+    You'll be presented with two Salesforce API authentication screens. Simply click "Allow" on both, at which point you'll be redirected back to Endgame.
+  </Step>
+  <Step title="Approve Salesforce Connected App">
+    As a user with the `Manage Connected Apps` permission in Salesforce, navigate to `Setup -> Manage Apps -> Connected Apps OAuth Usage`, and click "Install" next to the "EndgameLabs2" app.
+  </Step>
+</Steps>
+
+## What happens next?
+
+Once you have things connected, Endgame will automatically start ingesting your Salesforce data. This can take some time, and our team will reach out when it's ready.
+
+<Info>
+  Data ingestion typically takes a day or two, depending on the size of your Salesforce instance. The Endgame team will be in touch when your data is ready.
+</Info>
+
+You don't need to wait for ingestion to finish. Continue to the next module to start configuring your instance while your data syncs in the background.

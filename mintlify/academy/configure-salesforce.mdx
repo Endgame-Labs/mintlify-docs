@@ -10,19 +10,27 @@ icon: "database"
 
 ## Why this matters
 
-Endgame ingests all standard Salesforce fields automatically, but your org likely has custom fields that carry important context: ARR, product line, customer segment, health scores, and so on. By marking these as "important fields," you tell Endgame to reference them by default when answering questions. Without this step, users would need to explicitly mention custom fields in every prompt.
+Endgame ingests all standard Salesforce fields automatically, but your org likely has custom fields that carry important context: ARR, product line, customer segment, health scores, and so on. By selecting these fields for ingestion, you tell Endgame to reference them by default when answering questions. Without this step, Endgame won't have access to the fields your team relies on most.
 
 ## What you'll do
 
 - Navigate to the Salesforce configuration page
 - Identify 5-10 custom fields per object that your team asks about most
-- Mark them as important fields
+- Select fields to ingest
+
+## How to prioritize
+
+You don't need to select all 100 fields right away. Start with the ones your team references in day-to-day conversation: "What's the ARR on this deal?" or "Which segment is this account in?" If people ask about it regularly, select it for ingestion. You can always add more later as patterns emerge.
+
+<Tip>
+  Not sure which fields matter most? Ask your top-performing rep what they check in Salesforce before a call. Those fields are your starting list.
+</Tip>
 
 ## Walkthrough
 
 <Steps>
   <Step title="Open the Salesforce configuration page">
-    Navigate to [Settings > Integrations > Salesforce](https://app.endgame.io/settings/integrations/salesforce). You'll see a list of Required Objects (Accounts, Opportunities, Contacts, Opportunity Contact Roles).
+    Navigate to [Settings > Integrations > Salesforce](https://app.endgame.io/settings/integrations/salesforce). You'll see a list of Required Objects (Account, Contact, Opportunity, User).
   </Step>
   <Step title="Start with Opportunities">
     Click on the Opportunity object. This is where most teams have the highest-value custom fields. Think about the questions your reps and managers ask most often. Common picks include:
@@ -33,29 +41,29 @@ Endgame ingests all standard Salesforce fields automatically, but your org likel
     - Forecast category or commit status
     - Renewal or expansion indicators
   </Step>
-  <Step title="Mark fields as important">
+  <Step title="Select fields to ingest">
     Search for each field, check the box, and click Save Changes. Changes take a few minutes to be reflected in responses.
 
     <Warning>
-      You can select up to 50 fields per object. Fields that are populated on 1 or fewer records are omitted from the list.
+      You can select up to 100 fields per object. Fields that are populated on 1 or fewer records are omitted from the list.
     </Warning>
   </Step>
-  <Step title="Repeat for Accounts and Contacts">
+  <Step title="Repeat for Account, Contact, and User">
     Move to the Account object next. Common picks: industry, segment, tier, customer since date, health score, territory. For Contacts, consider: title, role, department, and any custom engagement scoring fields.
   </Step>
 </Steps>
 
-## How to prioritize
+## Configure additional objects
 
-You don't need to mark all 50 fields right away. Start with the ones your team references in day-to-day conversation: "What's the ARR on this deal?" or "Which segment is this account in?" If people ask about it regularly, mark it as important. You can always add more later as patterns emerge.
+Below the Required Objects, you'll find an **Additional Objects** section. You can sync up to 50 objects total (including required objects). Toggle on any additional Salesforce objects you want Endgame to reference -- all fields on selected objects (standard and custom) will be synced. Changes take up to an hour to take effect.
 
-<Tip>
-  Not sure which fields matter most? Ask your top-performing rep what they check in Salesforce before a call. Those fields are your starting list.
-</Tip>
+## Vendor account exclusion
+
+If your org has vendor accounts in Salesforce, exclude them so internal-only calls aren't associated with those accounts. Search for and add any vendor accounts under the **Vendor Account Exclusion** section on the same configuration page. Changes may take a few hours to refresh.
 
 ## Checkpoint
 
-You've completed this module when you've marked at least one custom field as important on any Salesforce object. You'll validate that it's working in Module 7 (Test Drive) when you ask Endgame questions that reference those fields.
+You've completed this module when you've selected at least one custom field for ingestion on any Salesforce object. You'll validate that it's working in Module 7 (Test Drive) when you ask Endgame questions that reference those fields.
 
 ## Go deeper
 
