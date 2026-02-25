@@ -20,12 +20,12 @@ After you [login](https://app.endgame.io/login) with your Salesforce credentials
 
 ## Navigating cross-account thread history
 
-You can view your non-account specific thread history in the [Thread List view](https://app.endgame.io/threads) accessed in the left-hand navigation. Your targeted account thread history lives in that account's Library.
+You can view multi-account (book), account, and task thread history in the [Thread List view](https://app.endgame.io/threads) accessed in the left-hand navigation. Your targeted account thread history also lives in that account's Library. You can search by thread title or account name and filter based on thread type.
 
-<Frame caption="Multi-account thread list">
+<Frame caption="Thread list view">
   <img
-    src="./images/thread-list-8-27-25.png"
-    alt="Multi-account thread list"
+    src="./images/threads-list-view-02-25-26.png"
+    alt="Thread list view"
     className="rounded-lg"
   />
 </Frame>
@@ -36,7 +36,7 @@ Open search by clicking on the search button in the middle of the home page, the
 
 <Frame caption="Search modal">
   <img
-    src="./images/search-modal-10-14-25.png"
+    src="./images/search-modal-02-25-26.png"
     alt="Search modal"
     className="rounded-lg"
   />
@@ -93,11 +93,11 @@ There are a few pre-built ways to sort the list: by Last Viewed, Last Interactio
 
 ## Account detail page
 
-Once you get to an account, you'll be presented with the Account Detail page. The core concepts within this page: Ask AI (chat), Timeline, Threads, Shared Threads, and Files.
+Once you get to an account, you'll be presented with the Account Detail page. The core concepts within this page: Ask AI (chat), Timeline, Threads, Artifacts, and Files.
 
 <Frame caption="Account detail page">
   <img
-    src="./images/account-detail-12-22-25.png"
+    src="./images/account-detail-02-25-26.png"
     alt="Account detail page"
     className="rounded-lg"
   />
@@ -105,19 +105,19 @@ Once you get to an account, you'll be presented with the Account Detail page. Th
 
 ### Chat
 
+Think of this as a ChatGPT that's deeply tuned to your business model and sales strategy with access to your internal CRM & call data. The questions you can ask can thus be quite detailed and specific. Here's a [quick guide on prompts](/your-first-10-minutes) and [skills](features/skills) to help you get started.
+
+When you ask a question, you'll be taken to a new page that represents the Thread of your chat conversation. You can ask multiple questions in that Thread, and you can always get back to it from the Threads tab.
+
+Toggle Research Mode on for deeper thinking.
+
 <Frame caption="Account chat interface">
   <img
-    src="./images/account-chat-12-22-25.png"
+    src="./images/account-chat-interface-02-25-26.png"
     alt="Account chat interface"
     className="rounded-lg"
   />
 </Frame>
-
-Think of this as a ChatGPT that's deeply tuned to your business model and sales strategy with access to your internal CRM & call data. The questions you can ask can thus be quite detailed and specific. Here's a [quick guide on prompts](/your-first-10-minutes) and [skills](features/skills) to help you get started.
-
-When you ask a question, you'll be taken to a new page that represents the Thread of your chat conversation. You can ask multiple questions in that Thread, and you can always get back to it from the Library.
-
-Toggle Research Mode on for deeper thinking.
 
 ### Timeline
 
@@ -125,7 +125,7 @@ The timeline captures news, job changes, financial highlights such as earnings c
 
 <Frame caption="Account timeline">
   <img
-    src="./images/timeline-8-27-25.png"
+    src="./images/timeline-02-25-26.png"
     alt="Account timeline"
     className="rounded-lg"
   />
@@ -141,24 +141,13 @@ Clicking into any specific event will open up a new chat Thread, where you can e
 
 The Threads tab contains an index of all the threads associated with this account, which is your Ask AI chat history for that account. This allows you to quickly go back to any chat you have had regarding the account as well as provide a mechanism for collaboration with other members of your team.
 
-Threads that have not been published are available in this tab and will persist unless they are manually deleted. These Threads are only visible in the Threads tab for the creator of the Thread, though it is still possible to manually share the link to the Thread with other Endgame users.
+Users can view both shared and unshared threads here. The threads will persist unless they are manually deleted. Unshared Threads are only visible in the Threads tab for the creator of the Thread, though it is still possible to manually share the link to the Thread with other Endgame users.
+Shared Threads are public and and viewable by other Endgame users in their account Threads tab. These threads are also shareable via a public link.
 
 <Frame caption="Account threads tab">
   <img
-    src="./images/threads-9-16-25.png"
+    src="./images/account-threads-tab-02-25-26.png"
     alt="Account threads tab"
-    className="rounded-lg"
-  />
-</Frame>
-
-### Shared Threads
-
-Users can share threads which enables external sharing of a Thread via a link with non-Endgame users. Sharing a Thread will also make the thread public and viewable by other Endgame users in the Account Library.
-
-<Frame caption="Shared Threads tab">
-  <img
-    src="./images/shared-threads-tab-02-17-26.png"
-    alt="Shared Threads tab"
     className="rounded-lg"
   />
 </Frame>
