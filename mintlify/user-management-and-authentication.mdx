@@ -1,0 +1,46 @@
+---
+title: "User Management and Authentication"
+description: "Control which users have what access to Endgame and how they authenticate"
+---
+
+Endgame uses WorkOS to power our authentication flow.
+
+## Manage new users
+
+To manage who can log into Endgame from your organization, go to the [user management](https://app.endgame.io/settings/users) page in settings. Only Admins have access to this page.
+
+You have multiple options for user authentication that can be enabled or configured from this page.
+
+### Invite users
+
+Click Invite User and populate emails for users that should receive an invitation. Set the user role for those users you are inviting, the role will apply to all users in this group so do two separate invite groups to invite Admins and Members. You will be able to monitor which users have accepted invitations in this view.
+
+TODO: add invite modal image
+
+### Add a verified domain
+
+You have the option to add a verified domain which will allow any user attempting to login with that domain access to Endgame. For example if you verify acme.co and sarah@acme.co attempts to login to Endgame using that email address, she will be provisioned as a user for your org and allowed to authenticate.
+
+Click on XX
+
+TODO: image of domain verification
+
+### Single sign on (SSO)
+
+<Warning>
+  SSO is not available to all organizations. If you are interested in turning
+  SSO on for your organization contact
+  [support@endgame.io](mailto:support@endgame.io)
+</Warning>
+
+You have the option to enable SSO for you organization. Enabling SSO allows xx users to authenticate and be provisioned. You will need to click on xx and follow these steps to enable this service.
+
+TODO: image of SSO set up
+
+## Viewing users and making updates
+
+Once users have been granted access to Endgame you can update their roles, deactivate access, and view their last sign in.
+
+Use the search or filtering capabilities to view specific users or groups of users.
+
+TODO: image of main user management table
