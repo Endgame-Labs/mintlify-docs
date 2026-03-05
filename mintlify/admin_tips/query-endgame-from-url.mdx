@@ -11,18 +11,39 @@ https://app.endgame.io/threads/new
 
 ### Query Parameters
 
-| Parameter      | Description                                                                    | Example                                     |
-| -------------- | ------------------------------------------------------------------------------ | ------------------------------------------- |
-| `firstMessage` | The prompt you want Endgame to answer (URL-encoded)                            | `firstMessage=what's+the+latest+in+my+book` |
-| `accountId`    | The Salesforce Account ID you want the thread scoped to                        | `accountId=0015f00000ABC123`                |
+| Parameter      | Description                                             | Example                                     |
+| -------------- | ------------------------------------------------------- | ------------------------------------------- |
+| `firstMessage` | The prompt you want Endgame to answer (URL-encoded)     | `firstMessage=what's+the+latest+in+my+book` |
+| `accountId`    | The Salesforce Account ID you want the thread scoped to | `accountId=0015f00000ABC123`                |
 
+## Examples
 
-### Examples
-
-**Free-form prompt:**
+### Free-form prompt:
 
 ```
 https://app.endgame.io/threads/new?firstMessage=summarize+my+recent+action+items
+```
+
+### Using a skill:
+
+You can use a skill by specifying that skill by name in the first message along with any variables that the skill needs to run.
+
+**Run a book level skill**
+
+```
+https://app.endgame.io/threads/new?firstMessage=Use+the+pipeline+risk+skill+to+evaluate+the+deals+in+my+pipe
+```
+
+**Run a skill that is scoped to a specific account using _accountId_**
+
+```
+https://app.endgame.io/threads/new?firstMessage=Use+the+deal+inspection+skill&accountId=0015f00000ABC123
+```
+
+**Run a skill that requires additional variable inputs other than account by including them in _firstMessage_**
+
+```
+https://app.endgame.io/threads/new?firstMessage=use+the+rep+evaluation+skill+for+sarah+smith
 ```
 
 ### A note on URL encoding
