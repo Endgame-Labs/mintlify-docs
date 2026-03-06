@@ -110,7 +110,7 @@
       },
       {
         "group": "Access",
-        "pages": ["authentication/index", "authentication/google"]
+        "pages": ["authentication/index"]
       },
       {
         "group": "Admin Guides",

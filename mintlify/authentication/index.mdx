@@ -1,24 +1,83 @@
 ---
 title: "Authentication"
-description: "Learn about the available login options and SSO support for your account."
+description: "Learn about the available login options and granting user access."
 icon: "key-round"
 ---
 
-## Available Login Options
+Endgame uses WorkOS to power our authentication flow.
 
-You can log into your account using either of these methods:
+## Manage new users
 
-- **Salesforce** - Sign in with your existing Salesforce credentials
-- **Google** - Sign in with your Google account
+To manage who can log into Endgame from your organization, go to the [user management](https://app.endgame.io/settings/users) page in settings. Only Admins have access to this page.
+
+You have multiple options for user authentication that can be enabled or configured from this page.
+
+### Invite users
+
+Click Invite User at the top right of the user table and populate emails for users that should receive an invitation. Set the user role for those users you are inviting, the role will apply to all users in this group so do two separate invite groups to invite Admins and Members. You will be able to monitor which users have accepted invitations in this view.
+
+<Frame caption="User invite modal">
+  <img
+    src="./images/user-invite-modal-03-04-26.png"
+    alt="User invite modal"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Add a verified domains
 
 <Info>
-  **Signing in with Salesforce credentials is our default method.** Learn more about using Google as a login method [here](/integrations/google-logins).
+  Admins can prove domain ownership through the creation of DNS TXT records.
 </Info>
 
-## Single Sign-On (SSO)
+You have the option to add verified domains which will allow any user attempting to login with that domain access to Endgame. For example if you verify acme.com and sarah@acme.com attempts to login to Endgame using that email address, she will be provisioned as a user for your org and allowed to authenticate.
 
-We do not currently offer direct SSO integration. However, if your organization has configured Salesforce to use SSO, you can still access SSO functionality by logging in through the Salesforce option. This will automatically route you through your organization's SSO system as configured within Salesforce.
+Click on Add Domain to get started. You will be redirected to the WorkOS interface and guided through the process to add your domain(s).
+
+<Frame caption="User management configuration">
+  <img
+    src="./images/domain-verify-sso-setup-03-04-26.png"
+    alt="User management configuration"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame caption="Domain verification in WorkOS">
+  <img
+    src="./images/domain-verify-workos-03-04-26.png"
+    alt="Domain verification in WorkOS"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Single sign on (SSO)
+
+<Warning>
+  SSO is not available to all organizations. If you are interested in enabling
+  SSO on for your organization contact
+  [support@endgame.io](mailto:support@endgame.io)
+</Warning>
+
+Some organizations have the ability to enable SSO for their organization, you must first verify your organization domains to complete SSO configuration. Enabling SSO allows users to authenticate and be provisioned automatically based on your configured domains. You will be offered the option to choose your preferred SSO provider during the setup process.
+
+Click on Set up SSO to get started. You will be redirect to the WorkOS interface and guided through the process to set up SSO.
+
+<Frame caption="User management configuration">
+  <img
+    src="./images/domain-verify-sso-setup-03-04-26.png"
+    alt="User management configuration"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame caption="SSO setup in WorkOS">
+  <img
+    src="./images/sso-setup-workos-03-04-26.png"
+    alt="SSO setup in WorkOS"
+    className="rounded-lg"
+  />
+</Frame>
 
 ## Need Help?
 
-If you're having trouble logging in or need assistance with account access, please contact our support team.
+If you're having trouble logging in or need assistance with account access, please contact our [support team](mailto:support@endgame.io)

@@ -1,92 +1,20 @@
 ---
-title: "User Management and Authentication"
-description: "Control which users have what access to Endgame and how they authenticate"
+title: "User Management"
+description: "Control which users have what access to Endgame"
 ---
-
-Endgame uses WorkOS to power our authentication flow.
-
-## Manage new users
-
-To manage who can log into Endgame from your organization, go to the [user management](https://app.endgame.io/settings/users) page in settings. Only Admins have access to this page.
-
-You have multiple options for user authentication that can be enabled or configured from this page.
-
-### Invite users
-
-Click Invite User at the top right of the user table and populate emails for users that should receive an invitation. Set the user role for those users you are inviting, the role will apply to all users in this group so do two separate invite groups to invite Admins and Members. You will be able to monitor which users have accepted invitations in this view.
-
-<Frame caption="User invite modal">
-  <img
-    src="./images/user-invite-modal-03-04-26.png"
-    alt="User invite modal"
-    className="rounded-lg"
-  />
-</Frame>
-
-### Add a verified domains
-
-<Info>
-  Admins can prove domain ownership through the creation of DNS TXT records.
-</Info>
-
-You have the option to add verified domains which will allow any user attempting to login with that domain access to Endgame. For example if you verify acme.com and sarah@acme.com attempts to login to Endgame using that email address, she will be provisioned as a user for your org and allowed to authenticate.
-
-Click on Add Domain to get started. You will be redirected to the WorkOS interface and guided through the process to add your domain(s).
-
-<Frame caption="User management configuration">
-  <img
-    src="./images/domain-verify-sso-setup-03-04-26.png"
-    alt="User management configuration"
-    className="rounded-lg"
-  />
-</Frame>
-
-<Frame caption="Domain verification in WorkOS">
-  <img
-    src="./images/domain-verify-workos-03-04-26.png"
-    alt="Domain verification in WorkOS"
-    className="rounded-lg"
-  />
-</Frame>
-
-### Single sign on (SSO)
-
-<Warning>
-  SSO is not available to all organizations. If you are interested in enabling
-  SSO on for your organization contact
-  [support@endgame.io](mailto:support@endgame.io)
-</Warning>
-
-Some organizations have the ability to enable SSO for their organization, you must first verify your organization domains to complete SSO configuration. Enabling SSO allows users to authenticate and be provisioned automatically based on your configured domains. You will be offered the option to choose your preferred SSO provider during the setup process.
-
-Click on Set up SSO to get started. You will be redirect to the WorkOS interface and guided through the process to set up SSO.
-
-<Frame caption="User management configuration">
-  <img
-    src="./images/domain-verify-sso-setup-03-04-26.png"
-    alt="User management configuration"
-    className="rounded-lg"
-  />
-</Frame>
-
-<Frame caption="SSO setup in WorkOS">
-  <img
-    src="./images/sso-setup-workos-03-04-26.png"
-    alt="SSO setup in WorkOS"
-    className="rounded-lg"
-  />
-</Frame>
 
 ## User roles
 
 Endgame currently supports two roles: Admin and Member.
 
-**Admin** 
+**Admin**
+
 - access and ability to edit all organization configuration in [settings](https://app.endgame.io/settings) including: integrations, user management, rules, knowledge, skills, and api key generation.
 - access to user analytics dashboard
 - all standard chat and app interactions and functionality
 
-**Member** 
+**Member**
+
 - access to their own General Settings in [settings](https://app.endgame.io/settings)
 - all standard chat and app interactions and functionality
 
@@ -103,3 +31,5 @@ Use the search or filtering capabilities to view specific users or groups of use
     className="rounded-lg"
   />
 </Frame>
+
+Find more information about inviting users to your organization and setting up authentication options on our [Authentication](https://docs.endgame.io/authentication) page.
