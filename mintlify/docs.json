@@ -102,6 +102,7 @@
           "integrations/gong",
           "integrations/google-drive",
           "integrations/looker",
+          "integrations/microsoft-teams",
           "integrations/salesforce",
           "integrations/slack",
           "integrations/snowflake",
@@ -130,9 +131,7 @@
           },
           {
             "group": "Rules",
-            "pages": [
-              "rules/rules-101"
-            ]
+            "pages": ["rules/rules-101"]
           },
           {
             "group": "Knowledge Management",
