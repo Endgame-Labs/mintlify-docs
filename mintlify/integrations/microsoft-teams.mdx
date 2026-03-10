@@ -13,8 +13,8 @@ Use the instructions below to enable the Microsoft Teams integration in Endgame.
 ## Enable the integration
 
 <Warning>
-  Connecting to the Microsoft Teams API requires that the connecting user is
-  either a Teams Administrator. TODO: confirm this
+  Connecting to the Microsoft Teams API requires that the connecting user is a
+  Teams Administrator.
 </Warning>
 
 <Steps>
@@ -24,19 +24,33 @@ Use the instructions below to enable the Microsoft Teams integration in Endgame.
   <Step title="Start Setup">
     From the integrations page, click "Connect" to kick off the Teams authentication process.
 
-<Frame caption="Microsoft Teams integration">
-  <img
-    src="../images/microsoft-teams-integration-03-09-26.png"
-    alt="Microsoft Teams integration"
-    className="rounded-lg"
-  />
-</Frame>
+        <Frame caption="Microsoft Teams integration">
+        <img
+            src="../images/microsoft-teams-integration-03-09-26.png"
+            alt="Microsoft Teams integration"
+            className="rounded-lg"
+        />
+        </Frame>
 
   </Step>
-  <Step title="Grant Permissions">
-    On the next page, click "Allow" to give us permissions.
+  <Step title="Select Account">
+    Select the account you wish to connect to Endgame and go through the authentication flow and ensure you check the box to give Endgame permission for the specified scopes.
 
-    TODO
+        <Frame caption="Teams account selection">
+        <img
+            src="../images/pick-teams-account-03-10-26.png"
+            alt="Teams account selection"
+            className="rounded-lg"
+        />
+        </Frame>
+
+         <Frame caption="Teams grant permission">
+        <img
+            src="../images/teams-grant-permissions-03-10-26.png"
+            alt="Teams grant permission"
+            className="rounded-lg"
+        />
+        </Frame>
 
   </Step>
   <Step title="Configure Channel Mapping">
@@ -75,7 +89,7 @@ Use the instructions below to enable the Microsoft Teams integration in Endgame.
 
   </Step>
   <Step title="Updating your connection">
-  Users can update or disconnect their Teams connection at anytime. To update your connection hover over the Connect button in the top right corner and when it shows Reconnect, click it to trigger the authentication process. To disconnect, click the Disconnect button in the lower left hand corner.
+  Users can update or disconnect their Teams connection at anytime. Disconnecting will remove all your existing channel to account mappings. To update your connection hover over the Connect button in the top right corner and when it shows Reconnect, click it to trigger the authentication process. To disconnect, click the Disconnect button in the lower left hand corner.
 
    <Frame caption="Microsoft Teams integration view">
         <img
