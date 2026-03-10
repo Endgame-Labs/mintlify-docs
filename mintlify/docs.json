@@ -99,6 +99,7 @@
         "pages": [
           "integrations/chorus",
           "integrations/confluence",
+          "integrations/endgame-notetaker",
           "integrations/gong",
           "integrations/google-drive",
           "integrations/looker",
