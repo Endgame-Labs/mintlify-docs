@@ -118,7 +118,7 @@
         "pages": [
           "admin-getting-started",
           "integrations/initial-connection-to-endgame",
-          "user-management-and-authentication",
+          "user-management",
           {
             "group": "Tips & Tricks",
             "pages": [
