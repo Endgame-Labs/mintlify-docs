@@ -112,13 +112,14 @@
       },
       {
         "group": "Access",
-        "pages": ["authentication/index", "authentication/google"]
+        "pages": ["authentication/index"]
       },
       {
         "group": "Admin Guides",
         "pages": [
           "admin-getting-started",
           "integrations/initial-connection-to-endgame",
+          "user-management-and-authentication",
           {
             "group": "Tips & Tricks",
             "pages": [
@@ -165,7 +166,7 @@
     },
     {
       "source": "/integrations/google-logins",
-      "destination": "/authentication/google"
+      "destination": "/authentication"
     },
     {
       "source": "/endgame-mcp-server",
