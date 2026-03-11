@@ -1,70 +1,122 @@
 ---
 title: "Notion Integration"
-description: "Connect Notion to sync content as knowledge"
+description: "Connect Notion to sync team content as knowledge"
 icon: "notion"
 ---
+
+<Warning>
+  **Beta:** This feature is in beta and is not available to all users.
+</Warning>
 
 Use the instructions below to enable the Notion integration in Endgame. Once enabled, Endgame will process the content from linked content and provide insights via the Endgame UI.
 
 ## Enable the integration
 
-<Warning>TODO: does person need to be an admin?</Warning>
+<Warning>
+  Creating a Notion integration requires that the connecting user is a Notion
+  Administrator for the workspace that you wish to connect.
+</Warning>
 
 <Steps>
-  <Step title="Navigate to Configuration">
-    Navigate to the [integrations page](https://app.endgame.io/settings/integrations). Only Endgame Admins can configure organization integrations
 
-  </Step>
-  <Step title="Start Setup">
-    From the integrations page, click "Connect" to kick off the Notion authentication process.
+<Step title="Create integration in Notion">
+Before setting up your connection within Endgame, you must first create a new integration within Notion.
 
+In Notion click on your workspace in the top left corner -> Settings -> Connections (under Integrations) -> Develop or Manage Integrations (scroll to bottom) -> Internal Integrations (bottom of side menu) -> Create a New Integration.
+
+Name your integration something to indicate it will be used to connect to
+Endgame ie: Endgame Integration. Select the workspace you wish to connect.
+_Endgame currently only supports a single workspace connection._
+
+<Frame caption="Create new integration Notion">
+  <img
+    src="../images/create-new-integration-notion-03-11-26.png"
+    alt="Create new integration Notion"
+    className="rounded-lg"
+  />
+</Frame>
+
+Once created, you can edit the integration's Capabilities. Endgame only requires the Read Content and Read user information including email addresses options.
+
+<Frame caption="Edit capabilities">
+  <img
+    src="../images/capabilities-notion-03-11-26.png"
+    alt="Edit capabilities"
+    className="rounded-lg"
+  />
+</Frame>
+
+</Step>
+
+<Step title="Grant integration access to pages">
+You will need to grant access to the content in Notion that you want to sync to Endgame. We recommend organizing your content into nested file structures to avoid having to grant individual access to each page. If you give Endgame access at the parent level, we will have optional access to all the content nested below that page.
+
+There are two ways to select content:
+
+1. Navigate to the page you want to give access to. Click on the three dot menu in the top right corner -> Connections -> select the connection you set up in the previous step.
+
+<Frame caption="Connect page to integration">
+  <img
+    src="../images/connect-page-notion-03-11-26.png"
+    alt="Connect page to integration"
+    className="rounded-lg"
+  />
+</Frame>
+
+You will be prompted with a modal listing the capabilities you granted to this integration, click to Confirm.
+
+<Frame caption="Confirmation connect page">
+  <img
+    src="../images/confirm-connect-modal-notion-03-11-26.png"
+    alt="Confirmation connect page"
+    className="rounded-lg"
+  />
+</Frame>
+
+2. From the integration page navigate to the Content access tab -> Edit Access -> select the pages you want to share -> Save.
+
+<Frame caption="Manage page access">
+  <img
+    src="../images/manage-access-notion-03-11-26.png"
+    alt="Manage page access"
+    className="rounded-lg"
+  />
+</Frame>
+
+</Step>
+
+  <Step title="Configuration in Endgame">
+    Navigate to the [integrations page](https://app.endgame.io/settings/integrations) and click Connect for the Notion option. 
     <Frame>
       <img
-        src="../images/integrations-view-01-20-26.png"
+        src="../images/notion-integration-connect-03-11-26.png"
         alt="Integrations view"
         className="rounded-lg"
       />
     </Frame>
 
-  </Step>
-  <Step title="Set up integration">
-  
-  </Step>
-  <Step title="Publish document URLs">
-  
+    You will need to copy and paste your secret key from the Notion integration page into the field.
+
+    TODO: image
 
   </Step>
-  <Step title="Configure Channel Mapping">
-    You will be directed to a configuration page where you can designate which public Slack channel content will be associated with specific Endgame Accounts. Establishing these channel connections also enables you to initiate Endgame threads directly within the corresponding Slack channels. For comprehensive guidance on utilizing Endgame within Slack, check out our [Slack](/features/slack) documentation.
 
-    Additionally, you have the option to configure Organization-Wide Channels. While these channels do not contribute data for analytical purposes, they facilitate multi-account Endgame conversations within those specific channels.
+  <Step title="Copy links from Notion to Endgame">
 
-    <Frame>
-      <img
-        src="../images/slack-mapping-9-26-25.png"
-        alt="Channel mapping configuration"
-        className="rounded-lg"
-      />
-    </Frame>
-    For instance, if you have an account for a company named CompanyCo, you would select that from the Account dropdown. Then in Channels, select the channels that are associated with that Account, such as one called #deal-companyco.
+You have already given Endgame access within Notion, but you need to additionally tell Endgame which pages you want to ingest. You do this by copying the url for the Notion page (that you have already given access to in Notion) into this view.
 
-    You can add multiple channels to a single Account, but only one at a time. So using the previous example, you could then also add a #companyco-help channel. Both channels would then have their messages ingested to Endgame and be associated with that single Account.
+TODO: image of url input
 
-    To connect an organization-wide channel, "Select channels to ingest" and Submit.
+Endgame will by default ingest all nested content for a page, if you wish to exclude some pages click on the circular arrow icon to sync and then toggle off the pages you do not want to include.
+
+TODO: image
 
   </Step>
 </Steps>
 
-<Note>
-  Endgame currently cannot distinguish between different account conversations in a single Slack channel. Instead, use Slack channels that are dedicated to singular account conversations to enhance your Endgame data.
-
-We will _only_ ingest channels that you have selected and associated with an Account or at the Organization level. Other than the names of public channels, no other data is ingested without your permission.
-
-</Note>
-
 ## What's next?
 
-That's it! Now that you've connected Slack to Endgame, we'll automatically ingest your data into our systems every 15 minutes and present our insights in Endgame. For comprehensive guidance on utilizing Endgame threads within Slack, check out our [Slack](/features/slack) documentation.
+That's it! Now that you've connected Notion to Endgame, we'll automatically ingest your data into our systems once an hour and present our insights in Endgame.
 
 ## Need help or have feedback?
 
