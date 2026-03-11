@@ -165,7 +165,7 @@
     },
     {
       "source": "/integrations/google-logins",
-      "destination": "/authentication/google"
+      "destination": "/authentication"
     },
     {
       "source": "/endgame-mcp-server",
