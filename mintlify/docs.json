@@ -103,6 +103,7 @@
           "integrations/gong",
           "integrations/google-drive",
           "integrations/looker",
+          "integrations/microsoft-teams",
           "integrations/salesforce",
           "integrations/slack",
           "integrations/snowflake",
