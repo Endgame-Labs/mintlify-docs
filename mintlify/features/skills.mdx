@@ -75,7 +75,9 @@ You can view more information about the content of a skill by clicking on the in
 
 ## Creating Skills
 
-Some skills in your library will be controlled by account admins; you cannot edit or delete these. You can, however, create your own skills by clicking Add Skill -> Write Skill within the skills modal. You can filter down to your personal skills using the My Skills tag in the main skill modal view or within the skill grid.
+Some skills in your library will be controlled by account admins; you cannot edit or delete these. You can, however, create your own skills which you can filter down to using the My Skills tag in the main skill modal view or within the skill grid.
+
+**Write a basic skill:** Add Skill -> Write a Skill within the skills modal and populate the form. See tips below for each field.
 
 <Frame caption="Create skill modal">
   <img
@@ -98,6 +100,24 @@ Some skills in your library will be controlled by account admins; you cannot edi
 
 - **Context:** The actual instructions that define _what_ your skill does and _how_ it should output content — this is where the real customization lives.
   _Example:_ `Write a concise follow-up email after a sales demo. Open by thanking the prospect for their time. Summarize the 2–3 pain points they mentioned during the call. Close with a single, specific next step (e.g., a follow-up call, trial, or proposal). Keep the tone warm but professional. Do not use filler phrases like "Hope this email finds you well."`
+
+**Upload complex skills:** Add Skill -> Upload a Skill within the skills modal. Uploaded skills must be a .zip file that contains a `SKILL.md` file in addition to other optional material that will be used to execute your skill. This is often example or template files to inform the output of your skill and other assets like company logos.
+
+<Frame caption="Upload skill menu">
+  <img
+    src="../images/upload-skill-menu-03-12-26
+    .png"
+    alt="Upload skill menu"
+    className="rounded-lg"
+  />
+</Frame>
+
+Skill folders generally contain:
+
+- SKILL.md (required): Instructions in Markdown - MUST contain a `name` and `description` field
+- scripts/ (optional): Executable code (Python, Bash, etc.)
+- references/ (optional): Documentation loaded as needed
+- assets/ (optional): Templates, fonts, icons used in output
 
 **Skill Artifacts**
 
