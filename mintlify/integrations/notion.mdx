@@ -24,6 +24,21 @@ Before setting up your connection within Endgame, you must first create a new in
 
 In Notion click on your workspace in the top left corner -> Settings -> Connections (under Integrations) -> Develop or Manage Integrations (scroll to bottom) -> Internal Integrations (bottom of side menu) -> Create a New Integration.
 
+<Frame caption="Notion settings">
+  <img
+    src="../images/notion-settings-03-13-26.png"
+    alt="Notion settings"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame caption="Notion connections">
+  <img
+    src="../images/notion-connections-menu-03-13-26.png"
+    alt="Notion connections"
+    className="rounded-lg"
+  />
+</Frame>
 Name your integration something to indicate it will be used to connect to
 Endgame ie: Endgame Integration. Select the workspace you wish to connect.
 _Endgame currently only supports a single workspace connection._
@@ -36,7 +51,7 @@ _Endgame currently only supports a single workspace connection._
   />
 </Frame>
 
-Once created, you can edit the integration's Capabilities. Endgame only requires the Read Content and Read user information including email addresses options.
+Once created, you can edit the integration's Capabilities. Endgame only requires the "Read Content" and "Read user information including email addresses" scopes.
 
 <Frame caption="Edit capabilities">
   <img
@@ -86,30 +101,61 @@ You will be prompted with a modal listing the capabilities you granted to this i
 </Step>
 
   <Step title="Configuration in Endgame">
-    Navigate to the [integrations page](https://app.endgame.io/settings/integrations) and click Connect for the Notion option. 
-    <Frame>
+    Navigate to the [integrations page](https://app.endgame.io/settings/integrations) and click Connect for the Notion option.
+
+    <Frame caption="Manage Notion integration">
       <img
         src="../images/notion-integration-connect-03-11-26.png"
-        alt="Integrations view"
+        alt="Manage Notion integration"
         className="rounded-lg"
       />
     </Frame>
 
     You will need to copy and paste your secret key from the Notion integration page into the field.
 
-    TODO: image
+<Frame caption="Provide Notion secret">
+  <img
+    src="../images/notion-secret-modal-03-13-26.png"
+    alt="Provide Notion secret"
+    className="rounded-lg"
+  />
+</Frame>
 
   </Step>
 
-  <Step title="Copy links from Notion to Endgame">
+  <Step title="Copy URLs from Notion to Endgame">
 
-You have already given Endgame access within Notion, but you need to additionally tell Endgame which pages you want to ingest. You do this by copying the url for the Notion page (that you have already given access to in Notion) into this view.
+You have already given Endgame access within Notion, but you need to additionally tell Endgame which pages you want to ingest. You do this by copying the url for the Notion page (that you have already given access to in Notion) into the Notion Page URL input and clicking Add Page.
 
-TODO: image of url input
+<Frame caption="Notion page URLs">
+  <img
+    src="../images/notion-page-urls-03-13-26.png"
+    alt="Notion page URLs"
+    className="rounded-lg"
+  />
+</Frame>
 
-Endgame will by default ingest all nested content for a page, if you wish to exclude some pages click on the circular arrow icon to sync and then toggle off the pages you do not want to include.
+Endgame will by default ingest all nested content for a page. if you wish to exclude some pages or simply view the pages being synced, click on the circular arrow icon for the page. This will display all the nested pages, you can toggle off pages you do not want to include in the Endgame sync. When you are done with this configuration you can close the preview by clicking the "X" in the top right corner.
 
-TODO: image
+Endgame syncs your page data every hour, you can trigger an immediate sync by clicking on the Sync button.
+
+<Frame caption="Notion synced content">
+  <img
+    src="../images/notion-integration-full-view-03-13-26.png"
+    alt="Notion synced content"
+    className="rounded-lg"
+  />
+</Frame>
+
+Page content can be deleted by clicking the trash icon for the page. Note that deleting a page with nested content will delete all nested page content as well, if you wish to only exclude certain nested pages, follow the instructions above.
+
+  </Step>
+    <Step title="Updating your connection">
+  Users can update or disconnect their Notion connection at anytime. Disconnecting will remove all your existing page data and the links you have created. 
+  
+  To update your connection with a new secret and keep your page links, hover over the Connect button in the top right corner and when it shows Reconnect, click it to open the Notion secret modal. To disconnect, click the Disconnect button in the lower left hand corner.
+
+You can also revoke integration permissions within Notion at the integration or page level.
 
   </Step>
 </Steps>
