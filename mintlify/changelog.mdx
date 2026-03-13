@@ -4,6 +4,60 @@ description: "Product updates and announcements"
 icon: "package"
 ---
 
+## March 13, 2026
+
+### WorkOS now Endgame Auth provider
+
+We've migrated to WorkOS as our authentication provider, giving admins more control over how users access Endgame including new provisioning options:
+
+- User invites — Invite users directly with a link they'll use to log in and join your organization.
+- Domain verification — Automatically provision any user with a matching email domain via just-in-time provisioning.
+- Single Sign-On (select organization access only) — Let users authenticate through your SSO provider of choice, with automatic provisioning on first login.
+
+Existing users are unaffected, all accounts are automatically migrated with no action required. Users will continue signing in with their Salesforce or Google credentials as usual.
+
+Read up on the [new provisioning options](/authentication) and additional details for [managing users](/user-management).
+
+<Frame caption="User table">
+  <img
+    src="./images/user-table-03-04-26.png"
+    alt="User table"
+    className="rounded-lg"
+  />
+</Frame>
+
+## March 12, 2026
+
+### Upload custom skills
+
+You can now upload complex, file-based skills directly into Endgame. From the skills modal, select Add Skill -> Upload a Skill and provide a `.zip` file containing a `SKILL.md` file along with any supporting materials such as example templates, scripts, reference documents, or assets like company logos. This makes it easy to package rich, multi-file skill definitions that go beyond what the basic skill form supports.
+
+Learn more about [creating and uploading skills](/features/skills#creating-skills).
+
+<Frame caption="Upload skill menu">
+  <img
+    src="./images/upload-skill-menu-03-12-26.png"
+    alt="Upload skill menu"
+    className="rounded-lg"
+  />
+</Frame>
+
+## March 11, 2026
+
+### Endgame now integrates with Snowflake
+
+We've added Snowflake to our growing list of integrations. Simply connect your Snowflake tables to Endgame through the [integrations page](https://app.endgame.io/settings/integrations) and Endgame will ingest your data. Once ingested, your Snowflake data will be available to chat responses. This includes data your sales team relies on every day — from opportunity and pipeline data to aggregate product usage, renewals, and customer health scores.
+
+Learn [more](/integrations/snowflake) about connecting Snowflake.
+
+<Frame caption="Snowflake object identifiers">
+  <img
+    src="../images/snowflake-object-identifier-02-10-26.png"
+    alt="Snowflake object identifiers"
+    className="rounded-lg"
+  />
+</Frame>
+
 ## March 2, 2026
 
 ### Endgame Skills
