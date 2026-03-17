@@ -4,7 +4,7 @@ description: "Turn a repeatable workflow into a reusable skill your team can run
 ---
 
 <Info>
-  **Learning path:** [Implementation Guide](/implementation-guide/overview) · Module 6 of 8 · ~15 minutes
+  [Implementation Guide](/implementation-guide/overview) · Module 6 of 8 · ~15 minutes
 </Info>
 
 ## Why this matters
@@ -37,7 +37,7 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
 
 <Steps>
   <Step title="Navigate to Skills settings">
-    Go to [Settings \> Skills](https://app.endgame.io/settings/skills) and click **+ Add Skill** in the top right. You'll see two options:
+    Go to [Settings \> Skills](https://app.endgame.io/settings/skills) and click **\+ Add Skill** in the top right. You'll see two options:
 
     - **Write a Skill** -- Useful for skills that are easy to describe. You'll fill out a form with a title, description, example prompt, and content. This is what we'll use for your first skill.
     - **Upload a Skill** -- Import a `.zip` file containing a skill's content. Better for complex or pre-built skills you want to bring in from elsewhere.
@@ -57,7 +57,6 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
     <Warning>
       **Common mistake:** Writing content that reads like a wish list ("include everything important about this account"). Instead, be explicit about each step, which data sources to check, and what to flag.
     </Warning>
-
     For more on how skills work and how users interact with them, see [Creating Skills](https://docs.endgame.io/features/skills#creating-skills).
   </Step>
   <Step title="Write the skill content">
@@ -65,28 +64,28 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
 
     **Example: Pre-call research brief**
 
-    | Field | Value |
-    | --- | --- |
-    | **Title** | Pre-Call Research Brief |
-    | **Description** | Generates a structured briefing a rep can scan before a customer call. Use before any upcoming meeting or call with an account. |
-    | **Example Prompt** | Use the Pre-Call Research Brief skill to prepare me for my upcoming call with this account. |
+    | Field              | Value                                                                                                                           |
+    | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+    | **Title**          | Pre-Call Research Brief                                                                                                         |
+    | **Description**    | Generates a structured briefing a rep can scan before a customer call. Use before any upcoming meeting or call with an account. |
+    | **Example Prompt** | Use the Pre-Call Research Brief skill to prepare me for my upcoming call with this account.                                     |
 
     **Content:**
 
-    ```
+    ```text
     # Pre-Call Research Brief
-
+    
     ## Goal
     Prepare a structured briefing a rep can scan in
     2 minutes before a customer call.
-
+    
     ## Inputs needed
     - Account name (provided by account context)
     - Salesforce fields: industry, segment, ARR,
       renewal date, health score
     - Recent call transcripts (last 90 days)
     - Slack threads from mapped channels (last 2 weeks)
-
+    
     ## Instructions
     1. Pull the current account details from Salesforce.
        Flag any field that has changed in the last 30 days.
@@ -103,7 +102,7 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
     5. Based on the above, suggest 3-5 specific talking
        points. Each should reference a data point from
        a previous step.
-
+    
     ## Output format
     Use clear section headers. Keep each section to
     3-5 bullet points. Total length should fit on a
@@ -112,28 +111,28 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
 
     **Example: Deal inspection**
 
-    | Field | Value |
-    | --- | --- |
-    | **Title** | Deal Inspection |
-    | **Description** | Runs a structured health check on an opportunity and surfaces risks a manager needs to act on. Use during deal reviews or pipeline scrubs. |
-    | **Example Prompt** | Use the Deal Inspection skill to run a health check on this opportunity. |
+    | Field              | Value                                                                                                                                      |
+    | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+    | **Title**          | Deal Inspection                                                                                                                            |
+    | **Description**    | Runs a structured health check on an opportunity and surfaces risks a manager needs to act on. Use during deal reviews or pipeline scrubs. |
+    | **Example Prompt** | Use the Deal Inspection skill to run a health check on this opportunity.                                                                   |
 
     **Content:**
 
-    ```
+    ```text
     # Deal Inspection
-
+    
     ## Goal
     Run a structured health check on an opportunity and
     surface risks a manager needs to act on.
-
+    
     ## Inputs needed
     - Opportunity record from Salesforce: stage, close
       date, amount, forecast category, days in stage
     - Contact roles on the opportunity
     - Last 5 logged activities (calls, emails, meetings)
     - Call transcripts mentioning competitors
-
+    
     ## Instructions
     1. Pull the current stage, close date, amount, and
        forecast category. Calculate how many days the deal
@@ -154,7 +153,7 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
     5. Based on the risks identified, suggest 2-3 concrete
        next actions with urgency level (immediate, this
        week, this month).
-
+    
     ## Output format
     Lead with a one-line health rating: Strong, At Risk,
     or Needs Attention. Follow with sections for each
