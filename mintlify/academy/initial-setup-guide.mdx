@@ -40,10 +40,13 @@ The connecting user (or API Integration User) needs read access to **all fields*
   <Step title="Navigate to Endgame">
     Go to https://app.endgame.io/
   </Step>
-  <Step title="Authenticate with Salesforce">
-    Click "Continue with Salesforce"
+  <Step title="Login to Endgame">
+    Login with SSO, Google, or Salesforce
   </Step>
-  <Step title="Grant API permissions">
+  <Step title="Connect to Salesforce">
+    Navigate to Settings \> Integrations \> Click `Manage` on the Salesforce card
+  </Step>
+  <Step title="Grant API Permissions">
     You'll be presented with two Salesforce API authentication screens. Simply click "Allow" on both, at which point you'll be redirected back to Endgame.
   </Step>
   <Step title="Approve Salesforce Connected App">
@@ -59,4 +62,29 @@ Once you have things connected, Endgame will automatically start ingesting your 
   Data ingestion typically takes a day or two, depending on the size of your Salesforce instance. The Endgame team will be in touch when your data is ready.
 </Info>
 
-You don't need to wait for ingestion to finish. Continue to the next module to start configuring your instance while your data syncs in the background.
+<Frame>
+  ![Image](/images/image-4.png)
+</Frame>
+
+<Tip>
+  You don't need to wait for ingestion to finish. Continue to the next module to start configuring your instance while your data syncs in the background.
+</Tip>
+
+<CardGroup cols={2}>
+  
+</CardGroup>
+
+---
+
+<Columns cols={2}>
+  <Column>
+    <Card icon="arrow-big-left" horizontal href="academy/launch-admin" title="Previous Module">
+      Learning Path Overview
+    </Card>
+  </Column>
+  <Column>
+    <Card icon="arrow-big-right" horizontal href="academy/configure-salesforce" title="Next Module">
+      Configure Salesforce Fields
+    </Card>
+  </Column>
+</Columns>

@@ -69,7 +69,10 @@
     "groups": [
       {
         "group": "Welcome",
-        "pages": ["index", "changelog"]
+        "pages": [
+          "index",
+          "changelog"
+        ]
       },
       {
         "group": "Getting Started",
@@ -110,12 +113,30 @@
       },
       {
         "group": "Access",
-        "pages": ["authentication/index", "authentication/google"]
+        "pages": [
+          "authentication/index",
+          "authentication/google"
+        ]
       },
       {
         "group": "Admin Guides",
         "pages": [
           "admin-getting-started",
+          {
+            "group": "First Time Setup Guide",
+            "pages": [
+              "academy/launch-admin",
+              "academy/initial-setup-guide",
+              "academy/configure-salesforce",
+              "academy/connect-conversations",
+              "academy/connect-slack",
+              "academy/upload-knowledge",
+              "academy/create-first-rule",
+              "academy/build-first-skill",
+              "academy/test-drive",
+              "academy/invite-team"
+            ]
+          },
           "integrations/initial-connection-to-endgame",
           {
             "group": "Tips & Tricks",
@@ -126,7 +147,10 @@
           },
           {
             "group": "Skill Management",
-            "pages": ["skills/quickstart", "skills/skills-101"]
+            "pages": [
+              "skills/quickstart",
+              "skills/skills-101"
+            ]
           },
           {
             "group": "Rules",
@@ -145,32 +169,21 @@
         ]
       },
       {
-        "group": "Endgame Academy",
+        "group": "Trust & Support",
         "pages": [
-          {
-            "group": "Launch Admin",
-            "pages": [
-              "academy/launch-admin",
-              "academy/initial-setup-guide",
-              "academy/configure-salesforce",
-              "academy/connect-conversations",
-              "academy/connect-slack",
-              "academy/upload-knowledge",
-              "academy/create-first-rule",
-              "academy/build-first-skill",
-              "academy/test-drive",
-              "academy/invite-team"
-            ]
-          }
+          "vdp",
+          "trust/security",
+          "trust/privacy",
+          "status",
+          "contact"
         ]
       },
       {
-        "group": "Trust & Support",
-        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
-      },
-      {
         "group": "Resources",
-        "pages": ["platform", "homepage"]
+        "pages": [
+          "platform",
+          "homepage"
+        ]
       }
     ]
   },
