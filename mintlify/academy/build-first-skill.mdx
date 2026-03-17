@@ -4,7 +4,7 @@ description: "Turn a repeatable workflow into a reusable skill your team can run
 ---
 
 <Info>
-  **Learning path:** [Launch Admin](/academy/launch-admin) · Module 6 of 8 · ~15 minutes
+  **Learning path:** [Implementation Guide](/academy/implementation-guide) · Module 6 of 8 · ~15 minutes
 </Info>
 
 ## Why this matters
@@ -17,7 +17,6 @@ Think of skills as the codified version of what your best rep does before every 
 
 - Pick a high-value workflow to turn into your first skill
 - Write the skill prompt
-- Configure tags and scope
 - Test it against a few accounts
 
 ## Pick your first skill
@@ -38,48 +37,131 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
 
 <Steps>
   <Step title="Navigate to Skills settings">
-    Go to [Settings \> Skills](https://app.endgame.io/settings/templates) and click **Add** in the top right to create a new skill.
+    Go to [Settings \> Skills](https://app.endgame.io/settings/skills) and click **+ Add Skill** in the top right. You'll see two options:
+
+    - **Write a Skill** -- Useful for skills that are easy to describe. You'll fill out a form with a title, description, example prompt, and content. This is what we'll use for your first skill.
+    - **Upload a Skill** -- Import a `.zip` file containing a skill's content. Better for complex or pre-built skills you want to bring in from elsewhere.
+
+    Select **Write a Skill** to open the skill editor.
   </Step>
-  <Step title="Write the skill prompt">
-    A skill can be as simple as a single, well-crafted prompt. Start simple and add structure later if needed.
+  <Step title="Fill out the skill fields">
+    The skill editor has four fields. Every skill should answer three questions: _What is the goal? What information is needed? What should the output look like?_
+
+    - **Title** -- A short, descriptive name for the skill (up to 100 characters). This is what appears on the skill card in your team's library.
+    - **Description** -- A brief explanation of what this skill does (up to 500 characters). Endgame uses this to help users and agents understand when to use this skill. Lead with the outcome, not the process.
+    - **Example Prompt** -- An optional prompt that pre-populates the chat input when a user selects this skill (up to 500 characters). Write it as if the user is asking Endgame to do the task.
+    - **Content** -- The actual instructions that define what the skill does and how it should produce output. This is where the real customization lives.
+
+    The **Content** field is where you'll spend most of your time. The best content is **specific and actionable** -- it tells Endgame exactly what steps to follow, what data to pull, and how to format the output. Vague content produces vague results.
+
+    <Warning>
+      **Common mistake:** Writing content that reads like a wish list ("include everything important about this account"). Instead, be explicit about each step, which data sources to check, and what to flag.
+    </Warning>
+
+    For more on how skills work and how users interact with them, see [Creating Skills](https://docs.endgame.io/features/skills#creating-skills).
+  </Step>
+  <Step title="Write the skill content">
+    Structure your content with clear markdown headers: a **Goal**, the **Inputs needed**, numbered **Instructions**, and an **Output format**. Here are two examples you can adapt.
 
     **Example: Pre-call research brief**
 
-    ```text
-    Give me a comprehensive briefing for my upcoming call
-    with this account. Include:
-    
-    - Recent business initiatives and company news
-    - Key stakeholders I've engaged with and their roles
-    - Current opportunity status and recent activity
-    - Competitive landscape based on our conversations
-    - Risks or opportunities from past interactions
-    - Suggested talking points for the call
-    
-    Pull from Salesforce, call transcripts, emails, and
-    any relevant external news.
+    | Field | Value |
+    | --- | --- |
+    | **Title** | Pre-Call Research Brief |
+    | **Description** | Generates a structured briefing a rep can scan before a customer call. Use before any upcoming meeting or call with an account. |
+    | **Example Prompt** | Use the Pre-Call Research Brief skill to prepare me for my upcoming call with this account. |
+
+    **Content:**
+
+    ```
+    # Pre-Call Research Brief
+
+    ## Goal
+    Prepare a structured briefing a rep can scan in
+    2 minutes before a customer call.
+
+    ## Inputs needed
+    - Account name (provided by account context)
+    - Salesforce fields: industry, segment, ARR,
+      renewal date, health score
+    - Recent call transcripts (last 90 days)
+    - Slack threads from mapped channels (last 2 weeks)
+
+    ## Instructions
+    1. Pull the current account details from Salesforce.
+       Flag any field that has changed in the last 30 days.
+    2. List every contact on this account. For each,
+       include title, last interaction date, and sentiment
+       from recent calls. Highlight the economic buyer and
+       any new contacts added in the last 60 days.
+    3. For each open opportunity, show stage, close date,
+       amount, and days in current stage. Flag any deal
+       where the close date has been pushed more than once.
+    4. Summarize the last 3 calls and any Slack threads
+       from the past 2 weeks. Pull direct quotes where a
+       competitor was mentioned or a concern was raised.
+    5. Based on the above, suggest 3-5 specific talking
+       points. Each should reference a data point from
+       a previous step.
+
+    ## Output format
+    Use clear section headers. Keep each section to
+    3-5 bullet points. Total length should fit on a
+    single page.
     ```
 
     **Example: Deal inspection**
 
-    ```text
-    Analyze this opportunity and provide a health check:
-    
-    - Current stage vs. time in stage
-    - Engagement level of all known stakeholders
-    - Recent activity from calls and emails
-    - Competitive threats mentioned in conversations
-    - Red flags or gaps in qualification
-    - Recommended next steps
-    
-    Compare against what good deals at this stage
-    typically look like.
-    ```
-  </Step>
-  <Step title="Add tags and set scope">
-    **Tags** help your team find skills quickly. Common tag strategies: by stage (`prospect`, `discovery`, `active`, `customer`), by purpose (`prep`, `review`, `strategy`), or by role (`ae`, `csm`, `manager`). Start with one category. We recommend no more than two tags per skill.
+    | Field | Value |
+    | --- | --- |
+    | **Title** | Deal Inspection |
+    | **Description** | Runs a structured health check on an opportunity and surfaces risks a manager needs to act on. Use during deal reviews or pipeline scrubs. |
+    | **Example Prompt** | Use the Deal Inspection skill to run a health check on this opportunity. |
 
-    **Scope** indicates whether this skill targets a single account or works across multiple accounts. Set it to "Account" for pre-call briefs and deal inspections. Set it to "Organization" for pipeline reviews and cross-account analysis.
+    **Content:**
+
+    ```
+    # Deal Inspection
+
+    ## Goal
+    Run a structured health check on an opportunity and
+    surface risks a manager needs to act on.
+
+    ## Inputs needed
+    - Opportunity record from Salesforce: stage, close
+      date, amount, forecast category, days in stage
+    - Contact roles on the opportunity
+    - Last 5 logged activities (calls, emails, meetings)
+    - Call transcripts mentioning competitors
+
+    ## Instructions
+    1. Pull the current stage, close date, amount, and
+       forecast category. Calculate how many days the deal
+       has been in its current stage.
+    2. List all contacts on this opportunity with their
+       role and last interaction date. Flag any key
+       stakeholder (VP+ title) not engaged in the last
+       30 days.
+    3. Summarize the last 5 logged activities. Note any
+       gaps longer than 2 weeks between activities.
+    4. Check for these specific red flags:
+       - Close date pushed more than once
+       - No activity in the last 14 days
+       - Missing economic buyer engagement
+       - Competitor mentioned in recent calls
+       - Stage regression at any point
+       For each flag found, cite the specific data point.
+    5. Based on the risks identified, suggest 2-3 concrete
+       next actions with urgency level (immediate, this
+       week, this month).
+
+    ## Output format
+    Lead with a one-line health rating: Strong, At Risk,
+    or Needs Attention. Follow with sections for each
+    step above. Use a table for the stakeholder map.
+    ```
+
+    Notice the pattern: each skill defines a clear **goal**, lists the **inputs** it needs, gives **numbered steps** with specific data sources and thresholds, and specifies the **output format**. This structure is what separates a skill that produces consistent, actionable output from one that gives you something different every time.
   </Step>
   <Step title="Test against 3-5 accounts">
     Run your new skill against a few different accounts or opportunities. Check:
@@ -92,15 +174,19 @@ Choose a workflow that your team does repeatedly and where consistency matters. 
   </Step>
 </Steps>
 
-## Simple vs. structured skills
+## Writing effective skill prompts
 
-Start simple. A single well-written prompt covers most use cases. Consider adding more structure only when:
+A few principles that consistently improve output quality:
 
-- You need consistent formatting for executive reviews
-- Multiple people need to interpret the same information in the same way
-- You're creating customer-facing deliverables
+**Be explicit about the output format.** Don't just say "write a summary" -- specify length, structure, tone, and what to exclude. A field rep wants a short briefing; a VP wants a crisp table.
 
-You can learn about structured skills in the [Templates 301](/templates/templates-301) guide, but that's for later. Your first skill should be straightforward.
+**Define your inputs clearly.** If the skill doesn't know what data to expect, it will make assumptions. List every field it should look for, and note what to do if something is missing ("if close date is blank, flag the deal as incomplete").
+
+**Keep one skill to one job.** If you find yourself writing a skill that does five different things, split it up. Focused skills are easier to maintain, easier to reuse, and tend to produce sharper outputs.
+
+**Add edge case handling.** What should the skill do if a deal has no next step logged? If a contact's title is missing? Anticipating gaps in data leads to much cleaner results.
+
+**Include an example when the task is nuanced.** For something like a cold outreach email or a competitive battlecard, showing one good example inside the skill dramatically anchors the output.
 
 ## Checkpoint
 
@@ -108,10 +194,8 @@ You've completed this module when you've created at least one custom skill visib
 
 ## Go deeper
 
-- [Templates 101](/templates/templates-101) for best practices on writing and structuring skills
-- [Templates 201](/templates/templates-201) for organizing skills with tags
-- [Templates 301](/templates/templates-301) for advanced structured workflows
-- [Quickstart: Create & Manage Templates](/templates/create-manage-templates) for the step-by-step mechanics
+- [Skills: Composing Skills](/skills/skills-101) for the full breakdown of simple vs. complex skill structures, referencing other skills, and writing great descriptions
+- [Quickstart: Create & Manage Skills](/skills/quickstart) for the step-by-step mechanics of managing global skills
 
 ---
 

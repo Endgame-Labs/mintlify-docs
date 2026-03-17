@@ -125,7 +125,7 @@
           {
             "group": "Implementation Guide",
             "pages": [
-              "academy/launch-admin",
+              "academy/implementation-guide",
               "academy/initial-setup-guide",
               "academy/configure-salesforce",
               "academy/connect-conversations",
