@@ -125,16 +125,16 @@
           {
             "group": "Implementation Guide",
             "pages": [
-              "academy/implementation-guide",
-              "academy/initial-setup-guide",
-              "academy/configure-salesforce",
-              "academy/connect-conversations",
-              "academy/connect-slack",
-              "academy/upload-knowledge",
-              "academy/create-first-rule",
-              "academy/build-first-skill",
-              "academy/test-drive",
-              "academy/invite-team"
+              "implementation-guide/overview",
+              "implementation-guide/initial-setup-guide",
+              "implementation-guide/configure-salesforce",
+              "implementation-guide/connect-conversations",
+              "implementation-guide/connect-slack",
+              "implementation-guide/upload-knowledge",
+              "implementation-guide/create-first-rule",
+              "implementation-guide/build-first-skill",
+              "implementation-guide/test-drive",
+              "implementation-guide/invite-team"
             ]
           },
           "integrations/initial-connection-to-endgame",
