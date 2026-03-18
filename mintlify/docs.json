@@ -104,6 +104,7 @@
           "integrations/google-drive",
           "integrations/looker",
           "integrations/microsoft-teams",
+          "integrations/notion",
           "integrations/salesforce",
           "integrations/slack",
           "integrations/snowflake",
@@ -119,7 +120,7 @@
         "pages": [
           "admin-getting-started",
           "integrations/initial-connection-to-endgame",
-          "user-management-and-authentication",
+          "user-management",
           {
             "group": "Tips & Tricks",
             "pages": [
