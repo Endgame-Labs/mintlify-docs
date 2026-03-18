@@ -1,0 +1,124 @@
+---
+title: "Microsoft SharePoint"
+description: "Connect Microsoft SharePoint to sync document libraries to Endgame"
+icon: "microsoft"
+---
+
+<Warning>
+  **Beta:** This feature is in beta and is not available to all users.
+</Warning>
+
+Use the instructions below to enable the Microsoft SharePoint integration in Endgame. Once enabled, Endgame will ingest documents from your SharePoint document libraries, making them available in Endgame chat responses.
+
+## Enable the integration
+
+<Warning>
+  Connecting to the Microsoft SharePoint API requires that the connecting user is a
+  SharePoint Administrator.
+</Warning>
+
+<Steps>
+  <Step title="Navigate to Configuration">
+    Navigate to the [integrations page](https://app.endgame.io/settings/integrations). Only Endgame Admins can configure organization integrations.
+  </Step>
+  <Step title="Start Setup">
+    From the integrations page, click "Connect" on the SharePoint card to kick off the authentication process.
+
+       <Frame caption="Connect Microsoft SharePoint">
+        <img
+            src="../images/connect-microsoft-sharepoint-03-18-26.png"
+            alt="Search for a SharePoint site"
+            className="rounded-lg"
+        />
+    </Frame>
+  </Step>
+  <Step title="Grant Permissions">
+    Select the Microsoft account you wish to connect to Endgame and go through the authentication flow. Ensure you check the box for "Consent on behalf of your organization" to give Endgame access to the necessary scopes.
+
+        <Frame caption="Microsoft account selection">
+        <img
+            src="../images/pick-microsoft-account-03-10-26.png"
+            alt="Microsoft account selection"
+            className="rounded-lg"
+        />
+        </Frame>
+
+         <Frame caption="Microsoft grant permission">
+        <img
+            src="../images/grant-endgame-permission-microsoft-03-18-26.png"
+            alt="Microsoft grant permission"
+            className="rounded-lg"
+        />
+        </Frame>
+
+  </Step>
+  <Step title="Add Document Libraries">
+    Once connected, click to Manage your configuration. You can now add SharePoint document libraries to sync with Endgame.
+
+    First, search for the SharePoint site that contains the document library you want to sync.
+
+    <Frame caption="Search for a SharePoint site">
+        <img
+            src="../images/select-sharepoint-site-03-18-26.png"
+            alt="Search for a SharePoint site"
+            className="rounded-lg"
+        />
+    </Frame>
+
+    After selecting a site, you will see the available document libraries. Click "Select" to add a document library.
+
+    <Frame caption="Select a document library">
+        <img
+            src="../images/sharepoint-document-library-03-18-26.png"
+            alt="Select a document library"
+            className="rounded-lg"
+        />
+    </Frame>
+
+    Your synced document libraries will appear in the table below, showing the site, document library name, file count, and last sync time. You can remove a synced library at any time by clicking the trash icon. Your libraries sync to Endgame every TODO.
+
+    <Frame caption="Synced document libraries">
+        <img
+            src="../images/sharepoint-synced-document-library-03-18-26.png"
+            alt="Synced document libraries"
+            className="rounded-lg"
+        />
+    </Frame>
+
+  </Step>
+  <Step title="Manage your connection">
+    You can view and manage your full SharePoint configuration from the integration page. To disconnect, click the "Disconnect" button in the bottom left corner. Disconnecting will stop all document syncing and remove your synced document library configuration.
+
+    To update your connection with a new user hover over the Connect button in the top right corner and when it shows Reconnect, click it to trigger the authentication process. Reconnecting will preserve your library configuration. 
+
+
+    <Frame caption="SharePoint integration view">
+        <img
+            src="../images/full-sharepoint-view-03-18-26.png"
+            alt="SharePoint integration view"
+            className="rounded-lg"
+        />
+    </Frame>
+
+    <Frame caption="Disconnect SharePoint">
+        <img
+            src="../images/disconnect-sharepoint-03-18-26.png"
+            alt="Disconnect SharePoint"
+            className="rounded-lg"
+        />
+    </Frame>
+
+  </Step>
+</Steps>
+
+<Note>
+  Endgame will _only_ ingest document libraries that you have explicitly added in the SharePoint integration configuration. No other data is accessed or ingested without your permission.
+</Note>
+
+## What's next?
+
+That's it! Now that you've connected SharePoint to Endgame, we'll automatically sync your document libraries and present our insights in Endgame.
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).
