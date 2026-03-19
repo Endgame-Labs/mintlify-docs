@@ -48,7 +48,7 @@ As an admin you can create global skills that your entire team can access. You m
       - **Title:** The title of your skill, displayed on the skill card.
         _Example:_ `Demo Follow-Up`
 
-      - **Description:** Used under the hood to determine when your skill is applicable. The AI references this to decide if the skill should be used when generating a response.
+      - **Description:** The description helps you and Endgame understand what a skill does. Include details about when the skill should be used and what it's capable of so Endgame can apply it effectively.
         _Example:_ `Generates a post-demo follow-up email that thanks the prospect, recaps their key pain points, and outlines a clear next step.`
 
       - **Example Prompt:** The prompt that pre-populates in the chat input when this skill is selected from the skill grid.
@@ -61,7 +61,18 @@ As an admin you can create global skills that your entire team can access. You m
 
     Skill folders generally contain:
 
-    - SKILL.md (required): Instructions in Markdown - MUST contain a `name` and `description` field
+    - SKILL.md (required): Instructions in Markdown - MUST contain a `name` and `description` field which follows this format including the "---":
+      ```
+      ---
+      name: Account Plan Deck
+
+      description: Use when asked to build an account plan or account plan deck.
+      ---
+
+      <additional skill instruction here>
+      ```
+       \* The description helps you and Endgame understand what a skill does. Include details about when the skill should be used and what it's capable of so Endgame can apply it effectively.
+
     - scripts/ (optional): Executable code (Python, Bash, etc.)
     - references/ (optional): Documentation loaded as needed
     - assets/ (optional): Templates, fonts, icons used in output
