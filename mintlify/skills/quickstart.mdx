@@ -61,7 +61,16 @@ As an admin you can create global skills that your entire team can access. You m
 
     Skill folders generally contain:
 
-    - SKILL.md (required): Instructions in Markdown - MUST contain a `name` and `description` field
+    - SKILL.md (required): Instructions in Markdown - MUST contain a `name` and `description` field which follows this format including the "---":
+      ```
+      ---
+      name: Account Plan Deck
+
+      description: Use when asked to build an account plan or account plan deck.
+      ---
+
+      <additional skill instruction here>
+      ```
     - scripts/ (optional): Executable code (Python, Bash, etc.)
     - references/ (optional): Documentation loaded as needed
     - assets/ (optional): Templates, fonts, icons used in output
