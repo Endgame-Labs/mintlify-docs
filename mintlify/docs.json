@@ -103,6 +103,7 @@
           "integrations/gong",
           "integrations/google-drive",
           "integrations/looker",
+          "integrations/microsoft-sharepoint",
           "integrations/microsoft-teams",
           "integrations/notion",
           "integrations/salesforce",
