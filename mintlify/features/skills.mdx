@@ -131,4 +131,16 @@ Skill folders generally contain:
 
 **Skill Artifacts**
 
-Often using a skill within a thread will generate an “artifact”. These artifacts can be slide decks, dashboards, excel spreadsheets, and more. Read [more](/features/publishing-and-sharing#skill-artifacts) about how you can publish these artifacts to share them with your team or external stakeholders.
+Often using a skill within a thread will generate an "artifact". These artifacts can be slide decks, dashboards, excel spreadsheets, and more. Read [more](/features/publishing-and-sharing#skill-artifacts) about how you can publish these artifacts to share them with your team or external stakeholders.
+
+## Deck Creation
+
+Skills can generate polished slide decks exported as `.pptx` (PowerPoint) files. This makes it easy to build customer-facing presentations, QBRs, deal reviews, and other slide-based deliverables directly from Endgame.
+
+When a skill is configured to produce a deck, Endgame will assemble the slides using our default Endgame branding or will use your organization's branding if configured. This includes colors, logos, and design guidelines, so every output looks professional and on-brand without manual formatting.
+
+<Tip>
+  Organization **Branding** settings are located in the admin [settings](https://app.endgame.io/settings/branding). This ensures slides use your company's colors, logos, and design guidelines. See the [Branding setup guide](/skills/quickstart#configure-your-branding) for details.
+</Tip>
+
+To create a deck skill, you can tell Endgame to create a "deck" in your prompt or specify a deck output in your skills. If you use the **Upload a Skill** flow you can include a `SKILL.md` that specifies a slide deck output. You can include template files, logos, and other assets in the skill's `assets/` folder to further customize the output.
