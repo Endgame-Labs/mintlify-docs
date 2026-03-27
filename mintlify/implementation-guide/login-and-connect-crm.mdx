@@ -1,9 +1,13 @@
 ---
-title: "Initial Setup Guide"
+title: "Login & Connect CRM"
 description: "Get up and running with Endgame in minutes"
 ---
 
-Getting started with Endgame is simple -- and only requires that you authenticate via Salesforce. Before you begin, confirm the items below are in place.
+<Info>
+  [Implementation Guide](/implementation-guide/overview) · Module 1 of 9 · ~5 minutes
+</Info>
+
+Getting started with Endgame is simple. You will receive an invitation via email from the Endgame team to login and begin your integrations setup.
 
 ## Pre-flight checklist
 
@@ -38,17 +42,27 @@ The connecting user (or API Integration User) needs read access to **all fields*
 ## Quick Setup
 
 <Steps>
-  <Step title="Navigate to Endgame">
-    Go to [https://app.endgame.io/](https://app.endgame.io/)
+  <Step title="Authenticate">
+    Using the link in the invite email you received from Endgame, authenticate using Google or Salesforce.
+
+    <Frame caption="Invite Email">
+      <img
+        src="../images/invite-email-workos-03-04-26.jpeg"
+        alt="Invite Email"
+        className="rounded-lg"
+      />
+    </Frame>
   </Step>
-  <Step title="Login to Endgame">
-    Login with SSO, Google, or Salesforce
-  </Step>
-  <Step title="Connect to Salesforce">
-    Navigate to Settings \> Integrations \> Click `Manage` on the Salesforce card
-  </Step>
-  <Step title="Grant API Permissions">
-    You'll be presented with two Salesforce API authentication screens. Simply click "Allow" on both, at which point you'll be redirected back to Endgame.
+  <Step title="Connect Salesforce">
+    From the welcome view, click to Connect Salesforce and authenticate with integration user credentials. **All Endgame users will have access to all the data ingested for the integration user.**
+
+    <Frame caption="Connect Salesforce">
+      <img
+        src="../images/welcome-connect-salesforce-03-04-26.png"
+        alt="Connect Salesforce"
+        className="rounded-lg"
+      />
+    </Frame>
   </Step>
   <Step title="Approve Salesforce Connected App">
     As a user with the `Manage Connected Apps` permission in Salesforce, navigate to `Setup -> Manage Apps -> Connected Apps OAuth Usage`, and click "Install" next to the "EndgameLabs2" app.
@@ -76,7 +90,7 @@ Once you have things connected, Endgame will automatically start ingesting your 
 <Columns cols={2}>
   <Column>
     <Card title="Previous Module" icon="arrow-big-left" horizontal href="implementation-guide/implementation-guide">
-      Implementation Guide Overview
+      Overview
     </Card>
   </Column>
   <Column>

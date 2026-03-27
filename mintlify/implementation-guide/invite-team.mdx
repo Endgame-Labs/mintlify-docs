@@ -4,7 +4,7 @@ description: "Bring users in and set them up for success"
 ---
 
 <Info>
-  [Implementation Guide](/implementation-guide/overview) · Module 8 of 8 · ~10 minutes
+  [Implementation Guide](/implementation-guide/overview) · Module 9 of 9 · ~10 minutes
 </Info>
 
 ## Why this matters
@@ -19,12 +19,15 @@ Configuration is only valuable if people use it. How you introduce Endgame to yo
 
 ## How access works
 
-Endgame authenticates users via Salesforce OAuth. Any user with Salesforce access can log in at [app.endgame.io](https://app.endgame.io). There are two access control options, configured in your Salesforce Connected App settings:
+Endgame uses WorkOS to power authentication. Only Admins can manage user access from the [User Management](https://app.endgame.io/settings/users) page in Settings. There are three ways to grant access:
 
-- **All users may self-authorize**: Anyone with Salesforce access can log in without pre-approval
-- **Admin approved users are pre-authorized**: Users need to be assigned a profile or permission set first
+- **Invite users** - Send email invitations to specific users and assign them a role (Admin or Member). You can monitor which users have accepted invitations from the user management page.
+- **Verified domains** - Add and verify your company's domain (e.g., acme.com) so that anyone with a matching email address can log in and be provisioned automatically. Domain ownership is verified through DNS TXT records.
+- **Single sign-on (SSO)** - If available for your organization, enable SSO so users authenticate through your preferred identity provider. You must verify your domains first before configuring SSO.
 
-Check your current setting under `Salesforce Setup > Connected Apps > Manage Connected Apps > EndgameLabs2 > Permitted Users`.
+<Note>
+  SSO is not available to all organizations. Contact [support@endgame.io](mailto:support@endgame.io) if you're interested in enabling it.
+</Note>
 
 ## Walkthrough
 
@@ -34,7 +37,15 @@ Check your current setting under `Salesforce Setup > Connected Apps > Manage Con
 
     **Power users first** - Start with 3-5 reps or managers who are tech-forward and will give you honest feedback. They help validate your configuration in real workflows and become internal advocates. This is the most common approach.
 
-    **Team-wide launch** - If your configuration is solid (you felt confident in Module 7), you can invite the full team at once. This works best when paired with a brief kickoff session.
+    **Team-wide launch** - If your configuration is solid (you felt confident in Module 8), you can invite the full team at once. This works best when paired with a brief kickoff session.
+  </Step>
+  <Step title="Invite users or set up domain access">
+    Navigate to [Settings \> Users](https://app.endgame.io/settings/users) and choose your approach:
+
+    - **For a targeted rollout**, click **Invite User**, enter each user's email, and assign them a role (Admin or Member).
+    - **For a broader rollout**, click **Add Domain** to verify your company domain. Once verified, anyone with a matching email can log in without individual invitations.
+
+    See the [Authentication](/authentication) page for the full setup walkthrough, including SSO configuration.
   </Step>
   <Step title="Share the right starting points">
     When you invite users, point them to resources that get them productive fast:
@@ -79,6 +90,11 @@ After your team starts using Endgame, pay attention to:
 ## Checkpoint
 
 You've completed this module (and the entire Implementation Guide learning path) when you've invited at least one user and shared a starting point with them. The real validation comes over the following weeks as your team adopts Endgame and you tune the system based on their feedback.
+
+## Go deeper
+
+- [Authentication](/authentication) for the full guide on inviting users, domain verification, and SSO setup
+- [User Management](/user-management) for details on roles, deactivating users, and managing access
 
 ## What's next
 

@@ -100,20 +100,50 @@
       {
         "group": "Integrations",
         "pages": [
-          "integrations/chorus",
-          "integrations/clari-copilot",
-          "integrations/confluence",
-          "integrations/endgame-notetaker",
-          "integrations/gong",
-          "integrations/google-drive",
-          "integrations/looker",
-          "integrations/microsoft-sharepoint",
-          "integrations/microsoft-teams",
-          "integrations/notion",
-          "integrations/salesforce",
-          "integrations/slack",
-          "integrations/snowflake",
-          "integrations/zoom"
+          {
+            "group": "CRM",
+            "icon": "database",
+            "pages": [
+              "integrations/salesforce"
+            ]
+          },
+          {
+            "group": "Transcripts",
+            "icon": "mic",
+            "pages": [
+              "integrations/chorus",
+              "integrations/clari-copilot",
+              "integrations/endgame-notetaker",
+              "integrations/gong",
+              "integrations/zoom"
+            ]
+          },
+          {
+            "group": "Chat",
+            "icon": "message-circle",
+            "pages": [
+              "integrations/microsoft-teams",
+              "integrations/slack"
+            ]
+          },
+          {
+            "group": "Knowledge",
+            "icon": "book-open",
+            "pages": [
+              "integrations/confluence",
+              "integrations/google-drive",
+              "integrations/microsoft-sharepoint",
+              "integrations/notion"
+            ]
+          },
+          {
+            "group": "Data",
+            "icon": "chart-bar",
+            "pages": [
+              "integrations/looker",
+              "integrations/snowflake"
+            ]
+          }
         ]
       },
       {
@@ -128,7 +158,7 @@
             "group": "Implementation Guide",
             "pages": [
               "implementation-guide/overview",
-              "implementation-guide/initial-setup-guide",
+              "implementation-guide/login-and-connect-crm",
               "implementation-guide/connect-conversations",
               "implementation-guide/connect-slack",
               "implementation-guide/upload-knowledge",
@@ -139,7 +169,7 @@
               "implementation-guide/invite-team"
             ]
           },
-          "integrations/initial-connection-to-endgame",
+
           "user-management",
           {
             "group": "Tips & Tricks",

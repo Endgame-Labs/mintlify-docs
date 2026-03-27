@@ -4,7 +4,7 @@ description: "Add your sales methodology, battlecards, and playbooks to shape ho
 ---
 
 <Info>
-  [Implementation Guide](/implementation-guide/overview) · Module 3 of 8 · ~10 minutes
+  [Implementation Guide](/implementation-guide/overview) · Module 4 of 9 · ~10 minutes
 </Info>
 
 ## Why this matters
@@ -46,6 +46,23 @@ Think about what you'd hand a new rep in their first week. These five categories
 
     **Import from public URL** - Best for content that lives on your website (pricing pages, product positioning, case studies). Paste the URL and Endgame will ingest the page content.
   </Step>
+  <Step title="Connect knowledge sources for automatic sync">
+    For content that changes regularly, connect a knowledge source so Endgame stays current without manual re-uploads. Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations) and connect any of the following:
+
+    **Google Drive** - Authenticate with Google and select specific files or folders. Endgame syncs changes once per day, so when your team updates a battlecard or methodology doc, the latest version flows into Endgame automatically.
+
+    **Notion** - Connect your Notion workspace and select the pages or databases that contain enablement content. Endgame syncs updates every hour, making Notion a great home for living documents like competitive intel or process guides that evolve over time.
+
+    **SharePoint** - Connect your SharePoint site to pull in documents from libraries your team already uses. Endgame syncs changes every 15 minutes, making it ideal for orgs that manage enablement content in Microsoft 365.
+
+    **Confluence** - Connect your Confluence workspace and select the spaces or pages that hold your team's knowledge. Endgame syncs changes once per hour, making it one of the fastest sources to reflect updates.
+
+    **Snowflake** - Connect your Snowflake instance to bring in structured data from tables, views, or dynamic tables. Endgame queries your Snowflake data once per hour and includes those insights in chat responses. This is useful for syncing operational data like usage metrics, health scores, or custom reporting that lives in your data warehouse. Note that Snowflake data is treated as organization-level knowledge, not account-specific.
+
+    <Tip>
+      Connecting a knowledge source is a best practice. Rather than uploading static files that go stale, linking to where your team already maintains content means Endgame picks up changes as they happen. Start with whichever platform holds the majority of your enablement content.
+    </Tip>
+  </Step>
   <Step title="Review auto-categorization">
     After uploading, Endgame automatically categorizes documents as organization-level or account-specific and detects account associations. This can take a few minutes. You can edit associations manually if needed.
   </Step>
@@ -56,11 +73,14 @@ Think about what you'd hand a new rep in their first week. These five categories
 | Source        | Auto-sync     | Manual sync                    |
 | ------------- | ------------- | ------------------------------ |
 | Google Drive  | Once per day  | Available anytime              |
+| Notion        | Once per hour | Available anytime              |
+| SharePoint    | Every 15 min  | Available anytime              |
 | Confluence    | Once per hour | Available anytime              |
+| Snowflake     | Once per hour | Available anytime              |
 | Public URL    | No auto-sync  | Must trigger manually          |
 | Device upload | No sync       | Must re-upload for new content |
 
-If your enablement content changes frequently, Google Drive or Confluence links are better than device uploads since they stay current automatically.
+If your enablement content changes frequently, connecting a knowledge source like Google Drive, Notion, SharePoint, Confluence, or Snowflake is better than device uploads since they stay current automatically.
 
 ## Quality over quantity
 

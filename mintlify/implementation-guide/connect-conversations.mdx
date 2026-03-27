@@ -4,7 +4,7 @@ description: "Verify your call recording integration and understand what flows i
 ---
 
 <Info>
-  [Implementation Guide](/implementation-guide/overview) · Module 1 of 8 · ~5 minutes
+  [Implementation Guide](/implementation-guide/overview) · Module 2 of 9 · ~5 minutes
 </Info>
 
 ## Why this matters
@@ -23,7 +23,7 @@ Your Endgame rep typically connects your call recording platform during initial 
 
 <Steps>
   <Step title="Check integration status">
-    Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations). You should see your call recording platform (Gong, Zoom, or Chorus) listed with a connected status. If it shows as disconnected, follow the steps below for your platform.
+    Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations). You should see your transcript source (Gong, Zoom, Chorus, or Clari Copilot) listed with a connected status. If it shows as disconnected, follow the platform-specific steps below.
   </Step>
   <Step title="Understand ingestion timing">
     Once connected, Endgame processes transcripts on a recurring basis. Initial ingestion can take a day or two depending on your volume of historical calls. After that, new transcripts are processed regularly and available in Endgame responses.
@@ -48,22 +48,42 @@ The connecting user must be a Zoom Administrator. Connection is OAuth-based. End
 
 Requires a Chorus Administrator to generate an API key. Navigate to Settings \> API Access \> Generate API token within Chorus, then enter it on the Endgame integrations page. Endgame can only ingest data the API token creator has access to.
 
+### Clari Copilot
+
+The connecting user must be a Clari Copilot Administrator, and your organization must have an Enterprise plan. Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations) and click "Connect" for Clari Copilot. You'll need your API key and password, which you can find in Clari under Workplace Settings \> Integrations \> Clari Copilot API. Enter your credentials in the connection modal and click Connect.
+
+<Note>
+  You must have Salesforce connected to Clari Copilot to provide account ID associations for call transcripts. Without this, Endgame cannot correctly link call data to Salesforce accounts.
+</Note>
+
+### Endgame Notetaker
+
+The Endgame Notetaker is a built-in option that joins your external meetings and generates transcripts directly. An Endgame staff member must activate the Notetaker for your organization -- coordinate with your Sales Representative to enable it.
+
+Once enabled, the Notetaker automatically joins any external meeting synced to Endgame. It sources meeting data from email correspondence synced to Salesforce and individual Google Calendar integrations. Transcripts are typically available in Endgame chat within an hour of meeting completion.
+
+<Tip>
+  The Notetaker is a good fit if your team doesn't use a dedicated call recording platform like Gong, Zoom, or Chorus. It provides transcript coverage without requiring a separate tool.
+</Tip>
+
 ## Checkpoint
 
-You've completed this module when you've confirmed your call recording platform shows as connected on the integrations page. If it wasn't connected, you've either completed the connection yourself or identified who on your team needs to do it.
+You've completed this module when you've confirmed at least one transcript source shows as connected on the integrations page. If it wasn't connected, you've either completed the connection yourself or identified who on your team needs to do it.
 
 ## Go deeper
 
 - [Gong Integration](/integrations/gong)
 - [Zoom Integration](/integrations/zoom)
 - [Chorus Integration](/integrations/chorus)
+- [Clari Copilot Integration](/integrations/clari-copilot)
+- [Endgame Notetaker](/integrations/endgame-notetaker)
 
 ---
 
 <Columns cols={2}>
   <Column>
-    <Card icon="arrow-big-left" horizontal href="implementation-guide/initial-setup-guide" title="Previous Module">
-      Initial Setup Guide
+    <Card icon="arrow-big-left" horizontal href="implementation-guide/login-and-connect-crm" title="Previous Module">
+      Login & Connect CRM
     </Card>
   </Column>
   <Column>
