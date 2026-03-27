@@ -14,23 +14,23 @@ You have multiple options for user authentication that can be enabled or configu
 
 ### Invite users
 
-Click Invite User at the top right of the user table and populate the email for user that should receive an invitation. Set the user [role](/user-management#user-roles) for the user you are inviting. You will be able to monitor which users have accepted invitations in this view.
+Click Invite User at the top right of the user table and enter the email(s) for users you wish to send an invitation. Set the [role](/user-management#user-roles) for the user(s) you are inviting. You can only send invitations for one role at a time, so if you want to invite a mix of members and admins, you must do this in two separate actions. You will be able to monitor which users have accepted invitations in this view.
 
 <Frame caption="User invite modal">
   <img
-    src="../images/user-invite-modal-03-04-26.png"
+    src="../images/user-invite-modal-03-27-26.png"
     alt="User invite modal"
     className="rounded-lg"
   />
 </Frame>
 
-### Add a verified domains
+### Add verified domains
 
 <Info>
   Admins can prove domain ownership through the creation of DNS TXT records.
 </Info>
 
-You have the option to add verified domains which will allow any user attempting to login with that domain access to Endgame. For example if you verify acme.com and sarah@acme.com attempts to login to Endgame using that email address, she will be provisioned as a user for your org and allowed to authenticate.
+You have the option to add verified domains, which will allow any user with a matching email domain to access Endgame. For example, if you verify acme.com and sarah@acme.com attempts to log in to Endgame, she will be automatically provisioned as a user for your organization and allowed to authenticate.
 
 Click on Add Domain to get started. You will be redirected to the WorkOS interface and guided through the process to add your domain(s).
 
@@ -50,17 +50,17 @@ Click on Add Domain to get started. You will be redirected to the WorkOS interfa
   />
 </Frame>
 
-### Single sign on (SSO)
+### Single sign-on (SSO)
 
 <Warning>
   SSO is not available to all organizations. If you are interested in enabling
-  SSO for your organization contact
-  [support@endgame.io](mailto:support@endgame.io)
+  SSO for your organization, contact
+  [support@endgame.io](mailto:support@endgame.io).
 </Warning>
 
 Some organizations have the ability to enable SSO for their organization. **You must first verify your organization domains to complete SSO configuration.** Enabling SSO allows users to authenticate and be provisioned automatically based on your configured domains. You will be offered the option to choose your preferred SSO provider during the setup process.
 
-Click on Set up SSO to get started. You will be redirect to the WorkOS interface and guided through the process to set up SSO.
+Click on Set up SSO to get started. You will be redirected to the WorkOS interface and guided through the process to set up SSO.
 
 <Frame caption="User management configuration">
   <img
@@ -82,4 +82,4 @@ Visit our [user management](/user-management) page for more details.
 
 ## Need Help?
 
-If you're having trouble logging in or need assistance with account access, please contact our [support team](mailto:support@endgame.io)
+If you're having trouble logging in or need assistance with account access, please contact our [support team](mailto:support@endgame.io).
