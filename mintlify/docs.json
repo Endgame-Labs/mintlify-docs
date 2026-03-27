@@ -127,12 +127,12 @@
             "pages": [
               "implementation-guide/overview",
               "implementation-guide/initial-setup-guide",
-              "implementation-guide/configure-salesforce",
               "implementation-guide/connect-conversations",
               "implementation-guide/connect-slack",
               "implementation-guide/upload-knowledge",
               "implementation-guide/create-first-rule",
               "implementation-guide/build-first-skill",
+              "implementation-guide/configure-salesforce",
               "implementation-guide/test-drive",
               "implementation-guide/invite-team"
             ]
