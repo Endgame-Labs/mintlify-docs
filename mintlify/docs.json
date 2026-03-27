@@ -101,10 +101,15 @@
         "group": "Integrations",
         "pages": [
           "integrations/chorus",
+          "integrations/clari-copilot",
           "integrations/confluence",
+          "integrations/endgame-notetaker",
           "integrations/gong",
           "integrations/google-drive",
           "integrations/looker",
+          "integrations/microsoft-sharepoint",
+          "integrations/microsoft-teams",
+          "integrations/notion",
           "integrations/salesforce",
           "integrations/slack",
           "integrations/snowflake",
@@ -113,10 +118,7 @@
       },
       {
         "group": "Access",
-        "pages": [
-          "authentication/index",
-          "authentication/google"
-        ]
+        "pages": ["authentication/index"]
       },
       {
         "group": "Admin Guides",
@@ -138,6 +140,7 @@
             ]
           },
           "integrations/initial-connection-to-endgame",
+          "user-management",
           {
             "group": "Tips & Tricks",
             "pages": [
@@ -154,9 +157,7 @@
           },
           {
             "group": "Rules",
-            "pages": [
-              "rules/rules-101"
-            ]
+            "pages": ["rules/rules-101"]
           },
           {
             "group": "Knowledge Management",
@@ -198,7 +199,7 @@
     },
     {
       "source": "/integrations/google-logins",
-      "destination": "/authentication/google"
+      "destination": "/authentication"
     },
     {
       "source": "/endgame-mcp-server",
