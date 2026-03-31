@@ -1,0 +1,85 @@
+---
+title: "Configure Salesforce Fields"
+description: "Tell Endgame which custom fields matter so responses reference the right data"
+---
+
+<Info>
+  [Implementation Guide](/implementation-guide/overview) · Module 7 of 9 · ~10 minutes
+</Info>
+
+## Why this matters
+
+Endgame ingests all standard Salesforce fields automatically, but your org likely has custom fields that carry important context: ARR, product line, customer segment, health scores, and so on. By selecting these fields for ingestion, you tell Endgame to reference them by default when answering questions. Without this step, Endgame won't have access to the fields your team relies on most.
+
+## What you'll do
+
+- Navigate to the Salesforce configuration page
+- Identify 5-10 custom fields per object that your team asks about most
+- Select fields to ingest
+
+## How to prioritize
+
+You don't need to select all 100 fields right away. Start with the ones your team references in day-to-day conversation: "What's the ARR on this deal?" or "Which segment is this account in?" If people ask about it regularly, select it for ingestion. You can always add more later as patterns emerge.
+
+<Tip>
+  Not sure which fields matter most? Ask your top-performing rep what they check in Salesforce before a call. Those fields are your starting list.
+</Tip>
+
+## Walkthrough
+
+<Steps>
+  <Step title="Open the Salesforce configuration page">
+    Navigate to [Settings \> Integrations \> Salesforce](https://app.endgame.io/settings/integrations/salesforce). You'll see a list of Required Objects (Account, Contact, Opportunity, User).
+  </Step>
+  <Step title="Start with Opportunities">
+    Click on the Opportunity object. This is where most teams have the highest-value custom fields. Think about the questions your reps and managers ask most often. Common picks include:
+
+    - Revenue fields (ARR, MRR, TCV if tracked separately from Amount)
+    - Product or solution fields (Product Family, Use Case, SKU)
+    - Qualification or methodology fields (MEDDIC score, stage progression criteria)
+    - Forecast category or commit status
+    - Renewal or expansion indicators
+  </Step>
+  <Step title="Select fields to ingest">
+    Search for each field, check the box, and click Save Changes. Changes take a few minutes to be reflected in responses.
+
+    <Warning>
+      You can select up to 100 fields per object. Fields that are populated on 1 or fewer records are omitted from the list.
+    </Warning>
+  </Step>
+  <Step title="Repeat for Account, Contact, and User">
+    Move to the Account object next. Common picks: industry, segment, tier, customer since date, health score, territory. For Contacts, consider: title, role, department, and any custom engagement scoring fields.
+  </Step>
+</Steps>
+
+## Configure additional objects
+
+Below the Required Objects, you'll find an **Additional Objects** section. You can sync up to 50 objects total (including required objects). Toggle on any additional Salesforce objects you want Endgame to reference -- all fields on selected objects (standard and custom) will be synced. Changes take up to an hour to take effect.
+
+## Vendor account exclusion
+
+If your org has vendor accounts in Salesforce, exclude them so internal-only calls aren't associated with those accounts. Search for and add any vendor accounts under the **Vendor Account Exclusion** section on the same configuration page. Changes may take a few hours to refresh.
+
+## Checkpoint
+
+You've completed this module when you've selected at least one custom field for ingestion on any Salesforce object. You'll validate that it's working in Module 7 (Test Drive) when you ask Endgame questions that reference those fields.
+
+## Go deeper
+
+- [Salesforce Integration reference](/integrations/salesforce) for technical details on data ingestion, API usage, and additional objects
+- [Salesforce Essentials for Admins](/integrations/salesforce-essentials-for-admins) for guidance on what Endgame needs (and what you can stop worrying about)
+
+---
+
+<Columns cols={2}>
+  <Column>
+    <Card icon="arrow-big-left" horizontal href="implementation-guide/build-first-skill" title="Previous Module">
+      Build Your First Skill
+    </Card>
+  </Column>
+  <Column>
+    <Card icon="arrow-big-right" horizontal href="implementation-guide/test-drive" title="Next Module">
+      Test Drive
+    </Card>
+  </Column>
+</Columns>

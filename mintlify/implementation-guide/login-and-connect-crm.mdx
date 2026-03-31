@@ -1,0 +1,101 @@
+---
+title: "Login & Connect CRM"
+description: "Get up and running with Endgame in minutes"
+---
+
+<Info>
+  [Implementation Guide](/implementation-guide/overview) · Module 1 of 9 · ~5 minutes
+</Info>
+
+Getting started with Endgame is simple. You will receive an invitation via email from the Endgame team to login and begin your integrations setup.
+
+## Pre-flight checklist
+
+<Tip>
+  **Best practice:** Connect with a dedicated [API Integration User](/integrations/salesforce#optional-api-integration-user) instead of a personal account.
+</Tip>
+
+The connecting user (or API Integration User) needs read access to **all fields** on the following Salesforce objects:
+
+<CardGroup cols={2}>
+  <Card>
+    - Account
+    - User
+    - Lead
+    - Contact
+    - Opportunity
+    - Task
+    - Event
+  </Card>
+
+  <Card>
+    - RecordType
+    - OpportunityLineItem
+    - OpportunityContactRole
+    - Campaign
+    - CampaignMember
+    - Note
+    - OpportunityHistory
+  </Card>
+</CardGroup>
+
+## Quick Setup
+
+<Steps>
+  <Step title="Authenticate">
+    Using the link in the invite email you received from Endgame, authenticate using Google or Salesforce.
+
+    <Frame caption="Invite Email">
+      <img
+        src="../images/invite-email-workos-03-04-26.jpeg"
+        alt="Invite Email"
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+  <Step title="Connect Salesforce">
+    From the welcome view, click to Connect Salesforce and authenticate with integration user credentials. **All Endgame users will have access to all the data ingested for the integration user.**
+
+    <Frame caption="Connect Salesforce">
+      <img
+        src="../images/welcome-connect-salesforce-03-04-26.png"
+        alt="Connect Salesforce"
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+  <Step title="Approve Salesforce Connected App">
+    As a user with the `Manage Connected Apps` permission in Salesforce, navigate to `Setup -> Manage Apps -> Connected Apps OAuth Usage`, and click "Install" next to the "EndgameLabs2" app.
+  </Step>
+</Steps>
+
+## What happens next?
+
+Once you have things connected, Endgame will automatically start ingesting your Salesforce data. This can take some time, and our team will reach out when it's ready.
+
+<Info>
+  Data ingestion typically takes a day or two, depending on the size of your Salesforce instance. The Endgame team will be in touch when your data is ready.
+</Info>
+
+<Frame>
+  ![Image](/images/image-4.png)
+</Frame>
+
+<Tip>
+  You don't need to wait for ingestion to finish. Click **Connect Additional Services** and continue to the next module to start configuring your instance while your data syncs in the background.
+</Tip>
+
+---
+
+<Columns cols={2}>
+  <Column>
+    <Card title="Previous Module" icon="arrow-big-left" horizontal href="implementation-guide/implementation-guide">
+      Overview
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Next Module" icon="arrow-big-right" horizontal href="implementation-guide/connect-conversations">
+      Connect Transcripts
+    </Card>
+  </Column>
+</Columns>

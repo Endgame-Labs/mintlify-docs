@@ -69,7 +69,10 @@
     "groups": [
       {
         "group": "Welcome",
-        "pages": ["index", "changelog"]
+        "pages": [
+          "index",
+          "changelog"
+        ]
       },
       {
         "group": "Getting Started",
@@ -97,20 +100,50 @@
       {
         "group": "Integrations",
         "pages": [
-          "integrations/chorus",
-          "integrations/clari-copilot",
-          "integrations/confluence",
-          "integrations/endgame-notetaker",
-          "integrations/gong",
-          "integrations/google-drive",
-          "integrations/looker",
-          "integrations/microsoft-sharepoint",
-          "integrations/microsoft-teams",
-          "integrations/notion",
-          "integrations/salesforce",
-          "integrations/slack",
-          "integrations/snowflake",
-          "integrations/zoom"
+          {
+            "group": "CRM",
+            "icon": "database",
+            "pages": [
+              "integrations/salesforce"
+            ]
+          },
+          {
+            "group": "Transcripts",
+            "icon": "mic",
+            "pages": [
+              "integrations/chorus",
+              "integrations/clari-copilot",
+              "integrations/endgame-notetaker",
+              "integrations/gong",
+              "integrations/zoom"
+            ]
+          },
+          {
+            "group": "Chat",
+            "icon": "message-circle",
+            "pages": [
+              "integrations/microsoft-teams",
+              "integrations/slack"
+            ]
+          },
+          {
+            "group": "Knowledge",
+            "icon": "book-open",
+            "pages": [
+              "integrations/confluence",
+              "integrations/google-drive",
+              "integrations/microsoft-sharepoint",
+              "integrations/notion"
+            ]
+          },
+          {
+            "group": "Data",
+            "icon": "chart-bar",
+            "pages": [
+              "integrations/looker",
+              "integrations/snowflake"
+            ]
+          }
         ]
       },
       {
@@ -121,7 +154,22 @@
         "group": "Admin Guides",
         "pages": [
           "admin-getting-started",
-          "integrations/initial-connection-to-endgame",
+          {
+            "group": "Implementation Guide",
+            "pages": [
+              "implementation-guide/overview",
+              "implementation-guide/login-and-connect-crm",
+              "implementation-guide/connect-conversations",
+              "implementation-guide/connect-slack",
+              "implementation-guide/upload-knowledge",
+              "implementation-guide/create-first-rule",
+              "implementation-guide/build-first-skill",
+              "implementation-guide/configure-salesforce",
+              "implementation-guide/test-drive",
+              "implementation-guide/invite-team"
+            ]
+          },
+
           "user-management",
           {
             "group": "Tips & Tricks",
@@ -132,7 +180,10 @@
           },
           {
             "group": "Skill Management",
-            "pages": ["skills/quickstart", "skills/skills-101"]
+            "pages": [
+              "skills/quickstart",
+              "skills/skills-101"
+            ]
           },
           {
             "group": "Rules",
@@ -150,11 +201,20 @@
       },
       {
         "group": "Trust & Support",
-        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
+        "pages": [
+          "vdp",
+          "trust/security",
+          "trust/privacy",
+          "status",
+          "contact"
+        ]
       },
       {
         "group": "Resources",
-        "pages": ["platform", "homepage"]
+        "pages": [
+          "platform",
+          "homepage"
+        ]
       }
     ]
   },

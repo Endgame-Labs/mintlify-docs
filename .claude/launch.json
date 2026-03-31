@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mintlify-docs",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd mintlify && mintlify dev --port 3335"],
+      "port": 3335
+    }
+  ]
+}

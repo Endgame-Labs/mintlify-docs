@@ -1,0 +1,94 @@
+---
+title: "Connect Transcripts"
+description: "Verify your call recording integration and understand what flows into Endgame"
+---
+
+<Info>
+  [Implementation Guide](/implementation-guide/overview) · Module 2 of 9 · ~5 minutes
+</Info>
+
+## Why this matters
+
+Call recordings and transcripts are one of Endgame's most valuable data sources. They capture what's actually happening in deals: the objections raised, the competitors mentioned, the commitments made. When connected, Endgame can reference specific conversations when answering questions about accounts and opportunities, giving your team insight that goes far beyond what lives in CRM fields.
+
+Your Endgame rep typically connects your call recording platform during initial deployment. This module is about verifying that connection and understanding what data flows in.
+
+## What you'll do
+
+- Confirm your call recording integration is active
+- Understand what data Endgame ingests and how often
+- Know the permission requirements in case you need to reconnect
+
+## Walkthrough
+
+<Steps>
+  <Step title="Check integration status">
+    Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations). You should see your transcript source (Gong, Zoom, Chorus, or Clari Copilot) listed with a connected status. If it shows as disconnected, follow the platform-specific steps below.
+  </Step>
+  <Step title="Understand ingestion timing">
+    Once connected, Endgame processes transcripts on a recurring basis. Initial ingestion can take a day or two depending on your volume of historical calls. After that, new transcripts are processed regularly and available in Endgame responses.
+
+    <Note>
+      Endgame only processes transcripts for accounts your integration user has access to in Salesforce. If a rep's calls with an account aren't showing up, it's likely a Salesforce access issue, not a call recording issue.
+    </Note>
+  </Step>
+</Steps>
+
+## Platform-specific details
+
+### Gong
+
+The connecting user must be a [Gong Technical Admin](https://help.gong.io/hc/en-us/articles/360028568911-About-permission-profiles). Connection is a simple OAuth flow from the integrations page. Endgame uses Gong purely for transcripts and only processes accounts you've granted access to in Salesforce.
+
+### Zoom
+
+The connecting user must be a Zoom Administrator. Connection is OAuth-based. Endgame accesses meetings, participants, and recordings to build a picture of your team's interactions with customers.
+
+### Chorus
+
+Requires a Chorus Administrator to generate an API key. Navigate to Settings \> API Access \> Generate API token within Chorus, then enter it on the Endgame integrations page. Endgame can only ingest data the API token creator has access to.
+
+### Clari Copilot
+
+The connecting user must be a Clari Copilot Administrator, and your organization must have an Enterprise plan. Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations) and click "Connect" for Clari Copilot. You'll need your API key and password, which you can find in Clari under Workplace Settings \> Integrations \> Clari Copilot API. Enter your credentials in the connection modal and click Connect.
+
+<Note>
+  You must have Salesforce connected to Clari Copilot to provide account ID associations for call transcripts. Without this, Endgame cannot correctly link call data to Salesforce accounts.
+</Note>
+
+### Endgame Notetaker
+
+The Endgame Notetaker is a built-in option that joins your external meetings and generates transcripts directly. An Endgame staff member must activate the Notetaker for your organization -- coordinate with your Sales Representative to enable it.
+
+Once enabled, the Notetaker automatically joins any external meeting synced to Endgame. It sources meeting data from email correspondence synced to Salesforce and individual Google Calendar integrations. Transcripts are typically available in Endgame chat within an hour of meeting completion.
+
+<Tip>
+  The Notetaker is a good fit if your team doesn't use a dedicated call recording platform like Gong, Zoom, or Chorus. It provides transcript coverage without requiring a separate tool.
+</Tip>
+
+## Checkpoint
+
+You've completed this module when you've confirmed at least one transcript source shows as connected on the integrations page. If it wasn't connected, you've either completed the connection yourself or identified who on your team needs to do it.
+
+## Go deeper
+
+- [Gong Integration](/integrations/gong)
+- [Zoom Integration](/integrations/zoom)
+- [Chorus Integration](/integrations/chorus)
+- [Clari Copilot Integration](/integrations/clari-copilot)
+- [Endgame Notetaker](/integrations/endgame-notetaker)
+
+---
+
+<Columns cols={2}>
+  <Column>
+    <Card icon="arrow-big-left" horizontal href="implementation-guide/login-and-connect-crm" title="Previous Module">
+      Login & Connect CRM
+    </Card>
+  </Column>
+  <Column>
+    <Card icon="arrow-big-right" horizontal href="implementation-guide/connect-slack" title="Next Module">
+      Connect Chat
+    </Card>
+  </Column>
+</Columns>
