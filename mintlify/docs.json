@@ -69,10 +69,7 @@
     "groups": [
       {
         "group": "Welcome",
-        "pages": [
-          "index",
-          "changelog"
-        ]
+        "pages": ["index", "changelog"]
       },
       {
         "group": "Getting Started",
@@ -103,9 +100,7 @@
           {
             "group": "CRM",
             "icon": "database",
-            "pages": [
-              "integrations/salesforce"
-            ]
+            "pages": ["integrations/salesforce"]
           },
           {
             "group": "Transcripts",
@@ -121,10 +116,7 @@
           {
             "group": "Chat",
             "icon": "message-circle",
-            "pages": [
-              "integrations/microsoft-teams",
-              "integrations/slack"
-            ]
+            "pages": ["integrations/microsoft-teams", "integrations/slack"]
           },
           {
             "group": "Knowledge",
@@ -132,6 +124,7 @@
             "pages": [
               "integrations/confluence",
               "integrations/google-drive",
+              "integrations/microsoft-outlook-calendar",
               "integrations/microsoft-sharepoint",
               "integrations/notion"
             ]
@@ -139,10 +132,7 @@
           {
             "group": "Data",
             "icon": "chart-bar",
-            "pages": [
-              "integrations/looker",
-              "integrations/snowflake"
-            ]
+            "pages": ["integrations/looker", "integrations/snowflake"]
           }
         ]
       },
@@ -180,10 +170,7 @@
           },
           {
             "group": "Skill Management",
-            "pages": [
-              "skills/quickstart",
-              "skills/skills-101"
-            ]
+            "pages": ["skills/quickstart", "skills/skills-101"]
           },
           {
             "group": "Rules",
@@ -201,20 +188,11 @@
       },
       {
         "group": "Trust & Support",
-        "pages": [
-          "vdp",
-          "trust/security",
-          "trust/privacy",
-          "status",
-          "contact"
-        ]
+        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
       },
       {
         "group": "Resources",
-        "pages": [
-          "platform",
-          "homepage"
-        ]
+        "pages": ["platform", "homepage"]
       }
     ]
   },
