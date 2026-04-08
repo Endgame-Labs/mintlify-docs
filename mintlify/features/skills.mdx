@@ -37,7 +37,7 @@ To use a skill, click on one of the skill cards under the chat input in the home
 
 <Frame caption="Skills grid homepage">
   <img
-    src="../images/home-page-03-02-26.png"
+    src="../images/home-page-04-06-26.png"
     alt="Skills grid homepage"
     className="rounded-lg"
   />
@@ -115,6 +115,7 @@ Some skills in your library will be controlled by account admins; you cannot edi
 Skill folders generally contain:
 
 - SKILL.md (required): Instructions in Markdown - MUST contain a `name` and `description` field which follows this format including the "---":
+
   ```
   ---
   name: Account Plan Deck
@@ -124,7 +125,9 @@ Skill folders generally contain:
 
   <additional skill instruction here>
   ```
+
   The description helps you and Endgame understand what a skill does. Include details about when the skill should be used and what it's capable of so Endgame can apply it effectively.
+
 - scripts/ (optional): Executable code (Python, Bash, etc.)
 - references/ (optional): Documentation loaded as needed
 - assets/ (optional): Templates, fonts, icons used in output
@@ -140,7 +143,10 @@ Skills can generate polished slide decks exported as `.pptx` (PowerPoint) files.
 When a skill is configured to produce a deck, Endgame will assemble the slides using our default Endgame branding or will use your organization's branding if configured. This includes colors, logos, and design guidelines, so every output looks professional and on-brand without manual formatting.
 
 <Tip>
-  Organization **Branding** settings are located in the admin [settings](https://app.endgame.io/settings/branding). This ensures slides use your company's colors, logos, and design guidelines. See the [Branding setup guide](/skills/quickstart#configure-your-branding) for details.
+  Organization **Branding** settings are located in the admin
+  [settings](https://app.endgame.io/settings/branding). This ensures slides use
+  your company's colors, logos, and design guidelines. See the [Branding setup
+  guide](/skills/quickstart#configure-your-branding) for details.
 </Tip>
 
 To create a deck skill, you can tell Endgame to create a "deck" in your prompt or specify a deck output in your skills. If you use the **Upload a Skill** flow you can include a `SKILL.md` that specifies a slide deck output. You can include template files, logos, and other assets in the skill's `assets/` folder to further customize the output.
