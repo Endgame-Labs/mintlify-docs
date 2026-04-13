@@ -132,7 +132,7 @@
           {
             "group": "Data",
             "icon": "chart-bar",
-            "pages": ["integrations/looker", "integrations/snowflake"]
+            "pages": ["integrations/endgame-api", "integrations/looker", "integrations/snowflake"]
           }
         ]
       },

@@ -1,0 +1,53 @@
+---
+title: "Endgame API"
+description: "Access Endgame tools and create threads programmatically via the REST API"
+icon: "code"
+---
+
+<Warning>
+  **Beta:** This feature is in beta and is not available to all users.
+</Warning>
+
+Endgame's public API gives AI tools and agents direct access to your organization's revenue intelligence data including CRM records, meeting transcripts, emails, Slack conversations, Salesforce notes, and more. It exposes over 20 read-only tools ranging from structured lookups (find an account, search for a person) to a powerful natural language SQL interface that translates plain-English business questions into queries against the organization's full data warehouse. You can also create new Endgame threads programmatically with the xx endpoint. 
+
+## Available Endpoints
+
+| Endpoint | Description |
+| ---- | ----------- |
+
+TODO: should we list all the endpoints here? will they be changing often and will it be difficult to keep up? 
+
+## Getting Started
+
+<Warning>You must be an Endgame admin to create API keys.</Warning>
+
+<Steps>
+  <Step title="Get your API key">
+    1. Log in to Endgame
+    2. Navigate to **Settings** → **API Keys**
+    3. Create a new API key and copy it immediately — it won't be shown again. Keys can be scoped to the organization (no user association) or to a specific user (user ID and user-specific details are included in every call).
+TODO: add image of api creation page w/ options for key scope types
+  
+  </Step>
+  <Step title="Make your first request">
+    Use the API key as a Bearer token in the `Authorization` header. For example:
+
+    TODO: Paul to add some examples of formatted api calls
+
+  </Step>
+</Steps>
+
+## What kinds of questions can Endgame answer?
+
+- **What accounts does my team own, and when was the last time we interacted with each one?** Using find_accounts to pull book-of-business by user, with interaction recency built into the response.
+
+- **What did customers bring up as pain points or risks across our last 20 sales calls?** Using get_interaction_history with fact output mode, filtered by the pain_point and deal_risk tags.
+
+- **What did Salesforce's CFO say about their AI strategy on the most recent earnings call?** Using summarize_earnings_calls against the relevant CRM account to pull public transcript facts with quotes.
+
+- **Show me all open opportunities over $500K that haven't had any activity in the last 45 days.** Using query_data with a natural language prompt that gets translated into BigQuery SQL against the org's opportunity and interaction tables.
+
+- **What are we saying internally on Slack about the upcoming renewal with Acme Corp?** Using search_slack_messages scoped to Acme's Salesforce account ID to pull messages and AI-generated summaries from linked channels.
+
+## Rate Limits
+TODO: what are the limits, will this be difficult to publicize since in theory we can adjust org by org? 
