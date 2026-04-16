@@ -8,29 +8,6 @@ The Endgame MCP (Model Context Protocol) Server gives AI assistants like Claude 
 
 Think of it as giving your AI assistant a direct line to everything Endgame knows about your business.
 
-## What kinds of questions can Endgame answer?
-
-<CardGroup cols={2}>
-  <Card title="Account intelligence" icon="building">
-    "What accounts does my team own, and when was the last time we interacted with each one?"
-  </Card>
-  <Card title="Conversation insights" icon="message-square">
-    "What did customers bring up as pain points or risks across our last 20 sales calls?"
-  </Card>
-  <Card title="Public intelligence" icon="newspaper">
-    "What did Salesforce's CFO say about their AI strategy on the most recent earnings call?"
-  </Card>
-  <Card title="Pipeline analytics" icon="chart-line">
-    "Show me all open opportunities over $500K that haven't had any activity in the last 45 days."
-  </Card>
-  <Card title="Internal communications" icon="hash">
-    "What are we saying internally on Slack about the upcoming renewal with Acme Corp?"
-  </Card>
-  <Card title="People research" icon="user-search">
-    "Who are the key executives at this account, and can anyone on our team make an introduction?"
-  </Card>
-</CardGroup>
-
 ## Getting Started
 
 ### Connect via Claude
@@ -46,6 +23,7 @@ The recommended way to connect Endgame is through Claude's custom connector. Thi
     3. Enter a name (e.g., "Endgame")
     4. Enter the URL: `https://app.endgame.io/api/v1/mcp`
     5. Click **Add** and follow the prompts to authenticate with Endgame
+
   </Step>
   <Step title="Individual: Connect to Endgame">
     Once the admin has added the connector at the organization level, each team member can connect:
@@ -53,6 +31,7 @@ The recommended way to connect Endgame is through Claude's custom connector. Thi
     1. Go to **Customize** &rarr; **Connectors** in Claude
     2. Find the Endgame connector and click **Connect**
     3. Follow the authentication prompts
+
   </Step>
   <Step title="Start asking questions">
     Once connected, just ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
@@ -60,20 +39,43 @@ The recommended way to connect Endgame is through Claude's custom connector. Thi
 </Steps>
 
 <Note>
-  If you previously installed the legacy Endgame MCP extension, you may need to remove it before connecting the new connector, or give the new one a different name to avoid conflicts.
+  If you previously installed the legacy Endgame MCP extension, you may need to
+  remove it before connecting the new connector, or give the new one a different
+  name to avoid conflicts.
 </Note>
 
 ## How to Use It
 
 Once connected, simply ask Claude questions about your business. You don't need to use any special syntax -- Claude will automatically select the right Endgame tools based on your question.
 
-- "What's new on my accounts this week?"
-- "Prepare me for my meeting with Acme Corp tomorrow"
-- "What competitors are being mentioned in recent calls?"
-- "Find me the VP of Engineering at Snowflake"
-- "What did our team discuss about the renewal in Slack?"
-
 For complex analyses, Claude can chain multiple tools together -- for example, finding an account, pulling recent interactions, and querying your data warehouse to build a complete picture.
+
+<CardGroup cols={2}>
+  <Card title="Account intelligence" icon="building">
+    "What accounts does my team own, and when was the last time we interacted
+    with each one?"
+  </Card>
+  <Card title="Conversation insights" icon="message-square">
+    "What did customers bring up as pain points or risks across our last 20
+    sales calls?"
+  </Card>
+  <Card title="Public intelligence" icon="newspaper">
+    "What did Salesforce's CFO say about their AI strategy on the most recent
+    earnings call?"
+  </Card>
+  <Card title="Pipeline analytics" icon="chart-line">
+    "Show me all open opportunities over $500K that haven't had any activity in
+    the last 45 days."
+  </Card>
+  <Card title="Internal communications" icon="hash">
+    "What are we saying internally on Slack about the upcoming renewal with Acme
+    Corp?"
+  </Card>
+  <Card title="People research" icon="user-search">
+    "Who are the key executives at this account, and can anyone on our team make
+    an introduction?"
+  </Card>
+</CardGroup>
 
 ## Available Tools
 
@@ -81,67 +83,67 @@ When connected via Claude, the following tools are available. Claude selects the
 
 ### Accounts & CRM
 
-| Tool | Description |
-| ---- | ----------- |
-| `find_accounts` | Find CRM accounts by owner, team membership, or account ID. Returns account details, interaction recency, open opportunities, and the full sales team roster. |
-| `query_data` | The most powerful data tool -- translates natural-language questions into SQL queries against your organization's full data warehouse (accounts, contacts, opportunities, meetings, and more). |
-| `search_salesforce_notes` | Retrieve Salesforce notes and activity history entries recorded against a specific account. |
+| Tool                      | Description                                                                                                                                                                                    |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `find_accounts`           | Find CRM accounts by owner, team membership, or account ID. Returns account details, interaction recency, open opportunities, and the full sales team roster.                                  |
+| `query_data`              | The most powerful data tool -- translates natural-language questions into SQL queries against your organization's full data warehouse (accounts, contacts, opportunities, meetings, and more). |
+| `search_salesforce_notes` | Retrieve Salesforce notes and activity history entries recorded against a specific account.                                                                                                    |
 
 ### People & Contacts
 
-| Tool | Description |
-| ---- | ----------- |
-| `find_person` | Look up a specific person by name, email, Salesforce ID, LinkedIn profile, or Endgame person ID. Returns ranked candidates with match scores. |
-| `get_person_details` | Load a full profile for a person: CRM contact data, LinkedIn history, interaction history, introduction paths, and public news. |
-| `search_people` | Browse and filter contacts at a company across CRM, LinkedIn, interaction history, public news, and recent hires/departures. |
+| Tool                 | Description                                                                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `find_person`        | Look up a specific person by name, email, Salesforce ID, LinkedIn profile, or Endgame person ID. Returns ranked candidates with match scores. |
+| `get_person_details` | Load a full profile for a person: CRM contact data, LinkedIn history, interaction history, introduction paths, and public news.               |
+| `search_people`      | Browse and filter contacts at a company across CRM, LinkedIn, interaction history, public news, and recent hires/departures.                  |
 
 ### Meetings & Interactions
 
-| Tool | Description |
-| ---- | ----------- |
+| Tool                      | Description                                                                                                                                                                                                             |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `get_interaction_history` | Retrieve chronological summaries or extracted facts from meeting transcripts and emails for one or more accounts. Filter by date, participant, content type, or topic tags (pain points, deal risks, next steps, etc.). |
-| `search_meetings` | Search for meetings, calls, and emails across the organization. Filter by account, participant, subject, status, and date range. |
-| `search_my_meetings` | Search your own meetings and calendar. Automatically scoped to the logged-in user. |
+| `search_meetings`         | Search for meetings, calls, and emails across the organization. Filter by account, participant, subject, status, and date range.                                                                                        |
+| `search_my_meetings`      | Search your own meetings and calendar. Automatically scoped to the logged-in user.                                                                                                                                      |
 
 ### Messages & Communications
 
-| Tool | Description |
-| ---- | ----------- |
+| Tool                    | Description                                                                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `search_slack_messages` | Fetch Slack messages about a specific account from channels linked to that account. Includes AI-generated conversation summaries. |
 
 ### Documents & Knowledge
 
-| Tool | Description |
-| ---- | ----------- |
-| `fetch_knowledge_documents` | Browse uploaded knowledge documents by account, date, or content type. Returns metadata and previews. |
-| `get_document` | Retrieve the full content of a specific document by ID (transcripts, emails, knowledge docs, earnings calls, Slack messages, or notes). |
-| `find_relevant_documents` | AI-powered search that automatically extracts optimal search terms from a question to find relevant company-wide documents. |
-| `search_vendor_documents` | Search company-wide reference documents (playbooks, product docs, methodology guides) using semantic and keyword matching. |
-| `search_document_insights` | Search extracted facts and quotes across all document types -- transcripts, emails, earnings calls, Slack, and notes. |
-| `search_knowledge_articles` | Search synthesized knowledge articles that provide high-level account overviews built from multiple source documents. |
+| Tool                        | Description                                                                                                                             |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `fetch_knowledge_documents` | Browse uploaded knowledge documents by account, date, or content type. Returns metadata and previews.                                   |
+| `get_document`              | Retrieve the full content of a specific document by ID (transcripts, emails, knowledge docs, earnings calls, Slack messages, or notes). |
+| `find_relevant_documents`   | AI-powered search that automatically extracts optimal search terms from a question to find relevant company-wide documents.             |
+| `search_vendor_documents`   | Search company-wide reference documents (playbooks, product docs, methodology guides) using semantic and keyword matching.              |
+| `search_document_insights`  | Search extracted facts and quotes across all document types -- transcripts, emails, earnings calls, Slack, and notes.                   |
+| `search_knowledge_articles` | Search synthesized knowledge articles that provide high-level account overviews built from multiple source documents.                   |
 
 ### Datasets
 
-| Tool | Description |
-| ---- | ----------- |
-| `search_datasets` | Discover what structured datasets (CSVs, spreadsheets, dashboard exports) are available in your organization. |
-| `query_dataset` | Query uploaded structured data files using natural language. The tool translates questions into SQL and returns results. |
+| Tool              | Description                                                                                                              |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `search_datasets` | Discover what structured datasets (CSVs, spreadsheets, dashboard exports) are available in your organization.            |
+| `query_dataset`   | Query uploaded structured data files using natural language. The tool translates questions into SQL and returns results. |
 
 ### External Research
 
-| Tool | Description |
-| ---- | ----------- |
-| `research_company` | Deep company research with synthesized answers, verbatim quotes, and source URLs. Covers strategic priorities, financials, leadership, and more. Supports SEC filing mode. |
-| `summarize_earnings_calls` | Retrieve and summarize public earnings call transcripts with extracted facts and speaker quotes. |
-| `news_search` | Search Google News for editorial coverage about companies, events, or industry trends. |
-| `web_search` | General-purpose web search for public information -- documentation, press releases, blog posts, and more. |
+| Tool                       | Description                                                                                                                                                                |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `research_company`         | Deep company research with synthesized answers, verbatim quotes, and source URLs. Covers strategic priorities, financials, leadership, and more. Supports SEC filing mode. |
+| `summarize_earnings_calls` | Retrieve and summarize public earnings call transcripts with extracted facts and speaker quotes.                                                                           |
+| `news_search`              | Search Google News for editorial coverage about companies, events, or industry trends.                                                                                     |
+| `web_search`               | General-purpose web search for public information -- documentation, press releases, blog posts, and more.                                                                  |
 
 ### Personalization
 
-| Tool | Description |
-| ---- | ----------- |
-| `get_user_preferences` | Load your standing instructions and preferences that you've established across prior Endgame conversations. |
-| `search_user_preferences` | Search your broader memory and context from past conversations for situationally relevant preferences. |
+| Tool                      | Description                                                                                                 |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `get_user_preferences`    | Load your standing instructions and preferences that you've established across prior Endgame conversations. |
+| `search_user_preferences` | Search your broader memory and context from past conversations for situationally relevant preferences.      |
 
 ## Rate Limits
 
