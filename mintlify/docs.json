@@ -124,6 +124,7 @@
             "pages": [
               "integrations/confluence",
               "integrations/google-drive",
+              "integrations/highspot",
               "integrations/microsoft-outlook-calendar",
               "integrations/microsoft-sharepoint",
               "integrations/notion"
