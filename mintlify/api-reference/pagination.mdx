@@ -1,0 +1,60 @@
+---
+title: "Pagination"
+description: "Cursor pagination for listing threads."
+icon: "list"
+---
+
+`GET /api/v1/threads` is the only endpoint that paginates. It uses opaque
+cursor pagination with a stable ordering (most recently created first, with
+a secondary sort on `id` to break ties).
+
+## Request parameters
+
+| Parameter   | Type               | Default | Description                                                          |
+| ----------- | ------------------ | ------- | -------------------------------------------------------------------- |
+| `limit`     | `integer` (1-100)  | `25`    | Maximum number of threads to return on this page.                    |
+| `cursor`    | `string`           | --      | Opaque cursor from the previous response's `nextCursor`. Omit for the first page. |
+| `accountId` | `string`           | --      | Optional filter: only return threads associated with this account.    |
+
+## Response shape
+
+```json
+{
+  "threads": [
+    { "id": "thr_...", "title": "...", "createdAt": "...", "..." : "..." }
+  ],
+  "nextCursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTA0LTIxVDIyOjE1OjA0WiIsImlkIjoidGhyXy4uLiJ9"
+}
+```
+
+| Field        | Type               | Description                                                                        |
+| ------------ | ------------------ | ---------------------------------------------------------------------------------- |
+| `threads`    | `Thread[]`         | Page of threads in most-recent-first order.                                        |
+| `nextCursor` | `string` or `null` | Cursor to pass on the next request. `null` when there are no more pages.           |
+
+## Example
+
+First page:
+
+```bash
+curl "https://app.endgame.io/api/v1/threads?limit=50" \
+  -H "Authorization: Bearer eak_..."
+```
+
+Follow-up page using the cursor from the previous response:
+
+```bash
+curl "https://app.endgame.io/api/v1/threads?limit=50&cursor=eyJjcmVhdGVkQXQiOiIyMDI2...%22" \
+  -H "Authorization: Bearer eak_..."
+```
+
+Continue until `nextCursor` is `null`.
+
+## Tips
+
+- Treat `cursor` and `nextCursor` as opaque. Their internal shape may change
+  between releases; don't parse or construct them yourself.
+- The cursor encodes the ordering position, so pages are stable across
+  concurrent thread creation -- a thread created mid-walk won't cause
+  duplicates or skips for the remainder of the walk.
+- URL-encode the cursor when passing it as a query parameter.

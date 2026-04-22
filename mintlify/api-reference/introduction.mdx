@@ -1,0 +1,98 @@
+---
+title: "Introduction"
+description: "Create and manage Endgame threads over a standard HTTPS REST API."
+icon: "book-open"
+---
+
+<Warning>
+  **Beta:** The Endgame REST API is in beta and not available to all
+  organizations. Contact [support@endgame.io](mailto:support@endgame.io) to
+  confirm access for your organization.
+</Warning>
+
+The Endgame REST API lets you create and manage threads -- the same
+conversational units that power Endgame Chat -- from any HTTP client. Start a
+thread with a prompt, poll it for the assistant's response, rename it, list
+an organization's threads, or delete one. Use it to embed Endgame directly
+into your own applications, agents, or back-office automations.
+
+## Base URL
+
+```
+https://app.endgame.io
+```
+
+All endpoints in this reference are rooted at `/api/v1`.
+
+## The 30-second tour
+
+Authenticate with a Bearer token, POST a prompt to `/threads`, and you get
+back a thread plus the IDs of the user message and the in-flight assistant
+response:
+
+```bash
+curl -X POST https://app.endgame.io/api/v1/threads \
+  -H "Authorization: Bearer eak_your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "What accounts does my team own?"}'
+```
+
+```json
+{
+  "thread": {
+    "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+    "title": "What accounts does my team own?",
+    "createdAt": "2026-04-21T22:15:04.000Z",
+    "updatedAt": "2026-04-21T22:15:04.000Z",
+    "accountId": null,
+    "secondaryId": null,
+    "published": false,
+    "deleted": false,
+    "threadUrl": null
+  },
+  "messageId": "msg_...",
+  "responseMessageId": "msg_..."
+}
+```
+
+Fetch the thread to watch the assistant's response fill in:
+
+```bash
+curl https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T \
+  -H "Authorization: Bearer eak_your_api_key_here"
+```
+
+The response includes the thread, every message on it, and a derived `status`
+object (`idle`, `in_progress`, or `error`) you can poll until the assistant
+finishes.
+
+## OpenAPI spec
+
+Every deployed build publishes a live OpenAPI 3.1 spec:
+
+```
+GET https://app.endgame.io/api/v1/openapi.json
+```
+
+The spec is generated from the API router at request time and cached at the
+edge for one hour, so it's always in sync with the endpoints described here.
+Use it to generate clients, populate Postman collections, or drive your own
+integration tests. Mintlify renders the same spec into the per-endpoint
+reference pages listed in the sidebar.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Authentication" icon="key-round" href="/api-reference/authentication">
+    How to create and use API keys.
+  </Card>
+  <Card title="Errors" icon="circle-alert" href="/api-reference/errors">
+    Error envelope, status codes, and trace IDs.
+  </Card>
+  <Card title="Rate limits" icon="gauge" href="/api-reference/rate-limits">
+    Rollout status and quota handling guidance.
+  </Card>
+  <Card title="Pagination" icon="list" href="/api-reference/pagination">
+    Cursor pagination for listing threads.
+  </Card>
+</CardGroup>

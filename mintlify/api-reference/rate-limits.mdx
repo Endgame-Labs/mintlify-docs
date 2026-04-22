@@ -1,0 +1,46 @@
+---
+title: "Rate limits"
+description: "Request quotas, response headers, and handling 429s."
+icon: "gauge"
+---
+
+<Warning>
+  **Beta:** Rate limiting is not yet enforced. Every request is accepted
+  regardless of volume. The `429 RATE_LIMITED` shape documented below is the
+  contract clients should prepare for ahead of enforcement rolling out.
+</Warning>
+
+When rate limiting is enabled for your organization, limits are applied at
+the **organization** level across every API key and endpoint for that org.
+
+## Response shape
+
+Once enforcement is rolled out, requests over the limit will return:
+
+```
+HTTP/2 429
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "RATE_LIMITED",
+    "message": "Rate limit exceeded",
+    "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  }
+}
+```
+
+## Handling 429s
+
+- Back off with exponential delay and jitter so retries don't synchronize
+  across instances.
+- Treat `429` as a signal to reduce request rate across the entire
+  organization, not just the calling process -- the limit is org-wide.
+- If your integration consistently approaches the quota, contact your
+  Endgame administrator or [support@endgame.io](mailto:support@endgame.io)
+  to review.
+
+## Adjusting your org's limits
+
+Limits are configured per plan. If your integration's traffic profile
+doesn't fit the default envelope, reach out so we can evaluate.

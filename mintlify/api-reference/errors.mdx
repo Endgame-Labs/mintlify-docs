@@ -1,0 +1,96 @@
+---
+title: "Errors"
+description: "Error envelope, status codes, and how to use trace IDs to get support."
+icon: "circle-alert"
+---
+
+The REST API returns a consistent error envelope for every failed request:
+
+```json
+{
+  "error": {
+    "code": "INVALID_PARAMS",
+    "message": "title: Expected string, received number",
+    "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  }
+}
+```
+
+| Field      | Description                                                                                                          |
+| ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| `code`     | Stable machine-readable error code (see below). Safe to branch on in client code.                                    |
+| `message`  | Human-readable explanation. May include field-level detail from schema validation.                                   |
+| `trace_id` | Unique identifier for this request. Always include it when contacting support so we can trace the request end-to-end. |
+
+## Error codes and status mapping
+
+| Code             | HTTP status | When it happens                                                                                                                   |
+| ---------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `INVALID_PARAMS` | `400`       | Request body or query parameters failed schema validation, the body wasn't valid JSON, or a required parameter was missing.        |
+| `UNAUTHORIZED`   | `401`       | Missing, malformed, or revoked credential in the `Authorization` header.                                                          |
+| `FORBIDDEN`      | `403`       | Credential is valid but not permitted for this operation. Most commonly: an M2M caller attempting `PATCH` or `DELETE` on a thread. |
+| `NOT_FOUND`      | `404`       | Resource doesn't exist, the caller isn't permitted to read it, or the public API feature flag isn't enabled for the organization. |
+| `RATE_LIMITED`   | `429`       | Request quota exceeded. See [Rate limits](/api-reference/rate-limits).                                                            |
+| `INTERNAL_ERROR` | `500`       | Unexpected server-side failure. Retry with exponential backoff; contact support with the `trace_id` if the issue persists.        |
+
+<Note>
+  `NOT_FOUND` is returned both when a resource truly doesn't exist and when
+  the caller lacks permission to see it. This is intentional -- it avoids
+  leaking the existence of threads the caller can't access.
+</Note>
+
+## Trace IDs
+
+Every error response includes a `trace_id` that flows through Endgame's
+logging and observability stack. Include it in support requests so we can
+jump straight to the relevant request.
+
+## Example: validation error
+
+```bash
+curl -i -X PATCH https://app.endgame.io/api/v1/threads/thr_123 \
+  -H "Authorization: Bearer eak_..." \
+  -H "Content-Type: application/json" \
+  -d '{"title": ""}'
+```
+
+```
+HTTP/2 400
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "INVALID_PARAMS",
+    "message": "title: String must contain at least 1 character(s)",
+    "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  }
+}
+```
+
+## Example: M2M mutation denial
+
+```bash
+curl -i -X DELETE https://app.endgame.io/api/v1/threads/thr_123 \
+  -H "Authorization: Bearer <m2m_jwt>"
+```
+
+```
+HTTP/2 403
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "FORBIDDEN",
+    "message": "M2M credentials cannot mutate threads",
+    "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4U"
+  }
+}
+```
+
+## Retry guidance
+
+- `429` responses are retryable once the rate limit window resets. See
+  [Rate limits](/api-reference/rate-limits).
+- Transient `5xx` errors are safe to retry with exponential backoff.
+- `400`, `401`, `403`, and `404` responses are deterministic and will not
+  succeed on retry without changing the request or credentials.

@@ -66,134 +66,158 @@
     }
   },
   "navigation": {
-    "groups": [
+    "tabs": [
       {
-        "group": "Welcome",
-        "pages": ["index", "changelog"]
-      },
-      {
-        "group": "Getting Started",
-        "pages": [
-          "core-concepts",
-          "navigating-endgame",
-          "your-first-10-minutes",
-          "query-your-book",
-          "endgame-chat-201"
-        ]
-      },
-      {
-        "group": "Features",
-        "pages": [
-          "features/skills",
-          "features/publishing-and-sharing",
-          "features/tasks",
-          "features/file-upload",
-          "features/export-thread-content",
-          "features/slack",
-          "features/mcp-server",
-          "features/user-preferences"
-        ]
-      },
-      {
-        "group": "Integrations",
-        "pages": [
+        "tab": "Guides",
+        "groups": [
           {
-            "group": "CRM",
-            "icon": "database",
-            "pages": ["integrations/salesforce"]
+            "group": "Welcome",
+            "pages": ["index", "changelog"]
           },
           {
-            "group": "Transcripts",
-            "icon": "mic",
+            "group": "Getting Started",
             "pages": [
-              "integrations/chorus",
-              "integrations/clari-copilot",
-              "integrations/endgame-notetaker",
-              "integrations/gong",
-              "integrations/zoom"
+              "core-concepts",
+              "navigating-endgame",
+              "your-first-10-minutes",
+              "query-your-book",
+              "endgame-chat-201"
             ]
           },
           {
-            "group": "Chat",
-            "icon": "message-circle",
-            "pages": ["integrations/microsoft-teams", "integrations/slack"]
-          },
-          {
-            "group": "Knowledge",
-            "icon": "book-open",
+            "group": "Features",
             "pages": [
-              "integrations/confluence",
-              "integrations/google-drive",
-              "integrations/highspot",
-              "integrations/microsoft-outlook-calendar",
-              "integrations/microsoft-sharepoint",
-              "integrations/notion"
+              "features/skills",
+              "features/publishing-and-sharing",
+              "features/tasks",
+              "features/file-upload",
+              "features/export-thread-content",
+              "features/slack",
+              "features/mcp-server",
+              "features/user-preferences"
             ]
           },
           {
-            "group": "Data",
-            "icon": "chart-bar",
-            "pages": ["integrations/looker", "integrations/snowflake"]
-          }
-        ]
-      },
-      {
-        "group": "Access",
-        "pages": ["authentication/index"]
-      },
-      {
-        "group": "Admin Guides",
-        "pages": [
-          "admin-getting-started",
-          {
-            "group": "Implementation Guide",
+            "group": "Integrations",
             "pages": [
-              "implementation-guide/overview",
-              "implementation-guide/login-and-connect-crm",
-              "implementation-guide/connect-conversations",
-              "implementation-guide/connect-slack",
-              "implementation-guide/upload-knowledge",
-              "implementation-guide/create-first-rule",
-              "implementation-guide/build-first-skill",
-              "implementation-guide/configure-salesforce",
-              "implementation-guide/test-drive",
-              "implementation-guide/invite-team"
+              {
+                "group": "CRM",
+                "icon": "database",
+                "pages": ["integrations/salesforce"]
+              },
+              {
+                "group": "Transcripts",
+                "icon": "mic",
+                "pages": [
+                  "integrations/chorus",
+                  "integrations/clari-copilot",
+                  "integrations/endgame-notetaker",
+                  "integrations/gong",
+                  "integrations/zoom"
+                ]
+              },
+              {
+                "group": "Chat",
+                "icon": "message-circle",
+                "pages": ["integrations/microsoft-teams", "integrations/slack"]
+              },
+              {
+                "group": "Knowledge",
+                "icon": "book-open",
+                "pages": [
+                  "integrations/confluence",
+                  "integrations/google-drive",
+                  "integrations/highspot",
+                  "integrations/microsoft-outlook-calendar",
+                  "integrations/microsoft-sharepoint",
+                  "integrations/notion"
+                ]
+              },
+              {
+                "group": "Data",
+                "icon": "chart-bar",
+                "pages": ["integrations/looker", "integrations/snowflake"]
+              }
             ]
           },
+          {
+            "group": "Access",
+            "pages": ["authentication/index"]
+          },
+          {
+            "group": "Admin Guides",
+            "pages": [
+              "admin-getting-started",
+              {
+                "group": "Implementation Guide",
+                "pages": [
+                  "implementation-guide/overview",
+                  "implementation-guide/login-and-connect-crm",
+                  "implementation-guide/connect-conversations",
+                  "implementation-guide/connect-slack",
+                  "implementation-guide/upload-knowledge",
+                  "implementation-guide/create-first-rule",
+                  "implementation-guide/build-first-skill",
+                  "implementation-guide/configure-salesforce",
+                  "implementation-guide/test-drive",
+                  "implementation-guide/invite-team"
+                ]
+              },
 
-          "user-management",
-          {
-            "group": "Tips & Tricks",
-            "pages": [
-              "integrations/salesforce-essentials-for-admins",
-              "admin_tips/query-endgame-from-url"
+              "user-management",
+              {
+                "group": "Tips & Tricks",
+                "pages": [
+                  "integrations/salesforce-essentials-for-admins",
+                  "admin_tips/query-endgame-from-url"
+                ]
+              },
+              {
+                "group": "Skill Management",
+                "pages": ["skills/quickstart", "skills/skills-101"]
+              },
+              {
+                "group": "Rules",
+                "pages": ["rules/rules-101"]
+              },
+              {
+                "group": "Knowledge Management",
+                "pages": [
+                  "knowledge/file-upload",
+                  "knowledge/knowledge-basics-for-admins",
+                  "knowledge/google-drive-troubleshooting"
+                ]
+              }
             ]
           },
           {
-            "group": "Skill Management",
-            "pages": ["skills/quickstart", "skills/skills-101"]
+            "group": "Trust & Support",
+            "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
           },
           {
-            "group": "Rules",
-            "pages": ["rules/rules-101"]
-          },
-          {
-            "group": "Knowledge Management",
-            "pages": [
-              "knowledge/file-upload",
-              "knowledge/knowledge-basics-for-admins",
-              "knowledge/google-drive-troubleshooting"
-            ]
+            "group": "Resources",
+            "pages": ["platform", "homepage"]
           }
         ]
       },
       {
-        "group": "Trust & Support",
-        "pages": ["vdp", "trust/security", "trust/privacy", "status", "contact"]
-      },
-      {
-        "group": "Resources",
-        "pages": ["platform", "homepage"]
+        "tab": "API reference",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "api-reference/introduction",
+              "api-reference/authentication",
+              "api-reference/errors",
+              "api-reference/rate-limits",
+              "api-reference/pagination"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "openapi": "api-reference/openapi.json"
+          }
+        ]
       }
     ]
   },
