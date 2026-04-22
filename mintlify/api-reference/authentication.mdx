@@ -58,17 +58,28 @@ Two credential types are accepted:
 The two credential types have different permissions against the thread
 resource:
 
-| Capability                              | User-scoped key (`eak_`) | M2M JWT                       |
-| --------------------------------------- | ------------------------ | ----------------------------- |
-| Create a thread                         | ✅ Owned by the user     | ✅ Owned by an org-wide actor |
-| Read / list the caller's own threads    | ✅                       | ✅                            |
-| Read / list **other** users' threads    | ❌ `404 NOT_FOUND`       | ✅ All org threads            |
-| Rename (`PATCH`) a thread               | ✅ Own threads only      | ❌ `403 FORBIDDEN`            |
-| Delete a thread                         | ✅ Own threads only      | ❌ `403 FORBIDDEN`            |
+| Capability                                                     | User-scoped key (`eak_`)                       | M2M JWT                                       |
+| -------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------- |
+| Create a thread                                                | ✅ Attributed to the user                      | ✅ Attributed to `m2m-${orgId}` (shared pool) |
+| List threads (`GET /threads`)                                  | ✅ Own threads + all org-published threads     | ✅ Every thread in the org                    |
+| Fetch an individual thread (`GET /threads/{id}`)               | ✅ Own threads only                            | ✅ Every thread in the org                    |
+| Rename or delete a thread (`PATCH` / `DELETE /threads/{id}`)   | ✅ Own threads only                            | ✅ M2M-created threads in the same org only   |
 
-M2M callers are designed for read-heavy integrations that should not mutate
-user-owned content. If your integration needs to rename or delete threads,
-use a user-scoped API key instead.
+Mutation authority mirrors creation: a caller can only mutate threads that
+would have been attributed to it on create. Because every M2M JWT for an
+organization shares the synthetic `m2m-${orgId}` identity, any M2M caller
+for that org can rename or delete any thread *other* M2M callers in the
+same org created -- but never a thread owned by a real user. Attempts to
+mutate a thread you didn't create return `403 FORBIDDEN`.
+
+<Note>
+  **Asymmetry to be aware of (beta):** user-scoped keys may see another
+  user's **org-published** thread in `GET /threads` but cannot fetch it via
+  `GET /threads/{id}` -- the per-thread read is strict owner-only and
+  returns `404 NOT_FOUND`. We're tracking this to align before GA; until
+  then, treat list results as the canonical set of threads your key can
+  reason about.
+</Note>
 
 Cross-organization access is always denied -- a credential from one
 organization cannot read or mutate threads in another.
@@ -86,8 +97,8 @@ request.
 
 If a user-scoped key is leaked or no longer needed, revoke it from the same
 [API Keys settings page](https://app.endgame.io/settings/api-keys). Revocation
-takes effect immediately; in-flight requests using the revoked key will fail
-with `401 UNAUTHORIZED`.
+takes effect immediately; subsequent requests using the revoked key will
+fail with `401 UNAUTHORIZED`.
 
 To rotate M2M credentials, contact
 [support@endgame.io](mailto:support@endgame.io).

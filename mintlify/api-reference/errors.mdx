@@ -28,7 +28,7 @@ The REST API returns a consistent error envelope for every failed request:
 | ---------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `INVALID_PARAMS` | `400`       | Request body or query parameters failed schema validation, the body wasn't valid JSON, or a required parameter was missing.        |
 | `UNAUTHORIZED`   | `401`       | Missing, malformed, or revoked credential in the `Authorization` header.                                                          |
-| `FORBIDDEN`      | `403`       | Credential is valid but not permitted for this operation. Most commonly: an M2M caller attempting `PATCH` or `DELETE` on a thread. |
+| `FORBIDDEN`      | `403`       | Credential is valid but not permitted to mutate this thread. Returned when `PATCH` or `DELETE` is issued against a thread the caller did not create (for example, an M2M caller targeting a user-owned thread, or vice versa). |
 | `NOT_FOUND`      | `404`       | Resource doesn't exist, the caller isn't permitted to read it, or the public API feature flag isn't enabled for the organization. |
 | `RATE_LIMITED`   | `429`       | Request quota exceeded. See [Rate limits](/api-reference/rate-limits).                                                            |
 | `INTERNAL_ERROR` | `500`       | Unexpected server-side failure. Retry with exponential backoff; contact support with the `trace_id` if the issue persists.        |
@@ -67,10 +67,14 @@ Content-Type: application/json
 }
 ```
 
-## Example: M2M mutation denial
+## Example: mutating a thread you didn't create
+
+Attempting to delete a user-owned thread with an M2M credential (or
+vice versa -- a user-scoped key attempting to delete an M2M-created
+thread) returns `403`:
 
 ```bash
-curl -i -X DELETE https://app.endgame.io/api/v1/threads/thr_123 \
+curl -i -X DELETE https://app.endgame.io/api/v1/threads/thr_user_owned \
   -H "Authorization: Bearer <m2m_jwt>"
 ```
 
@@ -81,11 +85,14 @@ Content-Type: application/json
 {
   "error": {
     "code": "FORBIDDEN",
-    "message": "M2M credentials cannot mutate threads",
+    "message": "FORBIDDEN",
     "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4U"
   }
 }
 ```
+
+See the [permissions matrix](/api-reference/authentication#key-scope-and-permissions)
+for the full mutation rules.
 
 ## Retry guidance
 

@@ -26,9 +26,10 @@ All endpoints in this reference are rooted at `/api/v1`.
 
 ## The 30-second tour
 
-Authenticate with a Bearer token, POST a prompt to `/threads`, and you get
-back a thread plus the IDs of the user message and the in-flight assistant
-response:
+Authenticate with a Bearer token and POST a prompt to `/threads`. The
+`prompt` is required -- it's persisted as the first user message and
+triggers an assistant response that generates asynchronously. You get back
+the thread plus the IDs of both messages:
 
 ```bash
 curl -X POST https://app.endgame.io/api/v1/threads \
@@ -43,7 +44,7 @@ curl -X POST https://app.endgame.io/api/v1/threads \
     "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
     "title": "What accounts does my team own?",
     "createdAt": "2026-04-21T22:15:04.000Z",
-    "updatedAt": "2026-04-21T22:15:04.000Z",
+    "updatedAt": null,
     "accountId": null,
     "secondaryId": null,
     "published": false,
@@ -75,10 +76,15 @@ GET https://app.endgame.io/api/v1/openapi.json
 ```
 
 The spec is generated from the API router at request time and cached at the
-edge for one hour, so it's always in sync with the endpoints described here.
-Use it to generate clients, populate Postman collections, or drive your own
-integration tests. Mintlify renders the same spec into the per-endpoint
-reference pages listed in the sidebar.
+edge for one hour, so it's always in sync with the deployed endpoints. Use
+it to generate clients, populate Postman collections, or drive your own
+integration tests.
+
+<Note>
+  The per-endpoint pages in the sidebar of this reference are rendered from
+  a snapshot of the spec vendored into the docs repo, not the live
+  `openapi.json` endpoint. The two stay in sync through release review.
+</Note>
 
 ## What's next
 

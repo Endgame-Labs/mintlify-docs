@@ -20,10 +20,10 @@
       "post": {
         "operationId": "createThread",
         "summary": "Create a thread",
-        "description": "Creates a new thread in the caller's organization. If a `prompt` is supplied, a user message is persisted and the assistant's response begins generating asynchronously -- poll `GET /api/v1/threads/{id}` until the derived `status.state` is `idle`.",
+        "description": "Creates a new thread in the caller's organization. The `prompt` is required -- it's persisted as the first user message and triggers the assistant's response to generate asynchronously. Poll `GET /api/v1/threads/{id}` until the derived `status.state` is `idle` (or `error`).",
         "tags": ["Threads"],
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -49,7 +49,7 @@
       "get": {
         "operationId": "listThreads",
         "summary": "List threads",
-        "description": "Lists threads in the caller's organization with cursor pagination. User-scoped API keys see only their own threads; M2M callers see all threads in the org. Results are ordered most-recent-first.",
+        "description": "Lists threads in the caller's organization with cursor pagination. User-scoped API keys see their own threads plus any other thread in the organization that has been published. M2M callers see every thread in the organization. Results are ordered by most recent activity first (`updatedAt` when present, otherwise `createdAt`).",
         "tags": ["Threads"],
         "parameters": [
           {
@@ -123,7 +123,7 @@
       "patch": {
         "operationId": "updateThread",
         "summary": "Update a thread",
-        "description": "Renames a thread. Only `title` is writable. M2M callers receive `403 FORBIDDEN`.",
+        "description": "Renames a thread. Only `title` is writable. Callers may only mutate threads they created -- attempts to rename another principal's thread return `403 FORBIDDEN` (M2M callers share a single org-scoped identity, so every M2M caller for the org can rename threads created by any M2M caller for the same org, but never a user-owned thread).",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -149,13 +149,14 @@
               }
             }
           },
-          "400": { "$ref": "#/components/responses/InvalidParams" }
+          "400": { "$ref": "#/components/responses/InvalidParams" },
+          "403": { "$ref": "#/components/responses/Forbidden" }
         }
       },
       "delete": {
         "operationId": "deleteThread",
         "summary": "Delete a thread",
-        "description": "Soft-deletes a thread. The record is preserved server-side but will no longer appear in `GET /api/v1/threads` or be readable via `GET /api/v1/threads/{id}`. M2M callers receive `403 FORBIDDEN`.",
+        "description": "Soft-deletes a thread. The record is preserved server-side but will no longer appear in `GET /api/v1/threads` or be readable via `GET /api/v1/threads/{id}`. Callers may only delete threads they created -- attempts to delete another principal's thread return `403 FORBIDDEN`.",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -170,7 +171,8 @@
                 }
               }
             }
-          }
+          },
+          "403": { "$ref": "#/components/responses/Forbidden" }
         }
       }
     }
@@ -284,8 +286,8 @@
           "content": { "type": "string", "readOnly": true },
           "status": {
             "type": ["string", "null"],
-            "enum": ["in_progress", "completed", "failed", null],
-            "description": "Lifecycle status of the message. Always `null` for `user` messages; non-null for assistant messages.",
+            "enum": ["in_progress", "corroborating", "completed", "failed", "cancelled", null],
+            "description": "Lifecycle status of the message. Always `null` for `user` messages; non-null for assistant messages. `in_progress` and `corroborating` mean the assistant is still processing; `completed` is terminal success; `failed` means an error was hit; `cancelled` means the user or system aborted the message.",
             "readOnly": true
           },
           "createdAt": {
@@ -357,15 +359,18 @@
       },
       "CreateThreadRequest": {
         "type": "object",
-        "description": "Parameters for creating a thread. All fields are optional; an empty body creates an untitled, empty thread.",
+        "description": "Parameters for creating a thread. `prompt` is required; `title` auto-generates from it if omitted.",
+        "required": ["prompt"],
         "properties": {
-          "title": {
-            "type": "string",
-            "description": "Explicit title. If omitted and a `prompt` is supplied, the title is auto-generated."
-          },
           "prompt": {
             "type": "string",
-            "description": "First user message on the thread. Triggers an assistant response that generates asynchronously."
+            "minLength": 1,
+            "description": "First user message on the thread. Persisted immediately and triggers an assistant response that generates asynchronously."
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Explicit title. If omitted, the title is auto-generated from the prompt."
           },
           "accountId": {
             "type": "string",
@@ -394,7 +399,7 @@
       },
       "ListThreadsResponse": {
         "type": "object",
-        "required": ["threads", "nextCursor"],
+        "required": ["threads", "nextCursor", "truncated"],
         "properties": {
           "threads": {
             "type": "array",
@@ -403,6 +408,10 @@
           "nextCursor": {
             "type": ["string", "null"],
             "description": "Opaque cursor for the next page. `null` when there are no more pages."
+          },
+          "truncated": {
+            "type": "boolean",
+            "description": "`true` when the organization has more threads than the server-side pagination window can walk. Narrow the result with `accountId` to retrieve the threads this page can't surface."
           }
         }
       },
@@ -486,6 +495,14 @@
     "responses": {
       "InvalidParams": {
         "description": "Request body or query parameters failed validation. See [Errors](/api-reference/errors) for the full error envelope and code list.",
+        "content": {
+          "application/json": {
+            "schema": { "$ref": "#/components/schemas/Error" }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Credential valid but not permitted to mutate this thread (the caller did not create it). See [Errors](/api-reference/errors) for the full error envelope.",
         "content": {
           "application/json": {
             "schema": { "$ref": "#/components/schemas/Error" }
