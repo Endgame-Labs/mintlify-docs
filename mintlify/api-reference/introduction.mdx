@@ -67,17 +67,6 @@ The response includes the thread, every message on it, and a derived `status`
 object (`idle`, `in_progress`, or `error`) you can poll until the assistant
 finishes.
 
-## OpenAPI spec
-
-An OpenAPI 3.1 spec is available two ways:
-
-- Bundled with these docs at [`/api-reference/openapi.json`](/api-reference/openapi.json) --
-  use this to generate clients, import into Postman, or drive integration
-  tests. The bundled spec is kept in sync with each docs release.
-- Served live at `GET https://app.endgame.io/api/v1/openapi.json` --
-  generated from the deployed router at request time and cached at the
-  edge for one hour, so it always reflects the production endpoints.
-
 ## What's next
 
 <CardGroup cols={2}>

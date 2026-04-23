@@ -440,11 +440,3 @@ curl -X DELETE https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MD
 | `activeMessageId` | string \| null                        | ID of the assistant message currently generating, if `state` is `in_progress`. |
 | `latestUpdate`    | string \| null                        | Most recent step description, or `"Thinking"` before any step is emitted. |
 | `stepCount`       | integer                               | Number of reasoning steps on the active assistant message.               |
-
----
-
-Need to generate a client, import into Postman, or drive contract tests?
-The [OpenAPI 3.1 spec](/api-reference/openapi.json) bundled with these
-docs describes the same endpoints in machine-readable form. Endgame also
-serves a live version at `https://app.endgame.io/api/v1/openapi.json`
-that regenerates from the deployed router on every request.

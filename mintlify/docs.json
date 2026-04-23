@@ -143,7 +143,6 @@
       },
       {
         "group": "API reference",
-        "openapi": "api-reference/openapi.json",
         "pages": [
           "api-reference/introduction",
           "api-reference/authentication",
