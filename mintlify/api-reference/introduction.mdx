@@ -43,7 +43,7 @@ curl -X POST https://app.endgame.io/api/v1/threads \
   "thread": {
     "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
     "title": "What accounts does my team own?",
-    "createdAt": "2026-04-21T22:15:04.000Z",
+    "createdAt": "2026-04-22T14:32:10.000Z",
     "updatedAt": null,
     "accountId": null,
     "secondaryId": null,
@@ -69,36 +69,23 @@ finishes.
 
 ## OpenAPI spec
 
-Every deployed build publishes a live OpenAPI 3.1 spec:
+An OpenAPI 3.1 spec is available two ways:
 
-```
-GET https://app.endgame.io/api/v1/openapi.json
-```
-
-The spec is generated from the API router at request time and cached at the
-edge for one hour, so it's always in sync with the deployed endpoints. Use
-it to generate clients, populate Postman collections, or drive your own
-integration tests.
-
-<Note>
-  The per-endpoint pages in the sidebar of this reference are rendered from
-  a snapshot of the spec vendored into the docs repo, not the live
-  `openapi.json` endpoint. The two stay in sync through release review.
-</Note>
+- Bundled with these docs at [`/api-reference/openapi.json`](/api-reference/openapi.json) --
+  use this to generate clients, import into Postman, or drive integration
+  tests. The bundled spec is kept in sync with each docs release.
+- Served live at `GET https://app.endgame.io/api/v1/openapi.json` --
+  generated from the deployed router at request time and cached at the
+  edge for one hour, so it always reflects the production endpoints.
 
 ## What's next
 
 <CardGroup cols={2}>
   <Card title="Authentication" icon="key-round" href="/api-reference/authentication">
-    How to create and use API keys.
+    How to create and use API keys and M2M credentials.
   </Card>
-  <Card title="Errors" icon="circle-alert" href="/api-reference/errors">
-    Error envelope, status codes, and trace IDs.
-  </Card>
-  <Card title="Rate limits" icon="gauge" href="/api-reference/rate-limits">
-    Rollout status and quota handling guidance.
-  </Card>
-  <Card title="Pagination" icon="list" href="/api-reference/pagination">
-    Cursor pagination for listing threads.
+  <Card title="Endpoints" icon="terminal" href="/api-reference/endpoints">
+    Reference for the five thread endpoints, with examples, errors, rate
+    limits, and pagination.
   </Card>
 </CardGroup>

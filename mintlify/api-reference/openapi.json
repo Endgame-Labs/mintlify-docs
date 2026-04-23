@@ -49,7 +49,7 @@
       "get": {
         "operationId": "listThreads",
         "summary": "List threads",
-        "description": "Lists threads in the caller's organization with cursor pagination. User-scoped API keys see their own threads plus any other thread in the organization that has been published. M2M callers see every thread in the organization. Results are ordered by most recent activity first (`updatedAt` when present, otherwise `createdAt`).",
+        "description": "Lists threads visible to the caller, ordered by most recent activity first (`updatedAt` when present, otherwise `createdAt`). Personal keys see their own threads plus every org-published thread; the org-wide principal (shared by org-wide API keys and M2M applications) sees threads created by that principal plus every org-published thread.",
         "tags": ["Threads"],
         "parameters": [
           {
@@ -123,7 +123,7 @@
       "patch": {
         "operationId": "updateThread",
         "summary": "Update a thread",
-        "description": "Renames a thread. Only `title` is writable. Callers may only mutate threads they created -- attempts to rename another principal's thread return `403 FORBIDDEN` (M2M callers share a single org-scoped identity, so every M2M caller for the org can rename threads created by any M2M caller for the same org, but never a user-owned thread).",
+        "description": "Renames a thread. Only `title` is writable. Callers may only mutate threads they created -- attempts to rename another principal's thread return `403 FORBIDDEN`. The org-wide principal (shared by org-wide API keys and M2M applications) can rename any thread created by that principal, regardless of which credential originally created it, but never a thread owned by a personal key. Published state does not grant mutation rights.",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -182,7 +182,7 @@
       "bearerAuth": {
         "type": "http",
         "scheme": "bearer",
-        "description": "Endgame API key (`eak_*`) or WorkOS M2M JWT. Obtain a user-scoped key from Settings → API keys."
+        "description": "One of: an Endgame API key prefixed `eak_` (created from Settings → API Keys with a Personal or Org-wide scope), or a WorkOS access token from an Endgame-provisioned M2M application (created from Settings → Applications and exchanged via the `client_credentials` grant)."
       }
     },
     "parameters": {
@@ -215,48 +215,68 @@
           "id": {
             "type": "string",
             "description": "Stable thread identifier.",
-            "readOnly": true
+            "readOnly": true,
+            "example": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
           },
           "title": {
             "type": "string",
-            "description": "Human-readable title. Auto-generated from the first prompt when a thread is created without an explicit title."
+            "description": "Human-readable title. Auto-generated from the first prompt when a thread is created without an explicit title.",
+            "example": "What accounts does my team own?"
           },
           "createdAt": {
             "type": "string",
             "format": "date-time",
             "description": "ISO 8601 timestamp of thread creation.",
-            "readOnly": true
+            "readOnly": true,
+            "example": "2026-04-22T14:32:10.000Z"
           },
           "updatedAt": {
             "type": ["string", "null"],
             "format": "date-time",
             "description": "ISO 8601 timestamp of the last update. `null` if never updated.",
-            "readOnly": true
+            "readOnly": true,
+            "example": "2026-04-22T14:35:02.000Z"
           },
           "accountId": {
             "type": ["string", "null"],
-            "description": "Associated account ID, if any."
+            "description": "Associated account ID, if any.",
+            "example": "0018b00000abCdEfGhI"
           },
           "secondaryId": {
             "type": ["string", "null"],
-            "description": "Secondary linkage (e.g. opportunity, user). Settable on create only."
+            "description": "Secondary linkage (e.g. opportunity, user). Settable on create only.",
+            "example": null
           },
           "published": {
             "type": "boolean",
             "description": "Whether the thread is published to the organization.",
-            "readOnly": true
+            "readOnly": true,
+            "example": false
           },
           "deleted": {
             "type": "boolean",
             "description": "Whether the thread has been soft-deleted.",
-            "readOnly": true
+            "readOnly": true,
+            "example": false
           },
           "threadUrl": {
             "type": ["string", "null"],
             "format": "uri",
             "description": "Deep link into the Endgame app for this thread.",
-            "readOnly": true
+            "readOnly": true,
+            "example": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
           }
+        },
+        "example": {
+          "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+          "title": "What accounts does my team own?",
+          "createdAt": "2026-04-22T14:32:10.000Z",
+          "updatedAt": "2026-04-22T14:35:02.000Z",
+          "accountId": "0018b00000abCdEfGhI",
+          "secondaryId": null,
+          "published": false,
+          "deleted": false,
+          "threadUrl": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
         }
       },
       "ThreadMessage": {
@@ -276,29 +296,45 @@
           "model"
         ],
         "properties": {
-          "id": { "type": "string", "readOnly": true },
-          "threadId": { "type": "string", "readOnly": true },
+          "id": {
+            "type": "string",
+            "readOnly": true,
+            "example": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4U"
+          },
+          "threadId": {
+            "type": "string",
+            "readOnly": true,
+            "example": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+          },
           "role": {
             "type": "string",
             "enum": ["assistant", "user"],
-            "readOnly": true
+            "readOnly": true,
+            "example": "assistant"
           },
-          "content": { "type": "string", "readOnly": true },
+          "content": {
+            "type": "string",
+            "readOnly": true,
+            "example": "Your team owns 42 accounts. The five largest by ARR are..."
+          },
           "status": {
             "type": ["string", "null"],
             "enum": ["in_progress", "corroborating", "completed", "failed", "cancelled", null],
             "description": "Lifecycle status of the message. Always `null` for `user` messages; non-null for assistant messages. `in_progress` and `corroborating` mean the assistant is still processing; `completed` is terminal success; `failed` means an error was hit; `cancelled` means the user or system aborted the message.",
-            "readOnly": true
+            "readOnly": true,
+            "example": "completed"
           },
           "createdAt": {
             "type": "string",
             "format": "date-time",
-            "readOnly": true
+            "readOnly": true,
+            "example": "2026-04-22T14:32:11.000Z"
           },
           "completedAt": {
             "type": ["string", "null"],
             "format": "date-time",
-            "readOnly": true
+            "readOnly": true,
+            "example": "2026-04-22T14:32:18.000Z"
           },
           "steps": {
             "type": ["array", "null"],
@@ -311,24 +347,31 @@
               },
               "additionalProperties": true
             },
-            "readOnly": true
+            "readOnly": true,
+            "example": [
+              { "description": "Looking up accounts owned by your team" },
+              { "description": "Ranking by annualized revenue" }
+            ]
           },
           "sources": {
             "type": ["array", "null"],
             "description": "Source documents referenced by the assistant.",
             "items": { "type": "object", "additionalProperties": true },
-            "readOnly": true
+            "readOnly": true,
+            "example": null
           },
           "attachments": {
             "type": ["array", "null"],
             "description": "User-supplied attachments associated with the message.",
             "items": { "type": "object", "additionalProperties": true },
-            "readOnly": true
+            "readOnly": true,
+            "example": null
           },
           "model": {
             "type": ["string", "null"],
             "description": "Identifier of the model that produced the message, if applicable.",
-            "readOnly": true
+            "readOnly": true,
+            "example": "claude-opus-4-7"
           }
         }
       },
@@ -340,20 +383,24 @@
           "state": {
             "type": "string",
             "enum": ["idle", "in_progress", "error"],
-            "description": "`idle` when no assistant work is pending (or no assistant messages exist yet), `in_progress` while the assistant is still generating, `error` if the most recent assistant message failed."
+            "description": "`idle` when no assistant work is pending (or no assistant messages exist yet), `in_progress` while the assistant is still generating, `error` if the most recent assistant message failed.",
+            "example": "idle"
           },
           "activeMessageId": {
             "type": ["string", "null"],
-            "description": "ID of the assistant message currently being generated, if `state` is `in_progress`."
+            "description": "ID of the assistant message currently being generated, if `state` is `in_progress`.",
+            "example": null
           },
           "latestUpdate": {
             "type": ["string", "null"],
-            "description": "Description of the most recent reasoning step, or `\"Thinking\"` if the assistant hasn't emitted a step yet."
+            "description": "Description of the most recent reasoning step, or `\"Thinking\"` if the assistant hasn't emitted a step yet.",
+            "example": null
           },
           "stepCount": {
             "type": "integer",
             "minimum": 0,
-            "description": "Number of reasoning steps emitted on the active assistant message."
+            "description": "Number of reasoning steps emitted on the active assistant message.",
+            "example": 0
           }
         }
       },
@@ -365,21 +412,28 @@
           "prompt": {
             "type": "string",
             "minLength": 1,
-            "description": "First user message on the thread. Persisted immediately and triggers an assistant response that generates asynchronously."
+            "description": "First user message on the thread. Persisted immediately and triggers an assistant response that generates asynchronously.",
+            "example": "What accounts does my team own?"
           },
           "title": {
             "type": "string",
             "minLength": 1,
-            "description": "Explicit title. If omitted, the title is auto-generated from the prompt."
+            "description": "Explicit title. If omitted, the title is auto-generated from the prompt.",
+            "example": "Book of business review"
           },
           "accountId": {
             "type": "string",
-            "description": "Associate the thread with an account ID."
+            "description": "Associate the thread with an account ID.",
+            "example": "0018b00000abCdEfGhI"
           },
           "secondaryId": {
             "type": "string",
-            "description": "Secondary linkage (e.g. opportunity, user)."
+            "description": "Secondary linkage (e.g. opportunity, user).",
+            "example": "0068b00000abCdEfGhI"
           }
+        },
+        "example": {
+          "prompt": "What accounts does my team own?"
         }
       },
       "CreateThreadResponse": {
@@ -389,12 +443,29 @@
           "thread": { "$ref": "#/components/schemas/Thread" },
           "messageId": {
             "type": "string",
-            "description": "ID of the user message persisted from `prompt`. Present only when `prompt` was supplied."
+            "description": "ID of the user message persisted from `prompt`.",
+            "example": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4V"
           },
           "responseMessageId": {
             "type": "string",
-            "description": "ID of the in-flight assistant response message. Poll `GET /api/v1/threads/{id}` until this message's `status` is `completed` or `failed`."
+            "description": "ID of the in-flight assistant response message. Poll `GET /api/v1/threads/{id}` until this message's `status` is `completed` or `failed`.",
+            "example": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4W"
           }
+        },
+        "example": {
+          "thread": {
+            "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+            "title": "What accounts does my team own?",
+            "createdAt": "2026-04-22T14:32:10.000Z",
+            "updatedAt": null,
+            "accountId": null,
+            "secondaryId": null,
+            "published": false,
+            "deleted": false,
+            "threadUrl": null
+          },
+          "messageId": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4V",
+          "responseMessageId": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4W"
         }
       },
       "ListThreadsResponse": {
@@ -407,12 +478,31 @@
           },
           "nextCursor": {
             "type": ["string", "null"],
-            "description": "Opaque cursor for the next page. `null` when there are no more pages."
+            "description": "Opaque cursor for the next page. `null` when there are no more pages.",
+            "example": "MjAyNi0wNC0yMlQxNDozNTowMi4wMDBafHRocl8wMUhaWTZQOFJCNEs1QzdYOUUyTjhNRFE0VA=="
           },
           "truncated": {
             "type": "boolean",
-            "description": "`true` when the organization has more threads than the server-side pagination window can walk. Narrow the result with `accountId` to retrieve the threads this page can't surface."
+            "description": "`true` when the organization has more threads than the server-side pagination window can walk. Narrow the result with `accountId` to retrieve the threads this page can't surface.",
+            "example": false
           }
+        },
+        "example": {
+          "threads": [
+            {
+              "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+              "title": "What accounts does my team own?",
+              "createdAt": "2026-04-22T14:32:10.000Z",
+              "updatedAt": "2026-04-22T14:35:02.000Z",
+              "accountId": null,
+              "secondaryId": null,
+              "published": false,
+              "deleted": false,
+              "threadUrl": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+            }
+          ],
+          "nextCursor": null,
+          "truncated": false
         }
       },
       "GetThreadResponse": {
@@ -425,6 +515,56 @@
             "items": { "$ref": "#/components/schemas/ThreadMessage" }
           },
           "status": { "$ref": "#/components/schemas/ThreadStatus" }
+        },
+        "example": {
+          "thread": {
+            "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+            "title": "What accounts does my team own?",
+            "createdAt": "2026-04-22T14:32:10.000Z",
+            "updatedAt": "2026-04-22T14:35:02.000Z",
+            "accountId": null,
+            "secondaryId": null,
+            "published": false,
+            "deleted": false,
+            "threadUrl": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+          },
+          "messages": [
+            {
+              "id": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4V",
+              "threadId": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+              "role": "user",
+              "content": "What accounts does my team own?",
+              "status": null,
+              "createdAt": "2026-04-22T14:32:10.000Z",
+              "completedAt": null,
+              "steps": null,
+              "sources": null,
+              "attachments": null,
+              "model": null
+            },
+            {
+              "id": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4W",
+              "threadId": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+              "role": "assistant",
+              "content": "Your team owns 42 accounts. The five largest by ARR are...",
+              "status": "completed",
+              "createdAt": "2026-04-22T14:32:11.000Z",
+              "completedAt": "2026-04-22T14:32:18.000Z",
+              "steps": [
+                { "description": "Looking up accounts owned by your team" },
+                { "description": "Ranking by annualized revenue" }
+              ],
+              "sources": null,
+              "attachments": null,
+              "model": "claude-opus-4-7"
+            }
+          ],
+          "status": {
+            "state": "idle",
+            "activeMessageId": null,
+            "latestUpdate": null,
+            "stepCount": 2
+          }
         }
       },
       "UpdateThreadRequest": {
@@ -436,8 +576,12 @@
           "title": {
             "type": "string",
             "minLength": 1,
-            "description": "New title. Must be at least one character."
+            "description": "New title. Must be at least one character.",
+            "example": "Book of business review — Q2"
           }
+        },
+        "example": {
+          "title": "Book of business review — Q2"
         }
       },
       "UpdateThreadResponse": {
@@ -451,12 +595,20 @@
         "type": "object",
         "required": ["id", "deleted"],
         "properties": {
-          "id": { "type": "string" },
+          "id": {
+            "type": "string",
+            "example": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+          },
           "deleted": {
             "type": "boolean",
             "enum": [true],
-            "description": "Always `true` on a successful delete."
+            "description": "Always `true` on a successful delete.",
+            "example": true
           }
+        },
+        "example": {
+          "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+          "deleted": true
         }
       },
       "Error": {
@@ -477,24 +629,34 @@
                   "RATE_LIMITED",
                   "INTERNAL_ERROR"
                 ],
-                "description": "Stable machine-readable error code."
+                "description": "Stable machine-readable error code.",
+                "example": "INVALID_PARAMS"
               },
               "message": {
                 "type": "string",
-                "description": "Human-readable explanation."
+                "description": "Human-readable explanation.",
+                "example": "prompt: String must contain at least 1 character(s)"
               },
               "trace_id": {
                 "type": "string",
-                "description": "Unique identifier for the request. Include in support requests."
+                "description": "Unique identifier for the request. Include in support requests.",
+                "example": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
               }
             }
+          }
+        },
+        "example": {
+          "error": {
+            "code": "INVALID_PARAMS",
+            "message": "prompt: String must contain at least 1 character(s)",
+            "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
           }
         }
       }
     },
     "responses": {
       "InvalidParams": {
-        "description": "Request body or query parameters failed validation. See [Errors](/api-reference/errors) for the full error envelope and code list.",
+        "description": "Request body or query parameters failed validation. See [Errors](/api-reference/endpoints#errors) for the full error envelope and code list.",
         "content": {
           "application/json": {
             "schema": { "$ref": "#/components/schemas/Error" }
@@ -502,7 +664,7 @@
         }
       },
       "Forbidden": {
-        "description": "Credential valid but not permitted to mutate this thread (the caller did not create it). See [Errors](/api-reference/errors) for the full error envelope.",
+        "description": "Credential valid but not permitted to mutate this thread (the caller did not create it). See [Errors](/api-reference/endpoints#errors) for the full error envelope.",
         "content": {
           "application/json": {
             "schema": { "$ref": "#/components/schemas/Error" }
