@@ -20,7 +20,7 @@
       "post": {
         "operationId": "createThread",
         "summary": "Create a thread",
-        "description": "Creates a new thread in the caller's organization. The `prompt` is required -- it's persisted as the first user message and triggers the assistant's response to generate asynchronously. Poll `GET /api/v1/threads/{id}` until the derived `status.state` is `idle` (or `error`).",
+        "description": "Creates a new thread in the caller's organization. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN` during beta. The `prompt` is required -- it's persisted as the first user message and triggers the assistant's response to generate asynchronously. Poll `GET /api/v1/threads/{id}` until the derived `status.state` is `idle` (or `error`).",
         "tags": ["Threads"],
         "requestBody": {
           "required": true,
@@ -43,13 +43,14 @@
               }
             }
           },
-          "400": { "$ref": "#/components/responses/InvalidParams" }
+          "400": { "$ref": "#/components/responses/InvalidParams" },
+          "403": { "$ref": "#/components/responses/Forbidden" }
         }
       },
       "get": {
         "operationId": "listThreads",
         "summary": "List threads",
-        "description": "Lists threads visible to the caller, ordered by most recent activity first (`updatedAt` when present, otherwise `createdAt`). Personal keys see their own threads plus every org-published thread; the org-wide principal (shared by org-wide API keys and M2M applications) sees threads created by that principal plus every org-published thread.",
+        "description": "Lists threads visible to the caller, ordered by most recent activity first (`updatedAt` when present, otherwise `createdAt`). Personal keys see their own threads plus every org-published thread; the org-wide principal (shared by org-wide API keys and M2M applications) sees every org-published thread.",
         "tags": ["Threads"],
         "parameters": [
           {
@@ -123,7 +124,7 @@
       "patch": {
         "operationId": "updateThread",
         "summary": "Update a thread",
-        "description": "Renames a thread. Only `title` is writable. Callers may only mutate threads they created -- attempts to rename another principal's thread return `403 FORBIDDEN`. The org-wide principal (shared by org-wide API keys and M2M applications) can rename any thread created by that principal, regardless of which credential originally created it, but never a thread owned by a personal key. Published state does not grant mutation rights.",
+        "description": "Renames a thread. Only `title` is writable. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN` during beta. Users can only rename threads they created -- attempts to rename another user's thread also return `403 FORBIDDEN`, even when the thread is published.",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -156,7 +157,7 @@
       "delete": {
         "operationId": "deleteThread",
         "summary": "Delete a thread",
-        "description": "Soft-deletes a thread. The record is preserved server-side but will no longer appear in `GET /api/v1/threads` or be readable via `GET /api/v1/threads/{id}`. Callers may only delete threads they created -- attempts to delete another principal's thread return `403 FORBIDDEN`.",
+        "description": "Soft-deletes a thread. The record is preserved server-side but will no longer appear in `GET /api/v1/threads` or be readable via `GET /api/v1/threads/{id}`. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN` during beta. Users can only delete threads they created.",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -664,7 +665,7 @@
         }
       },
       "Forbidden": {
-        "description": "Credential valid but not permitted to mutate this thread (the caller did not create it). See [Errors](/api-reference/endpoints#errors) for the full error envelope.",
+        "description": "Credential is valid but not permitted. Either the operation requires a user-scoped API key (org-wide credentials cannot mutate threads during beta), or the caller is user-scoped but did not create the thread. See [Errors](/api-reference/endpoints#errors) for the full error envelope.",
         "content": {
           "application/json": {
             "schema": { "$ref": "#/components/schemas/Error" }

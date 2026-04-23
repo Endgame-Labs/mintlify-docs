@@ -140,6 +140,11 @@ curl -X POST https://app.endgame.io/api/v1/threads \
 Poll [`GET /api/v1/threads/{id}`](#get-a-thread) until the returned
 `status.state` is `idle` (success) or `error`.
 
+<Note>
+  Requires a user-scoped API key. Org-wide API keys and M2M tokens
+  receive `403 FORBIDDEN` during beta.
+</Note>
+
 ---
 
 ## Get a thread
@@ -351,9 +356,10 @@ curl -X PATCH https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ
 ```
 
 <Note>
-  Callers can only rename threads they created. Attempting to rename
-  another principal's thread returns `403 FORBIDDEN`, even when the
-  thread is published.
+  Requires a user-scoped API key; org-wide API keys and M2M tokens
+  receive `403 FORBIDDEN` during beta. Users can only rename threads
+  they created -- attempting to rename another user's thread also
+  returns `403 FORBIDDEN`, even when the thread is published.
 </Note>
 
 ---
@@ -387,8 +393,9 @@ curl -X DELETE https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MD
 ```
 
 <Note>
-  Callers can only delete threads they created. Attempting to delete
-  another principal's thread returns `403 FORBIDDEN`.
+  Requires a user-scoped API key; org-wide API keys and M2M tokens
+  receive `403 FORBIDDEN` during beta. Users can only delete threads
+  they created.
 </Note>
 
 ---

@@ -45,10 +45,12 @@ actually do.
     Give the key a descriptive name (e.g. `integrations-backend-prod`) and
     pick a scope:
 
-    - **Personal** -- Acts on your behalf with your permissions. Automatically
-      revoked if you leave the organization.
-    - **Org-wide** -- Not tied to any user. Ideal for automation,
-      integrations, and CI pipelines.
+    - **Personal** -- Acts on your behalf with your permissions. Required
+      for creating, renaming, or deleting threads. Automatically revoked
+      if you leave the organization.
+    - **Org-wide** -- Not tied to any user. **Read-only during beta** --
+      suitable for service integrations that only need to list or fetch
+      published threads.
 
     The full key is shown **only once** on creation -- copy it immediately
     and store it in a secrets manager. The scope cannot be changed later.
@@ -115,6 +117,12 @@ than a long-lived static key.
 
 ## Scope and permissions
 
+<Warning>
+  **Beta:** Only user-scoped API keys can create, rename, or delete
+  threads. Org-wide API keys and M2M applications are **read-only**
+  during beta and return `403 FORBIDDEN` on every mutation.
+</Warning>
+
 For authorization purposes, every credential resolves to one of two
 principals: a **specific user** (personal API keys) or an **org-wide
 service identity** (org-wide API keys and M2M applications, which share
@@ -123,23 +131,22 @@ see and change.
 
 | Capability                                                     | Personal API key                                  | Org-wide principal *(org-wide API key or M2M application)* |
 | -------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------- |
-| Create a thread                                                | ✅ Attributed to the user who owns the key        | ✅ Attributed to the organization (no user)                   |
-| List threads (`GET /threads`)                                  | ✅ Own threads + every org-published thread       | ✅ Threads created by the org-wide principal + every org-published thread |
-| Fetch a thread (`GET /threads/{id}`)                           | ✅ Own threads + every org-published thread       | ✅ Threads created by the org-wide principal + every org-published thread |
-| Rename or delete a thread (`PATCH` / `DELETE /threads/{id}`)   | ✅ Own threads only                               | ✅ Threads created by the org-wide principal only             |
+| Create a thread (`POST /threads`)                              | ✅ Attributed to the user who owns the key        | ❌ Returns `403 FORBIDDEN`                                    |
+| List threads (`GET /threads`)                                  | ✅ Own threads + every org-published thread       | ✅ Every org-published thread                                 |
+| Fetch a thread (`GET /threads/{id}`)                           | ✅ Own threads + every org-published thread       | ✅ Every org-published thread                                 |
+| Rename a thread (`PATCH /threads/{id}`)                        | ✅ Own threads only                               | ❌ Returns `403 FORBIDDEN`                                    |
+| Delete a thread (`DELETE /threads/{id}`)                       | ✅ Own threads only                               | ❌ Returns `403 FORBIDDEN`                                    |
 
 A few things to call out:
 
-- **The org-wide principal is shared.** Every org-wide API key *and*
-  every M2M application for the same organization authenticate as the
-  same principal, so a thread created by one can be renamed or deleted
-  by any of the others. None of them can touch threads owned by real
-  users.
+- **Writes require a user identity.** Creating, renaming, or deleting a
+  thread always attributes the action to a real user. Org-wide
+  credentials have no user behind them and return `403 FORBIDDEN` on
+  every mutation during beta.
 - **Published threads are readable by everyone in the org.** Publishing
   a thread in Endgame makes it accessible to any credential in the
   organization, regardless of scope. Mutation rights are *not* granted
-  by publication -- only the thread's creator (user or org-wide
-  principal) can rename or delete it.
+  by publication -- only the thread's creator can rename or delete it.
 - **Cross-organization access is always denied.** A credential issued in
   one organization cannot read or mutate threads in another, even if
   both orgs publish their threads.
@@ -168,10 +175,13 @@ revoked credential fail with `401 UNAUTHORIZED`.
   audit.
 - Rotate on a regular cadence and whenever a team member with access
   leaves.
-- For production automation, **M2M applications** are preferred over
-  org-wide API keys -- short-lived access tokens are easier to contain
-  after a compromise and the client secret can be rotated without
-  reissuing every consumer.
+- For read-only service integrations, **M2M applications** are preferred
+  over org-wide API keys -- short-lived access tokens are easier to
+  contain after a compromise and the client secret can be rotated
+  without reissuing every consumer.
+- For **write-capable automation** during beta, create a personal API
+  key under a dedicated service-account user. Writes require a user
+  identity; org-wide write scope is on the roadmap.
 
 ## Need help?
 
