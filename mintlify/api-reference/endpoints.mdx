@@ -1,0 +1,442 @@
+---
+title: "Endpoints"
+description: "Reference for the five thread endpoints that make up the public API."
+icon: "terminal"
+---
+
+The public API is a small resource-oriented CRUD surface for **threads**
+-- the conversational units that power Endgame Chat. Every endpoint is
+rooted at `/api/v1`, authenticates with a Bearer `eak_*` key, and
+exchanges JSON.
+
+A typical workflow: **create** a thread with a prompt, **poll** it by ID
+until the assistant's response finishes, and optionally **list**,
+**rename**, or **delete** it.
+
+| Method   | Path                | Purpose                                |
+| -------- | ------------------- | -------------------------------------- |
+| `POST`   | `/threads`          | [Create a thread](#create-a-thread)    |
+| `GET`    | `/threads/{id}`     | [Get a thread](#get-a-thread)          |
+| `GET`    | `/threads`          | [List threads](#list-threads)          |
+| `PATCH`  | `/threads/{id}`     | [Rename a thread](#rename-a-thread)    |
+| `DELETE` | `/threads/{id}`     | [Delete a thread](#delete-a-thread)    |
+
+---
+
+## Errors
+
+Every failed request returns the same envelope:
+
+```json
+{
+  "error": {
+    "code": "INVALID_PARAMS",
+    "message": "prompt: String must contain at least 1 character(s)",
+    "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  }
+}
+```
+
+| Field      | Description                                                                                                           |
+| ---------- | --------------------------------------------------------------------------------------------------------------------- |
+| `code`     | Stable machine-readable error code (see below). Safe to branch on in client code.                                     |
+| `message`  | Human-readable explanation. May include field-level detail from schema validation.                                    |
+| `trace_id` | Unique identifier for this request. Always include it when contacting support so we can trace the request end-to-end. |
+
+### Error codes
+
+| Code             | HTTP status | When it happens                                                                                                                   |
+| ---------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `INVALID_PARAMS` | `400`       | Request body or query parameters failed schema validation, the body wasn't valid JSON, or a required parameter was missing.        |
+| `UNAUTHORIZED`   | `401`       | Missing, malformed, or revoked credential in the `Authorization` header.                                                          |
+| `FORBIDDEN`      | `403`       | Credential is valid but not permitted to mutate this thread -- `PATCH` or `DELETE` issued against a thread the caller did not create. |
+| `NOT_FOUND`      | `404`       | Resource doesn't exist, the caller isn't permitted to read it, or the public API feature flag isn't enabled for the organization. |
+| `RATE_LIMITED`   | `429`       | Request quota exceeded. See [Rate limits](#rate-limits).                                                                          |
+| `INTERNAL_ERROR` | `500`       | Unexpected server-side failure. Retry with exponential backoff; contact support with the `trace_id` if the issue persists.        |
+
+<Note>
+  `NOT_FOUND` is returned both when a resource truly doesn't exist and
+  when the caller lacks permission to see it. This is intentional -- it
+  avoids leaking the existence of threads the caller can't access.
+</Note>
+
+---
+
+## Rate limits
+
+<Warning>
+  **Beta:** The default quota is **10,000 requests per organization per
+  day**. This value is subject to change after the beta.
+</Warning>
+
+Limits are applied at the **organization** level across every credential
+and endpoint. Requests over the limit return:
+
+```
+HTTP/2 429
+Content-Type: application/json
+
+{
+  "error": {
+    "code": "RATE_LIMITED",
+    "message": "Rate limit exceeded",
+    "trace_id": "01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  }
+}
+```
+
+Back off with exponential delay and jitter so retries don't synchronize,
+and treat `429` as a signal to reduce request rate across the entire
+organization -- the limit is org-wide, not per-credential. If your
+integration consistently approaches the quota, contact
+[support@endgame.io](mailto:support@endgame.io) to review.
+
+---
+
+## Create a thread
+
+`POST /api/v1/threads`
+
+Creates a new thread in the caller's organization. The `prompt` is
+required -- it's persisted as the first user message and triggers the
+assistant's response to generate asynchronously.
+
+**Request body**
+
+| Field         | Type             | Required | Description                                                      |
+| ------------- | ---------------- | -------- | ---------------------------------------------------------------- |
+| `prompt`      | string (min 1)   | ✅       | First user message on the thread.                                |
+| `title`       | string (min 1)   |          | Explicit title. Auto-generated from `prompt` if omitted.         |
+| `accountId`   | string           |          | Associate the thread with an account ID.                         |
+| `secondaryId` | string           |          | Secondary linkage (e.g. opportunity, user). Settable on create only. |
+
+**Example**
+
+```bash
+curl -X POST https://app.endgame.io/api/v1/threads \
+  -H "Authorization: Bearer eak_your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "What accounts does my team own?"}'
+```
+
+```json
+{
+  "thread": {
+    "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+    "title": "What accounts does my team own?",
+    "createdAt": "2026-04-22T14:32:10.000Z",
+    "updatedAt": null,
+    "accountId": null,
+    "secondaryId": null,
+    "published": false,
+    "deleted": false,
+    "threadUrl": null
+  },
+  "messageId": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4V",
+  "responseMessageId": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4W"
+}
+```
+
+Poll [`GET /api/v1/threads/{id}`](#get-a-thread) until the returned
+`status.state` is `idle` (success) or `error`.
+
+<Note>
+  Requires a user-scoped API key. Org-wide API keys and M2M tokens
+  receive `403 FORBIDDEN` during beta.
+</Note>
+
+---
+
+## Get a thread
+
+`GET /api/v1/threads/{id}`
+
+Fetches a thread, every message on it, and a derived run status.
+
+**Path parameters**
+
+| Name | Type   | Description          |
+| ---- | ------ | -------------------- |
+| `id` | string | Thread identifier.   |
+
+**Example**
+
+```bash
+curl https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T \
+  -H "Authorization: Bearer eak_your_api_key_here"
+```
+
+```json
+{
+  "thread": {
+    "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+    "title": "What accounts does my team own?",
+    "createdAt": "2026-04-22T14:32:10.000Z",
+    "updatedAt": "2026-04-22T14:32:18.000Z",
+    "accountId": null,
+    "secondaryId": null,
+    "published": false,
+    "deleted": false,
+    "threadUrl": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  },
+  "messages": [
+    {
+      "id": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4V",
+      "threadId": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+      "role": "user",
+      "content": "What accounts does my team own?",
+      "status": null,
+      "createdAt": "2026-04-22T14:32:10.000Z",
+      "completedAt": null,
+      "steps": null,
+      "sources": null,
+      "attachments": null,
+      "model": null
+    },
+    {
+      "id": "msg_01HZY6P8RB4K5C7X9E2N8MDQ4W",
+      "threadId": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+      "role": "assistant",
+      "content": "Your team owns 42 accounts. The five largest by ARR are...",
+      "status": "completed",
+      "createdAt": "2026-04-22T14:32:11.000Z",
+      "completedAt": "2026-04-22T14:32:18.000Z",
+      "steps": [
+        { "description": "Looking up accounts owned by your team" },
+        { "description": "Ranking by annualized revenue" }
+      ],
+      "sources": null,
+      "attachments": null,
+      "model": "claude-opus-4-7"
+    }
+  ],
+  "status": {
+    "state": "idle",
+    "activeMessageId": null,
+    "latestUpdate": null,
+    "stepCount": 2
+  }
+}
+```
+
+The `status` object summarizes the latest assistant message so callers
+don't have to re-derive it:
+
+| `state`         | Meaning                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| `idle`          | No assistant work pending -- either the latest assistant message finished, or there are none yet. |
+| `in_progress`   | Assistant is still generating. `latestUpdate` describes the most recent step (or `"Thinking"`).  |
+| `error`         | Latest assistant message failed.                                                                 |
+
+Individual message `status` can be `in_progress`, `corroborating`,
+`completed`, `failed`, or `cancelled` (always `null` for `user` messages).
+
+---
+
+## List threads
+
+`GET /api/v1/threads`
+
+Lists threads visible to the caller, ordered by most recent activity
+first (`updatedAt` when present, otherwise `createdAt`).
+
+**Query parameters**
+
+| Name         | Type              | Default | Description                                                            |
+| ------------ | ----------------- | ------- | ---------------------------------------------------------------------- |
+| `limit`      | integer (1-100)   | `25`    | Maximum number of threads to return on this page.                      |
+| `cursor`     | string            | --      | Opaque cursor from a previous response's `nextCursor`.                 |
+| `accountId`  | string            | --      | Filter to threads associated with this account.                        |
+
+**Example**
+
+```bash
+curl "https://app.endgame.io/api/v1/threads?limit=50" \
+  -H "Authorization: Bearer eak_your_api_key_here"
+```
+
+```json
+{
+  "threads": [
+    {
+      "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+      "title": "What accounts does my team own?",
+      "createdAt": "2026-04-22T14:32:10.000Z",
+      "updatedAt": "2026-04-22T14:32:18.000Z",
+      "accountId": null,
+      "secondaryId": null,
+      "published": false,
+      "deleted": false,
+      "threadUrl": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+    }
+  ],
+  "nextCursor": null,
+  "truncated": false
+}
+```
+
+**Response fields**
+
+| Field        | Type               | Description                                                                                                                                      |
+| ------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `threads`    | `Thread[]`         | Page of threads in most-recent-activity-first order.                                                                                             |
+| `nextCursor` | `string` \| `null` | Cursor to pass on the next request. `null` when there are no more pages.                                                                         |
+| `truncated`  | `boolean`          | `true` when the organization has more threads than the server-side pagination window can walk. Narrow with `accountId` to reach the rest.        |
+
+**Pagination**
+
+Walks are ordered by most recent activity first (`updatedAt` when
+present, otherwise `createdAt`, with `id` as a tiebreaker) -- a thread
+whose title was just renamed jumps to the top. Continue requesting pages
+with the previous response's `nextCursor` until it comes back `null`.
+
+- Treat `cursor` and `nextCursor` as **opaque**. The internal shape may
+  change between releases; don't parse or construct them yourself, and
+  URL-encode when passing as a query parameter.
+- A **malformed** cursor returns `400 INVALID_PARAMS` rather than
+  silently falling back to page 1 -- treat it as a programming bug, not
+  a transient error.
+- Pages are **stable** across concurrent writes: a thread created
+  mid-walk won't cause duplicates or skips for the remainder of the walk.
+- When `truncated` is `true`, the walk hit the server-side window before
+  covering every visible thread. Narrow with `accountId` to reach the
+  rest. During beta, `truncated` is `false` for any org whose thread
+  count fits inside the window (the common case).
+
+**Visibility**
+
+What shows up in the list depends on the scope of your credential -- see
+the [permissions matrix](/api-reference/authentication#scope-and-permissions)
+for the full rules.
+
+---
+
+## Rename a thread
+
+`PATCH /api/v1/threads/{id}`
+
+Renames a thread. Only `title` is writable -- unknown fields are
+rejected with `400 INVALID_PARAMS`.
+
+**Path parameters**
+
+| Name | Type   | Description          |
+| ---- | ------ | -------------------- |
+| `id` | string | Thread identifier.   |
+
+**Request body**
+
+| Field   | Type           | Required | Description               |
+| ------- | -------------- | -------- | ------------------------- |
+| `title` | string (min 1) | ✅       | New title.                |
+
+**Example**
+
+```bash
+curl -X PATCH https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T \
+  -H "Authorization: Bearer eak_your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{"title": "Book of business review — Q2"}'
+```
+
+```json
+{
+  "thread": {
+    "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+    "title": "Book of business review — Q2",
+    "createdAt": "2026-04-22T14:32:10.000Z",
+    "updatedAt": "2026-04-22T15:10:44.000Z",
+    "accountId": null,
+    "secondaryId": null,
+    "published": false,
+    "deleted": false,
+    "threadUrl": "https://app.endgame.io/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T"
+  }
+}
+```
+
+<Note>
+  Requires a user-scoped API key; org-wide API keys and M2M tokens
+  receive `403 FORBIDDEN` during beta. Users can only rename threads
+  they created -- attempting to rename another user's thread also
+  returns `403 FORBIDDEN`, even when the thread is published.
+</Note>
+
+---
+
+## Delete a thread
+
+`DELETE /api/v1/threads/{id}`
+
+Soft-deletes a thread. The record is preserved server-side but will no
+longer appear in `GET /api/v1/threads` or be readable via
+`GET /api/v1/threads/{id}`.
+
+**Path parameters**
+
+| Name | Type   | Description          |
+| ---- | ------ | -------------------- |
+| `id` | string | Thread identifier.   |
+
+**Example**
+
+```bash
+curl -X DELETE https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T \
+  -H "Authorization: Bearer eak_your_api_key_here"
+```
+
+```json
+{
+  "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+  "deleted": true
+}
+```
+
+<Note>
+  Requires a user-scoped API key; org-wide API keys and M2M tokens
+  receive `403 FORBIDDEN` during beta. Users can only delete threads
+  they created.
+</Note>
+
+---
+
+## Data shapes
+
+### Thread
+
+| Field         | Type                  | Description                                                                 |
+| ------------- | --------------------- | --------------------------------------------------------------------------- |
+| `id`          | string                | Stable thread identifier.                                                   |
+| `title`       | string                | Human-readable title.                                                       |
+| `createdAt`   | ISO 8601 datetime     | When the thread was created.                                                |
+| `updatedAt`   | ISO 8601 datetime \| null | Last update time. `null` if never updated -- distinguishes "just created" from "updated once at creation". |
+| `accountId`   | string \| null        | Associated account ID.                                                      |
+| `secondaryId` | string \| null        | Secondary linkage (opportunity, user, etc). Settable on create only.        |
+| `published`   | boolean               | Whether the thread is published to the organization.                        |
+| `deleted`     | boolean               | Whether the thread has been soft-deleted.                                   |
+| `threadUrl`   | string \| null        | Deep link into the Endgame app.                                             |
+
+### ThreadMessage
+
+| Field         | Type                             | Description                                                                 |
+| ------------- | -------------------------------- | --------------------------------------------------------------------------- |
+| `id`          | string                           | Message identifier.                                                         |
+| `threadId`    | string                           | Parent thread ID.                                                           |
+| `role`        | `"user"` \| `"assistant"`        | Message role.                                                               |
+| `content`     | string                           | Message text.                                                               |
+| `status`      | enum \| null                     | Always `null` for user messages. Assistant values: `in_progress`, `corroborating`, `completed`, `failed`, `cancelled`. |
+| `createdAt`   | ISO 8601 datetime                | When the message was created.                                               |
+| `completedAt` | ISO 8601 datetime \| null        | When the message reached a terminal state, if any.                          |
+| `steps`       | array \| null                    | Reasoning steps the assistant emitted while generating.                     |
+| `sources`     | array \| null                    | Source documents referenced by the assistant.                               |
+| `attachments` | array \| null                    | User-supplied attachments.                                                  |
+| `model`       | string \| null                   | Identifier of the producing model, if applicable.                           |
+
+### ThreadStatus
+
+| Field             | Type                                  | Description                                                              |
+| ----------------- | ------------------------------------- | ------------------------------------------------------------------------ |
+| `state`           | `"idle"` \| `"in_progress"` \| `"error"` | Derived top-level state -- see the table under [Get a thread](#get-a-thread). |
+| `activeMessageId` | string \| null                        | ID of the assistant message currently generating, if `state` is `in_progress`. |
+| `latestUpdate`    | string \| null                        | Most recent step description, or `"Thinking"` before any step is emitted. |
+| `stepCount`       | integer                               | Number of reasoning steps on the active assistant message.               |
