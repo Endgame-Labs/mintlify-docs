@@ -118,9 +118,8 @@ than a long-lived static key.
 ## Scope and permissions
 
 <Warning>
-  **Beta:** Only user-scoped API keys can create, rename, or delete
-  threads. Org-wide API keys and M2M applications are **read-only**
-  during beta and return `403 FORBIDDEN` on every mutation.
+  Only user-scoped API keys can create, rename, or delete threads.
+  Org-wide API keys and M2M applications are read-only during beta.
 </Warning>
 
 For authorization purposes, every credential resolves to one of two
