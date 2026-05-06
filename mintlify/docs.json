@@ -127,7 +127,8 @@
               "integrations/highspot",
               "integrations/microsoft-outlook-calendar",
               "integrations/microsoft-sharepoint",
-              "integrations/notion"
+              "integrations/notion",
+              "integrations/seismic"
             ]
           },
           {
