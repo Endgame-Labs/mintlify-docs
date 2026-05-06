@@ -1,0 +1,80 @@
+---
+title: "Introduction"
+description: "Create and manage Endgame threads over a standard HTTPS REST API."
+icon: "book-open"
+---
+
+<Warning>
+  **Beta:** The Endgame REST API is in beta and not available to all
+  organizations. Contact [support@endgame.io](mailto:support@endgame.io) to
+  confirm access for your organization.
+</Warning>
+
+The Endgame REST API lets you create and manage threads -- the same
+conversational units that power Endgame Chat -- from any HTTP client. Start a
+thread with a prompt, poll it for the assistant's response, rename it, list
+an organization's threads, or delete one. Use it to embed Endgame directly
+into your own applications, agents, or back-office automations.
+
+## Base URL
+
+```
+https://app.endgame.io
+```
+
+All endpoints in this reference are rooted at `/api/v1`.
+
+## The 30-second tour
+
+Authenticate with a user-scoped API key and POST a prompt to `/threads`.
+The `prompt` is required -- it's persisted as the first user message and
+triggers an assistant response that generates asynchronously. You get back
+the thread plus the IDs of both messages:
+
+```bash
+curl -X POST https://app.endgame.io/api/v1/threads \
+  -H "Authorization: Bearer eak_your_api_key_here" \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "What accounts does my team own?"}'
+```
+
+```json
+{
+  "thread": {
+    "id": "thr_01HZY6P8RB4K5C7X9E2N8MDQ4T",
+    "title": "What accounts does my team own?",
+    "createdAt": "2026-04-22T14:32:10.000Z",
+    "updatedAt": null,
+    "accountId": null,
+    "secondaryId": null,
+    "published": false,
+    "deleted": false,
+    "threadUrl": null
+  },
+  "messageId": "msg_...",
+  "responseMessageId": "msg_..."
+}
+```
+
+Fetch the thread to watch the assistant's response fill in:
+
+```bash
+curl https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T \
+  -H "Authorization: Bearer eak_your_api_key_here"
+```
+
+The response includes the thread, every message on it, and a derived `status`
+object (`idle`, `in_progress`, or `error`) you can poll until the assistant
+finishes.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Authentication" icon="key-round" href="/api-reference/authentication">
+    How to create and use API keys and M2M credentials.
+  </Card>
+  <Card title="Endpoints" icon="terminal" href="/api-reference/endpoints">
+    Reference for the five thread endpoints, with examples, errors, rate
+    limits, and pagination.
+  </Card>
+</CardGroup>

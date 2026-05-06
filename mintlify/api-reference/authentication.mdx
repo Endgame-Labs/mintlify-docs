@@ -1,0 +1,188 @@
+---
+title: "Authentication"
+description: "Create and use API keys or machine-to-machine credentials to authenticate REST API requests."
+icon: "key-round"
+---
+
+<Warning>
+  **Beta:** Credential creation is only enabled for organizations in the REST
+  API beta. Contact [support@endgame.io](mailto:support@endgame.io) to have
+  the feature enabled for your organization.
+</Warning>
+
+The REST API uses **Bearer tokens** for authentication. Every request to
+`/api/v1/*` must include a valid credential in the `Authorization` header.
+
+```http
+Authorization: Bearer eak_your_api_key_here
+```
+
+Two kinds of credentials are accepted. Both are provisioned from Endgame
+itself -- you don't need to configure anything in an external identity
+provider.
+
+| Credential                  | Where you create it                                                     | When to use                                                                                                     |
+| --------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **API key** (`eak_*`)       | [Settings → API Keys](https://app.endgame.io/settings/api-keys)         | Personal developer use, quick integrations, anything where a long-lived static token is fine.                   |
+| **M2M application**         | [Settings → Applications](https://app.endgame.io/settings/applications) | Server-to-server integrations that want short-lived OAuth tokens via the `client_credentials` grant.            |
+
+Both flows are admin-only. API keys have a **Personal** / **Org-wide**
+scope toggle; M2M applications always act as an org-wide principal. See
+[Scope and permissions](#scope-and-permissions) for what each can
+actually do.
+
+## Create an API key
+
+<Note>
+  You must be an admin in your Endgame organization to create API keys.
+</Note>
+
+<Steps>
+  <Step title="Open the API Keys settings page">
+    Sign in to Endgame and open [the API Keys settings page](https://app.endgame.io/settings/api-keys).
+  </Step>
+  <Step title="Click New API key">
+    Give the key a descriptive name (e.g. `integrations-backend-prod`) and
+    pick a scope:
+
+    - **Personal** -- Acts on your behalf with your permissions. Required
+      for creating, renaming, or deleting threads. Automatically revoked
+      if you leave the organization.
+    - **Org-wide** -- Not tied to any user. **Read-only during beta** --
+      suitable for service integrations that only need to list or fetch
+      published threads.
+
+    The full key is shown **only once** on creation -- copy it immediately
+    and store it in a secrets manager. The scope cannot be changed later.
+  </Step>
+  <Step title="Use the key in requests">
+    Pass the key as a Bearer token on every API call:
+
+    ```bash
+    curl -X POST https://app.endgame.io/api/v1/threads \
+      -H "Authorization: Bearer eak_your_api_key_here" \
+      -H "Content-Type: application/json" \
+      -d '{"prompt": "hello"}'
+    ```
+  </Step>
+</Steps>
+
+## Create a machine-to-machine application
+
+Use an M2M application when you need short-lived tokens issued per
+request (typical for production server-to-server integrations) rather
+than a long-lived static key.
+
+<Note>
+  You must be an admin in your Endgame organization to create
+  applications.
+</Note>
+
+<Steps>
+  <Step title="Open the Applications settings page">
+    Sign in to Endgame and open [the Applications settings page](https://app.endgame.io/settings/applications).
+  </Step>
+  <Step title="Create an application">
+    Click **New application**, give it a descriptive name, and save. Endgame
+    provisions a WorkOS OAuth client on your behalf and returns a
+    **client ID** and **client secret**. The secret is shown **only once**
+    on creation -- copy it immediately into your secrets manager. You can
+    rotate it later from the same page.
+  </Step>
+  <Step title="Exchange the credentials for an access token">
+    Perform a standard OAuth `client_credentials` grant against WorkOS's
+    token endpoint:
+
+    ```bash
+    curl -X POST https://api.workos.com/user_management/authenticate \
+      -H "Content-Type: application/x-www-form-urlencoded" \
+      -d "grant_type=client_credentials" \
+      -d "client_id=$CLIENT_ID" \
+      -d "client_secret=$CLIENT_SECRET"
+    ```
+
+    The response contains an `access_token` (a JWT) that you use as the
+    Bearer token on public API requests. Re-exchange the credentials
+    whenever the token nears its expiration.
+  </Step>
+  <Step title="Use the token in requests">
+    ```bash
+    curl -X POST https://app.endgame.io/api/v1/threads \
+      -H "Authorization: Bearer $ACCESS_TOKEN" \
+      -H "Content-Type: application/json" \
+      -d '{"prompt": "hello"}'
+    ```
+  </Step>
+</Steps>
+
+## Scope and permissions
+
+<Warning>
+  Only user-scoped API keys can create, rename, or delete threads.
+  Org-wide API keys and M2M applications are read-only during beta.
+</Warning>
+
+For authorization purposes, every credential resolves to one of two
+principals: a **specific user** (personal API keys) or an **org-wide
+service identity** (org-wide API keys and M2M applications, which share
+the same synthetic principal). The principal decides what the caller can
+see and change.
+
+| Capability                                                     | Personal API key                                  | Org-wide principal *(org-wide API key or M2M application)* |
+| -------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------- |
+| Create a thread (`POST /threads`)                              | ✅ Attributed to the user who owns the key        | ❌ Returns `403 FORBIDDEN`                                    |
+| List threads (`GET /threads`)                                  | ✅ Own threads + every org-published thread       | ✅ Every org-published thread                                 |
+| Fetch a thread (`GET /threads/{id}`)                           | ✅ Own threads + every org-published thread       | ✅ Every org-published thread                                 |
+| Rename a thread (`PATCH /threads/{id}`)                        | ✅ Own threads only                               | ❌ Returns `403 FORBIDDEN`                                    |
+| Delete a thread (`DELETE /threads/{id}`)                       | ✅ Own threads only                               | ❌ Returns `403 FORBIDDEN`                                    |
+
+A few things to call out:
+
+- **Writes require a user identity.** Creating, renaming, or deleting a
+  thread always attributes the action to a real user. Org-wide
+  credentials have no user behind them and return `403 FORBIDDEN` on
+  every mutation during beta.
+- **Published threads are readable by everyone in the org.** Publishing
+  a thread in Endgame makes it accessible to any credential in the
+  organization, regardless of scope. Mutation rights are *not* granted
+  by publication -- only the thread's creator can rename or delete it.
+- **Cross-organization access is always denied.** A credential issued in
+  one organization cannot read or mutate threads in another, even if
+  both orgs publish their threads.
+
+## Revoke credentials
+
+**API keys:** revoke from [the API Keys settings page](https://app.endgame.io/settings/api-keys)
+-- click **Revoke** next to the key's row. Personal keys are
+**automatically revoked** when the owning user leaves the organization.
+Org-wide keys persist until explicitly revoked.
+
+**M2M applications:** delete the application (or rotate its secret) from
+[the Applications settings page](https://app.endgame.io/settings/applications).
+Deleting the application revokes all access tokens issued under it.
+
+Revocation is immediate in both cases; subsequent requests using a
+revoked credential fail with `401 UNAUTHORIZED`.
+
+## Security guidance
+
+- Store credentials in a secrets manager. Never commit them to source
+  control.
+- Use a separate credential per environment (dev, staging, prod) so
+  rotation is scoped.
+- Give each one a descriptive name so revocation decisions are easy to
+  audit.
+- Rotate on a regular cadence and whenever a team member with access
+  leaves.
+- For read-only service integrations, **M2M applications** are preferred
+  over org-wide API keys -- short-lived access tokens are easier to
+  contain after a compromise and the client secret can be rotated
+  without reissuing every consumer.
+- For **write-capable automation** during beta, create a personal API
+  key under a dedicated service-account user. Writes require a user
+  identity; org-wide write scope is on the roadmap.
+
+## Need help?
+
+For access questions or help with authentication, contact
+[support@endgame.io](mailto:support@endgame.io).
