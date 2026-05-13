@@ -14,9 +14,12 @@ An Endgame staff member must activate the Endgame Notetaker for your organizatio
 Once enabled, Endgame Notetaker will join any _external_ meetings synced to Endgame. We source team meeting data in a couple of ways:
 
 - email correspondence that is synced to Salesforce and related to a meeting
-- individual [google calendar integrations](http://localhost:3000/integrations/google-drive#google-calendar-integration)
+- individual [google calendar integrations](/integrations/google-drive#google-calendar-integration) (if connected)
+- individual [outlook calendar integrations](/integrations/microsoft-outlook-calendar) (if connected)
 
 The Notetaker will be very visible when joining your meeting, it generates a transcript of the meeting content. Once complete, Endgame will process that transcript data and associated it to an account making it available to Endgame chat responses.
+
+## Zoom
 
 <Frame caption="Endgame Notetaker attendee">
   <img
@@ -32,6 +35,28 @@ The host of the meeting can remove the Notetaker by navigating to the attendee m
   <img
     src="../images/remove-notetaker-03-05-26.png"
     alt="Remove Notetaker Zoom"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Microsoft Teams
+
+When the Endgame Notetaker joins a Microsoft Teams meeting, it will appear in the meeting lobby and must be admitted by the host before it can record. Open the **People** panel, find the Notetaker in the lobby, and click **Admit**.
+
+<Frame caption="Endgame Notetaker Teams attendee">
+  <img
+    src="../images/endgame_notetaker_teams._05_12_26png.png"
+    alt="Endgame Notetaker Teams attendee"
+    className="rounded-lg"
+  />
+</Frame>
+
+To remove the Notetaker from a Teams meeting, open the **People** panel, hover over the Notetaker, click the **...** menu, and select **Remove from meeting**. **Please do not report the notetaker as malicious when removing.**
+
+<Frame caption="Endgame Notetaker in Teams meeting">
+  <img
+    src="../images/endgame_notetaker_joined_teams_05_12_26.png"
+    alt="Endgame Notetaker in Teams meeting"
     className="rounded-lg"
   />
 </Frame>
