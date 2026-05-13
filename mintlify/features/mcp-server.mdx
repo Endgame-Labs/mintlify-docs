@@ -3,19 +3,23 @@ title: "MCP Server"
 description: "Connect Endgame to AI assistants using the Model Context Protocol"
 icon: "server"
 ---
+
 <Warning>
-  **Beta:** The updated MCP Server is in beta and is not available to all users. Contact your Endgame Administrator to discuss access. 
+  **Beta:** The updated MCP Server is in beta and is not available to all users.
+  Contact your Endgame Administrator to discuss access.
 </Warning>
 
-The Endgame MCP (Model Context Protocol) Server gives AI assistants like Claude direct access to your organization's revenue intelligence -- CRM records, meeting transcripts, emails, Slack conversations, uploaded documents, and more. Once connected, your assistant can search interaction history, look up accounts, find stakeholders, query your data warehouse, and surface insights without leaving the conversation.
+The Endgame MCP (Model Context Protocol) Server gives AI assistants like Claude or ChatGPT direct access to your organization's revenue intelligence -- CRM records, meeting transcripts, emails, Slack conversations, uploaded documents, and more. Once connected, your assistant can search interaction history, look up accounts, find stakeholders, query your data warehouse, and surface insights without leaving the conversation.
 
 Think of it as giving your AI assistant a direct line to everything Endgame knows about your business.
 
 ## Getting Started
 
+We recommend connecting Endgame through either **Claude's custom connector** or the **ChatGPT app**. Both options give your AI assistant direct access to all Endgame tools.
+
 ### Connect via Claude
 
-The recommended way to connect Endgame is through Claude's custom connector. This gives Claude direct access to all Endgame tools.
+Claude's custom connector is the recommended way to connect Endgame for Claude users. This gives Claude direct access to all Endgame tools.
 
 <Steps>
   <Step title="Admin: Add the Endgame connector">
@@ -47,11 +51,66 @@ The recommended way to connect Endgame is through Claude's custom connector. Thi
   name to avoid conflicts.
 </Note>
 
+### Connect via ChatGPT
+
+You can connect Endgame to ChatGPT by adding it as a custom app. An admin must publish the app before team members can enable it.
+
+<Steps>
+  <Step title="Admin: Add the Endgame custom app">
+    1. In ChatGPT, open **Settings** and navigate to the **Apps** section
+    2. Click **Create app**
+    3. Enter a name (e.g., "Endgame") and the URL: `https://app.endgame.io/api/v1/mcp`
+    4. After clicking **Create**, complete the authentication prompts to link your Endgame account
+
+    <Frame caption="Adding a custom app in ChatGPT">
+      <img
+        src="../images/chatgpt_add_custom_app_05_12_26.png"
+        alt="ChatGPT add custom app screen"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+  <Step title="Admin: Publish the app to your organization">
+    Once the app is configured, publish it so team members can access it.
+    1. Within Apps, find your Draft app and open it. 
+    2. From the overflow menu, select **Publish**
+
+    <Frame caption="Publishing the Endgame app in ChatGPT">
+      <img
+        src="../images/chatgpt_publish_app_05_12_26.png"
+        alt="ChatGPT publish app screen"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+  <Step title="Individual: Enable the Endgame app">
+    After the admin has published the app, each team member can enable it:
+
+    1. Go to **Settings** &rarr; **Apps** in ChatGPT
+    2. Click **Add more**, find the Endgame app and connect
+    3. Follow the authentication prompts
+
+    <Frame caption="Enabled apps in ChatGPT">
+      <img
+        src="../images/chatgpt_enabled_apps_05_12_26.png"
+        alt="ChatGPT enabled apps screen"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+  <Step title="Start asking questions">
+    Once enabled, just ask ChatGPT anything about your accounts, pipeline, meetings, or conversations. ChatGPT will automatically use the right Endgame tools to find your answer.
+  </Step>
+</Steps>
+
 ## How to Use It
 
-Once connected, simply ask Claude questions about your business. You don't need to use any special syntax -- Claude will automatically select the right Endgame tools based on your question.
+Once connected, simply ask your AI assistant questions about your business. You don't need to use any special syntax -- your assistant will automatically select the right Endgame tools based on your question.
 
-For complex analyses, Claude can chain multiple tools together -- for example, finding an account, pulling recent interactions, and querying your data warehouse to build a complete picture.
+For complex analyses, your assistant can chain multiple tools together -- for example, finding an account, pulling recent interactions, and querying your data warehouse to build a complete picture.
 
 <CardGroup cols={2}>
   <Card title="Account intelligence" icon="building">
