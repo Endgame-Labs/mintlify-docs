@@ -5,8 +5,9 @@ icon: "server"
 ---
 
 <Warning>
-  **Beta:** The updated MCP Server is in beta and is not available to all users.
-  Contact your Endgame Administrator to discuss access.
+  **Open Beta:** The MCP Server is now available to all users. As this feature
+  is still in beta, the underlying tools are expected to continue shifting and
+  changing.
 </Warning>
 
 The Endgame MCP (Model Context Protocol) Server gives AI assistants like Claude or ChatGPT direct access to your organization's revenue intelligence -- CRM records, meeting transcripts, emails, Slack conversations, uploaded documents, and more. Once connected, your assistant can search interaction history, look up accounts, find stakeholders, query your data warehouse, and surface insights without leaving the conversation.
@@ -16,6 +17,12 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 ## Getting Started
 
 We recommend connecting Endgame through either **Claude's custom connector** or the **ChatGPT app**. Both options give your AI assistant direct access to all Endgame tools.
+
+<Note>
+  If you previously installed the legacy Endgame MCP extension, you may need to
+  remove it before connecting the new connector, or give the new one a different
+  name to avoid conflicts.
+</Note>
 
 ### Connect via Claude
 
@@ -44,12 +51,6 @@ Claude's custom connector is the recommended way to connect Endgame for Claude u
     Once connected, just ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
   </Step>
 </Steps>
-
-<Note>
-  If you previously installed the legacy Endgame MCP extension, you may need to
-  remove it before connecting the new connector, or give the new one a different
-  name to avoid conflicts.
-</Note>
 
 ### Connect via ChatGPT
 
@@ -216,64 +217,16 @@ Rate limits are configured per organization and may vary depending on your plan.
 - **Response time**: Complex queries (especially those using `query_data` or `research_company`) can take up to a few minutes to complete.
 - **Data access**: Results are scoped to the data your organization has connected to Endgame (CRM, transcripts, Slack, etc.).
 
-<AccordionGroup>
-  <Accordion title="Legacy MCP Setup (API Key Method)">
-    If your organization hasn't enabled the Claude custom connector, you can connect using an API key instead. This method uses a smaller set of bridge tools (`prompt_endgame`, `message_followup`, `queue_thread_message`, `queue_status`) that send prompts to Endgame's AI rather than giving Claude direct tool access.
-
-    ### Step 1: Get Your API Key
-
-    1. Log in to Endgame
-    2. Navigate to **Settings** &rarr; **API Keys** (you can only view your own keys)
-    3. Create a new API key
-    4. Copy and save your key securely -- it won't be shown again
-    5. Note the Organization ID shown on the API Keys page
-
-    We recommend using descriptive names like "sarah-endgame-key" to make keys easy to identify and revoke. Admins can create keys for team members but must share them manually. Keys are tied to the creator, so queries referencing "me" or "my" return results for the admin, not the end user.
-
-    <Note>
-      You must be an admin to create API keys.
-    </Note>
-
-    ### Step 2: Configure Claude Desktop
-
-    Open the Claude Desktop instructions below your API keys. Click **Download** to start the installation process.
-
-    <Frame caption="Claude Desktop Instructions">
-      <img
-        src="../images/claude-desktop-instructions-1-5-26.png"
-        alt="Claude Desktop instructions"
-        className="rounded-lg"
-      />
-    </Frame>
-
-    - Follow the desktop extension installation instructions in Claude Desktop
-    - When prompted for your organization ID, use the number starting with a "5" or "6" at the top of the API Keys page
-    - When asked for your API key, provide the key you created
-
-    ### Legacy Tools
-
-    | Tool | Description | Parameters |
-    | ---- | ----------- | ---------- |
-    | `prompt_endgame` | Send a prompt to Endgame AI. Creates a thread and returns the response. If the response takes too long, returns IDs for follow-up. | `prompt` (required), `threadId` (optional) |
-    | `message_followup` | Check on an in-progress message sent via `prompt_endgame`. | `operationId` (required) |
-    | `queue_thread_message` | Send a prompt and return immediately with thread/message IDs. Optionally delivers the response to a webhook URL. | `prompt` (required), `url` (optional), `state` (optional) |
-    | `queue_status` | Check the status of a message enqueued with `queue_thread_message`. | `messageId` (required), `threadId` (required) |
-
-  </Accordion>
-</AccordionGroup>
-
 ## Troubleshooting
 
 **Claude doesn't seem to have access to Endgame tools?**
 
 - In Claude, go to **Settings** &rarr; **Extensions** (under Desktop App) and confirm the Endgame connector is toggled on
 - Check that tool permissions are set to **Always Allow** for all Endgame tools
-- If you previously had the legacy MCP extension, remove it and reconnect using the custom connector
 
 **Getting authentication errors?**
 
-- Your session or API key may have expired -- try reconnecting the connector
-- For legacy setups, create a new API key in **Settings** &rarr; **API Keys**
+- Your session may have expired -- try reconnecting the connector
 
 **Hitting rate limits?**
 
