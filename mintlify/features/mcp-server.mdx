@@ -16,7 +16,7 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 
 ## Getting Started
 
-We recommend connecting Endgame through either **Claude's custom connector** or the **ChatGPT app**. Both options give your AI assistant direct access to all Endgame tools.
+We recommend connecting Endgame through **Claude's custom connector**, the **ChatGPT app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
 
 <Note>
   If you previously installed the legacy Endgame MCP extension, you may need to
@@ -104,6 +104,94 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
   </Step>
   <Step title="Start asking questions">
     Once enabled, just ask ChatGPT anything about your accounts, pipeline, meetings, or conversations. ChatGPT will automatically use the right Endgame tools to find your answer.
+  </Step>
+</Steps>
+
+### Connect via Claude Code
+
+Use the Claude Code CLI to add Endgame as a remote MCP server. This is a good option if you work in the terminal and want Endgame tools available in your Claude Code sessions.
+
+<Steps>
+  <Step title="Add the Endgame MCP server">
+    In your terminal, run:
+
+    ```bash
+    claude mcp add --transport http endgame https://app.endgame.io/api/v1/mcp
+    ```
+
+    This uses the default `local` scope, which ties the server to the current project directory. If you want Endgame available across all your projects, use `--scope user` instead:
+
+    ```bash
+    claude mcp add --transport http endgame --scope user https://app.endgame.io/api/v1/mcp
+    ```
+
+    To share the config with your team, use `--scope project`. This writes the server to a `.mcp.json` file in your project root — commit that file to git and anyone who clones the repo will have it configured automatically:
+
+    ```bash
+    claude mcp add --transport http endgame --scope project https://app.endgame.io/api/v1/mcp
+    ```
+
+  </Step>
+  <Step title="Authenticate with Endgame">
+    Start a Claude Code session and verify the server is connected:
+
+    ```bash
+    claude
+    ```
+
+    In the session, run `/mcp`. This shows live connection status and confirms Endgame tools are loading. Select the Endgame server and follow the browser prompts to sign in with your Endgame account.
+
+    <Note>
+      You'll be prompted to authenticate the first time you connect. Claude Code will open a browser window to complete the OAuth flow with Endgame.
+    </Note>
+
+  </Step>
+  <Step title="Start asking questions">
+    Once connected, ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
+  </Step>
+</Steps>
+
+### Connect via Codex
+
+Use the Codex CLI to add Endgame as a remote MCP server. This is a good option if you work in Codex terminal sessions and want Endgame tools available there.
+
+<Steps>
+  <Step title="Add the Endgame MCP server">
+    In your terminal, run:
+
+    ```bash
+    codex mcp add endgame --url https://app.endgame.io/api/v1/mcp
+    ```
+
+    Codex detects OAuth support and may start the login flow automatically. If it does not, authenticate separately:
+
+    ```bash
+    codex mcp login endgame
+    ```
+
+    <Note>
+      Running this command will open a browser window prompting you to sign in with your Endgame account. Complete the login there and Codex will store your credentials automatically.
+    </Note>
+
+    Verify the server was added:
+
+    ```bash
+    codex mcp list
+    ```
+
+  </Step>
+  <Step title="Start a Codex session">
+    Launch Codex in the directory where you want to work:
+
+    ```bash
+    codex
+    ```
+
+    Endgame tools are available once the MCP server is connected and authenticated.
+
+  </Step>
+  <Step title="Start asking questions">
+    Once connected, ask Codex anything about your accounts, pipeline, meetings, or conversations. Codex will automatically use the right Endgame tools to find your answer.
   </Step>
 </Steps>
 
