@@ -195,6 +195,85 @@ Use the Codex CLI to add Endgame as a remote MCP server. This is a good option i
   </Step>
 </Steps>
 
+### Connect via Claude Managed Agents (Service Accounts)
+
+Use a service account API key to connect Endgame to Claude Managed Agents (CMA). Service accounts are user-agnostic and scoped to your organization, making them the right choice for automated or shared agent workflows.
+
+<Steps>
+  <Step title="Create a service account API key in Endgame">
+    1. Go to [https://app.endgame.io/settings/api-keys](https://app.endgame.io/settings/api-keys)
+    2. Click **New API Key**
+    3. Name your key and select the **Service Account** option
+    4. Click **Create** and copy the key immediately — you won't be able to view it again
+
+    <Note>
+
+Only Endgame Admins can create api keys.
+
+</Note>
+
+    <Frame caption="Creating a service account API key in Endgame">
+      <img
+        src="../images/create-service-account-api-key-05-29-26.png"
+        alt="Create service account API key in Endgame"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+  <Step title="Create a credential vault in CMA">
+    1. In Claude Managed Agents, go to **Credential Vaults** in the side navigation
+    2. Click **+ New Vault**
+
+    <Frame caption="Adding a new vault in Claude Managed Agents">
+      <img
+        src="../images/new-vault-cma-05-29-26.png"
+        alt="New vault button in Claude Managed Agents"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    3. Enter a name for your vault and click **Create**
+
+    <Frame caption="Creating a vault in Claude Managed Agents">
+      <img
+        src="../images/create-vault-cma-05-29-26.png"
+        alt="Create vault form in Claude Managed Agents"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+  <Step title="Add your Endgame API key as a credential">
+    1. Inside your new vault, click **Add Credential**
+    2. Select **Bearer Token** as the credential type
+    3. Paste the API key you created in Endgame
+    4. Set the custom connector URL to: `https://app.endgame.io/api/v1/mcp`
+    5. Save the credential
+
+    <Frame caption="Adding the Endgame API key as a credential">
+      <img
+        src="../images/add-credential-cma-vault-05-29-26.png"
+        alt="Add credential form in Claude Managed Agents vault"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+  <Step title="Use the vault in an agent session">
+    When starting a session with an agent that requires the Endgame MCP, you will be prompted to provide credentials. Select the vault you created to authenticate the session.
+
+    <Frame caption="Selecting a credential vault when starting a CMA session">
+      <img
+        src="../images/start-cma-session-05-29-26.png"
+        alt="Credential vault selection when starting a Claude Managed Agents session"
+        className="rounded-lg"
+      />
+    </Frame>
+
+  </Step>
+</Steps>
+
 ## How to Use It
 
 Once connected, simply ask your AI assistant questions about your business. You don't need to use any special syntax -- your assistant will automatically select the right Endgame tools based on your question.
