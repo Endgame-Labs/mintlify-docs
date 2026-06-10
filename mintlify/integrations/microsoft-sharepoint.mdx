@@ -72,7 +72,7 @@ Use the instructions below to enable the Microsoft SharePoint integration in End
         />
     </Frame>
 
-    Your synced document libraries will appear in the table below, showing the site, document library name, file count, and last sync time. You can remove a synced library at any time by clicking the trash icon. Your libraries sync to Endgame immediately upon connection and then every 15 minutes thereafter.
+    Your synced document libraries will appear in the table below, showing the site, document library name, file count, and last sync time. You can delete a synced library and its documents from Endgame at any time by clicking the trash icon. Your libraries sync to Endgame immediately upon connection and then every 15 minutes thereafter.
 
     <Frame caption="Synced document libraries">
         <img
@@ -84,9 +84,13 @@ Use the instructions below to enable the Microsoft SharePoint integration in End
 
   </Step>
   <Step title="Manage your connection">
-    You can view and manage your full SharePoint configuration from the [integration page](https://app.endgame.io/settings/integrations/sharepoint). To disconnect, click the "Disconnect" button in the bottom left corner. Disconnecting will stop all document syncing and remove your synced document library configuration.
+    You can view and manage your full SharePoint configuration from the [integration page](https://app.endgame.io/settings/integrations/sharepoint). To disconnect, click the "Disconnect" button in the bottom left corner. Disconnecting will stop all document syncing and remove the configuration associated with your library. 
+    
+    This action does not delete the documents that were previously synced into Endgame. If you want to completely delete documents from Endgame, click the trash icon next to the library. 
+    
+    If a library is still syncing and you remove documents from the library, Endgame will reflect that change and delete those documents.
 
-    To update your connection with a new user hover over the Connect button in the top right corner and when it shows Reconnect, click it to trigger the authentication process. Reconnecting will preserve your library configuration.
+    To update your connection with a new user, hover over the Connect button in the top right corner until it shows "Reconnect," then click it to trigger the authentication process. Reconnecting will preserve your library configuration.
 
 
     <Frame caption="SharePoint integration view">
