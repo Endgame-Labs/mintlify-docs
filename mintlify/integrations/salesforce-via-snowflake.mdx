@@ -1,0 +1,95 @@
+---
+title: "Salesforce via Snowflake"
+description: "Give Endgame read access to your Salesforce data in Snowflake"
+icon: "database"
+---
+
+Endgame reads your Salesforce data from the copy that already lives in your Snowflake account. You give Endgame a read-only service account that can see only that copy.
+
+You create three things in Snowflake:
+
+1. A read-only role scoped to the schema that holds your Salesforce mirror.
+2. A service account that uses key-pair authentication, with that role.
+3. An RSA key pair. You register the public key on the service account and keep the private key.
+
+Then you enter the connection parameters and the private key into the credential form on the Endgame welcome screen. The form validates them against Snowflake and stores them securely. You never enter a password, because the account has none.
+
+<Note>
+  Creating the role and service account requires a Snowflake role that can
+  grant access (for example `SECURITYADMIN`), and OpenSSL on your local
+  machine for the key pair.
+</Note>
+
+<Steps>
+  <Step title="Find the mirror location">
+    Identify the Snowflake database and schema that hold your mirrored Salesforce tables. You need three names: the database, the schema, and a warehouse the read-only account may use. The rest of this page calls them `<database>`, `<schema>`, and `<warehouse>`.
+
+  </Step>
+  <Step title="Create the read-only role">
+    Run this as a role that can grant access (for example `SECURITYADMIN`). It creates a role that can read the mirror schema and nothing else.
+
+    ```sql
+    CREATE ROLE IF NOT EXISTS ENDGAME_RO;
+
+    GRANT USAGE ON WAREHOUSE <warehouse>          TO ROLE ENDGAME_RO;
+    GRANT USAGE ON DATABASE  <database>           TO ROLE ENDGAME_RO;
+    GRANT USAGE ON SCHEMA    <database>.<schema>   TO ROLE ENDGAME_RO;
+
+    GRANT SELECT ON ALL TABLES    IN SCHEMA <database>.<schema> TO ROLE ENDGAME_RO;
+    GRANT SELECT ON FUTURE TABLES IN SCHEMA <database>.<schema> TO ROLE ENDGAME_RO;
+    GRANT SELECT ON ALL VIEWS     IN SCHEMA <database>.<schema> TO ROLE ENDGAME_RO;
+    GRANT SELECT ON FUTURE VIEWS  IN SCHEMA <database>.<schema> TO ROLE ENDGAME_RO;
+    ```
+
+    The `FUTURE` grants let the role read tables and views added to the mirror schema later, so you do not repeat this when your mirror grows. The role can read only this one schema. It cannot read any other schema, write anything, or change anything.
+
+  </Step>
+  <Step title="Create the service account">
+    ```sql
+    CREATE USER IF NOT EXISTS ENDGAME_SVC
+      DEFAULT_ROLE      = ENDGAME_RO
+      DEFAULT_WAREHOUSE = <warehouse>
+      COMMENT           = 'Read-only service account for Endgame';
+
+    GRANT ROLE ENDGAME_RO TO USER ENDGAME_SVC;
+    ```
+
+  </Step>
+  <Step title="Create the key pair">
+    Run these on your own machine. They are the commands from [Snowflake's key-pair authentication documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth) for an unencrypted key, which is the format the credential form expects. There is no passphrase.
+
+    ```bash
+    # Unencrypted RSA private key (PKCS#8). No passphrase.
+    openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out endgame_rsa_key.p8 -nocrypt
+
+    # Public key, derived from the private key.
+    openssl rsa -in endgame_rsa_key.p8 -pubout -out endgame_rsa_key.pub
+    ```
+
+    Register the public key on the service account. Paste the contents of `endgame_rsa_key.pub` with the `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----` lines removed and the line breaks removed.
+
+    ```sql
+    ALTER USER ENDGAME_SVC SET RSA_PUBLIC_KEY = '<public key body, no header/footer lines>';
+    ```
+
+  </Step>
+  <Step title="Enter the credentials on the welcome screen">
+    Enter these connection parameters into the credential form on the Endgame welcome screen:
+
+    | Parameter   | Value                             |
+    | ----------- | --------------------------------- |
+    | `account`   | your Snowflake account identifier |
+    | `username`  | `ENDGAME_SVC`                     |
+    | `warehouse` | `<warehouse>`                     |
+    | `role`      | `ENDGAME_RO`                      |
+    | `database`  | `<database>`                      |
+    | `schema`    | `<schema>`                        |
+
+    In the same form, paste the contents of the private key file (`endgame_rsa_key.p8`) into the private key field. Submitting the form validates the credentials against Snowflake and stores them securely. Enter the private key only into this form — never send it by email or chat.
+
+  </Step>
+</Steps>
+
+## Why the account is read-only and scoped to one schema
+
+This account's grants are the boundary for everything Endgame does in your Snowflake. Endgame runs read queries against the mirror schema to discover its shape, then reads the mirror on a schedule. A read-only role scoped to the one schema is what guarantees Endgame can read your Salesforce mirror and nothing else. You set that boundary here, at the moment you create the account.
