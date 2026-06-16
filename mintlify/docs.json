@@ -100,7 +100,10 @@
           {
             "group": "CRM",
             "icon": "database",
-            "pages": ["integrations/salesforce"]
+            "pages": [
+              "integrations/salesforce",
+              "integrations/salesforce-via-snowflake"
+            ]
           },
           {
             "group": "Transcripts",
