@@ -16,13 +16,7 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 
 ## Getting Started
 
-We recommend connecting Endgame through **Claude's custom connector**, the **ChatGPT app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
-
-<Note>
-  If you previously installed the legacy Endgame MCP extension, you may need to
-  remove it before connecting the new connector, or give the new one a different
-  name to avoid conflicts.
-</Note>
+We recommend connecting Endgame through **Claude's custom connector**, the **ChatGPT Codex app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
 
 ### Connect via Claude
 
@@ -32,10 +26,9 @@ Claude's custom connector is the recommended way to connect Endgame for Claude u
   <Step title="Admin: Add the Endgame connector">
     An admin needs to add Endgame as a custom connector before anyone on the team can use it.
 
-    1. In Claude, go to **Customize** &rarr; **Connectors**
-    2. Click **Add custom connector** in the "+" menu
-    3. Enter a name (e.g., "Endgame")
-    4. Enter the URL: `https://app.endgame.io/api/v1/mcp`
+    1. In the Claude web app navigate to the custom [connector setup](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors)
+    2. or in the Claude desktop app go to **Customize** &rarr; **Connectors** and click **Add custom connector** in the **Add** menu
+    3. Enter a name (e.g., "Endgame") and the URL: `https://app.endgame.io/api/v1/mcp`
     5. Click **Add** and follow the prompts to authenticate with Endgame
 
   </Step>
@@ -52,14 +45,20 @@ Claude's custom connector is the recommended way to connect Endgame for Claude u
   </Step>
 </Steps>
 
+<Note>
+  Endgame periodically updates our MCP tools. You can ensure you have the latest
+  tool set by going into your Endgame connector, opening the overflow menu, and
+  clicking Refresh Tools List.
+</Note>
+
 ### Connect via ChatGPT
 
 You can connect Endgame to ChatGPT by adding it as a custom app. An admin must publish the app before team members can enable it.
 
 <Steps>
   <Step title="Admin: Add the Endgame custom app">
-    1. In ChatGPT, open **Settings** and navigate to the **Apps** section
-    2. Click **Create app**
+    1. In ChatGPT, go to the [Apps section](https://chatgpt.com/admin/apps)
+    2. Click **Create**
     3. Enter a name (e.g., "Endgame") and the URL: `https://app.endgame.io/api/v1/mcp`
     4. After clicking **Create**, complete the authentication prompts to link your Endgame account
 
@@ -75,11 +74,11 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
   <Step title="Admin: Publish the app to your organization">
     Once the app is configured, publish it so team members can access it.
     1. Within Apps, find your Draft app and open it. 
-    2. From the overflow menu, select **Publish**
+    2. Click to **Publish** it
 
     <Frame caption="Publishing the Endgame app in ChatGPT">
       <img
-        src="../images/chatgpt_publish_app_05_12_26.png"
+        src="../images/chatgpt_publish_app_07_14_26.png"
         alt="ChatGPT publish app screen"
         className="rounded-lg"
       />
@@ -89,13 +88,13 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
   <Step title="Individual: Enable the Endgame app">
     After the admin has published the app, each team member can enable it:
 
-    1. Go to **Settings** &rarr; **Apps** in ChatGPT
-    2. Click **Add more**, find the Endgame app and connect
+    1. Go to the [plugin section](https://chatgpt.com/plugins/) in ChatGPT
+    2. Under the **Installed** section click on the Endgame app and then click to connect
     3. Follow the authentication prompts
 
     <Frame caption="Enabled apps in ChatGPT">
       <img
-        src="../images/chatgpt_enabled_apps_05_12_26.png"
+        src="../images/chatgpt_install_endgame_app_07_14_26.png"
         alt="ChatGPT enabled apps screen"
         className="rounded-lg"
       />
@@ -106,6 +105,11 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
     Once enabled, just ask ChatGPT anything about your accounts, pipeline, meetings, or conversations. ChatGPT will automatically use the right Endgame tools to find your answer.
   </Step>
 </Steps>
+
+<Note>
+  Endgame periodically updates our MCP tools. An admin can ensure you have the latest
+  tool set by clicking into the Endgame app -> See details for the tools -> Refresh
+</Note>
 
 ### Connect via Claude Code
 
@@ -275,7 +279,9 @@ Only Endgame Admins can create api keys. The number of service keys you are allo
 </Steps>
 
 <Note>
-  For information on setting and accessing vault credentials programmatically, refer to the [Claude Managed Agents vaults documentation](https://platform.claude.com/docs/en/managed-agents/vaults).
+  For information on setting and accessing vault credentials programmatically,
+  refer to the [Claude Managed Agents vaults
+  documentation](https://platform.claude.com/docs/en/managed-agents/vaults).
 </Note>
 
 ## How to Use It
@@ -310,74 +316,6 @@ For complex analyses, your assistant can chain multiple tools together -- for ex
     an introduction?"
   </Card>
 </CardGroup>
-
-## Available Tools
-
-When connected via Claude, the following tools are available. Claude selects the right tool automatically based on your question.
-
-### Accounts & CRM
-
-| Tool                      | Description                                                                                                                                                                                    |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `find_accounts`           | Find CRM accounts by owner, team membership, or account ID. Returns account details, interaction recency, open opportunities, and the full sales team roster.                                  |
-| `query_data`              | The most powerful data tool -- translates natural-language questions into SQL queries against your organization's full data warehouse (accounts, contacts, opportunities, meetings, and more). |
-| `search_salesforce_notes` | Retrieve Salesforce notes and activity history entries recorded against a specific account.                                                                                                    |
-
-### People & Contacts
-
-| Tool                 | Description                                                                                                                                   |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `find_person`        | Look up a specific person by name, email, Salesforce ID, LinkedIn profile, or Endgame person ID. Returns ranked candidates with match scores. |
-| `get_person_details` | Load a full profile for a person: CRM contact data, LinkedIn history, interaction history, introduction paths, and public news.               |
-| `search_people`      | Browse and filter contacts at a company across CRM, LinkedIn, interaction history, public news, and recent hires/departures.                  |
-
-### Meetings & Interactions
-
-| Tool                      | Description                                                                                                                                                                                                             |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get_interaction_history` | Retrieve chronological summaries or extracted facts from meeting transcripts and emails for one or more accounts. Filter by date, participant, content type, or topic tags (pain points, deal risks, next steps, etc.). |
-| `search_meetings`         | Search for meetings, calls, and emails across the organization. Filter by account, participant, subject, status, and date range.                                                                                        |
-| `search_my_meetings`      | Search your own meetings and calendar. Automatically scoped to the logged-in user.                                                                                                                                      |
-
-### Messages & Communications
-
-| Tool                    | Description                                                                                                                       |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `search_slack_messages` | Fetch Slack messages about a specific account from channels linked to that account. Includes AI-generated conversation summaries. |
-
-### Documents & Knowledge
-
-| Tool                        | Description                                                                                                                             |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `fetch_knowledge_documents` | Browse uploaded knowledge documents by account, date, or content type. Returns metadata and previews.                                   |
-| `get_document`              | Retrieve the full content of a specific document by ID (transcripts, emails, knowledge docs, earnings calls, Slack messages, or notes). |
-| `find_relevant_documents`   | AI-powered search that automatically extracts optimal search terms from a question to find relevant company-wide documents.             |
-| `search_vendor_documents`   | Search company-wide reference documents (playbooks, product docs, methodology guides) using semantic and keyword matching.              |
-| `search_document_insights`  | Search extracted facts and quotes across all document types -- transcripts, emails, earnings calls, Slack, and notes.                   |
-| `search_knowledge_articles` | Search synthesized knowledge articles that provide high-level account overviews built from multiple source documents.                   |
-
-### Datasets
-
-| Tool              | Description                                                                                                              |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `search_datasets` | Discover what structured datasets (CSVs, spreadsheets, dashboard exports) are available in your organization.            |
-| `query_dataset`   | Query uploaded structured data files using natural language. The tool translates questions into SQL and returns results. |
-
-### External Research
-
-| Tool                       | Description                                                                                                                                                                |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `research_company`         | Deep company research with synthesized answers, verbatim quotes, and source URLs. Covers strategic priorities, financials, leadership, and more. Supports SEC filing mode. |
-| `summarize_earnings_calls` | Retrieve and summarize public earnings call transcripts with extracted facts and speaker quotes.                                                                           |
-| `news_search`              | Search Google News for editorial coverage about companies, events, or industry trends.                                                                                     |
-| `web_search`               | General-purpose web search for public information -- documentation, press releases, blog posts, and more.                                                                  |
-
-### Personalization
-
-| Tool                      | Description                                                                                                 |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `get_user_preferences`    | Load your standing instructions and preferences that you've established across prior Endgame conversations. |
-| `search_user_preferences` | Search your broader memory and context from past conversations for situationally relevant preferences.      |
 
 ## Rate Limits
 
