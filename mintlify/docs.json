@@ -146,6 +146,34 @@
         "pages": ["authentication/index"]
       },
       {
+        "group": "Legacy Endgame",
+        "pages": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "legacy-endgame/getting-started/core-concepts",
+              "legacy-endgame/getting-started/navigating-endgame",
+              "legacy-endgame/getting-started/your-first-10-minutes",
+              "legacy-endgame/getting-started/query-your-book",
+              "legacy-endgame/getting-started/endgame-chat-201"
+            ]
+          },
+          {
+            "group": "Features",
+            "pages": [
+              "legacy-endgame/features/skills",
+              "legacy-endgame/features/publishing-and-sharing",
+              "legacy-endgame/features/tasks",
+              "legacy-endgame/features/file-upload",
+              "legacy-endgame/features/export-thread-content",
+              "legacy-endgame/features/slack",
+              "legacy-endgame/features/mcp-server",
+              "legacy-endgame/features/user-preferences"
+            ]
+          }
+        ]
+      },
+      {
         "group": "API reference",
         "pages": [
           "api-reference/introduction",

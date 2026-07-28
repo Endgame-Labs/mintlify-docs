@@ -1,0 +1,109 @@
+---
+title: "File Upload"
+description: "Adding contextual knowledge to your chat responses"
+icon: "cloud-upload"
+---
+
+Individual users have the ability to upload documents to enhance the context provided to Endgame for singular account chat responses. Some types of documents that could be useful are account plans, meetings notes, or partnership decks. Anything that isn't already captured in the mediums Endgame already ingests can be added here.
+
+## Upload files from your device
+
+In a account detail page, open the Files tab toward the bottom of the page. Click Add Files and select Upload from device.
+
+<Frame caption="File Upload">
+  <img
+    src="/images/account-file-upload-menu-9-30-25.png"
+    alt="files upload"
+    className="rounded-lg"
+  />
+</Frame>
+
+Go through the flow to select up to 100 files at a time from your device. You can edit the titles and descriptions for the files before clicking to Upload Files.
+
+<Frame caption="File Upload Flow">
+  <img
+    src="/images/file-upload-modal-8-30-25.png"
+    alt="file upload modal"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Link files from Google Drive
+
+In a account detail page, open the Files tab toward the bottom of the page. Click Add Files and select Link from Google Drive.
+
+<Frame caption="File Upload">
+  <img
+    src="/images/account-file-upload-menu-9-30-25.png"
+    alt="files upload"
+    className="rounded-lg"
+  />
+</Frame>
+
+Go through the Google authentication process. Select all permissions requested (we only requst [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [drive.readonly](https://developers.google.com/workspace/drive/api/guides/api-specific-auth)) for the best Endgame experience. Once authenticated, select up to 100 files at a time to sync with Endgame. You can edit the description for the files before clicking to Select Files.
+
+<Frame caption="Google File Select">
+  <img
+    src="/images/google-file-select-8-30-25.png"
+    alt="google file select"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Updating linked files
+
+Your Google Drive and URL files are automatically synced once per day, but you can trigger a manual sync anytime by hovering over the item and then clicking Sync.
+
+<Frame caption="Sync Google Drive and URL Files">
+  <img
+    src="/images/sync-account-document-9-23-25.png"
+    alt="Sync Google Drive and URL Files"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Import files from a public URL
+
+In a account detail page, open the Files tab toward the bottom of the page. Click Import from public URL.
+
+<Frame caption="File Upload">
+  <img
+    src="/images/account-file-upload-menu-9-30-25.png"
+    alt="files upload"
+    className="rounded-lg"
+  />
+</Frame>
+
+Copy and paste a link to a public document or webpage. After you click Add Link, you will be able to add a title and a description for the URL. Continue to add additional URLs and click Save once completed. Your document will now be added to your list of Knowledge documents.
+
+<Frame caption="Import from public URL">
+  <img
+    src="/images/public-url-edit-9-23-25.png"
+    alt="Import from public URL"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Remove files
+
+Once your files are uploaded or linked, you can delete or unlink them anytime by hovering over the item and then clicking Delete or Unlink. By deleting or unlinking the file you ensure that information associated with that file will no longer be present in new chat responses.
+
+<Info>
+  Application Admins have the ability to delete or unlink _any_ folder or file regarless of ownership
+</Info>
+
+<Frame caption="Delete or Unlink Files">
+  <img
+    src="/images/unlink-sync-account-knowledge-9-23-25.png"
+    alt="Delete or Unlink Files"
+    className="rounded-lg"
+  />
+</Frame>
+
+### File sync frequency
+
+| **Knowledge source** | **Frequency** |
+|-----------------|-----------|
+| Google Drive | automatically 1/day - option for manual sync anytime|
+| Public web URL | must trigger manual sync |
+| Personal upload | must re-upload for new content |
