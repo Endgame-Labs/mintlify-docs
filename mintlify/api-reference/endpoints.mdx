@@ -13,13 +13,13 @@ A typical workflow: **create** a thread with a prompt, **poll** it by ID
 until the assistant's response finishes, and optionally **list**,
 **rename**, or **delete** it.
 
-| Method   | Path                | Purpose                                |
-| -------- | ------------------- | -------------------------------------- |
-| `POST`   | `/threads`          | [Create a thread](#create-a-thread)    |
-| `GET`    | `/threads/{id}`     | [Get a thread](#get-a-thread)          |
-| `GET`    | `/threads`          | [List threads](#list-threads)          |
-| `PATCH`  | `/threads/{id}`     | [Rename a thread](#rename-a-thread)    |
-| `DELETE` | `/threads/{id}`     | [Delete a thread](#delete-a-thread)    |
+| Method   | Path            | Purpose                             |
+| -------- | --------------- | ----------------------------------- |
+| `POST`   | `/threads`      | [Create a thread](#create-a-thread) |
+| `GET`    | `/threads/{id}` | [Get a thread](#get-a-thread)       |
+| `GET`    | `/threads`      | [List threads](#list-threads)       |
+| `PATCH`  | `/threads/{id}` | [Rename a thread](#rename-a-thread) |
+| `DELETE` | `/threads/{id}` | [Delete a thread](#delete-a-thread) |
 
 ---
 
@@ -45,19 +45,19 @@ Every failed request returns the same envelope:
 
 ### Error codes
 
-| Code             | HTTP status | When it happens                                                                                                                   |
-| ---------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `INVALID_PARAMS` | `400`       | Request body or query parameters failed schema validation, the body wasn't valid JSON, or a required parameter was missing.        |
-| `UNAUTHORIZED`   | `401`       | Missing, malformed, or revoked credential in the `Authorization` header.                                                          |
+| Code             | HTTP status | When it happens                                                                                                                       |
+| ---------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `INVALID_PARAMS` | `400`       | Request body or query parameters failed schema validation, the body wasn't valid JSON, or a required parameter was missing.           |
+| `UNAUTHORIZED`   | `401`       | Missing, malformed, or revoked credential in the `Authorization` header.                                                              |
 | `FORBIDDEN`      | `403`       | Credential is valid but not permitted to mutate this thread -- `PATCH` or `DELETE` issued against a thread the caller did not create. |
-| `NOT_FOUND`      | `404`       | Resource doesn't exist, the caller isn't permitted to read it, or the public API feature flag isn't enabled for the organization. |
-| `RATE_LIMITED`   | `429`       | Request quota exceeded. See [Rate limits](#rate-limits).                                                                          |
-| `INTERNAL_ERROR` | `500`       | Unexpected server-side failure. Retry with exponential backoff; contact support with the `trace_id` if the issue persists.        |
+| `NOT_FOUND`      | `404`       | Resource doesn't exist, the caller isn't permitted to read it, or the public API feature flag isn't enabled for the organization.     |
+| `RATE_LIMITED`   | `429`       | Request quota exceeded. See [Rate limits](#rate-limits).                                                                              |
+| `INTERNAL_ERROR` | `500`       | Unexpected server-side failure. Retry with exponential backoff; contact support with the `trace_id` if the issue persists.            |
 
 <Note>
-  `NOT_FOUND` is returned both when a resource truly doesn't exist and
-  when the caller lacks permission to see it. This is intentional -- it
-  avoids leaking the existence of threads the caller can't access.
+  `NOT_FOUND` is returned both when a resource truly doesn't exist and when the
+  caller lacks permission to see it. This is intentional -- it avoids leaking
+  the existence of threads the caller can't access.
 </Note>
 
 ---
@@ -65,8 +65,8 @@ Every failed request returns the same envelope:
 ## Rate limits
 
 <Warning>
-  **Beta:** The default quota is **10,000 requests per organization per
-  day**. This value is subject to change after the beta.
+  **Open Beta:** The default quota is **10,000 requests per organization per day**.
+  This value is subject to change after the open beta.
 </Warning>
 
 Limits are applied at the **organization** level across every credential
@@ -103,12 +103,12 @@ assistant's response to generate asynchronously.
 
 **Request body**
 
-| Field         | Type             | Required | Description                                                      |
-| ------------- | ---------------- | -------- | ---------------------------------------------------------------- |
-| `prompt`      | string (min 1)   | ✅       | First user message on the thread.                                |
-| `title`       | string (min 1)   |          | Explicit title. Auto-generated from `prompt` if omitted.         |
-| `accountId`   | string           |          | Associate the thread with an account ID.                         |
-| `secondaryId` | string           |          | Secondary linkage (e.g. opportunity, user). Settable on create only. |
+| Field         | Type           | Required | Description                                                          |
+| ------------- | -------------- | -------- | -------------------------------------------------------------------- |
+| `prompt`      | string (min 1) | ✅       | First user message on the thread.                                    |
+| `title`       | string (min 1) |          | Explicit title. Auto-generated from `prompt` if omitted.             |
+| `accountId`   | string         |          | Associate the thread with an account ID.                             |
+| `secondaryId` | string         |          | Secondary linkage (e.g. opportunity, user). Settable on create only. |
 
 **Example**
 
@@ -141,8 +141,8 @@ Poll [`GET /api/v1/threads/{id}`](#get-a-thread) until the returned
 `status.state` is `idle` (success) or `error`.
 
 <Note>
-  Requires a user-scoped API key. Org-wide API keys and M2M tokens
-  receive `403 FORBIDDEN` during beta.
+  Requires a user-scoped API key. Org-wide API keys and M2M tokens receive `403
+  FORBIDDEN`.
 </Note>
 
 ---
@@ -155,9 +155,9 @@ Fetches a thread, every message on it, and a derived run status.
 
 **Path parameters**
 
-| Name | Type   | Description          |
-| ---- | ------ | -------------------- |
-| `id` | string | Thread identifier.   |
+| Name | Type   | Description        |
+| ---- | ------ | ------------------ |
+| `id` | string | Thread identifier. |
 
 **Example**
 
@@ -222,11 +222,11 @@ curl https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ4T \
 The `status` object summarizes the latest assistant message so callers
 don't have to re-derive it:
 
-| `state`         | Meaning                                                                                          |
-| --------------- | ------------------------------------------------------------------------------------------------ |
-| `idle`          | No assistant work pending -- either the latest assistant message finished, or there are none yet. |
-| `in_progress`   | Assistant is still generating. `latestUpdate` describes the most recent step (or `"Thinking"`).  |
-| `error`         | Latest assistant message failed.                                                                 |
+| `state`       | Meaning                                                                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- |
+| `idle`        | No assistant work pending -- either the latest assistant message finished, or there are none yet. |
+| `in_progress` | Assistant is still generating. `latestUpdate` describes the most recent step (or `"Thinking"`).   |
+| `error`       | Latest assistant message failed.                                                                  |
 
 Individual message `status` can be `in_progress`, `corroborating`,
 `completed`, `failed`, or `cancelled` (always `null` for `user` messages).
@@ -242,11 +242,11 @@ first (`updatedAt` when present, otherwise `createdAt`).
 
 **Query parameters**
 
-| Name         | Type              | Default | Description                                                            |
-| ------------ | ----------------- | ------- | ---------------------------------------------------------------------- |
-| `limit`      | integer (1-100)   | `25`    | Maximum number of threads to return on this page.                      |
-| `cursor`     | string            | --      | Opaque cursor from a previous response's `nextCursor`.                 |
-| `accountId`  | string            | --      | Filter to threads associated with this account.                        |
+| Name        | Type            | Default | Description                                            |
+| ----------- | --------------- | ------- | ------------------------------------------------------ |
+| `limit`     | integer (1-100) | `25`    | Maximum number of threads to return on this page.      |
+| `cursor`    | string          | --      | Opaque cursor from a previous response's `nextCursor`. |
+| `accountId` | string          | --      | Filter to threads associated with this account.        |
 
 **Example**
 
@@ -277,11 +277,11 @@ curl "https://app.endgame.io/api/v1/threads?limit=50" \
 
 **Response fields**
 
-| Field        | Type               | Description                                                                                                                                      |
-| ------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `threads`    | `Thread[]`         | Page of threads in most-recent-activity-first order.                                                                                             |
-| `nextCursor` | `string` \| `null` | Cursor to pass on the next request. `null` when there are no more pages.                                                                         |
-| `truncated`  | `boolean`          | `true` when the organization has more threads than the server-side pagination window can walk. Narrow with `accountId` to reach the rest.        |
+| Field        | Type               | Description                                                                                                                               |
+| ------------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `threads`    | `Thread[]`         | Page of threads in most-recent-activity-first order.                                                                                      |
+| `nextCursor` | `string` \| `null` | Cursor to pass on the next request. `null` when there are no more pages.                                                                  |
+| `truncated`  | `boolean`          | `true` when the organization has more threads than the server-side pagination window can walk. Narrow with `accountId` to reach the rest. |
 
 **Pagination**
 
@@ -300,7 +300,7 @@ with the previous response's `nextCursor` until it comes back `null`.
   mid-walk won't cause duplicates or skips for the remainder of the walk.
 - When `truncated` is `true`, the walk hit the server-side window before
   covering every visible thread. Narrow with `accountId` to reach the
-  rest. During beta, `truncated` is `false` for any org whose thread
+  rest. `truncated` is `false` for any org whose thread
   count fits inside the window (the common case).
 
 **Visibility**
@@ -320,15 +320,15 @@ rejected with `400 INVALID_PARAMS`.
 
 **Path parameters**
 
-| Name | Type   | Description          |
-| ---- | ------ | -------------------- |
-| `id` | string | Thread identifier.   |
+| Name | Type   | Description        |
+| ---- | ------ | ------------------ |
+| `id` | string | Thread identifier. |
 
 **Request body**
 
-| Field   | Type           | Required | Description               |
-| ------- | -------------- | -------- | ------------------------- |
-| `title` | string (min 1) | ✅       | New title.                |
+| Field   | Type           | Required | Description |
+| ------- | -------------- | -------- | ----------- |
+| `title` | string (min 1) | ✅       | New title.  |
 
 **Example**
 
@@ -356,10 +356,10 @@ curl -X PATCH https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MDQ
 ```
 
 <Note>
-  Requires a user-scoped API key; org-wide API keys and M2M tokens
-  receive `403 FORBIDDEN` during beta. Users can only rename threads
-  they created -- attempting to rename another user's thread also
-  returns `403 FORBIDDEN`, even when the thread is published.
+  Requires a user-scoped API key; org-wide API keys and M2M tokens receive `403
+  FORBIDDEN`. Users can only rename threads they created -- attempting to rename
+  another user's thread also returns `403 FORBIDDEN`, even when the thread is
+  published.
 </Note>
 
 ---
@@ -374,9 +374,9 @@ longer appear in `GET /api/v1/threads` or be readable via
 
 **Path parameters**
 
-| Name | Type   | Description          |
-| ---- | ------ | -------------------- |
-| `id` | string | Thread identifier.   |
+| Name | Type   | Description        |
+| ---- | ------ | ------------------ |
+| `id` | string | Thread identifier. |
 
 **Example**
 
@@ -393,9 +393,8 @@ curl -X DELETE https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MD
 ```
 
 <Note>
-  Requires a user-scoped API key; org-wide API keys and M2M tokens
-  receive `403 FORBIDDEN` during beta. Users can only delete threads
-  they created.
+  Requires a user-scoped API key; org-wide API keys and M2M tokens receive `403
+  FORBIDDEN`. Users can only delete threads they created.
 </Note>
 
 ---
@@ -404,39 +403,39 @@ curl -X DELETE https://app.endgame.io/api/v1/threads/thr_01HZY6P8RB4K5C7X9E2N8MD
 
 ### Thread
 
-| Field         | Type                  | Description                                                                 |
-| ------------- | --------------------- | --------------------------------------------------------------------------- |
-| `id`          | string                | Stable thread identifier.                                                   |
-| `title`       | string                | Human-readable title.                                                       |
-| `createdAt`   | ISO 8601 datetime     | When the thread was created.                                                |
+| Field         | Type                      | Description                                                                                                |
+| ------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `id`          | string                    | Stable thread identifier.                                                                                  |
+| `title`       | string                    | Human-readable title.                                                                                      |
+| `createdAt`   | ISO 8601 datetime         | When the thread was created.                                                                               |
 | `updatedAt`   | ISO 8601 datetime \| null | Last update time. `null` if never updated -- distinguishes "just created" from "updated once at creation". |
-| `accountId`   | string \| null        | Associated account ID.                                                      |
-| `secondaryId` | string \| null        | Secondary linkage (opportunity, user, etc). Settable on create only.        |
-| `published`   | boolean               | Whether the thread is published to the organization.                        |
-| `deleted`     | boolean               | Whether the thread has been soft-deleted.                                   |
-| `threadUrl`   | string \| null        | Deep link into the Endgame app.                                             |
+| `accountId`   | string \| null            | Associated account ID.                                                                                     |
+| `secondaryId` | string \| null            | Secondary linkage (opportunity, user, etc). Settable on create only.                                       |
+| `published`   | boolean                   | Whether the thread is published to the organization.                                                       |
+| `deleted`     | boolean                   | Whether the thread has been soft-deleted.                                                                  |
+| `threadUrl`   | string \| null            | Deep link into the Endgame app.                                                                            |
 
 ### ThreadMessage
 
-| Field         | Type                             | Description                                                                 |
-| ------------- | -------------------------------- | --------------------------------------------------------------------------- |
-| `id`          | string                           | Message identifier.                                                         |
-| `threadId`    | string                           | Parent thread ID.                                                           |
-| `role`        | `"user"` \| `"assistant"`        | Message role.                                                               |
-| `content`     | string                           | Message text.                                                               |
-| `status`      | enum \| null                     | Always `null` for user messages. Assistant values: `in_progress`, `corroborating`, `completed`, `failed`, `cancelled`. |
-| `createdAt`   | ISO 8601 datetime                | When the message was created.                                               |
-| `completedAt` | ISO 8601 datetime \| null        | When the message reached a terminal state, if any.                          |
-| `steps`       | array \| null                    | Reasoning steps the assistant emitted while generating.                     |
-| `sources`     | array \| null                    | Source documents referenced by the assistant.                               |
-| `attachments` | array \| null                    | User-supplied attachments.                                                  |
-| `model`       | string \| null                   | Identifier of the producing model, if applicable.                           |
+| Field         | Type                      | Description                                                                                                            |
+| ------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `id`          | string                    | Message identifier.                                                                                                    |
+| `threadId`    | string                    | Parent thread ID.                                                                                                      |
+| `role`        | `"user"` \| `"assistant"` | Message role.                                                                                                          |
+| `content`     | string                    | Message text.                                                                                                          |
+| `status`      | enum \| null              | Always `null` for user messages. Assistant values: `in_progress`, `corroborating`, `completed`, `failed`, `cancelled`. |
+| `createdAt`   | ISO 8601 datetime         | When the message was created.                                                                                          |
+| `completedAt` | ISO 8601 datetime \| null | When the message reached a terminal state, if any.                                                                     |
+| `steps`       | array \| null             | Reasoning steps the assistant emitted while generating.                                                                |
+| `sources`     | array \| null             | Source documents referenced by the assistant.                                                                          |
+| `attachments` | array \| null             | User-supplied attachments.                                                                                             |
+| `model`       | string \| null            | Identifier of the producing model, if applicable.                                                                      |
 
 ### ThreadStatus
 
-| Field             | Type                                  | Description                                                              |
-| ----------------- | ------------------------------------- | ------------------------------------------------------------------------ |
-| `state`           | `"idle"` \| `"in_progress"` \| `"error"` | Derived top-level state -- see the table under [Get a thread](#get-a-thread). |
-| `activeMessageId` | string \| null                        | ID of the assistant message currently generating, if `state` is `in_progress`. |
-| `latestUpdate`    | string \| null                        | Most recent step description, or `"Thinking"` before any step is emitted. |
-| `stepCount`       | integer                               | Number of reasoning steps on the active assistant message.               |
+| Field             | Type                                     | Description                                                                    |
+| ----------------- | ---------------------------------------- | ------------------------------------------------------------------------------ |
+| `state`           | `"idle"` \| `"in_progress"` \| `"error"` | Derived top-level state -- see the table under [Get a thread](#get-a-thread).  |
+| `activeMessageId` | string \| null                           | ID of the assistant message currently generating, if `state` is `in_progress`. |
+| `latestUpdate`    | string \| null                           | Most recent step description, or `"Thinking"` before any step is emitted.      |
+| `stepCount`       | integer                                  | Number of reasoning steps on the active assistant message.                     |

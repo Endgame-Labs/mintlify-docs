@@ -20,7 +20,7 @@
       "post": {
         "operationId": "createThread",
         "summary": "Create a thread",
-        "description": "Creates a new thread in the caller's organization. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN` during beta. The `prompt` is required -- it's persisted as the first user message and triggers the assistant's response to generate asynchronously. Poll `GET /api/v1/threads/{id}` until the derived `status.state` is `idle` (or `error`).",
+        "description": "Creates a new thread in the caller's organization. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN`. The `prompt` is required -- it's persisted as the first user message and triggers the assistant's response to generate asynchronously. Poll `GET /api/v1/threads/{id}` until the derived `status.state` is `idle` (or `error`).",
         "tags": ["Threads"],
         "requestBody": {
           "required": true,
@@ -124,7 +124,7 @@
       "patch": {
         "operationId": "updateThread",
         "summary": "Update a thread",
-        "description": "Renames a thread. Only `title` is writable. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN` during beta. Users can only rename threads they created -- attempts to rename another user's thread also return `403 FORBIDDEN`, even when the thread is published.",
+        "description": "Renames a thread. Only `title` is writable. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN`. Users can only rename threads they created -- attempts to rename another user's thread also return `403 FORBIDDEN`, even when the thread is published.",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -157,7 +157,7 @@
       "delete": {
         "operationId": "deleteThread",
         "summary": "Delete a thread",
-        "description": "Soft-deletes a thread. The record is preserved server-side but will no longer appear in `GET /api/v1/threads` or be readable via `GET /api/v1/threads/{id}`. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN` during beta. Users can only delete threads they created.",
+        "description": "Soft-deletes a thread. The record is preserved server-side but will no longer appear in `GET /api/v1/threads` or be readable via `GET /api/v1/threads/{id}`. Requires a user-scoped API key; org-wide API keys and M2M applications receive `403 FORBIDDEN`. Users can only delete threads they created.",
         "tags": ["Threads"],
         "parameters": [
           { "$ref": "#/components/parameters/ThreadId" }
@@ -665,7 +665,7 @@
         }
       },
       "Forbidden": {
-        "description": "Credential is valid but not permitted. Either the operation requires a user-scoped API key (org-wide credentials cannot mutate threads during beta), or the caller is user-scoped but did not create the thread. See [Errors](/api-reference/endpoints#errors) for the full error envelope.",
+        "description": "Credential is valid but not permitted. Either the operation requires a user-scoped API key (org-wide credentials cannot mutate threads), or the caller is user-scoped but did not create the thread. See [Errors](/api-reference/endpoints#errors) for the full error envelope.",
         "content": {
           "application/json": {
             "schema": { "$ref": "#/components/schemas/Error" }
