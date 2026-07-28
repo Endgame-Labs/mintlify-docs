@@ -85,7 +85,6 @@
         "group": "Features",
         "pages": [
           "features/skills",
-          "features/publishing-and-sharing",
           "features/tasks",
           "features/file-upload",
           "features/export-thread-content",
