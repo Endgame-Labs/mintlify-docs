@@ -166,8 +166,8 @@
               "legacy-endgame/features/tasks",
               "legacy-endgame/features/file-upload",
               "legacy-endgame/features/export-thread-content",
-              "legacy-endgame/features/slack",
-              "legacy-endgame/features/mcp-server",
+              "features/slack",
+              "features/mcp-server",
               "legacy-endgame/features/user-preferences"
             ]
           }
