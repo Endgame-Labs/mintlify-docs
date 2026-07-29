@@ -84,13 +84,13 @@
       {
         "group": "Features",
         "pages": [
+          "features/mcp-server",
+          "features/slack",
+          "features/user-preferences",
           "features/skills",
           "features/tasks",
           "features/file-upload",
-          "features/export-thread-content",
-          "features/slack",
-          "features/mcp-server",
-          "features/user-preferences"
+          "features/export-thread-content"
         ]
       },
       {
