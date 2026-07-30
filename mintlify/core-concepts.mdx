@@ -4,46 +4,51 @@ description: "Understand how Endgame transforms your sales process"
 icon: "lightbulb"
 ---
 
-## How data is obtained and analyzed
+## Logic
 
-### Data and sources
+At the center of Endgame is your **context graph**: a living, structured map of every account, person, and opportunity in your book, and the relationships between them. Rather than making agents dig through raw data at question time, Endgame does the reasoning upstream, compiling your data into connected, cited facts that are ready the moment you (or any agent) ask.
 
-Endgame combines your business knowledge, particularly data contained in emails, call recordings, notes, internal conversations, and uploaded account documents with everything that is publicly available on the internet. We are currently CRM-first: we focus on the accounts in your CRM and no others, because we believe those are the ones you actually care about.
+Two things build and continuously enrich the graph:
 
-An equally important data source is contained in Endgame's Logic.
+- **Your first-party data.** Emails, call recordings, notes, internal conversations, CRM records, and any [documents you upload](/features/file-upload). We encourage you to upload documentation on your sales strategy and process so the graph reflects how your team actually sells.
+- **Endgame's proprietary context agents.** Purpose-built agents that work alongside your data around the clock, researching accounts and people, pulling in relevant public information, and connecting it all into the graph.
+
+The result is intelligence you can take with you. Your context graph is fully accessible inside Endgame, but its real power is portability: connect the [Endgame MCP server](/features/mcp-server) and every surface you work in reads from the same context graph, with the same trusted, cited answers everywhere. That includes Claude, ChatGPT, Slack, and your own agents and orchestrators.
+
+## Data and Sources
+
+The graph is only as good as the data feeding it, and it comes from two directions. You connect and upload your first-party data, and Endgame's context agents enrich it with what they source from the public internet.
+
+Your side of that starts with connecting your systems: your CRM, email, calendar, call recordings, and internal conversations. From there, [upload the documents](/features/file-upload) that give the graph your business knowledge, such as account plans, strategy docs, and process documentation. The more first-party data you bring in, the richer and more accurate your graph becomes.
+
+We are currently CRM-first: we focus on the accounts in your CRM and no others, because we believe those are the ones you actually care about.
 
 <Info>
   Details of each integration can be found in the Integrations section.
 </Info>
 
-## Logic
+## Interacting with Endgame
 
-Endgame researches every person and account in your book through the lens of your sales strategy and process. We do this by capturing your strategy and process, in natural language, into our rules.
+### Endgame via MCP
 
-### Rules
+The most powerful way to use Endgame is to take it with you. Connect the [Endgame MCP server](/features/mcp-server) to any agent you already work in, whether that is Claude, ChatGPT, Cursor, or your own agents and orchestrators, and it gains full access to your context graph. Your agent of choice answers with the same trusted, cited intelligence you get in Endgame, right where you already work.
 
-Think of rules as the concepts you would onboard a new sales rep or account manager into. Are you a MEDDIC or BANT shop? What does command of the message mean for your org? Which products do you sell, how do you position them, and how do you cross-sell them? Who are your competitors and how do you differentiate?
+### Explore the Graph
+
+Explore your context graph directly in Endgame to research accounts, people, and more. Search for any entity and click through to explore its full context graph data, from cited facts to the relationships connecting it to other entities in your graph.
+
+### Chat
+
+Endgame also includes a lightweight chat interface in the app. Use it to ask questions about a specific account or across your entire book, just like you would with any AI assistant.
 
 ## [Skills](/features/skills)
 
-Certain activities within sales and account teams are driven by consistent data points. For example, you may require all active Opportunities to have MEDDPICC filled out, or you might expect every rep on your team to have an account plan with a stakeholder map, action plan, and one-page business case written for each key account. Your CRO may expect a particular format of briefing for meeting preparation. Endgame's skills allow you to define structured documents that are dynamically written using AI, informed by all data sources, so that every account has all required documents available at all times.
+Certain activities within sales and account teams are driven by consistent data points. For example, you may require all active Opportunities to have MEDDPICC filled out, or you might expect every rep on your team to have an account plan with a stakeholder map, action plan, and one-page business case written for each key account. Your CRO may expect a particular format of briefing for meeting preparation. Endgame's skills allow you to define structured documents that agents can follow to create consistent output in Endgame or in your harness of choice via our MCP server.
 
-## Interacting with Endgame
+## [Digests](/features/digests)
 
-### [Chat](/your-first-10-minutes)
+Users can schedule daily, weekly, or monthly email digests that act in the same way as firing a prompt off in the app. Curate your digests to keep you up to date at the start of your day or week with whatever cross account information is most helpful to you.
 
-The simplest way to get answers from Endgame is by querying Endgame via Chat, just like how you might ask questions of ChatGPT or Perplexity. You can chat with Endgame account by account from the [account detail page](navigating-endgame#account-detail-page).
-
-You can also query across multiple accounts in our homepage. Here you can explore prompts that cover the entire breadth of the accounts in your organization. Ask questions that target your book of accounts, explore organizational trends, provide insights about your team’s sales strategies, and more.
-
-### [Tasks](/features/tasks)
-
-Users can schedule daily, weekly, or monthly email digests that act in the same way as firing a prompt off in the app. Curate your tasks to keep you up to date at the start of your day or week with whatever cross account information is most helpful to you.
-
-### [Publishing & Sharing](/features/publishing-and-sharing)
-
-As noted above, skills power structured responses from Endgame's chat, such as specifically formatted account plans, meeting prep briefs, deal reviews, and more. You can share specific threads generated through chat, both internally and externally or share artifacts embedded in threads that are generated by skills.
-
-### [Slack](/features/slack)
+## [Slack](/features/slack)
 
 Seamlessly integrate Endgame with your Slack workspace. Access Endgame directly within your connected Slack channels to ask multi-account and individual account questions, enabling your team to get answers efficiently in one of their primary collaboration environments.
