@@ -79,10 +79,10 @@
         "group": "Features",
         "pages": [
           "features/mcp-server",
+          "features/digests",
+          "features/skills",
           "features/slack",
           "features/user-preferences",
-          "features/skills",
-          "features/digests",
           "features/file-upload",
           "features/export-thread-content"
         ]
