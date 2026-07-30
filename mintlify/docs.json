@@ -198,18 +198,11 @@
           "user-management",
           {
             "group": "Tips & Tricks",
-            "pages": [
-              "integrations/salesforce-essentials-for-admins",
-              "admin_tips/query-endgame-from-url"
-            ]
+            "pages": ["integrations/salesforce-essentials-for-admins"]
           },
           {
             "group": "Skill Management",
             "pages": ["skills/quickstart", "skills/skills-101"]
-          },
-          {
-            "group": "Rules",
-            "pages": ["rules/rules-101"]
           },
           {
             "group": "Knowledge Management",
