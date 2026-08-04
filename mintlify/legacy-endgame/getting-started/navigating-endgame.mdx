@@ -1,0 +1,225 @@
+---
+title: "Navigating Endgame"
+description: "Learn how to navigate and use Endgame's features for deep customer understanding"
+icon: "compass"
+---
+
+## About Endgame
+
+Endgame enables you and anyone at your company to deeply understand your customers and prospects. Consider Endgame a single playbook for the entire team to use for sales and account management use cases such as company research, meeting prep, account planning, deal review, handoffs, and more.
+
+After you [login](https://login.endgame.io/), you'll be presented with Endgame's [homepage](https://app.endgame.io/). On the homepage you can [query across multiple accounts](/legacy-endgame/getting-started/query-your-book). Here you can explore prompts that cover the entire breadth of the accounts in your organization.
+
+<Frame caption="Endgame homepage">
+  <img
+    src="/images/home-page-04-06-26.png"
+    alt="Endgame homepage"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Navigating cross-account thread history
+
+You can view multi-account (book) thread history in the [Thread List view](https://app.endgame.io/threads) accessed in the left-hand navigation. Your targeted account thread history lives in that account's Library. You can search by thread title in this view.
+
+<Frame caption="Thread list view">
+  <img
+    src="/images/thread-list-8-27-25.png"
+    alt="Thread list view"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Search for accounts or chat threads
+
+Open search by clicking on the search button in the middle of the homepage, the search icon in the left-hand navigation, or press `⌘K`. Type in the name of the company or thread title you want to research. Doing so will pull up accounts and threads to select from. Click the appropriate account and you'll be taken to the Account Detail page or the corresponding thread.
+
+<Frame caption="Search modal">
+  <img
+    src="/images/search-modal-02-25-26.png"
+    alt="Search modal"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Note>
+  **Important:** The only companies you will see are those with Account records
+  in Salesforce that Endgame has been given access to.
+</Note>
+
+## Accounts page
+
+Alternatively, navigate to the [Account List](https://app.endgame.io/accounts) page by clicking the stack icon in the left-hand navigation. There are a few ways to sort and filter this table.
+
+<Frame caption="Account list view">
+  <img
+    src="/images/account-list-8-28-25.png"
+    alt="Account list view"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Quick filters
+
+You can quickly filter down your accounts by clicking on the filter options in the top left-hand side of the account grid.
+
+### Filtering by ownership
+
+Clicking on the second filter option, you will see a list of the salesforce users associated with your organization. You can filter your accounts by ownership by selecting a user from this list.
+
+<Frame caption="Ownership filter">
+  <img
+    src="/images/owner-filter-8-27-25.png"
+    alt="Ownership filter"
+    width="400"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Sorting
+
+There are a few pre-built ways to sort the list: by Last Viewed, Last Interaction, Account Name, Opportunity Size, Opportunity Close Date, Opportunity Stage, and Opportunity Type. This dropdown menu can be found at the top right of the Account List.
+
+<Frame caption="Sorting options">
+  <img
+    src="/images/account-list-sort-8-27-25.png"
+    alt="Sorting options"
+    width="450"
+    className="rounded-lg"
+  />
+</Frame>
+
+---
+
+## Account detail page
+
+Once you get to an account, you'll be presented with the Account Detail page. The core concepts within this page: Ask anything (chat), Timeline, Threads, Artifacts, and Files.
+
+<Frame caption="Account detail page">
+  <img
+    src="/images/account-detail-04-06-26.png"
+    alt="Account detail page"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Chat
+
+Think of this as a ChatGPT that's deeply tuned to your business model and sales strategy with access to your internal CRM & call data. The questions you can ask can thus be quite detailed and specific. Here's a [quick guide on prompts](/legacy-endgame/getting-started/your-first-10-minutes) and [skills](/legacy-endgame/features/skills) to help you get started.
+
+When you ask a question, you'll be taken to a new page that represents the Thread of your chat conversation. You can ask multiple questions in that Thread, and you can always get back to it from the Threads tab.
+
+You can toggle Research Mode on for deeper thinking by clicking on the beaker icon in the chat input.
+
+<Frame caption="Account chat interface">
+  <img
+    src="/images/account-chat-interface-04-06-26.png"
+    alt="Account chat interface"
+    className="rounded-lg"
+  />
+</Frame>
+
+#### Adding files to a chat
+
+You can attach files directly to any chat by clicking the **+** button in the chat input. Once added, files appear along the bottom of the input area. To remove a file before submitting, hover over it and click the **X**.
+
+<Frame caption="Files attached to chat input">
+  <img
+    src="/images/add-files-chat-04-06-26.png"
+    alt="Files attached to chat input"
+    className="rounded-lg"
+  />
+</Frame>
+
+_Supported file types: PDF, Word (.doc, .docx), Excel (.xls, .xlsx), CSV, TSV, JSON, XML, HTML, Markdown, plain text (.txt, .log), and images (.png, .jpg, .gif, .webp). The maximum file size is 100 MB per file._
+
+Files attached this way apply only to that chat's context and are not available in other chats. You can see which files were used in a chat displayed under the chat title.
+
+<Frame caption="Files used in a chat">
+  <img
+    src="/images/files-used-in-chat-04-06-26.png"
+    alt="Files used in a chat"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Tip>
+  For files you want available across all chats for an account, upload them to
+  the account's [Files tab](/legacy-endgame/features/file-upload) instead.
+</Tip>
+
+### Timeline
+
+The timeline captures news, job changes, financial highlights such as earnings calls, emails, and calls. It can be very useful for catching up on an account as a manager, or during account transitions/inheritance.
+
+<Frame caption="Account timeline">
+  <img
+    src="/images/timeline-02-25-26.png"
+    alt="Account timeline"
+    className="rounded-lg"
+  />
+</Frame>
+
+The timeline is searchable via the box in the top left for specific terms, and selecting any of the category tags (Email, Meeting, Job Change, News) in the second column will also instantly filter the timeline to that tag type (select again to remove the filter).
+
+For accounts that have a large number of timeline events, you can also toggle from All Activity to Highlights to narrow down to events that Endgame believes are of heightened importance.
+
+Clicking into any specific event will open up a new chat Thread, where you can explore the event in greater detail. For example, you can click into a past meeting, and the new thread will automatically generate a summary of the meeting for you from which you can ask follow on questions.
+
+### Threads
+
+The Threads tab contains an index of all the threads associated with this account, which is your Ask anything chat history for that account. This allows you to quickly go back to any chat you have had regarding the account as well as provide a mechanism for collaboration with other members of your team.
+
+Users can view both shared and unshared threads here. The threads will persist unless they are manually deleted. Unshared Threads are only visible in the Threads tab for the creator of the Thread, though it is still possible to manually share the link to the Thread with other Endgame users.
+Shared Threads are public and and viewable by other Endgame users in their account Threads tab. These threads are also shareable via a public link.
+
+<Frame caption="Account threads tab">
+  <img
+    src="/images/account-threads-tab-02-25-26.png"
+    alt="Account threads tab"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Files
+
+Files is where you can add additional contextual documents to be used to formulate your account chat responses. This is where you can upload and sync meeting notes, usage data, account contracts, account specific decks, and more. More detail on how to use file upload [here](/legacy-endgame/features/file-upload).
+
+<Frame caption="File Upload">
+  <img
+    src="/images/account-file-upload-menu-9-30-25.png"
+    alt="files upload"
+    className="rounded-lg"
+  />
+</Frame>
+
+---
+
+## Quick navigation tips
+
+### Link to accounts in Endgame
+
+You can create direct links into specific accounts in Endgame using the account's Salesforce ID. Some organizations find this particularly helpful for linking from Salesforce accounts into Endgame.
+
+Linking directly to an account in Endgame will open Endgame to the specified account, ready to start a conversation:
+
+`https://app.endgame.io/accounts/[SALESFORCE ACCOUNT ID]`- Replace [SALESFORCE ACCOUNT ID] with the actual Salesforce account ID.
+
+Example: `https://app.endgame.io/accounts/0011234567890ABC`
+
+### Link to start a new thread in Endgame
+
+You can automatically launch a specific prompt associated with an account when the link is clicked by adding the firstMessage parameter:
+
+`https://app.endgame.io/threads/new?accountId=[SALESFORCE_ACCOUNT_ID]&firstMessage=[YOUR_ENCODED_QUERY]` - Replace [YOUR_ENCODED_QUERY] with the actual encoded prompt.
+
+<Info>
+  Important: The query text must be URL-encoded (i.e. spaces become + signs).
+  For example: Spaces → + or %20.
+</Info>
+
+Example: `https://app.endgame.io/threads/new?accountId=0011234567890ABC&firstMessage=Generate+a+MEDDPICC+and+risk+mitigation+analysis+on+this+account`
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).
