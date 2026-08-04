@@ -311,6 +311,60 @@ For complex analyses, your assistant can chain multiple tools together -- for ex
   </Card>
 </CardGroup>
 
+## Available Tools
+
+When connected, the following tools are available. Your AI assistant selects the right tool automatically based on your question.
+
+### Graph Discovery & Search
+
+| Tool                      | Description                                                                                                                                                                     |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_graph_index`         | Get an overview of your organization's context graph -- what entity types exist (accounts, people, meetings, opportunities, and more), how many of each, and what properties they carry. |
+| `get_graph_field_catalog` | Get your organization's field catalog -- stable field IDs, property keys, value types, and filterability for building precise graph filters.                                    |
+| `search_graph_entities`   | Search the context graph by display name, graph ID, or source identifier. The entry point for resolving a mentioned company, meeting, deal, or document to a graph entity.      |
+| `list_graph_entities`     | Browse entities of a single type with property filters and ordering -- for example, "list open opportunities" or "accounts of type Customer".                                   |
+| `get_graph_entities`      | Load the full record for one or more entities by ID, including properties, relationships, summaries, recent news, and LinkedIn detail where available.                          |
+| `get_graph_relationships` | Fetch the relationships of a single entity -- meetings on an account, participants in a meeting, opportunities at a company -- with filtering and pagination.                   |
+| `list_graph_relationships`| List or aggregate relationships org-wide, such as counting meetings per account or contacts per company.                                                                        |
+
+### People
+
+| Tool                  | Description                                                                                                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `find_graph_person`   | Resolve a person mentioned by name, email, or CRM ID to their graph record.                                                                                    |
+| `get_graph_person`    | Load full detail for one or more people -- LinkedIn career history, per-account role assessments (champion, decision maker, etc.), and interaction narratives. |
+| `search_graph_people` | Search people by their relationship to accounts and companies -- an account's contact roster, its key stakeholders, or org-wide sweeps like "VPs across all Enterprise accounts". |
+
+### Facts & Evidence
+
+| Tool                 | Description                                                                                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_graph_facts`    | List the facts known about a specific entity -- extracted statements with supporting quotes and sources, ranked by salience and recency. |
+| `search_graph_facts` | Semantic search across extracted facts from meetings, emails, and documents -- for thematic evidence questions like pain points, risks, or competitor mentions. |
+
+### Your Accounts & Profile
+
+| Tool                   | Description                                                                                                   |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `get_my_graph_profile` | Resolve the current user to their graph profile -- your team, manager, and the accounts and opportunities you own. |
+| `list_my_accounts`     | List the accounts you own or are assigned to, with the ownership source for each.                             |
+
+### Skills
+
+| Tool                    | Description                                                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `list_skills`           | Discover the expert workflows your organization has authored -- deal inspection playbooks, meeting prep templates, research skills, and more. |
+| `read_skill`            | Load the full instructions for a specific skill.                                                                |
+| `download_skill_assets` | Download a skill's supporting files (scripts, templates, examples) in a single call.                            |
+
+### Organization Rules & Feedback
+
+| Tool                       | Description                                                                                                                    |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `get_org_rules`            | Load your organization's writing, style, policy, and product guidance so answers stay consistent with your standards.          |
+| `submit_graph_observation` | Record an employment observation about someone at an account -- for example, "Jane joined Acme in March" or "Sam left the company". |
+| `submit_endgame_feedback`  | Submit a bug report, feature request, or data issue to the Endgame team.                                                       |
+
 ## Rate Limits
 
 Rate limits are configured per organization and may vary depending on your plan. If you encounter rate limit errors, contact your Endgame administrator to review your organization's current limits.
