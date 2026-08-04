@@ -79,6 +79,7 @@
         "group": "Features",
         "pages": [
           "features/mcp-server",
+          "features/cli",
           "features/digests",
           "features/skills",
           "features/slack",
