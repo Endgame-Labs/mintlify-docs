@@ -13,8 +13,7 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 We recommend connecting Endgame through the **Endgame connector in Claude's connector directory**, the **ChatGPT Codex app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
 
 <Note>
-  Want to call Endgame tools directly from your terminal or scripts, without an
-  AI assistant? See the [Endgame CLI](/features/cli).
+  Want to call Endgame tools directly from your terminal or scripts, without an AI assistant? See the [Endgame CLI](/features/cli).
 </Note>
 
 ### Connect via Claude
@@ -25,26 +24,33 @@ Endgame is available as a connector in Claude's connector directory. This is the
   <Step title="Admin: Enable the Endgame connector for your organization">
     An admin needs to enable Endgame for the organization before anyone on the team can use it.
 
-    1. In Claude, go to **Settings** &rarr; **Connectors**
+    1. In Claude, go to **Settings** → **Connectors**
     2. Search the connector directory for **Endgame**
     3. Enable the connector for your organization
 
     <Frame caption="Finding the Endgame connector in Claude's connector directory">
       <img
-        src="../images/endgame-mcp-claude-connector-08-13-26.png"
+        src="/images/endgame-mcp-claude-connector-light-08-13-26.jpg"
         alt="Endgame connector in Claude's connector directory"
-        className="rounded-lg"
+        className="rounded-lg mx-auto dark:hidden"
+        lightAlt="Endgame connector in Claude's connector directory"
+        darkAlt="Endgame connector in Claude's connector directory"
+      />
+      <img
+        src="/images/endgame-mcp-claude-connector-dark-08-13-26.png"
+        alt="Endgame connector in Claude's connector directory"
+        className="rounded-lg mx-auto hidden dark:block"
+        lightAlt="Endgame connector in Claude's connector directory"
+        darkAlt="Endgame connector in Claude's connector directory"
       />
     </Frame>
-
   </Step>
   <Step title="Individual: Connect to Endgame">
     Once the admin has enabled the connector at the organization level, each team member can connect:
 
-    1. Go to **Settings** &rarr; **Connectors** in Claude
+    1. Go to **Settings** → **Connectors** in Claude
     2. Find the Endgame connector and click **Connect**
     3. Follow the authentication prompts to sign in with your Endgame account
-
   </Step>
   <Step title="Start asking questions">
     Once connected, just ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
@@ -52,9 +58,7 @@ Endgame is available as a connector in Claude's connector directory. This is the
 </Steps>
 
 <Note>
-  Endgame periodically updates our MCP tools. You can ensure you have the latest
-  tool set by going into your Endgame connector, opening the overflow menu, and
-  clicking Refresh Tools List.
+  Endgame periodically updates our MCP tools. You can ensure you have the latest tool set by going into your Endgame connector, opening the overflow menu, and clicking Refresh Tools List.
 </Note>
 
 ### Connect via ChatGPT
@@ -75,11 +79,11 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Admin: Publish the app to your organization">
     Once the app is configured, publish it so team members can access it.
-    1. Within Apps, find your Draft app and open it 
+
+    1. Within Apps, find your Draft app and open it
     2. Click **Publish**
 
     <Frame caption="Publishing the Endgame app in ChatGPT">
@@ -89,7 +93,6 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Individual: Enable the Endgame app">
     After the admin has published the app, each team member can enable it:
@@ -105,7 +108,6 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Start asking questions">
     Once enabled, just ask ChatGPT anything about your accounts, pipeline, meetings, or conversations. ChatGPT will automatically use the right Endgame tools to find your answer.
@@ -113,8 +115,7 @@ You can connect Endgame to ChatGPT by adding it as a custom app. An admin must p
 </Steps>
 
 <Note>
-  Endgame periodically updates our MCP tools. An admin can ensure you have the latest
-  tool set by clicking into the Endgame app -> See details for the tools -> Refresh
+  Endgame periodically updates our MCP tools. An admin can ensure you have the latest tool set by clicking into the Endgame app -\> See details for the tools -\> Refresh
 </Note>
 
 ### Connect via Claude Code
@@ -140,7 +141,6 @@ Use the Claude Code CLI to add Endgame as a remote MCP server. This is a good op
     ```bash
     claude mcp add --transport http endgame --scope project https://app.endgame.io/api/v1/mcp
     ```
-
   </Step>
   <Step title="Authenticate with Endgame">
     Start a Claude Code session and verify the server is connected:
@@ -154,7 +154,6 @@ Use the Claude Code CLI to add Endgame as a remote MCP server. This is a good op
     <Note>
       You'll be prompted to authenticate the first time you connect. Claude Code will open a browser window to complete the OAuth flow with Endgame.
     </Note>
-
   </Step>
   <Step title="Start asking questions">
     Once connected, ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
@@ -188,7 +187,6 @@ Use the Codex CLI to add Endgame as a remote MCP server. This is a good option i
     ```bash
     codex mcp list
     ```
-
   </Step>
   <Step title="Start a Codex session">
     Launch Codex in the directory where you want to work:
@@ -198,7 +196,6 @@ Use the Codex CLI to add Endgame as a remote MCP server. This is a good option i
     ```
 
     Endgame tools are available once the MCP server is connected and authenticated.
-
   </Step>
   <Step title="Start asking questions">
     Once connected, ask Codex anything about your accounts, pipeline, meetings, or conversations. Codex will automatically use the right Endgame tools to find your answer.
@@ -217,10 +214,8 @@ Use a service account API key to connect Endgame to Claude Managed Agents (CMA).
     4. Click **Create** and copy the key immediately — you won't be able to view it again
 
     <Note>
-
-Only Endgame Admins can create api keys. The number of service keys you are allowed to create for your organization may be limited.
-
-</Note>
+      Only Endgame Admins can create api keys. The number of service keys you are allowed to create for your organization may be limited.
+    </Note>
 
     <Frame caption="Creating a service account API key in Endgame">
       <img
@@ -229,11 +224,10 @@ Only Endgame Admins can create api keys. The number of service keys you are allo
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Create a credential vault in CMA">
     1. In Claude Managed Agents, go to **Credential Vaults** in the side navigation
-    2. Click **+ New Vault**
+    2. Click **\+ New Vault**
 
     <Frame caption="Adding a new vault in Claude Managed Agents">
       <img
@@ -252,7 +246,6 @@ Only Endgame Admins can create api keys. The number of service keys you are allo
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Add your Endgame API key as a credential">
     1. Inside your new vault, click **Add Credential**
@@ -268,7 +261,6 @@ Only Endgame Admins can create api keys. The number of service keys you are allo
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Use the vault in an agent session">
     When starting a session with an agent that requires the Endgame MCP, you will be prompted to provide credentials. Select the vault you created to authenticate the session.
@@ -280,14 +272,11 @@ Only Endgame Admins can create api keys. The number of service keys you are allo
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
 </Steps>
 
 <Note>
-  For information on setting and accessing vault credentials programmatically,
-  refer to the [Claude Managed Agents vaults
-  documentation](https://platform.claude.com/docs/en/managed-agents/vaults).
+  For information on setting and accessing vault credentials programmatically, refer to the [Claude Managed Agents vaults documentation](https://platform.claude.com/docs/en/managed-agents/vaults).
 </Note>
 
 ## How to Use It
@@ -298,28 +287,27 @@ For complex analyses, your assistant can chain multiple tools together -- for ex
 
 <CardGroup cols={2}>
   <Card title="Account intelligence" icon="building">
-    "What accounts does my team own, and when was the last time we interacted
-    with each one?"
+    "What accounts does my team own, and when was the last time we interacted with each one?"
   </Card>
+
   <Card title="Conversation insights" icon="message-square">
-    "What did customers bring up as pain points or risks across our last 20
-    sales calls?"
+    "What did customers bring up as pain points or risks across our last 20 sales calls?"
   </Card>
+
   <Card title="Public intelligence" icon="newspaper">
-    "What did Salesforce's CFO say about their AI strategy on the most recent
-    earnings call?"
+    "What did Salesforce's CFO say about their AI strategy on the most recent earnings call?"
   </Card>
+
   <Card title="Pipeline analytics" icon="chart-line">
-    "Show me all open opportunities over $500K that haven't had any activity in
-    the last 45 days."
+    "Show me all open opportunities over \$500K that haven't had any activity in the last 45 days."
   </Card>
+
   <Card title="Internal communications" icon="hash">
-    "What are we saying internally on Slack about the upcoming renewal with Acme
-    Corp?"
+    "What are we saying internally on Slack about the upcoming renewal with Acme Corp?"
   </Card>
+
   <Card title="People research" icon="user-search">
-    "Who are the key executives at this account, and can anyone on our team make
-    an introduction?"
+    "Who are the key executives at this account, and can anyone on our team make an introduction?"
   </Card>
 </CardGroup>
 
@@ -329,53 +317,53 @@ When connected, the following tools are available. Your AI assistant selects the
 
 ### Graph Discovery & Search
 
-| Tool                      | Description                                                                                                                                                                     |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get_graph_index`         | Get an overview of your organization's context graph -- what entity types exist (accounts, people, meetings, opportunities, and more), how many of each, and what properties they carry. |
-| `get_graph_field_catalog` | Get your organization's field catalog -- stable field IDs, property keys, value types, and filterability for building precise graph filters.                                    |
-| `search_graph_entities`   | Search the context graph by display name, graph ID, or source identifier. The entry point for resolving a mentioned company, meeting, deal, or document to a graph entity.      |
-| `list_graph_entities`     | Browse entities of a single type with property filters and ordering -- for example, "list open opportunities" or "accounts of type Customer".                                   |
-| `get_graph_entities`      | Load the full record for one or more entities by ID, including properties, relationships, summaries, recent news, and LinkedIn detail where available.                          |
-| `get_graph_relationships` | Fetch the relationships of a single entity -- meetings on an account, participants in a meeting, opportunities at a company -- with filtering and pagination.                   |
-| `list_graph_relationships`| List or aggregate relationships org-wide, such as counting meetings per account or contacts per company.                                                                        |
+| Tool | Description |
+| --- | --- |
+| `get_graph_index` | Get an overview of your organization's context graph -- what entity types exist (accounts, people, meetings, opportunities, and more), how many of each, and what properties they carry. |
+| `get_graph_field_catalog` | Get your organization's field catalog -- stable field IDs, property keys, value types, and filterability for building precise graph filters. |
+| `search_graph_entities` | Search the context graph by display name, graph ID, or source identifier. The entry point for resolving a mentioned company, meeting, deal, or document to a graph entity. |
+| `list_graph_entities` | Browse entities of a single type with property filters and ordering -- for example, "list open opportunities" or "accounts of type Customer". |
+| `get_graph_entities` | Load the full record for one or more entities by ID, including properties, relationships, summaries, recent news, and LinkedIn detail where available. |
+| `get_graph_relationships` | Fetch the relationships of a single entity -- meetings on an account, participants in a meeting, opportunities at a company -- with filtering and pagination. |
+| `list_graph_relationships` | List or aggregate relationships org-wide, such as counting meetings per account or contacts per company. |
 
 ### People
 
-| Tool                  | Description                                                                                                                                                    |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `find_graph_person`   | Resolve a person mentioned by name, email, or CRM ID to their graph record.                                                                                    |
-| `get_graph_person`    | Load full detail for one or more people -- LinkedIn career history, per-account role assessments (champion, decision maker, etc.), and interaction narratives. |
+| Tool | Description |
+| --- | --- |
+| `find_graph_person` | Resolve a person mentioned by name, email, or CRM ID to their graph record. |
+| `get_graph_person` | Load full detail for one or more people -- LinkedIn career history, per-account role assessments (champion, decision maker, etc.), and interaction narratives. |
 | `search_graph_people` | Search people by their relationship to accounts and companies -- an account's contact roster, its key stakeholders, or org-wide sweeps like "VPs across all Enterprise accounts". |
 
 ### Facts & Evidence
 
-| Tool                 | Description                                                                                                                              |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `get_graph_facts`    | List the facts known about a specific entity -- extracted statements with supporting quotes and sources, ranked by salience and recency. |
+| Tool | Description |
+| --- | --- |
+| `get_graph_facts` | List the facts known about a specific entity -- extracted statements with supporting quotes and sources, ranked by salience and recency. |
 | `search_graph_facts` | Semantic search across extracted facts from meetings, emails, and documents -- for thematic evidence questions like pain points, risks, or competitor mentions. |
 
 ### Your Accounts & Profile
 
-| Tool                   | Description                                                                                                   |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Tool | Description |
+| --- | --- |
 | `get_my_graph_profile` | Resolve the current user to their graph profile -- your team, manager, and the accounts and opportunities you own. |
-| `list_my_accounts`     | List the accounts you own or are assigned to, with the ownership source for each.                             |
+| `list_my_accounts` | List the accounts you own or are assigned to, with the ownership source for each. |
 
 ### Skills
 
-| Tool                    | Description                                                                                                     |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `list_skills`           | Discover the expert workflows your organization has authored -- deal inspection playbooks, meeting prep templates, research skills, and more. |
-| `read_skill`            | Load the full instructions for a specific skill.                                                                |
-| `download_skill_assets` | Download a skill's supporting files (scripts, templates, examples) in a single call.                            |
+| Tool | Description |
+| --- | --- |
+| `list_skills` | Discover the expert workflows your organization has authored -- deal inspection playbooks, meeting prep templates, research skills, and more. |
+| `read_skill` | Load the full instructions for a specific skill. |
+| `download_skill_assets` | Download a skill's supporting files (scripts, templates, examples) in a single call. |
 
 ### Organization Rules & Feedback
 
-| Tool                       | Description                                                                                                                    |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `get_org_rules`            | Load your organization's writing, style, policy, and product guidance so answers stay consistent with your standards.          |
+| Tool | Description |
+| --- | --- |
+| `get_org_rules` | Load your organization's writing, style, policy, and product guidance so answers stay consistent with your standards. |
 | `submit_graph_observation` | Record an employment observation about someone at an account -- for example, "Jane joined Acme in March" or "Sam left the company". |
-| `submit_endgame_feedback`  | Submit a bug report, feature request, or data issue to the Endgame team.                                                       |
+| `submit_endgame_feedback` | Submit a bug report, feature request, or data issue to the Endgame team. |
 
 ## Rate Limits
 
@@ -390,7 +378,7 @@ Rate limits are configured per organization and may vary depending on your plan.
 
 **Claude doesn't seem to have access to Endgame tools?**
 
-- In Claude, go to **Settings** &rarr; **Extensions** (under Desktop App) and confirm the Endgame connector is toggled on
+- In Claude, go to **Settings** → **Extensions** (under Desktop App) and confirm the Endgame connector is toggled on
 - Check that tool permissions are set to **Always Allow** for all Endgame tools
 
 **Getting authentication errors?**
