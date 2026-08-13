@@ -10,7 +10,7 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 
 ## Getting Started
 
-We recommend connecting Endgame through **Claude's custom connector**, the **ChatGPT Codex app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
+We recommend connecting Endgame through the **Endgame connector in Claude's connector directory**, the **ChatGPT Codex app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
 
 <Note>
   Want to call Endgame tools directly from your terminal or scripts, without an
@@ -19,24 +19,23 @@ We recommend connecting Endgame through **Claude's custom connector**, the **Cha
 
 ### Connect via Claude
 
-Claude's custom connector is the recommended way to connect Endgame for Claude users. This gives Claude direct access to all Endgame tools.
+Endgame is available as a connector in Claude's connector directory. This is the recommended way to connect Endgame for Claude users, and gives Claude direct access to all Endgame tools.
 
 <Steps>
-  <Step title="Admin: Add the Endgame connector">
-    An admin needs to add Endgame as a custom connector before anyone on the team can use it.
+  <Step title="Admin: Enable the Endgame connector for your organization">
+    An admin needs to enable Endgame for the organization before anyone on the team can use it.
 
-    1. In the Claude web app navigate to the custom [connector setup](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors)
-    2. or in the Claude desktop app go to **Customize** &rarr; **Connectors** and click **Add custom connector** in the **Add** menu
-    3. Enter a name (e.g., "Endgame") and the URL: `https://app.endgame.io/api/v1/mcp`
-    5. Click **Add** and follow the prompts to authenticate with Endgame
+    1. In Claude, go to **Settings** &rarr; **Connectors**
+    2. Browse the connector directory and find **Endgame**
+    3. Enable the connector for your organization
 
   </Step>
   <Step title="Individual: Connect to Endgame">
-    Once the admin has added the connector at the organization level, each team member can connect:
+    Once the admin has enabled the connector at the organization level, each team member can connect:
 
-    1. Go to **Customize** &rarr; **Connectors** in Claude
+    1. Go to **Settings** &rarr; **Connectors** in Claude
     2. Find the Endgame connector and click **Connect**
-    3. Follow the authentication prompts
+    3. Follow the authentication prompts to sign in with your Endgame account
 
   </Step>
   <Step title="Start asking questions">
