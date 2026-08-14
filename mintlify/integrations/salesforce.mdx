@@ -4,18 +4,19 @@ description: "Seamless integration with Salesforce for real-time account data"
 icon: "salesforce"
 ---
 
-## Authentication
+## Integration User
 
-Endgame authenticates users via Salesforce OAuth. This allows for a seamless and secure user experience by leveraging Salesforce's robust authentication framework.
+Admins connect a Salesforce integration user to initialize the connection of Endgame with Salesforce during onboarding.
 
-The API Integration User should sign in to Endgame first if you are using one.  Endgame pulls data using the first user who connects - subsequent logins are only used for SSO.
-
-An admin can change the integration user on the [integration settings page](https://app.endgame.io/settings/integrations).
+An admin can change the integration user on the [integration settings page](https://app.endgame.io/settings/integrations) if needed.
 
 ## Connected App Approval
 
 <Warning>
-  Approving a Connected App in Salesforce requires the [Customize Application AND either the Modify All Data OR Manage Connected Apps](https://help.salesforce.com/s/articleView?id=005132365&type=1) permissions.
+  Approving a Connected App in Salesforce requires the [Customize Application
+  AND either the Modify All Data OR Manage Connected
+  Apps](https://help.salesforce.com/s/articleView?id=005132365&type=1)
+  permissions.
 </Warning>
 
 Salesforce requires an approval process for Connected Apps, which needs to be completed before Endgame can receive data.
@@ -28,7 +29,7 @@ If you encounter an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to End
 
 **Connected App Approval** - The `EndgameLabs2` Salesforce Connected App must be approved in Salesforce before users can log in.
 
-**Users** - Check the `Permitted Users` setting under `Apps -> Connected Apps -> Manage Connected Apps -> EndgameLabs2` in Salesforce.  `Permitted Users` has two options:
+**Users** - Check the `Permitted Users` setting under `Apps -> Connected Apps -> Manage Connected Apps -> EndgameLabs2` in Salesforce. `Permitted Users` has two options:
 
 - `All users may self-authorize`- all users will be able to access Endgame without pre-approval in Salesforce
 - `Admin approved users are pre-authorized`- individual users will need to be assigned a profile or permission set that grants them access to the app.
@@ -37,7 +38,7 @@ If you encounter an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to End
 
 ## (Optional) API Integration User
 
-Endgame accesses data using the Bulk API 2.0 APIs, so the initial connection can be done with a dedicated API Integration user.  In salesforce user creation, select:
+Endgame accesses data using the Bulk API 2.0 APIs, so the initial connection can be done with a dedicated API Integration user. In salesforce user creation, select:
 
 - **User License**: Salesforce Integration
 - **Profile**: Minimum Access - API Only Integrations
@@ -56,7 +57,12 @@ Endgame also downloads the results using a page size of 25,000, downloading thos
 Data from Salesforce is fetched using the credentials of the first user to log into Endgame. If needed, these credentials can be updated to a different user by sending a request to [support@endgame.io](mailto:support@endgame.io).
 
 <Note>
-  Only accounts the integration user has permission to in Salesforce will be run through any AI systems. The integration user is the one you first log in with after consultation with Endgame. The user can be updated by going to the [integration page](https://app.endgame.io/settings/integrations/salesforce), hovering over the Connect button in the top right corner and clicking Reconnect.
+  Only accounts the integration user has permission to in Salesforce will be run
+  through any AI systems. The integration user is the one you first log in with
+  after consultation with Endgame. The user can be updated by going to the
+  [integration page](https://app.endgame.io/settings/integrations/salesforce),
+  hovering over the Connect button in the top right corner and clicking
+  Reconnect.
 </Note>
 
 ## Important fields
@@ -72,9 +78,9 @@ To configure your Important fields:
     Navigate to the [Salesforce configuration page]( https://app.endgame.io/settings/integrations/salesforce) (only available to admins)
   </Step>
   <Step title="Configure important fields on required objects">
-  Select an object from the Required Objects list. 
+  Select an object from the Required Objects list.
 
-   <Frame caption="Required object configuration">
+<Frame caption="Required object configuration">
   <img
     src="../images/salesforce-integration-required-objects-1-6-26.png"
     alt="Required object configuration"
@@ -97,12 +103,13 @@ To configure your Important fields:
     <Warning>
       You can select up to 50 fields per object. Standard fields along with custom fields that are populated on 1 or fewer records are omitted from the list.
     </Warning>
+
   </Step>
 </Steps>
 
 ## Additional objects
 
-Endgame utilizes a set of Salesforce objects by default in your chat responses. You can add addtional objects to be referenced for chat responses in the [Salesforce admin configuration](https://app.endgame.io/settings/integrations/salesforce) under the Additional Objects section. Simply toggle the additional objects on for them to be processed.   
+Endgame utilizes a set of Salesforce objects by default in your chat responses. You can add addtional objects to be referenced for chat responses in the [Salesforce admin configuration](https://app.endgame.io/settings/integrations/salesforce) under the Additional Objects section. Simply toggle the additional objects on for them to be processed.
 
 <Frame caption="Additonal Salesforce objects">
   <img
