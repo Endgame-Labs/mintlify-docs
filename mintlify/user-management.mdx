@@ -33,3 +33,37 @@ Use the search or filtering capabilities to view specific users or groups of use
 </Frame>
 
 Find more information about inviting users to your organization and setting up authentication options on our [Authentication](https://docs.endgame.io/authentication) page.
+
+## User observability
+
+Admins can see how their team and connected agents are using Endgame from the **Console**. Open it with the **Console** button in the top right of the [homepage](https://app.endgame.io/observe). The button is only visible to Admins.
+
+### Observe
+
+The **Observe** page summarizes usage across your organization over the last 7, 30, or 90 days:
+
+- **Active users** — how many people used Endgame during the selected window
+- **Agent sessions** — how many sessions connected agents ran
+- **Tool calls** — how many individual tool calls those sessions made
+
+Below the totals, the **Activity** chart breaks agent sessions down by agent for each day, in your organization's timezone, so you can see which surfaces your team relies on — Claude, ChatGPT, the Endgame CLI, Digests, and more. Automated traffic is included in these numbers.
+
+<Frame caption="Observe page in the Console">
+  <img
+    src="./images/observe-chart-console-08-21-26.png"
+    alt="Observe page showing active users, agent sessions, tool calls, and an activity chart"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Agent activity
+
+The **Agent activity** table records what agents did with your data, with one row per session. Each row shows when the session ran, the user it belonged to, the agent it came from, the goal the agent was pursuing, and how many tool calls it made. Use the **User** and **Agent** filters to narrow the list, and click any row to open the full trace for that session.
+
+<Frame caption="Agent activity table in the Console">
+  <img
+    src="./images/agent-activity-console-08-21-26.png"
+    alt="Agent activity table showing session rows with user, agent, goal, and call count"
+    className="rounded-lg"
+  />
+</Frame>
