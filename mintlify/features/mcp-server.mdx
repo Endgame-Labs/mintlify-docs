@@ -96,16 +96,25 @@ Connect Endgame using the instructions for ChatGPT on the web or the desktop app
   <Tab title="Desktop app">
     <Steps>
       <Step title="Add the MCP server">
-        1. In the ChatGPT desktop app, open **Settings** → **MCP servers**.
-        2. Select **Add server** and enter **Endgame** as the name.
-        3. Choose **Streamable HTTP** and enter the URL: `https://app.endgame.io/api/v1/mcp`.
-        4. Save the server, then select **Restart**.
+        1. In the ChatGPT desktop app, open **Settings** → **Plugins**.
+        2. Open the **Add** menu and select **Add MCP server**.
+        3. Enter **endgame** as the name. Under **Type**, select **Streamable HTTP**.
+        4. Enter the **URL**: `https://app.endgame.io/api/v1/mcp`.
+        5. Leave **Bearer token env var**, **Headers**, and **Headers from environment variables** blank, then click **Save**.
+
+        This form has no OAuth selector. Sign in separately after saving the server.
       </Step>
       <Step title="Sign in to Endgame">
-        Select **Authenticate** for the Endgame server and complete the browser sign-in prompts with your Endgame account.
+        If the saved server offers a sign-in action, follow it to authenticate with your Endgame account. Otherwise, with the Codex CLI installed on the same computer, run:
+
+        ```bash
+        codex mcp login endgame
+        ```
+
+        Complete the browser sign-in prompts. If you saved a different server name, use that name in the command. You can check saved names with `codex mcp list`.
       </Step>
       <Step title="Check the connection and start asking questions">
-        Type `/mcp` in the composer to check that Endgame is connected, then ask a question about your accounts, pipeline, meetings, or conversations.
+        Start a new conversation and ask: "Use Endgame to summarize recent meetings for my accounts."
       </Step>
     </Steps>
 
