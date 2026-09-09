@@ -10,7 +10,7 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 
 ## Getting Started
 
-We recommend connecting Endgame through the **Endgame connector in Claude's connector directory**, the **ChatGPT Codex app**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
+We recommend connecting Endgame through the **Endgame connector in Claude's connector directory**, **ChatGPT on the web or desktop**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
 
 <Note>
   Want to call Endgame tools directly from your terminal or scripts, without an AI assistant? See the [Endgame CLI](/features/cli).
@@ -63,59 +63,65 @@ Endgame is available as a connector in Claude's connector directory. This is the
 
 ### Connect via ChatGPT
 
-You can connect Endgame to ChatGPT by adding it as a custom app. An admin must publish the app before team members can enable it.
+Connect Endgame using the instructions for ChatGPT on the web or the desktop app. Sign in with your Endgame account when prompted.
 
-<Steps>
-  <Step title="Admin: Add the Endgame custom app">
-    1. In ChatGPT, go to the [Apps section](https://chatgpt.com/admin/apps)
-    2. Click **Create**
-    3. Enter a name (e.g., "Endgame") and the URL: `https://app.endgame.io/api/v1/mcp`
-    4. After clicking **Create**, complete the authentication prompts to link your Endgame account
+<Tabs>
+  <Tab title="Web">
+    <Steps>
+      <Step title="Enable Developer mode">
+        In ChatGPT, open **Settings** → **Security and login** and turn on **Developer mode**.
 
-    <Frame caption="Adding a custom app in ChatGPT">
-      <img
-        src="../images/chatgpt_add_custom_app_05_12_26.png"
-        alt="ChatGPT add custom app screen"
-        className="rounded-lg"
-      />
-    </Frame>
-  </Step>
-  <Step title="Admin: Publish the app to your organization">
-    Once the app is configured, publish it so team members can access it.
+        <Note>
+          Developer mode requires an eligible ChatGPT plan and may be restricted by your workspace. If the setting is unavailable, ask your ChatGPT workspace admin about access.
+        </Note>
+      </Step>
+      <Step title="Add Endgame">
+        1. Open [Plugins](https://chatgpt.com/plugins) and select the **+** button.
+        2. Enter **Endgame** as the name and a description, such as "Search accounts, meetings, and customer conversations in Endgame."
+        3. Under **Connection**, enter the MCP server URL: `https://app.endgame.io/api/v1/mcp`.
+        4. Choose **OAuth** authentication and create the connection.
+        5. Complete the sign-in prompts with your Endgame account, then review the discovered tools.
+      </Step>
+      <Step title="Use Endgame in a conversation">
+        Start a new conversation. Open the composer's **+** menu, choose **Developer mode**, and select **Endgame**.
 
-    1. Within Apps, find your Draft app and open it
-    2. Click **Publish**
+        Try asking: "Use Endgame to summarize recent meetings for my accounts."
+      </Step>
+    </Steps>
 
-    <Frame caption="Publishing the Endgame app in ChatGPT">
-      <img
-        src="../images/chatgpt_publish_app_07_14_26.png"
-        alt="ChatGPT publish app screen"
-        className="rounded-lg"
-      />
-    </Frame>
-  </Step>
-  <Step title="Individual: Enable the Endgame app">
-    After the admin has published the app, each team member can enable it:
+    To get updated tools, open the Endgame connection in **Plugins**, select **Refresh**, and start a new conversation.
 
-    1. Go to the [plugin section](https://chatgpt.com/plugins/) in ChatGPT
-    2. Under the **Installed** section click on the Endgame app and then click to connect
-    3. Follow the authentication prompts
+    See [OpenAI's Developer mode guide](https://developers.openai.com/api/docs/guides/developer-mode) for account eligibility and [MCP connection instructions](https://developers.openai.com/plugins/deploy/connect-chatgpt) for setup details.
+  </Tab>
+  <Tab title="Desktop app">
+    <Steps>
+      <Step title="Add the MCP server">
+        1. In the ChatGPT desktop app, open **Settings** → **Plugins**.
+        2. Open the **Add** menu and select **Add MCP server**.
+        3. Enter **endgame** as the name. Under **Type**, select **Streamable HTTP**.
+        4. Enter the **URL**: `https://app.endgame.io/api/v1/mcp`.
+        5. Leave **Bearer token env var**, **Headers**, and **Headers from environment variables** blank, then click **Save**.
 
-    <Frame caption="Enabled apps in ChatGPT">
-      <img
-        src="../images/chatgpt_install_endgame_app_07_14_26.png"
-        alt="ChatGPT enabled apps screen"
-        className="rounded-lg"
-      />
-    </Frame>
-  </Step>
-  <Step title="Start asking questions">
-    Once enabled, just ask ChatGPT anything about your accounts, pipeline, meetings, or conversations. ChatGPT will automatically use the right Endgame tools to find your answer.
-  </Step>
-</Steps>
+        This form has no OAuth selector. Sign in separately after saving the server.
+      </Step>
+      <Step title="Sign in to Endgame">
+        1. Return to **Settings** → **Plugins** and select the **MCPs** tab.
+        2. Find the server you just added under **Servers** and click **Authenticate** beside it.
+        3. Complete the browser sign-in prompts with your Endgame account.
+      </Step>
+      <Step title="Check the connection and start asking questions">
+        Start a new conversation and ask: "Use Endgame to summarize recent meetings for my accounts."
+      </Step>
+    </Steps>
+
+    This configuration is shared with the Codex CLI and IDE extension on the same host. If you already configured Endgame there, check the server list before adding it again.
+
+    See [OpenAI's desktop MCP instructions](https://learn.chatgpt.com/docs/extend/mcp) for more details.
+  </Tab>
+</Tabs>
 
 <Note>
-  Endgame periodically updates our MCP tools. An admin can ensure you have the latest tool set by clicking into the Endgame app -\> See details for the tools -\> Refresh
+  If your ChatGPT workspace admin has already made Endgame available, open [Plugins](https://chatgpt.com/plugins), select **Endgame**, and connect with your own Endgame account. Ask your admin for access if it is missing.
 </Note>
 
 ### Connect via Claude Code
