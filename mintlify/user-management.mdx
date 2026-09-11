@@ -36,11 +36,71 @@ Find more information about inviting users to your organization and setting up a
 
 ## User observability
 
-Admins can see how their team and connected agents are using Endgame from the **Console**. Open it with the **Console** button in the top right of the [homepage](https://app.endgame.io/observe). The button is only visible to Admins.
+Admins can see how their team and connected agents are using Endgame from the **Console**. Open it from the the side nav of the [homepage](https://app.endgame.io/observe). The Console is only visible to Admins.
 
-### Observe
+### Console
 
-The **Observe** page summarizes usage across your organization over the last 7, 30, or 90 days:
+The **Console** opens on an overview of your organization: what Endgame knows, what your team has added to it, who is using Endgame, and what connected agents are doing. Click on a card to open its full view.
+
+- **Context graph** — entities on record and the relationships between them, with the time of the last refresh
+- **Context added** — what your team has contributed back to the graph
+- **People** — users split between active and dormant
+- **Agent sessions** — sessions run by your team and by any automations running alongside them
+
+<Frame caption="Console overview">
+  <img
+    src="./images/console-home-09-11-26.png"
+    alt="Console overview with cards for context graph, context added, people, and agent sessions"
+    className="rounded-lg"
+  />
+</Frame>
+
+### People
+
+The **People** view shows who is actually using Endgame. **Active users by month** tracks how your team's adoption has grown, and **Active vs dormant** splits your users into people who ran something in the last 30 days and people who have gone quiet but were active before.
+
+**How often the active ones show up** groups active users by how many days they showed up in the last 30: daily (15+ days), weekly (4–14 days), and occasional (1–3 days). Below that, **Most active** ranks people by sessions over the last 7 days, and **Dormant** lists who has gone quiet and for how long.
+
+<Frame caption="People view in the Console">
+  <img
+    src="./images/console-people-view-09-11-26.png"
+    alt="People view showing active users by month, active versus dormant users, usage frequency, and the most active and dormant lists"
+    className="rounded-lg"
+  />
+</Frame>
+
+Click anyone in either list to open their detail view. It shows their sessions, days active, and last active over the last 30 days, an activity heatmap covering the past year, which surfaces they work through, and their latest sessions with the tool calls each one made.
+
+<Frame caption="Person detail view in the Console">
+  <img
+    src="./images/console-people-detail-view-09-11-26.png"
+    alt="Person detail showing sessions, days active, last active, an activity heatmap, surfaces used, and recent sessions with tool calls"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Context added
+
+The **Context added** view tracks what your team has written back to the context graph. Endgame learns from these contributions and directly makes updates to the graph, so this view is a read on how closely your team is engaging with what Endgame tells them.
+
+- **Corrections** — a field was wrong or missing
+- **Relationships** — a link between people or companies, added or disputed
+- **New facts** — something true that fits no field anywhere
+- **New entities** — a person or company Endgame did not know at all
+
+**Who is correcting the most** ranks the people contributing these updates. Treat it as a health signal rather than a leaderboard: zero corrections usually means the team stopped checking Endgame's work, and a rising count reads as engagement.
+
+<Frame caption="Context added view in the Console">
+  <img
+    src="./images/console-context-added-09-11-26.png"
+    alt="Context added view showing corrections, relationships, new facts, and new entities alongside the people contributing the most"
+    className="rounded-lg"
+  />
+</Frame>
+
+### Agent sessions
+
+The **Agent sessions** view summarizes how your team and its connected agents are using Endgame over the last 7, 30, or 90 days:
 
 - **Active users** — how many people used Endgame during the selected window
 - **Agent sessions** — how many sessions connected agents ran
@@ -48,22 +108,12 @@ The **Observe** page summarizes usage across your organization over the last 7, 
 
 Below the totals, the **Activity** chart breaks agent sessions down by agent for each day, in your organization's timezone, so you can see which surfaces your team relies on — Claude, ChatGPT, the Endgame CLI, Digests, and more. Automated traffic is included in these numbers.
 
-<Frame caption="Observe page in the Console">
+The **Agent activity** table below records what agents did with your data, with one row per session. Each row shows when the session ran, the user it belonged to, the agent it came from, the goal the agent was pursuing, and how many tool calls it made. Use the **User** and **Agent** filters to narrow the list, and click any row to open the full trace for that session.
+
+<Frame caption="Agent sessions view in the Console">
   <img
-    src="./images/observe-chart-console-08-21-26.png"
-    alt="Observe page showing active users, agent sessions, tool calls, and an activity chart"
-    className="rounded-lg"
-  />
-</Frame>
-
-### Agent activity
-
-The **Agent activity** table records what agents did with your data, with one row per session. Each row shows when the session ran, the user it belonged to, the agent it came from, the goal the agent was pursuing, and how many tool calls it made. Use the **User** and **Agent** filters to narrow the list, and click any row to open the full trace for that session.
-
-<Frame caption="Agent activity table in the Console">
-  <img
-    src="./images/agent-activity-console-08-21-26.png"
-    alt="Agent activity table showing session rows with user, agent, goal, and call count"
+    src="./images/agent-sessions-view-09-11-26.png"
+    alt="Agent sessions view showing active users, agent sessions, tool calls, and an activity chart"
     className="rounded-lg"
   />
 </Frame>
