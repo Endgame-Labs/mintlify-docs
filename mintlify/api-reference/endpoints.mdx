@@ -4,6 +4,12 @@ description: "Reference for the five thread endpoints that make up the public AP
 icon: "terminal"
 ---
 
+<Warning>
+  **Deprecation:** The Endgame REST API is being deprecated on **October 1,
+  2026**. For automated processes and integrations, we recommend the [Endgame
+  MCP server](/features/mcp-server) instead.
+</Warning>
+
 The public API is a small resource-oriented CRUD surface for **threads**
 -- the conversational units that power Endgame Chat. Every endpoint is
 rooted at `/api/v1`, authenticates with a Bearer `eak_*` key, and
@@ -64,10 +70,9 @@ Every failed request returns the same envelope:
 
 ## Rate limits
 
-<Warning>
-  **Open Beta:** The default quota is **10,000 requests per organization per day**.
-  This value is subject to change after the open beta.
-</Warning>
+<Note>
+  The default quota is **10,000 requests per organization per day**.
+</Note>
 
 Limits are applied at the **organization** level across every credential
 and endpoint. Requests over the limit return:
