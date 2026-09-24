@@ -197,6 +197,7 @@
           },
 
           "user-management",
+          "console-observation",
           {
             "group": "Tips & Tricks",
             "pages": ["integrations/salesforce-essentials-for-admins"]
