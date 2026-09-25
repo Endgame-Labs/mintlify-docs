@@ -78,6 +78,7 @@
       {
         "group": "Features",
         "pages": [
+          "features/wiki",
           "features/mcp-server",
           "features/cli",
           "features/digests",
