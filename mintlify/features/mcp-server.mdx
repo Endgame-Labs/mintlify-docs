@@ -13,7 +13,8 @@ Think of it as giving your AI assistant a direct line to everything Endgame know
 We recommend connecting Endgame through the **Endgame connector in Claude's connector directory**, **ChatGPT on the web or desktop**, or directly in a **Claude Code** or **Codex** terminal session. All options give your AI assistant direct access to all Endgame tools.
 
 <Note>
-  Want to call Endgame tools directly from your terminal or scripts, without an AI assistant? See the [Endgame CLI](/features/cli).
+  Want to call Endgame tools directly from your terminal or scripts, without an
+  AI assistant? See the [Endgame CLI](/features/cli).
 </Note>
 
 ### Connect via Claude
@@ -44,6 +45,7 @@ Endgame is available as a connector in Claude's connector directory. This is the
         darkAlt="Endgame connector in Claude's connector directory"
       />
     </Frame>
+
   </Step>
   <Step title="Individual: Connect to Endgame">
     Once the admin has enabled the connector at the organization level, each team member can connect:
@@ -51,6 +53,7 @@ Endgame is available as a connector in Claude's connector directory. This is the
     1. Go to **Settings** → **Connectors** in Claude
     2. Find the Endgame connector and click **Connect**
     3. Follow the authentication prompts to sign in with your Endgame account
+
   </Step>
   <Step title="Start asking questions">
     Once connected, just ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
@@ -58,7 +61,9 @@ Endgame is available as a connector in Claude's connector directory. This is the
 </Steps>
 
 <Note>
-  Endgame periodically updates our MCP tools. You can ensure you have the latest tool set by going into your Endgame connector, opening the overflow menu, and clicking Refresh Tools List.
+  Endgame periodically updates our MCP tools. You can ensure you have the latest
+  tool set by going into your Endgame connector, opening the overflow menu, and
+  clicking Refresh Tools List.
 </Note>
 
 ### Connect via ChatGPT
@@ -67,61 +72,90 @@ Connect Endgame using the instructions for ChatGPT on the web or the desktop app
 
 <Tabs>
   <Tab title="Web">
+    Endgame is available as a public plugin in the ChatGPT plugin directory.
+
+    <Note>
+      By default, only ChatGPT workspace admins can install Endgame for everyone in the workspace.
+    </Note>
+
     <Steps>
-      <Step title="Enable Developer mode">
-        In ChatGPT, open **Settings** → **Security and login** and turn on **Developer mode**.
+      <Step title="Admin: Open Workspace settings">
+        In ChatGPT, click your workspace name in the bottom left to open the user menu, then select **Workspace settings**.
 
-        <Note>
-          Developer mode requires an eligible ChatGPT plan and may be restricted by your workspace. If the setting is unavailable, ask your ChatGPT workspace admin about access.
-        </Note>
+        <Frame caption="ChatGPT user menu">
+          <img
+            src="/images/user-menu-openai-09-28-26.png"
+            alt="ChatGPT user menu with Workspace settings highlighted"
+            className="rounded-lg mx-auto"
+          />
+        </Frame>
       </Step>
-      <Step title="Add Endgame">
-        1. Open [Plugins](https://chatgpt.com/plugins) and select the **+** button.
-        2. Enter **Endgame** as the name and a description, such as "Search accounts, meetings, and customer conversations in Endgame."
-        3. Under **Connection**, enter the MCP server URL: `https://app.endgame.io/api/v1/mcp`.
-        4. Choose **OAuth** authentication and create the connection.
-        5. Complete the sign-in prompts with your Endgame account, then review the discovered tools.
-      </Step>
-      <Step title="Use Endgame in a conversation">
-        Start a new conversation. Open the composer's **+** menu, choose **Developer mode**, and select **Endgame**.
+      <Step title="Admin: Find Endgame in the plugin directory">
+        Open **Plugins**, search for **Endgame**, and select it from the **Public** tab.
 
-        Try asking: "Use Endgame to summarize recent meetings for my accounts."
+        <Frame caption="Endgame in the ChatGPT plugin directory">
+          <img
+            src="/images/openai-plugin-directory-09-28-26.png"
+            alt="ChatGPT Plugins page showing the Endgame plugin with its installation policy and availability"
+            className="rounded-lg"
+          />
+        </Frame>
+      </Step>
+      <Step title="Admin: Choose how Endgame is rolled out">
+        The Endgame plugin page controls how Endgame is made available across your workspace.
+
+        - **Enabled / Disabled:** Only admins can enable or disable Endgame for the workspace. Endgame is **Enabled** by default as a public plugin in the ChatGPT Plugin Directory.
+        - **Workspace default:** Choose **Available** to let each user install Endgame themselves from Plugins, or **Installed** to install Endgame for everyone in the workspace. We recommend installing Endgame for everyone on your team by default.
+        - **Tools** and **New tools:** Review which Endgame tools are enabled and whether new tools are turned on automatically as Endgame adds them. We recommend the default, to **Enable all new tools**.
+
+        <Frame caption="Endgame plugin controls">
+          <img
+            src="/images/endgame-controls-openai-09-28-26.png"
+            alt="Endgame plugin controls showing the Enabled dropdown, the Available and Installed workspace default, and app settings for URL, permissions, tools, and new tools"
+            className="rounded-lg"
+          />
+        </Frame>
+      </Step>
+      <Step title="Individual: Connect to Endgame">
+        If your admin set Endgame to **Available**, open [Plugins](https://chatgpt.com/plugins), search for **Endgame**, and install it. If your admin set it to **Installed**, Endgame is already in your workspace.
+
+        The first time you use Endgame, follow the prompts to sign in with your Endgame account.
+      </Step>
+      <Step title="Start asking questions">
+        Start a new conversation and try asking: "Use Endgame to summarize recent meetings for my accounts."
       </Step>
     </Steps>
 
-    To get updated tools, open the Endgame connection in **Plugins**, select **Refresh**, and start a new conversation.
-
-    See [OpenAI's Developer mode guide](https://developers.openai.com/api/docs/guides/developer-mode) for account eligibility and [MCP connection instructions](https://developers.openai.com/plugins/deploy/connect-chatgpt) for setup details.
   </Tab>
   <Tab title="Desktop app">
     <Steps>
-      <Step title="Add the MCP server">
-        1. In the ChatGPT desktop app, open **Settings** → **Plugins**.
-        2. Open the **Add** menu and select **Add MCP server**.
-        3. Enter **endgame** as the name. Under **Type**, select **Streamable HTTP**.
-        4. Enter the **URL**: `https://app.endgame.io/api/v1/mcp`.
-        5. Leave **Bearer token env var**, **Headers**, and **Headers from environment variables** blank, then click **Save**.
+      <Step title="Install Endgame">
+        1. Select **Plugins** in the side nav.
+        2. Search for **Endgame**.
+        3. Click **Install**.
 
-        This form has no OAuth selector. Sign in separately after saving the server.
+        <Frame caption="Installing Endgame from Plugins in the ChatGPT desktop app">
+          <img
+            src="/images/codex-plugins-09-28-26.png"
+            alt="ChatGPT desktop app Plugins page with Endgame in the Public results and an Install button"
+            className="rounded-lg"
+          />
+        </Frame>
       </Step>
       <Step title="Sign in to Endgame">
-        1. Return to **Settings** → **Plugins** and select the **MCPs** tab.
-        2. Find the server you just added under **Servers** and click **Authenticate** beside it.
-        3. Complete the browser sign-in prompts with your Endgame account.
+        Follow the prompts to sign in with your Endgame account.
       </Step>
-      <Step title="Check the connection and start asking questions">
-        Start a new conversation and ask: "Use Endgame to summarize recent meetings for my accounts."
+      <Step title="Start asking questions">
+        Start a new conversation and try asking: "Use Endgame to summarize recent meetings for my accounts."
       </Step>
     </Steps>
 
-    This configuration is shared with the Codex CLI and IDE extension on the same host. If you already configured Endgame there, check the server list before adding it again.
-
-    See [OpenAI's desktop MCP instructions](https://learn.chatgpt.com/docs/extend/mcp) for more details.
   </Tab>
 </Tabs>
 
 <Note>
-  If your ChatGPT workspace admin has already made Endgame available, open [Plugins](https://chatgpt.com/plugins), select **Endgame**, and connect with your own Endgame account. Ask your admin for access if it is missing.
+  If you can't find Endgame in Plugins, ask your ChatGPT workspace admin to
+  enable it for your workspace.
 </Note>
 
 ### Connect via Claude Code
@@ -147,6 +181,7 @@ Use the Claude Code CLI to add Endgame as a remote MCP server. This is a good op
     ```bash
     claude mcp add --transport http endgame --scope project https://app.endgame.io/api/v1/mcp
     ```
+
   </Step>
   <Step title="Authenticate with Endgame">
     Start a Claude Code session and verify the server is connected:
@@ -160,6 +195,7 @@ Use the Claude Code CLI to add Endgame as a remote MCP server. This is a good op
     <Note>
       You'll be prompted to authenticate the first time you connect. Claude Code will open a browser window to complete the OAuth flow with Endgame.
     </Note>
+
   </Step>
   <Step title="Start asking questions">
     Once connected, ask Claude anything about your accounts, pipeline, meetings, or conversations. Claude will automatically use the right Endgame tools to find your answer.
@@ -193,6 +229,7 @@ Use the Codex CLI to add Endgame as a remote MCP server. This is a good option i
     ```bash
     codex mcp list
     ```
+
   </Step>
   <Step title="Start a Codex session">
     Launch Codex in the directory where you want to work:
@@ -202,6 +239,7 @@ Use the Codex CLI to add Endgame as a remote MCP server. This is a good option i
     ```
 
     Endgame tools are available once the MCP server is connected and authenticated.
+
   </Step>
   <Step title="Start asking questions">
     Once connected, ask Codex anything about your accounts, pipeline, meetings, or conversations. Codex will automatically use the right Endgame tools to find your answer.
@@ -230,6 +268,7 @@ Use a service account API key to connect Endgame to Claude Managed Agents (CMA).
         className="rounded-lg"
       />
     </Frame>
+
   </Step>
   <Step title="Create a credential vault in CMA">
     1. In Claude Managed Agents, go to **Credential Vaults** in the side navigation
@@ -252,6 +291,7 @@ Use a service account API key to connect Endgame to Claude Managed Agents (CMA).
         className="rounded-lg"
       />
     </Frame>
+
   </Step>
   <Step title="Add your Endgame API key as a credential">
     1. Inside your new vault, click **Add Credential**
@@ -267,6 +307,7 @@ Use a service account API key to connect Endgame to Claude Managed Agents (CMA).
         className="rounded-lg"
       />
     </Frame>
+
   </Step>
   <Step title="Use the vault in an agent session">
     When starting a session with an agent that requires the Endgame MCP, you will be prompted to provide credentials. Select the vault you created to authenticate the session.
@@ -278,11 +319,14 @@ Use a service account API key to connect Endgame to Claude Managed Agents (CMA).
         className="rounded-lg"
       />
     </Frame>
+
   </Step>
 </Steps>
 
 <Note>
-  For information on setting and accessing vault credentials programmatically, refer to the [Claude Managed Agents vaults documentation](https://platform.claude.com/docs/en/managed-agents/vaults).
+  For information on setting and accessing vault credentials programmatically,
+  refer to the [Claude Managed Agents vaults
+  documentation](https://platform.claude.com/docs/en/managed-agents/vaults).
 </Note>
 
 ## How to Use It
@@ -296,21 +340,25 @@ For complex analyses, your assistant can chain multiple tools together -- for ex
     "What accounts does my team own, and when was the last time we interacted with each one?"
   </Card>
 
-  <Card title="Conversation insights" icon="message-square">
-    "What did customers bring up as pain points or risks across our last 20 sales calls?"
-  </Card>
+<Card title="Conversation insights" icon="message-square">
+  "What did customers bring up as pain points or risks across our last 20 sales
+  calls?"
+</Card>
 
-  <Card title="Public intelligence" icon="newspaper">
-    "What did Salesforce's CFO say about their AI strategy on the most recent earnings call?"
-  </Card>
+<Card title="Public intelligence" icon="newspaper">
+  "What did Salesforce's CFO say about their AI strategy on the most recent
+  earnings call?"
+</Card>
 
-  <Card title="Pipeline analytics" icon="chart-line">
-    "Show me all open opportunities over \$500K that haven't had any activity in the last 45 days."
-  </Card>
+<Card title="Pipeline analytics" icon="chart-line">
+  "Show me all open opportunities over \$500K that haven't had any activity in
+  the last 45 days."
+</Card>
 
-  <Card title="Internal communications" icon="hash">
-    "What are we saying internally on Slack about the upcoming renewal with Acme Corp?"
-  </Card>
+<Card title="Internal communications" icon="hash">
+  "What are we saying internally on Slack about the upcoming renewal with Acme
+  Corp?"
+</Card>
 
   <Card title="People research" icon="user-search">
     "Who are the key executives at this account, and can anyone on our team make an introduction?"
@@ -323,64 +371,64 @@ When connected, the following tools are available. Your AI assistant selects the
 
 ### Graph Discovery & Search
 
-| Tool | Description |
-| --- | --- |
-| `get_graph_index` | Get an overview of your organization's context graph -- what entity types exist (accounts, people, meetings, opportunities, and more), how many of each, and what properties they carry. |
-| `get_graph_field_catalog` | Get your organization's field catalog -- stable field IDs, property keys, value types, and filterability for building precise graph filters. |
-| `search_graph_entities` | Search the context graph by display name, graph ID, or source identifier. The entry point for resolving a mentioned company, meeting, deal, or document to a graph entity. |
-| `list_graph_entities` | Browse entities of a single type with property filters and ordering -- for example, "list open opportunities" or "accounts of type Customer". |
-| `get_graph_entities` | Load the full record for one or more entities by ID, including properties, relationships, summaries, recent news, and LinkedIn detail where available. |
-| `get_graph_relationships` | Fetch the relationships of a single entity -- meetings on an account, participants in a meeting, opportunities at a company -- with filtering and pagination. |
-| `list_graph_relationships` | List or aggregate relationships org-wide, such as counting meetings per account or contacts per company. |
+| Tool                       | Description                                                                                                                                                                              |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_graph_index`          | Get an overview of your organization's context graph -- what entity types exist (accounts, people, meetings, opportunities, and more), how many of each, and what properties they carry. |
+| `get_graph_field_catalog`  | Get your organization's field catalog -- stable field IDs, property keys, value types, and filterability for building precise graph filters.                                             |
+| `search_graph_entities`    | Search the context graph by display name, graph ID, or source identifier. The entry point for resolving a mentioned company, meeting, deal, or document to a graph entity.               |
+| `list_graph_entities`      | Browse entities of a single type with property filters and ordering -- for example, "list open opportunities" or "accounts of type Customer".                                            |
+| `get_graph_entities`       | Load the full record for one or more entities by ID, including properties, relationships, summaries, recent news, and LinkedIn detail where available.                                   |
+| `get_graph_relationships`  | Fetch the relationships of a single entity -- meetings on an account, participants in a meeting, opportunities at a company -- with filtering and pagination.                            |
+| `list_graph_relationships` | List or aggregate relationships org-wide, such as counting meetings per account or contacts per company.                                                                                 |
 
 ### People
 
-| Tool | Description |
-| --- | --- |
-| `find_graph_person` | Resolve a person mentioned by name, email, or CRM ID to their graph record. |
-| `get_graph_person` | Load full detail for one or more people -- LinkedIn career history, per-account role assessments (champion, decision maker, etc.), and interaction narratives. |
+| Tool                  | Description                                                                                                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `find_graph_person`   | Resolve a person mentioned by name, email, or CRM ID to their graph record.                                                                                                       |
+| `get_graph_person`    | Load full detail for one or more people -- LinkedIn career history, per-account role assessments (champion, decision maker, etc.), and interaction narratives.                    |
 | `search_graph_people` | Search people by their relationship to accounts and companies -- an account's contact roster, its key stakeholders, or org-wide sweeps like "VPs across all Enterprise accounts". |
 
 ### Facts & Evidence
 
-| Tool | Description |
-| --- | --- |
-| `get_graph_facts` | List the facts known about a specific entity -- extracted statements with supporting quotes and sources, ranked by salience and recency. |
-| `search_graph_facts` | Semantic search across extracted facts from meetings, emails, and documents -- for thematic evidence questions like pain points, risks, or competitor mentions. |
+| Tool                  | Description                                                                                                                                                                 |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_graph_facts`     | List the facts known about a specific entity -- extracted statements with supporting quotes and sources, ranked by salience and recency.                                    |
+| `search_graph_facts`  | Semantic search across extracted facts from meetings, emails, and documents -- for thematic evidence questions like pain points, risks, or competitor mentions.             |
 | `get_graph_citations` | Open the sources behind a single piece of context-agent output -- a work stream, news item, or stakeholder summary -- to see the quotes and documents that back each claim. |
-| `verified_sources` | Display a verified-source footer alongside an answer, showing which accounts, meetings, emails, and documents informed it and how many of each. |
+| `verified_sources`    | Display a verified-source footer alongside an answer, showing which accounts, meetings, emails, and documents informed it and how many of each.                             |
 
 ### Your Accounts & Profile
 
-| Tool | Description |
-| --- | --- |
+| Tool                   | Description                                                                                                        |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | `get_my_graph_profile` | Resolve the current user to their graph profile -- your team, manager, and the accounts and opportunities you own. |
-| `list_my_accounts` | List the accounts you own or are assigned to, with the ownership source for each. |
+| `list_my_accounts`     | List the accounts you own or are assigned to, with the ownership source for each.                                  |
 
 ### Skills
 
-| Tool | Description |
-| --- | --- |
-| `list_skills` | Discover the expert workflows your organization has authored -- deal inspection playbooks, meeting prep templates, research skills, and more. |
-| `read_skill` | Load the full instructions for a specific skill. |
-| `download_skill_assets` | Download a skill's supporting files (scripts, templates, examples) in a single call. |
+| Tool                    | Description                                                                                                                                   |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `list_skills`           | Discover the expert workflows your organization has authored -- deal inspection playbooks, meeting prep templates, research skills, and more. |
+| `read_skill`            | Load the full instructions for a specific skill.                                                                                              |
+| `download_skill_assets` | Download a skill's supporting files (scripts, templates, examples) in a single call.                                                          |
 
 ### Digests
 
-| Tool | Description |
-| --- | --- |
-| `list_digests` | List your scheduled digests, including any that are paused. |
-| `get_digest` | Load a single digest in full -- its schedule, prompt, email settings, and when it last ran. |
+| Tool            | Description                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `list_digests`  | List your scheduled digests, including any that are paused.                                                               |
+| `get_digest`    | Load a single digest in full -- its schedule, prompt, email settings, and when it last ran.                               |
 | `create_digest` | Set up a new recurring digest on a daily, weekdays, weekly, monthly, or quarterly schedule, with optional email delivery. |
-| `update_digest` | Change an existing digest's name, schedule, prompt, recipients, or active state -- including pausing and resuming it. |
-| `delete_digest` | Delete a digest so it stops running. |
+| `update_digest` | Change an existing digest's name, schedule, prompt, recipients, or active state -- including pausing and resuming it.     |
+| `delete_digest` | Delete a digest so it stops running.                                                                                      |
 
 ### Organization Rules & Feedback
 
-| Tool | Description |
-| --- | --- |
-| `get_org_rules` | Load your organization's writing, style, policy, and product guidance so answers stay consistent with your standards. |
-| `tell_endgame` | Correct or add to the context graph, and send feedback to the Endgame team. Use it when something in Endgame is wrong, outdated, or missing -- a company's industry, someone's employer, a stakeholder on a deal, an entity Endgame doesn't know yet -- or to file a bug or feature request. |
+| Tool            | Description                                                                                                                                                                                                                                                                                  |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `get_org_rules` | Load your organization's writing, style, policy, and product guidance so answers stay consistent with your standards.                                                                                                                                                                        |
+| `tell_endgame`  | Correct or add to the context graph, and send feedback to the Endgame team. Use it when something in Endgame is wrong, outdated, or missing -- a company's industry, someone's employer, a stakeholder on a deal, an entity Endgame doesn't know yet -- or to file a bug or feature request. |
 
 ## Rate Limits
 
