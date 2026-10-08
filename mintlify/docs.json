@@ -166,16 +166,7 @@
       },
       {
         "group": "Access",
-        "pages": ["authentication/index"]
-      },
-
-      {
-        "group": "API reference",
-        "pages": [
-          "api-reference/introduction",
-          "api-reference/authentication",
-          "api-reference/endpoints"
-        ]
+        "pages": ["authentication/index", "api-reference/api-keys"]
       },
       {
         "group": "Admin Guides",
@@ -228,6 +219,18 @@
     ]
   },
   "redirects": [
+    {
+      "source": "/api-reference/authentication",
+      "destination": "/api-reference/api-keys"
+    },
+    {
+      "source": "/api-reference/introduction",
+      "destination": "/api-reference/api-keys"
+    },
+    {
+      "source": "/api-reference/endpoints",
+      "destination": "/api-reference/api-keys"
+    },
     {
       "source": "/1a70ee6f29db802582b7dc368826abdd",
       "destination": "/integrations/zoom"

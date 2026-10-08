@@ -26,9 +26,9 @@ https://app.endgame.io/api/v1/mcp
 
 Two kinds of credentials are accepted. Both are provisioned from Endgame itself -- you don't need to configure anything in an external identity provider.
 
-| Credential            | Where you create it                                                     | When to use                                                                                          |
-| --------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| **API key** (`eak_*`) | [Settings → API Keys](https://app.endgame.io/settings/api-keys)         | Agents and automations where a long-lived static token is fine.                                      |
+| Credential            | Where you create it                                                     | When to use                                                                                     |
+| --------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **API key** (`eak_*`) | [Settings → API Keys](https://app.endgame.io/settings/api-keys)         | Agents and automations where a long-lived static token is fine.                                 |
 | **M2M application**   | [Settings → Applications](https://app.endgame.io/settings/applications) | Server-to-server integrations that want short-lived OAuth tokens via the `client_credentials` grant. |
 
 Both are admin-only. Admins can see every API key and application running against Endgame, and how much each one is used, in the **Automations** view of the [Console](/console-observation#automations).
@@ -59,7 +59,6 @@ Both are admin-only. Admins can see every API key and application running agains
         className="rounded-lg"
       />
     </Frame>
-
   </Step>
   <Step title="Use the key to connect to the MCP server">
     Add the key as a Bearer token wherever your agent or MCP client is configured, with the server URL set to `https://app.endgame.io/api/v1/mcp`. For a step-by-step example, see [Connect via Claude Managed Agents](/features/mcp-server#connect-via-claude-managed-agents-service-accounts).
@@ -102,7 +101,7 @@ Use an M2M application when you need short-lived tokens issued per request (typi
 
 ## Revoke credentials
 
-**API keys:** revoke from [the API Keys settings page](https://app.endgame.io/settings/api-keys) -- click **Revoke** next to the key's row. **Act as me** keys are **automatically revoked** when the owning user is deactivated or their seat is revoked. **Service account** keys persist until explicitly revoked.
+**API keys:** revoke from [the API Keys settings page](https://app.endgame.io/settings/api-keys) -- click **Revoke** next to the key's row. **Act as me** keys are **automatically revoked** when the owning user leaves the organization. **Service account** keys persist until explicitly revoked.
 
 **M2M applications:** delete the application (or rotate its secret) from [the Applications settings page](https://app.endgame.io/settings/applications). Deleting the application revokes all access tokens issued under it.
 
