@@ -166,12 +166,7 @@
       },
       {
         "group": "Access",
-        "pages": ["authentication/index"]
-      },
-
-      {
-        "group": "API",
-        "pages": ["api-reference/authentication"]
+        "pages": ["authentication/index", "api-reference/api-keys"]
       },
       {
         "group": "Admin Guides",
@@ -225,12 +220,16 @@
   },
   "redirects": [
     {
+      "source": "/api-reference/authentication",
+      "destination": "/api-reference/api-keys"
+    },
+    {
       "source": "/api-reference/introduction",
-      "destination": "/api-reference/authentication"
+      "destination": "/api-reference/api-keys"
     },
     {
       "source": "/api-reference/endpoints",
-      "destination": "/api-reference/authentication"
+      "destination": "/api-reference/api-keys"
     },
     {
       "source": "/1a70ee6f29db802582b7dc368826abdd",
