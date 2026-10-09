@@ -101,7 +101,7 @@ Use an M2M application when you need short-lived tokens issued per request (typi
 
 ## Revoke credentials
 
-**API keys:** revoke from [the API Keys settings page](https://app.endgame.io/settings/api-keys) -- click **Revoke** next to the key's row. **Act as me** keys are **automatically revoked** when the owning user leaves the organization. **Service account** keys persist until explicitly revoked.
+**API keys:** revoke from [the API Keys settings page](https://app.endgame.io/settings/api-keys) -- click **Revoke** next to the key's row. **Act as me** keys are **automatically revoked** when the owning user is deactivated or their seat is revoked. **Service account** keys persist until explicitly revoked.
 
 **M2M applications:** delete the application (or rotate its secret) from [the Applications settings page](https://app.endgame.io/settings/applications). Deleting the application revokes all access tokens issued under it.
 

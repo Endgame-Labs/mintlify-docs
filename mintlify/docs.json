@@ -90,34 +90,6 @@
         ]
       },
       {
-        "group": "Legacy Endgame",
-        "pages": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "legacy-endgame/getting-started/core-concepts",
-              "legacy-endgame/getting-started/navigating-endgame",
-              "legacy-endgame/getting-started/your-first-10-minutes",
-              "legacy-endgame/getting-started/query-your-book",
-              "legacy-endgame/getting-started/endgame-chat-201"
-            ]
-          },
-          {
-            "group": "Features",
-            "pages": [
-              "legacy-endgame/features/skills",
-              "legacy-endgame/features/publishing-and-sharing",
-              "legacy-endgame/features/tasks",
-              "legacy-endgame/features/file-upload",
-              "legacy-endgame/features/export-thread-content",
-              "features/slack",
-              "features/mcp-server",
-              "legacy-endgame/features/user-preferences"
-            ]
-          }
-        ]
-      },
-      {
         "group": "Integrations",
         "pages": [
           {
@@ -232,10 +204,6 @@
       "destination": "/api-reference/api-keys"
     },
     {
-      "source": "/1a70ee6f29db802582b7dc368826abdd",
-      "destination": "/integrations/zoom"
-    },
-    {
       "source": "/login-methods",
       "destination": "/authentication"
     },
@@ -246,10 +214,6 @@
     {
       "source": "/endgame-mcp-server",
       "destination": "/features/mcp-server"
-    },
-    {
-      "source": "/features/export-endgame-content",
-      "destination": "/features/export-thread-content"
     }
   ],
   "footer": {
