@@ -344,66 +344,18 @@ For complex analyses, your assistant can chain multiple tools together -- for ex
 
 When connected, the following tools are available. Your AI assistant selects the right tool automatically based on your question.
 
-### Graph Discovery & Search
+| Tool           | Description                                                                                                                                                                                                                                                                                  |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `find`         | Resolve something your question names -- an account, person, opportunity, meeting, email, or document -- to its record in your organization's context graph. Accepts a name, email address, Salesforce record ID, or graph ID.                                                              |
+| `query`        | Walk, list, rank, and count across the context graph -- the meetings on an account, every open opportunity, contacts per company, or the calls, emails, and documents that discuss a topic. Counts and totals are computed server-side.                                                      |
+| `read`         | Load the full records for up to 20 entities at once, optionally with the facts and evidence behind them, or search what was said and written inside specific calls, emails, or accounts. Also loads your profile, preferences, organization rules, skills, and digests.                      |
+| `digest`       | Create, change, pause, resume, or delete a recurring digest delivered daily, on weekdays, weekly, monthly, or quarterly. Use `read` to list or open existing digests.                                                                                                                        |
+| `tell_endgame` | Correct or add to the context graph, and send feedback to the Endgame team. Use it when something in Endgame is wrong, outdated, or missing -- a company's industry, someone's employer, a stakeholder on a deal, an entity Endgame doesn't know yet -- or to file a bug or feature request. |
 
-| Tool                       | Description                                                                                                                                                                              |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get_graph_index`          | Get an overview of your organization's context graph -- what entity types exist (accounts, people, meetings, opportunities, and more), how many of each, and what properties they carry. |
-| `get_graph_field_catalog`  | Get your organization's field catalog -- stable field IDs, property keys, value types, and filterability for building precise graph filters.                                             |
-| `search_graph_entities`    | Search the context graph by display name, graph ID, or source identifier. The entry point for resolving a mentioned company, meeting, deal, or document to a graph entity.               |
-| `list_graph_entities`      | Browse entities of a single type with property filters and ordering -- for example, "list open opportunities" or "accounts of type Customer".                                            |
-| `get_graph_entities`       | Load the full record for one or more entities by ID, including properties, relationships, summaries, recent news, and LinkedIn detail where available.                                   |
-| `get_graph_relationships`  | Fetch the relationships of a single entity -- meetings on an account, participants in a meeting, opportunities at a company -- with filtering and pagination.                            |
-| `list_graph_relationships` | List or aggregate relationships org-wide, such as counting meetings per account or contacts per company.                                                                                 |
-
-### People
-
-| Tool                  | Description                                                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `find_graph_person`   | Resolve a person mentioned by name, email, or CRM ID to their graph record.                                                                                                       |
-| `get_graph_person`    | Load full detail for one or more people -- LinkedIn career history, per-account role assessments (champion, decision maker, etc.), and interaction narratives.                    |
-| `search_graph_people` | Search people by their relationship to accounts and companies -- an account's contact roster, its key stakeholders, or org-wide sweeps like "VPs across all Enterprise accounts". |
-
-### Facts & Evidence
-
-| Tool                  | Description                                                                                                                                                                 |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get_graph_facts`     | List the facts known about a specific entity -- extracted statements with supporting quotes and sources, ranked by salience and recency.                                    |
-| `search_graph_facts`  | Semantic search across extracted facts from meetings, emails, and documents -- for thematic evidence questions like pain points, risks, or competitor mentions.             |
-| `get_graph_citations` | Open the sources behind a single piece of context-agent output -- a work stream, news item, or stakeholder summary -- to see the quotes and documents that back each claim. |
-| `verified_sources`    | Display a verified-source footer alongside an answer, showing which accounts, meetings, emails, and documents informed it and how many of each.                             |
-
-### Your Accounts & Profile
-
-| Tool                   | Description                                                                                                        |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `get_my_graph_profile` | Resolve the current user to their graph profile -- your team, manager, and the accounts and opportunities you own. |
-| `list_my_accounts`     | List the accounts you own or are assigned to, with the ownership source for each.                                  |
-
-### Skills
-
-| Tool                    | Description                                                                                                                                   |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `list_skills`           | Discover the expert workflows your organization has authored -- deal inspection playbooks, meeting prep templates, research skills, and more. |
-| `read_skill`            | Load the full instructions for a specific skill.                                                                                              |
-| `download_skill_assets` | Download a skill's supporting files (scripts, templates, examples) in a single call.                                                          |
-
-### Digests
-
-| Tool            | Description                                                                                                               |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `list_digests`  | List your scheduled digests, including any that are paused.                                                               |
-| `get_digest`    | Load a single digest in full -- its schedule, prompt, email settings, and when it last ran.                               |
-| `create_digest` | Set up a new recurring digest on a daily, weekdays, weekly, monthly, or quarterly schedule, with optional email delivery. |
-| `update_digest` | Change an existing digest's name, schedule, prompt, recipients, or active state -- including pausing and resuming it.     |
-| `delete_digest` | Delete a digest so it stops running.                                                                                      |
-
-### Organization Rules & Feedback
-
-| Tool            | Description                                                                                                                                                                                                                                                                                  |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `get_org_rules` | Load your organization's writing, style, policy, and product guidance so answers stay consistent with your standards.                                                                                                                                                                        |
-| `tell_endgame`  | Correct or add to the context graph, and send feedback to the Endgame team. Use it when something in Endgame is wrong, outdated, or missing -- a company's industry, someone's employer, a stakeholder on a deal, an entity Endgame doesn't know yet -- or to file a bug or feature request. |
+<Note>
+  The `digest` tool requires a signed-in user, so it isn't available to
+  service account connections.
+</Note>
 
 ## Rate Limits
 
