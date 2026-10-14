@@ -63,7 +63,15 @@ Tokens are stored in `~/.endgame-auth.json` and refresh automatically -- the CLI
 
 ## Running Tools
 
-The CLI discovers the tools available to your account at login and caches them locally. See your tool set:
+The CLI discovers the tools available to your account at login and caches them locally. Endgame updates its tools periodically, so sync before you start working to make sure you have the latest set:
+
+```bash
+endgame tools sync
+```
+
+The CLI also refreshes the cache automatically after login and in the background when it is more than 12 hours old.
+
+See your tool set, with full documentation for each tool's inputs:
 
 ```bash
 endgame tools --help
@@ -72,17 +80,15 @@ endgame tools --help
 Invoke any tool by name, passing its input as JSON via `--json` or piped stdin:
 
 ```bash
-endgame tools search_graph_entities --json '{"query":"Acme Corp"}'
-endgame tools find_graph_person --json '{"query":"Sarah Chen"}'
-endgame tools list_my_accounts --json '{}'
-echo '{"query":"Acme Corp"}' | endgame tools search_graph_entities
+endgame tools find --json '{"type":"account","key":["Acme Corp"]}'
+echo '{"type":"person","key":["sarah.chen@acme.com"]}' | endgame tools find
 ```
 
 <Note>
   The exact tool set is discovered from your account, so `endgame tools --help`
-  always reflects what you can actually call. Refresh the cached tool list on
-  demand with `endgame tools sync` -- the CLI also refreshes it automatically
-  after login and in the background when the cache is more than 12 hours old.
+  always reflects what you can actually call. For a description of each tool,
+  see [Available Tools](/features/mcp-server#available-tools) on the MCP Server
+  page.
 </Note>
 
 ## Command Reference
