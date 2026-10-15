@@ -19,9 +19,9 @@ Configuration is only valuable if people use it. How you introduce Endgame to yo
 
 ## How access works
 
-Endgame uses WorkOS to power authentication. Only Admins can manage user access from the [User Management](https://app.endgame.io/settings/users) page in Settings. There are three ways to grant access:
+Endgame uses WorkOS to power authentication. Only Admins can manage user access from the [Users](https://app.endgame.io/settings/users) page in Settings. There are three ways to grant access:
 
-- **Invite users** - Send email invitations to specific users and assign them a role (Admin or Member). You can monitor which users have accepted invitations from the user management page.
+- **Invite users** - Send email invitations to specific users and assign them a role (Admin or Member). You can monitor which users have accepted invitations from the Users page.
 - **Verified domains** - Add and verify your company's domain (e.g., acme.com) so that anyone with a matching email address can log in and be provisioned automatically. Domain ownership is verified through DNS TXT records.
 - **Single sign-on (SSO)** - If available for your organization, enable SSO so users authenticate through your preferred identity provider. You must verify your domains first before configuring SSO.
 
@@ -42,8 +42,8 @@ Endgame uses WorkOS to power authentication. Only Admins can manage user access 
   <Step title="Invite users or set up domain access">
     Navigate to [Settings \> Users](https://app.endgame.io/settings/users) and choose your approach:
 
-    - **For a targeted rollout**, click **Invite User**, enter each user's email, and assign them a role (Admin or Member).
-    - **For a broader rollout**, click **Add Domain** to verify your company domain. Once verified, anyone with a matching email can log in without individual invitations.
+    - **For a targeted rollout**, click **Invite users** in the top right, enter each user's email, and assign them a role (Admin or Member).
+    - **For a broader rollout**, expand the **Domains** section and click **Add Domain** to verify your company domain. Once verified, anyone with a matching email can log in without individual invitations.
 
     See the [Authentication](/authentication) page for the full setup walkthrough, including SSO configuration.
   </Step>
