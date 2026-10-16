@@ -192,6 +192,10 @@
   },
   "redirects": [
     {
+      "source": "/features/tasks",
+      "destination": "/features/digests"
+    },
+    {
       "source": "/api-reference/authentication",
       "destination": "/api-reference/api-keys"
     },
