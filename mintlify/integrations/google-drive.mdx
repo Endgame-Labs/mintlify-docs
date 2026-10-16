@@ -14,18 +14,14 @@ icon: "google"
 
 Individual users can authenticate to Google Drive to [enable syncing](https://docs.endgame.io/features/file-upload#link-files-from-google-drive) of folders and files for use as contextual knowledge in chat responses. This can be done on a user-by-user basis to enable uploads at the account level (all users) or the organization level (admin users only). We do not currently offer a single integration user experience.
 
-### Exporting content to Google
-
-Authenticating to Google Drive also enables direct upload of thread assets to [Google Sheets](https://docs.endgame.io/features/export-thread-content#export-table-to-google-sheets) and [Google Docs](https://docs.endgame.io/features/export-thread-content#export-to-google-docs). The authentication flow is automatically triggered when a user attempts to perform any of these actions.
-
 ### Google calendar integration
 
-Individual users can sync their google calendars to provide more accurate and comprehensive meeting data for use in chat responses. This can be done in [settings](https://app.endgame.io/settings) under Connections.
+Individual users can sync their Google calendars to provide more accurate and comprehensive meeting data for use in chat responses. This can be done in [Settings > Connections](https://app.endgame.io/settings/connections). Click **Connect** next to Google Calendar and sign in with your Google account.
 
-<Frame caption="Google Drive connection">
+<Frame caption="Google Calendar connection">
   <img
-    src="../images/settings-connections-07-28-26.png"
-    alt="Google Drive connection"
+    src="../images/settings-connections-10-16-26.png"
+    alt="Google Calendar connection"
     className="rounded-lg"
   />
 </Frame>
@@ -36,6 +32,16 @@ When going through the connection flow, users _must_ check the box to allow Endg
   <img
     src="../images/google-calendar-permission-03-05-26.png"
     alt="Google calendar permissions"
+    className="rounded-lg"
+  />
+</Frame>
+
+Users can disconnect their Google calendar anytime by clicking **Disconnect** next to the Google Calendar integration. A confirmation modal will appear. Click **Disconnect** to confirm. Your calendar stops syncing and Endgame will no longer have access to future meeting data. Disconnecting doesn't delete meeting data Endgame has already synced.
+
+<Frame caption="Disconnect Google Calendar confirmation">
+  <img
+    src="../images/google-calendar-disconnect-10-16-26.png"
+    alt="Disconnect Google Calendar confirmation modal"
     className="rounded-lg"
   />
 </Frame>
