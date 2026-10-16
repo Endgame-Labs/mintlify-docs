@@ -47,14 +47,14 @@ Both are admin-only. Admins can see every API key and application running agains
   <Step title="Click New API key">
     Give the key a descriptive name (e.g. `deal-review-agent-prod`) and pick a scope:
 
-    - **Act as me** -- Acts on your behalf with your permissions. Automatically revoked if you leave the organization.
+    - **Act as me** -- Acts on your behalf with your permissions. Stops working if you're deactivated or lose your seat.
     - **Service account** -- Not tied to any user. Ideal for automation, integrations, and CI pipelines.
 
     The full key is shown **only once** on creation -- copy it immediately and store it in a secrets manager. The scope cannot be changed later.
 
     <Frame caption="Creating an API key in Endgame">
       <img
-        src="/images/create-service-account-api-key-10-13-26.png"
+        src="/images/create-service-account-api-key-10-16-26.png"
         alt="New API key dialog with a name field and Act as me and Service account scope options"
         className="rounded-lg"
       />
