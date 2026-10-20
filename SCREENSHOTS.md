@@ -21,7 +21,9 @@ When choosing an image, prefer one that answers several things on the page at on
 
 ## Width (rough guess, revisit after the Settings update)
 
-The docs stretch every image to fill the content column. On desktop that column is **441–648 px wide** (CSS px, measured on the local preview at 1280, 1440 and 1920 px browser widths). So:
+**Convention:** every dimension in this guide is the **viewport** (the page area inside the browser) in CSS pixels, unless it says otherwise. A "1440 px capture" means a 1440 px viewport, not a 1440 px window. The image file is twice that at 2× (Retina).
+
+The docs stretch every image to fill the content column. On desktop that column is **441–648 px wide** (CSS px, measured on the local preview at 1280, 1440 and 1920 px viewport widths). So:
 
 - **Aim for about 650–700 px of UI (1300–1400 px at 2×).** It then shows at roughly its real size, so text on the page matches what people see in the app. `digest-card-menu-10-20-26.png` (1418 px) is the reference.
 - **Wider captures shrink.** A 1,972 px users table shows at about 60%, which makes small text hard to read. Narrow the browser so the UI reflows to about 700 px, rather than capturing a wide layout and letting it shrink.
@@ -33,7 +35,7 @@ The docs stretch every image to fill the content column. On desktop that column 
 
 - Dark mode, demo org, 2× (Retina). Turn off the internal dev bar.
 - Use the region capture (⌘⇧4, then drag). It has no background, so the framing script adds one later. Window capture (⌘⇧4, then Space) includes the desktop wallpaper, so use it only when the whole window is the point. At the current CleanShot setting, window capture adds 240 px of wallpaper on every side at 2× (120 pt), with the window shadow inside that border.
-- What matters is the **viewport** width (the page area), not the window width. Chrome's vertical tab sidebar takes about 240 px, so a window 1680 px wide gives a viewport of about 1440 px. Collapse the sidebar while capturing, or account for it. To check the viewport, open the ruler page (https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX). Inside the artifact viewer it reads the frame's width, which is slightly narrower than the viewport.
+- Set the **viewport** to the size you want, not the window (see the convention above). Chrome's vertical tab sidebar takes about 240 px, so a window 1680 px wide gives a viewport of about 1440 px. Collapse the sidebar while capturing, or account for it. To check the viewport, open the ruler page (https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX). Inside the artifact viewer it reads the frame's width, which is slightly narrower than the viewport.
 - Crop to the thing being explained. Leave out the dimmed backdrop behind dialogs.
 - Never scale up.
 - Name files `what-it-shows-MM-DD-YY.png`.
