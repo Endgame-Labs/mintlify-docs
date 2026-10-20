@@ -19,10 +19,20 @@ When choosing an image, prefer one that answers several things on the page at on
 - **Captions** are for sighted readers. They match the image's job (see the table).
 - **Alt text** describes what's in the image for screen readers. Lead with the thing the image is there to show.
 
+## Width (rough guess, revisit after the Settings update)
+
+The docs stretch every image to fill the content column. On desktop that column is **441–648 px wide** (CSS px, measured on the local preview at 1280, 1440 and 1920 px browser widths). So:
+
+- **Aim for about 650–700 px of UI (1300–1400 px at 2×).** It then shows at roughly its real size, so text on the page matches what people see in the app. `digest-card-menu-10-20-26.png` (1418 px) is the reference.
+- **Wider captures shrink.** A 1,972 px users table shows at about 60%, which makes small text hard to read. Narrow the browser so the UI reflows to about 700 px, rather than capturing a wide layout and letting it shrink.
+- **Narrower captures get blown up.** A 542 px zoomed-in crop is stretched about 2.4×, so it looks huge and soft. Put small crops on the fixed-width canvas instead of letting them stretch (see Framing).
+- **Prefer context over zoom.** For a menu or button, show it inside its card or section (like the digest card with its menu open). Zoom in tighter only when the control would be too small to see in context, such as one icon on a busy page.
+- **Tall captures:** a full Settings window with a list is very tall. Usually a Signpost of the top of the page plus the relevant card is enough.
+
 ## Capture
 
 - Dark mode, demo org, 2× (Retina). Turn off the internal dev bar.
-- Browser window at 1440 × 900, so text renders at one size every time.
+- Use the region capture (⌘⇧4, then drag). It has no background, so the framing script adds one later. Window capture (⌘⇧4, then Space) includes the desktop wallpaper, so use it only when the whole window is the point.
 - Crop to the thing being explained. Leave out the dimmed backdrop behind dialogs.
 - Never scale up.
 - Name files `what-it-shows-MM-DD-YY.png`.
@@ -33,4 +43,4 @@ The options are compared at https://claude.ai/artifact/2B94ydFuSxPjqeoPv5vZcU. T
 
 ## Open items on this branch
 
-- **Digests** (`features/digests.mdx`): replace `edit-digest-10-16-26.png` with an Instruction shot of a digest card's "…" menu open. That one image covers Run now, editing and deleting, and the page doesn't currently say how to delete. Confirm the menu's items in the app before writing the caption.
+- **Digests** (`features/digests.mdx`): done. The new "Manage a digest" section covers the toggle, editing, Run digest and Delete. It uses `digest-card-menu-10-20-26.png`, a rough hand crop to retake at the final capture settings. `edit-digest-10-16-26.png` is no longer used.
