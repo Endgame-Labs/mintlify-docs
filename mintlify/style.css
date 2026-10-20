@@ -59,6 +59,14 @@
   --eg-hover: rgb(207 213 224 / 0.09);
   --eg-active: rgb(207 213 224 / 0.14);
 
+  --eg-callout-bg: color-mix(in srgb, var(--eg-gray-800) 50%, transparent);
+  --eg-card-hover: color-mix(in srgb, var(--eg-gray-800) 60%, var(--eg-surface));
+
+  --eg-status-note: var(--eg-blue-300);
+  --eg-status-tip: var(--eg-green);
+  --eg-status-warning: var(--eg-orange);
+  --eg-status-danger: var(--eg-red);
+
   --eg-accent: var(--eg-blue-300);
   --eg-ring: var(--eg-blue-400);
 
@@ -96,13 +104,23 @@ html.light {
   --eg-fg: var(--eg-gray-900);
   --eg-fg-strong: var(--eg-gray-950);
   --eg-fg-secondary: var(--eg-gray-600);
-  --eg-fg-muted: var(--eg-gray-500);
+  /* terminus's light fg.muted; gray-500 is under AA on white at kicker size. */
+  --eg-fg-muted: var(--eg-gray-600);
 
   --eg-border: rgb(14 20 32 / 0.09);
   --eg-border-emphasized: rgb(14 20 32 / 0.14);
 
   --eg-hover: rgb(14 20 32 / 0.06);
   --eg-active: rgb(14 20 32 / 0.08);
+
+  --eg-callout-bg: var(--eg-surface);
+  --eg-card-hover: var(--eg-gray-100);
+
+  /* terminus's light-mode *.fg steps, dark enough to read on white. */
+  --eg-status-note: var(--eg-blue-700);
+  --eg-status-tip: #00875e;
+  --eg-status-warning: #a95823;
+  --eg-status-danger: #b5455d;
 
   --eg-accent: var(--eg-blue-700);
 }
@@ -120,6 +138,14 @@ html.light {
 :where(a[href], button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
   outline: 2px solid var(--eg-ring) !important;
   outline-offset: 2px !important;
+}
+
+/* Sidebar and TOC rows sit inside scroll viewports that would clip an
+   outside ring, so theirs is drawn inside, as Mintlify intends. */
+#sidebar-content a:focus-visible,
+#sidebar-content button:focus-visible,
+#table-of-contents a:focus-visible {
+  outline-offset: -2px !important;
 }
 
 code,
@@ -245,6 +271,12 @@ pre {
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* Mintlify paints an opaque backdrop layer over the header; clear it so the
+   translucent fill and blur show. */
+#navbar > div.absolute.inset-0 {
+  background-color: transparent !important;
+}
+
 #navbar > .border-gray-100,
 #navbar .border-b {
   border-bottom: 0 !important;
@@ -320,8 +352,7 @@ pre {
   border-right: 1px solid var(--eg-border);
 }
 
-.sidebar-group-header,
-.sidebar-group-header h5 {
+.sidebar-group-header {
   font-family: var(--eg-font-mono);
   font-size: 0.75rem;
   font-weight: 400;
@@ -345,8 +376,8 @@ pre {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-#sidebar-content li > a:hover,
-#sidebar-content li > div > a:hover,
+#sidebar-content li > a:not([aria-current="page"], [class*="bg-primary"]):hover,
+#sidebar-content li > div > a:not([aria-current="page"], [class*="bg-primary"]):hover,
 #sidebar-content li > button:hover,
 #sidebar-content li > div > button:hover {
   background-color: var(--eg-hover) !important;
@@ -423,15 +454,19 @@ pre {
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* A card with an href is a div holding a stretched link, so hover keys off :has(). */
+/* A card with an href renders as a div: `role="link"` before hydration, and
+   holding the link after it. Cover both. */
+.card[role="link"]:hover,
+.card[role="link"]:focus-visible,
 .card:has(a[href]):hover,
 .card:has(a:focus-visible),
 a.card:hover,
 a.card:focus-visible {
-  background-color: color-mix(in srgb, var(--eg-gray-800) 60%, var(--eg-surface)) !important;
+  background-color: var(--eg-card-hover) !important;
   box-shadow: inset 0 0 0 1px var(--eg-border-emphasized);
 }
 
+.card[role="link"]:active,
 .card:has(a[href]):active,
 a.card:active {
   background-color: var(--eg-surface-lifted) !important;
@@ -528,9 +563,27 @@ a.card:active {
   letter-spacing: 0;
 }
 
-#pagination > a.justify-end > div {
-  align-items: flex-end;
-  text-align: right;
+@media (min-width: 640px) {
+  #pagination > a.justify-end > div {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+@media (max-width: 639px) {
+  #pagination > a.justify-end {
+    justify-content: flex-start;
+  }
+}
+
+/* A lone link takes the whole row, as on the blog. Mintlify leaves an empty
+   placeholder where a missing link would go. */
+#pagination > div:empty {
+  display: none;
+}
+
+#pagination:not(:has(> a + a)) {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (max-width: 1023px) {
@@ -546,15 +599,16 @@ a.card:active {
 /* terminus's alert: one neutral surface for every kind, with the colour
    carried by the icon alone. */
 .callout {
-  background-color: color-mix(in srgb, var(--eg-gray-800) 50%, transparent) !important;
+  background-color: var(--eg-callout-bg) !important;
   border: 0 !important;
   border-radius: 0.5rem;
   box-shadow: inset 0 0 0 1px var(--eg-border);
 }
 
 .callout,
-.callout :not(svg, svg *) {
-  color: var(--eg-fg);
+.callout [data-component-part="callout-content"],
+.callout [data-component-part="callout-content"] :where(p, li, strong, em) {
+  color: var(--eg-fg) !important;
 }
 
 .callout a {
@@ -562,11 +616,11 @@ a.card:active {
 }
 
 .callout svg { color: var(--eg-fg-secondary) !important; }
-.callout[data-callout-type="note"] svg { color: var(--eg-blue-300) !important; }
+.callout[data-callout-type="note"] svg { color: var(--eg-status-note) !important; }
 .callout[data-callout-type="tip"] svg,
-.callout[data-callout-type="check"] svg { color: var(--eg-green) !important; }
-.callout[data-callout-type="warning"] svg { color: var(--eg-orange) !important; }
-.callout[data-callout-type="danger"] svg { color: var(--eg-red) !important; }
+.callout[data-callout-type="check"] svg { color: var(--eg-status-tip) !important; }
+.callout[data-callout-type="warning"] svg { color: var(--eg-status-warning) !important; }
+.callout[data-callout-type="danger"] svg { color: var(--eg-status-danger) !important; }
 
 /* ==========================================================================
    Code
