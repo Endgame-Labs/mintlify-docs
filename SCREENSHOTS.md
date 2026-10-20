@@ -32,7 +32,8 @@ The docs stretch every image to fill the content column. On desktop that column 
 ## Capture
 
 - Dark mode, demo org, 2× (Retina). Turn off the internal dev bar.
-- Use the region capture (⌘⇧4, then drag). It has no background, so the framing script adds one later. Window capture (⌘⇧4, then Space) includes the desktop wallpaper, so use it only when the whole window is the point.
+- Use the region capture (⌘⇧4, then drag). It has no background, so the framing script adds one later. Window capture (⌘⇧4, then Space) includes the desktop wallpaper, so use it only when the whole window is the point. At the current CleanShot setting, window capture adds 240 px of wallpaper on every side at 2× (120 pt), with the window shadow inside that border.
+- What matters is the **viewport** width (the page area), not the window width. Chrome's vertical tab sidebar takes about 240 px, so a window 1680 px wide gives a viewport of about 1440 px. Collapse the sidebar while capturing, or account for it. To check the viewport, open the ruler page (https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX). Inside the artifact viewer it reads the frame's width, which is slightly narrower than the viewport.
 - Crop to the thing being explained. Leave out the dimmed backdrop behind dialogs.
 - Never scale up.
 - Name files `what-it-shows-MM-DD-YY.png`.
