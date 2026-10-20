@@ -1,0 +1,79 @@
+---
+title: "Connect and manage integrations"
+sidebarTitle: "Overview"
+description: "Connect the tools your team works in so Endgame can learn from them."
+icon: "plug"
+---
+
+Integrations bring your team's calls, conversations, documents and CRM data into Endgame. Each integration you connect is shared by your whole organization, so only admins can connect, change or disconnect one.
+
+This page covers what every integration has in common. Each integration also has its own page with its setup steps, under **Integrations** in the sidebar.
+
+## Find your integrations
+
+Your integrations are in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations). They're listed alphabetically, each with a short description of what it syncs.
+
+- **Search** by name or by what an integration does, like "transcripts".
+- **Filter** with **All**, **Connected**, or **Available** (not connected yet).
+
+A check mark on an integration's logo means it's connected. A **Needs attention** badge means its connection has stopped working (see [Fix a connection that needs attention](#fix-a-connection-that-needs-attention)).
+
+<Frame caption="The Integrations page lists every integration your organization can connect.">
+  <img
+    src="/images/integrations-hub-10-20-26.png"
+    alt="Integrations page with search, the All, Connected and Available filter, and integrations with Connect or Manage buttons"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Connect an integration
+
+1. In **Settings** > **Organization** > **Integrations**, find the integration and click **Connect**.
+2. Finish connecting. What happens next depends on the integration:
+   - **Integrations you sign in to** (Gong, Microsoft SharePoint, Microsoft Teams, Slack, Zoom, and Confluence) take you to that tool's sign-in page. Sign in and approve access, and you'll come back to Endgame.
+   - **Integrations that use credentials** (Chorus, Clari Copilot, Highspot, Looker, Notion, Seismic, and Snowflake) open a dialog. Enter the credentials from that tool and click **Connect**.
+   - **Salesforce** opens its page first, so you can choose between your production and sandbox instance.
+3. Endgame opens the integration's page, where you can finish any setup it needs, like choosing which spaces, sites, or channels to sync.
+
+Each integration's page lists what you'll need before you connect. Its docs page walks through where to find it.
+
+## Manage a connected integration
+
+To open an integration's page, click **Manage** next to it. The page shows **Connected** at the top, the integration's own settings, and a **Connection** section at the bottom.
+
+The **Connection** section shows:
+
+- **When it was connected, and by whom.** If someone reconnected it later, that's shown too. Endgame only shows the person when it recorded who connected it.
+- **Credentials:** click **Update credentials** to give Endgame new credentials, for example after you rotate a key or change the account Endgame connects with. For integrations you sign in to, this takes you to the tool's sign-in page. For the others, it opens the credentials dialog. Nothing is prefilled, so have the new credentials ready.
+- **Disconnect:** click **Disconnect** to stop syncing. The section says what happens to the synced data for that integration, and Endgame asks you to confirm.
+
+<Frame caption="The Connection section shows who connected an integration and lets you update its credentials or disconnect it.">
+  <img
+    src="/images/integration-connection-section-10-20-26.png"
+    alt="Connection section with the connected date, an Update credentials button, and a Disconnect button"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Note>
+  Slack and Salesforce can't be disconnected from Settings yet. Their Connection section links to [support@endgame.io](mailto:support@endgame.io) instead.
+</Note>
+
+<Warning>
+  Changing or disconnecting an integration changes what data Endgame can use for analysis and answers, for everyone in your organization.
+</Warning>
+
+## Fix a connection that needs attention
+
+When the credentials Endgame uses for an integration stop working, for example because a password changed or a key expired, Endgame stops syncing from it and flags it:
+
+- On the Integrations page, it shows **Needs attention** and a red **Reconnect** button.
+- On its own page, a message says it needs to be reconnected, and **Reconnect** appears at the top.
+
+Click **Reconnect** and sign in again or enter new credentials. Syncing picks up again once it's reconnected.
+
+If an integration shows **Status unavailable**, Endgame couldn't check its connection just then. Click **Open** to go to its page, or try again in a moment.
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).
