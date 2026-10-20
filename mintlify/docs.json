@@ -2,9 +2,9 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Endgame",
   "colors": {
-    "primary": "#2B7FFF",
-    "light": "#51A2FF",
-    "dark": "#1447E6"
+    "primary": "#0274e8",
+    "light": "#399aff",
+    "dark": "#0274e8"
   },
   "theme": "aspen",
   "appearance": {
@@ -12,8 +12,8 @@
   },
   "background": {
     "color": {
-      "light": "#CAD5E2",
-      "dark": "#000F1D"
+      "light": "#ffffff",
+      "dark": "#0e1420"
     }
   },
   "modeToggle": {
@@ -23,7 +23,7 @@
   "fonts": {
     "heading": {
       "family": "Inter",
-      "weight": 600
+      "weight": 500
     },
     "body": {
       "family": "Inter",
