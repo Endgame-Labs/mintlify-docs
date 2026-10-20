@@ -1,43 +1,46 @@
 ---
 title: "Chorus"
-description: "Process Chorus call recordings and gain insights from your meetings"
+description: "Bring in call transcripts from Chorus for Endgame to analyze."
 icon: "mic"
 ---
 
-Use the instructions below to enable Chorus the integration in Endgame. Once enabled, Endgame will process your Chorus call data and provide insights via the Endgame UI.
+Connect Chorus so Endgame can learn from your team's calls. Once connected, Endgame brings in your Chorus call transcripts and uses them in its insights and answers.
 
-## Adding the App
+## Before you start
 
-<Note>
-  Connecting to the Chorus API requires that the connecting user is a Chorus
-  Administrator
-</Note>
-<Steps>
-  <Step title="Access integrations">
-    Log into Endgame and navigate to the [integrations](https://app.endgame.io/settings/integrations) page.
+- You need to be an Endgame admin.
+- The person creating the API key must be a Chorus administrator.
+- You'll need a Chorus API key. In Chorus, go to **Settings** > **API Access** and click **Generate API token**.
 
-    <Frame caption="Chorus connection">
-      <img
-        src="../images/chorus-connection-07-28-26.png"
-        alt="Chorus connection"
-        className="rounded-lg"
-      />
-    </Frame>
+<Info>
+  Endgame can only bring in calls that the person who created the API key can
+  access in Chorus. If you're not seeing the calls you expect, the key's
+  permissions are the likely cause. Contact us at
+  [support@endgame.io](mailto:support@endgame.io) for help.
+</Info>
 
-  </Step>
-  <Step title="Add Chorus API key">
-    On the integrations page, click Connect for Chorus. You will need to generate a Chorus API key for use by Endgame. Within Chorus, navigate to Settings -\> API Access -\> Generate API token. On the Chorus management page enter your new Chorus API key and click Connect. Once your key has been added, Endgame will initiate ingestion and processing of your call data.
+## Connect Chorus
 
-    <Info>
-    Endgame can only ingest meeting data that the API token creator has access to. If you're not seeing the data you expect, it may be a token permissions issue. Contact us at [support@endgame.io](mailto:support@endgame.io) for additional support.
-    </Info>
-    <Frame caption="Chorus API key">
-      <img
-        src="../images/chorus-api-key-1-6-26.png"
-        alt="Chorus API key"
-        className="rounded-lg"
-      />
-    </Frame>
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Chorus and click **Connect**. You can search for "Chorus", or choose **Available** to show only integrations you haven't connected yet.
+2. Enter your Chorus **API key**, then click **Connect**.
 
-  </Step>
-</Steps>
+<Frame caption="Connecting Chorus needs an API key from your Chorus settings.">
+  <img
+    src="/images/chorus-connect-dialog-10-20-26.png"
+    alt="Connect Chorus dialog with an API key field and a Connect button"
+    className="rounded-lg"
+  />
+</Frame>
+
+Endgame opens the Chorus page, which shows **Connected** at the top, and starts bringing in your call transcripts.
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Chorus page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** opens the same dialog as connecting, with nothing prefilled. Use it when you generate a new API key.
+- **Disconnect** stops syncing call transcripts from Chorus.
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).

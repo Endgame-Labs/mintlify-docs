@@ -29,10 +29,10 @@ You don't need to select all 100 fields right away. Start with the ones your tea
 
 <Steps>
   <Step title="Open the Salesforce configuration page">
-    Navigate to [Settings \> Integrations \> Salesforce](https://app.endgame.io/settings/integrations/salesforce). You'll see a list of Required Objects (Account, Contact, Opportunity, User).
+    In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), click **Manage** next to Salesforce. Under **Required objects**, you can configure custom fields on Account, Contact, Opportunity, and User.
   </Step>
   <Step title="Start with Opportunities">
-    Click on the Opportunity object. This is where most teams have the highest-value custom fields. Think about the questions your reps and managers ask most often. Common picks include:
+    Click **Opportunity**. This is where most teams have the highest-value custom fields. Think about the questions your reps and managers ask most often. Common picks include:
 
     - Revenue fields (ARR, MRR, TCV if tracked separately from Amount)
     - Product or solution fields (Product Family, Use Case, SKU)
@@ -41,7 +41,7 @@ You don't need to select all 100 fields right away. Start with the ones your tea
     - Renewal or expansion indicators
   </Step>
   <Step title="Select fields to ingest">
-    Search for each field, check the box, and click Save Changes. Changes take a few minutes to be reflected in responses.
+    Search for each field, select its checkbox, and click **Save**. An Endgame representative reviews your selections, and we'll reach out once they've been added.
 
     <Warning>
       You can select up to 100 fields per object. Fields that are populated on 1 or fewer records are omitted from the list.
@@ -54,11 +54,14 @@ You don't need to select all 100 fields right away. Start with the ones your tea
 
 ## Configure additional objects
 
-Below the Required Objects, you'll find an **Additional Objects** section. You can sync up to 50 objects total (including required objects). Toggle on any additional Salesforce objects you want Endgame to reference -- all fields on selected objects (standard and custom) will be synced. Changes take up to an hour to take effect.
+Below **Required objects**, you'll find **Additional standard objects** and **Custom objects**. You can sync up to 50 objects total (including required objects), and the top of the page shows how many you're syncing. Turn on the toggle next to any additional Salesforce object you want Endgame to reference. All fields on selected objects (standard and custom) will be synced.
+
+- **Standard objects** are reviewed by an Endgame representative, and we'll reach out once they've been added.
+- **Custom objects** sync automatically, and changes can take up to 2 hours.
 
 ## Vendor account exclusion
 
-If your org has vendor accounts in Salesforce, exclude them so internal-only calls aren't associated with those accounts. Search for and add any vendor accounts under the **Vendor Account Exclusion** section on the same configuration page. Changes may take a few hours to refresh.
+If your org has vendor accounts in Salesforce, exclude them so internal-only calls aren't associated with those accounts. Send the vendor accounts you want excluded to your Endgame team or [support@endgame.io](mailto:support@endgame.io), and we'll set it up for you. Changes may take a few hours to refresh.
 
 ## Checkpoint
 

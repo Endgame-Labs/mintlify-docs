@@ -1,66 +1,51 @@
 ---
 title: "Gong"
-description: "Connect Gong to automatically process call transcripts and gain AI-powered insights"
+description: "Bring in call transcripts from Gong for Endgame to analyze."
 icon: "mic"
 ---
 
-Use the instructions below to enable Gong integration in Endgame. Once enabled, Endgame will process relevant transcripts from Gong once every hour and provide our insights via the Endgame UI.
+Connect Gong so Endgame can learn from your team's calls. Endgame processes relevant call transcripts from Gong every hour and uses them in its insights and answers.
 
-## Enable the integration
+## Before you start
 
-<Note>
-  Connecting to the Gong API requires that the connecting user is a [Gong
-  Technical
-  Admin](https://help.gong.io/hc/en-us/articles/360028568911-About-permission-profiles)
-</Note>
+- You need to be an Endgame admin.
+- The person connecting must be a [Gong Technical Admin](https://help.gong.io/hc/en-us/articles/360028568911-About-permission-profiles).
 
-<Steps>
-  <Step title="Access Configuration">
-    If needed log into your Endgame account via Salesforce
+## Connect Gong
 
-    Navigate to [https://app.endgame.io/settings/integrations](https://app.endgame.io/settings/integrations)
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Gong and click **Connect**. You can search for "Gong", or choose **Available** to show only integrations you haven't connected yet.
+2. Sign in to Gong if it asks you to.
+3. Click **Allow** to give Endgame access to your Gong account.
 
-  </Step>
-  <Step title="Start Setup">
-    From the integrations page, click "Connect" to kick off the Gong authentication process.
+<Frame caption="Click Allow on Gong's authorization page to give Endgame access.">
+  <img
+    src="/images/gong-authorization.png"
+    alt="Gong authorization page asking you to allow Endgame access to your Gong account"
+    className="rounded-lg"
+  />
+</Frame>
 
-    <Frame caption="Gong connection">
-      <img
-        src="../images/gong-connection-07-28-26.png"
-        alt="Gong connection"
-        className="rounded-lg"
-      />
-    </Frame>
+You'll come back to the Gong page in Endgame, which shows **Connected** at the top.
 
-  </Step>
-  <Step title="Grant Access">
-    In the resulting page, click "Allow" to grant Endgame access to your Gong Account
-
-    <Frame content="Gong authorization page">
-      <img
-        src="/images/gong-authorization.png"
-        alt="Gong authorization page"
-        className="rounded-lg"
-      />
-    </Frame>
-
-  </Step>
-</Steps>
-
-## What's next?
-
-That's it! Now that you've connected Gong to Endgame, we'll take a day or two to automatically ingest your data into our systems and present our insights back to you in Endgame.
-
-## Common Questions
-
-In the case that connecting Gong gives you any trouble, it's likely the user authenticating lacks the Technical Admin permission within Gong. This can be explicitly enabled for the user making the connection in the [Team Members Settings](https://app.gong.io/company/team-members).
+It takes a day or two for Endgame to bring in your existing calls. After that, new transcripts are processed every hour.
 
 <Info>
-  We use Gong purely to obtain call transcripts. Endgame only processes
-  transcripts through our AI systems for accounts we have been granted access to
-  in Salesforce. If you haven't given us access to a given account, the Gong
-  transcripts for that account will not touch any AI systems.
+  Endgame uses Gong only to get call transcripts. It only sends transcripts to
+  AI systems for accounts it has access to in Salesforce. If you haven't given
+  Endgame access to an account, that account's Gong transcripts never touch an
+  AI system.
 </Info>
+
+## Troubleshooting
+
+If connecting Gong doesn't work, the person connecting is most likely missing the Technical Admin permission in Gong. A Gong admin can turn it on for them in Gong's [Team Members settings](https://app.gong.io/company/team-members).
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Gong page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** takes you to Gong's sign-in page to renew Endgame's access.
+- **Disconnect** stops syncing call transcripts from Gong and removes the call data Endgame already synced.
 
 ## Need help or have feedback?
 

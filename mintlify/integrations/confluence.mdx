@@ -1,49 +1,59 @@
 ---
 title: "Confluence"
-description: "Connect Confluence to sync Spaces as knowledge"
+description: "Bring pages from the Confluence spaces you choose into Endgame."
 icon: "file-up"
 ---
 
-Use the instructions below to enable the Confluence integration in Endgame. Once enabled, Endgame will process the content from designated spaces and provide insights via the Endgame UI.
+Connect Confluence so Endgame can use the pages in your Confluence spaces as knowledge. You choose which spaces to sync, and Endgame links their content to accounts where it applies.
 
-<Steps>
-  <Step title="Access integrations">
-    Log into Endgame and navigate to the [integrations](https://app.endgame.io/settings/integrations) page.
+## Before you start
 
-    <Frame caption="Confluence connection">
-      <img
-        src="../images/confluence-connection-07-28-30.png"
-        alt="Confluence connection"
-        className="rounded-lg"
-      />
-    </Frame>
+- You need to be an Endgame admin.
+- Your organization connects Confluence through one Confluence user. Whoever connects should have access to every space you want to sync. Endgame can see all the spaces that person can access, but only syncs the ones you add.
 
-  </Step>
-  <Step title="Authenticate with Confluence">
-    Click on Connect for Confluence and follow the authentication steps. Your organization will only have a single authenticated user for Confluence, so whoever authenticates should have access to the spaces you wish to sync. Endgame will have access to all the spaces the user has access to, but will only ingest and process data from the spaces selected in the following step.
-  </Step>
-  <Step title="Select spaces to sync">
-    Once authenticated, the user will be directed to the [Confluence management](https://app.endgame.io/settings/integrations/confluence) page (only available once you have authenticated to Confluence). Here the user can select the spaces they wish to sync to Endgame. They can also unselect spaces they no longer wish to have synced in this view. All content within selected spaces will be synced and automatically associated to accounts where applicable.
+## Connect Confluence
 
-    <Frame caption="Space selection">
-      <img
-        src="../images/confluence-management-12-24-25.png"
-        alt="Space selection"
-        className="rounded-lg"
-      />
-    </Frame>
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Confluence and click **Connect**. You can search for "Confluence", or choose **Available** to show only integrations you haven't connected yet.
+2. Sign in to Confluence and approve access.
 
-  </Step>
-  <Step title="View synced confluence content">
-    You can view the full content of the synced spaces within the [knowledge view](https://app.endgame.io/settings/knowledge). Spaces will be listed as folders with all synced pages as nested content.
-      <Frame caption="View confluence content">
-      <img
-        src="../images/confluence-in-knowledge-12-24-25.png"
-        alt="View confluence content"
-        className="rounded-lg"
-      />
-    </Frame>
-  </Step>
-</Steps>
+You'll come back to the Confluence page in Endgame, which shows **Connected** at the top, so you can choose which spaces to sync.
 
-You can find more information about managing knowledge [here](https://docs.endgame.io/knowledge/file-upload)
+## Choose spaces to sync
+
+- **Add a space:** in **Add a space**, select a space and click **Add**. Everything in a space you add syncs to Endgame.
+- **Remove a space:** in **Linked spaces**, open the ⋮ menu next to the space and click **Remove space**. Endgame stops syncing it.
+
+{/* SCREENSHOT: retake. State image of the Confluence page with Add a space and Linked spaces showing one or two spaces. */}
+<Frame caption="Linked spaces lists the Confluence spaces Endgame syncs, and who linked each one.">
+  <img
+    src="/images/confluence-management-12-24-25.png"
+    alt="Confluence page with a space picker, an Add button, and a list of linked spaces"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Find Confluence content in Knowledge
+
+Synced pages appear in [**Settings** > **Organization** > **Knowledge**](https://app.endgame.io/settings/knowledge). Each space is listed as a folder, with its pages inside. To change which spaces sync, use the Confluence page, not Knowledge.
+
+{/* SCREENSHOT: retake. Signpost image of the Knowledge page with a Confluence space folder in the list. */}
+<Frame caption="Each synced Confluence space appears as a folder on the Knowledge page.">
+  <img
+    src="/images/confluence-in-knowledge-12-24-25.png"
+    alt="Knowledge page listing a Confluence space as a folder with its number of files"
+    className="rounded-lg"
+  />
+</Frame>
+
+To learn more about managing knowledge, see [Import documents](/knowledge/file-upload).
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Confluence page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** takes you to Confluence's sign-in page to renew Endgame's access.
+- **Disconnect** stops syncing your linked spaces from Confluence.
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).
