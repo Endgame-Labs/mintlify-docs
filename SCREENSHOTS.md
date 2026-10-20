@@ -30,6 +30,15 @@ All sizes are the **viewport** (the page area, not the browser window) in CSS pi
 - **CleanShot:** use region capture (⌘⇧4, then drag). Window capture (⌘⇧4, then Space) adds 240 px of wallpaper on every side, so use it only when the whole window is the point.
 - **Chrome:** collapse the vertical tab sidebar while capturing. If it's open, it takes about 240 px, so window width = viewport + 240. Check the viewport with the ruler: https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX. Inside the artifact viewer it reads a little narrower than the real viewport.
 
+### Capturing as an agent (Claude in Chrome)
+
+The Chrome tool's own screenshots are 1×, so don't use them in the docs. Instead:
+
+1. Keep the tab in its own window and in front. A background tab reports a stale 850 × 1241.
+2. Resize the window to the target viewport plus the interface (outer minus inner size). Then measure the subject with `getBoundingClientRect()` and adjust until it's 650–700 px wide.
+3. Find the window's ID (CGWindowList, matched on `screenX`/`screenY`/`outerWidth`/`outerHeight`) and run `screencapture -x -o -l<id> out.png`. That captures the window at 2× with no shadow, even if something overlaps it.
+4. Crop: the page starts at (outerWidth − innerWidth, outerHeight − innerHeight) inside the window. Multiply everything by 2 and leave a 14 px margin (CSS) around the subject. Check the edges for a neighbouring element's border.
+
 ## 4. Highlights
 
 Rarely needed. A good crop usually does the job.
@@ -62,5 +71,5 @@ The leading option is a dimmed aurora background on a fixed-width canvas. It kee
 
 ## Open items on this branch
 
-- **Digests** (`features/digests.mdx`): done, except retaking `digest-card-menu-10-20-26.png` (a rough hand crop) at the final capture settings. `edit-digest-10-16-26.png` is no longer used.
+- **Digests** (`features/digests.mdx`): done. `digest-card-menu-10-20-26.png` was retaken at an 860 px viewport (card 670 px). `edit-digest-10-16-26.png` is no longer used.
 - **Consistency pass** over every Settings page: bold `>` path format, and captions as full sentences.
