@@ -14,10 +14,43 @@ Each screenshot does one of three jobs. The job decides what to capture and how 
 
 When choosing an image, prefer one that answers several things on the page at once. For example, one open overflow menu can show edit, run and delete together.
 
+## Does it need an image at all?
+
+Screenshots go stale, screen readers can't read them, and every one is something to keep up to date. Add one only when text can't do the job as well.
+
+- **A labelled button or link usually needs no image.** Say where it is in the text: "At the top right of the Digests page, click **New digest**." An isolated button doesn't help people find it, because it has lost the page around it.
+- **Show what an action opens, not the control that opens it.** For example, show the New digest form (a State image), not the New digest button.
+- **Isolate something only when it's hard to find or hard to describe**, like an unlabelled icon or a control that only appears on hover. Even then, keep enough surrounding context to show where it lives (see the digest card menu).
+
+## Writing around images
+
+- **Say where, then what:** "On the digest card, click the toggle." "In **Settings** > **You** > **Digests**, click **New digest**."
+- **Start steps with a verb.** Use a numbered list for three or more steps, and a sentence or bullets for one or two.
+- **Paths:** write **Settings** > **You** > **Digests**, with the names bold and the `>` plain. Don't use `→`. Always include the group (You, Organization or Developers).
+- **UI names in bold**, spelled exactly as they appear in the app ("Run digest", not "Run now", if that's what the menu says).
+- **Headings name the task:** "Create a digest", "Manage a digest", not "Digest creation".
+- **No text inside images.** Explanations go in the caption or the page text.
+- **Tone:** plain and friendly, the way a helpful teammate would explain it. Not clinical, not cute.
+
 ## Captions and alt text
 
-- **Captions** are for sighted readers. They match the image's job (see the table).
-- **Alt text** describes what's in the image for screen readers. Lead with the thing the image is there to show.
+- **Captions** are for sighted readers. They match the image's job (see the table) and are written as plain sentences. Don't say "the image above".
+- **Alt text** describes what's in the image for screen readers. Lead with the thing the image is there to show, and keep it under 155 characters. If the image only repeats steps already in the text, alt text can be empty (`alt=""`).
+
+## Highlights
+
+Use them rarely. A good crop usually does the job.
+
+- **One style:** a single arrow or a rounded outline in **`#b5455d`** (Terminus `red.600`, the red solid background). It's the same in light and dark mode.
+- **Arrow line 3 px, outline 2 px** at 1× (6 px and 4 px in a 2× file).
+- **One highlight per image.** If you need two, it's probably two images or a numbered list.
+- No blur, glow, spotlight or dimming effects.
+
+## Files
+
+- PNG, not JPEG (UI text stays sharp).
+- Aim for about 500 KB or less after compression. If one is much bigger, it's usually too much UI or the wrong format.
+- Use realistic demo data, never lorem ipsum or real customer data. Hide anything personal with a solid block, not a blur.
 
 ## Width (rough guess, revisit after the Settings update)
 
