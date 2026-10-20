@@ -63,7 +63,17 @@ Rarely needed. A good crop usually does the job.
 
 - PNG, about 500 KB or less.
 - Name: `what-it-shows-MM-DD-YY.png`.
-- Hide anything personal with a solid block, not a blur.
+
+## 7. Never show secrets or confidential info
+
+Check every image before committing it. These must never appear, not even partly or masked with dots:
+
+- API keys, client secrets, tokens, passwords, private keys, or webhook URLs.
+- Tenant, instance or account identifiers, like a Salesforce instance URL, a Snowflake account ID or a Seismic tenant.
+- Customer names, deal data, or anything from a real customer's records.
+- People's names and emails, unless they're demo data. This includes "Connected … by [name]" in the Connection section.
+
+To show a credentials dialog, capture it **empty**. Never type real values to make a screenshot. Hide anything else with a solid block, not a blur. If you're unsure, leave it out and ask.
 
 ## Framing (not decided yet)
 
