@@ -14,38 +14,40 @@ Add a screenshot only when text can't do the job as well. Screenshots go stale, 
 
 | Job | Shows | Capture | Caption |
 |---|---|---|---|
-| **Signpost** | Where you are or what to look for. A whole page or just part of one. | Only enough to recognise the spot. | A short phrase naming it: "The Connection section of an integration" |
-| **State** | How something looks in one condition: empty, filled, connected, error. | The component in that state. | A short phrase naming the state: "A connected integration" |
-| **Instruction** | An action hidden behind a click or hover (menu, dropdown, hover button). | The control already open. | An instruction: "Use the ⋮ menu on a digest card to run, edit, or delete it" |
+| **Signpost** | Where you are or what to look for. A whole page or just part of one. | Only enough to recognise the spot. | Say what the reader is looking at: "The Digests page lists your digests and when each one runs next." |
+| **State** | How something looks in one condition: empty, filled, connected, error. | The component in that state. | Say what the state means: "A connected integration shows who connected it and when." |
+| **Instruction** | An action hidden behind a click or hover (menu, dropdown, hover button). | The control already open. | Say what to do: "Use the ⋮ menu on a digest card to run, edit, or delete it." |
 
 ## 3. Capture
 
 All sizes are the **viewport** (the page area, not the browser window) in CSS pixels. Image files are twice that, because we capture at 2× on Retina.
 
-- **Viewport:** set it so the UI you're capturing is about **650–700 px wide**. The docs column is 441–648 px wide and stretches every image to fit, so this width shows at about real size. Reference: `digest-card-menu-10-20-26.png`.
-- **Crop:** the subject plus enough of its surroundings to show where it lives, like a menu inside its card. Zoom in tighter only when the subject would be too small to see in context. Leave out the dimmed backdrop behind dialogs.
+- **Viewport:** set it so the UI you're capturing is about **650–700 px wide**. The docs column is 441–648 px wide and stretches every image to fit, so this width shows at about real size. Reference: `digest-card-menu-10-20-26.png`. For wide pages, narrow the browser so the UI reflows to that width. Don't capture a wide layout and let it shrink.
+- **Crop:** the subject plus enough of its surroundings to show where it lives, like a menu inside its card. Zoom in tighter only when the subject would be too small to see in context, such as an unlabelled icon or a control that only appears on hover. Leave out the dimmed backdrop behind dialogs.
+- **Tall pages:** capture the top of the page plus the relevant card or section, not the whole scrolling list.
 - **Never scale an image up.**
 - **App state:** dark mode, demo org, realistic demo data (never lorem ipsum or real customer data), internal dev bar off.
 - **CleanShot:** use region capture (⌘⇧4, then drag). Window capture (⌘⇧4, then Space) adds 240 px of wallpaper on every side, so use it only when the whole window is the point.
-- **Chrome:** the vertical tab sidebar takes about 240 px, so window width = viewport + 240. Check the viewport with the ruler: https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX.
+- **Chrome:** collapse the vertical tab sidebar while capturing. If it's open, it takes about 240 px, so window width = viewport + 240. Check the viewport with the ruler: https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX. Inside the artifact viewer it reads a little narrower than the real viewport.
 
 ## 4. Highlights
 
 Rarely needed. A good crop usually does the job.
 
-- One per image: an arrow (3 px line) or a rounded outline (2 px). Double both in 2× files.
+- One per image: an arrow (3 px line) or a rounded outline (2 px). Double both in 2× files. If you need two, use two images or a numbered list.
 - Colour **`#b5455d`** (Terminus `red.600`, the red solid background) in light and dark mode.
-- No blur, glow, spotlight, dimming or text inside the image.
+- No blur, glow, spotlight or dimming.
+- No text inside the image. Explanations go in the caption or the page text.
 
 ## 5. Write the text around it
 
 - **Say where, then what:** "On the digest card, click the toggle."
-- **Start steps with a verb.** Use a numbered list for three or more steps.
+- **Start steps with a verb.** Use a numbered list for three or more steps, and a sentence or bullets for one or two.
 - **UI names** in bold, spelled exactly as they appear in the app.
 - **Paths:** **Settings** > **You** > **Digests**, with each name bold and the `>` plain. Never `→`. Always include the group: You, Organization or Developers.
 - **Headings** name the task: "Create a digest", not "Digest creation".
 - **Tone:** plain and friendly, like a helpful teammate. Not clinical, not cute.
-- **Captions** follow the job table. Never say "the image above".
+- **Captions** are one full sentence ending in a period, worded for the image's job (see the table). Never say "the image above".
 - **Alt text** is always required. Under 155 characters, leading with what the image is there to show.
 
 ## 6. Files
@@ -61,4 +63,4 @@ The leading option is a dimmed aurora background on a fixed-width canvas. It kee
 ## Open items on this branch
 
 - **Digests** (`features/digests.mdx`): done, except retaking `digest-card-menu-10-20-26.png` (a rough hand crop) at the final capture settings. `edit-digest-10-16-26.png` is no longer used.
-- **Paths:** apply the bold `>` path format to every Settings page in the consistency pass.
+- **Consistency pass** over every Settings page: bold `>` path format, and captions as full sentences.
