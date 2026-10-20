@@ -1,82 +1,64 @@
-# Screenshot guide
+# Docs screenshot guide
 
-Working decisions for docs.endgame.io screenshots. We're testing these on the Settings update (Linear project "Docs: settings update"), which covers 37 pages and 110 of the 136 images in use. Once they hold up there, we'll apply them to the rest of the docs.
+Rules for screenshots on docs.endgame.io and the text around them. We're testing them on the Settings update (Linear: "Docs: settings update", 37 pages, 110 of the 136 images in use) before applying them to the rest of the docs.
 
-## Pick the image's job first
+## 1. Decide if it needs an image
 
-Each screenshot does one of three jobs. The job decides what to capture and how to write the caption.
+Add a screenshot only when text can't do the job as well. Screenshots go stale, and screen readers can't read them.
 
-| Job | What it shows | Capture | Caption |
+- A labelled button or link needs no image. Say where it is: "At the top right of the page, click **New digest**."
+- Show what an action opens (the New digest form), not the control that opens it.
+- Prefer one image that answers several things, like a card's menu showing Run digest, Edit and Delete.
+
+## 2. Pick the image's job
+
+| Job | Shows | Capture | Caption |
 |---|---|---|---|
-| **Signpost** | "You're in the right place." Helps the reader find where they are, or what to look for. It can be a whole page or just part of one, like a section, a panel or one integration's Connection area. | Only as much as the reader needs to recognise the spot, at rest. Don't crop to the full page by default. | Name the place or the thing: "Settings > You > Digests", "The Connection section on an integration's page". |
-| **State** | What something looks like in a given condition: empty form, filled form, connected, error, confirmation. | The component in that state, filled with realistic demo data. | Name the state: "A connected integration, with Update credentials and Disconnect". |
-| **Instruction** | An action that isn't obvious from the page, especially one hidden behind a click or hover, like a "…" menu, a hover action or a dropdown. | The control already opened, so the hidden part is visible. | Say what to do: "Open the … menu on a digest to edit, run or delete it". |
+| **Signpost** | Where you are or what to look for. A whole page or just part of one. | Only enough to recognise the spot. | A short phrase naming it: "The Connection section of an integration" |
+| **State** | How something looks in one condition: empty, filled, connected, error. | The component in that state. | A short phrase naming the state: "A connected integration" |
+| **Instruction** | An action hidden behind a click or hover (menu, dropdown, hover button). | The control already open. | An instruction: "Use the ⋮ menu on a digest card to run, edit, or delete it" |
 
-When choosing an image, prefer one that answers several things on the page at once. For example, one open overflow menu can show edit, run and delete together.
+## 3. Capture
 
-## Does it need an image at all?
+All sizes are the **viewport** (the page area, not the browser window) in CSS pixels. Image files are twice that, because we capture at 2× on Retina.
 
-Screenshots go stale, screen readers can't read them, and every one is something to keep up to date. Add one only when text can't do the job as well.
+- **Viewport:** set it so the UI you're capturing is about **650–700 px wide**. The docs column is 441–648 px wide and stretches every image to fit, so this width shows at about real size. Reference: `digest-card-menu-10-20-26.png`.
+- **Crop:** the subject plus enough of its surroundings to show where it lives, like a menu inside its card. Zoom in tighter only when the subject would be too small to see in context. Leave out the dimmed backdrop behind dialogs.
+- **Never scale an image up.**
+- **App state:** dark mode, demo org, realistic demo data (never lorem ipsum or real customer data), internal dev bar off.
+- **CleanShot:** use region capture (⌘⇧4, then drag). Window capture (⌘⇧4, then Space) adds 240 px of wallpaper on every side, so use it only when the whole window is the point.
+- **Chrome:** the vertical tab sidebar takes about 240 px, so window width = viewport + 240. Check the viewport with the ruler: https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX.
 
-- **A labelled button or link usually needs no image.** Say where it is in the text: "At the top right of the Digests page, click **New digest**." An isolated button doesn't help people find it, because it has lost the page around it.
-- **Show what an action opens, not the control that opens it.** For example, show the New digest form (a State image), not the New digest button.
-- **Isolate something only when it's hard to find or hard to describe**, like an unlabelled icon or a control that only appears on hover. Even then, keep enough surrounding context to show where it lives (see the digest card menu).
+## 4. Highlights
 
-## Writing around images
+Rarely needed. A good crop usually does the job.
 
-- **Say where, then what:** "On the digest card, click the toggle." "In **Settings** > **You** > **Digests**, click **New digest**."
-- **Start steps with a verb.** Use a numbered list for three or more steps, and a sentence or bullets for one or two.
-- **Paths:** write **Settings** > **You** > **Digests**, with the names bold and the `>` plain. Don't use `→`. Always include the group (You, Organization or Developers).
-- **UI names in bold**, spelled exactly as they appear in the app ("Run digest", not "Run now", if that's what the menu says).
-- **Headings name the task:** "Create a digest", "Manage a digest", not "Digest creation".
-- **No text inside images.** Explanations go in the caption or the page text.
-- **Tone:** plain and friendly, the way a helpful teammate would explain it. Not clinical, not cute.
+- One per image: an arrow (3 px line) or a rounded outline (2 px). Double both in 2× files.
+- Colour **`#b5455d`** (Terminus `red.600`, the red solid background) in light and dark mode.
+- No blur, glow, spotlight, dimming or text inside the image.
 
-## Captions and alt text
+## 5. Write the text around it
 
-- **Captions** are for sighted readers. They match the image's job (see the table) and are written as plain sentences. Don't say "the image above".
-- **Alt text** describes what's in the image for screen readers. Lead with the thing the image is there to show, and keep it under 155 characters. If the image only repeats steps already in the text, alt text can be empty (`alt=""`).
+- **Say where, then what:** "On the digest card, click the toggle."
+- **Start steps with a verb.** Use a numbered list for three or more steps.
+- **UI names** in bold, spelled exactly as they appear in the app.
+- **Paths:** **Settings** > **You** > **Digests**, with each name bold and the `>` plain. Never `→`. Always include the group: You, Organization or Developers.
+- **Headings** name the task: "Create a digest", not "Digest creation".
+- **Tone:** plain and friendly, like a helpful teammate. Not clinical, not cute.
+- **Captions** follow the job table. Never say "the image above".
+- **Alt text** is always required. Under 155 characters, leading with what the image is there to show.
 
-## Highlights
+## 6. Files
 
-Use them rarely. A good crop usually does the job.
-
-- **One style:** a single arrow or a rounded outline in **`#b5455d`** (Terminus `red.600`, the red solid background). It's the same in light and dark mode.
-- **Arrow line 3 px, outline 2 px** at 1× (6 px and 4 px in a 2× file).
-- **One highlight per image.** If you need two, it's probably two images or a numbered list.
-- No blur, glow, spotlight or dimming effects.
-
-## Files
-
-- PNG, not JPEG (UI text stays sharp).
-- Aim for about 500 KB or less after compression. If one is much bigger, it's usually too much UI or the wrong format.
-- Use realistic demo data, never lorem ipsum or real customer data. Hide anything personal with a solid block, not a blur.
-
-## Width (rough guess, revisit after the Settings update)
-
-**Convention:** every dimension in this guide is the **viewport** (the page area inside the browser) in CSS pixels, unless it says otherwise. A "1440 px capture" means a 1440 px viewport, not a 1440 px window. The image file is twice that at 2× (Retina).
-
-The docs stretch every image to fill the content column. On desktop that column is **441–648 px wide** (CSS px, measured on the local preview at 1280, 1440 and 1920 px viewport widths). So:
-
-- **Aim for about 650–700 px of UI (1300–1400 px at 2×).** It then shows at roughly its real size, so text on the page matches what people see in the app. `digest-card-menu-10-20-26.png` (1418 px) is the reference.
-- **Wider captures shrink.** A 1,972 px users table shows at about 60%, which makes small text hard to read. Narrow the browser so the UI reflows to about 700 px, rather than capturing a wide layout and letting it shrink.
-- **Narrower captures get blown up.** A 542 px zoomed-in crop is stretched about 2.4×, so it looks huge and soft. Put small crops on the fixed-width canvas instead of letting them stretch (see Framing).
-- **Prefer context over zoom.** For a menu or button, show it inside its card or section (like the digest card with its menu open). Zoom in tighter only when the control would be too small to see in context, such as one icon on a busy page.
-- **Tall captures:** a full Settings window with a list is very tall. Usually a Signpost of the top of the page plus the relevant card is enough.
-
-## Capture
-
-- Dark mode, demo org, 2× (Retina). Turn off the internal dev bar.
-- Use the region capture (⌘⇧4, then drag). It has no background, so the framing script adds one later. Window capture (⌘⇧4, then Space) includes the desktop wallpaper, so use it only when the whole window is the point. At the current CleanShot setting, window capture adds 240 px of wallpaper on every side at 2× (120 pt), with the window shadow inside that border.
-- Set the **viewport** to the size you want, not the window (see the convention above). Chrome's vertical tab sidebar takes about 240 px, so a window 1680 px wide gives a viewport of about 1440 px. Collapse the sidebar while capturing, or account for it. To check the viewport, open the ruler page (https://claude.ai/artifact/9hjDA6WbugYUp5a1N3Z2DX). Inside the artifact viewer it reads the frame's width, which is slightly narrower than the viewport.
-- Crop to the thing being explained. Leave out the dimmed backdrop behind dialogs.
-- Never scale up.
-- Name files `what-it-shows-MM-DD-YY.png`.
+- PNG, about 500 KB or less.
+- Name: `what-it-shows-MM-DD-YY.png`.
+- Hide anything personal with a solid block, not a blur.
 
 ## Framing (not decided yet)
 
-The options are compared at https://claude.ai/artifact/2B94ydFuSxPjqeoPv5vZcU. The leading option is a quiet, dimmed aurora background on a fixed-width canvas, so on-page scale stays consistent. Third-party screens like Microsoft or Notion sign-in stay unframed.
+The leading option is a dimmed aurora background on a fixed-width canvas. It keeps on-page scale consistent, so small crops don't get stretched. Third-party screens like Microsoft or Notion sign-in stay unframed. Options: https://claude.ai/artifact/2B94ydFuSxPjqeoPv5vZcU. Until this is decided, commit plain captures.
 
 ## Open items on this branch
 
-- **Digests** (`features/digests.mdx`): done. The new "Manage a digest" section covers the toggle, editing, Run digest and Delete. It uses `digest-card-menu-10-20-26.png`, a rough hand crop to retake at the final capture settings. `edit-digest-10-16-26.png` is no longer used.
+- **Digests** (`features/digests.mdx`): done, except retaking `digest-card-menu-10-20-26.png` (a rough hand crop) at the final capture settings. `edit-digest-10-16-26.png` is no longer used.
+- **Paths:** apply the bold `>` path format to every Settings page in the consistency pass.
