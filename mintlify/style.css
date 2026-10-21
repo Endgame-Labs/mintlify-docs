@@ -316,6 +316,31 @@ pre {
   color: var(--eg-fg-secondary);
 }
 
+/* Icon rows: short link or checklist rows led by a nav-style icon instead
+   of an emoji bullet. Usage: <div className="eg-icon-list"><div><Icon … />
+   <span>…</span></div></div>. Add eg-icon-list--done for green checks. */
+.prose .eg-icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin: 1.25rem 0;
+}
+
+.prose .eg-icon-list > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.prose .eg-icon-list svg[style*="mask"] {
+  flex-shrink: 0;
+  background-color: var(--eg-fg-muted) !important;
+}
+
+.prose .eg-icon-list--done svg[style*="mask"] {
+  background-color: var(--eg-status-tip) !important;
+}
+
 /* Changelog <Update> labels read as the site's kicker, not a blue pill. */
 .update [data-component-part="update-label"] {
   background-color: var(--eg-surface) !important;
