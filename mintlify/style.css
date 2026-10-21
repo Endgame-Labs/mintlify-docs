@@ -45,7 +45,8 @@
   /* ---- Semantic (dark is the default; the site ships dark only) ----- */
 
   --eg-bg: var(--eg-gray-900);
-  --eg-surface: var(--eg-gray-850); /* cards, code, panels */
+  --eg-surface: var(--eg-gray-850); /* cards, panels, inline code */
+  --eg-surface-sunken: var(--eg-gray-925); /* terminus bg.subtle: code blocks, a well below the page */
   --eg-surface-lifted: var(--eg-gray-800);
 
   --eg-fg: var(--eg-gray-200);
@@ -53,8 +54,8 @@
   --eg-fg-secondary: var(--eg-gray-400);
   --eg-fg-muted: var(--eg-gray-500);
 
-  --eg-border: rgb(207 213 224 / 0.09);
-  --eg-border-emphasized: rgb(207 213 224 / 0.14);
+  --eg-border-muted: rgb(207 213 224 / 0.05); /* terminus border.muted: every resting line */
+  --eg-border: rgb(207 213 224 / 0.09); /* terminus border: a hovered edge */
 
   --eg-hover: rgb(207 213 224 / 0.09);
   --eg-active: rgb(207 213 224 / 0.14);
@@ -99,6 +100,7 @@
 html.light {
   --eg-bg: #ffffff;
   --eg-surface: var(--eg-gray-50);
+  --eg-surface-sunken: #f5f6fa; /* terminus light bg.subtle (gray-100 at 85%) flattened onto white, so the copy-button fade stays opaque */
   --eg-surface-lifted: var(--eg-gray-100);
 
   --eg-fg: var(--eg-gray-900);
@@ -107,8 +109,8 @@ html.light {
   /* terminus's light fg.muted; gray-500 is under AA on white at kicker size. */
   --eg-fg-muted: var(--eg-gray-600);
 
-  --eg-border: rgb(14 20 32 / 0.09);
-  --eg-border-emphasized: rgb(14 20 32 / 0.14);
+  --eg-border-muted: rgb(14 20 32 / 0.05); /* terminus border.muted: every resting line */
+  --eg-border: rgb(14 20 32 / 0.09); /* terminus border: a hovered edge */
 
   --eg-hover: rgb(14 20 32 / 0.06);
   --eg-active: rgb(14 20 32 / 0.08);
@@ -218,7 +220,7 @@ pre {
 }
 
 .prose :where(hr):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  border-color: var(--eg-border);
+  border-color: var(--eg-border-muted);
 }
 
 /* Links in body copy: the site's treatment. Text stays the reading colour,
@@ -286,7 +288,7 @@ pre {
 #navbar > .border-gray-100,
 #navbar .border-b {
   border-bottom: 0 !important;
-  box-shadow: 0 1px 0 0 var(--eg-border);
+  box-shadow: 0 1px 0 0 var(--eg-border-muted);
 }
 
 .navbar-link > a {
@@ -335,13 +337,13 @@ pre {
 #search-bar-entry-mobile {
   background-color: var(--eg-surface);
   border: 0;
-  box-shadow: inset 0 0 0 1px var(--eg-border);
+  box-shadow: inset 0 0 0 1px var(--eg-border-muted);
   border-radius: 0.5rem;
   color: var(--eg-fg-secondary);
 }
 
 #search-bar-entry:hover {
-  box-shadow: inset 0 0 0 1px var(--eg-border-emphasized);
+  box-shadow: inset 0 0 0 1px var(--eg-border);
 }
 
 .topbar-right-container button[aria-label="Toggle dark mode"] {
@@ -355,7 +357,7 @@ pre {
    ========================================================================== */
 
 #sidebar-content {
-  border-right: 1px solid var(--eg-border);
+  border-right: 1px solid var(--eg-border-muted);
 }
 
 .sidebar-group-header {
@@ -367,8 +369,11 @@ pre {
   color: var(--eg-fg-muted);
 }
 
+/* The divider is a 1px-tall element drawn by its background (Mintlify's
+   white/10), not a border. */
 .sidebar-nav-group-divider {
-  border-bottom: 1px solid var(--eg-border);
+  background-color: var(--eg-border-muted) !important;
+  border: 0;
 }
 
 /* Rows: quiet at rest, a grey tint on hover, a stronger tint when selected.
@@ -410,7 +415,7 @@ pre {
 
 #table-of-contents .toc-item,
 #table-of-contents .toc-item > a {
-  border-left-color: var(--eg-border) !important;
+  border-left-color: var(--eg-border-muted) !important;
 }
 
 #table-of-contents .toc-item > a {
@@ -456,7 +461,7 @@ pre {
   background-color: var(--eg-surface) !important;
   border: 0 !important;
   border-radius: var(--rounded-3xl);
-  box-shadow: inset 0 0 0 1px var(--eg-border);
+  box-shadow: inset 0 0 0 1px var(--eg-border-muted);
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -469,7 +474,7 @@ pre {
 a.card:hover,
 a.card:focus-visible {
   background-color: var(--eg-card-hover) !important;
-  box-shadow: inset 0 0 0 1px var(--eg-border-emphasized);
+  box-shadow: inset 0 0 0 1px var(--eg-border);
 }
 
 .card[role="link"]:active,
@@ -498,7 +503,7 @@ a.card:active {
    reader chooses by, so it gets the space. */
 #pagination {
   margin-top: 4rem;
-  border-top: 1px solid var(--eg-border);
+  border-top: 1px solid var(--eg-border-muted);
   column-gap: 2.5rem;
   row-gap: 0;
 }
@@ -594,7 +599,7 @@ a.card:active {
 
 @media (max-width: 1023px) {
   #pagination > a + a {
-    border-top: 1px solid var(--eg-border) !important;
+    border-top: 1px solid var(--eg-border-muted) !important;
   }
 }
 
@@ -608,7 +613,7 @@ a.card:active {
   background-color: var(--eg-callout-bg) !important;
   border: 0 !important;
   border-radius: 0.5rem;
-  box-shadow: inset 0 0 0 1px var(--eg-border);
+  box-shadow: inset 0 0 0 1px var(--eg-border-muted);
 }
 
 .callout,
@@ -634,15 +639,75 @@ a.card:active {
 
 .code-block,
 .code-group {
-  background-color: var(--eg-surface) !important;
-  border-color: var(--eg-border) !important;
+  background-color: var(--eg-surface-sunken) !important;
+  border-color: var(--eg-border-muted) !important;
 }
 
 /* Mintlify paints its own near-black (`bg-codeblock`) inside the frame. */
+/* `html.dark .code-block-background` paints the Shiki theme's own background
+   with !important, so this needs the extra specificity to keep the frame on
+   the Endgame surface whatever theme is set. */
 .code-block pre,
 .code-group pre,
+html .code-block .code-block-background,
+html .code-group .code-block-background,
 .code-block [class*="bg-codeblock"],
 .code-group [class*="bg-codeblock"] {
+  background-color: transparent !important;
+}
+
+/* Night Owl (styling.codeblocks in docs.json) draws comments in #637777 and
+   punctuation in #5f7e97, 4.05:1 and 4.49:1 on the code surface: just under
+   AA. Both move to gray-500 (4.75:1), the nearest Endgame grey to each.
+   Shiki writes each token's dark colour inline as --shiki-dark. */
+.shiki span[style*="--shiki-dark: #637777" i],
+.shiki span[style*="--shiki-dark:#637777" i],
+.shiki span[style*="--shiki-dark: #5f7e97" i],
+.shiki span[style*="--shiki-dark:#5f7e97" i] {
+  --shiki-dark: var(--eg-gray-500) !important;
+}
+
+/* Sharing a colour, comments need Night Owl's italic to stay distinct from
+   punctuation, and Mintlify drops Shiki's dark font styles. */
+html.dark .shiki span[style*="--shiki-dark: #637777" i],
+html.dark .shiki span[style*="--shiki-dark:#637777" i] {
+  font-style: italic;
+}
+
+/* The fade that lets long lines run under the copy button. Mintlify draws it
+   in its own near-black; redraw it in the code surface with the same stops. */
+.code-block-fade-overlay {
+  background-image: linear-gradient(
+    to right,
+    transparent 0px,
+    color-mix(in srgb, var(--eg-surface-sunken) 20%, transparent) 10px,
+    color-mix(in srgb, var(--eg-surface-sunken) 50%, transparent) 25px,
+    color-mix(in srgb, var(--eg-surface-sunken) 80%, transparent) 35px,
+    var(--eg-surface-sunken) 45px
+  ) !important;
+}
+
+/* Scrollbar thumbs in code blocks and the sidebar use Mintlify's neutral
+   greys; terminus draws them as a light tint at 12%, 28% on hover. */
+[data-component-part="scroll-area-thumb"] {
+  background-color: rgb(255 255 255 / 0.12) !important;
+}
+
+[data-component-part="scroll-area-thumb"]:hover,
+[data-component-part="scroll-area-thumb"]:active {
+  background-color: rgb(255 255 255 / 0.28) !important;
+}
+
+html.light [data-component-part="scroll-area-thumb"] {
+  background-color: rgb(0 0 0 / 0.12) !important;
+}
+
+html.light [data-component-part="scroll-area-thumb"]:hover,
+html.light [data-component-part="scroll-area-thumb"]:active {
+  background-color: rgb(0 0 0 / 0.28) !important;
+}
+
+[data-component-part="scroll-area-scrollbar"] {
   background-color: transparent !important;
 }
 
@@ -651,17 +716,17 @@ a.card:active {
    ========================================================================== */
 
 .step > div.w-px {
-  background-color: var(--eg-border) !important;
+  background-color: var(--eg-border-muted) !important;
 }
 
 .step > div.w-px.to-transparent {
   background-color: transparent !important;
-  background-image: linear-gradient(to bottom, var(--eg-border) 0%, transparent 100%);
+  background-image: linear-gradient(to bottom, var(--eg-border-muted) 0%, transparent 100%);
 }
 
 .accordion,
 .border-standard {
-  border-color: var(--eg-border) !important;
+  border-color: var(--eg-border-muted) !important;
 }
 
 .accordion {
@@ -673,7 +738,7 @@ a.card:active {
 }
 
 .tabs ul {
-  border-color: var(--eg-border) !important;
+  border-color: var(--eg-border-muted) !important;
 }
 
 .frame {
@@ -681,7 +746,17 @@ a.card:active {
   margin-bottom: 2rem;
   background-color: var(--eg-surface) !important;
   border: 0 !important;
-  box-shadow: inset 0 0 0 1px var(--eg-border);
+  box-shadow: inset 0 0 0 1px var(--eg-border-muted);
+}
+
+/* Mintlify's inner hairline over images in a frame. */
+.frame [class*="border-black/5"] {
+  border-color: var(--eg-border-muted) !important;
+}
+
+/* The floating "ask AI" input that docks at the bottom of a page. */
+.chat-assistant-floating-input [class*="pointer-events-auto"][class*="border"] {
+  border-color: var(--eg-border-muted) !important;
 }
 
 /* ==========================================================================
@@ -694,11 +769,11 @@ a.card:active {
 }
 
 .prose :where(thead) {
-  border-bottom-color: var(--eg-border) !important;
+  border-bottom-color: var(--eg-border-muted) !important;
 }
 
 .prose :where(tbody tr) {
-  border-bottom-color: var(--eg-border) !important;
+  border-bottom-color: var(--eg-border-muted) !important;
 }
 
 /* ==========================================================================
@@ -706,5 +781,5 @@ a.card:active {
    ========================================================================== */
 
 #footer {
-  border-top: 1px solid var(--eg-border);
+  border-top: 1px solid var(--eg-border-muted);
 }
