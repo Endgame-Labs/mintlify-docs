@@ -88,10 +88,12 @@
   --gray-900: 14 20 32;
   --gray-950: 4 8 16;
 
-  /* Radii: 8px for controls and rows (the site's rounded-lg), 16px for cards
-     (rounded-2xl). Mintlify's 2xl is used by code blocks and accordions. */
+  /* Radii follow the site's two steps: 8px (rounded-lg) for controls, rows,
+     code blocks, callouts, accordions and frames; 16px (rounded-2xl) for
+     cards. Mintlify's 2xl drives code blocks, accordions and frames, so it
+     drops to 8px too; cards set 3xl explicitly. */
   --rounded-xl: 0.5rem;
-  --rounded-2xl: 0.75rem;
+  --rounded-2xl: 0.5rem;
   --rounded-3xl: 1rem;
   --rounded-full: 9999px;
   --rounded-search: 0.5rem;
@@ -331,6 +333,21 @@ pre {
 #topbar-cta-button > a,
 #topbar-cta-button > a * {
   color: var(--eg-gray-900) !important;
+}
+
+/* On a white page the grey plate reads as disabled, so light mode inverts it:
+   a dark plate with light text. */
+html.light #topbar-cta-button > a {
+  background: var(--eg-gray-900);
+}
+
+html.light #topbar-cta-button > a:hover {
+  background: var(--eg-gray-800);
+}
+
+html.light #topbar-cta-button > a,
+html.light #topbar-cta-button > a * {
+  color: var(--eg-gray-50) !important;
 }
 
 #search-bar-entry,
