@@ -18,10 +18,10 @@ Use the instructions below to enable the Snowflake integration in Endgame. Once 
 
     ```text
     # Generate a private key (PKCS8 format, unencrypted)
-     openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out snowflake_key.p8 -nocrypt
+    openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out snowflake_key.p8 -nocrypt
     
-     # Extract the public key
-     openssl rsa -in snowflake_key.p8 -pubout -out snowflake_key.pub
+    # Extract the public key
+    openssl rsa -in snowflake_key.p8 -pubout -out snowflake_key.pub
     ```
 
     This creates two files:

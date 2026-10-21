@@ -16,10 +16,6 @@
       "dark": "#0e1420"
     }
   },
-  "modeToggle": {
-    "default": "dark",
-    "isHidden": true
-  },
   "fonts": {
     "heading": {
       "family": "Inter",

@@ -7,8 +7,8 @@
   - terminus: packages/tokens/src/colors.ts and packages/theme/src/semantic-tokens.ts.
 
   Grays are the Endgame greys (one hue all the way down, so it never drifts
-  violet the way slate does). Blue is the accent only: links, focus, the tab
-  indicator. Borders and hover fills are tints of gray.300, not opaque steps,
+  violet the way slate does). Blue is the accent only: links, focus rings,
+  accent text and icons; selected states are neutral. Borders and hover fills are tints of gray.300, not opaque steps,
   so they stay visible on every surface they land on.
 
   The site's film-grain texture is deliberately left out.
@@ -103,11 +103,11 @@ html.light {
   --eg-bg: #ffffff;
   --eg-surface: var(--eg-gray-50);
   --eg-surface-sunken: #f5f6fa; /* terminus light bg.subtle (gray-100 at 85%) flattened onto white, so the copy-button fade stays opaque */
-  --eg-surface-lifted: var(--eg-gray-100);
+  --eg-surface-lifted: var(--eg-gray-200); /* terminus bg.emphasized; gray-100 is the card hover */
 
   --eg-fg: var(--eg-gray-900);
   --eg-fg-strong: var(--eg-gray-950);
-  --eg-fg-secondary: var(--eg-gray-600);
+  --eg-fg-secondary: var(--eg-gray-700); /* terminus text.2; muted stays gray-600 (text.3) */
   /* terminus's light fg.muted; gray-500 is under AA on white at kicker size. */
   --eg-fg-muted: var(--eg-gray-600);
 
@@ -120,7 +120,8 @@ html.light {
   --eg-callout-bg: var(--eg-surface);
   --eg-card-hover: var(--eg-gray-100);
 
-  /* terminus's light-mode *.fg steps, dark enough to read on white. */
+  /* The .600 steps of terminus's status ramps (blue uses .700, its blue.fg),
+     dark enough to read on white. */
   --eg-status-note: var(--eg-blue-700);
   --eg-status-tip: #00875e;
   --eg-status-warning: #a95823;
@@ -133,15 +134,21 @@ html.light {
    Base
    ========================================================================== */
 
+/* Mintlify paints the page colour on a fixed layer, so the canvas behind it
+   (seen on overscroll) would be the browser default. */
+html {
+  background-color: var(--eg-bg);
+}
+
 ::selection {
-  background: color-mix(in srgb, #004d8f 70%, transparent);
+  background: color-mix(in srgb, var(--eg-blue-700) 70%, transparent);
   color: #ffffff;
 }
 
-/* Over white the 70% mix lightens to ~#4d82b1, and white text on it falls
-   under AA (4.07:1). The opaque blue holds 8.5:1. */
+/* Over white the 70% mix lightens and white text on it falls under AA.
+   The opaque blue-700 holds 8.7:1. */
 html.light ::selection {
-  background: #004d8f;
+  background: var(--eg-blue-700);
 }
 
 /* One focus treatment everywhere: a 2px blue ring 2px outside the element. */
@@ -154,8 +161,46 @@ html.light ::selection {
    outside ring, so theirs is drawn inside, as Mintlify intends. */
 #navigation-items a:focus-visible,
 #navigation-items button:focus-visible,
-#table-of-contents a:focus-visible {
+#table-of-contents a:focus-visible,
+#table-of-contents button:focus-visible {
   outline-offset: -2px !important;
+}
+
+/* Other focusable things that fill a clipping container edge to edge, so an
+   outside ring would be cut off. Terminus draws these inside too
+   (accordion.ts, tabs.ts, menu.ts). */
+.accordion > summary:focus-visible,
+.tabs [role="tab"]:focus-visible,
+[role="menu"] [role^="menuitem"]:focus-visible,
+.code-block [tabindex="0"]:focus-visible,
+.code-group [tabindex="0"]:focus-visible,
+#sidebar-content [data-id$="-viewport"]:focus-visible {
+  outline-offset: -2px !important;
+}
+
+.accordion > summary:focus-visible {
+  border-radius: inherit;
+}
+
+.tabs [role="tab"]:focus-visible {
+  border-radius: 0.375rem;
+}
+
+#sidebar-content [data-id$="-viewport"]:focus-visible {
+  border-radius: 0.5rem;
+}
+
+/* Mintlify nudges a focused TOC link 4px left, past the edge of the TOC's
+   scroll viewport, which clips the ring's left side. Keep it in place. */
+#table-of-contents .toc-item > a:focus-visible {
+  margin-left: 0 !important;
+  --toc-focus-padding: 0rem !important;
+}
+
+/* The TOC heading button transitions all colours, so its ring fades in from
+   grey. Only its text and background need to animate. */
+#table-of-contents h2 button {
+  transition-property: color, background-color !important;
 }
 
 code,
@@ -168,7 +213,8 @@ pre {
    Typography
    ========================================================================== */
 
-#page-title {
+#page-title,
+#error-title {
   font-weight: 500;
   letter-spacing: -0.05em;
   line-height: 1.15;
@@ -206,6 +252,12 @@ pre {
   letter-spacing: -0.025em;
   margin-top: 2rem;
   margin-bottom: 1rem;
+}
+
+.prose :where(h4):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .prose :where(p, li):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
@@ -256,6 +308,25 @@ pre {
   text-decoration-thickness: 2px;
 }
 
+/* Terminus's markdown blockquote: a 2px rule in border.emphasized and
+   secondary text, instead of Mintlify's 4px slate bar. */
+.prose :where(blockquote):not(.sr-only) {
+  border-left: 2px solid var(--eg-active) !important;
+  padding-left: 1rem;
+  color: var(--eg-fg-secondary);
+}
+
+/* Changelog <Update> labels read as the site's kicker, not a blue pill. */
+.update [data-component-part="update-label"] {
+  background-color: var(--eg-surface) !important;
+  color: var(--eg-fg-muted) !important;
+  font-family: var(--eg-font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* Inline code: a card-coloured chip with accent text. */
 .prose :where(code):not(:where(pre code, [class~="not-prose"] *)) {
   background: var(--eg-surface);
@@ -298,7 +369,7 @@ pre {
   color: var(--eg-fg);
   font-size: 0.875rem;
   font-weight: 500;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   transition: background-color 0.15s ease;
 }
 
@@ -383,12 +454,6 @@ html.light #topbar-cta-button > a * {
   box-shadow: inset 0 0 0 1px var(--eg-border);
 }
 
-.topbar-right-container button[aria-label="Toggle dark mode"] {
-  border-radius: 0.5rem;
-  height: 36px;
-  width: 36px;
-}
-
 /* ==========================================================================
    Sidebar
    ========================================================================== */
@@ -397,7 +462,8 @@ html.light #topbar-cta-button > a * {
   border-right: 1px solid var(--eg-border-muted);
 }
 
-.sidebar-group-header {
+.sidebar-group-header,
+.sidebar-group-header .sidebar-title {
   font-family: var(--eg-font-mono);
   font-size: 0.75rem;
   font-weight: 400;
@@ -440,6 +506,18 @@ html.light #topbar-cta-button > a * {
   font-weight: 500;
 }
 
+/* The expand chevron on collapsible groups is the only open/closed cue, and
+   Mintlify's grey is under 3:1 in both themes. */
+#navigation-items li > button svg[class*="transition-transform"] {
+  color: var(--eg-fg-muted) !important;
+}
+
+/* Resting row icons: Mintlify's gray-400 is 2.6:1 on white in light mode. */
+#navigation-items li svg[style*="mask"],
+#navigation-items li svg[class*="mask"] {
+  background-color: var(--eg-fg-muted);
+}
+
 /* Sidebar icons are masks painted with background-color. `#navigation-items`
    holds the rows in both the desktop sidebar and the mobile drawer. */
 #navigation-items a[class*="bg-primary"] svg,
@@ -463,9 +541,6 @@ html.light #topbar-cta-button > a * {
 
 #table-of-contents .toc-item > a:hover {
   color: var(--eg-fg);
-}
-
-#table-of-contents .toc-item > a:hover {
   border-left-color: var(--eg-fg-muted) !important;
 }
 
@@ -501,6 +576,19 @@ html.light #topbar-cta-button > a * {
   border-radius: var(--rounded-3xl);
   box-shadow: inset 0 0 0 1px var(--eg-border-muted);
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card icons are decoration, so they stay neutral like the rest of the
+   chrome (blue is for links and focus); they brighten with the card. The
+   icons are masks painted with background-color. */
+.card [data-component-part="card-icon"] svg {
+  background-color: var(--eg-fg-secondary) !important;
+  transition: background-color 0.2s ease;
+}
+
+.card:hover [data-component-part="card-icon"] svg,
+.card:focus-within [data-component-part="card-icon"] svg {
+  background-color: var(--eg-fg-strong) !important;
 }
 
 /* A card with an href renders as a div: `role="link"` before hydration, and
@@ -583,6 +671,11 @@ a.card:active {
   color: var(--eg-fg);
 }
 
+/* The links have no padding, so give the ring room around the text. */
+#pagination > a:focus-visible {
+  outline-offset: 6px !important;
+}
+
 /* The kicker ("Previous" / "Next"), with text arrows in place of chevrons. */
 #pagination > a > div > div:last-child {
   font-family: var(--eg-font-mono);
@@ -623,6 +716,12 @@ a.card:active {
   #pagination > a.justify-end {
     justify-content: flex-start;
   }
+
+  /* The kicker row is row-reverse and as wide as the title, so it would sit
+     at the title's right end. */
+  #pagination > a.justify-end > div > div:last-child {
+    align-self: flex-start;
+  }
 }
 
 /* A lone link takes the whole row, as on the blog. Mintlify leaves an empty
@@ -635,9 +734,12 @@ a.card:active {
   grid-template-columns: minmax(0, 1fr);
 }
 
-@media (max-width: 1023px) {
-  #pagination > a + a {
-    border-top: 1px solid var(--eg-border-muted) !important;
+/* Like the blog's StoryNavigation: two columns from 640px (Mintlify waits
+   until 1024), and no rule between links when they stack. */
+@media (min-width: 640px) {
+  #pagination:has(> a + a) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
   }
 }
 
@@ -660,8 +762,18 @@ a.card:active {
   color: var(--eg-fg) !important;
 }
 
-.callout a {
-  color: var(--eg-fg-strong);
+/* Mintlify forces callout links to currentColor with an !important inside
+   its utilities layer, which outranks any unlayered rule. Painting the text
+   with text-fill-color matches body links without fighting it. */
+.callout [data-component-part="callout-content"] a {
+  -webkit-text-fill-color: var(--eg-fg-strong);
+}
+
+/* Mintlify draws info and warning icons at 20px and tip at 18px in a 16px
+   slot, so they spill toward the text. One size for all. */
+.callout [data-component-part="callout-icon"] svg {
+  width: 1rem !important;
+  height: 1rem !important;
 }
 
 .callout svg { color: var(--eg-fg-secondary) !important; }
@@ -710,6 +822,14 @@ html .code-group .code-block-background,
 html.dark .shiki span[style*="--shiki-dark: #637777" i],
 html.dark .shiki span[style*="--shiki-dark:#637777" i] {
   font-style: italic;
+}
+
+/* GitHub Light's comment grey (#6e7781) is 4.21:1 on the light code surface.
+   Comment spans also carry Night Owl's comment colour, so the same key picks
+   them out; gray-600 holds 6.9:1. */
+html.light .shiki span[style*="--shiki-dark: #637777" i],
+html.light .shiki span[style*="--shiki-dark:#637777" i] {
+  color: var(--eg-gray-600) !important;
 }
 
 /* The fade that lets long lines run under the copy button. Mintlify draws it
@@ -809,9 +929,12 @@ html.light {
   border-bottom-color: var(--eg-fg-strong) !important;
 }
 
+/* A frame is a padded panel like a card, so it takes the card's 16px corner;
+   the 8px image inside then nests (16 minus 8px of padding). */
 .frame {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  border-radius: var(--rounded-3xl) !important;
   background-color: var(--eg-surface) !important;
   border: 0 !important;
   box-shadow: inset 0 0 0 1px var(--eg-border-muted);
@@ -820,6 +943,13 @@ html.light {
 /* Mintlify's inner hairline over images in a frame. */
 .frame [class*="border-black/5"] {
   border-color: var(--eg-border-muted) !important;
+  border-radius: inherit !important;
+}
+
+/* Mintlify paints a faint grid behind framed images. Our cards are plain
+   surfaces, so the frame drops it too. */
+.frame [class*="bg-grid"] {
+  display: none;
 }
 
 /* Image zoom. The expand button on a framed image (shown on keyboard focus)
@@ -833,8 +963,8 @@ button[data-ramka-trigger],
   box-shadow: none !important;
 }
 
-button[data-ramka-trigger]:hover,
-.zoom-image-chrome-pull-hide button:hover {
+button[data-ramka-trigger]:hover:not(:disabled),
+.zoom-image-chrome-pull-hide button:hover:not(:disabled) {
   background-color: var(--eg-surface-lifted) !important;
 }
 
@@ -869,6 +999,70 @@ html.light .chat-assistant-send-button:disabled {
   color: var(--eg-fg-muted) !important;
 }
 
+/* Tooltips (the code copy button's "Copy" / "Copied!") render in a portal
+   at the end of <body>. Terminus's tooltip (tooltip.ts) is a gray.950 chip
+   in dark and gray.300 in light, not blue. */
+[role="tooltip"][class*="bg-primary"] {
+  background-color: var(--eg-gray-950) !important;
+  border-color: var(--eg-border) !important;
+  color: var(--eg-gray-100) !important;
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+
+html.light [role="tooltip"][class*="bg-primary"] {
+  background-color: var(--eg-gray-300) !important;
+  color: var(--eg-gray-950) !important;
+}
+
+/* After copying, the check mark is a success state, not an accent. */
+.code-block button svg[class*="text-primary"],
+.code-group button svg[class*="text-primary"] {
+  color: var(--eg-status-tip) !important;
+}
+
+/* The mobile ⋮ "More actions" panel is a dialog, not a menu, but it floats
+   the same way. */
+[role="dialog"]:has(> nav .navbar-link) {
+  background-color: var(--eg-surface) !important;
+  box-shadow: inset 0 0 0 1px var(--eg-border) !important;
+}
+
+[role="dialog"]:has(> nav .navbar-link) > button {
+  border-radius: 0.5rem;
+  background-color: var(--eg-hover) !important;
+}
+
+[role="dialog"]:has(> nav .navbar-link) nav a,
+[role="dialog"]:has(> nav .navbar-link) nav a * {
+  color: var(--eg-fg-secondary) !important;
+}
+
+[role="dialog"]:has(> nav .navbar-link) nav a:hover,
+[role="dialog"]:has(> nav .navbar-link) nav a:hover * {
+  color: var(--eg-fg-strong) !important;
+}
+
+/* Mintlify brightens a few dark surfaces with CSS filters (the search bar,
+   the heading-anchor chip), which pushes them off the grey ramp. */
+html.dark #search-bar-entry,
+html.dark .prose a.group\/link > div,
+html.dark #content a.group\/link > div {
+  filter: none !important;
+}
+
+/* Heading anchors: Mintlify adds its own blue border to the chip on focus,
+   on top of the global ring around a square link. One ring, on the chip. */
+a.group\/link:focus-visible {
+  outline: none !important;
+}
+
+a.group\/link:focus-visible > div {
+  border-width: 0 !important;
+  outline: 2px solid var(--eg-ring);
+  outline-offset: 2px;
+}
+
 /* ==========================================================================
    Overlays: menus and the search dialog
    ========================================================================== */
@@ -879,6 +1073,11 @@ html.light .chat-assistant-send-button:disabled {
 [data-component-part="search-modal"] {
   background-color: var(--eg-surface) !important;
   border-color: var(--eg-border) !important;
+}
+
+/* Terminus dialogs use 2xl (16px), which also lets the 8px field nest. */
+[data-component-part="search-modal"] {
+  border-radius: 1rem !important;
 }
 
 [role="menu"] [role^="menuitem"] {
@@ -960,6 +1159,30 @@ div:has(> .theme-preference-switch-option) {
 
 #footer {
   border-top: 1px solid var(--eg-border-muted);
+}
+
+/* Mintlify's footer greys swap between themes, and light mode's "Powered by"
+   lands on gray-400 (2.6:1 on white). One muted token for both. */
+#footer a,
+#footer a * {
+  color: var(--eg-fg-muted) !important;
+  transition: color 0.15s ease;
+}
+
+#footer a:hover,
+#footer a:hover * {
+  color: var(--eg-fg-strong) !important;
+}
+
+/* The social icons are masks painted with background-color. */
+#footer a svg[style*="mask"],
+#footer a svg[class*="mask"] {
+  background-color: var(--eg-fg-muted) !important;
+}
+
+#footer a:hover svg[style*="mask"],
+#footer a:hover svg[class*="mask"] {
+  background-color: var(--eg-fg-strong) !important;
 }
 
 /* ==========================================================================
