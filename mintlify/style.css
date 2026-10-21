@@ -152,8 +152,8 @@ html.light ::selection {
 
 /* Sidebar and TOC rows sit inside scroll viewports that would clip an
    outside ring, so theirs is drawn inside, as Mintlify intends. */
-#sidebar-content a:focus-visible,
-#sidebar-content button:focus-visible,
+#navigation-items a:focus-visible,
+#navigation-items button:focus-visible,
 #table-of-contents a:focus-visible {
   outline-offset: -2px !important;
 }
@@ -350,6 +350,26 @@ html.light #topbar-cta-button > a * {
   color: var(--eg-gray-50) !important;
 }
 
+/* The theme toggle sits beside the search bar, so it uses the same surface
+   plate and hairline instead of Mintlify's translucent white. */
+.theme-preference-menu-trigger {
+  background-color: var(--eg-surface) !important;
+  box-shadow: inset 0 0 0 1px var(--eg-border-muted);
+  transition: background-color 0.2s ease;
+}
+
+.theme-preference-menu-trigger:hover {
+  background-color: var(--eg-surface-lifted) !important;
+}
+
+.theme-preference-menu-trigger svg {
+  color: var(--eg-fg-secondary) !important;
+}
+
+.theme-preference-menu-trigger:hover svg {
+  color: var(--eg-fg-strong) !important;
+}
+
 #search-bar-entry,
 #search-bar-entry-mobile {
   background-color: var(--eg-surface);
@@ -395,34 +415,35 @@ html.light #topbar-cta-button > a * {
 
 /* Rows: quiet at rest, a grey tint on hover, a stronger tint when selected.
    Selection is neutral, as in terminus: blue is kept for links and focus. */
-#sidebar-content li > a,
-#sidebar-content li > div > a,
-#sidebar-content li > button,
-#sidebar-content li > div > button {
+#navigation-items li > a,
+#navigation-items li > div > a,
+#navigation-items li > button,
+#navigation-items li > div > button {
   color: var(--eg-fg-secondary);
   border-radius: 0.5rem;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-#sidebar-content li > a:not([aria-current="page"], [class*="bg-primary"]):hover,
-#sidebar-content li > div > a:not([aria-current="page"], [class*="bg-primary"]):hover,
-#sidebar-content li > button:hover,
-#sidebar-content li > div > button:hover {
+#navigation-items li > a:not([aria-current="page"], [class*="bg-primary"]):hover,
+#navigation-items li > div > a:not([aria-current="page"], [class*="bg-primary"]):hover,
+#navigation-items li > button:hover,
+#navigation-items li > div > button:hover {
   background-color: var(--eg-hover) !important;
   color: var(--eg-fg);
 }
 
-#sidebar-content a[class*="bg-primary"],
-#sidebar-content a[aria-current="page"] {
+#navigation-items a[class*="bg-primary"],
+#navigation-items a[aria-current="page"] {
   background-color: var(--eg-active) !important;
   color: var(--eg-fg-strong) !important;
   text-shadow: none !important;
   font-weight: 500;
 }
 
-/* Sidebar icons are masks painted with background-color. */
-#sidebar-content a[class*="bg-primary"] svg,
-#sidebar-content a[aria-current="page"] svg {
+/* Sidebar icons are masks painted with background-color. `#navigation-items`
+   holds the rows in both the desktop sidebar and the mobile drawer. */
+#navigation-items a[class*="bg-primary"] svg,
+#navigation-items a[aria-current="page"] svg {
   background-color: var(--eg-fg-strong) !important;
 }
 
@@ -728,6 +749,16 @@ html.light [data-component-part="scroll-area-thumb"]:active {
   background-color: transparent !important;
 }
 
+/* Native scrollbars (the page itself, a tab row that overflows) get the
+   same tint. `scrollbar-color` inherits, so one rule reaches all of them. */
+html {
+  scrollbar-color: rgb(255 255 255 / 0.12) transparent;
+}
+
+html.light {
+  scrollbar-color: rgb(0 0 0 / 0.12) transparent;
+}
+
 /* ==========================================================================
    Steps, accordions, tabs, frames
    ========================================================================== */
@@ -756,6 +787,26 @@ html.light [data-component-part="scroll-area-thumb"]:active {
 
 .tabs ul {
   border-color: var(--eg-border-muted) !important;
+  scrollbar-width: thin;
+}
+
+/* Terminus's line tabs: quiet labels, and a neutral label and underline on
+   the selected tab. Blue stays for links and focus. */
+[data-component-part="tab-button"] {
+  font-weight: 500 !important;
+  color: var(--eg-fg-secondary) !important;
+  border-bottom-color: transparent !important;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+[data-component-part="tab-button"]:hover {
+  color: var(--eg-fg-strong) !important;
+  border-bottom-color: var(--eg-border) !important;
+}
+
+[data-component-part="tab-button"][data-active="true"] {
+  color: var(--eg-fg-strong) !important;
+  border-bottom-color: var(--eg-fg-strong) !important;
 }
 
 .frame {
@@ -771,8 +822,118 @@ html.light [data-component-part="scroll-area-thumb"]:active {
   border-color: var(--eg-border-muted) !important;
 }
 
+/* Image zoom. The expand button on a framed image (shown on keyboard focus)
+   and the zoom-out, zoom-in and close controls in the zoom dialog share one
+   frosted button. It becomes a translucent surface plate with a token border. */
+button[data-ramka-trigger],
+.zoom-image-chrome-pull-hide button {
+  background-color: color-mix(in srgb, var(--eg-surface) 80%, transparent) !important;
+  border-color: var(--eg-border) !important;
+  color: var(--eg-fg-strong) !important;
+  box-shadow: none !important;
+}
+
+button[data-ramka-trigger]:hover,
+.zoom-image-chrome-pull-hide button:hover {
+  background-color: var(--eg-surface-lifted) !important;
+}
+
+.zoom-image-backdrop {
+  background-color: rgb(4 8 16 / 0.92) !important; /* gray-950 */
+}
+
+html.light .zoom-image-backdrop {
+  background-color: rgb(249 250 252 / 0.94) !important; /* gray-50 */
+}
+
 /* The floating "ask AI" input that docks at the bottom of a page. */
 .chat-assistant-floating-input [class*="pointer-events-auto"][class*="border"] {
+  border-color: var(--eg-border-muted) !important;
+}
+
+/* Its send button follows the navbar CTA: a light plate with a dark arrow
+   (inverted in light mode), and a quiet tint while there is nothing to send. */
+.chat-assistant-send-button {
+  background-color: var(--eg-gray-300) !important;
+  color: var(--eg-gray-900) !important;
+}
+
+html.light .chat-assistant-send-button {
+  background-color: var(--eg-gray-900) !important;
+  color: var(--eg-gray-50) !important;
+}
+
+.chat-assistant-send-button:disabled,
+html.light .chat-assistant-send-button:disabled {
+  background-color: var(--eg-active) !important;
+  color: var(--eg-fg-muted) !important;
+}
+
+/* ==========================================================================
+   Overlays: menus and the search dialog
+   ========================================================================== */
+
+/* Floating panels sit on the surface step with a visible 9% edge, since a
+   5% line disappears against the dimmed page behind them. */
+[role="menu"],
+[data-component-part="search-modal"] {
+  background-color: var(--eg-surface) !important;
+  border-color: var(--eg-border) !important;
+}
+
+[role="menu"] [role^="menuitem"] {
+  color: var(--eg-fg-secondary);
+  border-radius: 0.375rem;
+}
+
+[role="menu"] [role^="menuitem"]:hover,
+[role="menu"] [role^="menuitem"][data-highlighted] {
+  background-color: var(--eg-hover) !important;
+  color: var(--eg-fg-strong);
+}
+
+/* The chosen option is neutral, like the selected sidebar row: blue is for
+   links and focus. */
+[role="menu"] [role^="menuitem"][data-active="true"],
+[role="menu"] [role^="menuitem"][data-active="true"] * {
+  color: var(--eg-fg-strong) !important;
+}
+
+/* The search field inside the dialog is a well on the panel. */
+[data-component-part="search-header"] > div {
+  background-color: var(--eg-bg) !important;
+  border-color: var(--eg-border-muted) !important;
+}
+
+[data-component-part="search-list"] [role="option"][data-highlighted],
+[data-component-part="search-list"] [role="option"][aria-selected="true"] {
+  background-color: var(--eg-hover) !important;
+}
+
+[data-component-part="search-backdrop"] {
+  background-color: rgb(4 8 16 / 0.6) !important; /* gray-950 */
+}
+
+html.light [data-component-part="search-backdrop"] {
+  background-color: rgb(14 20 32 / 0.2) !important; /* gray-900 */
+}
+
+/* The mobile nav drawer dims the page with plain black. */
+[class*="--backdrop-opacity"] {
+  background-color: var(--eg-gray-950) !important;
+}
+
+/* The System / Light / Dark switch in the mobile drawer. */
+.theme-preference-switch-option {
+  color: var(--eg-fg-muted);
+}
+
+.theme-preference-switch-option[aria-pressed="true"] {
+  background-color: var(--eg-active) !important;
+  color: var(--eg-fg-strong) !important;
+}
+
+div:has(> .theme-preference-switch-option) {
   border-color: var(--eg-border-muted) !important;
 }
 
@@ -799,4 +960,22 @@ html.light [data-component-part="scroll-area-thumb"]:active {
 
 #footer {
   border-top: 1px solid var(--eg-border-muted);
+}
+
+/* ==========================================================================
+   404
+   ========================================================================== */
+
+/* The status code becomes a kicker over the heading instead of a large blue
+   number; the site's own 404 is just a heading, copy and a button. */
+#error-badge {
+  margin-bottom: -1rem;
+  padding: 0;
+  font-family: var(--eg-font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: var(--eg-fg-muted) !important;
 }
