@@ -24,7 +24,7 @@ Connect Salesforce so Endgame knows your accounts, opportunities, contacts and t
    - **Production:** click **Connect** at the top right of the page.
    - **Sandbox:** next to **Using a sandbox?**, click **Connect here**.
 3. Sign in to Salesforce as your integration user and approve access. You'll come back to the Salesforce page in Endgame.
-4. [Approve the Endgame connected app](#approve-the-endgame-connected-app) in Salesforce so Endgame can start receiving data.
+4. In Salesforce, [approve the Endgame connected app](#approve-the-endgame-connected-app) so Endgame can start receiving data.
 
 Once you're connected, the page shows **Connected** at the top. If you connected a sandbox, the page is titled **Salesforce Sandbox**.
 
@@ -75,7 +75,7 @@ Endgame syncs data with the integration user's credentials. Only accounts that u
 
 Endgame adds the standard fields on the required objects to its context graph. Custom fields are synced too, but Endgame doesn't reference all of them automatically: Salesforce instances often have hundreds of custom fields, and only a handful really help people understand their accounts. You choose which custom fields matter on Account, Contact, Opportunity and User.
 
-1. On the Salesforce page, under **Required objects**, click **Account**, **Contact**, **Opportunity** or **User**. You can also hover over the row and click **Configure**.
+1. In Endgame, on the Salesforce page, under **Required objects**, click **Account**, **Contact**, **Opportunity** or **User**. You can also hover over the row and click **Configure**.
 2. In **Configure object fields**, search for the fields you want Endgame to use and select the checkbox next to each one. To have Endgame suggest fields, click **Recommend** and review what it selects.
 3. Optionally, add a description to a field to explain what it means.
 4. Click **Save**.
@@ -119,7 +119,7 @@ You can add more Salesforce objects to Endgame's context graph. At the top of th
 
 ## Change the integration user
 
-1. At the bottom of the Salesforce page, in the **Connection** section, click **Update credentials**.
+1. In Endgame, at the bottom of the Salesforce page, in the **Connection** section, click **Update credentials**.
 2. Sign in to Salesforce as the new integration user and approve access.
 
 Endgame syncs with the new user from then on. Update credentials connects to the same kind of instance you chose before, production or sandbox.
