@@ -15,7 +15,7 @@ Connect Salesforce so Endgame knows your accounts, opportunities, contacts and t
 - You need to be an Endgame admin.
 - Decide which Salesforce user Endgame connects with. This is your **integration user**: Endgame syncs data with its credentials, so it only sees what that user can see in Salesforce. We recommend a [dedicated API integration user](#create-a-dedicated-api-integration-user) rather than a personal account.
 - The integration user needs the `Approve Uninstalled Connected Apps` permission in Salesforce.
-- Someone in Salesforce will need to [approve the Endgame connected app](#approve-the-endgame-connected-app) after you connect.
+- Someone in Salesforce will need to [approve the Endgame connected app](#approve-the-endgame-connected-app) right after you connect. Endgame can't receive any data until it's approved. Approving it requires the **Customize Application** permission, plus either **Modify All Data** or **Manage Connected Apps**, so line up a Salesforce admin who has them.
 
 ## Connect Salesforce during onboarding
 
@@ -28,20 +28,6 @@ Salesforce is the first thing you connect. It's part of onboarding, not somethin
 3. In Salesforce, [approve the Endgame connected app](#approve-the-endgame-connected-app) so Endgame can start receiving data.
 
 Endgame then starts bringing in your Salesforce data. This usually takes a day or two, depending on the size of your Salesforce instance, and the Endgame team will be in touch when your data is ready. For the full onboarding steps, see [Login & Connect CRM](/implementation-guide/login-and-connect-crm).
-
-## Manage Salesforce in Settings
-
-Once you're connected, Salesforce appears in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations). Click **Manage** next to it to open the Salesforce page. It works differently from other integrations:
-
-- You don't connect Salesforce from here; that happens during onboarding.
-- You can [choose important custom fields](#choose-important-custom-fields), [sync more objects](#sync-more-objects), and [change the integration user](#change-the-integration-user).
-- Salesforce can't be disconnected from Settings. In the **Connection** section at the bottom of the page, next to **Disconnect Salesforce**, click **Contact support** to email [support@endgame.io](mailto:support@endgame.io).
-
-If you connected a sandbox, the page is titled **Salesforce Sandbox**.
-
-<Note>
-  If your organization lets Endgame write changes back to Salesforce from chat, each person also connects their own Salesforce login in **Settings** > **You** > **Connections**.
-</Note>
 
 ## Approve the Endgame connected app
 
@@ -63,6 +49,20 @@ If you see an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to Endgame, 
   - **All users may self-authorize:** everyone can access Endgame without pre-approval in Salesforce.
   - **Admin approved users are pre-authorized:** each person needs a profile or permission set that gives them access to the app.
 - **Integration user:** the integration user needs the `Approve Uninstalled Connected Apps` permission to connect, and for the `EndgameLabs2` app to show up in Salesforce.
+
+## Manage Salesforce in Settings
+
+Once you're connected, Salesforce appears in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations). Click **Manage** next to it to open the Salesforce page. It works differently from other integrations:
+
+- You don't connect Salesforce from here; that happens during onboarding.
+- You can [choose important custom fields](#choose-important-custom-fields), [sync more objects](#sync-more-objects), and [change the integration user](#change-the-integration-user).
+- Salesforce can't be disconnected from Settings. In the **Connection** section at the bottom of the page, next to **Disconnect Salesforce**, click **Contact support** to email [support@endgame.io](mailto:support@endgame.io).
+
+If you connected a sandbox, the page is titled **Salesforce Sandbox**.
+
+<Note>
+  If your organization lets Endgame write changes back to Salesforce from chat, each person also connects their own Salesforce login in **Settings** > **You** > **Connections**.
+</Note>
 
 ## Create a dedicated API integration user
 
