@@ -115,11 +115,10 @@ Connect Snowflake so Endgame can use data from the tables, views, and dynamic ta
 2. Enter your **Account identifier**, the **Username** of the service user (for example, `ENDGAME_SERVICE_USER`), the contents of `snowflake_key.p8` as the **Private key (PEM)**, and your **Warehouse**.
 3. Click **Connect**.
 
-{/* SCREENSHOT: retake. State image of the Connect Snowflake dialog, empty, with the Connect button (the current image shows Reconnect and old field labels). */}
 <Frame caption="Connecting Snowflake needs your account identifier, username, private key, and warehouse.">
   <img
-    src="/images/snowflake-connector-modal-02-10-26.png"
-    alt="Connect Snowflake dialog with Account identifier, Username, Private key (PEM), and Warehouse fields"
+    src="/images/snowflake-connect-dialog-10-23-26.png"
+    alt="Connect Snowflake dialog with empty Account identifier, Username, Private key (PEM) and Warehouse fields and a Connect button"
     className="rounded-lg"
   />
 </Frame>
@@ -135,14 +134,13 @@ Endgame opens the Snowflake page so you can choose what to sync.
 Endgame checks that the object exists and that it can access it, then adds it to **Synced objects**. The list shows each object's size status, row count, and when it last synced.
 
 <Danger>
-  Tables over 100 MB won't sync. Use summarized Snowflake views, not raw event data. **For best performance, keep tables under 20k rows.**
+  Tables with 100,000 or more rows, or over about 200 MB, won't sync. Tables over 50,000 rows or 100 MB get a size warning. Use summarized Snowflake views, not raw event data. **For best performance, keep tables under 20k rows.**
 </Danger>
 
-{/* SCREENSHOT: retake. Signpost image of Data sync with the Object identifier field and Add object button, plus Synced objects with two or three objects. */}
 <Frame caption="Data sync is where you add the Snowflake objects Endgame syncs.">
   <img
-    src="/images/snowflake-object-identifier-02-10-26.png"
-    alt="Data sync section with an Object identifier field and an Add object button"
+    src="/images/snowflake-data-sync-10-23-26.png"
+    alt="Data sync section with an Object identifier field, an Add object button, and three synced objects with their status, rows and last synced time"
     className="rounded-lg"
   />
 </Frame>
