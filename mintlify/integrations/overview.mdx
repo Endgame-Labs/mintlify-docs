@@ -34,7 +34,7 @@ A check mark on an integration's logo means it's connected. A **Needs attention*
    - **Integrations that use credentials** (Chorus, Clari Copilot, Highspot, Looker, Notion, Seismic, and Snowflake) open a dialog. Enter the credentials from that tool and click **Connect**.
 3. Endgame opens the integration's page, where you can finish any setup it needs, like choosing which spaces, sites, or channels to sync.
 
-Salesforce is the exception: you normally connect it during onboarding, before you can use the rest of Endgame. It still appears in this list, so you can manage it later. See [Connect Salesforce during onboarding](/integrations/salesforce#connect-salesforce-during-onboarding).
+Salesforce is the exception: you normally connect it during onboarding, before you can use the rest of Endgame. It still appears in this list, so you can manage it later, unless your organization brings in Salesforce through Snowflake. See [Connect Salesforce during onboarding](/integrations/salesforce#connect-salesforce-during-onboarding).
 
 Each integration's docs page lists what you'll need before you connect and walks through where to find it.
 
@@ -66,12 +66,14 @@ The **Connection** section shows:
 
 ## Fix a connection that needs attention
 
-When the credentials Endgame uses for an integration stop working, for example because a password changed or a key expired, Endgame stops syncing from it and flags it:
+For Chorus, Highspot, Microsoft Teams, Notion, Seismic and Snowflake, Endgame can tell when the credentials it uses stop working, for example because a password changed or a key expired. It stops syncing from that integration and flags it:
 
 - On the Integrations page, it shows **Needs attention** and a red **Reconnect** button.
 - On its own page, a message says it needs to be reconnected, and **Reconnect** appears at the top.
 
 Click **Reconnect** on the Integrations page to open the integration's page, then click **Reconnect** at the top and sign in again or enter new credentials. While a connection needs attention, its **Connection** section doesn't show **Update credentials**. Syncing picks up again once it's reconnected.
+
+Other integrations aren't flagged this way. If data stops arriving from one of them, open its page and click **Update credentials** to sign in again or enter new credentials.
 
 If an integration shows **Status unavailable**, Endgame couldn't check its connection just then. Click **Open** to go to its page, or try again in a moment.
 
