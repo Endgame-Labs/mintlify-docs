@@ -12,7 +12,9 @@ You create three things in Snowflake:
 2. A service account that uses key-pair authentication, with that role.
 3. An RSA key pair. You register the public key on the service account and keep the private key.
 
-Then you enter the connection parameters and the private key into the credential form on the Endgame welcome screen. The form validates them against Snowflake and stores them securely. You never enter a password, because the account has none.
+Then, during onboarding, you enter the connection parameters and the private key into the credential form on the Endgame welcome screen. The form validates them against Snowflake and stores them securely. You never enter a password, because the account has none.
+
+This takes the place of [connecting Salesforce directly](/integrations/salesforce#connect-salesforce-during-onboarding). Only an Endgame admin can enter the credentials. Anyone else who signs in before then sees a message asking them to have an admin finish connecting.
 
 <Note>
   Creating the role and service account requires a Snowflake role that can
@@ -89,6 +91,14 @@ Then you enter the connection parameters and the private key into the credential
 
   </Step>
 </Steps>
+
+## What happens next
+
+The welcome screen shows **Connected to Snowflake**. The Endgame team then maps the tables in your mirror to Salesforce objects, and Endgame starts bringing in your data. We'll be in touch when your account is ready.
+
+## Change the connection later
+
+Salesforce doesn't appear in **Settings** > **Organization** > **Integrations** when your organization brings Salesforce data in through Snowflake, and there's no form to edit these credentials after onboarding. To rotate the key, change the service account, or point Endgame at a different mirror, contact [support@endgame.io](mailto:support@endgame.io). Don't include the private key in your message.
 
 ## Why the account is read-only and scoped to one schema
 

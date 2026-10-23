@@ -7,7 +7,7 @@ icon: "/images/integrations/salesforce.svg"
 Connect Salesforce so Endgame knows your accounts, opportunities, contacts and the people working them. Endgame syncs the standard fields on your core objects, plus any custom fields and extra objects you choose.
 
 <Note>
-  If your organization brings Salesforce data into Endgame through Snowflake, Salesforce doesn't appear on your Integrations page.
+  If your organization brings Salesforce data into Endgame through Snowflake, Salesforce doesn't appear on your Integrations page. See [Salesforce via Snowflake](/integrations/salesforce-via-snowflake) instead.
 </Note>
 
 ## Before you start
@@ -17,16 +17,27 @@ Connect Salesforce so Endgame knows your accounts, opportunities, contacts and t
 - The integration user needs the `Approve Uninstalled Connected Apps` permission in Salesforce.
 - Someone in Salesforce will need to [approve the Endgame connected app](#approve-the-endgame-connected-app) after you connect.
 
-## Connect Salesforce
+## Connect Salesforce during onboarding
 
-1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Salesforce and click **Connect**. The Salesforce page opens so you can choose your instance.
-2. Choose where to connect:
-   - **Production:** click **Connect** at the top right of the page.
+Salesforce is the first thing you connect. It's part of onboarding, not something you set up from Settings like other integrations: until Salesforce is connected, signing in to Endgame opens a welcome screen that asks you to connect it.
+
+1. On the welcome screen, under **Connect Salesforce**, choose where to connect:
+   - **Production:** click **Connect**.
    - **Sandbox:** next to **Using a sandbox?**, click **Connect here**.
-3. Sign in to Salesforce as your integration user and approve access. You'll come back to the Salesforce page in Endgame.
-4. In Salesforce, [approve the Endgame connected app](#approve-the-endgame-connected-app) so Endgame can start receiving data.
+2. Sign in to Salesforce as your integration user and approve access.
+3. In Salesforce, [approve the Endgame connected app](#approve-the-endgame-connected-app) so Endgame can start receiving data.
 
-Once you're connected, the page shows **Connected** at the top. If you connected a sandbox, the page is titled **Salesforce Sandbox**.
+Endgame then starts bringing in your Salesforce data. This usually takes a day or two, depending on the size of your Salesforce instance, and the Endgame team will be in touch when your data is ready. For the full onboarding steps, see [Login & Connect CRM](/implementation-guide/login-and-connect-crm).
+
+## Manage Salesforce in Settings
+
+Once you're connected, Salesforce appears in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations). Click **Manage** next to it to open the Salesforce page. It works differently from other integrations:
+
+- You don't connect Salesforce from here; that happens during onboarding.
+- You can [choose important custom fields](#choose-important-custom-fields), [sync more objects](#sync-more-objects), and [change the integration user](#change-the-integration-user).
+- Salesforce can't be disconnected from Settings. In the **Connection** section at the bottom of the page, next to **Disconnect Salesforce**, click **Contact support** to email [support@endgame.io](mailto:support@endgame.io).
+
+If you connected a sandbox, the page is titled **Salesforce Sandbox**.
 
 <Note>
   If your organization lets Endgame write changes back to Salesforce from chat, each person also connects their own Salesforce login in **Settings** > **You** > **Connections**.
@@ -61,7 +72,7 @@ This is optional, but recommended. Endgame reads data with the Bulk API 2.0, so 
 - **Profile:** Minimum Access - API Only Integrations
 - **Additional permissions:** `Approve Uninstalled Connected Apps`
 
-Then sign in as this user when you [connect Salesforce](#connect-salesforce).
+Then sign in as this user when you [connect Salesforce](#connect-salesforce-during-onboarding).
 
 ## How Endgame syncs your data
 
@@ -122,14 +133,9 @@ You can add more Salesforce objects to Endgame's context graph. At the top of th
 1. In Endgame, at the bottom of the Salesforce page, in the **Connection** section, click **Update credentials**.
 2. Sign in to Salesforce as the new integration user and approve access.
 
-Endgame syncs with the new user from then on. Update credentials connects to the same kind of instance you chose before, production or sandbox.
+Endgame syncs with the new user from then on. Update credentials connects to the same kind of instance you chose during onboarding, production or sandbox.
 
-## Update credentials or disconnect
-
-Use the **Connection** section at the bottom of the Salesforce page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
-
-- **Update credentials** takes you to the Salesforce sign-in page, so you can renew Endgame's access or [change the integration user](#change-the-integration-user).
-- Salesforce can't be disconnected from Settings yet. Next to **Disconnect Salesforce**, click **Contact support** to email [support@endgame.io](mailto:support@endgame.io).
+To renew Endgame's access without changing the user, follow the same steps and sign in as your current integration user.
 
 ## Need help or have feedback?
 
