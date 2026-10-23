@@ -15,7 +15,8 @@ Connect Salesforce so Endgame knows your accounts, opportunities, contacts and t
 - You need to be an Endgame admin.
 - Decide which Salesforce user Endgame connects with. This is your **integration user**: Endgame syncs data with its credentials, so it only sees what that user can see in Salesforce. We recommend a [dedicated API integration user](#create-a-dedicated-api-integration-user) rather than a personal account.
 - The integration user needs the `Approve Uninstalled Connected Apps` permission in Salesforce.
-- Someone in Salesforce will need to [approve the Endgame connected app](#approve-the-endgame-connected-app) right after you connect. Endgame can't receive any data until it's approved. Approving it requires the **Customize Application** permission, plus either **Modify All Data** or **Manage Connected Apps**, so line up a Salesforce admin who has them.
+- Salesforce requires connected apps to be approved before Endgame can receive data. You, or someone with access in Salesforce, will need to [approve Endgame's connected app](#approve-the-endgame-connected-app) right after you connect.
+- Whoever approves it needs the [**Customize Application** permission, plus either **Modify All Data** or **Manage Connected Apps**](https://help.salesforce.com/s/articleView?id=005132365&type=1) in Salesforce.
 
 ## Connect Salesforce during onboarding
 
