@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" rx="85" fill="#204AC7" style="fill:#204AC7;fill:color(display-p3 0.1255 0.2902 0.7804);fill-opacity:1;"/>
+<rect width="200" height="200" rx="85" fill="url(#paint0_radial_2_100)"/>
+<g clip-path="url(#clip0_2_100)">
+<path d="M84.8033 130.152H37.4807C34.3597 130.152 31.3644 128.507 29.9458 125.693C28.2748 122.466 28.9054 118.607 31.4276 116.077L64.3736 83.0243H40.7594C34.2648 83.0243 29 77.7424 29 71.2267H72.6021C75.7234 71.2267 78.7183 72.8711 80.1372 75.6862C81.808 78.9122 81.1775 82.7712 78.6554 85.3015L45.7094 118.354H73.0123C79.5068 118.354 84.7718 123.637 84.7718 130.152H84.8033ZM148.259 70.3115C141.483 70.3115 135.399 73.2531 131.205 77.9343C127.012 73.2531 120.894 70.2799 114.148 70.3115C101.569 70.3115 91.2921 81.0972 91.2921 93.7174V130.123C97.7861 130.123 103.051 124.841 103.051 118.325V93.5589C103.051 87.4861 107.749 82.3307 113.768 82.1091C120.106 81.8563 125.373 86.9802 125.373 93.3061V118.356C125.373 124.872 130.638 130.154 137.133 130.154V93.6222C137.133 87.5495 141.831 82.394 147.849 82.1724C154.187 81.9196 159.454 87.0435 159.454 93.3694V118.419C159.454 124.935 164.718 130.217 171.213 130.217V93.8124C171.213 81.1921 160.932 70.4381 148.355 70.4065L148.259 70.3115Z" fill="white"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_2_100" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(154 18) rotate(120.637) scale(195.254)">
+<stop stop-color="#5A8AE8" style="stop-color:#5A8AE8;stop-color:color(display-p3 0.3529 0.5412 0.9098);stop-opacity:1;"/>
+<stop offset="0.508417" stop-color="#2657EB" style="stop-color:#2657EB;stop-color:color(display-p3 0.1490 0.3412 0.9216);stop-opacity:1;"/>
+<stop offset="1" stop-color="#1E46BE" style="stop-color:#1E46BE;stop-color:color(display-p3 0.1176 0.2745 0.7451);stop-opacity:1;"/>
+</radialGradient>
+<clipPath id="clip0_2_100">
+<rect width="143" height="61" fill="white" style="fill:white;fill-opacity:1;" transform="translate(29 70)"/>
+</clipPath>
+</defs>
+</svg>
