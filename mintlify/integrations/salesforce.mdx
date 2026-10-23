@@ -20,7 +20,7 @@ Connect Salesforce so Endgame knows your accounts, opportunities, contacts and t
 
 ## Connect Salesforce during onboarding
 
-Salesforce is the first thing you connect. It's part of onboarding, not something you set up from Settings like other integrations: until Salesforce is connected, signing in to Endgame opens a welcome screen that asks you to connect it.
+Salesforce is the first thing you connect. It's part of onboarding, not something you set up from Settings like other integrations: until Salesforce is connected and your data is ready, signing in to Endgame opens a welcome screen.
 
 1. On the welcome screen, under **Connect Salesforce**, choose where to connect:
    - **Production:** click **Connect**.
@@ -55,7 +55,7 @@ If you see an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to Endgame, 
 
 Once you're connected, Salesforce appears in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations). Click **Manage** next to it to open the Salesforce page. It works differently from other integrations:
 
-- You don't connect Salesforce from here; that happens during onboarding.
+- You normally connect Salesforce during onboarding. If it isn't connected yet, its page here also offers **Connect**, and **Connect here** for a sandbox.
 - You can [choose important custom fields](#choose-important-custom-fields), [sync more objects](#sync-more-objects), and [change the integration user](#change-the-integration-user).
 - Salesforce can't be disconnected from Settings. In the **Connection** section at the bottom of the page, next to **Disconnect Salesforce**, click **Contact support** to email [support@endgame.io](mailto:support@endgame.io).
 
@@ -88,7 +88,7 @@ Endgame syncs data with the integration user's credentials. Only accounts that u
 Endgame adds the standard fields on the required objects to its context graph. Custom fields are synced too, but Endgame doesn't reference all of them automatically: Salesforce instances often have hundreds of custom fields, and only a handful really help people understand their accounts. You choose which custom fields matter on Account, Contact, Opportunity and User.
 
 1. In Endgame, on the Salesforce page, under **Required objects**, click **Account**, **Contact**, **Opportunity** or **User**. You can also hover over the row and click **Configure**.
-2. In **Configure object fields**, search for the fields you want Endgame to use and select the checkbox next to each one. To have Endgame suggest fields, click **Recommend** and review what it selects.
+2. In **Configure object fields**, search for the fields you want Endgame to use and select the checkbox next to each one. To have Endgame suggest fields, click **Recommend** and review what it selects. Recommend replaces your current selection.
 3. Optionally, add a description to a field to explain what it means.
 4. Click **Save**.
 
@@ -134,7 +134,7 @@ You can add more Salesforce objects to Endgame's context graph. At the top of th
 1. In Endgame, at the bottom of the Salesforce page, in the **Connection** section, click **Update credentials**.
 2. Sign in to Salesforce as the new integration user and approve access.
 
-Endgame syncs with the new user from then on. Update credentials connects to the same kind of instance you chose during onboarding, production or sandbox.
+Endgame syncs with the new user from then on. The new user must belong to the same Salesforce org. To switch to a different Salesforce org, contact [support@endgame.io](mailto:support@endgame.io). Update credentials connects to the same kind of instance you chose during onboarding, production or sandbox.
 
 To renew Endgame's access without changing the user, follow the same steps and sign in as your current integration user.
 

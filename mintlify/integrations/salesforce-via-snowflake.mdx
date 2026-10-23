@@ -14,7 +14,7 @@ You create three things in Snowflake:
 
 Then, during onboarding, you enter the connection parameters and the private key into the credential form on the Endgame welcome screen. The form validates them against Snowflake and stores them securely. You never enter a password, because the account has none.
 
-This takes the place of [connecting Salesforce directly](/integrations/salesforce#connect-salesforce-during-onboarding). Only an Endgame admin can enter the credentials. Anyone else who signs in before then sees a message asking them to have an admin finish connecting.
+This takes the place of [connecting Salesforce directly](/integrations/salesforce#connect-salesforce-during-onboarding). Endgame turns this on for your organization. If your welcome screen asks you to connect Salesforce directly instead, contact your Endgame team. Only an Endgame admin can enter the credentials. Anyone else who signs in before then sees a message asking them to have an admin finish connecting.
 
 <Note>
   Creating the role and service account requires a Snowflake role that can
@@ -78,16 +78,16 @@ This takes the place of [connecting Salesforce directly](/integrations/salesforc
   <Step title="Enter the credentials on the welcome screen">
     Enter these connection parameters into the credential form on the Endgame welcome screen:
 
-    | Parameter   | Value                             |
-    | ----------- | --------------------------------- |
-    | `account`   | your Snowflake account identifier |
-    | `username`  | `ENDGAME_SVC`                     |
-    | `warehouse` | `<warehouse>`                     |
-    | `role`      | `ENDGAME_RO`                      |
-    | `database`  | `<database>`                      |
-    | `schema`    | `<schema>`                        |
+    | Field                 | Value                             |
+    | --------------------- | --------------------------------- |
+    | **Account**           | your Snowflake account identifier |
+    | **Username**          | `ENDGAME_SVC`                     |
+    | **Warehouse**         | `<warehouse>`                     |
+    | **Role**              | `ENDGAME_RO`                      |
+    | **Database**          | `<database>`                      |
+    | **Salesforce schema** | `<schema>`                        |
 
-    In the same form, paste the contents of the private key file (`endgame_rsa_key.p8`) into the private key field. Submitting the form validates the credentials against Snowflake and stores them securely. Enter the private key only into this form — never send it by email or chat.
+    In the same form, paste the contents of the private key file (`endgame_rsa_key.p8`) into **Private key (PEM)**, then click **Connect**. Submitting the form validates the credentials against Snowflake and stores them securely. Enter the private key only into this form — never send it by email or chat.
 
   </Step>
 </Steps>
@@ -99,6 +99,8 @@ The welcome screen shows **Connected to Snowflake**. The Endgame team then maps 
 ## Change the connection later
 
 Salesforce doesn't appear in **Settings** > **Organization** > **Integrations** when your organization brings Salesforce data in through Snowflake, and there's no form to edit these credentials after onboarding. To rotate the key, change the service account, or point Endgame at a different mirror, contact [support@endgame.io](mailto:support@endgame.io). Don't include the private key in your message.
+
+The **Snowflake** integration in **Settings** > **Organization** > **Integrations** is a separate connection for syncing other Snowflake tables. Changing it doesn't affect your Salesforce data.
 
 ## Why the account is read-only and scoped to one schema
 

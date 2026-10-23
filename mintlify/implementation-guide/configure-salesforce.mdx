@@ -9,7 +9,7 @@ description: "Tell Endgame which custom fields matter so responses reference the
 
 ## Why this matters
 
-Endgame ingests all standard Salesforce fields automatically, but your org likely has custom fields that carry important context: ARR, product line, customer segment, health scores, and so on. By selecting these fields for ingestion, you tell Endgame to reference them by default when answering questions. Without this step, Endgame won't have access to the fields your team relies on most.
+Endgame ingests all standard Salesforce fields automatically, but your org likely has custom fields that carry important context: ARR, product line, customer segment, health scores, and so on. By selecting these fields for ingestion, you tell Endgame to reference them by default when answering questions. Without this step, Endgame won't reference the fields your team relies on most by default.
 
 ## What you'll do
 
@@ -44,7 +44,7 @@ You don't need to select all 100 fields right away. Start with the ones your tea
     Search for each field, select its checkbox, and click **Save**. An Endgame representative reviews your selections, and we'll reach out once they've been added.
 
     <Warning>
-      You can select up to 100 fields per object. Fields that are populated on 1 or fewer records are omitted from the list.
+      You can select up to 100 fields per object. Standard fields, and custom fields that aren't populated on any records, aren't listed.
     </Warning>
   </Step>
   <Step title="Repeat for Account, Contact, and User">
@@ -54,7 +54,7 @@ You don't need to select all 100 fields right away. Start with the ones your tea
 
 ## Configure additional objects
 
-Below **Required objects**, you'll find **Additional standard objects** and **Custom objects**. You can sync up to 50 objects total (including required objects), and the top of the page shows how many you're syncing. Turn on the toggle next to any additional Salesforce object you want Endgame to reference. All fields on selected objects (standard and custom) will be synced.
+Below **Required objects**, you'll find **Additional standard objects** and **Custom objects**. You can sync up to 50 objects by default, including required objects. The top of the page shows how many you're syncing out of your limit. Turn on the toggle next to any additional Salesforce object you want Endgame to reference. All fields on selected objects (standard and custom) will be synced.
 
 - **Standard objects** are reviewed by an Endgame representative, and we'll reach out once they've been added.
 - **Custom objects** sync automatically, and changes can take up to 2 hours.
