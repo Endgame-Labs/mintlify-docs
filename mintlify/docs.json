@@ -96,6 +96,7 @@
       {
         "group": "Integrations",
         "pages": [
+          "integrations/overview",
           {
             "group": "CRM",
             "icon": "database",

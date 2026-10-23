@@ -1,130 +1,143 @@
 ---
 title: "Salesforce"
-description: "Seamless integration with Salesforce for real-time account data"
-icon: "salesforce"
+description: "Keep Endgame current with standard objects and custom fields from Salesforce."
+icon: "/images/integrations/salesforce.svg"
 ---
 
-## Integration User
+Connect Salesforce so Endgame knows your accounts, opportunities, contacts and the people working them. Endgame syncs the standard fields on your core objects, plus any custom fields and extra objects you choose.
 
-Admins connect a Salesforce integration user to initialize the connection of Endgame with Salesforce during onboarding.
+<Note>
+  If your organization brings Salesforce data into Endgame through Snowflake, Salesforce doesn't appear on your Integrations page. See [Salesforce via Snowflake](/integrations/salesforce-via-snowflake) instead.
+</Note>
 
-An admin can change the integration user on the [integration settings page](https://app.endgame.io/settings/integrations) if needed.
+## Before you start
 
-## Connected App Approval
+- You need to be an Endgame admin.
+- Decide which Salesforce user Endgame connects with. This is your **integration user**: Endgame syncs data with its credentials, so it only sees what that user can see in Salesforce. We recommend a [dedicated API integration user](#create-a-dedicated-api-integration-user) rather than a personal account.
+- The integration user needs the `Approve Uninstalled Connected Apps` permission in Salesforce.
+- Salesforce requires connected apps to be approved before Endgame can receive data. You, or someone with access in Salesforce, will need to [approve Endgame's connected app](#approve-the-endgame-connected-app) right after you connect.
+- Whoever approves it needs the [**Customize Application** permission, plus either **Modify All Data** or **Manage Connected Apps**](https://help.salesforce.com/s/articleView?id=005132365&type=1) in Salesforce.
+
+## Connect Salesforce during onboarding
+
+Salesforce is the first thing you connect. It's part of onboarding, not something you set up from Settings like other integrations: until Salesforce is connected and your data is ready, signing in to Endgame opens a welcome screen.
+
+1. On the welcome screen, under **Connect Salesforce**, choose where to connect:
+   - **Production:** click **Connect**.
+   - **Sandbox:** next to **Using a sandbox?**, click **Connect here**.
+2. Sign in to Salesforce as your integration user and approve access.
+3. In Salesforce, [approve the Endgame connected app](#approve-the-endgame-connected-app) so Endgame can start receiving data.
+
+Endgame then starts bringing in your Salesforce data. This usually takes a day or two, depending on the size of your Salesforce instance, and the Endgame team will be in touch when your data is ready. For the full onboarding steps, see [Login & Connect CRM](/implementation-guide/login-and-connect-crm).
+
+## Approve the Endgame connected app
 
 <Warning>
-  Approving a Connected App in Salesforce requires the [Customize Application
+  Approving a connected app in Salesforce requires the [Customize Application
   AND either the Modify All Data OR Manage Connected
   Apps](https://help.salesforce.com/s/articleView?id=005132365&type=1)
   permissions.
 </Warning>
 
-Salesforce requires an approval process for Connected Apps, which needs to be completed before Endgame can receive data.
+Salesforce requires connected apps to be approved before Endgame can receive data. After you sign in to Salesforce from Endgame, in Salesforce go to **Setup** > **Connected Apps** > **Connected Apps OAuth Usage** and click **Install** next to the `EndgameLabs2` app.
 
-After going through the initial OAuth handshake, navigate to `Setup` -\> `Connected Apps` -\> `Connected Apps OAuth Usage` and click `Install` next to the EndgameLabs2 app.
+## Fix an approval error when signing in
 
-## User Permissions
+If you see an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to Endgame, check these in Salesforce:
 
-If you encounter an `OAUTH_APPROVAL_ERROR_GENERIC` error while signing in to Endgame, check the following:
+- **Connected app approval:** the `EndgameLabs2` connected app must be [approved](#approve-the-endgame-connected-app) before users can sign in.
+- **Permitted users:** go to **Apps** > **Connected Apps** > **Manage Connected Apps** > **EndgameLabs2** and check **Permitted Users**. It has two options:
+  - **All users may self-authorize:** everyone can access Endgame without pre-approval in Salesforce.
+  - **Admin approved users are pre-authorized:** each person needs a profile or permission set that gives them access to the app.
+- **Integration user:** the integration user needs the `Approve Uninstalled Connected Apps` permission to connect, and for the `EndgameLabs2` app to show up in Salesforce.
 
-**Connected App Approval** - The `EndgameLabs2` Salesforce Connected App must be approved in Salesforce before users can log in.
+## Manage Salesforce in Settings
 
-**Users** - Check the `Permitted Users` setting under `Apps -> Connected Apps -> Manage Connected Apps -> EndgameLabs2` in Salesforce. `Permitted Users` has two options:
+Once you're connected, Salesforce appears in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations). Click **Manage** next to it to open the Salesforce page. It works differently from other integrations:
 
-- `All users may self-authorize` - all users will be able to access Endgame without pre-approval in Salesforce.
-- `Admin approved users are pre-authorized` - individual users will need to be assigned a profile or permission set that grants them access to the app.
+- You normally connect Salesforce during onboarding. If it isn't connected yet, its page here also offers **Connect**, and **Connect here** for a sandbox.
+- You can [choose important custom fields](#choose-important-custom-fields), [sync more objects](#sync-more-objects), and [change the integration user](#change-the-integration-user).
+- Salesforce can't be disconnected from Settings. In the **Connection** section at the bottom of the page, next to **Disconnect Salesforce**, click **Contact support** to email [support@endgame.io](mailto:support@endgame.io).
 
-**Integration User** - The integration user must have the `Approve Uninstalled Connected Apps` permission to connect and for the `EndgameLabs2` app to show up in Salesforce.
-
-## (Optional) API Integration User
-
-Endgame accesses data using the Bulk API 2.0 APIs, so the initial connection can be done with a dedicated API Integration user. In Salesforce user creation, select:
-
-- **User License**: Salesforce Integration
-- **Profile**: Minimum Access - API Only Integrations
-- **Additional Permissions**: `Approve Uninstalled Connected Apps`
-
-Use the integration user for the initial connection to Endgame.
-
-## Data ingestion
-
-Endgame leverages the Bulk API 2.0 to fetch data from Salesforce on an hourly basis—which means integration is generally immaterial when it comes to API limits. We ingest the objects outlined below by default—but it's also possible to explicitly define additional objects as needed. After the initial sync, we constrain subsequent requests to records that have been updated (as determined by SystemModStamp).
-
-Endgame polls for the query job to complete with incremental backoffs starting at every one minute and going up to ten minutes between job completion poll attempts.
-
-Endgame also downloads the results using a page size of 25,000, downloading those pages in parallel.
-
-Data from Salesforce is fetched using the credentials of the first user to log into Endgame. If needed, these credentials can be updated to a different user by sending a request to [support@endgame.io](mailto:support@endgame.io).
+If you connected a sandbox, the page is titled **Salesforce Sandbox**.
 
 <Note>
-  Only accounts the integration user has permission to access in Salesforce will
-  be run through any AI systems. The integration user is the one you first log
-  in with after consultation with Endgame. The user can be updated by going to
-  the [integration
-  page](https://app.endgame.io/settings/integrations/salesforce), hovering over
-  the Connect button in the top right corner and clicking Reconnect.
+  If your organization lets Endgame write changes back to Salesforce from chat, each person also connects their own Salesforce login in **Settings** > **You** > **Connections**.
 </Note>
 
-## Important fields
+## Create a dedicated API integration user
 
-Endgame adds the standard fields on Required Objects by default to the context graph, and while custom fields are also ingested as part of the integration, Endgame does not automatically reference all custom fields as Salesforce instances often have hundreds of fields and only a handful that truly matter to help users deeply understand their accounts.
+This is optional, but recommended. Endgame reads data with the Bulk API 2.0, so you can connect with a dedicated API-only user. When you create the user in Salesforce, select:
 
-Endgame enables administrators to designate specific custom fields on our core required objects (Account, Opportunity, User, Contact) for Endgame to add to the context graph.
+- **User License:** Salesforce Integration
+- **Profile:** Minimum Access - API Only Integrations
+- **Additional permissions:** `Approve Uninstalled Connected Apps`
 
-To configure your Important (custom) fields:
+Then sign in as this user when you [connect Salesforce](#connect-salesforce-during-onboarding).
 
-<Steps>
-  <Step title="Go to Salesforce configuration page">
-    Navigate to the [Salesforce configuration page](https://app.endgame.io/settings/integrations/salesforce) (only available to admins)
-  </Step>
-  <Step title="Configure important fields on required objects">
-  Click on **configure** on a core object in the Required Objects list.
+## How Endgame syncs your data
 
-<Frame caption="Required object configuration">
+Endgame uses the Bulk API 2.0 to fetch data from Salesforce every hour, so the integration generally has little effect on your API limits. It syncs the required objects by default, and you can [add more objects](#sync-more-objects). After the first sync, Endgame only requests records that have changed since the last one (based on `SystemModStamp`).
+
+Endgame checks for each query job to finish with an increasing backoff, starting at one minute and going up to ten minutes between checks. It downloads results in pages of 25,000 records, several pages at a time.
+
+Endgame syncs data with the integration user's credentials. Only accounts that user can access in Salesforce are run through any AI systems, and everyone in your Endgame organization has access to the data synced for that user. To change the integration user, see [Change the integration user](#change-the-integration-user).
+
+## Choose important custom fields
+
+Endgame adds the standard fields on the required objects to its context graph. Custom fields are synced too, but Endgame doesn't reference all of them automatically: Salesforce instances often have hundreds of custom fields, and only a handful really help people understand their accounts. You choose which custom fields matter on Account, Contact, Opportunity and User.
+
+1. In Endgame, on the Salesforce page, under **Required objects**, click **Account**, **Contact**, **Opportunity** or **User**. You can also hover over the row and click **Configure**.
+2. In **Configure object fields**, search for the fields you want Endgame to use and select the checkbox next to each one. To have Endgame suggest fields, click **Recommend** and review what it selects. Recommend replaces your current selection.
+3. Optionally, add a description to a field to explain what it means.
+4. Click **Save**.
+
+Field selections are reviewed by an Endgame representative. Saving files a request, and we'll reach out once the change has been made.
+
+<Warning>
+  You can select up to 100 fields per object. Standard fields, and custom fields that aren't populated on any records, aren't listed.
+</Warning>
+
+<Frame caption="The Required objects table lists the objects Endgame always syncs, and which of them you can configure.">
   <img
-    src="../images/salesforce-integration-required-objects-1-6-26.png"
-    alt="Required object configuration"
+    src="/images/salesforce-required-objects-10-20-26.png"
+    alt="Required objects table on the Salesforce page with a Configure button on a configurable object"
     className="rounded-lg"
   />
 </Frame>
 
-  </Step>
-  <Step title="Mark select fields as important">
-    Search for the fields you want Endgame to include in responses, use the checkbox to select them, then click Save Changes. Your change request will be submitted to Endgame and you will be notified once your fields have been added.
-    
-  <Frame caption="Configure object fields modal">
+<Frame caption="In Configure object fields, select the custom fields you want Endgame to use, then click Save.">
   <img
-    src="../images/configure-object-field-modal-09-04-26.png"
-    alt="Configure object fields modal"
+    src="/images/salesforce-configure-opportunity-fields-10-23-26.png"
+    alt="Configure object fields dialog for Opportunity with the review notice, a field search, Recommend, five fields selected and a Save button"
     className="rounded-lg"
   />
 </Frame>
 
-    <Warning>
-      You can select up to 50 fields per object. Standard fields along with custom fields that are populated on 1 or fewer records are omitted from the list.
-    </Warning>
+## Sync more objects
 
-  </Step>
-</Steps>
+You can add more Salesforce objects to Endgame's context graph. At the top of the Salesforce page, Endgame shows how many objects you're syncing out of your limit, which counts every type of object together.
 
-## Additional objects
+- **Standard objects:** under **Additional standard objects**, turn on the toggle next to each object you want. Turning a standard object on or off files a request that an Endgame representative reviews, and we'll reach out once the change has been made.
+- **Custom objects:** under **Custom objects**, turn on the toggle next to each object you want. Custom objects sync automatically, and changes can take up to 2 hours.
 
-You can add additional Standard Objects to the Endgame context graph by toggling them on under Additional Standard Objects. Your change request will be submitted to Endgame and you will be notified once your objects have been added.
-
-<Frame caption="Additional Salesforce objects">
+<Frame caption="Turning on a standard object sends a request to Endgame to start syncing it.">
   <img
-    src="../images/additional-standard-objects-09-04-26.png"
-    alt="Additional Salesforce objects"
+    src="/images/salesforce-standard-objects-10-20-26.png"
+    alt="Additional standard objects section with a review notice, object search, and a sync toggle for each object"
     className="rounded-lg"
   />
 </Frame>
 
-You can add additional Custom Objects to the Endgame context graph by toggling them on under Custom Objects. Changes are made automatically and can take up to 2 hours to take effect.
+## Change the integration user
 
-<Frame caption="Salesforce custom objects">
-  <img
-    src="../images/additional-custom-objects-09-04-26.png"
-    alt="Salesforce custom objects"
-    className="rounded-lg"
-  />
-</Frame>
+1. In Endgame, at the bottom of the Salesforce page, in the **Connection** section, click **Update credentials**.
+2. Sign in to Salesforce as the new integration user and approve access.
+
+Endgame syncs with the new user from then on. The new user must belong to the same Salesforce org. To switch to a different Salesforce org, contact [support@endgame.io](mailto:support@endgame.io). Update credentials connects to the same kind of instance you chose during onboarding, production or sandbox.
+
+To renew Endgame's access without changing the user, follow the same steps and sign in as your current integration user.
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).

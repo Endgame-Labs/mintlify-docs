@@ -40,6 +40,10 @@ mint update
 mint broken-links
 ```
 
+## Screenshots and UI writing
+
+Follow `SCREENSHOTS.md` at the repo root when adding or changing screenshots, captions, alt text, Settings paths or step-by-step instructions.
+
 ## Key Configuration
 
 - **Site configuration**: Edit `docs.json` for navigation, theming, and site metadata

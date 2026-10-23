@@ -1,46 +1,68 @@
 ---
 title: "Digests"
-description: "Configure custom Endgame digests, sent straight to your inbox."
+description: "Schedule a prompt to run automatically and get the results by email."
 icon: "calendar-clock"
 ---
 
-Digests allow users to send custom prompt outputs directly to their email inbox on a daily, weekly, monthly, or quarterly schedule.
+A digest is a prompt that Endgame runs on a schedule and emails to you. Use one for anything you'd otherwise ask Endgame again and again, like a weekly pipeline summary or prep for the week's customer calls.
 
-## Create or manage existing digests
+Endgame includes a few suggested digests to get you started. Turn one on as it is, edit it to fit how you work, or create your own.
 
-To create or manage your existing digests, go to [Settings \> Digests](https://app.endgame.io/settings/digests).
+## Find your digests
 
-Once in the digest view, you can click **New digest** to create a digest, or click on an existing digest to make updates. Endgame provides a few suggested digests to get you started. You can enable and edit these digests or create new digests from scratch.
+Your digests are in [**Settings** > **You** > **Digests**](https://app.endgame.io/settings/digests). Each card shows the digest's schedule, its recipients, and when it last ran and will run next. Use the search bar, the **All**, **Active**, and **Inactive** filters, or **Sort** to find one.
 
-Use the search bar, the **All**, **Active**, and **Inactive** filters, or the **Sort** dropdown to find a digest. Each digest card shows its schedule, its recipients, and when it last ran and will run next. Use the toggle on a digest card to turn it on or off.
-
-<Frame caption="Digests">
+<Frame caption="The Digests page lists your digests and their schedules.">
   <img
     src="/images/digest-list-10-16-26.png"
-    alt="Digests list showing search, status filters, sort, and a digest card with its schedule, recipients, and last and next run dates"
+    alt="Digests page with search, status filters, sort, and a digest card showing its schedule, recipients, and run dates"
     className="rounded-lg"
   />
 </Frame>
 
-<Frame caption="Create a new digest">
+## Create a digest
+
+1. In **Settings** > **You** > **Digests**, click **New digest** at the top right.
+2. In **Name**, give the digest a short name you'll recognize in your list, like "Weekly pipeline summary".
+3. In **Prompt**, write what you want Endgame to do, the same way you'd ask in chat. Say what to cover, which time period to look at, and how you want the results laid out. For example:
+
+   ```text
+   Summarize what changed in my open opportunities over the past week:
+   new risks, stage changes, and upcoming close dates.
+   Group by account and keep it to a short list per account.
+   ```
+
+4. Optional: in **Additional recipients**, add teammates who should also get the digest. Recipients must be active members of your organization. Digests go to you by default.
+5. In **Digest schedule**, choose how often it runs (daily, weekdays, weekly, monthly, or quarterly) and at what time. It runs in the timezone shown under the schedule.
+6. Click **Create**.
+
+<Frame caption="A new digest needs a name, a prompt, and a schedule.">
   <img
     src="/images/create-new-digest-10-16-26.png"
-    alt="New digest form with name, prompt, additional recipients, and digest schedule fields"
+    alt="New digest form with Name, Prompt, Additional recipients, and Digest schedule fields"
     className="rounded-lg"
   />
 </Frame>
 
-Add additional recipients to your digest by selecting users in your organization
-or adding any valid email address to the **Additional recipients** field.
+## Test a digest
 
-You can disable or delete digests at any time if you want to stop receiving fresh content. By default, digests are sent to the email address associated with your user.
+You don't have to wait for the schedule to see what a digest sends. Run it now, check the email, and adjust the prompt until the results are what you want.
 
-You can generate a digest preview by opening a digest and clicking **Run now** or selecting **Run now** from the overflow menu on a digest. The preview is sent directly to your email, so you don't have to wait for your first scheduled digest.
+- On the digest's card, open the **⋮** menu and select **Run digest**.
+- Or open the digest and click **Run now**.
 
-<Frame caption="Edit a digest">
+Endgame emails you the results when the run finishes. The digest's schedule stays the same.
+
+## Manage a digest
+
+- **Turn a digest on or off:** click the toggle on its card. A blue toggle means the digest is active. When it's off, the card shows **Paused** instead of the next run date, and the digest keeps its settings until you turn it back on.
+- **Edit a digest:** click anywhere on its card, or select **Edit** from the card's **⋮** menu.
+- **Delete a digest:** select **Delete** from the card's **⋮** menu.
+
+<Frame caption="Use the ⋮ menu on a digest card to run, edit, or delete it.">
   <img
-    src="/images/edit-digest-10-16-26.png"
-    alt="Edit digest form showing the digest is active, its next scheduled run, and the Run now button"
+    src="/images/digest-card-menu-10-20-26.png"
+    alt="A digest card with its toggle on and its menu open, showing Run digest, Edit, and Delete"
     className="rounded-lg"
   />
 </Frame>

@@ -12,7 +12,7 @@ Getting started with Endgame is simple. You will receive an invitation via email
 ## Pre-flight checklist
 
 <Tip>
-  **Best practice:** Connect with a dedicated [API Integration User](/integrations/salesforce#optional-api-integration-user) instead of a personal account.
+  **Best practice:** Connect with a dedicated [API Integration User](/integrations/salesforce#create-a-dedicated-api-integration-user) instead of a personal account.
 </Tip>
 
 The connecting user (or API Integration User) needs read access to **all fields** on the following Salesforce objects:
@@ -21,6 +21,8 @@ The connecting user (or API Integration User) needs read access to **all fields*
   <Card>
     - Account
     - User
+    - Profile
+    - UserLicense
     - Lead
     - Contact
     - Opportunity
@@ -36,6 +38,7 @@ The connecting user (or API Integration User) needs read access to **all fields*
     - CampaignMember
     - Note
     - OpportunityHistory
+    - AccountTeamMember
   </Card>
 </CardGroup>
 
@@ -65,7 +68,7 @@ The connecting user (or API Integration User) needs read access to **all fields*
     </Frame>
   </Step>
   <Step title="Approve Salesforce Connected App">
-    As a user with the `Manage Connected Apps` permission in Salesforce, navigate to `Setup -> Manage Apps -> Connected Apps OAuth Usage`, and click "Install" next to the "EndgameLabs2" app.
+    In Salesforce, go to **Setup** > **Connected Apps** > **Connected Apps OAuth Usage** and click **Install** next to the `EndgameLabs2` app. You need the **Customize Application** permission, plus either **Modify All Data** or **Manage Connected Apps**. See [Approve the Endgame connected app](/integrations/salesforce#approve-the-endgame-connected-app).
   </Step>
 </Steps>
 
@@ -82,14 +85,14 @@ Once you have things connected, Endgame will automatically start ingesting your 
 </Frame>
 
 <Tip>
-  You don't need to wait for ingestion to finish. Click **Connect Additional Services** and continue to the next module to start configuring your instance while your data syncs in the background.
+  You don't need to wait for ingestion to finish. Continue to the next module and connect your other tools in [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations) while your data syncs in the background.
 </Tip>
 
 ---
 
 <Columns cols={2}>
   <Column>
-    <Card title="Previous Module" icon="arrow-big-left" horizontal href="implementation-guide/implementation-guide">
+    <Card title="Previous Module" icon="arrow-big-left" horizontal href="implementation-guide/overview">
       Overview
     </Card>
   </Column>

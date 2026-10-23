@@ -1,164 +1,142 @@
 ---
 title: "Notion"
-description: "Connect Notion to sync team content as knowledge"
-icon: "notion"
+description: "Sync pages and their sub-pages from your Notion workspace."
+icon: "/images/integrations/notion.svg"
 ---
 
-Use the instructions below to enable the Notion integration in Endgame. Once enabled, Endgame will process your linked Notion pages and provide insights via the Endgame UI.
+Connect Notion so Endgame can use your team's Notion pages as knowledge. You choose the pages to sync, and Endgame syncs them along with every sub-page underneath.
 
-## Enable the integration
+## Before you start
 
-<Note>
-  Creating a Notion integration requires that the connecting user is a Notion
-  Administrator for the workspace that you wish to connect.
-</Note>
+- You need to be an Endgame admin and an admin of the Notion workspace you want to connect.
+- Endgame connects to one Notion workspace at a time.
+- You'll need an internal integration token from Notion. The next two sections walk through creating the integration in Notion and sharing your pages with it.
+
+## Create an integration in Notion
 
 <Steps>
+  <Step title="Open your integrations in Notion">
+    Go to [notion.so/my-integrations](https://www.notion.so/my-integrations). Or, in Notion, click your workspace name at the top left, then **Settings** > **Connections** > **Develop or manage integrations**.
 
-<Step title="Create integration in Notion">
-Before setting up your connection within Endgame, you must first create a new integration within Notion.
-
-In Notion click on your workspace in the top left corner -> Settings -> Connections (under Integrations) -> Develop or Manage Integrations (scroll to bottom) -> Internal Integrations (bottom of side menu) -> Create a New Integration.
-
-<Frame caption="Notion settings">
-  <img
-    src="../images/notion-settings-03-13-26.png"
-    alt="Notion settings"
-    className="rounded-lg"
-  />
-</Frame>
-
-<Frame caption="Notion connections">
-  <img
-    src="../images/notion-connections-menu-03-13-26.png"
-    alt="Notion connections"
-    className="rounded-lg"
-  />
-</Frame>
-Name your integration something to indicate it will be used to connect to
-Endgame, i.e., Endgame Integration. Select the workspace you wish to connect.
-_Endgame currently only supports a single workspace connection._
-
-<Frame caption="Create new integration Notion">
-  <img
-    src="../images/create-new-integration-notion-03-11-26.png"
-    alt="Create new integration Notion"
-    className="rounded-lg"
-  />
-</Frame>
-
-Once created, you can edit the integration's Capabilities. Endgame only requires the "Read Content" and "Read user information including email addresses" scopes.
-
-<Frame caption="Edit capabilities">
-  <img
-    src="../images/capabilities-notion-03-11-26.png"
-    alt="Edit capabilities"
-    className="rounded-lg"
-  />
-</Frame>
-
-</Step>
-
-<Step title="Grant integration access to pages">
-You will need to grant access to the content in Notion that you want to sync to Endgame. We recommend organizing your content into nested file structures to avoid having to grant individual access to each page. If you give Endgame access at the parent level, all content nested below that page will also be accessible.
-
-There are two ways to select content:
-
-1. Navigate to the page you want to give access to. Click on the three dot menu in the top right corner -> Connections -> select the connection you set up in the previous step.
-
-<Frame caption="Connect page to integration">
-  <img
-    src="../images/connect-page-notion-03-11-26.png"
-    alt="Connect page to integration"
-    className="rounded-lg"
-  />
-</Frame>
-
-You will be prompted with a modal listing the capabilities you granted to this integration. Click **Confirm** to proceed.
-
-<Frame caption="Confirmation connect page">
-  <img
-    src="../images/confirm-connect-modal-notion-03-11-26.png"
-    alt="Confirmation connect page"
-    className="rounded-lg"
-  />
-</Frame>
-
-2. From the integration page, navigate to the Content access tab -> Edit Access -> select the pages you want to share -> Save.
-
-<Frame caption="Manage page access">
-  <img
-    src="../images/manage-access-notion-03-11-26.png"
-    alt="Manage page access"
-    className="rounded-lg"
-  />
-</Frame>
-
-</Step>
-
-  <Step title="Configuration in Endgame">
-    Navigate to the [integrations page](https://app.endgame.io/settings/integrations) and click Connect for the Notion option.
-
-    <Frame caption="Notion connection">
+    <Frame caption="Settings is in the workspace menu at the top left of Notion.">
       <img
-        src="../images/notion-connection-07-28-26.png"
-        alt="Manage Notion integration"
+        src="/images/notion-settings-03-13-26.png"
+        alt="Notion workspace menu with the Settings button"
         className="rounded-lg"
       />
     </Frame>
 
-    You will need to copy and paste your secret key from the Notion integration page into the field.
-
-<Frame caption="Provide Notion secret">
-  <img
-    src="../images/notion-secret-modal-03-13-26.png"
-    alt="Provide Notion secret"
-    className="rounded-lg"
-  />
-</Frame>
+    <Frame caption="In Connections, click Develop or manage integrations.">
+      <img
+        src="/images/notion-connections-menu-03-13-26.png"
+        alt="Notion Connections settings with the Develop or manage integrations link"
+        className="rounded-lg"
+      />
+    </Frame>
 
   </Step>
+  <Step title="Create an internal integration">
+    In **Internal integrations**, create a new integration. Give it a name that says what it's for, like "Endgame Integration", choose the workspace to connect as the **Associated workspace**, and click **Create**.
 
-  <Step title="Copy URLs from Notion to Endgame">
-
-You have already given Endgame access within Notion, but you need to additionally tell Endgame which pages you want to ingest. You do this by copying the URL for the Notion page (that you have already given access to in Notion) into the Notion Page URL input and clicking Add Page.
-
-<Frame caption="Notion page URLs">
-  <img
-    src="../images/notion-page-urls-03-13-26.png"
-    alt="Notion page URLs"
-    className="rounded-lg"
-  />
-</Frame>
-
-Endgame will by default ingest all nested content for a page. If you wish to exclude some pages or simply view the pages being synced, click on the circular arrow icon for the page. This will display all the nested pages. You can toggle off pages you do not want to include in the Endgame sync. When you are done with this configuration, you can close the preview by clicking the "X" in the top right corner.
-
-Endgame syncs your page data every hour. You can trigger an immediate sync by clicking the Sync button.
-
-<Frame caption="Notion synced content">
-  <img
-    src="../images/notion-integration-full-view-03-13-26.png"
-    alt="Notion synced content"
-    className="rounded-lg"
-  />
-</Frame>
-
-Page content can be deleted by clicking the trash icon for the page. Note that deleting a page with nested content will delete all nested page content as well. If you wish to only exclude certain nested pages, follow the instructions above.
+    <Frame caption="Name the integration and choose the workspace Endgame should connect to.">
+      <img
+        src="/images/create-new-integration-notion-03-11-26.png"
+        alt="Notion New Integration form with the name Endgame Integration and the Associated workspace dropdown open"
+        className="rounded-lg"
+      />
+    </Frame>
 
   </Step>
-    <Step title="Updating your connection">
-  Users can update or disconnect their Notion connection at any time. Disconnecting will remove all your existing page data and the links you have created. 
-  
-  To update your connection with a new secret and keep your page links, hover over the Connect button in the top right corner and when it shows Reconnect, click it to open the Notion secret modal. To disconnect, click the Disconnect button in the lower left hand corner.
+  <Step title="Set its capabilities">
+    In the integration's **Capabilities**, Endgame only needs **Read content** and **Read user information including email addresses**. Leave everything else off.
 
-You can also revoke integration permissions within Notion at the integration or page level.
+    <Frame caption="Turn on Read content and Read user information including email addresses.">
+      <img
+        src="/images/capabilities-notion-03-11-26.png"
+        alt="Notion Capabilities settings with Read content checked and Read user information including email addresses selected"
+        className="rounded-lg"
+      />
+    </Frame>
 
+  </Step>
+  <Step title="Copy the secret">
+    Copy the integration's secret from its page in Notion. You'll paste it into Endgame as the **Integration token**.
   </Step>
 </Steps>
 
-## What's next?
+## Share pages with the integration
 
-That's it! Now that you've connected Notion to Endgame, we'll automatically ingest your data into our systems once an hour and present our insights in Endgame.
+Notion only lets the integration read pages you share with it. Sharing a parent page also shares everything nested under it, so it's easiest to keep the content you want in Endgame under a few top-level pages.
+
+You can share pages in either of two ways:
+
+- **From a page:** open the page, click the **⋯** menu at the top right, then **Connections**, and choose your integration. Click **Confirm** to give it access.
+- **From the integration:** on the integration's page in Notion, open the **Content access** tab, click **Edit access**, select the pages to share, and click **Save**.
+
+<Frame caption="Use Connections in a page's ⋯ menu to share the page with your integration.">
+  <img
+    src="/images/connect-page-notion-03-11-26.png"
+    alt="Notion page menu with Connections open, listing the Endgame Integration"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame caption="Notion asks you to confirm the access the integration gets to the page and its child pages.">
+  <img
+    src="/images/confirm-connect-modal-notion-03-11-26.png"
+    alt="Notion dialog to connect Endgame Integration to a page, showing it can read content, with a Confirm button"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame caption="Manage page access lets you choose every page the integration can read in one place.">
+  <img
+    src="/images/manage-access-notion-03-11-26.png"
+    alt="Notion Manage page access dialog with a page search and checkboxes for each page"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Connect Notion
+
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Notion and click **Connect**.
+2. Paste the secret you copied from Notion into **Integration token**, then click **Connect**.
+
+<Frame caption="Connecting Notion needs the token from your Notion integration.">
+  <img
+    src="/images/notion-connect-dialog-10-23-26.png"
+    alt="Connect Notion dialog with an empty Integration token field and its helper text"
+    className="rounded-lg"
+  />
+</Frame>
+
+Endgame opens the Notion page so you can choose what to sync.
+
+## Choose pages to sync
+
+Sharing pages in Notion gives Endgame access. You also tell Endgame which of those pages to sync, in **Page sync** on the Notion page in Endgame.
+
+- **Add a page:** paste the page's URL into **Notion page URL** and click **Add page**. Share the page with your integration in Notion first. Endgame syncs the page and every sub-page under it, and lists it in **Synced page trees**.
+- **Leave out some sub-pages:** after a page syncs, its sub-pages are listed below **Synced page trees**. Turn off **Sync** for any you don't want Endgame to sync. Content it already synced from them stays in Endgame. Turning off a page also turns off the pages under it. If the list isn't showing, or to pick up sub-pages added in Notion since the last sync, click the refresh icon next to the page.
+- **Sync now:** Endgame syncs your pages every hour. To sync a page right away, click **Sync** next to it.
+- **Remove a page:** click the trash icon next to a page, then **Remove**. The page and everything under it stop syncing, and the content Endgame synced from them is deleted. To stop syncing only some sub-pages, turn off **Sync** for them instead.
+
+<Frame caption="Synced page trees lists the pages Endgame syncs, and each page's sub-pages can be turned off one by one.">
+  <img
+    src="/images/notion-page-sync-10-23-26.png"
+    alt="Page sync with two pages in Synced page trees and the sub-page list for one of them, with one sub-page turned off"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Notion page in Endgame. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** opens the same dialog as connecting, with nothing prefilled. Paste a new token from Notion, for example after you refresh the integration's secret. Your synced pages stay in place.
+- **Disconnect** stops syncing pages. Content Endgame already synced stays. To delete it, remove the page trees before you disconnect. To reconnect later, you'll need your integration token again.
+
+You can also take away Endgame's access in Notion, for the whole integration or page by page.
 
 ## Need help or have feedback?
 

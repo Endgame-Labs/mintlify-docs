@@ -1,22 +1,26 @@
 ---
 title: "Google Drive"
 description: "Connect to Google Drive to sync context documents, export directly to Drive, and sync your calendar"
-icon: "google"
+icon: "/images/integrations/google-drive.svg"
 ---
 
-<Warning>
-  Access to Google integrations is managed by your organization. If these
-  integrations aren't visible in Endgame, your organization hasn't enabled them
-  yet.
-</Warning>
+<Note>
+  Google Drive and Google Calendar are personal connections. Each person connects their own Google account in [**Settings** > **You** > **Connections**](https://app.endgame.io/settings/connections), and it only affects them. If you don't see Google Drive or Google Calendar there, your organization has turned off Google connections. Contact [support@endgame.io](mailto:support@endgame.io) to turn them on.
+</Note>
 
 ### Syncing knowledge documents
 
 Individual users can authenticate to Google Drive to [enable syncing](https://docs.endgame.io/features/file-upload#link-files-from-google-drive) of folders and files for use as contextual knowledge in chat responses. This can be done on a user-by-user basis to enable uploads at the account level (all users) or the organization level (admin users only). We do not currently offer a single integration user experience.
 
+### Connect or disconnect Google Drive
+
+In [**Settings** > **You** > **Connections**](https://app.endgame.io/settings/connections), click **Connect** next to **Google Drive**. Endgame first shows its company data privacy policy. Click **Continue**, then sign in with your Google account.
+
+To disconnect, click **Disconnect** next to **Google Drive** and confirm. Files you linked from Google Drive stay in Endgame, but stop picking up new changes. To remove them, unlink them.
+
 ### Google calendar integration
 
-Individual users can sync their Google calendars to provide more accurate and comprehensive meeting data for use in chat responses. This can be done in [Settings > Connections](https://app.endgame.io/settings/connections). Click **Connect** next to Google Calendar and sign in with your Google account.
+Individual users can sync their Google calendars to provide more accurate and comprehensive meeting data for use in chat responses. This can be done in [**Settings** > **You** > **Connections**](https://app.endgame.io/settings/connections). Click **Connect** next to Google Calendar and sign in with your Google account.
 
 <Frame caption="Google Calendar connection">
   <img
@@ -36,7 +40,7 @@ When going through the connection flow, users _must_ check the box to allow Endg
   />
 </Frame>
 
-Users can disconnect their Google calendar anytime by clicking **Disconnect** next to the Google Calendar integration. A confirmation modal will appear. Click **Disconnect** to confirm. Your calendar stops syncing and Endgame will no longer have access to future meeting data. Disconnecting doesn't delete meeting data Endgame has already synced.
+Users can disconnect their Google calendar anytime by clicking **Disconnect** next to **Google Calendar**. A confirmation modal will appear. Click **Disconnect** to confirm. Your calendar stops syncing and Endgame will no longer have access to future meeting data. Disconnecting doesn't delete meeting data Endgame has already synced.
 
 <Frame caption="Disconnect Google Calendar confirmation">
   <img
@@ -50,8 +54,8 @@ Users can disconnect their Google calendar anytime by clicking **Disconnect** ne
 
 | Question                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **What permissions does Endgame request?**                                                                                  | Endgame requests [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [drive.readonly](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) permissions for syncing and [calendar.events.readonly](https://www.googleapis.com/auth/calendar.events.readonly) and [userinfo.email](https://www.googleapis.com/auth/userinfo.email) for the calendar integration.                                                                              |
-| **Why do individual users need to authenticate to Google?**                                                                 | Individual user authentication is required to sync files to accounts. It's also necessary if a user wants to download content directly to [Google Sheets](https://docs.endgame.io/features/export-thread-content#export-table-to-google-sheets) or [Google Docs](https://docs.endgame.io/features/export-thread-content#export-to-google-docs). Individual users can also optionally sync their google calendar to Endgame. Users who don't need these features are not required to authenticate to Google. |
+| **What permissions does Endgame request?**                                                                                  | Endgame requests [drive.file](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) and [drive.readonly](https://developers.google.com/workspace/drive/api/guides/api-specific-auth) permissions for syncing, [userinfo.email](https://www.googleapis.com/auth/userinfo.email) and [userinfo.profile](https://www.googleapis.com/auth/userinfo.profile) to identify your account, and [calendar.events.readonly](https://www.googleapis.com/auth/calendar.events.readonly) and [userinfo.email](https://www.googleapis.com/auth/userinfo.email) for the calendar integration.                                                                              |
+| **Why do individual users need to authenticate to Google?**                                                                 | Individual user authentication is required to sync files to accounts. It's also necessary if a user wants to download content directly to [Google Sheets](https://docs.endgame.io/features/export-thread-content#export-table-to-google-sheets) or [Google Docs](https://docs.endgame.io/features/export-thread-content). Individual users can also optionally sync their google calendar to Endgame. Users who don't need these features are not required to authenticate to Google. |
 | **Does Endgame sync my entire Drive once I've connected?**                                                                  | No, Endgame only syncs folders or files that you explicitly select.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Does Endgame keep a copy of the files it syncs from Drive?**                                                              | We create a copy of the file to process it for use in your chat responses. However, when you unsync a file, we delete the source content from our database.                                                                                                                                                                                                                                                                                                                                                 |
 | **Can Endgame Admins delete the files linked on behalf of users or does the originating user have to delete it?**           | Admins can delete or unlink any files that any user has added.                                                                                                                                                                                                                                                                                                                                                                                                                                              |

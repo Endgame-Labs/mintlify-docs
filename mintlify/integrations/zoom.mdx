@@ -1,88 +1,61 @@
 ---
 title: "Zoom"
-description: "Process Zoom call recordings and gain insights from your meetings"
-icon: "video"
+description: "Capture call transcripts and recordings from Zoom for Endgame to analyze."
+icon: "/images/integrations/zoom.svg"
 ---
 
-Use the instructions below to enable Zoom integration in Endgame. Once enabled, Endgame will process your Zoom call recording data and provide our insights via the Endgame UI.
+Connect Zoom so Endgame can learn from your team's meetings. Endgame brings in your Zoom meetings (past and upcoming), their participants, and their recordings.
 
-## Adding the App
+Endgame uses them to show the meetings you've had on an account and which opportunities they relate to, and to build a fuller picture of your conversations with customers and contacts.
 
-<Note>
-  Connecting to the Zoom API requires that the connecting user is a Zoom
-  Administrator
-</Note>
+## Before you start
 
-<Steps>
- <Step title="Navigate to Configuration">
-    Navigate to the [integrations page](https://app.endgame.io/settings/integrations). Only Endgame Admins can configure organization integrations
+- You need to be an Endgame admin.
+- The person connecting must be a Zoom administrator.
 
-    If needed, login to your Endgame account via Salesforce
+## Connect Zoom
 
-  </Step>
-  <Step title="Start Setup">
-    From the integrations page, click "Connect" to kick off the Zoom authentication process.
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Zoom and click **Connect**. You can search for "Zoom", or choose **Available** to show only integrations you haven't connected yet.
+2. Sign in to Zoom if it asks you to.
+3. Review the permissions **Endgame for Zoom** asks for, then click **Allow**.
 
-    <Frame caption="Zoom connection">
-      <img
-        src="../images/zoom-connection-07-28-26.png"
-        alt="Zoom connection"
-        className="rounded-lg"
-      />
-    </Frame>
+<Frame caption="Click Allow on Zoom's authorization page to add the Endgame app to your Zoom account.">
+  <img
+    src="/images/zoom-setup-authorization.png"
+    alt="Zoom permission page for Endgame for Zoom listing the meeting and recording access it asks for, with Allow and Decline buttons"
+    className="rounded-lg"
+  />
+</Frame>
 
-  </Step>
-  <Step title="Grant Access">
-    In the resulting page, click "Allow" to grant Endgame access to your Zoom Account
-
-    <Frame>
-      <img
-        src="/images/zoom-setup-authorization.png"
-        alt="Zoom authorization page"
-        className="rounded-lg"
-      />
-    </Frame>
-
-  </Step>
-</Steps>
-
-## Usage
-
-That's it! Now that you've connected Zoom to Endgame, we'll automatically ingest your data into our systems and present our insights in Endgame.
-
-Endgame accesses meetings (both past and upcoming), their participants, and recordings.
-
-Within Endgame, this allows us to show meetings that you've had on an account, which opportunities they're associated with, and to help build a robust picture of your interactions with customers and contacts.
-
-## Removing the App
-
-<Steps>
-  <Step title="Access Zoom Marketplace">
-    Log in to your Zoom account and navigate to the [Zoom App
-    Marketplace](https://marketplace.zoom.us/)
-  </Step>
-  <Step title="Find Endgame App">
-    Click Manage → Added Apps, or search for the 'Endgame for Zoom' app
-  </Step>
-  <Step title="Remove App">Click 'Remove'</Step>
-</Steps>
-
-<Info>
-  - When the app is removed, Endgame will not surface new meetings or transcript
-  information. - Endgame does not automatically remove data when the app is
-  removed - contact [support@endgame.io](mailto:support@endgame.io) with data
-  removal requests.
-</Info>
+You'll come back to the Zoom page in Endgame, which shows **Connected** at the top. Endgame then starts bringing in your Zoom data automatically.
 
 ## Troubleshooting
 
-Connecting to the Zoom API requires that the connecting user is a Zoom Administrator
+If connecting Zoom doesn't work, check that the person connecting is a Zoom administrator.
 
-## Contact Support
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Zoom page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** takes you to Zoom's sign-in page to renew Endgame's access.
+- **Disconnect** stops syncing call transcripts and recordings from Zoom.
+
+### Remove the app from Zoom
+
+You can also remove the Endgame app from Zoom's side:
+
+1. Sign in to the [Zoom App Marketplace](https://marketplace.zoom.us/).
+2. Click **Manage** > **Added Apps**, or search for the **Endgame for Zoom** app.
+3. Click **Remove**.
+
+<Info>
+  Once the app is removed, Endgame stops showing new meetings and transcripts
+  from Zoom. Endgame doesn't automatically delete data it already synced. To
+  ask for it to be removed, contact [support@endgame.io](mailto:support@endgame.io).
+</Info>
+
+## Need help or have feedback?
 
 We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).
 
-Support Availability:
-
-- Monday - Friday, 10AM - 4PM Pacific Time, excluding public holidays
-- Initial Response SLA: 1 business day
+Support is available Monday to Friday, 10 AM to 4 PM Pacific Time, excluding public holidays. We aim to reply within one business day.

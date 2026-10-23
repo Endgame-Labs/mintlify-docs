@@ -1,16 +1,19 @@
 ---
 title: "Snowflake"
-description: "Connect Snowflake tables to Endgame"
-icon: "database"
+description: "Sync data from your Snowflake tables, views and dynamic tables."
+icon: "/images/integrations/snowflake.svg"
 ---
 
-Use the instructions below to enable the Snowflake integration in Endgame. Once enabled, Endgame will query your Snowflake data once per hour and include Snowflake insights in your Endgame chats.
+Connect Snowflake so Endgame can use data from the tables, views, and dynamic tables you choose. Endgame syncs them every hour and includes what it finds in Endgame chats.
 
-## Adding the App
+## Before you start
 
-<Note>
-  Connecting to Snowflake requires that the user is an ACCOUNTADMIN or equivalent and has OpenSSL installed on their local machine.
-</Note>
+- You need to be an Endgame admin.
+- In Snowflake, you need to be an ACCOUNTADMIN or have equivalent permissions.
+- You need OpenSSL installed on your computer to create a key pair.
+- To connect, you'll need an **account identifier**, a **username**, a **warehouse**, and the user's **private key**. The steps below walk you through creating each one.
+
+## Set up Snowflake for Endgame
 
 <Steps>
   <Step title="Generate a key pair">
@@ -26,13 +29,13 @@ Use the instructions below to enable the Snowflake integration in Endgame. Once 
 
     This creates two files:
 
-    - `snowflake_key.p8` — Your private key (you'll provide this to Endgame)
-    - `snowflake_key.pub` — Your public key (you'll register this in Snowflake)
+    - `snowflake_key.p8` — your private key, which you'll give to Endgame.
+    - `snowflake_key.pub` — your public key, which you'll register in Snowflake.
 
-    Keep your private key secure. Do not share it or commit it to version control.
+    Keep your private key secure. Don't share it or commit it to version control.
   </Step>
-  <Step title="Create a Role and Service User in Snowflake">
-    Open a SQL worksheet in Snowflake (click \+ Create → SQL File) and run the following commands.
+  <Step title="Create a role and service user in Snowflake">
+    Open a SQL worksheet in Snowflake (click **+ Create** > **SQL File**) and run the following commands.
 
     1. Create a read-only role:
 
@@ -48,9 +51,9 @@ Use the instructions below to enable the Snowflake integration in Endgame. Once 
     GRANT USAGE ON WAREHOUSE <your_warehouse> TO ROLE ENDGAME_CONNECTOR_READONLY;
     ```
 
-    Replace `<your_warehouse>` with your warehouse name (e.g., COMPUTE\_WH). This allows the role to run queries.
+    Replace `<your_warehouse>` with your warehouse name (for example, COMPUTE\_WH). This lets the role run queries.
 
-    3. Grant database access: For each database you want Endgame to access, grant the appropriate permissions:
+    3. Grant database access. For each database you want Endgame to access, grant the appropriate permissions:
 
     **For standard databases:**
 
@@ -66,15 +69,15 @@ Use the instructions below to enable the Snowflake integration in Endgame. Once 
     GRANT SELECT ON FUTURE VIEWS IN DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
     ```
 
-    **For shared/imported databases:**
+    **For shared or imported databases:**
 
     ```text
     GRANT IMPORTED PRIVILEGES ON DATABASE <database_name> TO ROLE ENDGAME_CONNECTOR_READONLY;
     ```
 
-    4. Create the service user:
+    4. Create the service user.
 
-    First, get your public key content. Open `snowflake_key.pub` and copy the content between the header and footer lines (exclude `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`). Remove any newlines so it's a single continuous string.
+    First, get your public key content. Open `snowflake_key.pub` and copy the content between the header and footer lines (leave out `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC KEY-----`). Remove any line breaks so it's a single continuous string.
 
     Then create the user:
 
@@ -94,7 +97,7 @@ Use the instructions below to enable the Snowflake integration in Endgame. Once 
     ```
   </Step>
   <Step title="Find your account identifier">
-    Your Snowflake account identifier is displayed in your Snowflake URL or in the account selector. It follows the format `orgname-accountname` (e.g., `myorg-account123`).
+    Your Snowflake account identifier is the part before `.snowflakecomputing.com` in your Snowflake URL, and it's also shown in the account selector. It usually looks like `orgname-accountname` (for example, `myorg-account123`).
 
     You can also find it by running:
 
@@ -102,46 +105,60 @@ Use the instructions below to enable the Snowflake integration in Endgame. Once 
     SELECT CURRENT_ORGANIZATION_NAME() || '-' || CURRENT_ACCOUNT_NAME();
     ```
 
-    For more details, see [Snowflake Account Identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier).
-  </Step>
-  <Step title="Connect Snowflake to Endgame">
-    Log into Endgame and navigate to the [integrations](https://app.endgame.io/settings/integrations) page. Click to Connect with Snowflake and enter your organization data in the modal.
-
-    <Frame caption="Snowflake connection">
-      <img
-        src="../images/snowflake-connection-07-28-26.png"
-        alt="Snowflake connection"
-        className="rounded-lg"
-      />
-    </Frame>
-
-    <Frame caption="Snowflake connector modal">
-      <img
-        src="../images/snowflake-connector-modal-02-10-26.png"
-        alt="Snowflake connector modal"
-        className="rounded-lg"
-      />
-    </Frame>
-  </Step>
-  <Step title="Add snowflake objects">
-    Once you have successfully connected Endgame to your snowflake instance, you can add object identifiers for the  tables, views, or dynamic tables you want to sync to Endgame.
-
-    <Danger>
-      Tables over 100 MB won’t sync. Use summarized Snowflake views, not raw event data. **For best performance, keep tables under 20k rows.**
-    </Danger>
-
-    <Frame caption="Snowflake object identifiers">
-      <img
-        src="../images/snowflake-object-identifier-02-10-26.png"
-        alt="Snowflake object identifiers"
-        className="rounded-lg"
-      />
-    </Frame>
-
-    You may remove an object at anytime by clicking on the trash icon under Actions. This will stop future syncs and delete the associated data in Endgame.
+    For more details, see [Snowflake account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier).
   </Step>
 </Steps>
 
+## Connect Snowflake
+
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Snowflake and click **Connect**. You can search for "Snowflake", or choose **Available** to show only integrations you haven't connected yet.
+2. Enter your **Account identifier**, the **Username** of the service user (for example, `ENDGAME_SERVICE_USER`), the contents of `snowflake_key.p8` as the **Private key (PEM)**, and your **Warehouse**.
+3. Click **Connect**.
+
+<Frame caption="Connecting Snowflake needs your account identifier, username, private key, and warehouse.">
+  <img
+    src="/images/snowflake-connect-dialog-10-23-26.png"
+    alt="Connect Snowflake dialog with empty Account identifier, Username, Private key (PEM) and Warehouse fields and a Connect button"
+    className="rounded-lg"
+  />
+</Frame>
+
+Endgame opens the Snowflake page so you can choose what to sync.
+
+## Choose objects to sync
+
+1. In Endgame, on the Snowflake page, go to **Data sync**.
+2. In **Object identifier**, enter the fully qualified name of a table, view, or dynamic table, as `DATABASE.SCHEMA.OBJECT_NAME`.
+3. Click **Add object**.
+
+Endgame checks that the object exists and that it can access it, then adds it to **Synced objects**. The list shows each object's size status, row count, and when it last synced.
+
+<Danger>
+  Tables with 100,000 or more rows, or over about 200 MB, won't sync. Tables over 50,000 rows or 100 MB get a size warning. Use summarized Snowflake views, not raw event data. **For best performance, keep tables under 20k rows.**
+</Danger>
+
+<Frame caption="Data sync is where you add the Snowflake objects Endgame syncs.">
+  <img
+    src="/images/snowflake-data-sync-10-23-26.png"
+    alt="Data sync section with an Object identifier field, an Add object button, and three synced objects with their status, rows and last synced time"
+    className="rounded-lg"
+  />
+</Frame>
+
+To stop syncing an object, click the trash icon next to it in **Synced objects**, then click **Remove**. Endgame stops syncing that object and deletes the data it synced from it.
+
 <Info>
-  Because of their nature, Snowflake tables are assumed to be applicable at an organization level, relevant to many accounts. They are not account specific.
+  Snowflake tables usually describe your whole organization, so Endgame treats
+  them as organization-wide data rather than tying them to one account.
 </Info>
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Snowflake page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** opens the same dialog as connecting, with nothing prefilled. Use it when you rotate the service user's key.
+- **Disconnect** stops syncing data from Snowflake.
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).

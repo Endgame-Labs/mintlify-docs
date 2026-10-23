@@ -1,115 +1,98 @@
 ---
 title: "Microsoft Teams"
-description: "Connect Microsoft Teams to sync account channel data to Endgame"
-icon: "microsoft"
+description: "Sync channel messages and calls from Microsoft Teams for account intelligence."
+icon: "/images/integrations/teams.svg"
 ---
 
-Use the instructions below to enable the Microsoft Teams integration in Endgame. Once enabled, Endgame will ingest your Teams messages from specific channels and associate them with specific Accounts making them available in Endgame chat responses.
+Connect Microsoft Teams so Endgame can use your team's conversations about each account. You link Teams channels to accounts, and Endgame syncs their messages every 15 minutes. You can also sync Teams call transcripts.
 
-## Enable the integration
+## Before you start
 
-<Note>
-  Connecting to the Microsoft Teams API requires that the connecting user is a
-  Teams Global Administrator.
-</Note>
+- You need to be an Endgame admin and a Teams Global Administrator.
+- You'll sign in with your Microsoft account and approve Endgame's access for your organization, so have that account ready.
+- To sync call transcripts, a Microsoft Teams administrator will also need to run a PowerShell command once (see [Sync call transcripts](#sync-call-transcripts)).
 
-<Steps>
-  <Step title="Navigate to Configuration">
-    Navigate to the [integrations page](https://app.endgame.io/settings/integrations). Only Endgame Admins can configure organization integrations.
-  </Step>
-  <Step title="Start Setup">
-    From the integrations page, click "Connect" to kick off the Teams authentication process.
+## Connect Microsoft Teams
 
-        <Frame caption="Microsoft Teams connection">
-        <img
-            src="../images/microsoft-teams-connection-07-28-26.png"
-            alt="Microsoft Teams connection"
-            className="rounded-lg"
-        />
-        </Frame>
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Microsoft Teams and click **Connect**. Microsoft's sign-in page opens.
+2. Pick the Microsoft account you want to connect.
+3. On the permissions screen, check **Consent on behalf of your organization**, then click **Accept**.
 
-  </Step>
-  <Step title="Select Account">
-    Select the account you wish to connect to Endgame and go through the authentication flow and ensure you check the box for "Consent on behalf of your organization" to give Endgame access to the necessary scopes.
+<Frame caption="Pick the Microsoft account you want Endgame to connect with.">
+  <img
+    src="/images/pick-microsoft-account-03-10-26.png"
+    alt="Microsoft sign-in page asking you to pick an account"
+    className="rounded-lg"
+  />
+</Frame>
 
-        <Frame caption="Microsoft account selection">
-        <img
-            src="../images/pick-microsoft-account-03-10-26.png"
-            alt="Microsoft account selection"
-            className="rounded-lg"
-        />
-        </Frame>
+{/* SCREENSHOT: retake. Instruction image of Microsoft's Permissions requested screen for the Endgame Teams app with Consent on behalf of your organization checked. The current file shows the SharePoint connector's prompt. */}
+<Frame caption="Check Consent on behalf of your organization before you accept, so Endgame gets the access it needs.">
+  <img
+    src="/images/grant-endgame-permission-microsoft-03-18-26.png"
+    alt="Microsoft permissions request for Endgame with the Consent on behalf of your organization checkbox"
+    className="rounded-lg"
+  />
+</Frame>
 
-         <Frame caption="Microsoft grant permission">
-        <img
-            src="../images/grant-endgame-permission-microsoft-03-18-26.png"
-            alt="Microsoft grant permission"
-            className="rounded-lg"
-        />
-        </Frame>
+Endgame opens the Microsoft Teams page so you can choose what to sync.
 
-  </Step>
-  <Step title="Configure Channel Mapping">
-    Once connected, click to Manage your configuration. You can now designate which public Teams channel content will be associated with specific Endgame Accounts.
-    
-    First, you select the channel for which you wish to make an association.
+## Link channels to accounts
 
-    <Frame caption="Select Channel">
-        <img
-            src="../images/teams-add-channel-03-09-26.png"
-            alt="Select Channel"
-            className="rounded-lg"
-        />
-    </Frame>
+**Chat channels** is turned on when you connect. Endgame lists standard channels (not private or shared ones) from the teams the connected Microsoft account belongs to. To link a channel:
 
-    Second, choose which account to association with that channel and click Add. Channel data is synced to Endgame every 15 minutes.
+1. In **Add channel**, select a Teams channel. Channels are grouped by team.
+2. Search for the account to link it to.
+3. Click **Add**.
 
-     <Frame caption="Select Account">
-        <img
-            src="../images/teams-add-account-03-09-26.png"
-            alt="Select Account"
-            className="rounded-lg"
-        />
-    </Frame>
+<Frame caption="Select a channel and an account, then click Add to link them.">
+  <img
+    src="/images/teams-add-channel-10-23-26.png"
+    alt="Chat channels section with a Teams channel and an account selected in Add channel, and the Add button"
+    className="rounded-lg"
+  />
+</Frame>
 
-    You will see your association show up in the Account-specific Channels list below. You can remove these associations anytime by clicking the trash icon.
+Linked channels are listed in **Account-specific channels**, with their team, account, and when they last synced. Endgame syncs their messages every 15 minutes. To stop syncing a channel, click the trash icon next to it, then click **Remove**.
 
-
-     <Frame caption="Account specific channel list">
-        <img
-            src="../images/account-specific-channels-list-03-09-26.png"
-            alt="Account specific channel list"
-            className="rounded-lg"
-        />
-    </Frame>
-
-  </Step>
-  <Step title="Updating your connection">
-  Users can update or disconnect their Teams connection at anytime. Disconnecting will remove all your existing channel to account mappings. 
-  
-  To update your connection with a new user hover over the Connect button in the top right corner and when it shows Reconnect, click it to trigger the authentication process. To disconnect, click the Disconnect button in the lower left hand corner.
-
-   <Frame caption="Microsoft Teams integration view">
-        <img
-            src="../images/microsoft-teams-integration-view-03-09-26.png"
-            alt="Microsoft Teams integration view"
-            className="rounded-lg"
-        />
-    </Frame>
-  </Step>
-
-</Steps>
+<Frame caption="Account-specific channels lists each channel Endgame syncs and the account it's linked to.">
+  <img
+    src="/images/teams-account-channels-10-23-26.png"
+    alt="Account-specific channels table with channel, team, account, last synced time, and a remove icon for each channel"
+    className="rounded-lg"
+  />
+</Frame>
 
 <Note>
-  Endgame currently cannot distinguish between different account conversations in a single Teams channel. Instead, use Teams channels that are dedicated to singular account conversations to enhance your Endgame data.
+  Endgame can't tell different accounts apart within a single Teams channel. Link channels that are dedicated to one account.
 
-We will _only_ ingest channels that you have selected and associated with an Account in the Teams integration configuration. Other than the names of public channels, no other data is ingested without your permission.
-
+  For chat, Endgame _only_ syncs messages from the channels you link here.
 </Note>
 
-## What's next?
+## Sync call transcripts
 
-That's it! Now that you've connected Teams to Endgame, we'll automatically ingest your data into our systems every 15 minutes and present our insights in Endgame.
+Endgame can also sync Teams calls and their transcripts. **Call transcripts** is turned on when you connect. If you connected Teams before call transcripts were available, turn it on with its switch. You can turn it off the same way. It needs a one-time setup in your Microsoft tenant first: a Teams administrator grants Endgame access through an Application Access Policy. Until that's done, the **Call transcripts** section shows **One-time tenant setup required**.
+
+1. In Endgame, on the Microsoft Teams page, go to **Call transcripts** and copy the PowerShell command shown there.
+2. Have a Microsoft Teams administrator run the command.
+3. Back in Endgame, click **Verify access**. When it works, the page shows **Application Access Policy verified.**
+
+<Frame caption="Until a Teams administrator runs the PowerShell command and you verify access, Call transcripts shows the one-time setup.">
+  <img
+    src="/images/teams-call-transcripts-setup-10-23-26.png"
+    alt="Call transcripts section with the One-time tenant setup required message, a PowerShell command with a copy button, and a Verify access button"
+    className="rounded-lg"
+  />
+</Frame>
+
+If verification fails, the page says why. Fix the issue, then click **Verify access** again. For help, contact [support@endgame.io](mailto:support@endgame.io).
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Microsoft Teams page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** takes you to Microsoft's sign-in page, for example to connect with a different account.
+- **Disconnect** stops syncing channel messages and calls from Teams. Endgame keeps your linked channels, so they sync again if you reconnect.
 
 ## Need help or have feedback?
 

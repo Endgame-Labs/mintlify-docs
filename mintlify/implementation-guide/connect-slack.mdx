@@ -25,6 +25,7 @@ Endgame supports both **Slack** and **Microsoft Teams**. Connect whichever platf
 
 ## Before you start
 
+- **Endgame**: You need to be an Endgame admin.
 - **Slack**: You need to be a Slack Administrator or have approval from one.
 - **Microsoft Teams**: The connecting user must be a Teams Global Administrator.
 
@@ -34,15 +35,15 @@ Check with your IT team if you're not sure about your permissions.
 
 <Steps>
   <Step title="Start the connection">
-    Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations) and click "Connect" next to Slack. This kicks off the Slack OAuth process.
+    In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), search for Slack and click **Connect**. Slack's sign-in page opens.
 
     If you're not a Slack admin, you'll see a request approval screen. Submitting this sends a notification to your Slack admins via Slackbot.
   </Step>
   <Step title="Grant permissions">
-    Click "Allow" on the Slack permissions page to give Endgame access.
+    Click **Allow** on the Slack permissions page to give Endgame access. Endgame then opens its Slack page.
   </Step>
   <Step title="Map channels to accounts">
-    You'll land on a configuration page where you map public Slack channels to Endgame accounts.
+    In **Account-specific channels**, search for an account, select its channels, and click **Add**.
 
     **How to think about mapping:** For each major account, select the Slack channels where your team discusses that account. Common patterns include:
 
@@ -50,12 +51,12 @@ Check with your IT team if you're not sure about your permissions.
     - Account channels: `#acme-internal`, `#bigcorp-support`
     - Customer channels: `#ext-acme` (shared channels with customers)
 
-    You can map multiple channels to a single account. Add them one at a time.
+    You can select several channels for an account at once. To change them later, use the ⋮ menu next to the account and click **Edit channels**.
   </Step>
   <Step title="(Optional) Add organization-wide channels">
     Organization-wide channels don't map to specific accounts but enable multi-account Endgame conversations within Slack. Good candidates: `#sales-team`, `#pipeline-review`, `#competitive-intel`.
 
-    Select the channels under "Organization-Wide Channels" and submit.
+    In **Organization-wide channels**, select the channels and click **Add**.
   </Step>
 </Steps>
 
@@ -63,17 +64,17 @@ Check with your IT team if you're not sure about your permissions.
 
 <Steps>
   <Step title="Start the connection">
-    Navigate to [Settings \> Integrations](https://app.endgame.io/settings/integrations) and click "Connect" next to Microsoft Teams. This kicks off the Teams authentication process.
+    In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), search for Microsoft Teams and click **Connect**. Microsoft's sign-in page opens.
   </Step>
   <Step title="Authenticate and grant consent">
-    Select the Microsoft account you want to connect and go through the authentication flow. Make sure to check the box for **"Consent on behalf of your organization"** to give Endgame access to the necessary scopes.
+    Pick the Microsoft account you want to connect. On the permissions screen, check **Consent on behalf of your organization** and click **Accept**. Endgame then opens its Microsoft Teams page.
   </Step>
   <Step title="Map channels to accounts">
-    Once connected, click "Manage" to open your configuration. From here you map public Teams channels to Endgame accounts:
+    In **Add channel**, link standard Teams channels to Endgame accounts:
 
-    1. Select a channel you want to associate with an account
-    2. Choose the account to associate with that channel
-    3. Click **Add**
+    1. Select a channel you want to associate with an account.
+    2. Search for the account to associate with that channel.
+    3. Click **Add**.
 
     You can map multiple channels to a single account. Remove associations anytime by clicking the trash icon.
   </Step>
@@ -81,7 +82,7 @@ Check with your IT team if you're not sure about your permissions.
 
 ## Channel mapping strategy
 
-Start with your top 10-15 accounts by revenue or strategic importance. You don't need to map every channel on day one. A focused initial set gives you something to validate in Module 7 (Test Drive), and you can expand from there.
+Start with your top 10-15 accounts by revenue or strategic importance. You don't need to map every channel on day one. A focused initial set gives you something to validate in Module 8 (Test Drive), and you can expand from there.
 
 <Warning>
   Endgame can't distinguish between different account conversations in a single shared channel. Use channels that are dedicated to a single account for best results. A `#general-deals` channel with mixed account discussions won't produce clean account-level intelligence. This applies to both Slack and Teams.
@@ -93,6 +94,7 @@ You've completed this module when you've mapped at least one channel to an accou
 
 ## Go deeper
 
+- [Connect and manage integrations](/integrations/overview) for updating credentials, disconnecting, and fixing a connection that needs attention
 - [Slack Integration reference](/integrations/slack) for technical details
 - [Microsoft Teams Integration reference](/integrations/microsoft-teams) for technical details
 - [Using Endgame in Slack](/features/slack) for guidance on running Endgame threads directly in Slack channels

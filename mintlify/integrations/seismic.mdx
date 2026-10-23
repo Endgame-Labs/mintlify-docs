@@ -1,74 +1,68 @@
 ---
 title: "Seismic"
-description: "Connect Seismic to sync sales enablement content as knowledge"
-icon: "book-copy"
+description: "Sync content, engagement data and usage history from Seismic."
+icon: "/images/integrations/seismic.svg"
 ---
 
-Use the instructions below to enable the Seismic integration in Endgame. Once enabled, Endgame will process content from your Seismic instance and provide insights via the Endgame UI.
+Connect Seismic so Endgame can use your enablement content as knowledge and learn from how buyers engage with it. You choose whether to sync engagement data, content, or both, and which Teamsites to sync content from.
 
-## Enable the integration
+## Before you start
 
-<Note>To connect to the Seismic API, you must be a Seismic Administrator.</Note>
+- You need to be an Endgame admin, with access to your Seismic admin settings.
+- You'll need four things from your Seismic admin settings:
+  - **Tenant:** your Seismic tenant name, from your Seismic URL.
+  - **Client ID** and **Client secret:** your OAuth client credentials.
+  - **Delegation user ID:** the Seismic user ID Endgame uses for API delegation.
 
-<Steps>
-  <Step title="Access Seismic integration">
-    Log into Endgame and navigate to the [integrations](https://app.endgame.io/settings/integrations) page. Only Endgame Admins can configure organization integrations. Click "Connect" for Seismic to begin the setup process.
+## Connect Seismic
 
-    <Frame caption="Seismic connection">
-      <img
-        src="../images/seismic-connection-07-28-26.png"
-        alt="Seismic connection"
-        className="rounded-lg"
-      />
-    </Frame>
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Seismic and click **Connect**.
+2. Enter your **Tenant**, **Client ID**, **Client secret**, and **Delegation user ID**, then click **Connect**.
 
-  </Step>
-  <Step title="Add Seismic credentials">
-    You will need your OAuth client credentials and a delegation user ID from your Seismic admin settings. Enter the following four fields and click Connect:
+<Frame caption="Connecting Seismic needs your tenant, OAuth client ID and secret, and a delegation user ID.">
+  <img
+    src="/images/seismic-connect-dialog-10-20-26.png"
+    alt="Connect Seismic dialog with Tenant, Client ID, Client secret, and Delegation user ID fields"
+    className="rounded-lg"
+  />
+</Frame>
 
-    - **Tenant** — your Seismic tenant name (from your Seismic URL)
-    - **Client ID** — your OAuth client ID
-    - **Client Secret** — your OAuth client secret
-    - **Delegation User ID** — the Seismic user ID used for API delegation (find this in Seismic admin settings)
+Endgame opens the Seismic page so you can choose what to sync.
 
-    Once your credentials have been added, Endgame will initiate ingestion and processing of your Seismic content.
+## Choose what to sync
 
-    <Frame caption="Seismic connection inputs">
-      <img
-        src="../images/seismic-secret-input-05-06-26.png"
-        alt="Seismic connection inputs"
-        className="rounded-lg"
-      />
-    </Frame>
+The Seismic page has two sections, each with its own on/off switch.
 
-  </Step>
-  <Step title="Disconnect your integration">
-    Users can disconnect their Seismic connection at any time. Disconnecting will stop all engagement data syncing. To reconnect, you will need to provide your OAuth credentials again.
+- **Engagement data** syncs analytics from Seismic Reporting, like LiveSend sessions, content usage, and Digital Sales Room engagement. It syncs every 30 minutes and needs no setup.
+- **Content sync** brings enablement materials from your Seismic Library Teamsites into Endgame as knowledge. Choose the Teamsites below.
 
-    To disconnect, click the **Disconnect** button in the Danger Zone section.
+## Choose Teamsites to sync
 
-    <Frame caption="Seismic connected view">
-      <img
-        src="../images/seismic-connected-05-06-26.png"
-        alt="Seismic connected view"
-        className="rounded-lg"
-      />
-    </Frame>
+With **Content sync** on:
 
-    <Frame caption="Seismic disconnect confirmation">
-      <img
-        src="../images/seismic-disconnect-05-06-26.png"
-        alt="Seismic disconnect confirmation"
-        className="rounded-lg"
-      />
-    </Frame>
+1. In **Add a Teamsite**, select a Teamsite and click **Add**. It appears in **Synced Teamsites**.
+2. To leave out some folders, click **Discover folders** next to the Teamsite so Endgame can scan its folders. Then click the folder count in the **Folders** column (for example, "12/12 included") and turn off the folders you don't want. Turning off a folder also turns off the folders inside it. Changes apply on the next sync.
 
-  </Step>
-</Steps>
+You can manage each Teamsite in **Synced Teamsites**:
 
-## What's next?
+- **Rescan** picks up folders added in Seismic since the last scan.
+- **Disable** stops syncing the Teamsite. Content Endgame already synced from it stays in Endgame. Click **Enable** to start again.
+- **Remove** stops syncing the Teamsite, after you confirm. Content Endgame already synced from it stays in Endgame.
 
-That's it! Now that you've connected Seismic to Endgame, we'll automatically ingest your content and present our insights in Endgame.
+<Frame caption="Click a Teamsite's folder count to choose which of its folders Endgame syncs.">
+  <img
+    src="/images/seismic-content-sync-10-23-26.png"
+    alt="Content sync section with one synced Teamsite and its folder list open, showing one folder turned off"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Seismic page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** opens the same dialog as connecting, with nothing prefilled. You can change credentials while Seismic stays connected, without disconnecting first.
+- **Disconnect** stops syncing data from Seismic. To reconnect later, you'll need your OAuth credentials again.
 
 ## Need help or have feedback?
 
