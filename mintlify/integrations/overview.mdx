@@ -34,9 +34,9 @@ A check mark on an integration's logo means it's connected. A **Needs attention*
    - **Integrations that use credentials** (Chorus, Clari Copilot, Highspot, Looker, Notion, Seismic, and Snowflake) open a dialog. Enter the credentials from that tool and click **Connect**.
 3. Endgame opens the integration's page, where you can finish any setup it needs, like choosing which spaces, sites, or channels to sync.
 
-Salesforce is the exception: you connect it during onboarding, before you can use the rest of Endgame. See [Connect Salesforce during onboarding](/integrations/salesforce#connect-salesforce-during-onboarding).
+Salesforce is the exception: you normally connect it during onboarding, before you can use the rest of Endgame. It still appears in this list, so you can manage it later. See [Connect Salesforce during onboarding](/integrations/salesforce#connect-salesforce-during-onboarding).
 
-Each integration's page lists what you'll need before you connect. Its docs page walks through where to find it.
+Each integration's docs page lists what you'll need before you connect and walks through where to find it.
 
 ## Manage a connected integration
 
@@ -45,8 +45,8 @@ To open an integration's page, click **Manage** next to it. The page shows **Con
 The **Connection** section shows:
 
 - **When it was connected, and by whom.** If someone reconnected it later, that's shown too. Endgame only shows the person when it recorded who connected it.
-- **Credentials:** click **Update credentials** to give Endgame new credentials, for example after you rotate a key or change the account Endgame connects with. For integrations you sign in to, this takes you to the tool's sign-in page. For the others, it opens the credentials dialog. Nothing is prefilled, so have the new credentials ready.
-- **Disconnect:** click **Disconnect** to stop syncing. The section says what happens to the synced data for that integration, and Endgame asks you to confirm.
+- **Credentials:** click **Update credentials** to give Endgame new credentials, for example after you rotate a key or change the account Endgame connects with. For integrations you sign in to, this takes you to the tool's sign-in page. For the others, it opens the credentials dialog, for example **Update Notion credentials**. Nothing is prefilled, so have the new credentials ready.
+- **Disconnect:** click **Disconnect** to stop syncing. Endgame asks you to confirm and tells you what stops syncing.
 
 <Frame caption="The Connection section shows who connected an integration and lets you update its credentials or disconnect it.">
   <img
@@ -71,7 +71,7 @@ When the credentials Endgame uses for an integration stop working, for example b
 - On the Integrations page, it shows **Needs attention** and a red **Reconnect** button.
 - On its own page, a message says it needs to be reconnected, and **Reconnect** appears at the top.
 
-Click **Reconnect** and sign in again or enter new credentials. Syncing picks up again once it's reconnected.
+Click **Reconnect** on the Integrations page to open the integration's page, then click **Reconnect** at the top and sign in again or enter new credentials. While a connection needs attention, its **Connection** section doesn't show **Update credentials**. Syncing picks up again once it's reconnected.
 
 If an integration shows **Status unavailable**, Endgame couldn't check its connection just then. Click **Open** to go to its page, or try again in a moment.
 
