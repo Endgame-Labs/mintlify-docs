@@ -39,6 +39,30 @@ The Chrome tool's own screenshots are 1×, so don't use them in the docs. Instea
 3. Find the window's ID (CGWindowList, matched on `screenX`/`screenY`/`outerWidth`/`outerHeight`) and run `screencapture -x -o -l<id> out.png`. That captures the window at 2× with no shadow, even if something overlaps it.
 4. Crop: the page starts at (outerWidth − innerWidth, outerHeight − innerHeight) inside the window. Multiply everything by 2 and leave a 14 px margin (CSS) around the subject. Check the edges for a neighbouring element's border.
 
+### Capturing from Storybook
+
+Most integration screenshots come from Storybook stories of the real app pages, rendered with made-up demo data. That means no workspace to connect and no real data to hide. The stories are in the cerebro repo under **Features / Settings / Integrations** (Index, Connect dialogs and one page per integration), and the scripts in `scripts/storybook/` capture them at 2×, dark, with the 14 px margin.
+
+1. In cerebro, start Storybook: `bun run --cwd src/webapp/core storybook --port 6007`.
+2. Find the story's ID: open it, then click **Open canvas in new tab**. The ID is the `id=` in the URL, like `features-settings-integrations-pages-microsoft-sharepoint--connected`.
+3. Run the script that fits. Pass Playwright from cerebro (`<cerebro>/node_modules/playwright/index.js`) and the Storybook URL (`http://localhost:6007`). Use a width of **760** for pages: the content is then 680 px wide.
+
+| Script | Captures | Arguments after Playwright and the URL |
+|---|---|---|
+| `capture-section.cjs` | One section of a page, from its heading down to a table or a named element | `<story-id> <width> "<heading>" table <out.png>`, or `"text:<exact text>"` in place of `table` |
+| `capture-dialog.cjs` | The open dialog, with the page behind it hidden | `<story-id> <width> <out.png>`. Widen the viewport (e.g. 1100) for dialogs with wide tables. |
+| `capture-stories.cjs` | Whole pages, one file per story | `<out-dir> <width> <story-id>...` |
+
+For example:
+
+```bash
+node scripts/storybook/capture-section.cjs ~/Projects/endgame/cerebro/node_modules/playwright/index.js \
+  http://localhost:6007 features-settings-integrations-pages-microsoft-sharepoint--connected 760 \
+  "Synced document libraries" table mintlify/images/sharepoint-synced-document-libraries-MM-DD-YY.png
+```
+
+If a story's data is wrong for what the docs need, fix the story in cerebro rather than editing the image. Stories must only show states the real app can reach.
+
 ## 4. Highlights
 
 Rarely needed. A good crop usually does the job.
