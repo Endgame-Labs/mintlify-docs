@@ -4,7 +4,8 @@ description: "Add your sales methodology, battlecards, and playbooks to shape ho
 ---
 
 <Info>
-  [Implementation Guide](/implementation-guide/overview) · Module 4 of 9 · ~10 minutes
+  [Implementation Guide](/implementation-guide/overview) · Module 4 of 9 · ~10
+  minutes
 </Info>
 
 ## Why this matters
@@ -28,7 +29,9 @@ Think about what you'd hand a new rep in their first week. These five categories
 5. **Discovery or demo framework**: Your proven questions and talk tracks. A bulleted list works.
 
 <Tip>
-  Don't overthink it. A simple one-pager beats nothing. And you don't need all five categories to get started. Even one good methodology doc makes a difference in response quality. You can always add more later.
+  Don't overthink it. A simple one-pager beats nothing. And you don't need all
+  five categories to get started. Even one good methodology doc makes a
+  difference in response quality. You can always add more later.
 </Tip>
 
 ## Walkthrough
@@ -45,11 +48,12 @@ Think about what you'd hand a new rep in their first week. These five categories
     **Link from Google Drive** - Best if your enablement content lives in Google Drive. Authenticate with Google, then search for and select up to 100 files at a time and click **Link**. These auto-sync once per day, so updates to the source files will be reflected in Endgame.
 
     **Import from public URL** - Best for content that lives on your website (pricing pages, product positioning, case studies). Paste the URL in the **File URL** field, click **Add link**, then click **Import**. Endgame will ingest the page content.
+
   </Step>
   <Step title="Connect knowledge sources for automatic sync">
     For content that changes regularly, connect a knowledge source so Endgame stays current without manual re-uploads. Files you link from Google Drive (above) already sync once per day, so when your team updates a battlecard or methodology doc, the latest version flows into Endgame automatically. For other sources, go to [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations) and connect any of the following:
 
-    **Notion** - Connect your Notion workspace and add the pages that contain enablement content. Sub-pages and databases inside them are included. Endgame syncs updates every hour, making Notion a great home for living documents like competitive intel or process guides that evolve over time.
+    **Notion** - Connect your Notion workspace and add the pages that contain enablement content. Sub-pages inside them are included. Database pages can't be synced at this time. Endgame syncs updates every hour, making Notion a great home for living documents like competitive intel or process guides that evolve over time.
 
     **SharePoint** - Connect SharePoint and choose the document libraries your team already uses. Endgame syncs changes every 15 minutes, making it ideal for orgs that manage enablement content in Microsoft 365.
 
@@ -60,23 +64,29 @@ Think about what you'd hand a new rep in their first week. These five categories
     <Tip>
       Connecting a knowledge source is a best practice. Rather than uploading static files that go stale, linking to where your team already maintains content means Endgame picks up changes as they happen. Start with whichever platform holds the majority of your enablement content.
     </Tip>
+
   </Step>
   <Step title="Review auto-categorization">
     After uploading, Endgame automatically categorizes documents as organization-level or account-specific and detects account associations. This can take a few minutes. You can edit associations manually if needed.
+
+    <Tip>
+      Any user can add knowledge for a single account, by opening the account in the [Wiki](/features/wiki#add-account-knowledge) and clicking **Add files** in the **Knowledge** section at the bottom of the page. The file is tagged with that account.
+    </Tip>
+
   </Step>
 </Steps>
 
 ## Sync behavior
 
-| Source        | Auto-sync     | Manual sync                    |
-| ------------- | ------------- | ------------------------------ |
+| Source        | Auto-sync     | Manual sync                              |
+| ------------- | ------------- | ---------------------------------------- |
 | Google Drive  | Once per day  | Admins: **Sync file** in the file's menu |
-| Notion        | Once per hour | **Sync** next to a page        |
-| SharePoint    | Every 15 min  | Not available                  |
-| Confluence    | Once per hour | Not available                  |
-| Snowflake     | Once per hour | Not available                  |
-| Public URL    | No auto-sync  | Import the URL again for new content |
-| Device upload | No sync       | Must re-upload for new content |
+| Notion        | Once per hour | **Sync** next to a page                  |
+| SharePoint    | Every 15 min  | Not available                            |
+| Confluence    | Once per hour | Not available                            |
+| Snowflake     | Once per hour | Not available                            |
+| Public URL    | No auto-sync  | Import the URL again for new content     |
+| Device upload | No sync       | Must re-upload for new content           |
 
 If your enablement content changes frequently, connecting a knowledge source like Google Drive, Notion, SharePoint, Confluence, or Snowflake is better than device uploads since they stay current automatically.
 
@@ -98,12 +108,22 @@ You've completed this module when you've uploaded at least one knowledge documen
 
 <Columns cols={2}>
   <Column>
-    <Card icon="arrow-big-left" horizontal href="implementation-guide/connect-slack" title="Previous Module">
+    <Card
+      icon="arrow-big-left"
+      horizontal
+      href="implementation-guide/connect-slack"
+      title="Previous Module"
+    >
       Connect Chat
     </Card>
   </Column>
   <Column>
-    <Card icon="arrow-big-right" horizontal href="implementation-guide/create-first-rule" title="Next Module">
+    <Card
+      icon="arrow-big-right"
+      horizontal
+      href="implementation-guide/create-first-rule"
+      title="Next Module"
+    >
       Create Your First Rule
     </Card>
   </Column>
