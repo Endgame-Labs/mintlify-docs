@@ -1,0 +1,68 @@
+---
+title: "Zendesk"
+description: "Sync support tickets and Help Center articles from Zendesk."
+icon: "/images/integrations/zendesk.svg"
+---
+
+Connect Zendesk so Endgame can learn from your customers' support conversations and your Help Center. Once connected, Endgame syncs your support tickets automatically, and you choose which Help Center sections to bring in as knowledge.
+
+## Before you start
+
+- You need to be an Endgame admin.
+- You'll need three things from Zendesk:
+  - **Subdomain:** the first part of your Zendesk URL. For `acme.zendesk.com`, it's `acme`.
+  - **Admin email:** the email of the Zendesk admin who creates the API token.
+  - **API token:** a Zendesk API token. Only Zendesk admins can create one.
+
+## Create an API token in Zendesk
+
+1. In Zendesk, go to **Admin Center** > **Apps and integrations** > **APIs** > **Zendesk API**.
+2. Turn on token access if it isn't on already, then add a new API token. Give it a description that says what it's for, like "Endgame".
+3. Copy the token. Zendesk only shows it once.
+
+For more detail, see Zendesk's guide to [managing access to the Zendesk API](https://support.zendesk.com/hc/en-us/articles/4408889192858-Managing-access-to-the-Zendesk-API#topic_bsw_lfg_mmb).
+
+## Connect Zendesk
+
+1. In [**Settings** > **Organization** > **Integrations**](https://app.endgame.io/settings/integrations), find Zendesk and click **Connect**.
+2. Enter your **Subdomain**, **Admin email** and **API token**, then click **Connect**.
+
+<Frame caption="Connecting Zendesk needs your subdomain, an admin email and an API token.">
+  <img
+    src="/images/zendesk-connect-11-18-26.png"
+    alt="Connect Zendesk dialog with empty Subdomain, Admin email and API token fields"
+    className="rounded-lg"
+  />
+</Frame>
+
+Endgame opens the Zendesk page, which shows **Connected** at the top, so you can choose which Help Center sections to sync.
+
+## What Endgame syncs
+
+- **Support tickets:** tickets and their comments, along with the Zendesk users, organizations and CSAT ratings tied to them. These sync automatically every few minutes. You don't need to choose anything.
+- **Help Center articles:** published articles from the sections you choose. Drafts aren't synced. Articles sync about every 15 minutes, and right away when you add a section.
+
+**Sync status** on the Zendesk page shows when Endgame last synced and how many tickets, users, organizations, CSAT ratings and articles it has synced so far.
+
+## Choose Help Center sections to sync
+
+In **Help Center sections** on the Zendesk page, your Help Center categories are listed. Click a category to see its sections.
+
+- **Add a section:** click **Add** next to it. Endgame syncs the section's published articles and lists it in **Synced sections**.
+- **Pause a section:** turn off **Enabled** next to it in **Synced sections**. Endgame stops syncing new and updated articles from it, but keeps the articles it already synced.
+- **Remove a section:** click the trash icon next to it, then **Remove**. The section stops syncing, and its synced articles are removed from Endgame.
+
+Synced articles appear in [**Settings** > **Organization** > **Knowledge**](https://app.endgame.io/settings/knowledge). To change which sections sync, use the Zendesk page, not Knowledge.
+
+## Update credentials or disconnect
+
+Use the **Connection** section at the bottom of the Zendesk page. See [Manage a connected integration](/integrations/overview#manage-a-connected-integration).
+
+- **Update credentials** opens the same dialog as connecting, with nothing prefilled. Enter your subdomain, admin email and a new API token, for example after you rotate the token in Zendesk.
+- **Disconnect** stops syncing tickets and Help Center articles from Zendesk.
+
+If the API token stops working, for example because it was deleted in Zendesk, the integration shows **Needs attention**. See [Fix a connection that needs attention](/integrations/overview#fix-a-connection-that-needs-attention).
+
+## Need help or have feedback?
+
+We'd love to hear from you! You can reach us at [support@endgame.io](mailto:support@endgame.io).

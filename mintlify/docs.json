@@ -131,7 +131,8 @@
               "integrations/microsoft-outlook-calendar",
               "integrations/microsoft-sharepoint",
               "integrations/notion",
-              "integrations/seismic"
+              "integrations/seismic",
+              "integrations/zendesk"
             ]
           },
           {
