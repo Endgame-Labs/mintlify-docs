@@ -1227,3 +1227,12 @@ div:has(> .theme-preference-switch-option) {
   text-transform: uppercase;
   color: var(--eg-fg-muted) !important;
 }
+
+/* The Zendesk logo is black, so it disappears on the dark sidebar. In dark
+   mode only, sit it on an off-white tile. */
+html.dark img[src$="/integrations/zendesk.svg"] {
+  background-color: #f5f4ef;
+  border-radius: 3px;
+  padding: 2px;
+  box-sizing: border-box;
+}
